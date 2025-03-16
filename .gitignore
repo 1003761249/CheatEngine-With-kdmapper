@@ -1,0 +1,8 @@
+*.obj
+*.pdb
+.*lik
+
+/Debug/
+/Release/
+/x64/
+.vs/
