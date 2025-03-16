@@ -39,9 +39,6 @@
     <ClCompile Include="source\IOPLDispatcher.c">
       <Filter>Source\DBK_Tiny</Filter>
     </ClCompile>
-    <ClCompile Include="source\kfiles.c">
-      <Filter>Source\DBK_Tiny</Filter>
-    </ClCompile>
     <ClCompile Include="source\memscan.c">
       <Filter>Source\DBK_Tiny</Filter>
     </ClCompile>

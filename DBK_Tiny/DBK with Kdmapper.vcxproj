@@ -127,7 +127,6 @@
     <ClCompile Include="source\debugger.c" />
     <ClCompile Include="source\interruptHook.c" />
     <ClCompile Include="source\IOPLDispatcher.c" />
-    <ClCompile Include="source\kfiles.c" />
     <ClCompile Include="source\memscan.c" />
     <ClCompile Include="source\noexceptions.c" />
     <ClCompile Include="source\processlist.c" />
