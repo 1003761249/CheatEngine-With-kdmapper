@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="x64arm">
+      <UniqueIdentifier>{4edf387f-ed87-405a-90e8-b8caaacb0a39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dbk_header">
+      <UniqueIdentifier>{d060ebb8-ebbd-4b3c-893a-0fa1b9a98f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dbk_source">
+      <UniqueIdentifier>{c004a0b8-84c9-409e-963e-12c0f36b86ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\nt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vmxoffload.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vmxhelper.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ultimap2.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ultimap.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\threads.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\processlist.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\noexceptions.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\memscan.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IOPLDispatcher.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\interruptHook.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\debugger.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DBKFunc.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DBKDrvr.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\apic.h">
+      <Filter>Header Files\dbk_header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\apic.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\DBKDrvr.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\DBKFunc.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\interruptHook.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\vmxoffload.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\vmxhelper.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ultimap2.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ultimap.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\threads.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\processlist.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\noexceptions.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\memscan.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\IOPLDispatcher.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\kfiles.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\debugger.c">
+      <Filter>Source Files\dbk_source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\amd64\vmxhelpera.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+    <MASM Include="..\amd64\vmxoffloada.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+    <MASM Include="..\amd64\ultimapa.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+    <MASM Include="..\amd64\noexceptionsa.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+    <MASM Include="..\amd64\debuggera.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+    <MASM Include="..\amd64\dbkfunca.asm">
+      <Filter>x64arm</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

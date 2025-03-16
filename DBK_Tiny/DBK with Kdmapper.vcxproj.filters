@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{6e117d49-23e5-430b-9857-83145a5f767c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a40cf0b7-3de6-423b-95c7-e222ecc906eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amd64_arm">
+      <UniqueIdentifier>{26b74202-eb0b-4fee-adfa-2a7213f672c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DBK_Tiny">
+      <UniqueIdentifier>{2d247bef-f11f-4047-aab3-c9e444c84140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\DBK_Tiny_header">
+      <UniqueIdentifier>{50c39f71-4e48-4de3-889b-7035914df0a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="utils.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\apic.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DBKDrvr.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DBKFunc.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\debugger.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\interruptHook.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\IOPLDispatcher.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\kfiles.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\memscan.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\noexceptions.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\processlist.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\threads.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ultimap.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ultimap2.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\vmxhelper.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="source\vmxoffload.c">
+      <Filter>Source\DBK_Tiny</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nt.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\apic.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DBKDrvr.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DBKFunc.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\debugger.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\interruptHook.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IOPLDispatcher.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\memscan.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\noexceptions.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\processlist.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\threads.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ultimap.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ultimap2.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmxhelper.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmxoffload.h">
+      <Filter>Header\DBK_Tiny_header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="amd64_asm\dbkfunca.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+    <MASM Include="amd64_asm\debuggera.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+    <MASM Include="amd64_asm\noexceptionsa.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+    <MASM Include="amd64_asm\ultimapa.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+    <MASM Include="amd64_asm\vmxhelpera.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+    <MASM Include="amd64_asm\vmxoffloada.asm">
+      <Filter>amd64_arm</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
