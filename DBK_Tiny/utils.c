@@ -39,11 +39,6 @@ BOOLEAN MyDeviceIoControl(
 	_In_ struct _DEVICE_OBJECT* DeviceObject
 )
 {
-	typedef struct __inputpath
-	{
-		PWCHAR dbvmpath;
-		DWORD cpuid;
-	}inputpath, * pinputpath;
 	//__debugbreak();
 	if (InputBuffer != NULL && MmIsAddressValid(InputBuffer) && MmIsAddressValid((PUCHAR)InputBuffer + InputBufferLength - 1))
 	{
@@ -84,9 +79,6 @@ BOOLEAN MyDeviceIoControl(
 		memcpy(buffer, InputBuffer, sizeof(ULONG32));
 		memcpy(buffer->inputBuffer, InputBuffer, InputBufferLength);
 		
-
-		pinputpath inputpr3 = (pinputpath)buffer->inputBuffer;
-		pinputpath inputpr4 = (pinputpath)InputBuffer;
 
 		//FakeIRP.AssociatedIrp.SystemBuffer = buffer->inputBuffer;
 		FakeIRP.Flags = buffer->ControlCode; //(ab)using an unused element 至少一个可以正确获取控制码的方法

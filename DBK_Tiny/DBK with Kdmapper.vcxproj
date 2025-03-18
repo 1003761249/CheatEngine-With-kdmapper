@@ -94,6 +94,7 @@
     <ClCompile>
       <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>$(SolutionDir)DBK_Tiny;$(SolutionDir)DBK_Tiny\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>

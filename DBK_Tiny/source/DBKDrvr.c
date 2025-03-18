@@ -47,7 +47,11 @@ NTSTATUS DriverEntry(IN PDRIVER_OBJECT DriverObject,
 	KernelCodeStepping = 0;
 	KernelWritesIgnoreWP = 0;
 
+#ifdef DEBUG
 	manual_load = TRUE;
+#endif // DEBUG
+
+	
 	//__debugbreak();
 	if (RegistryPath == 0x1234)
 		manual_load = TRUE;
