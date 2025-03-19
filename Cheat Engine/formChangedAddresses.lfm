@@ -1,0 +1,384 @@
+object frmChangedAddresses: TfrmChangedAddresses
+  Left = 1119
+  Height = 319
+  Top = 437
+  Width = 389
+  Caption = 'Changed Addresses'
+  ClientHeight = 319
+  ClientWidth = 389
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object PanelAddressInfo: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 389
+    Align = alTop
+    AutoSize = True
+    ClientHeight = 25
+    ClientWidth = 389
+    ParentBidiMode = False
+    TabOrder = 0
+    object labelCodeAddress: TLabel
+      AnchorSideLeft.Control = PanelAddressInfo
+      AnchorSideTop.Control = PanelAddressInfo
+      AnchorSideBottom.Control = PanelAddressInfo
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 23
+      Top = 1
+      Width = 73
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      Caption = 'Code Address'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object editCodeAddress: TEdit
+      AnchorSideLeft.Control = labelCodeAddress
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = PanelAddressInfo
+      AnchorSideRight.Control = PanelAddressInfo
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PanelAddressInfo
+      AnchorSideBottom.Side = asrBottom
+      Left = 84
+      Height = 23
+      Top = 1
+      Width = 304
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoSelect = False
+      PopupMenu = pmCodeAddress
+      ReadOnly = True
+      TabOrder = 0
+      Text = '01234567890ABCDEF'
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 33
+    Top = 286
+    Width = 389
+    Align = alBottom
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    ClientHeight = 33
+    ClientWidth = 389
+    ParentFont = False
+    TabOrder = 1
+    object OKButton: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 4
+      Height = 25
+      Top = 4
+      Width = 90
+      AutoSize = True
+      BorderSpacing.Left = 3
+      BorderSpacing.Top = 3
+      BorderSpacing.Bottom = 3
+      Caption = 'Stop'
+      Constraints.MinWidth = 90
+      Default = True
+      OnClick = OKButtonClick
+      ParentFont = False
+      TabOrder = 0
+    end
+    object cbDisplayType: TComboBox
+      AnchorSideTop.Control = OKButton
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 206
+      Height = 23
+      Top = 4
+      Width = 179
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 3
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        'Byte'
+        '2 Bytes'
+        '4 Bytes'
+        '8 Bytes'
+        'Float'
+        'Double'
+        'Pointer'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+      Text = '4 Bytes'
+    end
+  end
+  object PanelContent: TPanel
+    Left = 0
+    Height = 261
+    Top = 25
+    Width = 389
+    Align = alClient
+    Caption = 'PanelContent'
+    ClientHeight = 261
+    ClientWidth = 389
+    TabOrder = 2
+    object lblInfo: TLabel
+      AnchorSideLeft.Control = Owner
+      AnchorSideTop.Control = PanelAddressInfo
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 15
+      Top = 1
+      Width = 387
+      Align = alTop
+      Caption = 'The following addresses have been accessed by the code you selected'
+      ParentBidiMode = False
+      ParentColor = False
+      WordWrap = True
+    end
+    object Changedlist: TListView
+      Left = 1
+      Height = 244
+      Top = 16
+      Width = 387
+      Align = alClient
+      Columns = <      
+        item
+          Caption = 'Address'
+          Width = 123
+        end      
+        item
+          Caption = 'Value'
+          Width = 200
+        end      
+        item
+          Caption = 'Count'
+        end>
+      HideSelection = False
+      MultiSelect = True
+      ParentFont = False
+      PopupMenu = PopupMenu1
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnColumnClick = ChangedlistColumnClick
+      OnCompare = ChangedlistCompare
+      OnCustomDrawItem = ChangedlistCustomDrawItem
+      OnDblClick = ChangedlistDblClick
+    end
+  end
+  object Timer1: TTimer
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 56
+    Top = 64
+  end
+  object PopupMenu1: TPopupMenu
+    Images = caImageList
+    OnPopup = PopupMenu1Popup
+    Left = 136
+    Top = 72
+    object Showregisterstates1: TMenuItem
+      Caption = 'Show register states'
+      ShortCut = 16466
+      OnClick = Showregisterstates1Click
+    end
+    object miShowIPTLog: TMenuItem
+      Caption = 'Show IPT log'
+      ShortCut = 16460
+      OnClick = miShowIPTLogClick
+    end
+    object miChangeValue: TMenuItem
+      Caption = 'Change value'
+      ImageIndex = 0
+      ShortCut = 13
+      OnClick = miChangeValueClick
+    end
+    object Browsethismemoryregion1: TMenuItem
+      Caption = 'Browse this memory region'
+      ImageIndex = 3
+      ShortCut = 16450
+      OnClick = Browsethismemoryregion1Click
+    end
+    object miDissect: TMenuItem
+      Caption = 'Open dissect data with selected addresses'
+      ImageIndex = 5
+      ShortCut = 16452
+      OnClick = miDissectClick
+    end
+    object miCommonalitiesSubgroup: TMenuItem
+      Caption = 'Find commonalities between addresses'
+      ImageIndex = 4
+      object miMarkAsGroup1: TMenuItem
+        Tag = 1
+        Caption = 'Mark selection as group 1'
+        ShortCut = 16433
+        OnClick = miMarkAsGroupClick
+      end
+      object miMarkAsGroup2: TMenuItem
+        Tag = 2
+        Caption = 'Mark selection as group 2 (Nothing means everything else)'
+        ShortCut = 16434
+        OnClick = miMarkAsGroupClick
+      end
+      object MenuItem7: TMenuItem
+        Caption = '-'
+      end
+      object miGroupClear: TMenuItem
+        Caption = 'Clear Selection'
+        ImageIndex = 1
+        ShortCut = 49200
+        OnClick = miGroupClearClick
+      end
+      object MenuItem8: TMenuItem
+        Caption = '-'
+      end
+      object miScanForCommonalities: TMenuItem
+        Caption = 'Scan for commonalities'
+        ShortCut = 49235
+        OnClick = miScanForCommonalitiesClick
+      end
+    end
+    object micbShowAsHexadecimal: TMenuItem
+      AutoCheck = True
+      Caption = 'Show as hexadecimal'
+      GroupIndex = 1
+      ShortCut = 16456
+      OnClick = micbShowAsHexadecimalClick
+    end
+    object micbShowAsSigned: TMenuItem
+      AutoCheck = True
+      Caption = 'Show as signed'
+      ShortCut = 16469
+      OnClick = micbShowAsHexadecimalClick
+    end
+    object miCopyAddressToClipboard: TMenuItem
+      Caption = 'Copy address to clipboard'
+      ImageIndex = 2
+      ShortCut = 16451
+      OnClick = miCopyAddressToClipboardClick
+    end
+    object miCopyValueToClipboard: TMenuItem
+      Caption = 'Copy value to clipboard'
+      ImageIndex = 2
+      OnClick = miCopyValueToClipboardClick
+    end
+    object miCopyToAddresslist: TMenuItem
+      Caption = 'Copy selected addresses to addresslist'
+      Default = True
+      ImageIndex = 2
+      ShortCut = 49219
+      OnClick = ChangedlistDblClick
+    end
+    object MenuItem2: TMenuItem
+      Caption = '-'
+    end
+    object miDeleteSelectedEntries: TMenuItem
+      Caption = 'Delete selected entries'
+      ImageIndex = 1
+      ShortCut = 46
+      OnClick = miDeleteSelectedEntriesClick
+    end
+    object miResetCount: TMenuItem
+      Caption = 'Reset count'
+      ShortCut = 49234
+      OnClick = miResetCountClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object miSetFilter: TMenuItem
+      Caption = 'Filter'
+      OnClick = miSetFilterClick
+    end
+  end
+  object pmCodeAddress: TPopupMenu
+    Images = caImageList
+    Left = 40
+    Top = 200
+    object miCodeAddressCopy: TMenuItem
+      Caption = 'Copy Code Address to Clipboard'
+      ImageIndex = 0
+      OnClick = miCodeAddressCopyClick
+    end
+    object miCodeAddressBrowseMemoryRegion: TMenuItem
+      AutoCheck = True
+      Caption = 'Browse Memory Region'
+      ImageIndex = 3
+      OnClick = miCodeAddressBrowseMemoryRegionClick
+    end
+    object miCodeAddressDisassembleMemoryRegion: TMenuItem
+      AutoCheck = True
+      Caption = 'Disassemble Memory Region'
+      ImageIndex = 6
+      OnClick = miCodeAddressDisassembleMemoryRegionClick
+    end
+  end
+  object caImageList: TImageList
+    Left = 220
+    Top = 96
+    Bitmap = {
+      4C7A070000001000000010000000270600000000000078DAE5987B4C53571CC7
+      CDB66433D199B8FDB16509CE659B99412D6C33EE91C599BDB2EC0F3705A371B3
+      D9342E04C7A64C1114116165CA0AD34AD8C64B040A54999B08C268ADBCE4512D
+      542A8C60E98347A105CAC30A15F8EDFCEA6ED35EEFBDDCB6FA87DB49BEE9EDF9
+      FD3EE79CFB3BF79EF33B1700E6E5E4E408E3E2E29473293232F2525555D5EB40
+      1877115B1CF02C3B77EEECEBE8E878CE57DE6EB7C3D6AD5B55369B6DBE2F3C96
+      DEDE5E484848D8EB2B8FE55FE6BEF2838383D0DEDECEA9A9A92956DEE170C0AD
+      5BB738353B3BCBCA939882C16070AAE0DC9FF041452B14DF30B8EA5077EEDC61
+      E5AD562B7476763AA5F9BB139E5639E0C9730059DA71573D8E918DC7B14D4F4F
+      BB94AF07582003584854D87DB7CEDBF889AA8DAE3624CD66CEF8B115F771549A
+      A67C9A7F6C63EDEF03507AA11CBADA477D7A7E7A7B4D2049D4C075D59807CFF7
+      FD457DBFE780F31719FA7BFCB0CB6A81853B3E87826E1D04D06D588736F461E3
+      D11EBC0CE0FDB740E7DE065E631DDAD0878D77F7A3DA60AAE3BA07BABF372C53
+      1BDEB2FEF2FE8CDFDFF8F93B7FFE3E3F0FA38442612D590FF44CDAB76F9F3E3D
+      3D3D948B473FAE352B3E3EDE4E7286577DE5714F080D0DEDF295C712111161E3
+      E2714FA0F6B7F2F272D8B56B171C3A74C82512A36992B734A0424242CACC66F3
+      227AFFD49E2597CB41A954B28E05F7C82D5BB6944F4E4E3ECAD47F515111278F
+      45ABD5E2B8A2289EB4053A9DCEA982828239792C646ED3B978CCB3464646EE11
+      E60874DEBD5D6451D8E6D8D8D83D1A1F1FE7C5639CA831B94BAFD77BF0241794
+      93EB0E4A9B376F36223F3C3CEC91B75032994C1E3C5D845D8B3C8E95CCF33D1A
+      1818E0C5E3B380F3CA243E3CDFF963E0DFDEB061830D9F792E858585891FD49A
+      D2D3D3F3CCA8CDF604F51FAFB18E0FDBF447FA5713C705D09E1034ACD3AA56DE
+      24C26BAC43DB5CFCD5A4751AF8852C37449A8A1CE10D799E90FAEFB471B0AD57
+      E46B1C69C140F91B9356CCEA7F089CA1FEA30D7DD8F86B99E1D9942F9B9C3E0C
+      ECE0807991E947817D2E1E7DD097CEABCFA785D37D7547570F6912561BE8F54E
+      5F8EB851BA52AD58D1545FBD9C5E4F8F23C664FC4410B4493F84EBB28F61FCE4
+      DD187675753D8FC2EB9193AFC1F5924F407BFA3DB04B823CE28831B9745908CD
+      70D429B93A0CC6C87CF718F5CFA22C620128BAF6B8ECB565A11E716C3A1038A1
+      1C8D77D951D71257E15AB100D5285EE361AB3044C18DF8951314DFF8D3A78ABF
+      DABE71D92FF5EE87D6D8E58E89898947500DB1818EEA9138975DD9B8039AC49F
+      29287EC832B0F8427AF8E9BCB39B266B6B857059B4DA7EA5E8D8B7941DAFAB8E
+      BE69AFA9FF120A8A374E56A685E522439F03B2B63E6ED0EB97E0AF37367FF55F
+      3CFF575656425252122427273B7F715FE773FEBF7DFB361C3C78106A6A6A3CDA
+      ABAFAF8798981867FF5CE73F914804FDFDFD8C63C7F329E99795276B24646464
+      70DE7F6E6E2E74777733F2252525F8CE71F246A311A45229239F9F9F0F7D7D7D
+      9CFCD0D01064676733F2CDCDCDCEB87315DCDBEAEAEA58CFFFD1D1D1AE6F144C
+      05ED333333ACF1C7DC283131D1F59D812AF8DD02E72FE1C89139CFEF18DF23C4
+      4F2C16435E5E1EA4A4A4601E0B595959B02420004E6565F23ABFE35E8FCF02B5
+      E763A9282F839717CE87C8B0AF4FF8FAFD4851560A018FCD9B2DCCCCD8E8EDF9
+      9F52F88EED699AABAA97FA4DBA007555D17ABA1A2B0AD7F3593BF4F567844CFB
+      14D937E1FFC05B06CD8BD58D350294E8704C2C757DB5A15A40F928CE1C8EAD91
+      7D974A975655F6117D1D66CC8972DED11B65AF005D5A654A1C9D679242126CE5
+      CBFBDB3F135F9CF486E6E2B1A536BAEA4A93A3F8F0DEEC630FA27FBEF7DFD2D2
+      B282BC5B42BA2A5357F28A3F6B4ECCB37F36F17DFEDCF2F7A732F7879C6D6AA8
+      5BE5CB3CB4B5B52DAD8D0E1A514609AC73B5512AFD7593347663215DC9DB825B
+      C77E1600B6A1BEA65AC6C6171D8F89956E5F6A66900DF99B89813317CF97BCEB
+      D57744AB7551F1DE752DC89E3D75F20B6FEF5FA552BDF8DBB617ACDEB0128944
+      2493C952F9087DE93CD9D36D783EC71C834B787E475F261ECFB72437E394C562
+      61E531AFD268349CC2F3331B3F3A3ACAF8CDC15D782E67E3317F52ABD59CC27B
+      64E399BE5730C99FFED9EE7FF7EEDD06ACE723F4BD5FB9FF3FB7984EF5
+    }
+  end
+end

@@ -1,0 +1,390 @@
+object FoundCodeDialog: TFoundCodeDialog
+  Left = 1254
+  Height = 399
+  Top = 428
+  Width = 430
+  BorderIcons = [biSystemMenu]
+  Caption = 'The following opcodes changed the selected address'
+  ClientHeight = 399
+  ClientWidth = 430
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    Left = 294
+    Height = 398
+    Top = 0
+    Width = 136
+    Align = alRight
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 398
+    ClientWidth = 136
+    TabOrder = 0
+    object Description: TLabel
+      Left = 0
+      Height = 218
+      Top = 140
+      Width = 136
+      Align = alClient
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'example'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Panel2: TPanel
+      Left = 0
+      Height = 40
+      Top = 358
+      Width = 136
+      Align = alBottom
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 40
+      ClientWidth = 136
+      ParentFont = False
+      TabOrder = 0
+      object btnOK: TButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideTop.Control = Panel2
+        Left = 31
+        Height = 30
+        Top = 5
+        Width = 75
+        AutoSize = True
+        BorderSpacing.Top = 5
+        BorderSpacing.Bottom = 5
+        Cancel = True
+        Caption = 'OK'
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 75
+        Default = True
+        OnClick = btnOKClick
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object Panel3: TPanel
+      Left = 0
+      Height = 140
+      Top = 0
+      Width = 136
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 140
+      ClientWidth = 136
+      ParentFont = False
+      TabOrder = 1
+      object btnExtraInfo: TButton
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = btnAddToCodeList
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 30
+        Hint = 'Shows more information about the state of the system when that instruction got executed'
+        Top = 110
+        Width = 126
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        Caption = 'More information'
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 100
+        Enabled = False
+        OnClick = btnExtraInfoClick
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+      end
+      object btnAddToCodeList: TButton
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = btnOpenDisassembler
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 30
+        Hint = 'The selected addresses will be added to the code list in the advanced options window.'
+        Top = 75
+        Width = 126
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        Caption = 'Add to the codelist'
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 100
+        Enabled = False
+        OnClick = btnAddToCodeListClick
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+      object btnOpenDisassembler: TButton
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = btnReplacewithnops
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 30
+        Hint = 'This will open the memoryview and bring the disassemblerview to the selected address'
+        Top = 40
+        Width = 126
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        Caption = 'Show disassembler'
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 100
+        Enabled = False
+        OnClick = btnOpenDisassemblerClick
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+      end
+      object btnReplacewithnops: TButton
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = Panel3
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 5
+        Height = 30
+        Hint = 'This will replace the selected addresses with code that does nothing. (Nops)'
+        Top = 5
+        Width = 126
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        Caption = 'Replace'
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 100
+        Enabled = False
+        OnClick = btnReplacewithnopsClick
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 398
+    Top = 0
+    Width = 294
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 398
+    ClientWidth = 294
+    TabOrder = 1
+    object FoundCodeList: TListView
+      Left = 0
+      Height = 236
+      Top = 0
+      Width = 294
+      Align = alClient
+      AutoWidthLastColumn = True
+      Columns = <      
+        item
+          Caption = 'Count'
+          MinWidth = 40
+        end      
+        item
+          Caption = 'Instruction'
+          Width = 250
+        end>
+      HideSelection = False
+      MultiSelect = True
+      ParentFont = False
+      PopupMenu = pmOptions
+      ReadOnly = True
+      RowSelect = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnColumnClick = FoundCodeListColumnClick
+      OnDblClick = FoundcodeListDblClick
+      OnSelectItem = FoundCodeListSelectItem
+    end
+    object mInfo: TMemo
+      Left = 0
+      Height = 157
+      Top = 241
+      Width = 294
+      Align = alBottom
+      ParentColor = True
+      ReadOnly = True
+      ScrollBars = ssBoth
+      TabOrder = 1
+      WordWrap = False
+    end
+    object Splitter1: TSplitter
+      Cursor = crVSplit
+      Left = 0
+      Height = 5
+      Top = 236
+      Width = 294
+      Align = alBottom
+      ResizeAnchor = akBottom
+    end
+  end
+  object dbvmMissedEntries: TLabel
+    Left = 0
+    Height = 1
+    Top = 398
+    Width = 430
+    Align = alBottom
+    ParentColor = False
+    Visible = False
+  end
+  object pmOptions: TPopupMenu
+    Images = fcdImageList
+    OnPopup = pmOptionsPopup
+    Left = 64
+    Top = 64
+    object ReplacewithcodethatdoesnothingNOP1: TMenuItem
+      Caption = 'Replace with code that does nothing (NOP)'
+      ImageIndex = 3
+      OnClick = btnReplacewithnopsClick
+    end
+    object Showthisaddressinthedisassembler1: TMenuItem
+      Caption = 'Show this address in the disassembler'
+      ImageIndex = 5
+      ShortCut = 16452
+      OnClick = btnOpenDisassemblerClick
+    end
+    object Addtothecodelist1: TMenuItem
+      Caption = 'Add to the codelist'
+      ImageIndex = 0
+      OnClick = btnAddToCodeListClick
+    end
+    object MoreInfo1: TMenuItem
+      Caption = 'More Info'
+      Default = True
+      ImageIndex = 6
+      OnClick = btnExtraInfoClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object miFindWhatCodeAccesses: TMenuItem
+      Caption = 'Find out what addresses this code accesses'
+      OnClick = miFindWhatCodeAccessesClick
+    end
+    object miFindWhatAccesses: TMenuItem
+      AutoCheck = True
+      Caption = 'Check if found opcodes also access other addresses (max 8)'
+      ShowAlwaysCheckable = True
+      OnClick = miFindWhatAccessesClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Select all'
+      ImageIndex = 4
+      ShortCut = 16449
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = '-'
+    end
+    object miSaveTofile: TMenuItem
+      Caption = 'Save selection to file'
+      ImageIndex = 2
+      OnClick = miSaveTofileClick
+    end
+    object Copyselectiontoclipboard1: TMenuItem
+      Caption = 'Copy selection to clipboard'
+      ImageIndex = 1
+      ShortCut = 16451
+      OnClick = Copyselectiontoclipboard1Click
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Text files (*.txt)|*.txt'
+    Left = 72
+    Top = 152
+  end
+  object fcdImageList: TImageList
+    Left = 198
+    Top = 153
+    Bitmap = {
+      4C7A070000001000000010000000FD0500000000000078DAED987B4C5B551CC7
+      6B240E716E24A2590C46674CE40F134BC7328D1861868418FE98A3E040324834
+      43980C86C886DBA04E9655C61C6C652BEB7834603BD60215B7C1A0D5BA9685F7
+      4BC8482CB44071149A511E63101EC7F32BDE7A5B6EEFFAC0C9129B7C73CFB9BF
+      DFE73C7FA7E79E831062A08DA859C316240AD399056967F9993FBD51E10E6416
+      A4373A0F7D043F42F7BA5EB5F09026DBA8C603C689F07F94C077BD7977DBFFA4
+      CFDF7AC7EF63525C5C9C9AC3E1E8A874E4C8111D9FCF8FA4E3C10FD1FC4E9E3C
+      392797CB77B8CAAFACACA0C8C8488DAB3CFC9293934D74FCC2C2021A1A1A32AB
+      B6B616252525A1ACAC2C8BF0182DC5C7C737812222226E8E8D8D6DB5AD7F6969
+      C92C854281944AA5DDB6188D46141D1D5D3B3F3FFF3455FD151515B43CFCFAFA
+      FAA05D47091E9785060707CD1289448FE4E187E7964FC7CFCDCDA1C9C9C93532
+      994C6B7872B9C082A0CCE9E9E9359A99997188877122DA44964EA7B3E2636262
+      1438DD4F282A2A6A18F8FBF7EF5BC694AC9191112BDE56980D021EDA8AE7798D
+      0C0683433CC402CC2B951CE11D9D3F0A3E303C3CDC04314FA7C4C4C41FC0BF44
+      C840857C063A7F7655376AF9E81795CA4A371B1A90482241F5BFCA10F837B7A4
+      A411F539C29FE0701083816DB724669E5C86AB3C5186237C6151110A8F884075
+      F24A2B9E9040C04017CEADAAAAFA6BD4A0FC8952376EE550F24FBACA455E4852
+      F9B2530286E03BBB12F054F6382560C8FCC8C86DD4DE7EC32181AF2DFF5FD76F
+      32B5A0D151954302DFF5E4AB64DB91F276A8530206D88DFA5DF23885F71A1F2C
+      F3371EDEDFBC210FE9D9D9590FBCDFF8127B357EBF09E75FC1FBC0169B6FA852
+      5F5FDFBBD8FF19BC9F71202F954A83BDBDBD0DF87FCB849F7AFC0D1410141474
+      15A74DF8DD839494940C320FFF6F69696919C0EFDBB74F88FD868F1F3F7E08EF
+      23603FEBE7E7D70A3CD8AF5CB9B267F3E6CDC3643E202040E1E1E1F180CD6697
+      603F3994A7D1685E043BAE7B27CE2F031F1818A86432992AFC94917928373434
+      B41CFCC2C2C2A4F8B9585757F72ED8F1376034AE4F0F3C66D5D9D9D907F1583C
+      67CBE3FAB6797A7A4E411EEFCB3C1F1F1F1D7EE663D688CD4944FB6DC75F2693
+      ED817D0FD278DC3E823CEEF753B89FE1D8FD188C25D84A4B4BD984DFFFDA38C2
+      719B8BE3C10B9EFDFDFD7E5C2EF7A85AAD0E847904411ADE818DEC4B5A7F5E2E
+      AC592F72FDF0C43103EBF5353A810F990141BBE00976F96106A213F8901910F4
+      CD599E6040303ECEF20443AC1F677982590FDEDDF6BB3B7EEECE9FBBF1B31EF1
+      EBCEFA596FE9F5FA178A32222A5B9A1ADF7685EFEDEDDDAEFEC67F527994697C
+      5419D7C5973F1167B2AFDA2A3796D53D9DCF4450466747DB9BF6F88AF3C732C5
+      9F6F1FA39009F881536F2DD7FD5C15ECE4DC6CBD96BEBB0BD84A61C17E67FBDF
+      D6D6F68620F675A3332C8FC73B2D9148F21C11F8DAF262B1D804E7F3F1F1715A
+      C1F91D7CA97838DFE218A3D5C4C4845D7E747414F5F4F4D00ACECFF6F8A9A929
+      CA3B07B2E05C6E8FC7718B3A3B3B69057DB4C753DD5750C99DFAEDF53F353575
+      08DE3B22F0FDB7D63E8E8F4D1DF5A2C856C1C1CB9AA2583996A2BDE84B417783
+      280ADB3CE9D896DA1F3FFEFDD42E3D716FAACBFB0069F3822DF7C6774FEFBA77
+      A7A698F23E515E94953177C1DFE2DB273C84161717CDF728BD655F59DECF17F8
+      239590F32D996DBA2E643FE4F95BDD510F76282C7725835D2A2BDB022EA35176
+      F9D3BFFBFB6C3FF79D7BB677DCBD15272C7CAF347BCD1DF81FDC9D468361ECF9
+      E61AC17EAA3BF2A54B2CA4E1B391A630122D5E6451DEA33757171CE8294E2CA7
+      B21979EF216D5526D25667A109DEFB947C8FE033696B4EA89ACAA62D3B6069BF
+      569C4CC977707777349F0EB9E32ADF9DF361575F71FC3557F9AE8B31354DD2FC
+      0457F9A68A3387C70D63DE835C96C9595EC765CEEA8775E6735EA324FFE0F225
+      96C3FC0A9F85D4E29C5422FEE08C569FFF057F99FF4F1903C571167EA02CC18A
+      FDAD20A10418720C435E25CA4919FE9E39BB1AE72CA43D1F62D6C382D57247CF
+      F8CF2985DFA5C3D9C8DE1A1CD20EBCD451999BDE7A6E6FBD262F44A3C90F1968
+      CFDBDBD05D9D9B31AC1DD866EBFF17A57324E1
+    }
+  end
+  object timerEntryInfoUpdate: TTimer
+    Interval = 250
+    OnTimer = timerEntryInfoUpdateTimer
+    Left = 184
+    Top = 40
+  end
+end

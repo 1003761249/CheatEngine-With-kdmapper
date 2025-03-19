@@ -1,0 +1,468 @@
+object Registers: TRegisters
+  Left = 1176
+  Height = 309
+  Top = 173
+  Width = 364
+  AutoSize = True
+  Caption = 'Registers'
+  ClientHeight = 309
+  ClientWidth = 364
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel2
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 188
+    Top = 0
+    Width = 186
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 188
+    ClientWidth = 186
+    TabOrder = 0
+    object LabelRegisters: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 8
+      Height = 15
+      Top = 0
+      Width = 50
+      BorderSpacing.Left = 8
+      Caption = 'Registers:'
+      ParentColor = False
+    end
+    object Shape1: TShape
+      AnchorSideLeft.Control = LabelRegisters
+      AnchorSideTop.Control = LabelRegisters
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LabelRegisters
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 2
+      Top = 15
+      Width = 50
+      Anchors = [akTop, akLeft, akRight]
+      Brush.Color = clBlack
+    end
+    object PanelRegistersList: TPanel
+      AnchorSideLeft.Control = Shape1
+      AnchorSideTop.Control = Shape1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 8
+      Height = 153
+      Top = 26
+      Width = 140
+      AutoSize = True
+      BorderSpacing.Top = 9
+      BorderSpacing.Bottom = 9
+      BevelOuter = bvNone
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 153
+      ClientWidth = 140
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 0
+      object EAXLabel: TLabel
+        AnchorSideRight.Control = PanelRegistersList
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 2
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EAX 0123456789ABCDEF'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object EBXlabel: TLabel
+        Tag = 1
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EAXLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 19
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EBX 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object ECXlabel: TLabel
+        Tag = 2
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EBXlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 36
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'ECX 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object EDXlabel: TLabel
+        Tag = 3
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = ECXlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 53
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EDX 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object ESIlabel: TLabel
+        Tag = 4
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EDXlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 70
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'ESI 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object EDIlabel: TLabel
+        Tag = 5
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = ESIlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 87
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EDI 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object EBPlabel: TLabel
+        Tag = 6
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EDIlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 104
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EBP 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object ESPlabel: TLabel
+        Tag = 7
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EBPlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 121
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'ESP 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object EIPlabel: TLabel
+        Tag = 8
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = ESPlabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 138
+        Width = 140
+        BorderSpacing.Top = 2
+        Caption = 'EIP 00000000'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+    end
+    object pnlFlags: TPanel
+      AnchorSideLeft.Control = PanelRegistersList
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = PanelRegistersList
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 158
+      Height = 119
+      Top = 26
+      Width = 28
+      AutoSize = True
+      BorderSpacing.Left = 10
+      BevelOuter = bvNone
+      ChildSizing.HorizontalSpacing = 2
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 119
+      ClientWidth = 28
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 1
+      object lblCF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 2
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'CF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblPF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 19
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'PF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblAF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 36
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'AF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblZF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 53
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'ZF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblSF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 70
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'SF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblDF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 87
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'DF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+      object lblOF: TLabel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 104
+        Width = 28
+        BorderSpacing.Top = 2
+        Caption = 'OF 0'
+        ParentColor = False
+        PopupMenu = registerLabelContextMenu
+        OnDblClick = BrowseMemoryRegionClick
+        OnMouseDown = CopyRegisterValueToClipboardMouseRightClick
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 341
+    Height = 309
+    Top = 0
+    Width = 23
+    Align = alRight
+    AutoSize = True
+    ClientHeight = 309
+    ClientWidth = 23
+    TabOrder = 1
+    object Panel4: TPanel
+      AnchorSideTop.Control = Panel2
+      AnchorSideTop.Side = asrCenter
+      Left = 1
+      Height = 60
+      Top = 124
+      Width = 21
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 60
+      ClientWidth = 21
+      TabOrder = 0
+      object sbShowStack: TSpeedButton
+        Left = 0
+        Height = 30
+        Hint = 'Stack view'
+        Top = 0
+        Width = 21
+        AutoSize = True
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 21
+        Caption = 'S'
+        OnClick = sbShowStackClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object sbShowFloats: TSpeedButton
+        Left = 0
+        Height = 30
+        Hint = 'Floating point registers'
+        Top = 30
+        Width = 21
+        AutoSize = True
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 21
+        Caption = 'F'
+        OnClick = sbShowFloatsClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+  end
+  object registerLabelContextMenu: TPopupMenu
+    Images = rImageList
+    Left = 80
+    Top = 248
+    object miCopyRegisterValueToClipboard: TMenuItem
+      Caption = 'Copy selected register value to clipboard'
+      ImageIndex = 0
+      OnClick = miCopyRegisterValueToClipboardClick
+    end
+    object miBrowseMemoryRegion: TMenuItem
+      Caption = 'Browse this memory region'
+      ImageIndex = 1
+      OnClick = miBrowseMemoryRegionClick
+    end
+    object miDisassembleMemoryRegion: TMenuItem
+      Caption = 'Disassemble this memory region'
+      ImageIndex = 2
+      OnClick = miDisassembleMemoryRegionClick
+    end
+    object miSeparator1: TMenuItem
+      Caption = '-'
+    end
+    object miCopyAllRegistersToClipboard: TMenuItem
+      Caption = 'Copy all registers values to clipboard'
+      ImageIndex = 0
+      OnClick = miCopyAllRegistersToClipboardClick
+    end
+  end
+  object rImageList: TImageList
+    Left = 176
+    Top = 248
+    Bitmap = {
+      4C7A040000001000000010000000B30300000000000078DAD5966D4813611CC0
+      A33ED487C8A82FF5A9178220AC668544F4A12408C22F652E14A9A31784A11906
+      A9152AA3B2ACA4179555446FB23545217AB11767CB56EA5A4EE7567E58E3E64B
+      6D6EB9DB0B638AF9EFFE8B3BB6F3EEB669F672F063CF3DFFFFEFB9E7FECFED9E
+      230842575E5E4EF2515454442A140A2900CC1202F340E490CBE5C19696968D53
+      F5272626402A955AA7EAE35150504089F9A3A3A360B7DBC3343737437E7E3E94
+      9595B11004319E9B9BDB816466663E73381C49DCEB8F8F8F87D16834A0D56A05
+      E7E276BB213B3BBB39140ACDE1BBBE5AAD16F5F1B0582C38AF62C6A7C7029BCD
+      1646A954C6F4F1A0D75621E6078341F0783C93A0286A921F392EBA088EE9F3F9
+      26E1F7FBE3F2B14ECC9C22214932CACFC9C9D1D0ED3E86ACACAC7EF4474646D8
+      9A4632303010E573A1DD6DE8E35CE9759E84D3E98CCBC76701D7958F78FC78D7
+      8FC7DF9A919141E1332F864C26AB12FB5F4F87C1C1C1255E8A9AC79C631BFBE2
+      71F58F148702D724F0F94CCA88CD6258F78506DBD887B158FEC7F36926B841BF
+      6E684C2FEE129F347504731E8E89B83DED9ACD63B51B80C9EF3FBF76823C97FC
+      8339C718E608F95DB7F3EE30B942847378DC61A72369E0822418CBC71CCCE5FA
+      C6C7B579DC5C5B65EA77D399543BB73F9C2B523786F6B6D6B5FAF76D6BB8FDDC
+      3A624DFCD753C0ACDA09BD0DBBC05FF3AB8656AB7539826D4FCD26E86D4A07CB
+      831D10AC4E89AA23D6E4F51B023E4065188D51063E7ABD07FBC9A588AB4A02AD
+      D6E36C5CF74C1A5547FDE9E480D62B67E348D7D9F5F8AE988F74566D8E8ABDB0
+      17C327F9BA00E3775EDEDDFACA7C948DBF1E2A819ED2356381406036D2519A3C
+      D6E62967E3DACE23A0AFDAD3CAF8DF5DCE454F15790FEA1AF785743A02DE54A4
+      06DBD5178F31716CB7546E09BE7D7F1094F57B432F6B65F7D1E1AE01FD6E9D6B
+      27C965F89B486C06FEBF8B6F976436EA3BDEAD9F8A6F369B57E84EA678B4C512
+      77AC319EA86EEE5395EE7DC8E5D2810D3DBEAB12C0318C5D86D542BEFADAA952
+      D5E1150E1E28F4BF9C4DFEF1FC71D3F644E64FEF3D49F527D2BAD16DBC57B33F
+      D1FB37180CAB6E1D58E94EC4ADAEAEAE686868B8120F98CBF5552A1585FBF3F0
+      F0B028B87F632E9F8FFB5B5F5F9F282E974BD01F1A1A0293C9240AEE9F42BED7
+      EBE5FDE68804F765219F7E6EC168348A82F728E4F37DAFF0319DEB0BDD7F6161
+      A11DFBE3017367FA1DF0D709381780329D0C83ED447DFFD785EC9E85ED7FDDC7
+      7BC43C866FDDCB581FDB9131BE7A609D627C3BB060EEEFF6A73BFFFF7DFD7EF7
+      F3FB87F809D400146A
+    }
+  end
+end

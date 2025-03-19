@@ -1,0 +1,708 @@
+object frmTracer: TfrmTracer
+  Left = 998
+  Height = 535
+  Top = 89
+  Width = 510
+  BorderIcons = [biSystemMenu]
+  Caption = 'Tracer'
+  ClientHeight = 515
+  ClientWidth = 510
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object Splitter1: TSplitter
+    Left = 283
+    Height = 515
+    Top = 0
+    Width = 4
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object Panel1: TPanel
+    Left = 287
+    Height = 515
+    Top = 0
+    Width = 223
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 515
+    ClientWidth = 223
+    Constraints.MinWidth = 20
+    Font.Name = 'Courier New'
+    ParentFont = False
+    TabOrder = 0
+    OnClick = Panel1Click
+    OnResize = Panel1Resize
+    object Button1: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 74
+      Height = 25
+      Top = 487
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Bottom = 3
+      Caption = 'Close'
+      Constraints.MinWidth = 75
+      OnClick = Button1Click
+      ParentFont = False
+      TabOrder = 0
+    end
+    object pnlRegisters: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel4
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 210
+      Hint = 'Rightclick to copy to clipboard'#13#10'Middleclick to ignore it when comparing traces'
+      Top = 37
+      Width = 120
+      AutoSize = True
+      BorderSpacing.Top = 4
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 6
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 210
+      ClientWidth = 120
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      object EAXLabel: TLabel
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 0
+        Width = 120
+        AutoSize = False
+        Caption = 'EAX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EBXlabel: TLabel
+        Tag = 1
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 24
+        Width = 120
+        Caption = 'EBX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ECXlabel: TLabel
+        Tag = 2
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 48
+        Width = 120
+        Caption = 'ECX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EDXlabel: TLabel
+        Tag = 3
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 72
+        Width = 120
+        Caption = 'EDX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ESIlabel: TLabel
+        Tag = 4
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 96
+        Width = 120
+        Caption = 'ESI 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EDIlabel: TLabel
+        Tag = 5
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 120
+        Width = 120
+        Caption = 'EDI 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EBPlabel: TLabel
+        Tag = 6
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 144
+        Width = 120
+        Caption = 'EBP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ESPlabel: TLabel
+        Tag = 7
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 168
+        Width = 120
+        Caption = 'ESP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EIPlabel: TLabel
+        Tag = 8
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 192
+        Width = 120
+        Caption = 'EIP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+    end
+    object pnlSegments: TPanel
+      AnchorSideLeft.Control = pnlRegisters
+      AnchorSideTop.Control = pnlRegisters
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 120
+      Top = 277
+      Width = 49
+      AutoSize = True
+      BorderSpacing.Top = 30
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 6
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 120
+      ClientWidth = 49
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 2
+      object CSLabel: TLabel
+        Tag = 9
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 49
+        Caption = 'CS 0000'
+        ParentColor = False
+      end
+      object SSlabel: TLabel
+        Tag = 10
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 21
+        Width = 49
+        Caption = 'SS 0000'
+        ParentColor = False
+      end
+      object DSLabel: TLabel
+        Tag = 11
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 42
+        Width = 49
+        Caption = 'DS 0000'
+        ParentColor = False
+      end
+      object ESlabel: TLabel
+        Tag = 12
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 63
+        Width = 49
+        Caption = 'ES 0000'
+        ParentColor = False
+      end
+      object FSlabel: TLabel
+        Tag = 13
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 84
+        Width = 49
+        Caption = 'FS 0000'
+        ParentColor = False
+      end
+      object GSlabel: TLabel
+        Tag = 14
+        Cursor = crHandPoint
+        Left = 0
+        Height = 15
+        Top = 105
+        Width = 49
+        Caption = 'GS 0000'
+        ParentColor = False
+      end
+    end
+    object pnlFlags: TPanel
+      AnchorSideLeft.Control = pnlRegisters
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = pnlRegisters
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 185
+      Height = 141
+      Top = 37
+      Width = 28
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 10
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 6
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 141
+      ClientWidth = 28
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 3
+      object cflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 28
+        Caption = 'CF 0'
+        ParentColor = False
+      end
+      object pflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 21
+        Width = 28
+        Caption = 'PF 0'
+        ParentColor = False
+      end
+      object aflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 42
+        Width = 28
+        Caption = 'AF 0'
+        ParentColor = False
+      end
+      object zflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 63
+        Width = 28
+        Caption = 'ZF 0'
+        ParentColor = False
+      end
+      object sflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 84
+        Width = 28
+        Caption = 'SF 0'
+        ParentColor = False
+      end
+      object dflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 105
+        Width = 28
+        Caption = 'DF 0'
+        ParentColor = False
+      end
+      object oflabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 126
+        Width = 28
+        Caption = 'OF 0'
+        ParentColor = False
+      end
+    end
+    object Panel7: TPanel
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 191
+      Height = 38
+      Top = 240
+      Width = 32
+      Anchors = [akRight]
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 38
+      ClientWidth = 32
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 4
+      object sbShowFloats: TSpeedButton
+        AnchorSideLeft.Control = Panel7
+        AnchorSideTop.Control = Panel7
+        AnchorSideRight.Control = Panel7
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 19
+        Hint = 'Floating point registers'
+        Top = 0
+        Width = 32
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        Caption = 'Float'
+        OnClick = sbShowFloatsClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object sbShowstack: TSpeedButton
+        AnchorSideLeft.Control = Panel7
+        AnchorSideTop.Control = sbShowFloats
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel7
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 19
+        Hint = 'Stack'
+        Top = 19
+        Width = 32
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        Caption = 'Stack'
+        Visible = False
+        OnClick = sbShowstackClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+    end
+    object Panel4: TPanel
+      Left = 0
+      Height = 33
+      Top = 0
+      Width = 223
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 33
+      ClientWidth = 223
+      ParentFont = False
+      TabOrder = 5
+      object lblInstruction: TLabel
+        Left = 0
+        Height = 15
+        Top = 1
+        Width = 57
+        BorderSpacing.Top = 1
+        Caption = 'Instruction'
+        ParentColor = False
+        ParentFont = False
+      end
+      object lblAddressed: TLabel
+        AnchorSideLeft.Control = lblInstruction
+        AnchorSideTop.Control = lblInstruction
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 15
+        Top = 18
+        Width = 95
+        BorderSpacing.Top = 2
+        Caption = 'Accesses Address:'
+        ParentColor = False
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 515
+    Top = 0
+    Width = 283
+    Align = alClient
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 515
+    ClientWidth = 283
+    ParentFont = False
+    TabOrder = 2
+    object pnlSearch: TPanel
+      Left = 0
+      Height = 48
+      Top = 467
+      Width = 283
+      Align = alBottom
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 48
+      ClientWidth = 283
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+      object btnStopSearch: TButton
+        AnchorSideLeft.Control = pnlSearch
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideTop.Control = pnlSearch
+        Left = 97
+        Height = 25
+        Top = 2
+        Width = 88
+        AutoSize = True
+        BorderSpacing.Top = 2
+        BorderSpacing.Bottom = 2
+        Caption = 'Stop Search'
+        Constraints.MinWidth = 75
+        OnClick = btnStopSearchClick
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Panel3: TPanel
+        AnchorSideLeft.Control = pnlSearch
+        AnchorSideTop.Control = btnStopSearch
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = pnlSearch
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = pnlSearch
+        AnchorSideBottom.Side = asrBottom
+        Left = 0
+        Height = 19
+        Top = 29
+        Width = 283
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 19
+        ClientWidth = 283
+        ParentFont = False
+        TabOrder = 1
+        object ProgressBar1: TProgressBar
+          Left = 0
+          Height = 19
+          Top = 0
+          Width = 283
+          Align = alBottom
+          ParentFont = False
+          TabOrder = 0
+        end
+      end
+    end
+    object pnlTracer: TPanel
+      Left = 0
+      Height = 429
+      Top = 0
+      Width = 283
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 429
+      ClientWidth = 283
+      ParentFont = False
+      TabOrder = 1
+      object lvTracer: TTreeView
+        Left = 0
+        Height = 429
+        Top = 0
+        Width = 283
+        Align = alClient
+        HideSelection = False
+        MultiSelect = True
+        MultiSelectStyle = [msShiftSelect]
+        ParentFont = False
+        PopupMenu = pmTracer
+        ReadOnly = True
+        RightClickSelect = True
+        TabOrder = 0
+        OnAdvancedCustomDrawItem = lvTracerAdvancedCustomDrawItem
+        OnDblClick = lvTracerDblClick
+        OnMouseMove = lvTracerMouseMove
+        OnSelectionChanged = lvTracerClick
+        Options = [tvoAllowMultiselect, tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+      end
+    end
+    object cbFPUXMM: TCheckBox
+      Left = 0
+      Height = 19
+      Top = 448
+      Width = 283
+      Align = alBottom
+      Caption = 'Compare FPU/XMM'
+      OnChange = cbFPUXMMChange
+      ParentFont = False
+      TabOrder = 2
+    end
+    object cbIgnoreStackPointers: TCheckBox
+      Left = 0
+      Height = 19
+      Top = 429
+      Width = 283
+      Align = alBottom
+      Caption = 'Ignore stackpointers'
+      Checked = True
+      OnChange = cbIgnoreStackPointersChange
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 3
+    end
+  end
+  object MainMenu1: TMainMenu
+    Images = ftImageList
+    Left = 72
+    Top = 56
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object miNewTrace: TMenuItem
+        Caption = 'New trace'
+        ImageIndex = 2
+        ShortCut = 16462
+        OnClick = miNewTraceClick
+      end
+      object miSaveToDisk: TMenuItem
+        Caption = 'Save results to disk as textfile'
+        ShortCut = 49235
+        OnClick = miSaveToDiskClick
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object miSave: TMenuItem
+        Caption = 'Save trace'
+        ImageIndex = 1
+        ShortCut = 16467
+        OnClick = miSaveClick
+      end
+      object miLoad: TMenuItem
+        Caption = 'Open trace'
+        ImageIndex = 0
+        ShortCut = 16463
+        OnClick = miLoadClick
+      end
+      object miOpenTraceForCompare: TMenuItem
+        Caption = 'Open trace for comparison'
+        Enabled = False
+        Visible = False
+        OnClick = miOpenTraceForCompareClick
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Search'
+      object MenuItem4: TMenuItem
+        Caption = 'Find...'
+        ImageIndex = 3
+        ShortCut = 16454
+        OnClick = MenuItem4Click
+      end
+      object miSearchNext: TMenuItem
+        Caption = 'Find Next'
+        ShortCut = 114
+        OnClick = MenuItem4Click
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.cetrace'
+    Filter = 'CE Trace (*.cetrace)|*.cetrace|All file (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 72
+    Top = 119
+  end
+  object pmTracer: TPopupMenu
+    Left = 72
+    Top = 184
+    object MenuItem5: TMenuItem
+      Caption = 'Expand all'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Collapse all'
+      OnClick = MenuItem6Click
+    end
+    object miRealignCompare: TMenuItem
+      Caption = 'Reallign compare'
+      Enabled = False
+      Visible = False
+      OnClick = miRealignCompareClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Change Font'
+      OnClick = MenuItem7Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.cetrace'
+    Filter = 'CE Trace (*.cetrace)|*.cetrace|All file (*.*)|*.*'
+    Left = 72
+    Top = 248
+  end
+  object ftImageList: TImageList
+    Left = 186
+    Top = 185
+    Bitmap = {
+      4C7A0400000010000000100000003F0300000000000078DAD5965F48535118C0
+      F72084464FBD15194119443D592F918F81160461F6500B7C28D4E8A18715B935
+      1873E212DBA49528EE9F733A733AA7EE8FFBE376DBDAA6CED932AD218239DD04
+      4958048E29DBD7CE5DC3A9DBBC7798E5073F0EDCEFFB9D73EF39F7BB5C00A0C0
+      5F64DC61BFAA1F5237A732E1FC5842D4D7A955D58B8B8B90CA07CB68D8ED7494
+      A1BCC56CBCA6D50C97223E4F4D5D20E223460D2318CA538731DFCD600C10376C
+      3361ABCB5546C4B7180DBB7C7C8EB1B9084B37DAD988B9A4AFAC4E0943F0CE46
+      C6DFC903AD0D0EC22F1976C179896917179B7BE0AE686817A53CD98F1782766E
+      C28FC229C110E40D2E9182D3D9F712F9D72D5E38A29821E51648DDE0F54C1621
+      FF92444F7AEDCB4D5D5EF4FCF77BB5BEE36F4748FBBC3E4D2DF26FD1D9BE3CB5
+      9F947B543C0673DFBE9E45FEBD5AB6AE98DFEB234305B76568BFFA53D24181B6
+      560ABC799D40AB6F058BDDBE0D9DC904DD4A2518AD6A40F5E3134F69647C268B
+      05144A3C6750E27EEA1CB9FAC93988F86D2211945754C088B97F9B9FA4BD9D02
+      027E02D5C03330618369D11A1AD3FA871D79770128FB4F90023949FF93B7267E
+      94D3A4404EAABFB464038F474B0854BBD3FFD7EB8742131008D809816AF7D357
+      A9CF00662B250572908B7A502A9556B2582C6C2F68349AD56C365FD9F90D89E7
+      584030AAAAAA823E9FEF64AEFEFAFA3A50A9D4C95028949F8B8F2210080087C3
+      799EAB8FE28F93DDD7D424C8D51FA84C7050FECF6580EFD62D7A6E2748BD866A
+      32F95FBA01DA8AB3836A32F9BF82004BCE2DDE972748BD866AFED7FDDBEFF327
+      F8FE11EDDF549043D63F4CFD6F341A81CBE5425353133EEAF57A42FD1F0E8781
+      C964823DFEDF901A4EA713180C06BE7EB6F36B686880959595B4F7BEBABA8AD6
+      CDE82F2F2F835028CCFAFC32990C161616D2FA2A950AE6E7E7B3FA7EBF1F140A
+      455ABFABAB0B82C160567F6D6D0D2412495ADFED76E3FB9E2D300C0387C391D6
+      8FC56240A7D3F13153A07C341ACDB8FFB3B3B3505F5F0F1B1B1BDBBCCDCD4DFC
+      FC3875757BF61FDADFBA781D8FC703B95C0E7C3E1FD86C3688C562385D58081D
+      6211A1FE8D4422F8BB80C66418F43A283A960FB4C7D5825CFBDFA2D340611E25
+      D62312DEC9B5FF9F3C7AD832ED993CF71B187D3941
+    }
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 131
+    Top = 14
+  end
+  object SaveDialogText: TSaveDialog
+    DefaultExt = '.txt'
+    Filter = 'Text files (*.txt)|*.txt|All file (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 152
+    Top = 119
+  end
+end

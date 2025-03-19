@@ -1,0 +1,604 @@
+object formAddressChange: TformAddressChange
+  Left = 828
+  Height = 295
+  Top = 182
+  Width = 263
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  Caption = 'Change address'
+  ClientHeight = 295
+  ClientWidth = 263
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object LabelAddress: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 8
+    Height = 15
+    Top = 0
+    Width = 45
+    BorderSpacing.Left = 8
+    Caption = 'Address:'
+    ParentColor = False
+  end
+  object editAddress: TEdit
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = LabelAddress
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 23
+    Top = 15
+    Width = 112
+    OnChange = editAddressChange
+    TabOrder = 0
+  end
+  object lblValue: TLabel
+    AnchorSideLeft.Control = editAddress
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = editAddress
+    AnchorSideTop.Side = asrCenter
+    Left = 120
+    Height = 15
+    Top = 19
+    Width = 36
+    Caption = '=Value'
+    ParentColor = False
+    PopupMenu = pmValue
+  end
+  object btnOk: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = cbPointer
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 25
+    Top = 258
+    Width = 80
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Bottom = 8
+    Caption = 'OK'
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 80
+    Default = True
+    OnClick = btnOkClick
+    TabOrder = 6
+  end
+  object btnCancel: TButton
+    AnchorSideLeft.Control = btnOk
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = cbPointer
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 96
+    Height = 25
+    Top = 258
+    Width = 80
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 8
+    Cancel = True
+    Caption = 'Cancel'
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 80
+    ModalResult = 2
+    TabOrder = 7
+  end
+  object cbPointer: TCheckBox
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = pnlExtra
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 19
+    Top = 239
+    Width = 58
+    Caption = 'Pointer'
+    OnChange = cbPointerClick
+    TabOrder = 5
+  end
+  object cbvarType: TComboBox
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = LabelType
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 23
+    Top = 95
+    Width = 247
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 8
+    ItemHeight = 15
+    ItemIndex = 3
+    Items.Strings = (
+      'Binary'
+      'Byte'
+      '2 Bytes'
+      '4 Bytes'
+      '8 Bytes'
+      'Float'
+      'Double'
+      'Text'
+      'Array of Bytes'
+    )
+    OnChange = cbvarTypeChange
+    Style = csDropDownList
+    TabOrder = 2
+    Text = '4 Bytes'
+  end
+  object HexAndSignedPanel: TPanel
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = cbvarType
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 24
+    Top = 118
+    Width = 264
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Bottom = 10
+    BevelOuter = bvNone
+    ClientHeight = 24
+    ClientWidth = 264
+    TabOrder = 3
+    object cbHex: TCheckBox
+      AnchorSideLeft.Control = HexAndSignedPanel
+      AnchorSideTop.Control = HexAndSignedPanel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 3
+      Width = 89
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 2
+      Caption = 'Hexadecimal'
+      OnChange = cbHexChange
+      TabOrder = 0
+    end
+    object cbSigned: TCheckBox
+      AnchorSideLeft.Control = cbHex
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbHex
+      AnchorSideBottom.Control = cbHex
+      AnchorSideBottom.Side = asrBottom
+      Left = 99
+      Height = 19
+      Top = 3
+      Width = 56
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 10
+      Caption = 'Signed'
+      OnChange = cbSignedChange
+      TabOrder = 1
+    end
+  end
+  object pnlExtra: TPanel
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = HexAndSignedPanel
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 87
+    Top = 152
+    Width = 190
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 87
+    ClientWidth = 190
+    TabOrder = 4
+    Visible = False
+    OnResize = pnlExtraResize
+    object cbunicode: TCheckBox
+      AnchorSideTop.Control = edtSize
+      AnchorSideTop.Side = asrCenter
+      Left = 48
+      Height = 19
+      Top = 17
+      Width = 64
+      Caption = 'Unicode'
+      OnChange = cbunicodeChange
+      TabOrder = 1
+    end
+    object edtSize: TEdit
+      AnchorSideTop.Control = lengthlabel
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 23
+      Top = 15
+      Width = 45
+      TabOrder = 0
+      Text = '10'
+    end
+    object lengthlabel: TLabel
+      AnchorSideLeft.Control = pnlExtra
+      AnchorSideTop.Control = pnlExtra
+      Left = 0
+      Height = 15
+      Top = 0
+      Width = 37
+      Caption = 'Length'
+      ParentColor = False
+    end
+    object pnlBitinfo: TPanel
+      AnchorSideLeft.Control = pnlExtra
+      AnchorSideTop.Control = edtSize
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 49
+      Top = 38
+      Width = 160
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 49
+      ClientWidth = 160
+      TabOrder = 3
+      Visible = False
+      object Label4: TLabel
+        AnchorSideLeft.Control = RadioButton1
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '0'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        AnchorSideLeft.Control = RadioButton2
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 20
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '1'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        AnchorSideLeft.Control = RadioButton3
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 40
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '2'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        AnchorSideLeft.Control = RadioButton4
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 60
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '3'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        AnchorSideLeft.Control = RadioButton5
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 80
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '4'
+        ParentColor = False
+      end
+      object Label9: TLabel
+        AnchorSideLeft.Control = RadioButton6
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 100
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '5'
+        ParentColor = False
+      end
+      object Label10: TLabel
+        AnchorSideLeft.Control = RadioButton7
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 120
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '6'
+        ParentColor = False
+      end
+      object Label11: TLabel
+        AnchorSideLeft.Control = RadioButton8
+        AnchorSideTop.Control = Label2
+        AnchorSideTop.Side = asrBottom
+        Left = 140
+        Height = 15
+        Top = 15
+        Width = 6
+        Caption = '7'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        AnchorSideLeft.Control = pnlBitinfo
+        AnchorSideTop.Control = pnlBitinfo
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 41
+        Caption = 'Startbit:'
+        ParentColor = False
+      end
+      object RadioButton1: TRadioButton
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 19
+        Top = 30
+        Width = 20
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object RadioButton2: TRadioButton
+        AnchorSideLeft.Control = RadioButton1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 20
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 1
+      end
+      object RadioButton3: TRadioButton
+        AnchorSideLeft.Control = RadioButton2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 40
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 2
+      end
+      object RadioButton4: TRadioButton
+        AnchorSideLeft.Control = RadioButton3
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 60
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 3
+      end
+      object RadioButton5: TRadioButton
+        AnchorSideLeft.Control = RadioButton4
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 80
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 4
+      end
+      object RadioButton6: TRadioButton
+        AnchorSideLeft.Control = RadioButton5
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 100
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 5
+      end
+      object RadioButton7: TRadioButton
+        AnchorSideLeft.Control = RadioButton6
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 120
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 6
+      end
+      object RadioButton8: TRadioButton
+        AnchorSideLeft.Control = RadioButton7
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label4
+        AnchorSideTop.Side = asrBottom
+        Left = 140
+        Height = 19
+        Top = 30
+        Width = 20
+        TabOrder = 7
+      end
+    end
+    object cbCodePage: TCheckBox
+      AnchorSideLeft.Control = cbunicode
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbunicode
+      Left = 116
+      Height = 19
+      Top = 17
+      Width = 74
+      BorderSpacing.Left = 4
+      Caption = 'Codepage'
+      OnChange = cbCodePageChange
+      TabOrder = 2
+    end
+  end
+  object editDescription: TEdit
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = LabelDescription
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 23
+    Top = 55
+    Width = 247
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 8
+    TabOrder = 1
+  end
+  object LabelDescription: TLabel
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = editAddress
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 15
+    Top = 40
+    Width = 60
+    BorderSpacing.Top = 2
+    Caption = 'Description'
+    ParentColor = False
+  end
+  object LabelType: TLabel
+    AnchorSideLeft.Control = LabelAddress
+    AnchorSideTop.Control = editDescription
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 15
+    Top = 80
+    Width = 24
+    BorderSpacing.Top = 2
+    Caption = 'Type'
+    ParentColor = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 128
+    Top = 40
+  end
+  object Timer2: TTimer
+    Interval = 1
+    OnTimer = Timer2Timer
+    Left = 64
+    Top = 48
+  end
+  object pmOffset: TPopupMenu
+    Images = caImageList
+    OnPopup = pmOffsetPopup
+    Left = 112
+    Top = 88
+    object miCut: TMenuItem
+      Caption = 'Cut'
+      ImageIndex = 2
+      OnClick = miCutClick
+    end
+    object miCopy: TMenuItem
+      Caption = 'Copy'
+      ImageIndex = 0
+      OnClick = miCopyClick
+    end
+    object miPaste: TMenuItem
+      Caption = 'Paste'
+      ImageIndex = 1
+      OnClick = miPasteClick
+    end
+    object miSeparator: TMenuItem
+      Caption = '-'
+    end
+    object miAddOffsetAbove: TMenuItem
+      Caption = 'Add Offset Above'
+      OnClick = miAddOffsetAboveClick
+    end
+    object miAddOffsetBelow: TMenuItem
+      Caption = 'Add Offset Below'
+      OnClick = miAddOffsetBelowClick
+    end
+    object miRemoveOffset: TMenuItem
+      Caption = 'Remove Offset'
+      OnClick = miRemoveOffsetClick
+    end
+    object miUpdateSeparator: TMenuItem
+      Caption = '-'
+    end
+    object miUpdateOnReinterpretOnly: TMenuItem
+      AutoCheck = True
+      Caption = 'Only update the offset when the memory record gets reinterpreted'
+      OnClick = miUpdateOnReinterpretOnlyClick
+    end
+    object miUpdateAfterInterval: TMenuItem
+      AutoCheck = True
+      Caption = 'Only update the offset after a specific amount of time'
+      OnClick = miUpdateAfterIntervalClick
+    end
+  end
+  object pmPointerRow: TPopupMenu
+    Images = caImageList
+    Left = 152
+    Top = 184
+    object miAddAddressToList: TMenuItem
+      Caption = 'Add this address to the list'
+      ImageIndex = 3
+      OnClick = miAddAddressToListClick
+    end
+    object miCopyAddressToClipboard: TMenuItem
+      Caption = 'Copy this address to Clipboard'
+      ImageIndex = 0
+      OnClick = miCopyAddressToClipboardClick
+    end
+  end
+  object caImageList: TImageList
+    Left = 176
+    Top = 40
+    Bitmap = {
+      4C7A040000001000000010000000FD0300000000000078DADD975F4C536714C0
+      BBF8B03D1867B2CC075F4C7406E358826832131683D1652F4EB775ADFCB37651
+      A994B02A1756A4B25E50B4A8501091F26F032B055C1B8982B5B15D6AC2C34C1A
+      035B48FAC0B08C80903068F89742BA9E9DD37849FF5C2E1589516FF24BBFDCEF
+      FB7DF7F49CD3EFA672B9BC8765590F1F6AB5DA633018A400205A0E5A07025749
+      49C9BCDD6EDFBD5A3F100880542A1D58AD4F974AA5F20AF90B0B0B30343414C4
+      6AB5424E4E0E68B5DA25E472B95FA150FC41482492076363631F463EDFEFF707
+      71381CE0743A978D65626202D2D2D2AC3E9F6F1DDFF33B3A3A047DBAFAFBFB29
+      AE02CEC7BD6070703088C9645AD1A70B6B6B10F2E7E7E7616A6A2A0AAFD71BE5
+      87EE4B2E417B4E4F4F4731333313934F79E2620AC5E3F184F91919190E1CBB39
+      525353FF217F72727229A7A10C0F0F87F991A09B4C3EC58A758E627C7C3C269F
+      7A81EACA472C7EACF5E3F1BF108BC55EEA7921944A6505ADA73E442781B8DD7A
+      5B5CDF50CF8642F7B879AE6743C17A6C3CA711414DAD0814591F41962A2B0CBA
+      4773B486D6F2F9C51744907735153435D99057C68411BC8773B446C8AF73D682
+      0B9EF04273AFDBBFF9E80628B499418EFC70180E7EF93EA4A7A7EBF10CD17576
+      7626ADE467B22797AD3DC330FFBA5CAE4F56EB2F2E2E824C26EB59ADFFA2FFDC
+      2BF974768F8C8C44313737B7E6FE554B19D89E3F582283497F29FF922E9C0307
+      4531F9781E7ED0DCCCB26DEDE188BF4F76C6923F81F712CB77FE72E4E6E60AFA
+      F87BDD8B5B9C598ECACA4A9990FFB6D07DA7E5DB9B2971A367F76D9A6ECC97DC
+      FDB3AF779B605E1CB6CFCDA529963BC5DFDD7FFCBB6D4F1793DCDF58A5CBA2B3
+      CD626C945E11EF1872BBDD9B23BD818181CD4D4529B79E95C707A0653778F0B3
+      BCE0B8DEC87CDDDDD65075925BF79B2EFB46CD4FC71AB8B392FAC378BDA8B0A7
+      68E72C79B3F509D0AADEFF84E2A0F9DEA7AEB88BDFC4FD6DD2FF5CD87EEB9723
+      D6FCFD7FF9CA76419B32A9AFBEB25465C94B1CFCEFD744083427425741C2685B
+      53950CDF2DEF459C411F5BAAB55AB3466231151E35DB14DBFDEDA7B64257FE67
+      40CF7C7A21DED7728DB984EFD4F57C3909FA062D6BBE887EC951B35BF7A97FAA
+      36010C99F1704FB90D1E9EDEE16BB9CCEF53FCA569187F35C66FC4F88B31FE26
+      8C3F3FA9AF4E8FF19FC6F8AF61FCE5187F36C6DF101EBF5183F96B0AC95F05E6
+      EF7C44FE2A307F3F62FECA317F97317F39983FBB6D2FCD7769B17ED52FEAD78A
+      F53B26503F35D64F83F5C37D3CE7B17ECC717DB719FBE744DCC8D9AFB07F3431
+      F48F1DFBA708FBE71CF68FC3B6E75DF80DBD91CC8E6F00D3214F101ABFAC3F33
+      BA11EAF06F0741E337DDA7EF48EB389EF76E59F2691C3AC7970FCA13B77E2568
+      ED5AFBAF1AFFDB5EBFB5EEDFD7C4FFE1ABDB8D
+    }
+  end
+  object pmValue: TPopupMenu
+    Left = 184
+    object miCopyFinalAddressToClipboard: TMenuItem
+      Caption = 'Copy this address to Clipboard'
+      OnClick = miCopyFinalAddressToClipboardClick
+    end
+    object miCopyValueToClipboard: TMenuItem
+      Caption = 'Copy this value to Clipboard'
+      OnClick = miCopyValueToClipboardClick
+    end
+  end
+end

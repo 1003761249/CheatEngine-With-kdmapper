@@ -1,0 +1,585 @@
+object HotKeyForm: THotKeyForm
+  Left = 527
+  Height = 476
+  Top = 193
+  Width = 728
+  AutoSize = True
+  BorderIcons = []
+  Caption = 'Set/Change hotkey'
+  ClientHeight = 476
+  ClientWidth = 728
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShortCut = FormShortCut
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.4.0'
+  object ListView1: TListView
+    Left = 0
+    Height = 201
+    Top = 0
+    Width = 728
+    Align = alClient
+    AutoWidthLastColumn = True
+    Checkboxes = True
+    Columns = <    
+      item
+        Caption = 'Hotkey'
+        MinWidth = 1
+        Width = 150
+      end    
+      item
+        Caption = 'On Hotkey'
+        MinWidth = 1
+        Width = 188
+      end    
+      item
+        Caption = 'Value'
+        MinWidth = 1
+        Width = 100
+      end    
+      item
+        Caption = 'Description'
+        Width = 286
+      end>
+    HideSelection = False
+    PopupMenu = pmHotkeylist
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnDblClick = ListView1DblClick
+    OnItemChecked = ListView1ItemChecked
+    OnSelectItem = ListView1SelectItem
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 275
+    Top = 201
+    Width = 728
+    Align = alBottom
+    AutoSize = True
+    ClientHeight = 275
+    ClientWidth = 728
+    TabOrder = 1
+    object PageControl1: TPageControl
+      Left = 1
+      Height = 233
+      Top = 1
+      Width = 726
+      ActivePage = TabSheet2
+      Align = alClient
+      ShowTabs = False
+      TabIndex = 1
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'TabSheet1'
+        ClientHeight = 225
+        ClientWidth = 718
+        object btnCreateHotkey: TButton
+          AnchorSideLeft.Control = TabSheet1
+          AnchorSideTop.Control = TabSheet1
+          Left = 5
+          Height = 30
+          Top = 2
+          Width = 117
+          AutoSize = True
+          BorderSpacing.Left = 5
+          BorderSpacing.Top = 2
+          Caption = 'Create hotkey'
+          OnClick = btnCreateHotkeyClick
+          TabOrder = 0
+        end
+        object btnEditHotkey: TButton
+          AnchorSideLeft.Control = btnCreateHotkey
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = btnCreateHotkey
+          Left = 131
+          Height = 30
+          Top = 2
+          Width = 103
+          AutoSize = True
+          BorderSpacing.Left = 9
+          Caption = 'Edit Hotkey'
+          Enabled = False
+          OnClick = btnEditHotkeyClick
+          TabOrder = 1
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'TabSheet2'
+        ClientHeight = 225
+        ClientWidth = 718
+        object btnApply: TButton
+          AnchorSideLeft.Control = Panel3
+          AnchorSideTop.Control = Panel3
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 30
+          Top = 193
+          Width = 94
+          AutoSize = True
+          BorderSpacing.Top = 5
+          BorderSpacing.Bottom = 2
+          Caption = 'Apply'
+          Constraints.MinWidth = 94
+          OnClick = btnApplyClick
+          TabOrder = 0
+        end
+        object btnCancel: TButton
+          AnchorSideLeft.Control = btnApply
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = btnApply
+          Left = 96
+          Height = 30
+          Top = 193
+          Width = 94
+          AutoSize = True
+          BorderSpacing.Left = 2
+          BorderSpacing.Bottom = 2
+          Caption = 'Cancel'
+          Constraints.MinWidth = 94
+          OnClick = btnCancelClick
+          TabOrder = 1
+        end
+        object Panel3: TPanel
+          AnchorSideLeft.Control = TabSheet2
+          AnchorSideTop.Control = TabSheet2
+          Left = 0
+          Height = 188
+          Top = 0
+          Width = 359
+          AutoSize = True
+          BevelOuter = bvNone
+          ClientHeight = 188
+          ClientWidth = 359
+          TabOrder = 2
+          object Label1: TLabel
+            AnchorSideLeft.Control = Panel3
+            AnchorSideTop.Control = Panel3
+            Left = 5
+            Height = 20
+            Top = 2
+            Width = 284
+            BorderSpacing.Left = 5
+            BorderSpacing.Top = 2
+            Caption = 'Type the keys you want to set the hotkey to'
+            ParentColor = False
+          end
+          object edtHotkey: TEdit
+            AnchorSideLeft.Control = Label1
+            AnchorSideTop.Control = Label1
+            AnchorSideTop.Side = asrBottom
+            Left = 5
+            Height = 28
+            Top = 24
+            Width = 294
+            BorderSpacing.Top = 2
+            OnKeyDown = edtHotkeyKeyDown
+            OnMouseDown = edtHotkeyMouseDown
+            ReadOnly = True
+            TabOrder = 0
+          end
+          object Button2: TButton
+            AnchorSideLeft.Control = edtHotkey
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = edtHotkey
+            AnchorSideBottom.Control = edtHotkey
+            AnchorSideBottom.Side = asrBottom
+            Left = 299
+            Height = 28
+            Top = 24
+            Width = 60
+            Anchors = [akTop, akLeft, akBottom]
+            AutoSize = True
+            Caption = 'Clear'
+            OnClick = Button2Click
+            TabOrder = 1
+          end
+          object cbFreezedirection: TComboBox
+            AnchorSideLeft.Control = Label1
+            AnchorSideTop.Control = edtHotkey
+            AnchorSideTop.Side = asrBottom
+            Left = 5
+            Height = 28
+            Top = 54
+            Width = 181
+            BorderSpacing.Top = 2
+            ItemHeight = 20
+            ItemIndex = 0
+            Items.Strings = (
+              'Toggle freeze'
+              'Toggle freeze and allow increase'
+              'Toggle freeze and allow decrease'
+              'Set value to:'
+              'Decrease value with:'
+              'Increase value with:'
+            )
+            OnSelect = cbFreezedirectionSelect
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Toggle freeze'
+          end
+          object edtFreezeValue: TEdit
+            AnchorSideLeft.Control = Label1
+            AnchorSideTop.Control = cbOnlyWhileDown
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = edtHotkey
+            AnchorSideRight.Side = asrBottom
+            Left = 5
+            Height = 28
+            Top = 108
+            Width = 294
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Top = 2
+            Enabled = False
+            TabOrder = 3
+          end
+          object Label2: TLabel
+            AnchorSideLeft.Control = Label1
+            AnchorSideTop.Control = edtFreezeValue
+            AnchorSideTop.Side = asrBottom
+            Left = 5
+            Height = 20
+            Top = 138
+            Width = 148
+            BorderSpacing.Top = 2
+            Caption = 'Description (Optional)'
+            ParentColor = False
+          end
+          object edtDescription: TEdit
+            AnchorSideLeft.Control = Label1
+            AnchorSideTop.Control = Label2
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = edtHotkey
+            AnchorSideRight.Side = asrBottom
+            Left = 5
+            Height = 28
+            Hint = 'When autogenerating a trainer this field will be used as description'
+            Top = 160
+            Width = 294
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Top = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 4
+          end
+          object cbOnlyWhileDown: TCheckBox
+            AnchorSideLeft.Control = cbFreezedirection
+            AnchorSideTop.Control = cbFreezedirection
+            AnchorSideTop.Side = asrBottom
+            Left = 5
+            Height = 24
+            Top = 82
+            Width = 351
+            Caption = 'Only while hotkey is down/Restore when released'
+            TabOrder = 5
+          end
+        end
+        object lblActivateSound: TLabel
+          AnchorSideLeft.Control = Panel3
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel3
+          AnchorSideRight.Control = lblDeactivateSound
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = cbActivateSound
+          Left = 369
+          Height = 20
+          Top = 7
+          Width = 98
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Left = 10
+          Caption = 'Activate sound'
+          Enabled = False
+          ParentColor = False
+        end
+        object cbActivateSound: TComboBox
+          AnchorSideLeft.Control = lblActivateSound
+          AnchorSideTop.Control = lblActivateSound
+          AnchorSideTop.Side = asrBottom
+          Left = 369
+          Height = 28
+          Top = 29
+          Width = 186
+          Anchors = [akLeft]
+          BorderSpacing.Top = 2
+          Enabled = False
+          ItemHeight = 20
+          ItemIndex = 0
+          Items.Strings = (
+            'Activate'
+          )
+          OnChange = cbActivateSoundChange
+          PopupMenu = pmAddSound
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'Activate'
+        end
+        object sbPlayActivate: TSpeedButton
+          AnchorSideLeft.Control = cbActivateSound
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = cbActivateSound
+          AnchorSideTop.Side = asrCenter
+          Left = 557
+          Height = 28
+          Top = 29
+          Width = 29
+          BorderSpacing.Left = 2
+          Enabled = False
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000000000000000
+            000004733AFF21824FFF638272FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+            A3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+            47FF889C92FF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+            9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+            77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+            78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+            9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+            49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+            C3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = sbPlayActivateClick
+        end
+        object lblDeactivateSound: TLabel
+          AnchorSideLeft.Control = lblActivateSound
+          AnchorSideTop.Control = edtActivateText
+          AnchorSideTop.Side = asrBottom
+          Left = 369
+          Height = 20
+          Top = 87
+          Width = 115
+          BorderSpacing.Top = 2
+          Caption = 'Deactivate sound'
+          Enabled = False
+          ParentColor = False
+        end
+        object cbDeactivateSound: TComboBox
+          AnchorSideLeft.Control = lblActivateSound
+          AnchorSideTop.Control = lblDeactivateSound
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = cbActivateSound
+          AnchorSideRight.Side = asrBottom
+          Left = 369
+          Height = 28
+          Top = 109
+          Width = 186
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Top = 2
+          Enabled = False
+          ItemHeight = 20
+          ItemIndex = 0
+          Items.Strings = (
+            'Deactivate'
+          )
+          OnChange = cbDeactivateSoundChange
+          PopupMenu = pmAddSound
+          Style = csDropDownList
+          TabOrder = 4
+          Text = 'Deactivate'
+        end
+        object sbPlayDeactivate: TSpeedButton
+          AnchorSideLeft.Control = cbActivateSound
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = cbDeactivateSound
+          AnchorSideTop.Side = asrCenter
+          Left = 557
+          Height = 28
+          Top = 109
+          Width = 29
+          BorderSpacing.Left = 2
+          Enabled = False
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000000000000000
+            000004733AFF21824FFF638272FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+            A3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+            47FF889C92FF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+            9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+            77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+            78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+            9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+            49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+            C3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = sbPlayDeactivateClick
+        end
+        object edtActivateText: TEdit
+          AnchorSideLeft.Control = cbActivateSound
+          AnchorSideTop.Control = cbActivateSound
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = cbActivateSound
+          AnchorSideRight.Side = asrBottom
+          Left = 369
+          Height = 28
+          Top = 57
+          Width = 186
+          Anchors = [akTop, akLeft, akRight]
+          ParentShowHint = False
+          TabOrder = 5
+          Text = '{MRDescription} Activated'
+        end
+        object cbForceEnglishActivate: TCheckBox
+          AnchorSideLeft.Control = edtActivateText
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = edtActivateText
+          AnchorSideTop.Side = asrCenter
+          Left = 557
+          Height = 24
+          Hint = 'Tries to set the language of the windows speech synthesizer to English when speaking this. Won''t speak if there is no English voice installed'
+          Top = 59
+          Width = 111
+          BorderSpacing.Left = 2
+          Caption = 'Force English'
+          Checked = True
+          OnChange = cbForceEnglishActivateChange
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 6
+        end
+        object edtDeactivateText: TEdit
+          AnchorSideLeft.Control = cbDeactivateSound
+          AnchorSideTop.Control = cbDeactivateSound
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = cbDeactivateSound
+          AnchorSideRight.Side = asrBottom
+          Left = 369
+          Height = 28
+          Top = 137
+          Width = 186
+          Anchors = [akTop, akLeft, akRight]
+          ParentShowHint = False
+          TabOrder = 7
+          Text = '{MRDescription} Deactivated'
+        end
+        object cbForceEnglishDeactivate: TCheckBox
+          AnchorSideLeft.Control = edtDeactivateText
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = edtDeactivateText
+          AnchorSideTop.Side = asrCenter
+          Left = 557
+          Height = 24
+          Hint = 'Tries to set the language of the windows speech synthesizer to English when speaking this. Won''t speak if there is no English voice installed'
+          Top = 139
+          Width = 111
+          BorderSpacing.Left = 2
+          Caption = 'Force English'
+          Checked = True
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 8
+        end
+      end
+    end
+    object Panel2: TPanel
+      Left = 1
+      Height = 40
+      Top = 234
+      Width = 726
+      Align = alBottom
+      AutoSize = True
+      ClientHeight = 40
+      ClientWidth = 726
+      TabOrder = 1
+      OnResize = Panel2Resize
+      object lblID: TLabel
+        Left = 720
+        Height = 1
+        Top = 34
+        Width = 1
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        ParentColor = False
+      end
+      object btnOK: TButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideLeft.Side = asrCenter
+        Left = 316
+        Height = 30
+        Top = 5
+        Width = 94
+        AutoSize = True
+        BorderSpacing.Top = 4
+        BorderSpacing.Bottom = 4
+        Caption = 'OK'
+        Constraints.MinWidth = 94
+        OnClick = btnOKClick
+        TabOrder = 0
+      end
+    end
+  end
+  object pmHotkeylist: TPopupMenu
+    OnPopup = pmHotkeylistPopup
+    Left = 115
+    Top = 71
+    object miDelete: TMenuItem
+      Caption = 'Delete'
+      OnClick = miDeleteClick
+    end
+  end
+  object pmAddSound: TPopupMenu
+    Left = 500
+    Top = 90
+    object miAddSound: TMenuItem
+      Caption = 'Add sounds'
+      OnClick = miAddSoundClick
+    end
+  end
+  object odWave: TOpenDialog
+    DefaultExt = '.WAV'
+    Filter = 'All files (*.*)|*.*|Wave files|*.WAV'
+    FilterIndex = 2
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofEnableSizing, ofViewDetail]
+    Left = 320
+    Top = 80
+  end
+end

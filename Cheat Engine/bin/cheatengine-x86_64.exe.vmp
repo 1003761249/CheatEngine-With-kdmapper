@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document Version="2">
+    <Protection InputFileName="cheatengine-x86_64.exe" Options="499456" VMCodeSectionName=".???">
+        <Messages />
+        <Folders />
+        <Procedures>
+            <Procedure MapAddress="EntryPoint" Options="0" CompilationType="1" />
+            <Procedure MapAddress='VMProtectMarker &quot;zuoyuan&quot;' Options="0" CompilationType="1" />
+            <Procedure MapAddress='VMProtectMarker &quot;DBK32Initialize&quot;' Options="0" CompilationType="1" />
+        </Procedures>
+        <Objects />
+    </Protection>
+    <DLLBox>
+        <Folders />
+    </DLLBox>
+    <Script />
+    <LicenseManager ProductCode="GODDVw//mXw=" Algorithm="RSA" Bits="2048" PublicExp="AAEAAQ==" PrivateExp="vIzCR5ciSiJTfSRl96uhnOaJtmohTnNiGIY6Tu5YF++iu5trxRTfATtUEh6rTpPLkFwD7A5axHzZm190d8TvurwtOJWN1oAmAVaJcoJERTm599A8mMMWzXW/6KXqwHpvrNXkPYlYUOUK455VaXysGdcMoRUDIy8HGS3np9DOiUGf5Lyy3dA33Y6l/ALsSIR+DYHrgfRH23PzScZ9E6h73s9m9h0+5rTN5uQwIDwW1dRSodd3XyQiYF8NnhSWVd7diTabMeXLsv6dgDwnq1sT7mSBsNA/gzVdaSzSbr+s0fgp2pN4TMCU8doA0A17yPThzPQuO8vvoiaN7Do8SfDS7Q==" Modulus="21UyoBthkXxMGWQTaXVDAKaE80yM2JWpPOmpTFPEbjKtRkNrfR6q1XBIHAoTaIBnHILdwLapCadyz/GaqG5u5b/Unjthw0G9PQXVWwJHsRJy/tecZtrS/rUeKz06A5hYQgDHAMQbHDEus21FucT/9iByG4jXWK85VzdO0CQW5IDse4sD2RGr6Y7HT6PLv5/4sZE0j08Glli5N+lsocxyGLfLfYcJOkbXaVLpnGiTNHbv8PtWi9yZrZ7mQGBK3z1N/Yi+TvD6z5n99pU+CpEyVH3rlwTA9kgMm/DqmCK7EFg20/ER+fa74a1HSSD1/cPdCgHtl2cTxYxi5RrwFkx8kQ==" />
+</Document>

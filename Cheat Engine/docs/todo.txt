@@ -1,0 +1,278 @@
+ceserver debug: add option to exclude some threads from debugging
+
+fix jvmti on windows (I messed up the lua)
+
+.net info: getting the classlist takes long and it looks like nothing happens, and seems to wait till the symbol enum is done
+.net info: add some grouped commands for data gathering
+.net info: add option to skip the value fetcher
+.net info: lookup instances should grey the button while the scan is going, and when done, dropdown the list for you
+.net info: instance lookup: verify that pointers are actually null or point to a valid location (preferably of the correct classtype?), and booleans can only be 0 or 1
+.net info: when il2cpp is being scanned, add a rightclick to the label at the bottom of ce's main screen that shows the progress, to cancel the enum
+.net info: Make the static fields list also a virtualstringtree
+
+ceserver:  accept new .elf files inside .apk.>0
+CE connected to ceserver: Hide "Active memory only" option(s)
+
+ceserver: did a binary scan. froze at the end
+ceserver: did an aobscan (exec, ignore rest). froze at the end
+ceserver: when debugging, also use multibyte writes using the available apis
+
+processwindow: When going to the network window and connect, and then cancel because the server is down, then the proceslist has lost it's tabs
+
+autoassembler: add autocomplete for stuff like createthread, alloc, etc...
+autoassembler: Add a checkbox or something so it won't ask if you wish to keep certain symbols (always yes/always no?)
+
+ceserver: try to demangle names (register both manged and demangled names)
+
+symhandler: if _errno can't be found, look for a __errno instead (android thing)
+
+enumerate dll's doesn't show some value entries like _ZN3art7Runtime9instance_E
+
+lua engine code completion: string..get<ctrl+space> doesn't work. needs string.. get<ctrl+space> change it to .. does work
+lua engine debug: highlight over array[index].name doesn't get the value. (Check if it is a table, and if so, get the table and then query the field)
+lua engine debug: highlight over a table shows the table, but if you highlight table[index] it still shows the whole table instead of just that indexed entry
+
+{$c}/{ccode}:  Provide a list of warnings
+{$c}/{$ccode}: fix kernel allocation
+
+codelist: Replace with nops: If a module in the list doesn't exist (or different process) an error is shown and it won't nop
+codelist: replace with nops: if the address is already in the list it'll ask to add again.  It should just nop
+
+
+AddressList : Make check expand/collapse icons dpi aware
+
+addresslist: Make script entries have an address if requested (so that mr.Value can be compared in a script's timer)
+
+lua doesn't show errors anymore if the error is inside a component/luacaller   e.g: blax==nil and then blax.xxxx();
+for class fetching in java for android, add a downloadbar/progressbar
+
+processlist with ceserver: rightclick refresh does nothing
+
+ceserver: Add a pthread_create call that can be done without .so injection (so c-code can run all by itself)
+
+
+memscan lua formula scan: value>oldvalue+1000 and value<oldvalue+2000 crashes CE  : value>previousvalue+1000 and value<previousvalue+2000 works  So: add syntaxchecking with values before starting the scan
+
+auto assembler: 6 byte jmp option where CE will do a scan for a 8 byte codecave
+auto assembler: 5 byte jmp option where CE will do a scan for a 14 byte codecave
+DPI: form designer: anchor editor has crappy size on first time show
+
+java info: expand arrays (max 20 or so)
+
+form editor: add an order change option (not just bring to front/send to back)
+form editor: deleting a column from a listview keeps it in the object inspector
+form editor: when loading a form, the save dialog still points to the old one. Change that to the newly loaded formname
+form editor: save objectinspector treeview height
+
+binary type hotkey: increase value by doesn't work
+
+ceshare list filter search has an error
+ceshare comments is white in dark mode ce
+
+macos: luaserver
+macos: pointerscan column click sorting
+
+vehdebug: ccode version
+
+table lua script: ctrl+space completion
+executeCodeLocalEx fails when no parameters are given
+
+dbvm: switch emu yuzu fails to load any game when dbvm is running
+
+dpi: change address dialog: sizefield is too small
+
+signature: resize signature (new version sig?)
+
+add table specific settings. E.g: show errors when activating table
+
+ceshare: search gives errors
+
+file->assign to cheat table with lua code gives error if no dll is injected yet  (todo2: luaclient stuff to injected c code)
+
+add a temp symbol file that holds the most recent PID's and registered symbols in them so that when CE closes it remembers where the allocated code is
+
+In structure dissect add a option to get all the vtable methods and open code filter with them filled in
+
+structure dissect: Multiselect and then del doesn't delete the entries
+structure dissect: when all entries are deleted, you can't insert
+
+javainfo window is not centered
+
+---
+
+dbvm: Change memory while on a breakpoint doesn't seem to apply it to the cloaked page
+
+
+
+single hotkey keys sometimes stuck? sunbeam
+type isn't saved on headers...
+
+tracer search: keyboard focus should be on the input field
+
+
+implement {$nonops} so it rewrites the instruction to force the correct size and then reassembles from the start
+
+
+dbvm cloak: amd pageboundaries (maybe single step issue)
+test nmi's in windows in dbvm
+
+mac: hexview: implement meta+v for pasting
+mac: all modules are seen as 32-bit on a aarch64 target
+mac: aarch64 disassembler (addresses/labels should use the symbolhander)
+
+
+fontcolor in ultimap2 edit fields for seconds and filesize is wrong in dark mode
+
+check if the system uses 'efficient' cores and if so, do not force the scans to use those affinity
+
+luacode and ccode in macos (ccode likely uses windows calling convention)
+
+
+ultimap2 default view is too small for high dpi
+
+import list of instructions from "what accesses this" into ultimap
+
+
+frmregisters seems to have the wrong values
+autoassemble execute seems to do a full symbollist enum ?
+assembling in thuimbmode seems to not negate the extra bit
+thumb might not be correct
+
+add option for big endian pointer support
+
+
+tcc: not all code is debugable/visible(see script at https://pastebin.com/MZGaJ0Su )
+
+break and trace compare gives access violation  (unreprocducable)
+fix/rewrite thumb disAssembler
+
+
+{$luacode sync} parameter
+{$luacode newluastate} parameter
+
+luacode for mac
+luacode for ceserver (create a socket in the target which connects to ceserver, and ceserver connects to ce)
+
+lua editor AND aa editor: when inside a string, the {$asm} inside the string disables lua mode.  Boith the parser and AA need to deal with that
+
+add symbol path configuration
+structure spider: dpi fixes (default window size and base address edit fields)
+structure spider: doubleclick on column 2 value should make you go there
+
+mac/aarch64: show S registers (similar to xmm)
+mac:pointerscan sort by offset
+mac: memview/disassembler updates in a seperate thread and only render when done
+
+hexview: Select bytes->show disassembly (easy shortcut)
+
+vehdebug on tutorial-i386 fails (dll inject crashes tutorial)
+.net info: invoke method: String  (need to create a sting object from string)
+
+.net info: doubleclick on type of a field brings you to that type (in a new window, and if the value field is valid, set the address to that value)
+.net info: mono: editing the System.Boolean type doesn't work
+.net info: spawn the structure dissect window from the field list
+.net info: Rightclick option: copy value to clipboard
+
+
+
+structure dissect : Nested structure
+
+Hexview typelink/colors
+
+autoassembler coloring fix
+
+enumsymbols lua command: add way to figure out duplicates
+
+ce debug and dbvm: changeregonbp , add option for 1 time only
+
+mono: .net info search for mono: search for result/parameter
+mono/il2cpp: debugging, resuming and then activating mono seems to give an error
+addresslist: add groupboxs like entries that auto deactivate the other entries on activate first
+
+when there is an aa error in a memoryrecord, rightclick any other record shows it as well
+
+aobscan non-zero flag (-2)
+
+
+tracer search: Skips calls taken (like call qword [xxx])
+
+hotkeys: Hotkey while down addresslist record hotkey (with a restore to set or saved value)
+
+
+ceshare request window: 
+  make scrolling smooth
+  add option to delete your own request
+
+ceshare: publish has colors in dark mode even in light mode
+
+
+saved scanresults are not deleted on new scan
+
+
+ceshare initial description field is too small (autosize issue I guess)
+
+pointerscan: make the last offset tabable
+
+
+form editor:  in dark mode the edit fields are white text with white background
+
+
+Mac: Hex editing files
+
+
+paging window is not dpi aware
+manual staktrace is not dpi aware, not 64-bit aware, and buggy
+network connect display is not dpi aware
+
+{$luacode} might like the allocated memory addresses afterwards  (perhaps generate a table with these variables inside the ref can later be filled in)
+
+DPI: symbol config address field is not correct
+
+DBVM: Add a "start record all PA access"  "stop record all PA access" which records the PA, VA, CR3, CS:RIP for each access
+DBVM: Add a local break and trace (not undetected single step flag)
+
+
+DBVM: give the "find what this instruction accessess" it's own dbvm config window so it doesn't override the userdefined options
+
+'sub rsp,20+(4*8)+(6*8)'
+set value to -888,12  (not -888.12) and see what happens
+
+
+structure dissect: 
+  delete all structures sometimes AV's (no idea how to reproduce)
+
+lua function call: make it generate a full routine based on parameters to get, including stacksafe call
+
+
+
+memview paste: paste for specific displaytype
+memview->rightclick while debugging: Change eip to position, run till position in the context menu as well
+
+
+trainergen: get rid of tcheat and just use labels
+
+graphical memory view: 
+  change format makes it black sometimes(loses position ?)
+  sometimes the x position is not 0, but can't be changed back
+
+graphical tutorial: continue with it
+
+linux: make a 32-bit linux build with .so injection support
+memscan: Don't combine the scanresults into a single file. Leave them split up (skip: for 6.7 or 7.0)
+
+pseudocode: continue with it
+mac version: work on it
+
+define from debug data: Use a ownerdata list instead (or better, a whole new interface where you can see beforehand the layout)
+
+structure compare: Closed a previous structure compare followed by reopening a new one and loading a file, messes up the popupmode and other stuff
+pointerscan: generating pointermap should also check terminated
+pointerscan: when suspending a scan, CE closed itself(crash)
+
+test and fix the d3dhook stuff and trainer generator.  (perhaps dx12 support as well)
+
+
+a timer causing a lua_error will eventually show c stack overflow
+
+
+mono plugin: When enumerating classes instead of getting a class get the typedefs only and get the info from the typedef info until an actual class is requested/expanded

@@ -1,0 +1,380 @@
+object frameHotkeyConfig: TframeHotkeyConfig
+  Left = 0
+  Height = 414
+  Top = 0
+  Width = 488
+  ClientHeight = 414
+  ClientWidth = 488
+  TabOrder = 0
+  DesignLeft = 436
+  DesignTop = 350
+  object Panel1: TPanel
+    Left = 0
+    Height = 324
+    Top = 90
+    Width = 305
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 324
+    ClientWidth = 305
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 0
+      Height = 15
+      Top = 0
+      Width = 305
+      Align = alTop
+      Caption = 'Functions'
+      ParentColor = False
+    end
+    object ListBox1: TListBox
+      Left = 0
+      Height = 309
+      Top = 15
+      Width = 305
+      Align = alClient
+      ExtendedSelect = False
+      Items.Strings = (
+        'Attach to current foreground process'
+        'Popup/Hide cheat engine'
+        'Pause the selected process'
+        'Toggle the speedhack'
+        'Speedhack speed 1'
+        'Speedhack speed 2'
+        'Speedhack speed 3'
+        'Speedhack speed 4'
+        'Speedhack speed 5'
+        'Speedhack speed +'
+        'Speedhack speed -'
+        'Change type to Binary'
+        'Change type to Byte'
+        'Change type to 2 Bytes'
+        'Change type to 4 Bytes'
+        'Change type to 8 Bytes'
+        'Change type to Float'
+        'Change type to Double'
+        'Change type to Text'
+        'Change type to Array of byte'
+        'New Scan'
+        'New Scan-Exact Value'
+        'New Scan-Unknown Initial Value'
+        'Next Scan-Exact Value'
+        'Next Scan-Increased Value'
+        'Next Scan-Decreased Value'
+        'Next Scan-Changed Value'
+        'Next Scan-Unchanged Value'
+        'Toggle between first/last scan compare'
+        'Undo last scan'
+        'Cancel the current scan'
+        'Debug->Run'
+      )
+      ItemHeight = 0
+      OnClick = ListBox1Click
+      OnDrawItem = ListBox1DrawItem
+      OnSelectionChange = ListBox1SelectionChange
+      Options = []
+      PopupMenu = PopupMenu1
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 305
+    Height = 324
+    Top = 90
+    Width = 183
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 324
+    ClientWidth = 183
+    TabOrder = 1
+    object Label2: TLabel
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      Left = 2
+      Height = 15
+      Top = 2
+      Width = 38
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      Caption = 'Hotkey'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Label2
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Left = 2
+      Height = 23
+      Top = 19
+      Width = 179
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      OnKeyDown = Edit1KeyDown
+      OnMouseDown = Edit1MouseDown
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Button3: TButton
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      Left = 128
+      Height = 25
+      Top = 43
+      Width = 53
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 1
+      Caption = 'Clear'
+      OnClick = Button3Click
+      TabOrder = 1
+    end
+    object Panel3: TPanel
+      AnchorSideTop.Control = Button3
+      AnchorSideTop.Side = asrBottom
+      Left = 78
+      Height = 57
+      Top = 70
+      Width = 100
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 2
+      BevelOuter = bvNone
+      ClientHeight = 57
+      ClientWidth = 100
+      TabOrder = 2
+      Visible = False
+      object Label52: TLabel
+        AnchorSideLeft.Control = edtSHSpeed
+        AnchorSideTop.Control = Panel3
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 44
+        Height = 15
+        Top = 0
+        Width = 56
+        Anchors = [akTop, akRight]
+        Caption = 'Speed        '
+        ParentColor = False
+      end
+      object edtSHSpeed: TEdit
+        AnchorSideLeft.Control = Label52
+        AnchorSideTop.Control = Label52
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 44
+        Height = 23
+        Top = 15
+        Width = 56
+        Anchors = [akTop, akLeft, akRight]
+        OnChange = edtSHSpeedChange
+        OnExit = edtSHSpeedExit
+        TabOrder = 0
+        Text = '2'
+      end
+      object cbStopOnRelease: TCheckBox
+        AnchorSideTop.Control = edtSHSpeed
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 19
+        Top = 38
+        Width = 100
+        Caption = 'Stop on release'
+        TabOrder = 1
+      end
+    end
+    object Panel4: TPanel
+      AnchorSideTop.Control = Panel3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Left = 2
+      Height = 38
+      Top = 129
+      Width = 181
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 2
+      BevelOuter = bvNone
+      ClientHeight = 38
+      ClientWidth = 181
+      TabOrder = 3
+      Visible = False
+      object Label3: TLabel
+        AnchorSideLeft.Control = Edit4
+        AnchorSideTop.Control = Panel4
+        Left = 2
+        Height = 15
+        Top = 0
+        Width = 61
+        Caption = 'Speed delta'
+        ParentColor = False
+      end
+      object Edit4: TEdit
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = Label3
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel4
+        AnchorSideRight.Side = asrBottom
+        Left = 2
+        Height = 23
+        Top = 15
+        Width = 177
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 2
+        BorderSpacing.Right = 2
+        TabOrder = 0
+        Text = '1'
+      end
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Height = 90
+    Top = 0
+    Width = 488
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 90
+    ClientWidth = 488
+    TabOrder = 2
+    object Label4: TLabel
+      AnchorSideLeft.Control = edtHotkeyDelay
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = edtKeypollInterval
+      AnchorSideTop.Side = asrCenter
+      Left = 99
+      Height = 15
+      Top = 6
+      Width = 158
+      BorderSpacing.Left = 2
+      Caption = 'Keypoll interval (milliseconds)'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      AnchorSideLeft.Control = edtHotkeyDelay
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = edtHotkeyDelay
+      AnchorSideTop.Side = asrCenter
+      Left = 99
+      Height = 15
+      Top = 31
+      Width = 186
+      BorderSpacing.Left = 2
+      Caption = 'Delay between reactivating hotkeys'
+      ParentColor = False
+    end
+    object edtKeypollInterval: TEdit
+      AnchorSideLeft.Control = Panel5
+      AnchorSideTop.Control = Panel5
+      Left = 2
+      Height = 23
+      Hint = 'Determines how quickly a hotkey keypress is detected'
+      Top = 2
+      Width = 95
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Text = '100'
+    end
+    object edtHotkeyDelay: TEdit
+      AnchorSideLeft.Control = edtKeypollInterval
+      AnchorSideTop.Control = edtKeypollInterval
+      AnchorSideTop.Side = asrBottom
+      Left = 2
+      Height = 23
+      Hint = 'Lets you specify how quickly a hotkey is repeated'
+      Top = 27
+      Width = 95
+      BorderSpacing.Top = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = '100'
+    end
+    object cbCenterOnPopup: TCheckBox
+      AnchorSideLeft.Control = Panel5
+      AnchorSideTop.Control = edtHotkeyDelay
+      AnchorSideTop.Side = asrBottom
+      Left = 2
+      Height = 19
+      Top = 50
+      Width = 251
+      BorderSpacing.Left = 2
+      Caption = 'Center Cheat Engine when bringing to front'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+    object cbHideAllWindows: TCheckBox
+      AnchorSideLeft.Control = Panel5
+      AnchorSideTop.Control = cbCenterOnPopup
+      AnchorSideTop.Side = asrBottom
+      Left = 2
+      Height = 19
+      Top = 71
+      Width = 392
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 2
+      Caption = 'Hide some/all windows instead of trying to bring cheat engine to front'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+    end
+    object btnExcludeProcesses: TButton
+      AnchorSideLeft.Control = cbHideAllWindows
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbHideAllWindows
+      AnchorSideBottom.Control = cbHideAllWindows
+      AnchorSideBottom.Side = asrBottom
+      Left = 398
+      Height = 19
+      Top = 71
+      Width = 90
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 4
+      Caption = 'More...'
+      Constraints.MinWidth = 90
+      OnClick = btnExcludeProcessesClick
+      TabOrder = 4
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Images = fhcImageList
+    Left = 69
+    Top = 131
+    object MenuItem1: TMenuItem
+      Caption = 'Clear list'
+      ImageIndex = 0
+      OnClick = MenuItem1Click
+    end
+  end
+  object fhcImageList: TImageList
+    Left = 320
+    Top = 100
+    Bitmap = {
+      4C7A0100000010000000100000006A0100000000000078DAFBFFFF3FC37F247C
+      F6EC67A3F2F2BB335D5C2EDE36363EF31B84416C901848EE3F9A7A18FEF0E10F
+      6751D19D3940F5FF41D8C2E2DCE7C0C02BE74018C4868983D480D4A2EB8D8CBC
+      760424EFE373F9DA962D6F037FFCF8C70A9307B141622039901A905A643360F6
+      6664DCDAF4F933AAD9C878C28427C5C8EE80F917662F2EBD7FFFFE67686B7BD8
+      0C52676575EEADBBFBC5BB20362CAC406C90FBB0E905BA9DB9A4E42ED87D4E4E
+      171E5DBDFA5513A416C4878533287C90FD8B1C2EA9A9373741DD77E5E1C31F32
+      B0F000E981C511288CD1F53E7BF65308184E47A1E175F8F5EB5F02C8F2203DB0
+      F845D77FFFFE7759585803C3743D305C38D0CD87E94777FFA54B5F7480FE7C02
+      D25B59796F06509C094B98C0DD8F1C7E870F7FB00586EF7B10BFBBFB513D28DC
+      B1852972F8C1E20F68D64353D3B3DF81ECBF73E73E4FC3950640710CF31B2C3D
+      23A7DB254B5E46E2D30B4A63C8E987C4F47B1D5BFAA534FF50927F014F7AA1EB
+    }
+  end
+end

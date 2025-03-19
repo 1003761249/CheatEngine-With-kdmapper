@@ -1,0 +1,263 @@
+object frmAccessedMemory: TfrmAccessedMemory
+  Left = 513
+  Height = 305
+  Top = 522
+  Width = 641
+  AutoSize = True
+  Caption = 'Find accessed memory regions'
+  ClientHeight = 305
+  ClientWidth = 641
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 305
+    Top = 0
+    Width = 308
+    Align = alLeft
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 305
+    ClientWidth = 308
+    TabOrder = 0
+    object Edit2: TEdit
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Label3
+      AnchorSideRight.Side = asrBottom
+      Left = 2
+      Height = 23
+      Top = 67
+      Width = 141
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 2
+      OnKeyDown = Edit2KeyDown
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Label3
+      AnchorSideRight.Side = asrBottom
+      Left = 2
+      Height = 23
+      Top = 25
+      Width = 141
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 2
+      OnKeyDown = Edit1KeyDown
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrBottom
+      Left = 2
+      Height = 15
+      Top = 52
+      Width = 141
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 4
+      Caption = 'Hotkey to stop monitoring'
+      ParentColor = False
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Side = asrBottom
+      Left = 2
+      Height = 15
+      Top = 10
+      Width = 159
+      BorderSpacing.Left = 2
+      BorderSpacing.Top = 10
+      Caption = 'Hotkey to (re)start monitoring'
+      ParentColor = False
+    end
+    object btnClearSmallSnapshot: TButton
+      AnchorSideLeft.Control = Edit1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Edit1
+      AnchorSideBottom.Control = Edit1
+      AnchorSideBottom.Side = asrBottom
+      Left = 148
+      Height = 23
+      Top = 25
+      Width = 53
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 5
+      Caption = 'Clear'
+      OnClick = btnClearSmallSnapshotClick
+      TabOrder = 2
+    end
+    object btnClearSmallSnapshot1: TButton
+      AnchorSideLeft.Control = Edit2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Edit2
+      AnchorSideBottom.Control = Edit2
+      AnchorSideBottom.Side = asrBottom
+      Left = 148
+      Height = 23
+      Top = 67
+      Width = 53
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 5
+      Caption = 'Clear'
+      OnClick = btnClearSmallSnapshot1Click
+      TabOrder = 3
+    end
+    object Button2: TButton
+      AnchorSideLeft.Control = btnClearSmallSnapshot
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Edit1
+      Left = 231
+      Height = 25
+      Top = 25
+      Width = 75
+      AutoSize = True
+      BorderSpacing.Left = 30
+      BorderSpacing.Right = 2
+      Caption = 'Start'
+      Constraints.MinWidth = 75
+      OnClick = startMonitor
+      TabOrder = 4
+    end
+    object Button3: TButton
+      AnchorSideLeft.Control = btnClearSmallSnapshot
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Edit2
+      Left = 231
+      Height = 25
+      Top = 67
+      Width = 75
+      AutoSize = True
+      BorderSpacing.Left = 30
+      BorderSpacing.Right = 2
+      Caption = 'Stop'
+      Constraints.MinWidth = 75
+      Enabled = False
+      OnClick = stopMonitor
+      TabOrder = 5
+    end
+    object Button1: TButton
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Edit2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 25
+      Top = 95
+      Width = 95
+      AutoSize = True
+      BorderSpacing.Top = 5
+      BorderSpacing.Bottom = 10
+      Caption = 'Set hotkeys'
+      Constraints.MinWidth = 95
+      OnClick = Button1Click
+      TabOrder = 6
+    end
+    object lblLost: TLabel
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 286
+      Height = 15
+      Top = 1
+      Width = 22
+      Anchors = [akTop, akRight]
+      Caption = 'Lost'
+      ParentColor = False
+      Visible = False
+    end
+  end
+  object vsResults: TLazVirtualStringTree
+    Left = 308
+    Height = 305
+    Top = 0
+    Width = 333
+    Align = alClient
+    DefaultText = 'Node'
+    Header.AutoSizeIndex = 1
+    Header.Columns = <    
+      item
+        Options = [coAllowClick, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coVisible, coSmartResize, coAllowFocus, coEditable]
+        Position = 0
+        Text = 'Page Base'
+        Width = 174
+      end    
+      item
+        Options = [coAllowClick, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coVisible, coSmartResize, coAllowFocus, coEditable]
+        Position = 1
+        Text = 'First Accessed By'
+        Width = 155
+      end>
+    Header.Options = [hoAutoResize, hoColumnResize, hoDrag, hoShowSortGlyphs, hoVisible]
+    TabOrder = 1
+    TreeOptions.AutoOptions = [toAutoDropExpand, toAutoScrollOnExpand, toAutoSort, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale, toAutoFreeOnCollapse]
+    TreeOptions.MiscOptions = [toAcceptOLEDrop, toFullRepaintOnResize, toInitOnSave, toWheelPanning, toEditOnClick]
+    TreeOptions.SelectionOptions = [toFullRowSelect]
+    OnDblClick = vsResultsDblClick
+    OnExpanding = vsResultsExpanding
+    OnGetText = vsResultsGetText
+  end
+  object PopupMenu1: TPopupMenu
+    Images = famrImageList
+    Left = 448
+    Top = 48
+    object MenuItem4: TMenuItem
+      Caption = 'Clear'
+      ImageIndex = 2
+      OnClick = MenuItem4Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.mregion'
+    Filter = 'Memory region files (*.mregion)|*.mregion|All files (*.*)|*.*'
+    Left = 448
+    Top = 112
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.mregion'
+    Filter = 'Memory region files (*.mregion)|*.mregion|All files (*.*)|*.*'
+    Left = 528
+    Top = 112
+  end
+  object famrImageList: TImageList
+    Left = 360
+    Top = 120
+    Bitmap = {
+      4C7A030000001000000010000000120200000000000078DAD5953D481B6118C7
+      6F100A8A5337A1858228145DDA4EB58E426CA14B49875AC742DD1C5AF0138238
+      A85895A62D4A4863ABC662343D132F9FE6725E34D1D8D8B4481B1C9434A44B1D
+      DCA483FDEB63089C49947B3DB538FCE078FECFEF79EFBDF78E03C0E11C59590A
+      DD753BF82125D1F062AD5ADFC5DB9F27934928591003BBABE1A57ACAC579DF3D
+      61CEA923BEADADDD54E31301AF47A2FCA9534A3CF8FD0FC47D797D371889D4AB
+      F1459F37CF3F9CB1BCF1D7E00A8CF54991D1DE60D8D26E7C2BB3F8B9340A322E
+      C2AF75465069F1E75135F4098FCD8E3C74031FB75B8CA69E8CBF876B46078A66
+      534C748F4D77905F27C67165729DC92D1E5D453CF6A582FC6A8B9B79ED3BFD13
+      71DA7FC39490B8FAC6C3EC0F4CCFB592FFB0AD2B51C4FF62724BDE2F63E3E78F
+      72F29FB476B96E0F4E2558D0F7BC739CD5F769F9C0616498C3EB571904F730C4
+      50E8082EBF1F569B0DBE200FEA5F8936BF60F13B0D0670DC41E6B51DFACA19A7
+      F5B333D4F82366331EE9F5F0CCCF1CF1B3984C1C8C8319EC9F5FC22FCD1644F0
+      F615F42F3BE3D662D866CA982027EB7F8D371D1CE57726C851FAA9948C584C50
+      05F5E6FAFF7BFD9D9D28D2E9902AA8F72C7D3B7F0392AC63821C7271CEFFFF8B
+      64FB0F4A9F35C2BAB589EBB919D528A39EE37CCA6F55027535D854CEA06BAA51
+      463DC7F9CABEEC8C42B593F690DBCFE2169AC1EA6AF5B5DCBFD6E7A7F5FCB4BE
+      3F97917D00B6842D
+    }
+  end
+  object tReader: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tReaderTimer
+    Left = 419
+    Top = 205
+  end
+end
