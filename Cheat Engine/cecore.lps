@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="38">
+      <Unit0>
+        <Filename Value="cecore.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="25" Y="19"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="networkInterfaceApi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="networkInterface.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="NewKernelHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unixporthelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="ProcessHandlerUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="elfsymbols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="processlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProcessList"/>
+        <UsageCount Value="20"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="memscan.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="parsers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="globals.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="commontypedefs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="savedscanhandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="virtualqueryexcache.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="foundlisthelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="CustomTypeHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="groupscancommandparser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="jni\jnitfoundlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="jni\jnitmemscan.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniTMemScan"/>
+        <UsageCount Value="20"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="jni\jnitobject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniTObject"/>
+        <UsageCount Value="20"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="symbollisthandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="symbolhandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="dotnettypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="dotnetpipe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="byteinterpreter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="jni\jnisymbolhandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniSymbolHandler"/>
+        <UsageCount Value="20"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="jni\jnibyteinterpreter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniByteInterpreter"/>
+        <UsageCount Value="20"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="MemoryRecordUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="pointerparser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="jni\jniaddresslist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniAddressList"/>
+        <UsageCount Value="20"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="autoassembler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Assemblerunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="assemblerarm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="disassemblerarm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DisassemblerArm"/>
+        <UsageCount Value="20"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="disassemblerthumb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DisassemblerThumb"/>
+        <UsageCount Value="20"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="lastdisassembledata.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LastDisassembleData"/>
+        <UsageCount Value="20"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="disassembler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="jni\jnitdisassembler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="jniTDisassembler"/>
+        <UsageCount Value="20"/>
+      </Unit37>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -122,7 +122,7 @@ uses
   sourcecodehandler, frmSourceDisplayUnit, disassemblerarm64, contexthandler,
   DisAssemblerARM32, frmAnchorEditor, disassemblerArm32Thumb, iptnative,
   iptlogdisplay, LuaVirtualStringTree, userbytedisassembler,
-  LuaNetworkInterface, libcepack, symbolsync, gdbserverconnectdialog,
+  LuaNetworkInterface, libcepack, symbolsync, gdbserverconnectdialog,VMProtectSDK,
   GDBServerDebuggerInterface;
 
 {$R cheatengine.res}
@@ -138,7 +138,7 @@ uses
 
 {$R sounds.res}
 {$ifdef altname}
-{$R Images_alt.res}
+{$R Images.res}
 {$else}
 {$R Images.res}
 {$endif}
@@ -275,10 +275,18 @@ begin
   end;
 end;
 
+
+
+
+
 procedure setScaledTrue;
 begin
   application.Scaled:=true; //put it here because the lazarus ide will just nuke it on setting change otherwise
 end;
+
+
+
+type TVMProtectSetSerialNumber=function(SerialNumber: PAnsiChar): Longword; stdcall;
 
 var
   i: integer;
@@ -289,8 +297,22 @@ var
   path: string;
   noautorun: boolean;
 
+  Serial: AnsiString;
+
 begin
-  Application.Title:='';
+
+    //Vmprotect check
+    Serial:='BMxMCNXNAlHDcGy5cHB5HYb7M51CtK2yDQsXcizPDKVAz76UilN6mr7fbLym36tY8lc5nJLJ/2S3a5WzJutd/wRwzrtpRM4XcUyV+e96uKc/7LEqa7v92w3mbq9RH8WkvoY2s/9Nvs3+91XZMma3vFvz25bx4yVwPUvevUNV6AlYUwasqtvSsGPNoH7gc5fozauZMkUkFmTeThwBw2r3NozSmKYDnQ+AW/FFPY6whiDVkwDhdAbQDk7L6fc5PZT/VFa0qRsupFR9zJFbgF34p51OriF06U03BTRKyHI6pBgcyFi7lwIPw9iJEKACvH5mZk3DJTx2CuFsOELGZwjsqYo==';
+   // VMProtectSDK:=loadlibrary('VMProtectSDK64.dll');
+    //@VMProtectSetSerialNumber:=GetProcAddress(VMProtectSDK,'VMProtectSetSerialNumber');
+
+   //  @VMProtectSetSerialNumber := GetProcAddress(LibHandle, 'VMProtectSetSerialNumber');
+    //VMProtectSetSerialNumber(PAnsiChar(Serial));
+
+
+  VMProtectBeginMutation('zuoyuan');
+  Application.Title:='Deemo2 Engine 7.5';
+
  //'Cheat Engine 7.3';
   {$ifdef darwin}
   macPortFixRegPath;
@@ -417,5 +439,6 @@ begin
 
 
   Application.Run;
+  VMProtectEnd;
 end.
 

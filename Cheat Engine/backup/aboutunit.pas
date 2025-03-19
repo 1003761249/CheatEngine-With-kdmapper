@@ -49,7 +49,6 @@ type
     Panel4: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Label4Click(Sender: TObject);
@@ -59,6 +58,7 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure lblDBVMClick(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
+    procedure lblDBVMClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -215,6 +215,7 @@ begin
   end;
   {$endif}
 end;
+
 
 procedure TAbout.UpdateDBVMStatus;
 var

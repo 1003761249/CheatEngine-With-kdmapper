@@ -15,7 +15,7 @@ uses
   Buttons, LResources, frameHotkeyConfigUnit, math,
 
   KernelDebugger,plugin,NewKernelHandler,CEDebugger,hotkeyhandler, debugHelper,
-  formhotkeyunit, debuggertypedefinitions, FileUtil, IniFiles, betterControls, Types;
+  formhotkeyunit, debuggertypedefinitions, FileUtil, IniFiles, betterControls;
 
 
 type Tpathspecifier=class(TObject)
@@ -70,6 +70,8 @@ type
     cbDPIAware: TCheckBox;
     cbShowLanguageMenuItem: TCheckBox;
     cbProcessWatcherOpensHandles: TCheckBox;
+    cbAlwaysSignTable: TCheckBox;
+    cbAlwaysAskForPassword: TCheckBox;
     cbLuaPassiveGarbageCollection: TCheckBox;
     cbLuaGarbageCollectAll: TCheckBox;
     cbLuaOnlyCollectWhenLarger: TCheckBox;
@@ -204,6 +206,7 @@ type
     tsSymbols: TTabSheet;
     tsMacDebuggerInterface: TTabSheet;
     tsLua: TTabSheet;
+    tsSigning: TTabSheet;
     tsKernelDebugConfig: TTabSheet;
     tsVEHDebugConfig: TTabSheet;
     tsWindowsDebuggerConfig: TTabSheet;
@@ -309,8 +312,6 @@ type
     procedure ScrollBox1Click(Sender: TObject);
     procedure spbDownClick(Sender: TObject);
     procedure spbUpClick(Sender: TObject);
-    //procedure tsSigningContextPopup(Sender: TObject; MousePos: TPoint;
-    //  var Handled: Boolean);
     procedure tvMenuSelectionChange(Sender: TObject; Node: TTreeNode);
     procedure Panel6Resize(Sender: TObject);
     procedure cbProcessIconsClick(Sender: TObject);
@@ -465,7 +466,7 @@ resourcestring
   rsDebuggerOptions = 'Debugger Options';
   rsLuaOptions = 'Lua';
   rsExtra = 'Extra';
-  //rsSigning = 'Signing';
+  rsSigning = 'Signing';
   rsNoName = 'No Name';
   rsAttachToForegroundProcess = 'Attach to current foreground process';
   rsPopupHideCheatEngine = 'Popup/Hide '+strCheatEngine;
@@ -1702,7 +1703,6 @@ begin
 
 end;
 
-
 procedure TformSettings.replacewithnopsClick(Sender: TObject);
 begin
   askforreplacewithnops.Enabled:=replacewithnops.Checked;
@@ -1717,7 +1717,6 @@ procedure TformSettings.CheckBox2Click(Sender: TObject);
 begin
 
 end;
-
 
 procedure TformSettings.cbUpdatefoundListClick(Sender: TObject);
 begin
@@ -1897,13 +1896,13 @@ begin
   tvMenuSelection.Items[8].Data:=self.Assembler;
   tvMenuSelection.Items[9].Data:=tsLua;
   tvMenuSelection.Items[10].Data:=Extra;
-  //tvMenuSelection.Items[11].Data:=tsSigning;
+  tvMenuSelection.Items[11].Data:=tsSigning;
 
   tvMenuSelection.Items[7].Visible:=false;
-  //tvMenuSelection.Items[11].Visible:={$ifdef windows}cansigntables{$else}false{$endif};
+  tvMenuSelection.Items[11].Visible:={$ifdef windows}cansigntables{$else}false{$endif};
 
   {$ifdef altname}
- // tvMenuSelection.Items[10].Visible:=false; //the pussy version does not have kernelmode tools
+  tvMenuSelection.Items[10].Visible:=false; //the pussy version does not have kernelmode tools
   {$endif}
 
   pcSetting.ShowTabs:=false;
@@ -1976,7 +1975,7 @@ begin
   tvMenuSelection.Items[8].Text:=rsDebuggerOptions;
   tvMenuSelection.Items[9].Text:=rsLuaOptions;
   tvMenuSelection.Items[10].Text:=rsExtra;
-  //tvMenuSelection.Items[11].Text:=rsSigning;
+  tvMenuSelection.Items[11].Text:=rsSigning;
 
 
 
@@ -2202,7 +2201,6 @@ begin
   if lvtools.ItemIndex>=1 then
     lvtools.items.Move(lvtools.ItemIndex, lvtools.ItemIndex-1);
 end;
-
 
 procedure TformSettings.spbDownClick(Sender: TObject);
 begin

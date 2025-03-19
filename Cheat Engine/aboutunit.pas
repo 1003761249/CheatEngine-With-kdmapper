@@ -215,6 +215,7 @@ begin
   {$endif}
 end;
 
+
 procedure TAbout.UpdateDBVMStatus;
 var
   supportsdbvm: boolean;

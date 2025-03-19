@@ -391,6 +391,7 @@ object About: TAbout
       BorderSpacing.Top = 6
       Caption = 'your system may or may not support dbvm'
       ParentColor = False
+      OnClick = lblDBVMClick
       OnMouseDown = lblDBVMClick
     end
     object Button1: TButton
