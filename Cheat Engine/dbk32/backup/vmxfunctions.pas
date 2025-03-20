@@ -3441,8 +3441,8 @@ initialization
     end
     else
     begin
-      //vmcall:=vmcallSupported_intel;
-      //vmcall2:=vmcallSupported2_intel;
+      vmcall:=vmcallSupported_intel;
+      vmcall2:=vmcallSupported2_intel;
     end;
   end;
 

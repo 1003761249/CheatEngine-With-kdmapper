@@ -3171,7 +3171,7 @@ var sav: pchar;
 procedure DBK32Initialize;
 var le: integer;
 begin
-  VMProtectBeginUltra('DBK32Initialize');
+  VMProtectBeginMutation('DBK32Initialize');
   outputdebugstring('DBK32Initialize');
 
   if not requiresAdmin('DBK driver') then exit;

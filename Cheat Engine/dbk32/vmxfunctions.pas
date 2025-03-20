@@ -1052,7 +1052,6 @@ var vmcallinfo: record
   command: dword;
 end;
 begin
-
   if (vmx_password1=0) and (vmx_password2=0) and (vmx_password3=0) then
   begin
     //set the password if it was not set
