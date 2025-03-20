@@ -1,0 +1,552 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: Valdas Jankunas <zmuogs@gmail.com>\n"
+"PO-Revision-Date: 2012-08-06 17:24+0300\n"
+"Project-Id-Version: \n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: fpwebstrconsts.rsapachemodule
+msgid "Apache Module"
+msgstr "Apache modulis"
+
+#: fpwebstrconsts.rsapachemodule2
+#, fuzzy
+#| msgid "Apache module%sAn Apache loadable module in Free Pascal using webmodules. The main library file is automatically maintained by Lazarus."
+msgid "An Apache loadable module in Free Pascal using webmodules. The main library file is automatically maintained by Lazarus."
+msgstr "Apache modulis%sĮkeliamasis Apache modulis Free Pascal-yje, naudojantis „webmodules“. Lazarus automatiškai rūpinsis programos pirminiu kodu."
+
+#: fpwebstrconsts.rscgiapplicati
+msgid "CGI Application"
+msgstr "CGI programa"
+
+#: fpwebstrconsts.rscgiapplicati2
+#, fuzzy
+#| msgid "CGI Application%sA CGI (Common Gateway Interface) program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "A CGI (Common Gateway Interface) program in Free Pascal using webmodules."
+msgstr "CGI programa%sCGI (Common Gateway Interface) programa Free Pascal-yje, naudojanti „webmodules“. Lazarus automatiškai rūpinsis programos pirminiu kodu."
+
+#: fpwebstrconsts.rscustomcgiapp
+msgid "Custom CGI Application"
+msgstr "Sava CGI programa"
+
+#: fpwebstrconsts.rscustomcgiapp2
+#, fuzzy
+#| msgid "Custom CGI Application%sA CGI (Common Gateway Interface) program in Free Pascal. The program source is automatically maintained by Lazarus."
+msgid "A CGI (Common Gateway Interface) program in Free Pascal."
+msgstr "CGI programa%sCGI (Common Gateway Interface) programa Free Pascal-yje. Lazarus automatiškai rūpinsis programos pirminiu kodu."
+
+#: fpwebstrconsts.rscustomfastcg
+msgid "Custom FastCGI Application"
+msgstr "Sava FastCGI programa"
+
+#: fpwebstrconsts.rscustomfastcg2
+#, fuzzy
+#| msgid "Custom FastCGI Application%sA FastCGI (Common Gateway Interface) program in Free Pascal. The program source is automatically maintained by Lazarus."
+msgid "A FastCGI (Common Gateway Interface) program in Free Pascal."
+msgstr "Sava FastCGI programa%sFastCGI (Common Gateway Interface) programa Free Pascal-yje. Lazarus automatiškai rūpinsis programos pirminiu kodu."
+
+#: fpwebstrconsts.rsfastcgiappli
+msgid "FastCGI Application"
+msgstr "FastCGI programa"
+
+#: fpwebstrconsts.rsfastcgiappli2
+#, fuzzy
+#| msgid "FastCGI Application%sA FastCGI (Common Gateway Interface) program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "A FastCGI (Common Gateway Interface) program in Free Pascal using webmodules."
+msgstr "FastCGI programa%sFastCGI (Common Gateway Interface) programa Free Pascal-yje, naudojanti „webmodules“. Lazarus automatiškai rūpinsis programos pirminiu kodu."
+
+#: fpwebstrconsts.rsfilemodule
+msgid "File serving Module"
+msgstr ""
+
+#: fpwebstrconsts.rsfilemodule2
+msgid "A datamodule to help serving files from the filesystem in WEB (HTTP) applications."
+msgstr ""
+
+#: fpwebstrconsts.rshtmlwebmodul
+msgid "HTML Web Module"
+msgstr "HTML saityno modulis"
+
+#: fpwebstrconsts.rshtmlwebmodul2
+#, fuzzy
+#| msgid "HTML WEB Module%sA Web datamodule for producing strict HTML."
+msgid "A Web datamodule for producing strict HTML."
+msgstr "HTML saityno modulis%sSaityno duomenų modulis griežto HTML kūrimui,"
+
+#: fpwebstrconsts.rshttpappli
+msgid "HTTP server Application"
+msgstr "HTTP serverio programa"
+
+#: fpwebstrconsts.rshttpappli2
+#, fuzzy
+#| msgid "HTTP server Application. Complete HTTP Server program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "Complete HTTP Server program in Free Pascal using webmodules."
+msgstr "HTTP serverio programa. „Free Pascal“ aplinkoje naudojant saityno modulius sukurti HTTP serverio programą. Programos pirminį kodą automatiškai prižiūrės „Lazarus“."
+
+#: fpwebstrconsts.rsnomodule
+msgid "Do not create a web module"
+msgstr ""
+
+#: fpwebstrconsts.rswebdataprovi
+msgid "Web DataProvider Module"
+msgstr "Saityno „DataProvider“ modulis"
+
+#: fpwebstrconsts.rswebdataprovi2
+#, fuzzy
+#| msgid "WEB DataProvider Module%sA datamodule to handle data requests for WEB (HTTP) applications using WebDataProvider components."
+msgid "A datamodule to handle data requests for WEB (HTTP) applications using WebDataProvider components."
+msgstr "Saityno „DataProvider“ modulis%sDuomenų modulis, kuris naudodamas „WebDataProvider“ modulius doroja WEB (HTTP) programoms skirtas duomenų užklausas."
+
+#: fpwebstrconsts.rswebextdirect
+msgid "Web Ext.Direct Module"
+msgstr "Saityno „Ext.Direct“ modulis"
+
+#: fpwebstrconsts.rswebextdirect2
+#, fuzzy
+#| msgid "WEB Ext.Direct Module%sA datamodule to dispatch Ext.Direct requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgid "A datamodule to dispatch Ext.Direct requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgstr "Saityno „Ext.Direct“ modulis%sDuomenų modulis, kuris naudodamas „TJSONRPCHandler“ komponentus skirsto „Ext.Direct“ užklausas WEB (HTTP) programose."
+
+#: fpwebstrconsts.rswebjsonrpcmo
+msgid "Web JSON-RPC Module"
+msgstr "Saityno „JSON-RPC“ modulis"
+
+#: fpwebstrconsts.rswebjsonrpcmo2
+#, fuzzy
+#| msgid "WEB JSON-RPC Module%sA datamodule to dispatch JSON-RPC requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgid "A datamodule to dispatch JSON-RPC requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgstr "Saityno „JSON-RPC“ modulis%sDuomenų modulis, kuris naudodamas „TJSONRPCHandler“ komponentus skirsto „JSON-RPC“ užklausas WEB (HTTP) programose."
+
+#: fpwebstrconsts.rswebmodule
+msgid "Web Module"
+msgstr "Saityno modulis"
+
+#: fpwebstrconsts.rswebmoduleada
+#, fuzzy
+#| msgid "WEB Module%sA datamodule for WEB (HTTP) applications."
+msgid "A datamodule for WEB (HTTP) applications."
+msgstr "Saityno modulis%sDuomenų modulis saityno (HTTP) programoms."
+
+#: fpwebstrconsts.scaption
+msgid "Create a new JSON-RPC module"
+msgstr "Kurti naują JSON-RPC modulį"
+
+#: fpwebstrconsts.scssfile
+msgid "CSS file"
+msgstr "CSS failas"
+
+#: fpwebstrconsts.scssfiledesc
+msgid "Create new CSS file ..."
+msgstr "Kurti naują CSS failą…"
+
+#: fpwebstrconsts.scsssource
+msgid "Enter your classes/style definitions here"
+msgstr "Čia reikia įvesti klasių/stilių apibrėžtis"
+
+#: fpwebstrconsts.sdefaultrouteservesfiles
+msgid "Serve files from default location"
+msgstr ""
+
+#: fpwebstrconsts.sdocumentroot
+msgid "&Directory"
+msgstr "&Aplankas"
+
+#: fpwebstrconsts.senteryoutext
+msgid "Enter your text ..."
+msgstr "Įveskite tekstą…"
+
+#: fpwebstrconsts.sfileserving
+msgid "File serving"
+msgstr ""
+
+#: fpwebstrconsts.shtmlautor
+msgid "Html &author - <meta name=\"author\">"
+msgstr "Html au&torius - <meta name=\"author\">"
+
+#: fpwebstrconsts.shtmlcharset
+msgid "HTML chars&et"
+msgstr "HTML ko&duotė"
+
+#: fpwebstrconsts.shtmlcopyright
+msgid "Html cop&yright - meta name=\"copyright\">"
+msgstr "Html autoriaus tei&sės - <meta name=\"copyright\">"
+
+#: fpwebstrconsts.shtmlcssfile
+msgid "&CSS file"
+msgstr "&CSS failas"
+
+#: fpwebstrconsts.shtmldesign
+msgid "HTML design"
+msgstr "HTML kompozicija"
+
+#: fpwebstrconsts.shtmlfile
+msgid "HTML file"
+msgstr "HTML failas"
+
+#: fpwebstrconsts.shtmlfiledesc
+msgid "Create new HTML file ..."
+msgstr "Kurti naują HTML failą…"
+
+#: fpwebstrconsts.shtmlinputformaccesskey
+msgid "Access key"
+msgstr "Prieigos raktas"
+
+#: fpwebstrconsts.shtmlinputformalign
+msgid "Align"
+msgstr "Lygiuotė"
+
+#: fpwebstrconsts.shtmlinputformalt
+msgid "Alt"
+msgstr "Alt"
+
+#: fpwebstrconsts.shtmlinputformcaption
+msgid "Tag property: INPUT"
+msgstr "Gairės savybė: INPUT"
+
+#: fpwebstrconsts.shtmlinputformimagesrc
+msgid "Image src"
+msgstr "Paveikslo šaltinis"
+
+#: fpwebstrconsts.shtmlinputformmaxlen
+msgid "Max length"
+msgstr "Didžiausias ilgis"
+
+#: fpwebstrconsts.shtmlinputformname
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: fpwebstrconsts.shtmlinputformsize
+msgid "Size"
+msgstr "Dydis"
+
+#: fpwebstrconsts.shtmlinputformtabindex
+msgid "Tab Index"
+msgstr "Tabuliavimo eilė"
+
+#: fpwebstrconsts.shtmlinputformtype
+msgid "Type"
+msgstr "Tipas"
+
+#: fpwebstrconsts.shtmlinputformvalue
+msgid "Value"
+msgstr "Vertė"
+
+#: fpwebstrconsts.shtmljsfile
+msgid "&Javascript file"
+msgstr "&Javascript Failas"
+
+#: fpwebstrconsts.shtmltableformborderwidth
+msgid "Border width"
+msgstr "Rėmelio plotis"
+
+#: fpwebstrconsts.shtmltableformcaption
+msgid "New HTML table ..."
+msgstr "Nauja HTML lentelė…"
+
+#: fpwebstrconsts.shtmltableformcellpadding
+msgid "Cell padding"
+msgstr "Langelio užpildymas"
+
+#: fpwebstrconsts.shtmltableformcellspacing
+msgid "Cell spacing"
+msgstr "Langelių intervalas"
+
+#: fpwebstrconsts.shtmltableformcolumncount
+msgid "Column count"
+msgstr "Stulpelių kiekis"
+
+#: fpwebstrconsts.shtmltableformheaderbgcolor
+msgid "Header bg color"
+msgstr "Antraštės fono spalva"
+
+#: fpwebstrconsts.shtmltableformrowcount
+msgid "Row count"
+msgstr "Eilučių kiekis"
+
+#: fpwebstrconsts.shtmltableformuseheader
+msgid "Use header row"
+msgstr "Naudoti antraštės eilutę"
+
+#: fpwebstrconsts.shtmltableformwidth
+msgid "Width"
+msgstr "Plotis"
+
+#: fpwebstrconsts.shtmltagcaptionreset
+msgid "Reset"
+msgstr "Atstatyti"
+
+#: fpwebstrconsts.shtmltagcaptionsubmit
+msgid "Submit"
+msgstr "Išsiųsti"
+
+#: fpwebstrconsts.shtmltagproperty
+#, object-pascal-format
+msgid "Tag property: %s"
+msgstr "Gairės savybė: %s"
+
+#: fpwebstrconsts.shtmltitle
+msgid "Html &title - <title>"
+msgstr "Html &antraštė - <title>"
+
+#: fpwebstrconsts.shttppath
+msgid "HTTP Path"
+msgstr "HTTP kelias"
+
+#: fpwebstrconsts.shttpport
+msgid "&Port to listen for requests:"
+msgstr "Prie&vadas užklausų priėmimui:"
+
+#: fpwebstrconsts.sjsfile
+msgid "Javascript file"
+msgstr "Javascript failas"
+
+#: fpwebstrconsts.sjsfiledesc
+msgid "Create new javascript file ..."
+msgstr "Kurti naują Javascript failą…"
+
+#: fpwebstrconsts.sjsonclass
+msgid "JSON-RPC class"
+msgstr "JSON-RPC klasė"
+
+#: fpwebstrconsts.sjssource
+msgid "Enter your javascript code here"
+msgstr "Čia reikia įvesti Javascript kodą…"
+
+#: fpwebstrconsts.smihtmleditor
+msgid "HTML Editor"
+msgstr "HTML rengyklė"
+
+#: fpwebstrconsts.smihtmlformbuttton
+msgid "Insert Button control"
+msgstr "Įdėti mygtuko valdiklį"
+
+#: fpwebstrconsts.smihtmlformcheckbox
+msgid "Insert CheckBox control"
+msgstr "Įdėti žymimojo langelio valdiklį"
+
+#: fpwebstrconsts.smihtmlformfieldset
+msgid "Insert HTML FIELDSET tag"
+msgstr "Įdėti HTML FIELDSET gairę"
+
+#: fpwebstrconsts.smihtmlformlegend
+msgid "Insert HTML LEGEND tag"
+msgstr "Įdėti HTML LEGEND gairę"
+
+#: fpwebstrconsts.smihtmlformradiobtn
+msgid "Insert RadioBtn control"
+msgstr "Įdėti akutės valdiklį"
+
+#: fpwebstrconsts.smihtmlforms
+msgid "Forms"
+msgstr "Formos"
+
+#: fpwebstrconsts.smihtmlformselect
+msgid "Insert Select control"
+msgstr "Įdėti Select valdiklį"
+
+#: fpwebstrconsts.smihtmlformselectopt
+msgid "Insert Select options"
+msgstr "Įdėti Select parinktis"
+
+#: fpwebstrconsts.smihtmlformselectoptwd
+msgid "Insert Select options with dialog"
+msgstr "Įdėti Select parinktis su dialogu"
+
+#: fpwebstrconsts.smihtmlinsertbr
+msgid "Insert new line"
+msgstr "Pradėti naują eilutę"
+
+#: fpwebstrconsts.smihtmlinsertcolor
+msgid "Insert HTML color value"
+msgstr "Įdėti HTML spalvos vertę"
+
+#: fpwebstrconsts.smihtmlinsertcomment
+msgid "Insert HTML comment"
+msgstr "Įdėti HTML komentarą"
+
+#: fpwebstrconsts.smihtmlinsertdivblock
+msgid "Insert HTML DIV tag"
+msgstr "Įdėti HTML DIV gairę"
+
+#: fpwebstrconsts.smihtmlinsertform
+msgid "Insert HTML Form"
+msgstr "Įdėti HTML formą"
+
+#: fpwebstrconsts.smihtmlinsertheader1level
+msgid "Insert HTML level 1 header"
+msgstr "Įdėti HTML pirmo lygmens antraštę"
+
+#: fpwebstrconsts.smihtmlinsertheader2level
+msgid "Insert HTML level 2 header"
+msgstr "Įdėti HTML antro lygmens antraštę"
+
+#: fpwebstrconsts.smihtmlinsertheader3level
+msgid "Insert HTML level 3 header"
+msgstr "Įdėti HTML trečio lygmens antraštę"
+
+#: fpwebstrconsts.smihtmlinsertheader4level
+msgid "Insert HTML level 4 header"
+msgstr "Įdėti HTML ketvirto lygmens antraštę"
+
+#: fpwebstrconsts.smihtmlinsertheader5level
+msgid "Insert HTML level 5 header"
+msgstr "Įdėti HTML penkto lygmens antraštę"
+
+#: fpwebstrconsts.smihtmlinserthr
+msgid "Insert horizontal line"
+msgstr "Įdėti horizontalią liniją"
+
+#: fpwebstrconsts.smihtmlinsertimg
+msgid "Insert image"
+msgstr "Įdėti paveikslą"
+
+#: fpwebstrconsts.smihtmlinsertinput
+msgid "Insert HTML INPUT tag"
+msgstr "Įdėti HTML INPUT gairę"
+
+#: fpwebstrconsts.smihtmlinsertinputreset
+msgid "Insert \"Reset\" button"
+msgstr "Įdėti mygtuką „Atstatyti“"
+
+#: fpwebstrconsts.smihtmlinsertinputsubmit
+msgid "Insert \"Submit\" button "
+msgstr "Įdėti mygtuką „Siųsti“ "
+
+#: fpwebstrconsts.smihtmlinsertlink
+msgid "Insert link (HREF)"
+msgstr "Įdėti saitą (HREF)"
+
+#: fpwebstrconsts.smihtmlinsertlist
+msgid "Insert HTML list"
+msgstr "Įdėti HTML sąrašą"
+
+#: fpwebstrconsts.smihtmlinsertnbsp
+msgid "Insert Non Breaking Space"
+msgstr "Įdėti jungiamąjį tarpą"
+
+#: fpwebstrconsts.smihtmlinsertpre
+msgid "Insert HTML PRE tag"
+msgstr "Įdėti HTML PRE gairę"
+
+#: fpwebstrconsts.smihtmlinsertspantext
+msgid "Insert HTML SPAN tag"
+msgstr "Įdėti HTML SPAN gairę"
+
+#: fpwebstrconsts.smihtmlinsertsub
+msgid "Insert Subscript"
+msgstr "Įdėti apatinį indeksą"
+
+#: fpwebstrconsts.smihtmlinsertsuper
+msgid "Insert Superscript"
+msgstr "Įdėti viršutinį indeksą"
+
+#: fpwebstrconsts.smihtmlinserttable
+msgid "Insert HTML table"
+msgstr "Įterpti HTML lentelę"
+
+#: fpwebstrconsts.smihtmlinserttabledata
+msgid "Insert HTML table data"
+msgstr "Įterpti HTML lentelės duomenis"
+
+#: fpwebstrconsts.smihtmlinserttabledatawd
+msgid "Insert HTML table data with dialog"
+msgstr "Įterpti HTML lentelės duomenis su dialogu"
+
+#: fpwebstrconsts.smihtmlinserttablerow
+msgid "Insert HTML table row"
+msgstr "Įterpti HTML lentelės eilutę"
+
+#: fpwebstrconsts.smihtmlinserttablerowwd
+msgid "Insert HTML table row with dialog"
+msgstr "Įterpti HTML lentelės eilutę su dialogu"
+
+#: fpwebstrconsts.smihtmllists
+msgid "Lists"
+msgstr "Sąrašai"
+
+#: fpwebstrconsts.smihtmlother
+msgid "Other"
+msgstr "Kita"
+
+#: fpwebstrconsts.smihtmlstandart
+msgid "Standard"
+msgstr "Standartinis"
+
+#: fpwebstrconsts.smihtmlstyle
+msgid "Styles"
+msgstr "Stiliai"
+
+#: fpwebstrconsts.smihtmltables
+msgid "Tables"
+msgstr "Lentelės"
+
+#: fpwebstrconsts.smihtmltextaligncenter
+msgid "Text align center"
+msgstr "Tekstą centruoti"
+
+#: fpwebstrconsts.smihtmltextalignjustify
+msgid "Text align justify"
+msgstr "Abipusis teksto lygiavimas"
+
+#: fpwebstrconsts.smihtmltextalignleft
+msgid "Text align left"
+msgstr "Kairinis teksto lygiavimas"
+
+#: fpwebstrconsts.smihtmltextalignright
+msgid "Text align right"
+msgstr "Dešininis teksto lygiavimas"
+
+#: fpwebstrconsts.smihtmltextbold
+msgid "Bold"
+msgstr "Pusjuodis"
+
+#: fpwebstrconsts.smihtmltextitalic
+msgid "Italic"
+msgstr "Kursyvas"
+
+#: fpwebstrconsts.smihtmltextunderline
+msgid "Underline"
+msgstr "Pabraukimas"
+
+#: fpwebstrconsts.smiotherinsertfn
+msgid "Insert file name"
+msgstr "Įdėti failo pavadinimą"
+
+#: fpwebstrconsts.snewhtmlfileprops
+msgid "New Html file properties"
+msgstr "Naujo Html failo savybės"
+
+#: fpwebstrconsts.snewhttpapp
+msgid "New HTTP application"
+msgstr "Nauja HTTP programa"
+
+#: fpwebstrconsts.snofiles
+msgid "Do not serve files"
+msgstr ""
+
+#: fpwebstrconsts.sregisterfiles
+msgid "&Register location to serve files from"
+msgstr "Re&gistruoti vietą, iš kurios bus tiekiami failai"
+
+#: fpwebstrconsts.sregisterjson
+msgid "Register JSON-RPC handlers in factory"
+msgstr "Registruoti JSON-RPC dorokles mechanizme"
+
+#: fpwebstrconsts.sregisterwebm
+msgid "Register web module"
+msgstr "Registruoti saityno modulį"
+
+#: fpwebstrconsts.sstandardmodule
+msgid "Web module to create:"
+msgstr ""
+
+#: fpwebstrconsts.susethreads
+msgid "Use &threads to serve requests in"
+msgstr "Prašymų aptarnavimui naudoti gi&jas"
+

@@ -1,0 +1,12 @@
+{
+  "CodePageConverter" : {
+    "Category" : "General",
+    "Keywords" : [
+      "DefaultTranslator",
+      "Code Page",
+      "TButton",
+      "TMemo"
+    ],
+    "Description" : "Makes an app that will convert files between code pages."
+  }
+}

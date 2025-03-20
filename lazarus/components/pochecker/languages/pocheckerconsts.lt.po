@@ -1,0 +1,513 @@
+# Valdas Jankunas <zmuogs@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: Valdas Jankunas <zmuogs@gmail.com>\n"
+"PO-Revision-Date: 2017-07-13 12:15+0200\n"
+"Project-Id-Version: \n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: pocheckerconsts.rspochecker
+msgid "Check PO Files ..."
+msgstr "PO failų tikrintuvė…"
+
+#: pocheckerconsts.rs_lang_af_za
+msgid "Afrikaans"
+msgstr "Afrikiečių"
+
+#: pocheckerconsts.rs_lang_all
+msgid "All languages"
+msgstr "Visos kalbos"
+
+#: pocheckerconsts.rs_lang_ar
+msgid "Arabic"
+msgstr "Arabų"
+
+#: pocheckerconsts.rs_lang_ca
+msgid "Catalan"
+msgstr "Katalonų"
+
+#: pocheckerconsts.rs_lang_co
+msgid "Corsican"
+msgstr ""
+
+#: pocheckerconsts.rs_lang_cs
+msgid "Czech"
+msgstr "Čekų"
+
+#: pocheckerconsts.rs_lang_de
+msgid "German"
+msgstr "Vokiečių"
+
+#: pocheckerconsts.rs_lang_en
+msgid "English"
+msgstr "Anglų"
+
+#: pocheckerconsts.rs_lang_es
+msgid "Spanish"
+msgstr "Ispanų"
+
+#: pocheckerconsts.rs_lang_fi
+msgid "Finnish"
+msgstr "Suomių"
+
+#: pocheckerconsts.rs_lang_fr
+msgid "French"
+msgstr "Prancūzų"
+
+#: pocheckerconsts.rs_lang_he
+msgid "Hebrew"
+msgstr "Žydų"
+
+#: pocheckerconsts.rs_lang_hu
+msgid "Hungarian"
+msgstr "Vengrų"
+
+#: pocheckerconsts.rs_lang_id
+msgid "Indonesian"
+msgstr "Indoneziečių"
+
+#: pocheckerconsts.rs_lang_it
+msgid "Italian"
+msgstr "Italų"
+
+#: pocheckerconsts.rs_lang_ja
+msgid "Japanese"
+msgstr "Japonų"
+
+#: pocheckerconsts.rs_lang_lt
+msgid "Lithuanian"
+msgstr "Lietuvių"
+
+#: pocheckerconsts.rs_lang_nl
+msgid "Dutch"
+msgstr "Olandų"
+
+#: pocheckerconsts.rs_lang_pl
+msgid "Polish"
+msgstr "Lenkų"
+
+#: pocheckerconsts.rs_lang_pt
+msgid "Portuguese"
+msgstr "Portugalų"
+
+#: pocheckerconsts.rs_lang_pt_br
+msgid "Brazilian Portuguese"
+msgstr "Brazilijos portugalų"
+
+#: pocheckerconsts.rs_lang_ru
+msgid "Russian"
+msgstr "Rusų"
+
+#: pocheckerconsts.rs_lang_sk
+msgid "Slovak"
+msgstr "Slovakų"
+
+#: pocheckerconsts.rs_lang_tr
+msgid "Turkish"
+msgstr "Turkų"
+
+#: pocheckerconsts.rs_lang_uk
+msgid "Ukrainian"
+msgstr "Ukrainiečių"
+
+#: pocheckerconsts.rs_lang_zh_cn
+msgid "Chinese, simplified"
+msgstr "Kinų, supaprastinta"
+
+#: pocheckerconsts.salllanguages
+msgid "All Languages"
+msgstr "Visos kalbos"
+
+#: pocheckerconsts.scannotwritefileyoucanpressretrytorefreshthistransl
+#, object-pascal-format
+msgid "Cannot write file%s%s%s%sYou can press \"Retry\" to refresh this translation family again and continue."
+msgstr "Nepavyksta rašyti į failą%s%s%s%sPaspaudus „Kartoti“ bus naujintas ši vertimų šeima ir tęsiama toliau."
+
+#: pocheckerconsts.scheckforincompatibleformatarguments
+msgid "Check for incompatible format arguments"
+msgstr "Ieškoti nesuderinamų formato argumentų"
+
+#: pocheckerconsts.scheckformismatchesinuntranslatedstrings
+#, fuzzy
+#| msgid "Check for mismatches in untranslated strings"
+msgid "Check for mismatches of originals"
+msgstr "Ieškoti neatitikčių neišverstose eilutėse"
+
+#: pocheckerconsts.scheckmissingidentifiers
+msgid "Check missing identifiers"
+msgstr "Tikrinti ar netrūksta identifikatorių"
+
+#: pocheckerconsts.schecknumberofitems
+msgid "Check number of items"
+msgstr "Tikrinti ar tinkamas elementų kiekis"
+
+#: pocheckerconsts.sclearlistbox
+msgid "Clear"
+msgstr "Valyti"
+
+#: pocheckerconsts.scopy
+msgid "&Copy"
+msgstr ""
+
+#: pocheckerconsts.screatingiconxofy
+#, object-pascal-format
+msgid "Creating icon nr. %d of %d"
+msgstr "Kuriama ikona nr. %d iš %d"
+
+#: pocheckerconsts.scurrenttest
+#, object-pascal-format
+msgid "Test: %s on %s"
+msgstr "Testas: %s testuoja %s"
+
+#: pocheckerconsts.sduplicatelinenrwithvalue
+#, object-pascal-format
+msgid "[Line %d] %s"
+msgstr "[Eilutė %d] %s"
+
+#: pocheckerconsts.sduplicateoriginals
+#, object-pascal-format, fuzzy
+#| msgid "The (untranslated) value \"%s\" is used for more than 1 entry:"
+msgid "Original value \"%s\" is used for more than 1 entry:"
+msgstr "Vertė (neversta) „%s“ panaudota daugiau nei viename įraše:"
+
+#: pocheckerconsts.sduplicateoriginalstab
+msgid "Duplicate Originals"
+msgstr ""
+
+#: pocheckerconsts.serrorsbytest
+#, object-pascal-format
+msgid "Errors / warnings reported by %s for:"
+msgstr "%s praneštos klaidos/perspėjimai apie:"
+
+#: pocheckerconsts.sfile
+#, object-pascal-format
+msgid "File %s"
+msgstr ""
+
+#: pocheckerconsts.sfilesnotfoundandremoved
+#, object-pascal-format, fuzzy
+#| msgid ""
+#| "The following non-existent files were removed from the list:\n"
+#| "%s\n"
+msgid ""
+"The following non-existent files were removed from the list:\n"
+"%s"
+msgstr ""
+"Iš sąrašo pašalintį šie neegzistuojantys failai:\n"
+"%s\n"
+
+#: pocheckerconsts.sfuzzystrings
+msgid "Fuzzy strings"
+msgstr ""
+
+#: pocheckerconsts.sfuzzystringstotal
+#, object-pascal-format
+msgid "Fuzzy strings (total: %s)"
+msgstr "Neaiškūs vertimai (viso: %s)"
+
+#: pocheckerconsts.sgeneralinfo
+msgid "General Info"
+msgstr ""
+
+#: pocheckerconsts.sgrapstatformcaption
+msgid "Graphical summary"
+msgstr "Grafinis apibendrinimas"
+
+#: pocheckerconsts.sguipofilecheckingtool
+msgid "GUI Po-file checking tool"
+msgstr "Įrankio PO failų tikrinimui grafinė sąsaja"
+
+#: pocheckerconsts.sidentifiernotfoundin
+#, object-pascal-format
+msgid "Identifier [%s] not found in %s"
+msgstr "Ieškota identifikatoriaus [%s], tačiau %s jo neturi"
+
+#: pocheckerconsts.sincompatibleformatargs
+#, object-pascal-format
+msgid "[Line: %d] Incompatible and/or invalid format() arguments for:"
+msgstr "[Eilutė: %d] Nesuderinamų ir/arba klaidingų „format()“ argumentų turi:"
+
+#: pocheckerconsts.slanguage
+msgid "Language:"
+msgstr ""
+
+#: pocheckerconsts.slastsearchpath
+msgid "Last search path:"
+msgstr ""
+
+#: pocheckerconsts.slineinfilename
+#, object-pascal-format
+msgid "[Line %d] in %s:"
+msgstr "[Eilutė: %d] faile %s:"
+
+#: pocheckerconsts.slinenr
+#, object-pascal-format
+msgid "[Line: %d]"
+msgstr "[Eilutė: %d]"
+
+#: pocheckerconsts.smissingmasteridentifier
+#, object-pascal-format
+msgid "Identifier [%s] found in %s, but it does not exist in %s"
+msgstr "Identifikatorių [%s] turi „%s“, tačiau jo neturi „%s“"
+
+#: pocheckerconsts.snotestselected
+msgid "There are no tests selected."
+msgstr "Būtina parinkti bent vieną testavimą."
+
+#: pocheckerconsts.snotetranslationisfuzzy
+msgid "Note: translation is fuzzy"
+msgstr "Pastaba: vertimas neaiškus"
+
+#: pocheckerconsts.snrerrorsfound
+#, object-pascal-format
+msgid "Found %d errors."
+msgstr "Rasta klaidų: %d."
+
+#: pocheckerconsts.snrofitemsmismatch
+msgid "Mismatch in number of items for master and child"
+msgstr "Elementų kiekiai pagrindiniame ir su juo siejamame faile skiriasi"
+
+#: pocheckerconsts.snrofitemsmismatchd
+#, object-pascal-format
+msgid "%s: %d items"
+msgstr "%s: elementų - %d"
+
+#: pocheckerconsts.snrwarningsfound
+#, object-pascal-format
+msgid "Found %d warnings."
+msgstr "Rasta perspėjimų: %d."
+
+#: pocheckerconsts.sopenfail
+#, object-pascal-format, fuzzy
+#| msgid ""
+#| "Unable to open file:\n"
+#| "\"%s\"\n"
+msgid ""
+"Unable to open file:\n"
+"\"%s\""
+msgstr ""
+"Nepavyko atverti failo:\n"
+"„%s“\n"
+
+#: pocheckerconsts.sopenfailexternal
+#, object-pascal-format, fuzzy
+#| msgid ""
+#| "Unable to open file\n"
+#| "\"%s\"\n"
+#| "in external editor\n"
+#| "\"%s\"\n"
+msgid ""
+"Unable to open file\n"
+"\"%s\"\n"
+"in external editor\n"
+"\"%s\""
+msgstr ""
+"Nepavyko atverti failo\n"
+"„%s“\n"
+"naudojant išorinę rengyklę\n"
+"„%s“\n"
+
+#: pocheckerconsts.sopenfileinexternaleditor
+msgid "Open file in external editor"
+msgstr "Failą atverti naudojant išorinę rengyklę"
+
+#: pocheckerconsts.sopenfileinideeditor
+msgid "Open file in IDE editor"
+msgstr "Failą atverti IKA rengyklėje"
+
+#: pocheckerconsts.sopenfileinsystempoeditor
+msgid "Open file in system PO editor"
+msgstr "Failą atverti sisteminėje „PO“ rengyklėje"
+
+#: pocheckerconsts.soriginal
+msgid "Original"
+msgstr "Originalas"
+
+#: pocheckerconsts.spercfuzzy
+#, object-pascal-format
+msgid "%s: %5.1f%% fuzzy strings."
+msgstr "%s: %5.1f%% neaiškių vertimų."
+
+#: pocheckerconsts.sperctranslated
+#, object-pascal-format
+msgid "%s: %5.1f%% translated strings."
+msgstr "%s: %5.1f%% pilnų vertimų."
+
+#: pocheckerconsts.spercuntranslated
+#, object-pascal-format
+msgid "%s: %5.1f%% untranslated strings."
+msgstr "%s: %5.1f%% neversta."
+
+#: pocheckerconsts.sprocessingtranslationfamily
+msgid "Processing translation family..."
+msgstr "Dorojama vertimų šeima…"
+
+#: pocheckerconsts.sprocessingtranslationfamilyof
+#, object-pascal-format
+msgid "Processing translation family %s of %s"
+msgstr "Dorojama vertimų šeima %s iš %s"
+
+#: pocheckerconsts.srefreshalltranslationfamilies
+msgid "Refresh all translation families"
+msgstr "Naujinti visas vertimų šeimas"
+
+#: pocheckerconsts.srefreshcurrenttranslationfamily
+msgid "Refresh current translation family"
+msgstr "Naujinti dabartinę vertimų šeimą"
+
+#: pocheckerconsts.sresults
+msgid "Results"
+msgstr "Rezultatai"
+
+#: pocheckerconsts.srunselectedtests
+msgid "&Run Selected Tests"
+msgstr "&Vykdyti parinktus testavimus"
+
+#: pocheckerconsts.ssaveas
+msgid "Save &As ..."
+msgstr ""
+
+#: pocheckerconsts.ssaveerror
+#, object-pascal-format, fuzzy
+#| msgid ""
+#| "Error saving file:\n"
+#| "%s\n"
+msgid ""
+"Error saving file:\n"
+"%s"
+msgstr ""
+"Rašant į failą įvyko klaida:\n"
+"%s\n"
+
+#: pocheckerconsts.sscandir
+msgid "Scan a folder"
+msgstr "Peržvelgti aplanke"
+
+#: pocheckerconsts.sscanninginprogress
+msgid "Scanning in progress, please wait ..."
+msgstr "Vyksta žvalgymas, luktelkite…"
+
+#: pocheckerconsts.sselectalllistbox
+msgid "Select all files"
+msgstr "Pažymėti visus failus"
+
+#: pocheckerconsts.sselectalltests
+msgid "Select &All"
+msgstr "Pažymėti &viską"
+
+#: pocheckerconsts.sselectedtranslationsarenotavailable
+msgid "Selected translations are not available."
+msgstr ""
+
+#: pocheckerconsts.sselecttesttypes
+msgid "Select test types"
+msgstr "Pažymėti testavimo tipus"
+
+#: pocheckerconsts.sshowstatgraph
+msgid "Show statistics graph"
+msgstr "Rodyti statistikos grafiką"
+
+#: pocheckerconsts.sstathint
+#, object-pascal-format, fuzzy
+#| msgid ""
+#| "Translated: %d (%.1f%%)\n"
+#| "Untranslated: %d (%.1f%%)\n"
+#| "Fuzzy: %d (%.1f%%)\n"
+#| "Errors in selected tests: %d\n"
+msgid ""
+"Translated: %d (%.1f%%)\n"
+"Untranslated: %d (%.1f%%)\n"
+"Fuzzy: %d (%.1f%%)\n"
+"Errors in selected tests: %d"
+msgstr ""
+"Išversta: %d (%.1f%%)\n"
+"Neišversta: %d (%.1f%%)\n"
+"Neaiškių: %d (%.1f%%)\n"
+"Klaidų pažymėtuose testuose: %d\n"
+
+#: pocheckerconsts.sthefollowingmissingmasterpofileswereremoved
+#, object-pascal-format
+msgid "The following %s missing master .po file(s) were removed from the list:"
+msgstr "Šie trūkstami %s pagrindiniai „.po“ failai bus pašalinti iš sąrašo:"
+
+#: pocheckerconsts.sthefollowingorphanedpofilesfound
+#, object-pascal-format
+msgid "The following %s orphaned .po file(s) found:"
+msgstr "Rasti šie %s „.po“ failai-našlaičiai:"
+
+#: pocheckerconsts.stotalerrors
+#, object-pascal-format, fuzzy
+#| msgid "Total errors found: %d"
+msgid "Total errors: %d"
+msgstr "Viso rasta klaidų: %d"
+
+#: pocheckerconsts.stotalerrorsnonfuzzy
+#, object-pascal-format
+msgid "Total errors: %d (formatting errors in non-fuzzy strings: %d)"
+msgstr ""
+
+#: pocheckerconsts.stotalfuzzystrings
+#, object-pascal-format
+msgid "Total fuzzy strings: %s"
+msgstr "Viso neaiškių vertimų: %s"
+
+#: pocheckerconsts.stotaltranslatedstrings
+#, object-pascal-format
+msgid "Total translated strings: %s (%.1f%%)"
+msgstr "Viso pilnų vertimų: %s (%.1f%%)"
+
+#: pocheckerconsts.stotaluntranslatedstrings
+#, object-pascal-format
+msgid "Total untranslated strings: %s"
+msgstr "Viso neišversta: %s"
+
+#: pocheckerconsts.stotalwarnings
+#, object-pascal-format, fuzzy
+#| msgid "Total warnings found: %d"
+msgid "Total warnings: %d"
+msgstr "Viso rasta perspėjimų: %d"
+
+#: pocheckerconsts.stranslatedstrings
+msgid "Translated strings"
+msgstr ""
+
+#: pocheckerconsts.stranslatedstringstotal
+#, object-pascal-format
+msgid "Translated strings (total: %s [%.1f%%])"
+msgstr "Išversta (viso: %s [%.1f%%])"
+
+#: pocheckerconsts.stranslation
+msgid "Translation"
+msgstr "Vertimas"
+
+#: pocheckerconsts.stranslationstatistics
+msgid "Translation Statistics"
+msgstr ""
+
+#: pocheckerconsts.stroublesomefiles
+msgid "Troublesome files"
+msgstr "Probleminiai failai"
+
+#: pocheckerconsts.sunselectalltests
+msgid "&Unselect All"
+msgstr "&Nužymėti viską"
+
+#: pocheckerconsts.sunselectlistbox
+msgid "Unselect all files"
+msgstr "Nužymėti visus failus"
+
+#: pocheckerconsts.suntranslatedstrings
+msgid "Untranslated strings"
+msgstr ""
+
+#: pocheckerconsts.suntranslatedstringstotal
+#, object-pascal-format
+msgid "Untranslated strings (total: %s)"
+msgstr "Neišversta (viso: %s)"
+

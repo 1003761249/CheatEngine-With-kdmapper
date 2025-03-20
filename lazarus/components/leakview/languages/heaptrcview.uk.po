@@ -1,0 +1,99 @@
+# Olexandr Pylypchuk <pilipchukap@rambler.ru>, 2017.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-03-01 19:33+0200\n"
+"Last-Translator: Olexandr Pylypchuk <pilipchukap@rambler.ru>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: heaptrcview.rsdtimes
+#, object-pascal-format
+msgid " (%d times)"
+msgstr " (%d разів)"
+
+#: heaptrcview.rserrorparse
+msgid "Error while parsing trace file"
+msgstr "Помилка розбору файлу трасування"
+
+#: heaptrcview.rsleakview
+msgid "Leaks and Traces"
+msgstr "Витоки і трасування"
+
+#: heaptrcview.sbtnclipbrd
+msgid "Paste Clipboard"
+msgstr "Вставити з буфера обміну"
+
+#: heaptrcview.sbtnresolve
+msgid "Resolve"
+msgstr "Розв'язати"
+
+#: heaptrcview.sbtnupdate
+msgid "Update"
+msgstr "Оновити"
+
+#: heaptrcview.schkraw
+msgid "Raw leak data"
+msgstr "Необроблені дані про витік"
+
+#: heaptrcview.schktop
+msgid "Stay on top"
+msgstr "Поверх інших вікон"
+
+#: heaptrcview.sfrmcap
+msgid "Leaks and Traces - HeapTrc and GDB backtrace output viewer"
+msgstr "Витоки і трасування - програма перегляду виводу HeapTrc і зворотного трасування GDB"
+
+#: heaptrcview.sfrmselectfilewithdebuginfo
+msgid "Select file with debug info"
+msgstr "Виберіть файл зі зневаджувальною інформацією"
+
+#: heaptrcview.sfrmselecttrcfile
+msgid "Select file with trace log"
+msgstr "Виберіть файл з журналом трасування"
+
+#: heaptrcview.slbltrace
+msgid ".trc file"
+msgstr "файл .trc"
+
+#: heaptrcview.stacklineformat
+#, object-pascal-format
+msgid "%s"
+msgstr "%s"
+
+#: heaptrcview.stacklineformatwithfile
+#, object-pascal-format
+msgid "%s file: %s : %d; "
+msgstr "%s файл: %s : %d; "
+
+#: heaptrcview.stacktraceformat
+#, object-pascal-format
+msgid "Leak: %d bytes x %d times"
+msgstr "Витік: %d байт(ів) x %d раз(ів)"
+
+#: heaptrcview.stacktraceformatsingle
+#, object-pascal-format
+msgid "Leak: %d bytes"
+msgstr "Витік: %d байт(ів)"
+
+#: heaptrcview.strleakingblockscount
+#, object-pascal-format
+msgid "Leaking Blocks Count: %d"
+msgstr "Число втрачених блоків: %d"
+
+#: heaptrcview.strleakingmemsize
+#, object-pascal-format
+msgid "Leaking Mem Size: %d"
+msgstr "Обсяг втраченої пам'яті: %d"
+
+#: heaptrcview.strtotalmemalloc
+#, object-pascal-format
+msgid "Total Mem allocated: %d"
+msgstr "Всього виділено пам'яті: %d"
+

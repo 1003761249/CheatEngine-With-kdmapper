@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Swen Heinig <swen@heinig.email>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: lazthreadstrconst.screateunitbuttoncaption
+msgid "Create Unit"
+msgstr "Unit erzeugen"
+
+#: lazthreadstrconst.soptionsgroupboxcaption
+msgid "Options"
+msgstr "Einstellungen"
+
+#: lazthreadstrconst.sthreaddescription
+msgid "A Pascal unit with a subclass of TThread class."
+msgstr "Eine Pascal-Unit mit einer Unterklasse der TThread-Klasse."
+
+#: lazthreadstrconst.sthreaddialogtitle
+msgid "Thread Class Options"
+msgstr "Thread-Klasseneinstellungen"
+
+#: lazthreadstrconst.sthreadname
+msgid "Thread Object"
+msgstr "Thread-Objekt"
+
+#: lazthreadstrconst.sthreadnamelabelcaption
+msgid "Thread Class Name"
+msgstr "Thread-Klassenname"
+

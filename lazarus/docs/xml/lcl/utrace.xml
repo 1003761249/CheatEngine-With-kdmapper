@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+====================================================================
+UTrace
+====================================================================
+-->
+
+<module name="UTrace">
+<short>
+Defines an assertion error handler used for tracebacks in the debugger.
+</short>
+<descr>
+<p>
+<file>utrace.pp</file> is part of the Lazarus Component Library (<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="sysutils">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TAssertErrorAddrType">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TAssertErrorProc">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TAssertErrorProc.Msg">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TAssertErrorProc.FN">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TAssertErrorProc.LineNo">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TAssertErrorProc.TheAddr">
+<short/>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TraceFileName">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="OldProcPointer">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+</module> <!-- UTrace -->
+</package>
+</fpdoc-descriptions>

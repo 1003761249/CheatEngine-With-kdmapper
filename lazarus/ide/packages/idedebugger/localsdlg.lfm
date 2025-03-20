@@ -1,0 +1,176 @@
+object LocalsDlg: TLocalsDlg
+  Left = 314
+  Height = 200
+  Top = 92
+  Width = 500
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 199
+  BorderStyle = bsSizeToolWin
+  Caption = 'Locals'
+  ClientHeight = 200
+  ClientWidth = 500
+  OnShow = FormShow
+  LCLVersion = '2.3.0.0'
+  object vtLocals: TDbgTreeView
+    Left = 0
+    Height = 174
+    Top = 26
+    Width = 500
+    Align = alClient
+    Header.AutoSizeIndex = 0
+    Header.Columns = <    
+      item
+        Position = 0
+      end    
+      item
+        Position = 2
+      end    
+      item
+        MaxWidth = 300
+        Options = [coAllowClick, coDraggable, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coAllowFocus, coEditable]
+        Position = 1
+      end>
+    Header.Options = [hoColumnResize, hoDrag, hoShowSortGlyphs, hoVisible]
+    PopupMenu = PopupMenu1
+    TabOrder = 0
+    TreeOptions.AutoOptions = [toAutoScrollOnExpand, toAutoSort, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale]
+    TreeOptions.MiscOptions = [toFullRepaintOnResize, toInitOnSave, toWheelPanning]
+    TreeOptions.PaintOptions = [toShowButtons, toShowDropmark, toShowRoot, toShowTreeLines, toThemeAware, toUseBlendedImages, toUseExplorerTheme]
+    TreeOptions.SelectionOptions = [toFullRowSelect, toMultiSelect, toRightClickSelect]
+    OnChange = vtLocalsChange
+    OnDragOver = vtLocalsDragOver
+    OnDragDrop = vtLocalsDragDrop
+    OnFocusChanged = vtLocalsFocusChanged
+    OnNodeDblClick = vtLocalsNodeDblClick
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 500
+    Caption = 'ToolBar1'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    object ToolButtonPower: TToolButton
+      Left = 1
+      Top = 2
+      AllowAllUp = True
+      Down = True
+      OnClick = ToolButtonPowerClick
+      Style = tbsCheck
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton2'
+      Style = tbsSeparator
+    end
+    object btnShowDataAddr: TToolButton
+      Left = 32
+      Top = 2
+      Caption = '$^'
+      OnClick = btnShowDataAddrClick
+      Style = tbsCheck
+    end
+  end
+  object ActionList1: TActionList
+    Left = 152
+    Top = 80
+    object actInspect: TAction
+      Category = 'main'
+      Caption = 'actInspect'
+      OnExecute = actInspectExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 16457
+    end
+    object actWath: TAction
+      Category = 'main'
+      Caption = 'actWath'
+      OnExecute = actWathExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 16471
+    end
+    object actEvaluate: TAction
+      Category = 'main'
+      Caption = 'actEvaluate'
+      OnExecute = actEvaluateExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 16469
+    end
+    object actCopyName: TAction
+      Category = 'copy'
+      Caption = 'actCopyName'
+      OnExecute = actCopyNameExecute
+      OnUpdate = actInspectUpdate
+    end
+    object actCopyValue: TAction
+      Category = 'copy'
+      Caption = 'actCopyValue'
+      OnExecute = actCopyValueExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 24643
+    end
+    object actCopyRAWValue: TAction
+      Category = 'copy'
+      Caption = 'actCopyRAWValue'
+      OnExecute = actCopyRAWValueExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 16451
+    end
+    object actCopyAddr: TAction
+      Category = 'copy'
+      Caption = 'actCopyAddr'
+      OnExecute = actCopyAddrExecute
+      OnUpdate = actInspectUpdate
+      ShortCut = 49219
+    end
+    object actCopyEntry: TAction
+      Category = 'copy'
+      Caption = 'actCopyEntry'
+      OnExecute = actCopyEntryExecute
+      OnUpdate = actInspectUpdate
+    end
+    object actCopyAll: TAction
+      Category = 'copy'
+      Caption = 'actCopyAll'
+      OnExecute = actCopyAllExecute
+      OnUpdate = actCopyAllUpdate
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 38
+    Top = 75
+    object MenuItem1: TMenuItem
+      Action = actInspect
+    end
+    object MenuItem2: TMenuItem
+      Action = actWath
+    end
+    object MenuItem3: TMenuItem
+      Action = actEvaluate
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object menuCopyName: TMenuItem
+      Action = actCopyName
+    end
+    object menuCopyValue: TMenuItem
+      Action = actCopyValue
+    end
+    object menuCopyRawValue: TMenuItem
+      Action = actCopyRAWValue
+    end
+    object menuCopyAddr: TMenuItem
+      Action = actCopyAddr
+    end
+    object menuCopyEntry: TMenuItem
+      Action = actCopyEntry
+    end
+    object menuCopyAll: TMenuItem
+      Action = actCopyAll
+    end
+  end
+end

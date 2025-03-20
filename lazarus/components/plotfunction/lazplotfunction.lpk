@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="lazplotfunction"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Michael Van Canneyt"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="Components to plot a function y=f(x).
+The function values can be specified in an event 
+or in an expression.
+"/>
+    <License Value="Modified LGPL
+"/>
+    <Version Release="2"/>
+    <Files Count="3">
+      <Item1>
+        <Filename Value="regplotpanel.pp"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="regplotpanel"/>
+      </Item1>
+      <Item2>
+        <Filename Value="exprplotpanel.pp"/>
+        <UnitName Value="exprplotpanel"/>
+      </Item2>
+      <Item3>
+        <Filename Value="plotpanel.pp"/>
+        <UnitName Value="plotpanel"/>
+      </Item3>
+    </Files>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

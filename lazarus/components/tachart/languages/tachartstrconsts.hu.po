@@ -1,0 +1,557 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Péter Gábor <ptrg@freemail.hu>\n"
+"Language-Team: Magyar (Hungarian)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: tachartstrconsts.descolor
+msgid "Color"
+msgstr "Szín"
+
+#: tachartstrconsts.desdatapointeditor
+msgid "DataPoints editor"
+msgstr "Adatpontok szerkesztése"
+
+#: tachartstrconsts.desdeleterow
+msgid "Delete row"
+msgstr "Sor törlése"
+
+#: tachartstrconsts.desinsertrow
+msgid "Insert row"
+msgstr "Sor beszúrása"
+
+#: tachartstrconsts.desmovedown
+msgid "Move down"
+msgstr "Mozgatás lefelé"
+
+#: tachartstrconsts.desmoveup
+msgid "Move up"
+msgstr "Mozgatás felfelé"
+
+#: tachartstrconsts.desnointeger
+msgid "Value must be an integer."
+msgstr "Az értékének egy egész számnak kell lennie."
+
+#: tachartstrconsts.desnonumber
+msgid "Non-numeric value."
+msgstr "Nem számérték."
+
+#: tachartstrconsts.destext
+msgid "Text"
+msgstr "Szöveg"
+
+#: tachartstrconsts.rsadd
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: tachartstrconsts.rsareaseries
+msgid "Area series"
+msgstr "Terület"
+
+#: tachartstrconsts.rsautoscale
+msgid "Auto scale"
+msgstr "Automatikus méretezés"
+
+#: tachartstrconsts.rsaxisclicktool
+msgid "Axis click"
+msgstr "Tengelyre kattintás"
+
+#: tachartstrconsts.rsbarseries
+msgid "Bar series"
+msgstr "Sávok"
+
+#: tachartstrconsts.rsbottom
+msgid "Bottom"
+msgstr "Alulra"
+
+#: tachartstrconsts.rsboxandwhiskerseries
+msgid "Box-and-whiskers series"
+msgstr "Bajszos dobozok"
+
+#: tachartstrconsts.rsbsbdiagonal
+msgid "backward-diagonal hatch"
+msgstr "Visszafelé-átlós vonalazás"
+
+#: tachartstrconsts.rsbsclear
+msgctxt "tachartstrconsts.rsbsclear"
+msgid "no fill"
+msgstr "Nincs kitöltés"
+
+#: tachartstrconsts.rsbscross
+msgid "crossed"
+msgstr "Négyzetháló"
+
+#: tachartstrconsts.rsbsdiagcross
+msgid "diagonally crossed"
+msgstr "Átlós négyzetháló"
+
+#: tachartstrconsts.rsbsfdiagonal
+msgid "forward-diagonal hatch"
+msgstr "Előre-átlós vonalazás"
+
+#: tachartstrconsts.rsbshorizontal
+msgid "horizontally hatched"
+msgstr "Vízszintes vonalazás"
+
+#: tachartstrconsts.rsbsimage
+msgid "image fill"
+msgstr "Kitöltés képpel"
+
+#: tachartstrconsts.rsbspattern
+msgid "pattern fill"
+msgstr "Kitöltés mintával"
+
+#: tachartstrconsts.rsbsplineseries
+msgid "B-Spline series"
+msgstr "B-Spline"
+
+#: tachartstrconsts.rsbssolid
+msgid "solid fill"
+msgstr "Egyszerű kitöltés"
+
+#: tachartstrconsts.rsbsvertical
+msgid "vertically hatched"
+msgstr "Függőleges vonalazás"
+
+#: tachartstrconsts.rsbubbleseries
+msgid "Bubble series"
+msgstr "Buborékok"
+
+#: tachartstrconsts.rscirclesymbol
+msgid "Circle"
+msgstr "Kör"
+
+#: tachartstrconsts.rscolormapseries
+msgid "Color map series"
+msgstr "Színtérkép"
+
+#: tachartstrconsts.rsconstantline
+msgid "Constant line"
+msgstr "Állandó vonal"
+
+#: tachartstrconsts.rscrosssymbol
+msgid "Plus"
+msgstr "Plusz"
+
+#: tachartstrconsts.rscubicsplineseries
+msgid "Cubic spline series"
+msgstr "Cubic Spline"
+
+#: tachartstrconsts.rscumulativenormaldistribution
+msgid "Cumulative normal distribution"
+msgstr "Halmozott normális eloszlás"
+
+#: tachartstrconsts.rsdatapointclick
+msgid "Data point click"
+msgstr "Adatpontra kattintás"
+
+#: tachartstrconsts.rsdatapointcrosshair
+msgid "Data point crosshair"
+msgstr "Adatpontra mutatás"
+
+#: tachartstrconsts.rsdatapointdrag
+msgid "Data point drag"
+msgstr "Adatpont húzása"
+
+#: tachartstrconsts.rsdatapointhint
+msgid "Data point hint"
+msgstr "Adatpont tipp"
+
+#: tachartstrconsts.rsdatapointmarksclicktool
+msgid "Data point marks click"
+msgstr ""
+
+#: tachartstrconsts.rsdelete
+msgid "Delete"
+msgstr "Törlés"
+
+#: tachartstrconsts.rsdiagcrosssymbol
+msgid "Cross"
+msgstr "Kereszt"
+
+#: tachartstrconsts.rsdiamondsymbol
+msgid "Diamond"
+msgstr "Gyémánt"
+
+#: tachartstrconsts.rsdistancemeasurement
+msgid "Distance measurement"
+msgstr "Távolságmérés"
+
+#: tachartstrconsts.rsdowntrianglesymbol
+msgid "Down triangle"
+msgstr "Háromszög (le)"
+
+#: tachartstrconsts.rserrfitdimerror
+msgid "Non-matching count of x and y values."
+msgstr "Nem megfelelő számú x és y érték."
+
+#: tachartstrconsts.rserrfitmoreparamsthanvalues
+msgid "There are more fitting parameters than data values."
+msgstr ""
+
+#: tachartstrconsts.rserrfitnobasefunctions
+msgid "Not enough user-provided base functions."
+msgstr "Nincs elég felhasználó által megadott alapeljárás."
+
+#: tachartstrconsts.rserrfitnofitparams
+msgid "No fit parameters specified."
+msgstr ""
+
+#: tachartstrconsts.rserrfitsingular
+msgid "Fitting matrix is (nearly) singular."
+msgstr ""
+
+#: tachartstrconsts.rserrillegalfitparamcount
+msgid "The number of fit parameters cannot be less than 1."
+msgstr ""
+
+#: tachartstrconsts.rserrinvalidresulttype
+#, object-pascal-format
+msgid "Expression result type must be integer or float. Got \"%s\"."
+msgstr "A kifejezés típusának egész vagy lebegőpontos számnak kell lennie. Most \"%s\"."
+
+#: tachartstrconsts.rserrnumericaloverflow
+msgid "Numerical overflow."
+msgstr ""
+
+#: tachartstrconsts.rsexpressioncolormapseries
+msgid "Math expression color map series"
+msgstr "Színtérkép matematikai kifejezés alapján"
+
+#: tachartstrconsts.rsexpressionseries
+msgid "Math expression series"
+msgstr "Matematikai kifejezések"
+
+#: tachartstrconsts.rsfieldseries
+msgid "Vector field series"
+msgstr "Vektormezők"
+
+#: tachartstrconsts.rsfitadjcoefficientofdetermination
+msgid "Adj. coefficient of determination"
+msgstr ""
+
+#: tachartstrconsts.rsfitchisquared
+msgid "Chi-squared"
+msgstr ""
+
+#: tachartstrconsts.rsfitcoefficientofdetermination
+msgid "Coefficient of determination (R2)"
+msgstr ""
+
+#: tachartstrconsts.rsfitdegreesoffreedom
+msgid "Degrees of freedom"
+msgstr ""
+
+#: tachartstrconsts.rsfiterrorsumofsquares
+msgid "Error sum of squares (SSE)"
+msgstr ""
+
+#: tachartstrconsts.rsfitnumfitparams
+msgid "Number of fit parameters"
+msgstr ""
+
+#: tachartstrconsts.rsfitnumobservations
+msgid "Number of observations"
+msgstr ""
+
+#: tachartstrconsts.rsfitpvalue
+msgid "p value"
+msgstr ""
+
+#: tachartstrconsts.rsfitreducedchisquared
+msgid "Reduced Chi-squared"
+msgstr ""
+
+#: tachartstrconsts.rsfitregressionsumofsquares
+msgid "Regression sum of squares (SSR)"
+msgstr ""
+
+#: tachartstrconsts.rsfitresidualstandarderror
+msgid "Residual standard error"
+msgstr ""
+
+#: tachartstrconsts.rsfittotalsumofsquares
+msgid "Total sum of squares (SST)"
+msgstr ""
+
+#: tachartstrconsts.rsfittvalue
+msgid "t value"
+msgstr ""
+
+#: tachartstrconsts.rsfitvarianceratio
+msgid "Variance ratio F"
+msgstr ""
+
+#: tachartstrconsts.rsfullstarsymbol
+msgid "Star (full)"
+msgstr "Csillag (teljes)"
+
+#: tachartstrconsts.rsfunctionseries
+msgid "Function series"
+msgstr "Függvény"
+
+#: tachartstrconsts.rsheaderfooterclicktool
+msgid "Header/footer click"
+msgstr "Fejlécre/láblécre kattintás"
+
+#: tachartstrconsts.rshexagonsymbol
+msgid "Hexagon"
+msgstr "Hatszög"
+
+#: tachartstrconsts.rshidden
+msgid "hidden"
+msgstr "rejtett"
+
+#: tachartstrconsts.rshighbracketsymbol
+msgid "High bracket"
+msgstr "Zárójel (felső)"
+
+#: tachartstrconsts.rshorbarsymbol
+msgid "Horizontal bar"
+msgstr "Vízszintes vonal"
+
+#: tachartstrconsts.rsinvalidlogbase
+msgid "Logarithm base must be > 0 and <> 1."
+msgstr "A logaritmus alapja > 0 és <> 1 lehet."
+
+#: tachartstrconsts.rsinverted
+msgid "inverted"
+msgstr "fordított"
+
+#: tachartstrconsts.rsleastsquaresfitseries
+msgid "Least-squares fit series"
+msgstr "Legkisebb illeszkedő négyzetek"
+
+#: tachartstrconsts.rsleft
+msgid "Left"
+msgstr "Balra"
+
+#: tachartstrconsts.rsleftbracketsymbol
+msgid "Left bracket"
+msgstr "Zárójel (bal)"
+
+#: tachartstrconsts.rslefttrianglesymbol
+msgid "Left triangle"
+msgstr "Háromszög (balra)"
+
+#: tachartstrconsts.rslegendclicktool
+msgid "Legend click"
+msgstr "Jelmagyarázatra kattintás"
+
+#: tachartstrconsts.rslinear
+msgid "Linear"
+msgstr "Lineáris"
+
+#: tachartstrconsts.rslineseries
+msgid "Line series"
+msgstr "Vonal"
+
+#: tachartstrconsts.rslistsourcecolorerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not an integer."
+msgstr "A(z) %0:s.DataPoints karakterlánc \"%1:s\" nem egy egész szám."
+
+#: tachartstrconsts.rslistsourcenumericerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not a valid number."
+msgstr "A(z) %0:s.DataPoints karakterlánc \"%1:s\" nem egy érvényes szám."
+
+#: tachartstrconsts.rslistsourcestringformaterror
+#, object-pascal-format
+msgid "The data value count in the %0:s.DataPoints string \"%1:s\" differs from what is expected from XCount and YCount."
+msgstr "Az értékek száma a(z) %0:s.DataPoints karakterlánc \"%1:s\" tartalmában eltér az XCount és YCount által megkövetelttől."
+
+#: tachartstrconsts.rslogarithmic
+msgid "Logarithmic"
+msgstr "Logaritmikus"
+
+#: tachartstrconsts.rslowbracketsymbol
+msgid "Low bracket"
+msgstr "Zárójel (alsó)"
+
+#: tachartstrconsts.rsmanhattanplotseries
+msgid "Manhattan plot series"
+msgstr "Manhattan ábra"
+
+#: tachartstrconsts.rsmovedown
+msgid "Down"
+msgstr "Le"
+
+#: tachartstrconsts.rsmoveup
+msgid "Up"
+msgstr "Fel"
+
+#: tachartstrconsts.rsnosymbol
+msgid "(none)"
+msgstr "(semmi)"
+
+#: tachartstrconsts.rsopenhighlowcloseseries
+msgid "Open-high-low-close series"
+msgstr "Nyitó-max-min-záró értékek"
+
+#: tachartstrconsts.rspanningbyclick
+msgid "Panning by click"
+msgstr "Eltolás kattintással"
+
+#: tachartstrconsts.rspanningbydrag
+msgid "Panning by drag"
+msgstr "Eltolás húzással"
+
+#: tachartstrconsts.rspanningbymousewheel
+msgid "Panning by mouse wheel"
+msgstr "Eltolás egérgörgővel"
+
+#: tachartstrconsts.rsparametriccurveseries
+msgid "Parametric curve series"
+msgstr "Parametrikus görbe"
+
+#: tachartstrconsts.rspieseries
+msgid "Pie series"
+msgstr "Tortaszeletek"
+
+#: tachartstrconsts.rspointsymbol
+msgid "Point"
+msgstr "Pont"
+
+#: tachartstrconsts.rspolarseries
+msgid "Polar series"
+msgstr "Polár"
+
+#: tachartstrconsts.rspolygonseries
+msgid "Polygon series"
+msgstr ""
+
+#: tachartstrconsts.rspsclear
+msgctxt "tachartstrconsts.rspsclear"
+msgid "no line"
+msgstr "Nincs vonal"
+
+#: tachartstrconsts.rspsdash
+msgid "dashed line"
+msgstr "Szaggatott vonal"
+
+#: tachartstrconsts.rspsdashdot
+msgid "dash-dot"
+msgstr "Szakasz, pont"
+
+#: tachartstrconsts.rspsdashdotdot
+msgid "dash-dot-dot"
+msgstr "Szakasz, pont, pont"
+
+#: tachartstrconsts.rspsdot
+msgid "dotted line"
+msgstr "Pontozott vonal"
+
+#: tachartstrconsts.rspsinsideframe
+msgid "solid (inside frame)"
+msgstr "Egyszerű (keretben)"
+
+#: tachartstrconsts.rspspattern
+msgid "patterned line"
+msgstr "Mintázott vonal"
+
+#: tachartstrconsts.rspssolid
+msgid "solid line"
+msgstr "Egyszerű vonal"
+
+#: tachartstrconsts.rsrectanglesymbol
+msgid "Rectangle"
+msgstr "Téglalap"
+
+#: tachartstrconsts.rsright
+msgid "Right"
+msgstr "Jobbra"
+
+#: tachartstrconsts.rsrightbracketsymbol
+msgid "Right bracket"
+msgstr "Zárójel (jobb)"
+
+#: tachartstrconsts.rsrighttrianglesymbol
+msgid "Right triangle"
+msgstr "Háromszög (jobbra)"
+
+#: tachartstrconsts.rssourcecounterror
+#, object-pascal-format
+msgid "%0:s requires a chart source with at least %1:d %2:s value(s) per data point."
+msgstr "A(z) %0:s számára a forrásban legalább %1:d %2:s értéknek kell lenni adatpontonként."
+
+#: tachartstrconsts.rssourcecounterror2
+#, object-pascal-format
+msgid "This %0:s instance must have at least %1:d %2:s value(s) per data point."
+msgstr "Ennek a(z) %0:s példánynak legalább %1:d %2:s értéket kell tartalmaznia adatpontonként."
+
+#: tachartstrconsts.rssourcenoteditable
+msgid "Editable chart source required"
+msgstr "Szerkeszthető forrásra van szükség"
+
+#: tachartstrconsts.rssourcesorterror
+#, object-pascal-format
+msgid "Selected sorting parameters are not supported by %s."
+msgstr "A(z) %s nem támogatja a kiválasztott rendezési paramétert."
+
+#: tachartstrconsts.rsstarsymbol
+msgid "Star (lines)"
+msgstr "Csillag (vonalak)"
+
+#: tachartstrconsts.rstop
+msgid "Top"
+msgstr "Felülre"
+
+#: tachartstrconsts.rstrianglesymbol
+msgid "Triangle"
+msgstr "Háromszög"
+
+#: tachartstrconsts.rsuserdefined
+msgctxt "tachartstrconsts.rsuserdefined"
+msgid "User-defined"
+msgstr "Felhasználó által megadva"
+
+#: tachartstrconsts.rsuserdefinedtool
+msgctxt "tachartstrconsts.rsuserdefinedtool"
+msgid "User-defined"
+msgstr "Felhasználó által megadva"
+
+#: tachartstrconsts.rsuserdrawnseries
+msgid "User-drawn series"
+msgstr "Felhasználó által rajzolva"
+
+#: tachartstrconsts.rsvertbarsymbol
+msgid "Vertical bar"
+msgstr "Függőleges vonal"
+
+#: tachartstrconsts.rszoombyclick
+msgid "Zoom by click"
+msgstr "Nagyítás kattintással"
+
+#: tachartstrconsts.rszoombydrag
+msgid "Zoom by drag"
+msgstr "Nagyítás húzással"
+
+#: tachartstrconsts.rszoombymousewheel
+msgid "Zoom by mouse-wheel"
+msgstr "Nagyítás egérgögővel"
+
+#: tachartstrconsts.sesserieseditortitle
+msgid "Edit series"
+msgstr "Adatmegjelenítés szerkesztése"
+
+#: tachartstrconsts.tasaxistransformseditortitle
+msgid "Edit axis transformations"
+msgstr "Tengelyértelmezések szerkesztése"
+
+#: tachartstrconsts.tasfailedsubcomponentrename
+#, object-pascal-format
+msgid "Failed to rename components: %s"
+msgstr "Nem sikerült átnevezni a komponenseket: %s"
+
+#: tachartstrconsts.tastoolseditortitle
+msgid "Edit tools"
+msgstr "Eszközök szerkesztése"
+

@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lazutils">
+<!--
+====================================================================
+GraphMath
+====================================================================
+-->
+<module name="GraphMath">
+<short>
+A set of mathematical helper routines to simply cross-platform canvas
+drawing.
+</short>
+<descr>
+<p>
+<file>graphmath.pp</file> contains math helper routines for use for
+graphics drawing. It is used to simply cross-platform canvas drawing
+operations. <file>graphmath.pp</file> is part of the <file>LazUtils</file> 
+package.
+</p>
+</descr>
+
+<!-- unresolved references -->
+<element name="Types"/>
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Math"/>
+<element name="LazUtilities"/>
+
+<element name="TFloatPoint">
+<short>
+<var>TFloatPoint</var> is an extended precision record specifying the X and
+Y coordinates of a point in a graphic environment.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TFloatPoint.X">
+<short>
+Horizontal position for the coordinate.
+</short>
+</element>
+<element name="TFloatPoint.Y">
+<short>
+Vertical position for the coordinate.
+</short>
+</element>
+
+<element name="TBezier">
+<short>
+Array type used to store the coordinates for Bezier control points as 
+floating point values.
+</short>
+<descr>
+<p>
+<var>TBezier</var> allows up to 4 coordinates to be specified which represent 
+the control points for the parametric curve. Each coordinate is implemented 
+using the TFloatPoint type, and stored as elements in the array.
+</p>
+<p>
+TBezier is the type returned by the Bezier function. The type is passed as an 
+argument to routines like: Arc2Bezier, Bezier2Polyline, BezierMidPoint, and 
+SplitBezier.
+</p>
+</descr>
+<seealso>
+<link id="Bezier"/>
+<link id="Arc2Bezier"/>
+<link id="Bezier2Polyline"/>
+<link id="BezierMidPoint"/>
+<link id="SplitBezier"/>
+</seealso>
+</element>
+
+<element name="PPoint">
+<short>
+Pointer to the TPoint type.
+</short>
+<descr/>
+<seealso>
+<link id="#rtl.classes.TPoint">TPoint</link>
+</seealso>
+</element>
+
+<element name="Angles2Coords">
+<short>
+Converts an Eccentric Angle and an Angle-Length, into the coordinates for
+the Start and End radial Points.
+</short>
+<descr>
+<p>
+Use <var>Angles2Coords</var> to convert an Eccentric (Radial) angle and an
+angle-length, such as are used in X-Windows and GTK, into the coordinates
+for the Start and End radial Points. Like those used in the Arc, Pie, and
+Chord routines from the Windows API.
+</p>
+<p>
+The angles are specified in 1/16th of a degree. For example, a full circle
+equals 5760 (16*360).
+</p>
+<p>
+Positive values in Angle and AngleLength mean counter-clockwise, while
+negative values mean clockwise direction. Zero degrees is at the 3
+o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Angles2Coords.X">
+<short/>
+</element>
+<element name="Angles2Coords.Y">
+<short/>
+</element>
+<element name="Angles2Coords.Width">
+<short/>
+</element>
+<element name="Angles2Coords.Height">
+<short/>
+</element>
+<element name="Angles2Coords.Angle1">
+<short/>
+</element>
+<element name="Angles2Coords.Angle2">
+<short/>
+</element>
+<element name="Angles2Coords.SX">
+<short/>
+</element>
+<element name="Angles2Coords.SY">
+<short/>
+</element>
+<element name="Angles2Coords.EX">
+<short/>
+</element>
+<element name="Angles2Coords.EY">
+<short/>
+</element>
+
+<element name="Arc2Bezier">
+<short>
+Converts an Arc and ArcLength into a Bezier Approximation of the Arc.
+</short>
+<descr>
+<p>
+Use <var>Arc2Bezier</var> to convert an Arc and ArcLength into a Bezier
+approximation of the Arc. The Rotation parameter accepts a Rotation-Angle
+for a rotated Ellipse. For a non-rotated ellipse this value would be 0, or
+360. If the AngleLength is greater than 90 degrees, or is equal to 0, it
+automatically exits, as Bezier cannot accurately approximate any angle
+greater then 90 degrees, and in fact for best result no angle greater than
+45 should be converted, instead an array of Bezier's should be created,
+each Bezier describing a portion of the total arc no greater than 45
+degrees.
+</p>
+<p>
+The angles are specified in 1/16th of a degree. For example, a full circle
+equals 5760 (16*360).
+</p>
+<p>
+Positive values in Angle and AngleLength mean counter-clockwise while
+negative values mean clockwise direction. Zero degrees is at the 3
+o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Arc2Bezier.X">
+<short/>
+</element>
+<element name="Arc2Bezier.Y">
+<short/>
+</element>
+<element name="Arc2Bezier.Width">
+<short/>
+</element>
+<element name="Arc2Bezier.Height">
+<short/>
+</element>
+<element name="Arc2Bezier.Angle1">
+<short/>
+</element>
+<element name="Arc2Bezier.Angle2">
+<short/>
+</element>
+<element name="Arc2Bezier.Rotation">
+<short/>
+</element>
+<element name="Arc2Bezier.Points">
+<short/>
+</element>
+
+<element name="Bezier">
+<short>
+Gets a TBezier instance representing the specified Bezier control points.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="Bezier.Result">
+<short>
+TBezier instance with the values in C1, C2, C3, and C4.
+</short>
+</element>
+<element name="Bezier.C1">
+<short>
+Control point on the parametric curve. C1 is an endpoint.
+</short>
+</element>
+<element name="Bezier.C2">
+<short>
+Control point on the parametric curve. C2 is a directional control point for 
+a Quadratic or Cubic Bezier.
+</short>
+</element>
+<element name="Bezier.C3">
+<short>
+Control point on the parametric curve. C3 is a directional control point for 
+a Cubic Bezier.
+</short>
+</element>
+<element name="Bezier.C4">
+<short>
+Control point on the parametric curve. C4 is an endpoint.
+</short>
+</element>
+
+<element name="Bezier2Polyline">
+<short>
+<var>Bezier2Polyline</var> - convert a 4-Point Bezier into a Pointer Array
+of TPoint and a Count variable.
+</short>
+<descr>
+<p>
+Use BezierToPolyline to convert a 4-Point Bezier into a Pointer Array of
+TPoint and a Count variable which can then be used within either a
+Polyline, or Polygon routine. It is primarily for use within
+PolyBezier2Polyline.
+</p>
+<p>
+If Points is not initialized or Count is less then 0, it is set to nil and
+the array starts at 0, otherwise it tries to append points to the array
+starting at Count. Points should ALWAYS be Freed when done by calling to
+ReallocMem(Points, 0) or FreeMem.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Bezier2Polyline.Bezier">
+<short/>
+</element>
+<element name="Bezier2Polyline.Points">
+<short/>
+</element>
+<element name="Bezier2Polyline.Count">
+<short/>
+</element>
+
+<element name="BezierArcPoints">
+<short>
+<var>BezierArcPoints</var> - convert an Arc and ArcLength into a Pointer
+Array of TPoints for use with Polyline or Polygon.
+</short>
+<descr>
+<p>
+Use BezierArcPoints to convert an Arc and ArcLength into a Pointer Array of
+TPoints for use with Polyline or Polygon. The Rotation parameter accepts a
+Rotation-Angle for a rotated Ellipse. For a non-rotated ellipse this value
+would be 0, or 360. The result is an Approximation based on 1 or more
+Beziers.
+</p>
+<p>
+If the AngleLength is greater than 90 degrees, it calls
+PolyBezierArcPoints, otherwise it Converts the angles into a Bezier by
+calling to Arc2Bezier, and then converts the Bezier into an array of Points
+by calling to Bezier2Polyline.
+</p>
+<p>
+The angles are specified in 1/16th of a degree. For example, a full circle
+equals 5760 (16*360).
+</p>
+<p>
+Positive values in Angle and AngleLength mean counter-clockwise while
+negative values mean clockwise direction. Zero degrees is at the 3
+o&apos;clock position.
+</p>
+<p>
+If Points is not initialized or Count is less then 0, it is set to nil and
+the array starts at 0, otherwise it tries to append points to the array
+starting at Count. Points should ALWAYS be Freed when done by calling
+ReallocMem(Points, 0) or FreeMem.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="BezierArcPoints.X">
+<short/>
+</element>
+<element name="BezierArcPoints.Y">
+<short/>
+</element>
+<element name="BezierArcPoints.Width">
+<short/>
+</element>
+<element name="BezierArcPoints.Height">
+<short/>
+</element>
+<element name="BezierArcPoints.Angle1">
+<short/>
+</element>
+<element name="BezierArcPoints.Angle2">
+<short/>
+</element>
+<element name="BezierArcPoints.Rotation">
+<short/>
+</element>
+<element name="BezierArcPoints.Points">
+<short/>
+</element>
+<element name="BezierArcPoints.Count">
+<short/>
+</element>
+
+<element name="BezierMidPoint">
+<short>
+<var>BezierMidPoint</var> - get the Mid-Point of any 4-Point Bezier. It is
+primarily for use in SplitBezier.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="BezierMidPoint.Result">
+<short/>
+</element>
+<element name="BezierMidPoint.Bezier">
+<short/>
+</element>
+
+<element name="CenterPoint">
+<short>
+<var>CenterPoint</var> - get the Center-Point of any rectangle. It is
+primarily for use with, and in, other routines such as Quadrant, and
+RadialPoint.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="CenterPoint.Result">
+<short/>
+</element>
+<element name="CenterPoint.Rect">
+<short/>
+</element>
+
+
+<element name="CalculateLeftTopWidthHeight">
+<short>
+Calculates the values for the output variables in Left, Top, Width, and Height.
+</short>
+<descr>
+<p>
+<var>CalculateLeftTopWidthHeight</var> checks values in the X1, X2, Y1, and Y2 
+arguments and sets the values for the Left, Top, Width, and Height output 
+parameters accordingly.
+</p>
+<dl>
+<dt>Left</dt>
+<dd>
+Set to the smaller of the two values in X1 and X2.
+</dd>
+<dt>Width</dt>
+<dd>
+Set to the difference between the X1 and X2 values. The value will be a 
+positive integer value or zero (0).
+</dd>
+<dt>Top</dt>
+<dd>
+Set to the smaller of the two values in Y1 and Y2.
+</dd>
+<dt>Height</dt>
+<dd>
+Set to the difference between Y1 and Y2. The value will be a positive integer 
+value or zero (0).
+</dd>
+</dl>
+<p>
+Used in the implementation of the Rectangle and Ellipse routines for the GTK 
+widgetset.
+</p>
+</descr>
+<version>
+Added in LazUtils version 3.0.
+</version>
+<seealso/>
+</element>
+<element name="CalculateLeftTopWidthHeight.X1">
+<short>
+Horizontal coordinate examined in the routine.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Y1">
+<short>
+Vertical coordinate examined in the routine.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.X2">
+<short>
+Horizontal coordinate examined in the routine.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Y2">
+<short>
+Vertical coordinate examined in the routine.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Left">
+<short>
+Returns the left coordinate for the specified values.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Top">
+<short>
+Returns the top coordinate for the specified values.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Width">
+<short>
+Returns the width for the specified horizontal coordinates.
+</short>
+</element>
+<element name="CalculateLeftTopWidthHeight.Height">
+<short>
+Returns the height for the specified vertical coordinates.
+</short>
+</element>
+
+<element name="Coords2Angles">
+<short>
+<var>Coords2Angles</var> - convert the coords for Start and End Radial-
+Points into an Eccentric counter clockwise Angle and an Angle-Length.
+</short>
+<descr>
+<p>
+Use Coords2Angles to convert the coords for Start and End Radial-Points,
+such as are used in the Windows API Arc Pie and Chord routines, into an
+Eccentric (aka Radial) counter clockwise Angle and an Angle-Length, such as
+are used in X-Windows and GTK.
+</p>
+<p>
+The angles angle1 and angle2 are returned in 1/16th of a degree. For
+example, a full circle equals 5760 (16*360).
+</p>
+<p>
+Zero degrees is at the 3 o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Coords2Angles.X">
+<short/>
+</element>
+<element name="Coords2Angles.Y">
+<short/>
+</element>
+<element name="Coords2Angles.Width">
+<short/>
+</element>
+<element name="Coords2Angles.Height">
+<short/>
+</element>
+<element name="Coords2Angles.SX">
+<short/>
+</element>
+<element name="Coords2Angles.SY">
+<short/>
+</element>
+<element name="Coords2Angles.EX">
+<short/>
+</element>
+<element name="Coords2Angles.EY">
+<short/>
+</element>
+<element name="Coords2Angles.Angle1">
+<short/>
+</element>
+<element name="Coords2Angles.Angle2">
+<short/>
+</element>
+
+<element name="Distance">
+<short>
+Gets the distance between two points, or the distance of a point from a 
+specified line.
+</short>
+<descr>
+<p>  
+<var>Distance</var> is an overloaded function with variants that operate on 
+either two point coordinates, or on a point and a line defined by two 
+additional points values. The Distance() function is used primarily for 
+internal purposes (such as in Bezier2PolyLine and EccentricAngle) 
+but can be used for any purpose.
+</p>
+<p>
+The return value is an Extended type with the calculated distance between the 
+argument values. The return value is always a positive value.
+</p>
+<p>
+The variants using two point arguments (TPoint or TFloatPoint) calculates the 
+length of a straight line between the coordinates in PT1 and PT2 using the 
+Pythagorean theorem. The distance between identical points is always zero (0). 
+</p>
+<p>
+The variant with three TFloatPoint arguments calculates the distance between 
+the point Pt and the line represented by the points in SP and EP using 
+Euclidean geometry. The distance is derived by finding the length of an 
+imaginary line between Pt and the closest point that intersects the slope of 
+the line in SP and EP. The distance for a point which lies on the defined line 
+is always zero (0).
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Distance.Result">
+<short>
+Straight-line distance between the specified coordinates or objects.
+</short>
+</element>
+<element name="Distance.PT1">
+<short>
+Starting point for the calculated distance.
+</short>
+</element>
+<element name="Distance.PT2">
+<short>
+Ending point for the calculated distance.
+</short>
+</element>
+<element name="Distance.Pt">
+<short>
+Fixed point for the calculated distance.
+</short>
+</element>
+<element name="Distance.SP">
+<short>
+Starting point for the line used in the distance calculation.
+</short>
+</element>
+<element name="Distance.WP">
+<short>
+Ending point for the line used in the distance calculation.
+</short>
+</element>
+
+<element name="EccentricAngle">
+<short>
+<var>EccentricAngle</var> - get the Eccentric Angle of a given point on any
+non-rotated ellipse.
+</short>
+<descr>
+<p>
+Use EccentricAngle to get the Eccentric( aka Radial ) Angle of a given
+point on any non-rotated ellipse. It is primarily for use in Coords2Angles.
+The result is in 1/16th of a degree. For example, a full circle equals 5760
+(16*360). Zero degrees is at the 3 o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="EccentricAngle.Result">
+<short/>
+</element>
+<element name="EccentricAngle.PT">
+<short/>
+</element>
+<element name="EccentricAngle.Rect">
+<short/>
+</element>
+
+<element name="EllipseRadialLength">
+<short>
+<var>EllipseRadialLength</var> - Radial-Length of non-rotated ellipse at
+any given Eccentric Angle.
+</short>
+<descr>
+<p>
+Use EllipseRadialLength to get the Radial-Length of non-rotated ellipse at
+any given Eccentric( aka Radial ) Angle. It is primarily for use in other
+routines such as RadialPoint. The Eccentric angle is in 1/16th of a degree.
+For example, a full circle equals 5760 (16*360). Zero degrees is at the 3
+o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="EllipseRadialLength.Result">
+<short/>
+</element>
+<element name="EllipseRadialLength.Rect">
+<short/>
+</element>
+<element name="EllipseRadialLength.EccentricAngle">
+<short/>
+</element>
+
+<element name="FloatPoint">
+<short>
+<var>FloatPoint</var> - it is essentially like Classes.Point in use, except
+that it accepts Extended Parameters. It is Primarily for use with and in
+Bezier routines.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="FloatPoint.Result">
+<short/>
+</element>
+<element name="FloatPoint.AX">
+<short/>
+</element>
+<element name="FloatPoint.AY">
+<short/>
+</element>
+
+<element name="LineEndPoint">
+<short>
+<var>LineEndPoint</var> - get the End-Point of a line of any given Length
+at any given angle with any given Start-Point.
+</short>
+<descr>
+<p>
+Use LineEndPoint to get the End-Point of a line of any given Length at any
+given angle with any given Start-Point. It is primarily for use in other
+routines such as RadialPoint. The angle is in 1/16th of a degree. For
+example, a full circle equals 5760 (16*360). Zero degrees is at the 3
+o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="LineEndPoint.Result">
+<short/>
+</element>
+<element name="LineEndPoint.StartPoint">
+<short/>
+</element>
+<element name="LineEndPoint.Angle">
+<short/>
+</element>
+<element name="LineEndPoint.Length">
+<short/>
+</element>
+
+<element name="MakeMinMax">
+<short>
+Ensures that the i1 argument is the smaller of the two Integer values.
+</short>
+<descr>
+<p>
+<var>MakeMinMax</var> swaps the values in i1 and i2 variable parameters when 
+i1 is larger than i2. No actions are performed in the routine if i1 is smaller 
+than i2, or the arguments have the same value.
+</p>
+</descr>
+<version>
+Added in LazUtils version 3.0.
+</version>
+<seealso/>
+</element>
+<element name="MakeMinMax.i1">
+<short>
+Integer value compared (and potentially updated) in the routine.
+</short>
+</element>
+<element name="MakeMinMax.i2">
+<short>
+Integer value compared (and potentially updated) in the routine.
+</short></element>
+
+<element name="MoveRect">
+<short>
+Moves the specified rectangle to the origin in the x and y arguments.
+</short>
+<descr>
+<p>
+<var>MoveRect</var> sets the Left and Top members in ARect to the values 
+specified in x and y (respectively). The Right and Bottom members in ARect are 
+updated to reflect the relative distance from the original Top and Left on 
+entry.
+</p>
+</descr>
+<version>
+Added in LazUtils version 3.0.
+</version>
+<seealso/>
+</element>
+<element name="MoveRect.ARect">
+<short>
+TRect instance updated in the routine.
+</short>
+</element>
+<element name="MoveRect.x">
+<short>
+New position for the Top coordinate in the rectangle.
+</short>
+</element>
+<element name="MoveRect.y">
+<short>
+New position for the Left coordinate in the rectangle.
+</short>
+</element>
+
+<element name="MoveRectToFit">
+<short>
+Moves and potentially resizes a rectangle to fit within the specified target 
+rectangle.
+</short>
+<descr>
+<p>
+<var>ARect</var> is the TRect instance repositioned in the routine. Values in 
+the Left, Right, Top, and Bottom members may be updated in the routine if the 
+rectangle is not located within the bounds for the target rectangle.
+</p>
+<p>
+<var>MaxRect</var> is the TRectangle instance where ARect is repositioned. It 
+also establishes the maximum size for ARect after it has been repositioned. If 
+aRect is larger than MaxRect, ARect is resized to fit with in the constraints 
+in MaxRect.
+</p>
+<p>
+MoveRectToFit is used in the implementation for the DoDock method in TControl.
+</p>
+</descr>
+<version>
+Added in LazUtils version 3.0.
+</version>
+<seealso/>
+</element>
+<element name="MoveRectToFit.ARect">
+<short>
+TRect instance moved and optionally resized in the routine.
+</short>
+</element>
+<element name="MoveRectToFit.MaxRect">
+<short>
+TRect instance where the rectangle is relocated. It also specifies the maximum 
+size for the relocated rectangle.
+</short>
+</element>
+
+<element name="PolyBezier2Polyline">
+<short>
+<var>PolyBezier2Polyline</var> - convert an array of 4-Point Bezier into a
+Pointer Array of TPoint and a Count variable.
+</short>
+<descr>
+<p>
+Use BezierToPolyline to convert an array of 4-Point Bezier into a Pointer
+Array of TPoint and a Count variable which can then be used within either a
+Polyline, or Polygon routine. Points is automatically initialized, so any
+existing information is lost, and the array starts at 0. Points should
+ALWAYS be Freed when done by calling to ReallocMem(Points, 0).
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="PolyBezier2Polyline.Beziers">
+<short/>
+</element>
+<element name="PolyBezier2Polyline.Points">
+<short/>
+</element>
+<element name="PolyBezier2Polyline.Count">
+<short/>
+</element>
+
+<element name="PolyBezierArcPoints">
+<short>
+<var>PolyBezierArcPoints</var> - convert an Arc and ArcLength into a
+Pointer Array of TPoints for use with Polyline or Polygon.
+</short>
+<descr>
+<p>
+Use PolyBezierArcPoints to convert an Arc and ArcLength into a Pointer
+Array of TPoints for use with Polyline or Polygon. The Rotation parameter
+accepts a Rotation-Angle for a rotated Ellipse - for a non-rotated ellipse
+this value would be 0, or 360. The result is an Approximation based on 1 or
+more Beziers. If the AngleLength is greater than 45 degrees, it recursively
+breaks the Arc into Arcs of 45 degrees or less, and converts them into
+Beziers with BezierArcPoints.
+</p>
+<p>
+The angles are specified in 1/16th of a degree. For example, a full circle
+equals 5760 (16*360).
+</p>
+<p>
+Positive values in Angle and AngleLength mean counter-clockwise while
+negative values mean clockwise direction. Zero degrees is at the 3
+o&apos;clock position.
+</p>
+<p>
+Points is automatically initialized, so any existing information is lost,
+and the array starts at 0. Points should ALWAYS be Freed when done by
+calling to ReallocMem(Points, 0).
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="PolyBezierArcPoints.X">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Y">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Width">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Height">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Angle1">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Angle2">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Rotation">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Points">
+<short/>
+</element>
+<element name="PolyBezierArcPoints.Count">
+<short/>
+</element>
+
+<element name="Quadrant">
+<short>
+Determine the <var>Quadrant</var> of any point, given the Center.
+</short>
+<descr>
+<p>
+Use Quadrant to determine the Quadrant of any point, given the Center. It
+is primarily for use in other routines such as EccentricAngle. A result of
+1-4 represents the primary 4 quadrants. A result of 5-8 means the point
+lies on one of the Axis, 5 = -Y Axis, 6 = +X Axis, 7 = +Y Axis, and 8 = -X
+Axis. A result of -1 means that it does not fall in any quadrant, that is,
+it is the Center.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="Quadrant.Result">
+<short/>
+</element>
+<element name="Quadrant.PT">
+<short/>
+</element>
+<element name="Quadrant.Center">
+<short/>
+</element>
+
+<element name="RadialPoint">
+<short>
+Get the <var>RadialPoint</var> at any given Eccentric angle on any non-
+rotated ellipse.
+</short>
+<descr>
+<p>
+Use RadialPoint to get the Radial-Point at any given Eccentric(aka Radial)
+angle on any non-rotated ellipse. It is primarily for use in Angles2Coords.
+The EccentricAngle is in 1/16th of a degree. For example, a full circle
+equals 5760 (16*360). Zero degrees is at the 3 o&apos;clock position.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="RadialPoint.Result">
+<short/>
+</element>
+<element name="RadialPoint.EccentricAngle">
+<short/>
+</element>
+<element name="RadialPoint.Rect">
+<short/>
+</element>
+
+<element name="RotatePoint">
+<short>
+Rotates a point around the origin by the specified angle (in radians).
+</short>
+<descr>
+<p>
+Rotates a point around the origin (0,0) by the angle in AAngle. The angle is
+in radians and positive for counter-clockwise rotation.
+Note that y points downwards.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="RotatePoint.Result">
+<short>TPoint with the coordinates after rotation.</short>
+</element>
+<element name="RotatePoint.APoint">
+<short>TPoint with coordinates rotated in the routine.</short>
+</element>
+<element name="RotatePoint.AAngle">
+<short>Rotation angle in radians.</short>
+</element>
+
+<element name="RotateRect">
+<short>
+Rotates a rectangle with the specified dimensions by the specified angle
+(in radians).
+</short>
+<descr>
+<p>
+Rotates the rectangle (0, 0, AWidth, AHeight) around its top-left corner
+(0,0) by the angle in AAngle (in radians).
+Note that y points downwards.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="RotateRect.Result">
+<short>The smallest TRect which contains the rotated rectangle.</short>
+</element>
+<element name="RotateRect.AWidth">
+<short>Width for the rectangle.</short>
+</element>
+<element name="RotateRect.AHeight">
+<short>Height for the rectangle.</short>
+</element>
+<element name="RotateRect.AAngle">
+<short>Rotation angle in radians.</short>
+</element>
+
+<element name="SplitBezier">
+<short>
+<var>SplitBezier</var> - split any 4-Point Bezier into two 4-Point Beziers:
+a 'Left' and a 'Right'
+</short>
+<descr>
+<p>
+Use SplitBezier to split any 4-Point Bezier into two 4-Point Beziers: a
+'Left' and a 'Right'. It is primarily for use in Bezier2Polyline.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="SplitBezier.Bezier">
+<short/>
+</element>
+<element name="SplitBezier.Left">
+<short/>
+</element>
+<element name="SplitBezier.Right">
+<short/>
+</element>
+
+<element name="add(TFloatPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Add operator (+) for values using the TFloatPoint type.
+</short>
+<descr>
+<p>
+Values for the X and Y members in the addends are summed and stored in the 
+corresponding members in the TFloatPoint result.
+</p>
+</descr>
+</element>
+
+<element name="add(TFloatPoint,Extended):TFloatPoint">
+<short>
+Implements the Add operator (+) for values using the TFloatPoint and Extended 
+types.
+</short>
+<descr>
+<p>
+The Extended value is added to both the X and Y members in the TFloatPoint 
+type and used in the result for the operator.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="add(Extended,TFloatPoint):TFloatPoint">
+<short>
+Implements the Add operator (+) for values using the Extended and TFloatPoint 
+types.
+</short>
+<descr>
+<p>
+The Extended value is added to both the X and Y members in the TFloatPoint 
+type and used in the result for the operator.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="add(TFloatPoint,TPoint):TFloatPoint">
+<short>
+Implements the Add operator (+) for values using the TFloatPoint and TPoint 
+types.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="add(TPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Add operator (+) for values using the TPoint and TFloatPoint 
+types.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="subtract(TFloatPoint,Extended):TFloatPoint">
+<short>
+Implements the Subtract operator (-) for values using the TFloatPoint and 
+Extended types.
+</short>
+<descr>
+<p>
+The value in the Extended type is subtracted from both the X and Y members in 
+the TFloatPoint type and used in the result for the operator.
+</p>
+</descr>
+</element>
+
+<element name="subtract(TFloatPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Subtract operator (-) for values using the TFloatPoint type.
+</short>
+<descr/>
+</element>
+
+<element name="subtract(TFloatPoint,TPoint):TFloatPoint">
+<short>
+Implements the Subtract operator (-) for values using the TFloatPoint and 
+TPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="subtract(TPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Subtract operator (-) for values using the TPoint and 
+TFloatPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="multiply(TFloatPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Multiply operator (*) for values using the TFloatPoint type.
+</short>
+<descr/>
+</element>
+
+<element name="multiply(TFloatPoint,Extended):TFloatPoint">
+<short>
+Implements the Multiply operator (*) for values using the TFloatPoint and 
+Extended types.
+</short>
+<descr>
+<p>
+The value in the Extended type is applied to both the X and Y members in the TFloatPoint type and used in the result for the operator.
+</p>  
+</descr>
+</element>
+
+<element name="multiply(Extended,TFloatPoint):TFloatPoint">
+<short>
+Implements the Multiply operator (*) for values using the Extended and 
+TFloatPoint types.
+</short>
+<descr>
+<p>
+The value in the Extended type is applied to both the X and Y members in the TFloatPoint type and used in the result for the operator.
+</p>  
+</descr>
+</element>
+
+<element name="multiply(TFloatPoint,TPoint):TFloatPoint">
+<short>
+Implements the Multiply operator (*) for values using the TFloatPoint and 
+TPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="multiply(TPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Multiply operator (*) for values using the TPoint and 
+TFloatPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="divide(TFloatPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Divide operator (/) for values using the TFloatPoint type.
+</short>
+<descr/>
+</element>
+
+<element name="divide(TFloatPoint,Extended):TFloatPoint">
+<short>
+Implements the Divide operator (/) for values using the TFloatPoint and 
+Extended types.
+</short>
+<descr>
+<p>
+The value in the Extended type is applied to both the X and Y members in the 
+TFloatPoint type and used in the result for the operator. No validation is 
+performed for the divisor in the operator.
+</p>
+</descr>
+</element>
+
+<element name="divide(TFloatPoint,TPoint):TFloatPoint">
+<short>
+Implements the Divide operator (/) for values using the TFloatPoint and 
+TPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="divide(TPoint,TFloatPoint):TFloatPoint">
+<short>
+Implements the Divide operator (/) for values using the TPoint and 
+TFloatPoint types.
+</short>
+<descr/>
+</element>
+
+<element name="equal(TPoint,TPoint):Boolean">
+<short>
+Implements the Equal operator (=) to compare values using the TPoint type.
+</short>
+<descr>
+<p>
+The result is <b>True</b> when the X and Y members in the compared values are 
+the same.
+</p>
+</descr>
+</element>
+
+<element name="equal(TFloatPoint,TFloatPoint):Boolean">
+<short>
+Implements the Equal operator (=) to compare values using the TFloatPoint type.
+</short>
+<descr>
+<p>
+The result is <b>True</b> when the X and Y members in the compared values are 
+the same.
+</p>
+</descr>
+</element>
+
+<element name="equal(TRect,TRect):Boolean">
+<short>
+Implements the Equal operator (=) to compare values using the TRect type.
+</short>
+<descr>
+<p>
+The result is <b>True</b> when the Left, Top, Right, and Bottom members in the 
+compared values are the same.
+</p>
+</descr>
+</element>
+
+<element name="assign(TFloatPoint):TPoint">
+<short>
+Implements the Assign operator (=) to store a value using the TFloatPoint type 
+to a TPoint instance.
+</short>
+<descr>
+<p>
+<var>SimpleRoundTo</var> in the RTL <file>math.pp</file> unit is called to 
+round both the X and Y members to a Double value with 0 decimals in the 
+precision. The Double values are truncated and stored to the Longint types 
+used for the X and Y members in the result for the operator.
+</p>
+</descr>
+</element>
+
+<element name="assign(TPoint):TFloatPoint">
+<short>
+Implements the Assign operator (=) to store a value using the TPoint type to a 
+TFloatPoint instance.
+</short>
+<descr/>
+</element>
+
+<topic name="GraphMathOperators">
+<short>
+<b>GraphMath Operators</b>.
+</short>
+<descr>
+<p>
+This Unit contains a number of routines for calculating and converting
+series of graphic points from one coordinate system to another.
+</p>
+<p>
+A fundamental type is introduced, called TFloatPoint. It is an extended
+precision record containing an X and a Y coordinate for a graphic point.
+Its structure is as follows:
+</p>
+<code>
+type
+  TFloatPoint = record
+    X, Y: Extended;
+  end;
+</code>
+<p>
+The Unit contains definitions for mathematical operators which extend the
+normal definitions of addition, subtraction, multiplication, division and
+comparison to cover manipulations with TFloatPoints, allowing, for example,
+addition or multiplication of two TFloatPoints, a TFloatPoint and a TPoint,
+or a TFloatPoint and an Extended precision number.
+</p>
+</descr>
+</topic>
+</module>
+<!-- GraphMath -->
+</package>
+</fpdoc-descriptions>

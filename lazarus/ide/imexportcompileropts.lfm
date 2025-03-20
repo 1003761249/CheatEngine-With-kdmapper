@@ -1,0 +1,112 @@
+object ImExportCompOptsDlg: TImExportCompOptsDlg
+  Left = 416
+  Height = 171
+  Top = 208
+  Width = 451
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'ImExportCompOptsDlg'
+  ClientHeight = 171
+  ClientWidth = 451
+  Constraints.MinHeight = 113
+  Constraints.MinWidth = 300
+  OnClose = ImExportCompOptsDlgCLOSE
+  OnCreate = ImExportCompOptsDlgCREATE
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 131
+    Width = 439
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object FileLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 15
+    Top = 6
+    Width = 18
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'File'
+    ParentColor = False
+  end
+  object ExportRadioGroup: TRadioGroup
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 66
+    Top = 54
+    Width = 210
+    AutoFill = True
+    BorderSpacing.Top = 6
+    Caption = 'Compiler options of'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 46
+    ClientWidth = 206
+    ItemIndex = 0
+    Items.Strings = (
+      'Current build mode'
+      'All build modes'
+    )
+    TabOrder = 2
+  end
+  object FileNameEdit: TComboBox
+    AnchorSideLeft.Control = FileLabel
+    AnchorSideTop.Control = FileLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonBrowse
+    Left = 6
+    Height = 23
+    Top = 25
+    Width = 410
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 4
+    ItemHeight = 15
+    OnChange = FileNameEditChange
+    ParentShowHint = False
+    TabOrder = 0
+  end
+  object ButtonBrowse: TButton
+    AnchorSideLeft.Control = FileNameEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = FileNameEdit
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 420
+    Height = 25
+    Top = 25
+    Width = 25
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = ButtonBrowseClick
+    TabOrder = 1
+  end
+  object OpenDlg: TOpenDialog
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 304
+    top = 88
+  end
+  object SaveDlg: TSaveDialog
+    left = 349
+    top = 88
+  end
+end

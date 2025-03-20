@@ -1,0 +1,178 @@
+object lrSpreadSheetImportForm: TlrSpreadSheetImportForm
+  Left = 699
+  Height = 201
+  Top = 384
+  Width = 520
+  Caption = 'Import from spreadsheet'
+  ClientHeight = 201
+  ClientWidth = 520
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.7'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 20
+    Top = 6
+    Width = 62
+    BorderSpacing.Around = 6
+    Caption = 'File name'
+    ParentColor = False
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 46
+    Top = 149
+    Width = 508
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object FileNameEdit1: TFileNameEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 37
+    Top = 32
+    Width = 502
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Edit1
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 20
+    Top = 122
+    Width = 45
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 6
+    Caption = 'Left up'
+    ParentColor = False
+    Visible = False
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = CheckBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 85
+    Height = 37
+    Top = 105
+    Width = 82
+    BorderSpacing.Around = 6
+    TabOrder = 2
+    Visible = False
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Edit1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = CheckBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 173
+    Height = 37
+    Top = 105
+    Width = 82
+    BorderSpacing.Around = 6
+    TabOrder = 3
+    Visible = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Edit3
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 20
+    Top = 165
+    Width = 73
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 6
+    Caption = 'Right down'
+    ParentColor = False
+    Visible = False
+  end
+  object Edit3: TEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 85
+    Height = 37
+    Top = 148
+    Width = 82
+    BorderSpacing.Around = 6
+    TabOrder = 4
+    Visible = False
+  end
+  object Edit4: TEdit
+    AnchorSideLeft.Control = Edit3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit2
+    AnchorSideTop.Side = asrBottom
+    Left = 173
+    Height = 37
+    Top = 148
+    Width = 82
+    BorderSpacing.Around = 6
+    TabOrder = 5
+    Visible = False
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Edit4
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Edit5
+    AnchorSideBottom.Side = asrBottom
+    Left = 261
+    Height = 20
+    Top = 165
+    Width = 31
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 6
+    Caption = 'Coef'
+    ParentColor = False
+    Visible = False
+  end
+  object Edit5: TEdit
+    AnchorSideLeft.Control = Label4
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit2
+    AnchorSideTop.Side = asrBottom
+    Left = 298
+    Height = 37
+    Top = 148
+    Width = 82
+    BorderSpacing.Around = 6
+    TabOrder = 6
+    Visible = False
+  end
+  object CheckBox1: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = FileNameEdit1
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 24
+    Top = 75
+    Width = 374
+    BorderSpacing.Around = 6
+    Caption = 'Use not standart object names (improve import speed)'
+    TabOrder = 7
+  end
+end

@@ -1,0 +1,10 @@
+Name=fcl-report
+Version=3.2.2
+Checksum=1513316694
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\fcl-report\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,fcl-base|1513316664,fcl-image|1513316665,fcl-xml|1513316665,fcl-pdf|1513316691,fcl-json|1513316672,fcl-db|1513316673,fcl-web|1513316681
+NeedLibC=N
+FPMakeAddIn=N

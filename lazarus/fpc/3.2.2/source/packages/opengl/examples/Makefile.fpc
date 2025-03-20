@@ -1,0 +1,27 @@
+#
+#   Makefile.fpc for GL demos
+#
+
+[target]
+programs=glutdemo morph3d bounce radblur glutdemova freeglutdemo
+programs_linux=glxtest
+programs_freebsd=glxtest
+programs_netbsd=glxtest
+programs_openbsd=glxtest
+programs_darwin=glxtest
+programs_iphonesim=glxtest
+
+[require]
+packages=opengl
+
+[install]
+fpcpackage=y
+
+[compiler]
+options=-S2h
+
+[default]
+fpcdir=../../..
+
+[rules]
+.NOTPARALLEL:

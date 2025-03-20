@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <EnvironmentOptions>
+    <Version Value="110" Lazarus="3.8"/>
+    <LazarusDirectory Value="D:\lazarus">
+    </LazarusDirectory>
+    <CompilerFilename Value="$(Lazarusdir)\fpc\3.2.2\bin\x86_64-win64\fpc.exe">
+    </CompilerFilename>
+    <FPCSourceDirectory Value="$(LazarusDir)\fpc\$(FPCVer)\source">
+    </FPCSourceDirectory>
+    <MakeFilename Value="$(Lazarusdir)\fpc\3.2.2\bin\x86_64-win64\make.exe">
+    </MakeFilename>
+    <TestBuildDirectory Value="C:\Users\ADMINI~1\AppData\Local\Temp\">
+    </TestBuildDirectory>
+    <Debugger>
+      <Configs>
+        <Config ConfigName="FpDebug" ConfigClass="TFpDebugDebugger" Active="True"/>
+        <Config ConfigName="Gdb" ConfigClass="TGDBMIDebugger" DebuggerFilename="$(LazarusDir)\mingw\$(TargetCPU)-$(TargetOS)\bin\gdb.exe"/>
+      </Configs>
+    </Debugger>
+  </EnvironmentOptions>
+</CONFIG>

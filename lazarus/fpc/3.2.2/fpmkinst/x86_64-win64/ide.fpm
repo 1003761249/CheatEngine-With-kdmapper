@@ -1,0 +1,10 @@
+Name=ide
+Version=3.2.2
+Checksum=1513316699
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\ide\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,rtl-extra|1513316663,fv|1513316683,chm|1513316669,regexpr|1513316685,fcl-process|1513316677
+NeedLibC=N
+FPMakeAddIn=N

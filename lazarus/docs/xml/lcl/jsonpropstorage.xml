@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+JSONPropStorage
+====================================================================
+-->
+<module name="JSONPropStorage">
+<short>
+Contains a component that stores Form Session Properties in JSON format.
+</short>
+<descr>
+<p>
+In this unit you can find an implementation of a name/value pair storage 
+container using JSON (JavaScript Object Notation) format.
+</p>
+<p>
+This container will get the Form's Session Properties that you setup in 
+<link id="#LCL.Forms.TForm">TForm.SessionProperties</link> and read/write 
+them on the file you specify on 
+<link id="#LCL.JsonPropStorage.TJSONPropStorage.JSONFileName">TJSONPropStorage.JSONFileName
+</link>.
+</p>
+</descr>
+
+<!-- unresolved type references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Forms"/>
+<element name="JSONConf">
+<short>
+This unit contains the implementation of a path/value pair generic container 
+in JSON format. See package: 
+<url href="http://wiki.freepascal.org/fcl-json">fcl-json</url>.
+</short>
+</element>
+<element name="LazUTF8"/>
+
+<element name="TCustomJSONPropStorage">
+<short>
+Implements the base class used to store session properties to a file in JSON 
+format.
+</short>
+<descr>
+<p>
+<var>TCustomJSONPropStorage</var> is a <var>TFormPropertyStorage</var> 
+descendant which defines a class used to store session properties for a form or 
+frame to a file using JSON (JavaScript Object Notation) format. It extends the 
+ancestor class with properties and methods needed to access the JSON storage 
+mechanism (TJSONConfig) for the class instance.
+</p>
+<p>
+Use the SessionProperties property in the TForm (or TFrame) instance which owns 
+the class to define the component and property names written to the JSON 
+storage mechanism.
+</p>
+<p>
+Use JSONFileName to specify the path and file name to the file where the JSON 
+content for the session properties is stored.
+</p>
+<p>
+Use RootObjectPath to specify the path to the JSON object where the session 
+properties is stored in the JSON file.
+</p>
+<p>
+Use Formatted to control whether formatting options for the JSONConfig file are 
+enabled for the storage mechanism.
+</p>
+<p>
+TCustomJSONPropStorage includes overridden methods used to read, write, and 
+maintain entries in the JSON storage mechanism.
+</p>
+<p>
+Do not create instances of TCustomJSONPropStorage; use the TJSONPropStorage 
+descendant instead.
+</p>
+</descr>
+<seealso>
+<link id="TJSONPropStorage"/>
+<link id="#lcl.forms.TFormPropertyStorage">TFormPropertyStorage</link>
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TCustomJSONPropStorage.FCount"/>
+<element name="TCustomJSONPropStorage.FJSONFileName"/>
+<element name="TCustomJSONPropStorage.FRootObjectPath"/>
+<element name="TCustomJSONPropStorage.FJSONConf"/>
+<element name="TCustomJSONPropStorage.FFormatted"/>
+
+<!-- protected -->
+<element name="TCustomJSONPropStorage.GetJSONFileName">
+<short>
+Gets the value for the JSONFileName property.
+</short>
+<descr/>
+<errors/>
+<seealso>
+<link id="#lcl.jsonpropstorage.TCustomJSONPropStorage.JSONFileName">TCustomJSONPropStorage.JSONFileName</link>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.GetJSONFileName.Result">
+<short>
+Value for the JSONFileName property.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.RootSection">
+<short>
+Returns the name of the RootSection for the storage mechanism.
+</short>
+<descr>
+<p>
+<var>RootSection</var> is an overridden <var>String</var> function used to 
+return the section where the JSON content is stored in the JSON file. It 
+ensures that the value in RootObjectPath is used (when assigned). When omitted, 
+the inherited method is called to get the JSON object path for components in 
+the hierarchy for Root.
+</p>
+<p>
+The return value contains the JSON notation for the path name, like: 
+'TApplication/Form1' or 'TApplication/Frame1'.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TCustomJSONPropStorage.RootSection.Result">
+<short>
+The current value for the RootSection property.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.GetFormatted">
+<short>
+Gets the value for the Formatted property.
+</short>
+<descr/>
+<seealso>
+<link id="TCustomJSONPropStorage.Formatted"/>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.GetFormatted.Result">
+<short>
+The current value for the Formatted property.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.SetFormatted">
+<short>
+Sets the value for the Formatted property.
+</short>
+<descr/>
+<seealso>
+<link id="TCustomJSONPropStorage.Formatted"/>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.SetFormatted.Value">
+<short>
+New <var>Boolean</var> value for the Formatted property.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.FixPath">
+<short>
+Converts component/property names using '.' delimiters to the '/' delimiter 
+used for the JSON notation in the JSONConfig storage mechanism.
+</short>
+<descr>
+<p>
+<url href="https://lazarus-ccr.sourceforge.io/docs/fcl/fpjson/index.html">
+fpjson Reference
+</url>
+</p>
+<p>
+<url href="https://wiki.freepascal.org/fcl-json">
+FCL JSON
+</url>
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TCustomJSONPropStorage.FixPath.aPath">
+<short>The path to be fixed.</short>
+</element>
+<element name="TCustomJSONPropStorage.FixPath.Result">
+<short>The fixed path is returned with '.' replaced by '/'.</short>
+</element>
+
+<element name="TCustomJSONPropStorage.JSONConf">
+<short>
+TJSONConfig instance used to store path/value pairs.
+</short>
+<descr>
+<p>
+<var>JSONConf</var> is a read-only <var>TJSONConfig</var> property which 
+provides access to the JSON storage mechanism used in the class instance.
+</p>
+<remark>
+JSONConf does not have any of the formatting options assigned in the property. 
+You must assign values to the FormatOptions property in JSONConf to enable the 
+feature when Formatted is set to <b>True</b>. You can use the predefined  
+constant values like AsCompressedJSON or AsCompactJSON.
+</remark>
+</descr>
+<seealso/>
+</element>
+
+<!-- public -->
+<element name="TCustomJSONPropStorage.StorageNeeded">
+<short>
+Ensures that the TJSONConfig storage mechanism for the class instance is 
+allocated and configured when needed.
+</short>
+<descr>
+<p>
+Creates the TJSONCOnfig instance in JSONConf if it has not already been 
+allocated, or when the value in ReadOnly differs from the value used when the 
+storage mechanism was created. Uses values from Formatted and GetJSONFileName 
+to configure the JSONConf member. Increments the internal usage counter for the 
+storage mechanism.
+</p>
+<p>
+StorageNeeded is called from methods like: Save, Restore, SaveProperties, 
+RestoreProperties, ReadString, WriteString, ReadInteger, WriteInteger, and 
+EraseSections.
+</p>
+<p>
+See FreeStorage for the actions performed when the JSON storage mechanism in 
+JSONConf is no longer needed.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+<link id="TCustomJSONPropStorage.Formatted"/>
+<link id="TCustomJSONPropStorage.GetJSONFileName"/>
+<link id="TCustomJSONPropStorage.FreeStorage"/>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.StorageNeeded.ReadOnly">
+<short>
+<b>True</b> to create the storage mechanism using read-only permission.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.FreeStorage">
+<short>
+Frees the TJSONConfig storage mechanism when no longer needed.
+</short>
+<descr>
+<p>
+Frees the JSON storage mechanism in JSONConf when the internal usage counter 
+reaches 0 (zero).
+</p>
+<p>
+FreeStorage is called from methods like: Save, Restore, SaveProperties, 
+RestoreProperties, ReadString, WriteString, ReadInteger, WriteInteger, and 
+EraseSections.
+</p>
+<p>
+See StorageNeeded for the actions performed when the JSON storage mechanism in 
+JSONConf is allocated and configured for the class instance.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+</seealso>
+</element>
+
+<element name="TCustomJSONPropStorage.DoReadString">
+<short>
+Performs actions needed to read the value for the specified section and 
+identifier as a String type.
+</short>
+<descr>
+<p>
+DoReadString is an overridden String function used to implement the ReadString 
+method in the TCustomPropertyStorage ancestor. DoReadString ensures that the 
+value for <var>Section</var> and <var>Ident</var> is converted from the UTF-16 
+encoding (UnicodeString) used in JSONConf (TJSONConfig) to the UTF-8 encoding used in the return value.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.DoReadString.Section">
+<short>The section to be read in the method.</short>
+</element>
+<element name="TCustomJSONPropStorage.DoReadString.Ident">
+<short>The identifier to be read in the method.</short>
+</element>
+<element name="TCustomJSONPropStorage.DoReadString.Default">
+<short>
+Default value returned for the specified section and identifier when either the 
+section or identifier was not found in JSONConf.
+</short>
+</element>
+<element name="TCustomJSONPropStorage.DoReadString.Result">
+<short>
+Returns the value for the section/ident requested.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.DoWriteString">
+<short>
+Performs actions needed to write the specified Section and Ident to the JSON 
+storage mechanism as a String type.
+</short>
+<descr>
+<p>
+<var>DoWriteString</var> is an overridden method used to implement the 
+WriteString method in the TCustomPropertyStorage ancestor. DoWriteString 
+ensures that <var>Value</var> is converted from the UTF-8 encoding used in the 
+argument to the UTF-16 encoding (UnicodeString) used in JSONConf (TJSONConfig). 
+</p>
+<p>
+The Value argument is stored using the identifiers in the <var>Section</var> 
+and <var>Ident</var> parameters. They are  converted from the their 
+representation as dotted-LCL component names and properties to the '/'-
+delimited XPATH-like notation. For example:
+</p>
+<code>
+'TApplication', 'Form1.Width' =&gt; 'TApplication/Form1/Width'
+</code>
+<remark>
+Please note that any component which does not have an explicit value in its 
+Name property defaults to the ClassName for the component, like 'TApplication'.
+</remark>
+<p>
+Use active to enable or disable read and write operations to the JSON property 
+storage mechanism.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+<link id="TCustomJSONPropStorage.FixPath"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.WriteString">TCustomPropertyStorage.WriteString</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Active">TCustomPropertyStorage.Active</link>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.DoWriteString.Section">
+<short>Name for the section where the value is stored.</short>
+</element>
+<element name="TCustomJSONPropStorage.DoWriteString.Ident">
+<short>Name for the identifier where the value is stored.</short>
+</element>
+<element name="TCustomJSONPropStorage.DoWriteString.Value">
+<short>String value stored in the method.</short>
+</element>
+
+<element name="TCustomJSONPropStorage.DoEraseSections">
+<short>
+Performs actions needed to remove the entry (and all of its child entries) at 
+the specified path in the JSON storage.
+</short>
+<descr>
+<p>
+<var>DoEraseSections</var> is an overridden method used to remove the named 
+section and all of the identifiers stored at the path in ARootObjectPath. It 
+implements the EraseSections method in the TCustomPropertyStorage ancestor.
+</p>
+<p>
+DoEraseSections calls FixPath to convert dotted component and property names 
+in ARootObjectPath to their XPATH-like notation used to access the elements in 
+JSONConf. For example: 'TApplication.Form1' becomes 'TApplication/Form1'.
+The DeletePath method in JSONConf is called to remove the JSON element and any 
+identifiers nested below the target element.
+</p>
+<p>
+Use Active to enable or disable read and write operations to the JSON property 
+storage mechanism.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+<link id="TCustomJSONPropStorage.FixPath"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.EraseSections">TCustomPropertyStorage.EraseSections</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Active">TCustomPropertyStorage.Active</link>
+</seealso>
+</element>
+<element name="TCustomJSONPropStorage.DoEraseSections.ARootObjectPath">
+<short>
+The path to the JSON element (section) removed in the method.
+</short>
+</element>
+
+<element name="TCustomJSONPropStorage.JSONFileName">
+<short>
+Name of the file where the session property names and values are saved in JSON 
+format.
+</short>
+<descr>
+<p>
+<var>JSONFileName</var> is a <var>String</var> property which contains the name 
+for the JSON file used to read and write SessionProperties values in the class 
+instance. Its value is used in GetJSONFileName to determine the file name used 
+in JSONConf  when the storage mechanism is allocated for the class instance. An 
+explicit value assigned to the property is used when available.
+</p>
+<p>
+When not assigned (''), a file name based on the executable file name is used. 
+For example:
+</p>
+<dl>
+<dt>For Windows</dt>
+<dd>
+The value in Application.Executable is converted to '.json' file extension and 
+used as the JSON file name, like: 'D:\apps\project1.json'.
+</dd>
+<dt>For UNIX-like platforms</dt>
+<dd>
+The value in Application.Executable is converted to a hidden file in the HOME 
+directory for the user, like: '~/babayaga/.project1'.
+</dd>
+</dl>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.GetJSONFileName"/>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+</seealso>
+</element>
+
+<element name="TCustomJSONPropStorage.RootObjectPath">
+<short>
+Name of the root JSON object in the JSON file where session properties are 
+stored.
+</short>
+<descr>
+<p>
+<var>RootObjectPath</var> is a <var>String</var> property with the path to the 
+JSON element where the SessionProperties for the form (or frame) are stored in 
+the JSON file. When assigned, its value is used as the RootSection for the 
+class instance. When not assigned, the component name hierarchy up to the Root 
+object is used.
+</p>
+<p>
+Use JSONFileName to specify the name for the JSON file used to store session 
+property values.
+</p>
+<p>
+Use Active to enable or disable read or write operations using the JSON storage 
+mechanism.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONFileName"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.RootSection">TCustomPropertyStorage.RootSection</link>
+</seealso>
+</element>
+
+<element name="TCustomJSONPropStorage.Formatted">
+<short>
+Controls whether formatted JSON is emitted in the JSONConf storage mechanism.
+</short>
+<descr>
+<p>
+Formatted is a Boolean property which enables or disables formatted output for 
+the JSON written to JSONFileName. When enabled, the JSON objects and elements 
+are written with one named item per line and indenting for nested name/value 
+pairs. For example:
+</p>
+<code>
+{
+  "TApplication" : {
+    "Form1" : {
+      "DBGrid1_AlternateColor" : "-2147483643",
+      "Form1_Height" : "723",
+      "Form1_Left" : "1215",
+      "Form1_SessionProperties" : "DBGrid1.AlternateColor;Height;Left;SessionProperties;Top;Width",
+      "Form1_Top" : "57",
+      "Form1_Width" : "320"
+    }
+  }
+}
+</code>
+<p>
+If not enabled, all JSON values are generated on a single line with only 
+whitespace between the JSON name and values.
+</p>
+<p>
+The property value is assigned to JSONConf when the storage mechanism is 
+allocated for the class instance in StorageNeeded.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage.JSONConf"/>
+<link id="TCustomJSONPropStorage.JSONFileName"/>
+<link id="TCustomJSONPropStorage.StorageNeeded"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Active">TCustomPropertyStorage.Active</link>
+</seealso>
+</element>
+
+<element name="TJSONPropStorage">
+<short>
+Implements the final class for the JSON Form Session Properties storage.
+</short>
+<descr>
+<p>
+<var>TJSONPropStorage</var> is a <var>TCustomJSONPropStorage</var> 
+descendant which implements a class used to store session properties for a form 
+or frame to a file using JSON (JavaScript Object Notation) format. It sets the 
+visibility for properties introduced in ancestor classes.
+</p>
+<p>
+Use the SessionProperties property in the TForm (or TFrame) instance which owns 
+the class to define the component and property names written to the JSON 
+storage mechanism.
+</p>
+<p>
+Use JSONFileName to specify the path and file name to the file where the JSON 
+content for the session properties is stored.
+</p>
+<p>
+Use RootObjectPath to specify the path to the JSON object where the session 
+properties is stored in the JSON file.
+</p>
+<p>
+Use Formatted to control whether formatting options for the JSON config file 
+are enabled for the storage mechanism.
+</p>
+</descr>
+<seealso>
+<link id="TCustomJSONPropStorage"/>
+<link id="#lcl.forms.TForm">TForm.SessionProperties</link>
+<link id="#lcl.inipropstorage.TINIPropStorage">TINIPropStorage</link>
+<link id="#lcl.xmlpropstorage.TXMLPropStorage">TXMLPropStorage</link>
+</seealso>
+</element>
+
+<!-- published -->
+<element name="TJSONPropStorage.StoredValues" link="#lcl.propertystorage.TCustomPropertyStorage.StoredValues"/>
+<element name="TJSONPropStorage.JSONFileName" link="#lcl.jsonpropstorage.TCustomJSONPropStorage.JSONFileName"/>
+<element name="TJSONPropStorage.Formatted" link="#lcl.jsonpropstorage.TCustomJSONPropStorage.Formatted"/>
+<element name="TJSONPropStorage.Active" link="#LCL.PropertyStorage.TCustomPropertyStorage.Active"/>
+<element name="TJSONPropStorage.OnSavingProperties" link="#LCL.PropertyStorage.TCustomPropertyStorage.OnSavingProperties"/>
+<element name="TJSONPropStorage.OnSaveProperties" link="#LCL.PropertyStorage.TCustomPropertyStorage.OnSaveProperties"/>
+<element name="TJSONPropStorage.OnRestoringProperties" link="#LCL.PropertyStorage.TCustomPropertyStorage.OnRestoringProperties"/>
+<element name="TJSONPropStorage.OnRestoreProperties" link="#LCL.PropertyStorage.TCustomPropertyStorage.OnRestoreProperties"/>
+
+<element name="Register">
+<short>
+Registers  
+<link id="#LCL.JsonPropStorage.TJSONPropStorage">TJSONPropStorage</link> on the 
+'Misc' tab of the component palette.
+</short>
+<descr/>
+<errors/>
+<seealso/>
+</element>
+
+</module>
+<!-- JSONPropStorage -->
+</package>
+</fpdoc-descriptions>

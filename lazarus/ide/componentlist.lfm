@@ -1,0 +1,240 @@
+object ComponentListForm: TComponentListForm
+  Left = 467
+  Height = 467
+  Top = 200
+  Width = 300
+  Caption = 'Components'
+  ClientHeight = 467
+  ClientWidth = 300
+  KeyPreview = True
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  LCLVersion = '2.3.0.0'
+  object PageControl: TPageControl
+    Left = 0
+    Height = 395
+    Top = 29
+    Width = 300
+    ActivePage = TabSheetList
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 1
+    OnChange = PageControlChange
+    object TabSheetList: TTabSheet
+      Caption = 'List'
+      ClientHeight = 366
+      ClientWidth = 290
+      object Panel7: TPanel
+        Left = 0
+        Height = 366
+        Top = 0
+        Width = 290
+        Align = alClient
+        BevelOuter = bvNone
+        BorderWidth = 2
+        ClientHeight = 366
+        ClientWidth = 290
+        TabOrder = 0
+        object ListTree: TTreeView
+          Left = 2
+          Height = 362
+          Top = 2
+          Width = 286
+          Align = alClient
+          Indent = 25
+          PopupMenu = CompListPopupMenu
+          ReadOnly = True
+          RowSelect = True
+          ScrollBars = ssAutoBoth
+          ShowButtons = False
+          ShowLines = False
+          ShowRoot = False
+          ShowSeparators = False
+          TabOrder = 0
+          OnDblClick = ComponentsDblClick
+          OnKeyPress = TreeKeyPress
+          OnSelectionChanged = ListTreeSelectionChanged
+          Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoToolTips]
+        end
+      end
+    end
+    object TabSheetPaletteTree: TTabSheet
+      Caption = 'Palette'
+      ClientHeight = 366
+      ClientWidth = 290
+      object pnPaletteTree: TPanel
+        Left = 0
+        Height = 366
+        Top = 0
+        Width = 290
+        Align = alClient
+        BevelOuter = bvNone
+        BorderWidth = 5
+        ClientHeight = 366
+        ClientWidth = 290
+        TabOrder = 0
+        object PalletteTree: TTreeView
+          Left = 5
+          Height = 356
+          Top = 5
+          Width = 280
+          Align = alClient
+          PopupMenu = CompListPopupMenu
+          ReadOnly = True
+          RightClickSelect = True
+          RowSelect = True
+          ScrollBars = ssAutoBoth
+          ShowLines = False
+          ShowSeparators = False
+          TabOrder = 0
+          OnDblClick = ComponentsDblClick
+          OnKeyPress = TreeKeyPress
+          OnSelectionChanged = ListTreeSelectionChanged
+          Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowRoot, tvoToolTips]
+        end
+      end
+    end
+    object TabSheetInheritance: TTabSheet
+      Caption = 'Inheritance'
+      ClientHeight = 366
+      ClientWidth = 290
+      object Panel6: TPanel
+        Left = 0
+        Height = 366
+        Top = 0
+        Width = 290
+        Align = alClient
+        BevelOuter = bvNone
+        BorderWidth = 5
+        ClientHeight = 366
+        ClientWidth = 290
+        TabOrder = 0
+        object InheritanceTree: TTreeView
+          Left = 5
+          Height = 356
+          Top = 5
+          Width = 280
+          Align = alClient
+          Indent = 20
+          PopupMenu = CompListPopupMenu
+          ReadOnly = True
+          RightClickSelect = True
+          RowSelect = True
+          ScrollBars = ssAutoBoth
+          ShowSeparators = False
+          TabOrder = 0
+          OnDblClick = ComponentsDblClick
+          OnKeyPress = TreeKeyPress
+          OnSelectionChanged = ListTreeSelectionChanged
+          Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+        end
+      end
+    end
+  end
+  object FilterPanel: TPanel
+    Left = 0
+    Height = 29
+    Top = 0
+    Width = 300
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 29
+    ClientWidth = 300
+    TabOrder = 0
+    object SelectionToolButton: TSpeedButton
+      AnchorSideLeft.Control = FilterPanel
+      AnchorSideTop.Control = FilterPanel
+      AnchorSideBottom.Control = FilterPanel
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 29
+      Top = 0
+      Width = 32
+      AllowAllUp = True
+      Anchors = [akTop, akLeft, akBottom]
+      Down = True
+      Flat = True
+      GroupIndex = 1
+      OnClick = SelectionToolButtonClick
+    end
+    object LabelSearch: TLabel
+      AnchorSideLeft.Control = SelectionToolButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = FilterPanel
+      Left = 38
+      Height = 15
+      Top = 6
+      Width = 66
+      BorderSpacing.Around = 6
+      Caption = 'LabelSearch'
+      ParentColor = False
+    end
+    object TreeFilterEd: TTreeFilterEdit
+      AnchorSideLeft.Control = LabelSearch
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LabelSearch
+      AnchorSideTop.Side = asrCenter
+      Left = 110
+      Height = 32
+      Top = -3
+      Width = 186
+      OnAfterFilter = TreeFilterEdAfterFilter
+      OnFilterItemEx = TreeFilterEdFilterItemEx
+      ButtonWidth = 23
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 5
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 0
+      OnKeyDown = TreeFilterEdKeyDown
+      FilteredTreeview = ListTree
+    end
+  end
+  object ButtonPanel: TPanel
+    Left = 0
+    Height = 43
+    Top = 424
+    Width = 300
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 43
+    ClientWidth = 300
+    TabOrder = 2
+    object chbKeepOpen: TCheckBox
+      Left = 8
+      Height = 23
+      Top = 10
+      Width = 104
+      Caption = 'chbKeepOpen'
+      OnChange = chbKeepOpenChange
+      TabOrder = 0
+    end
+    object OKButton: TButton
+      Left = 221
+      Height = 31
+      Top = 8
+      Width = 72
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Caption = 'OKButton'
+      Default = True
+      ModalResult = 1
+      OnClick = OKButtonClick
+      TabOrder = 1
+    end
+  end
+  object CompListPopupMenu: TPopupMenu
+    OnPopup = CompListPopupMenuPopup
+    Left = 160
+    Top = 112
+  end
+  object tmDeselect: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tmDeselectTimer
+    Left = 155
+    Top = 172
+  end
+end

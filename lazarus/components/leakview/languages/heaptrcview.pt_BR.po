@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Marcelo B Paula <marcelo.bp@netsite.com.br>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.13\n"
+
+#: heaptrcview.rsdtimes
+#, object-pascal-format
+msgid " (%d times)"
+msgstr " (%d vezes)"
+
+#: heaptrcview.rserrorparse
+msgid "Error while parsing trace file"
+msgstr "Erro ao analisar arquivo de rastreamento"
+
+#: heaptrcview.rsleakview
+msgid "Leaks and Traces"
+msgstr "Vazamentos e Rastreamento"
+
+#: heaptrcview.sbtnclipbrd
+msgid "Paste Clipboard"
+msgstr "Colar Área Transf."
+
+#: heaptrcview.sbtnresolve
+msgid "Resolve"
+msgstr "Resolver"
+
+#: heaptrcview.sbtnupdate
+msgid "Update"
+msgstr "Atualizar"
+
+#: heaptrcview.schkraw
+msgid "Raw leak data"
+msgstr "Dados não preparados"
+
+#: heaptrcview.schktop
+msgid "Stay on top"
+msgstr "Permanecer no topo"
+
+#: heaptrcview.sfrmcap
+msgid "Leaks and Traces - HeapTrc and GDB backtrace output viewer"
+msgstr "Vazamentos e Rastreamento - Visualizador de saída HeapTrc e GDB backtrace"
+
+#: heaptrcview.sfrmselectfilewithdebuginfo
+msgid "Select file with debug info"
+msgstr "Selecionar arquivo com informações de depuração"
+
+#: heaptrcview.sfrmselecttrcfile
+msgid "Select file with trace log"
+msgstr "Selecionar arquivo com log de rastreamento"
+
+#: heaptrcview.slbltrace
+msgid ".trc file"
+msgstr "arquivo .trc"
+
+#: heaptrcview.stacklineformat
+#, object-pascal-format
+msgid "%s"
+msgstr "%s"
+
+#: heaptrcview.stacklineformatwithfile
+#, object-pascal-format
+msgid "%s file: %s : %d; "
+msgstr "%s arquivo: %s : %d; "
+
+#: heaptrcview.stacktraceformat
+#, object-pascal-format
+msgid "Leak: %d bytes x %d times"
+msgstr "Vazamento: %d bytes x %d vezes"
+
+#: heaptrcview.stacktraceformatsingle
+#, object-pascal-format
+msgid "Leak: %d bytes"
+msgstr "Vazamento: %d bytes"
+
+#: heaptrcview.strleakingblockscount
+#, object-pascal-format
+msgid "Leaking Blocks Count: %d"
+msgstr "Contagem Blocos Vazando: %d"
+
+#: heaptrcview.strleakingmemsize
+#, object-pascal-format
+msgid "Leaking Mem Size: %d"
+msgstr "Tamanho Mem Vazando: %d"
+
+#: heaptrcview.strtotalmemalloc
+#, object-pascal-format
+msgid "Total Mem allocated: %d"
+msgstr "Total Mem alocada: %d"
+

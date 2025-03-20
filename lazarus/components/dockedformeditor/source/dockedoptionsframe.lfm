@@ -1,0 +1,262 @@
+object FrameDockedOptions: TFrameDockedOptions
+  Left = 0
+  Height = 489
+  Top = 0
+  Width = 571
+  ClientHeight = 489
+  ClientWidth = 571
+  TabOrder = 0
+  DesignLeft = 229
+  DesignTop = 262
+  object LabelTabPosition: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 13
+    Top = 0
+    Width = 58
+    BorderSpacing.Left = 6
+    Caption = 'Tab Position'
+    ParentColor = False
+  end
+  object ComboBoxTabPosition: TComboBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = LabelTabPosition
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 21
+    Top = 13
+    Width = 559
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 6
+    ItemHeight = 13
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object LabelResizerColor: TLabel
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = ComboBoxTabPosition
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 13
+    Top = 40
+    Width = 63
+    BorderSpacing.Top = 6
+    Caption = 'Resizer Color'
+    ParentColor = False
+  end
+  object ColorBoxResizer: TColorBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = LabelResizerColor
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 22
+    Top = 53
+    Width = 559
+    Style = [cbStandardColors, cbExtendedColors, cbSystemColors, cbIncludeDefault, cbCustomColor]
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 16
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object DividerBevelAnchors: TDividerBevel
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = CheckBoxForceRefreshing
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 13
+    Top = 104
+    Width = 559
+    Caption = 'Anchors'
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object CheckBoxAnchorTabVisible: TCheckBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = DividerBevelAnchors
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 123
+    Width = 109
+    BorderSpacing.Top = 6
+    Caption = 'Show Anchors Tab'
+    OnChange = CheckBoxAnchorTabVisibleChange
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object LabelCaptureDistance: TLabel
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = CheckBoxAnchorTabVisible
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 13
+    Top = 146
+    Width = 83
+    BorderSpacing.Top = 6
+    Caption = 'Capture Distance'
+    ParentColor = False
+  end
+  object SpinEditCaptureDistance: TSpinEdit
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = LabelCaptureDistance
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 21
+    Top = 159
+    Width = 559
+    Anchors = [akTop, akLeft, akRight]
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object LabelMouseBorderFactor: TLabel
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = SpinEditCaptureDistance
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 13
+    Top = 186
+    Width = 114
+    BorderSpacing.Top = 6
+    Caption = 'Mouse Bordering Factor'
+    ParentColor = False
+  end
+  object SpinEditMouseBorderFactor: TSpinEdit
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = LabelMouseBorderFactor
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 21
+    Top = 199
+    Width = 559
+    Anchors = [akTop, akLeft, akRight]
+    MaxValue = 10
+    MinValue = 1
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    Value = 1
+  end
+  object CheckBoxTreatAlign: TCheckBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = SpinEditMouseBorderFactor
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 226
+    Width = 128
+    BorderSpacing.Top = 6
+    Caption = 'Automatic Treat Aligns'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object LabelColors: TLabel
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = CheckBoxAllowSizing
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 13
+    Top = 295
+    Width = 30
+    BorderSpacing.Top = 6
+    Caption = 'Colors'
+    ParentColor = False
+  end
+  object CheckBoxForceRefreshing: TCheckBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = ColorBoxResizer
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 81
+    Width = 146
+    BorderSpacing.Top = 6
+    Caption = 'Force Refreshing At Sizing'
+    OnChange = CheckBoxAnchorTabVisibleChange
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+  end
+  object AnchorsColorBox: TColorBox
+    AnchorSideLeft.Control = ComboBoxTabPosition
+    AnchorSideTop.Control = AnchorsColorListBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 26
+    Top = 430
+    Width = 559
+    Style = [cbStandardColors, cbExtendedColors, cbSystemColors, cbIncludeNone, cbIncludeDefault, cbCustomColor, cbPrettyNames, cbCustomColors]
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 20
+    OnChange = AnchorsColorBoxChange
+    TabOrder = 7
+  end
+  object AnchorsColorListBox: TColorListBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = LabelColors
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ComboBoxTabPosition
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 143
+    Top = 308
+    Width = 559
+    Style = [cbCustomColors]
+    OnGetColors = AnchorsColorListBoxGetColors
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 0
+    OnSelectionChange = AnchorsColorListBoxSelectionChange
+    TabOrder = 8
+  end
+  object CheckBoxTreatBorder: TCheckBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = CheckBoxTreatAlign
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 249
+    Width = 170
+    BorderSpacing.Top = 6
+    Caption = 'Automatic Treat Around Border'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+  end
+  object CheckBoxAllowSizing: TCheckBox
+    AnchorSideLeft.Control = LabelTabPosition
+    AnchorSideTop.Control = CheckBoxTreatBorder
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 272
+    Width = 170
+    BorderSpacing.Top = 6
+    Caption = 'Allow Sizing'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+  end
+end

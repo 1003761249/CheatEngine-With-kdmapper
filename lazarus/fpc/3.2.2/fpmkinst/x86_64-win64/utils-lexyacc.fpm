@@ -1,0 +1,10 @@
+Name=utils-lexyacc
+Version=3.2.2
+Checksum=1513316708
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\utils\tply\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -CX -o -XX -o -Xs -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,tplylib|1513316673
+NeedLibC=N
+FPMakeAddIn=N

@@ -1,0 +1,25 @@
+#
+# Makefile.fpc for SQL FCL db units
+#
+
+[package]
+main=fcl-db
+
+[require]
+packages=fcl-base
+
+[target]
+units=fpddcodegen fpcgcreatedbf fpcgdbcoll fpcgsqlconst fpcgtiopf fpddpopcode
+rsts=fpddcodegen fpcgsqlconst fpddpopcode
+
+[compiler]
+options=-S2h
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../../..
+
+[rules]
+.NOTPARALLEL:

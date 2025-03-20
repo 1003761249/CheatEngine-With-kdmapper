@@ -1,0 +1,48 @@
+#
+# Symbols exported from the TCP/IP NLM
+#
+# $Header: /FPC/CVS/fpc/rtl/netware/socklib.imp,v 1.1 2004/08/13 19:57:44 armin Exp $
+#
+
+# SOCKLIB entry points
+	htonl,
+	htons,
+	ntohl,
+	ntohs,
+	NWgethostent,
+	NWgethostbyname,
+	NWgethostbyaddr,
+	NWsethostent,
+	NWendhostent,
+	NetDBgethostent,
+	NetDBgethostbyname,
+	NetDBgethostbyaddr,
+	NetDBsethostent,
+	NetDBendhostent,
+	NetDBgethostname,
+	NWgetnetent,
+	NWgetnetbyname,
+	NWgetnetbyaddr,
+	NWsetnetent,
+	NWendnetent,
+	NWgetprotoent,
+	NWgetprotobyname,
+	NWgetprotobynumber,
+	NWsetprotoent,
+	NWendprotoent,
+	NWgetservent,
+	NWgetservbyname,
+	NWgetservbyport,
+	NWsetservent,
+	NWendservent,
+	inet_addr,
+	inet_network,
+	NWinet_ntoa,
+	inet_makeaddr,
+	inet_lnaof,
+	inet_netof,
+	inet_netent,
+	inet_hostent,
+	gethostid,
+	gethostname
+

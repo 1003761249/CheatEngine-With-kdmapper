@@ -1,0 +1,137 @@
+#
+#   Makefile.fpc for Free Pascal NativeNT RTL
+#
+
+[package]
+main=rtl
+
+[target]
+loaders=
+#units=system objpas macpas iso7185 extpas buildrtl lineinfo lnfodwrf
+units=system uuchar objpas iso7185 extpas cpall buildrtl
+implicitunits=ndk ndkutils ddk \
+      ctypes strings \
+#      heaptrc
+#      initc cmem dynlibs signals \
+      dos \
+      rtlconsts sysconst sysutils math types \
+      typinfo fgl classes \
+      $(CPU_UNITS) charset getopts \
+#      sockets printer \
+#      keyboard
+#      sharemem exeinfo fpintres \
+      cp1250 cp1251 cp1252 cp1253 cp1254 cp1255 cp1256 cp1257 cp1258 \
+      cp437 cp646 cp737 cp775 cp850 cp852 cp855 cp856 cp857 cp860 cp861 cp862 \
+      cp863 cp864 cp865 cp866 cp869 cp874 cp3021 cp8859_1 cp8859_2 cp8859_3 cp8859_4 \
+      cp8859_5 cp8859_6 cp8859_7 cp8859_8 cp8859_9 cp8859_10 cp8859_11 \
+      cp8859_13 cp8859_14 cp8859_15 cp8859_16 cpkoi8_r cpkoi8_u
+
+# shared=$(DLLS)
+
+rsts=math typinfo classes sysconst
+
+[require]
+nortl=y
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../..
+target=nativent
+
+[compiler]
+includedir=$(INC) $(PROCINC) $(DDKINC) $(NDKINC)
+sourcedir=$(INC) $(PROCINC) $(COMMON)
+
+
+[prerules]
+RTL=..
+INC=$(RTL)/inc
+COMMON=$(RTL)/common
+PROCINC=$(RTL)/$(CPU_TARGET)
+DDKINC=ddk
+NDKINC=ndk
+
+UNITPREFIX=rtl
+SYSTEMUNIT=system
+
+CPU_UNITS=
+
+ifeq ($(ARCH),i386)
+CPU_UNITS=cpu mmx
+endif
+
+ifeq ($(ARCH),x86_64)
+CPU_UNITS=x86 cpu
+endif
+
+ifneq ($(findstring 2.0.,$(FPC_VERSION)),)
+#LOADERS=wprt0 wdllprt0 gprt0 wcygprt0
+DLLS=
+else
+DLLS=fpcmemdll
+endif
+
+# Paths
+OBJPASDIR=$(RTL)/objpas
+
+# Files used by windows.pp
+#include $(WININC)/makefile.inc
+
+WINDOWS_SOURCE_FILES=$(addprefix $(WININC)/,$(addsuffix .inc,$(WINDOWS_FILES)))
+
+
+[rules]
+.NOTPARALLEL:
+SYSTEMPPU=$(addsuffix $(PPUEXT),system)
+
+# Get the system independent include file names.
+# This will set the following variables :
+# SYSINCNAMES
+include $(INC)/makefile.inc
+SYSINCDEPS=$(addprefix $(INC)/,$(SYSINCNAMES))
+
+# Get the processor dependent include file names.
+# This will set the following variables :
+# CPUINCNAMES
+include $(PROCINC)/makefile.cpu
+SYSCPUDEPS=$(addprefix $(PROCINC)/,$(CPUINCNAMES))
+
+# Put system unit dependencies together.
+SYSDEPS=$(SYSINCDEPS) $(SYSCPUDEPS)
+
+
+#
+# Loaders
+#
+
+# none
+
+#
+# Unit specific rules
+#
+
+system$(PPUEXT) : system.pp $(SYSDEPS)
+        $(COMPILER) $(FPC_SYSTEM_OPT) -Us -Sg system.pp
+
+uuchar$(PPUEXT): $(SYSTEMUNIT)$(PPUEXT) $(INC)/uuchar.pp
+        $(COMPILER) $(INC)/uuchar.pp
+
+objpas$(PPUEXT): $(OBJPASDIR)/objpas.pp $(INC)/except.inc system$(PPUEXT)
+        $(COMPILER) -I$(OBJPASDIR) $(OBJPASDIR)/objpas.pp
+
+macpas$(PPUEXT) : $(INC)/macpas.pp objpas$(PPUEXT) buildrtl$(PPUEXT)
+        $(COMPILER) $(INC)/macpas.pp $(REDIR)
+
+iso7185$(PPUEXT) : $(INC)/iso7185.pp $(SYSTEMUNIT)$(PPUEXT)
+        $(COMPILER) $(INC)/iso7185.pp
+
+extpas$(PPUEXT) : $(INC)/extpas.pp dos$(PPUEXT) $(SYSTEMUNIT)$(PPUEXT)
+        $(COMPILER) $(INC)/extpas.pp
+
+buildrtl$(PPUEXT): buildrtl.pp system$(PPUEXT) objpas$(PPUEXT)
+        $(COMPILER) -Fi$(OBJPASDIR)/sysutils -Fi$(OBJPASDIR)/classes -Fu$(PROCINC) -I$(OBJPASDIR) -Fi$(DDKINC) -I$(INC) -Fu$(INC) -Fu$(OBJPASDIR) buildrtl
+
+cpall$(PPUEXT): $(RTL)/charmaps/cpall.pas system$(PPUEXT) objpas$(PPUEXT)
+        $(COMPILER) -Fu$(INC) -Fi$(RTL)/charmaps $(RTL)/charmaps/cpall.pas

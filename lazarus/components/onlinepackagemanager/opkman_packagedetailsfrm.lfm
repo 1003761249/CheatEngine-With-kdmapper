@@ -1,0 +1,43 @@
+object PackageDetailsFrm: TPackageDetailsFrm
+  Left = 418
+  Height = 310
+  Top = 383
+  Width = 477
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 310
+  ClientWidth = 477
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  PopupMode = pmExplicit
+  Position = poOwnerFormCenter
+  LCLVersion = '1.9.0.0'
+  object mDetails: TMemo
+    Left = 5
+    Height = 259
+    Top = 5
+    Width = 467
+    Align = alClient
+    BorderSpacing.Around = 5
+    ParentColor = True
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 270
+    Width = 465
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK]
+  end
+end

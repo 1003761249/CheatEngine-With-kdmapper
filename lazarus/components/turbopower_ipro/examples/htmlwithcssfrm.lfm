@@ -1,0 +1,12 @@
+object Form1: TForm1
+  Left = 291
+  Height = 424
+  Top = 167
+  Width = 739
+  HorzScrollBar.Page = 401
+  VertScrollBar.Page = 301
+  Caption = 'Form1'
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  Visible = True
+end

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+====================================================================
+CustomDrawn_Mac
+====================================================================
+-->
+
+<module name="CustomDrawn_Mac">
+<short>
+Contains classes used to implement custom-drawn controls using the macOS 
+drawing style.
+</short>
+<descr>
+<p>
+<file>customdrawn_mac.pas</file> is part of the Lazarus Component Library 
+<b>(LCL)</b>.
+</p>
+</descr>
+
+<!-- external references -->
+<element name="classes"/>
+<element name="sysutils"/>
+<element name="types"/>
+<element name="fpcanvas"/>
+<element name="fpimage"/>
+<element name="math"/>
+<element name="graphics"/>
+<element name="controls"/>
+<element name="lcltype"/>
+<element name="customdrawndrawers"/>
+<element name="customdrawn_common"/>
+
+<!-- class Visibility: default -->
+<element name="TCDDrawerMac">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerMac.DrawExpandTriangle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawExpandTriangle.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawExpandTriangle.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawExpandTriangle.AX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawExpandTriangle.AY">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawExpandTriangle.AFacing">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerMac.DrawMacSquareButton">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawMacSquareButton.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawMacSquareButton.ADestPos">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawMacSquareButton.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawMacSquareButton.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawMacSquareButton.AStateEx">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCDDrawerMac.GetMeasures">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: public -->
+<element name="TCDDrawerMac.GetMeasures.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.GetMeasures.AMeasureID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerMac.DrawButton">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawButton.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawButton.ADestPos">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawButton.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawButton.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawButton.AStateEx">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerMac.DrawToolBarItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.ACurItem">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.AX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.AY">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerMac.DrawToolBarItem.AStateEx">
+<short></short>
+</element>
+
+</module> <!-- CustomDrawn_Mac -->
+
+</package>
+</fpdoc-descriptions>

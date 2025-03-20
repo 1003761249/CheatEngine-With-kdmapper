@@ -1,0 +1,12 @@
+{
+  "jpeg_more" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Images",
+      "jpeg",
+      "jpg",
+      "Scaling"
+    ],
+    "Description" : "Loads, displays and scales a JPEG file. \n\nNote : when altering scaling, press the \"Read\" button. I added its own copy of the cheetah image. DRB\n"
+  }
+}

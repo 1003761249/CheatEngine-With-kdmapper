@@ -1,0 +1,67 @@
+object DlgCompPagesPopup: TDlgCompPagesPopup
+  Left = 375
+  Height = 536
+  Top = 209
+  Width = 293
+  BorderStyle = bsNone
+  Caption = 'DlgCompPagesPopup'
+  ClientHeight = 536
+  ClientWidth = 293
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnShow = FormShow
+  LCLVersion = '1.9.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 536
+    Top = 0
+    Width = 293
+    Align = alClient
+    BevelWidth = 2
+    Caption = 'Panel1'
+    ClientHeight = 536
+    ClientWidth = 293
+    ParentColor = False
+    TabOrder = 0
+    object TreeView1: TTreeView
+      Left = 2
+      Height = 516
+      Top = 18
+      Width = 289
+      Align = alClient
+      BackgroundColor = clDefault
+      Color = clDefault
+      HotTrack = True
+      ReadOnly = True
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+      OnClick = TreeView1Click
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+    object Panel2: TPanel
+      Left = 2
+      Height = 16
+      Top = 2
+      Width = 289
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Panel2'
+      ClientHeight = 16
+      ClientWidth = 289
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      object cBtnClose: TSpeedButton
+        Left = 285
+        Height = 16
+        Top = 0
+        Width = 4
+        Align = alRight
+        AutoSize = True
+        Flat = True
+        OnClick = cBtnCloseClick
+      end
+    end
+  end
+end

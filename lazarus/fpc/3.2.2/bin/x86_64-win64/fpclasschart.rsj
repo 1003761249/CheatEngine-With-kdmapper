@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":105798947,"name":"fpclasschart.stitle","sourcebytes":[102,112,67,108,97,115,115,84,114,101,101,32,45,32,67,114,101,97,116,101,32,99,108,97,115,115,32,116,114,101,101,32,102,114,111,109,32,112,97,115,99,97,108,32,115,111,117,114,99,101,115],"value":"fpClassTree - Create class tree from pascal sources"},
+{"hash":99991661,"name":"fpclasschart.sversion","sourcebytes":[86,101,114,115,105,111,110,32,37,115,32,91,37,115,93],"value":"Version %s [%s]"},
+{"hash":205610887,"name":"fpclasschart.scopyright","sourcebytes":[40,99,41,32,50,48,48,56,32,45,32,77,105,99,104,97,101,108,32,86,97,110,32,67,97,110,110,101,121,116,44,32,109,105,99,104,97,101,108,64,102,114,101,101,112,97,115,99,97,108,46,111,114,103],"value":"(c) 2008 - Michael Van Canneyt, michael@freepascal.org"},
+{"hash":214644050,"name":"fpclasschart.scmdlineinvalidoption","sourcebytes":[73,103,110,111,114,105,110,103,32,117,110,107,110,111,119,110,32,111,112,116,105,111,110,32,34,37,115,34],"value":"Ignoring unknown option \"%s\""},
+{"hash":4940926,"name":"fpclasschart.sdone","sourcebytes":[68,111,110,101,46],"value":"Done."},
+{"hash":6481166,"name":"fpclasschart.sskipmerge","sourcebytes":[67,97,110,110,111,116,32,109,101,114,103,101,32,37,115,32,105,110,116,111,32,37,115,32,116,114,101,101,46],"value":"Cannot merge %s into %s tree."},
+{"hash":258244094,"name":"fpclasschart.serrnosuchmergefile","sourcebytes":[77,101,114,103,101,32,102,105,108,101,32,37,115,32,100,111,101,115,32,110,111,116,32,101,120,105,115,116,46],"value":"Merge file %s does not exist."},
+{"hash":205892846,"name":"fpclasschart.smergedfile","sourcebytes":[77,101,114,103,101,100,32,37,100,32,99,108,97,115,115,101,115,32,102,114,111,109,32,102,105,108,101,32,37,115,46],"value":"Merged %d classes from file %s."},
+{"hash":163669262,"name":"fpclasschart.sclassesadded","sourcebytes":[65,100,100,101,100,32,37,100,32,99,108,97,115,115,101,115,32,102,114,111,109,32,37,100,32,102,105,108,101,115,46],"value":"Added %d classes from %d files."}
+]}

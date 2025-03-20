@@ -1,0 +1,208 @@
+object MainForm: TMainForm
+  Left = 313
+  Height = 466
+  Top = 177
+  Width = 891
+  Caption = 'MainForm'
+  ClientHeight = 466
+  ClientWidth = 891
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object FinancialChart: TChart
+    Left = 0
+    Height = 385
+    Top = 39
+    Width = 891
+    AxisList = <    
+      item
+        Grid.Color = clSilver
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelFont.Style = [fsBold]
+        Title.Visible = True
+        Title.Caption = 'Stock price'
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Visible = False
+        Intervals.MinLength = 20
+        Alignment = calBottom
+        Marks.LabelFont.Orientation = 900
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Margins.Left = 16
+    Margins.Top = 16
+    Margins.Right = 16
+    Margins.Bottom = 16
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Align = alClient
+    object ohlcSeries: TOpenHighLowCloseSeries
+      CandlestickDownBrush.Color = clRed
+      CandlestickLinePen.Color = clDefault
+      CandlestickUpBrush.Color = clLime
+      DownLinePen.Color = clRed
+      DownLinePen.Width = 2
+      LinePen.Color = clLime
+      LinePen.Width = 2
+    end
+  end
+  object BottomPanel: TPanel
+    Left = 0
+    Height = 42
+    Top = 424
+    Width = 891
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 42
+    ClientWidth = 891
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 0
+      Height = 42
+      Top = 0
+      Width = 891
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'Hold down the left mouse button to see a hint window with the open/high/low/close stock prices for each data point.'#13#10'Hold down the left mouse button - together with CTRL - to see a hint window with the clicked stock price for each data point.'
+      Layout = tlCenter
+    end
+  end
+  object TopPanel: TPanel
+    Left = 0
+    Height = 39
+    Top = 0
+    Width = 891
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 39
+    ClientWidth = 891
+    TabOrder = 2
+    object cbSeriesType: TComboBox
+      AnchorSideLeft.Control = TopPanel
+      AnchorSideTop.Control = TopPanel
+      Left = 8
+      Height = 23
+      Top = 8
+      Width = 242
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Bottom = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'OHLC series'
+        'Candle stick series'
+      )
+      OnChange = cbSeriesTypeChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'OHLC series'
+    end
+    object cbCandleStickSameColor: TCheckBox
+      AnchorSideLeft.Control = cbDownColor
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbSeriesType
+      AnchorSideTop.Side = asrCenter
+      Left = 584
+      Height = 19
+      Top = 10
+      Width = 173
+      BorderSpacing.Left = 24
+      Caption = 'same color for tails and body'
+      Checked = True
+      OnChange = cbCandleStickSameColorChange
+      State = cbChecked
+      TabOrder = 1
+      Visible = False
+    end
+    object cbUpColor: TColorBox
+      AnchorSideLeft.Control = LblUp
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbSeriesType
+      AnchorSideTop.Side = asrCenter
+      Left = 297
+      Height = 26
+      Top = 6
+      Width = 100
+      Selected = clLime
+      Style = [cbStandardColors, cbExtendedColors, cbIncludeNone, cbIncludeDefault, cbCustomColor, cbPrettyNames, cbCustomColors]
+      BorderSpacing.Left = 8
+      ItemHeight = 20
+      OnChange = cbColorChange
+      TabOrder = 2
+    end
+    object cbDownColor: TColorBox
+      AnchorSideLeft.Control = LblDown
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbSeriesType
+      AnchorSideTop.Side = asrCenter
+      Left = 460
+      Height = 26
+      Top = 6
+      Width = 100
+      Selected = clRed
+      Style = [cbStandardColors, cbExtendedColors, cbIncludeNone, cbIncludeDefault, cbCustomColor, cbPrettyNames, cbCustomColors]
+      BorderSpacing.Left = 8
+      ItemHeight = 20
+      OnChange = cbColorChange
+      TabOrder = 3
+    end
+    object LblUp: TLabel
+      AnchorSideLeft.Control = cbSeriesType
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbSeriesType
+      AnchorSideTop.Side = asrCenter
+      Left = 274
+      Height = 15
+      Top = 12
+      Width = 15
+      BorderSpacing.Left = 24
+      Caption = 'Up'
+      FocusControl = cbUpColor
+    end
+    object LblDown: TLabel
+      AnchorSideLeft.Control = cbUpColor
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbSeriesType
+      AnchorSideTop.Side = asrCenter
+      Left = 421
+      Height = 15
+      Top = 12
+      Width = 31
+      BorderSpacing.Left = 24
+      Caption = 'Down'
+      FocusControl = cbDownColor
+    end
+  end
+  object ChartToolset1: TChartToolset
+    Left = 160
+    Top = 111
+    object DataPointHintTool_All: TDataPointHintTool
+      Shift = [ssLeft]
+      GrabRadius = 8
+      OnHint = DataPointHintTool_AllHint
+      OnHintLocation = DataPointHintToolHintLocation
+    end
+    object DataPointHintTool_Details: TDataPointHintTool
+      Shift = [ssCtrl, ssLeft]
+      GrabRadius = 8
+      Targets = [nptPoint, nptXList, nptYList]
+      OnHint = DataPointHintTool_DetailsHint
+      OnHintLocation = DataPointHintToolHintLocation
+    end
+  end
+end

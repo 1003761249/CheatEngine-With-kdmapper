@@ -1,0 +1,188 @@
+object Form1: TForm1
+  Left = 332
+  Height = 370
+  Top = 127
+  Width = 495
+  Caption = 'Form1'
+  ClientHeight = 370
+  ClientWidth = 495
+  LCLVersion = '2.3.0.0'
+  object Chart1: TChart
+    Left = 0
+    Height = 335
+    Top = 0
+    Width = 495
+    AxisList = <    
+      item
+        Grid.Color = clSilver
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Visible = False
+        Intervals.MaxLength = 150
+        Intervals.MinLength = 50
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    object BarSeries: TBarSeries
+      AxisIndexX = 1
+      AxisIndexY = 0
+      BarBrush.Color = clRed
+      Depth = 20
+      DepthBrightnessDelta = -32
+      Source = RandomChartSource1
+      Styles = ChartStyles1
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 35
+    Top = 335
+    Width = 495
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 35
+    ClientWidth = 495
+    TabOrder = 1
+    object lblShape: TLabel
+      AnchorSideLeft.Control = cb3D
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cmbShape
+      AnchorSideTop.Side = asrCenter
+      Left = 52
+      Height = 15
+      Top = 10
+      Width = 32
+      BorderSpacing.Left = 12
+      BorderSpacing.Right = 6
+      Caption = 'Shape'
+    end
+    object cmbShape: TComboBox
+      AnchorSideLeft.Control = lblShape
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 90
+      Height = 23
+      Top = 6
+      Width = 164
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'rectangular box'
+        'cylinder'
+        'hexagonal prism'
+        'pyramid'
+        'conical'
+      )
+      OnChange = cmbShapeChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'rectangular box'
+    end
+    object cb3D: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cmbShape
+      AnchorSideTop.Side = asrCenter
+      Left = 6
+      Height = 19
+      Top = 8
+      Width = 34
+      BorderSpacing.Left = 6
+      Caption = '3D'
+      Checked = True
+      OnChange = cb3DChange
+      State = cbChecked
+      TabOrder = 1
+    end
+    object lblLevels: TLabel
+      AnchorSideLeft.Control = cmbShape
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cmbShape
+      AnchorSideTop.Side = asrCenter
+      Left = 266
+      Height = 15
+      Top = 10
+      Width = 32
+      BorderSpacing.Left = 12
+      Caption = 'Levels'
+    end
+    object seLevels: TSpinEdit
+      AnchorSideLeft.Control = lblLevels
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cmbShape
+      AnchorSideTop.Side = asrCenter
+      Left = 304
+      Height = 23
+      Top = 6
+      Width = 42
+      Alignment = taRightJustify
+      BorderSpacing.Left = 6
+      MaxValue = 5
+      MinValue = 1
+      OnChange = seLevelsChange
+      TabOrder = 2
+      Value = 3
+    end
+    object cbRotated: TCheckBox
+      AnchorSideLeft.Control = seLevels
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cmbShape
+      AnchorSideTop.Side = asrCenter
+      Left = 358
+      Height = 19
+      Top = 8
+      Width = 61
+      BorderSpacing.Left = 12
+      Caption = 'Rotated'
+      OnChange = cbRotatedChange
+      TabOrder = 3
+    end
+  end
+  object RandomChartSource1: TRandomChartSource
+    PointsNumber = 6
+    RandSeed = 1050736283
+    XMax = 5
+    YCount = 3
+    YMax = 100
+    Left = 136
+    Top = 81
+  end
+  object ChartStyles1: TChartStyles
+    Styles = <    
+      item
+        Brush.Color = clRed
+      end    
+      item
+        Brush.Color = clYellow
+      end    
+      item
+        Brush.Color = clBlue
+      end    
+      item
+        Brush.Color = clTeal
+      end    
+      item
+        Brush.Color = clFuchsia
+      end>
+    Left = 232
+    Top = 79
+  end
+end

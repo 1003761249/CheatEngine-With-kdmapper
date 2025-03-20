@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: printer4lazstrconst.p4lrsabbrevunitsinches
+msgid "\""
+msgstr "\""
+
+#: printer4lazstrconst.p4lrsabbrevunitsmm
+msgid "mm"
+msgstr "мм"
+
+#: printer4lazstrconst.p4lrsadvanced
+msgid "Advanced"
+msgstr "Расширенные"
+
+#: printer4lazstrconst.p4lrsallpages
+msgid "All"
+msgstr "Все"
+
+#: printer4lazstrconst.p4lrsbanners
+msgid "Banners"
+msgstr "Колонтитулы"
+
+#: printer4lazstrconst.p4lrsbuttonlessarrow
+msgid "<< Less"
+msgstr "<< Основные"
+
+#: printer4lazstrconst.p4lrsbuttonmorearrow
+msgid "More >>"
+msgstr "Прочие >>"
+
+#: printer4lazstrconst.p4lrscancel
+msgid "Cancel"
+msgstr "Отмена"
+
+#: printer4lazstrconst.p4lrsend
+msgid "End"
+msgstr "Нижний"
+
+#: printer4lazstrconst.p4lrsgeneral
+msgid "General"
+msgstr "Общие"
+
+#: printer4lazstrconst.p4lrsjobstateaccepting
+msgid "(Accepting jobs)"
+msgstr "(принимает задания)"
+
+#: printer4lazstrconst.p4lrsjobstateprinting
+msgid "Printing"
+msgstr "Печатает"
+
+#: printer4lazstrconst.p4lrsjobstateready
+msgid "Ready"
+msgstr "Готов"
+
+#: printer4lazstrconst.p4lrsjobstaterejecting
+msgid "(Rejecting jobs)"
+msgstr "(отклоняет задания)"
+
+#: printer4lazstrconst.p4lrsjobstatestopped
+msgid "Stopped"
+msgstr "Остановлен"
+
+#: printer4lazstrconst.p4lrslandscape
+msgid "Landscape"
+msgstr "Альбомная"
+
+#: printer4lazstrconst.p4lrsmargins
+msgid "Margins"
+msgstr "Поля"
+
+#: printer4lazstrconst.p4lrsnodefaultprinter
+msgid "No default printer found."
+msgstr "Принтер по умолчанию не найден."
+
+#: printer4lazstrconst.p4lrsnotavailable
+msgid "Not available"
+msgstr "Нет доступных"
+
+#: printer4lazstrconst.p4lrsok
+msgid "Ok"
+msgstr "ОК"
+
+#: printer4lazstrconst.p4lrsorientation
+msgid "Orientation"
+msgstr "Ориентация"
+
+#: printer4lazstrconst.p4lrspageeven
+msgid "Even"
+msgstr "Чётные"
+
+#: printer4lazstrconst.p4lrspageodd
+msgid "Odd"
+msgstr "Нечётные"
+
+#: printer4lazstrconst.p4lrspagespersheet
+msgid "Pages per sheet"
+msgstr "Страниц на листе"
+
+#: printer4lazstrconst.p4lrspapersize
+msgid "Paper size"
+msgstr "Размер бумаги"
+
+#: printer4lazstrconst.p4lrspapersource
+msgid "Paper source"
+msgstr "Источник бумаги"
+
+#: printer4lazstrconst.p4lrspapertype
+msgid "Paper type"
+msgstr "Тип бумаги"
+
+#: printer4lazstrconst.p4lrsportrait
+msgid "Portrait"
+msgstr "Книжная"
+
+#: printer4lazstrconst.p4lrsprinterproperties
+msgid "Printer properties"
+msgstr "Свойства принтера"
+
+#: printer4lazstrconst.p4lrsresolution
+msgid "Resolution"
+msgstr "Разрешение"
+
+#: printer4lazstrconst.p4lrsreverselandscape
+msgid "Reverse landscape"
+msgstr "Обратная альбомная"
+
+#: printer4lazstrconst.p4lrsreverseportrait
+msgid "Reverse portrait"
+msgstr "Обратная книжная"
+
+#: printer4lazstrconst.p4lrsshortunitsinches
+msgid "(inches)"
+msgstr "(дюймы)"
+
+#: printer4lazstrconst.p4lrsshortunitsmm
+msgid "(mm)"
+msgstr "(мм)"
+
+#: printer4lazstrconst.p4lrsstart
+msgid "Start"
+msgstr "Верхний"
+

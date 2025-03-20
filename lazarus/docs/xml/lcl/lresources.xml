@@ -1,0 +1,3872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+LResources
+====================================================================
+-->
+<module name="LResources">
+<short>
+Maintains a global list of Lazarus resources, and provides methods and types 
+used to stream components.
+</short>
+<descr>
+<p>
+<file>lresources.pp</file> maintains and stores all standard Lazarus 
+resources in the global 
+<link id="#LCL.LResources.LazarusResources">LazarusResources</link> list and 
+provides methods and types for component streaming.
+</p>
+<p>
+A <link id="TLResource">Lazarus resource</link> is streamed as an UTF-8 
+string, with a name, value and value type.
+</p>
+<p>
+Lazarus resources are normally included via an include directive in the 
+initialization part of a unit. To create such include files use the 
+<var>BinaryToLazarusResourceCode</var> procedure.
+</p>
+<p>
+To create an LRS file from an LFM file use the <var>LFMtoLRSfile</var> 
+function which transforms the LFM text to binary format and stores it as 
+Lazarus resource include file.
+</p>
+<p>
+Author: Mattias Gaertner
+</p>
+<p>
+<file>lresources.pp</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved type references -->
+<element name="Windows"/>
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Types"/>
+<element name="RtlConsts"/>
+<element name="TypInfo"/>
+<element name="Variants"/>
+<element name="LCLProc"/>
+<element name="LCLStrConsts"/>
+<element name="LazConfigStorage"/>
+<element name="FPCAdds"/>
+<element name="DynQueue"/>
+<element name="LazUTF8"/>
+<element name="LazLoggerBase"/>
+
+<element name="LRSComment">
+<short>
+Text of the "automatically generated..." warning in resource files.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TFilerSignature">
+<short>
+Signature for a the version of the TFiler instance used to read or write 
+value using a Lazarus Resource Stream (LRS file).
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLResource">
+<short>Describes a Lazarus resource stored in TLResourceList.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResource.Name">
+<short>Name for the Lazarus resource.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResource.ValueType">
+<short>The resource type, always uppercase.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResource.Value">
+<short>The value for the resource.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLResourceList">
+<short>Container class used for Lazarus resource descriptions.</short>
+<descr/>
+<seealso/>
+</element>
+
+<!-- private -->
+<element name="TLResourceList.FList">
+<short>Member with the list for resource descriptions.</short>
+<descr/>
+<seealso>
+<link id="TLResourceList.Items"/>
+</seealso>
+</element>
+
+<element name="TLResourceList.FMergeList">
+<short>List used to MergeSort resources in the list.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLResourceList.FSortedCount">
+<short>The number of resource descriptions in the sorted list.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLResourceList.FindPosition">
+<short>Returns the index of the named resource, or -1 if not found.</short>
+<descr>
+<p>
+The list is sorted, if required.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLResourceList.FindPosition.Result">
+<short>
+Ordinal position for the named resource in the list, or -1 when not found.
+</short>
+</element>
+<element name="TLResourceList.FindPosition.Name">
+<short>Name of the resource to locate in the list of descriptions.</short>
+</element>
+
+<element link="#lcl.lresources.TLResourceList.Items" name="TLResourceList.GetItems"/>
+
+<element name="TLResourceList.GetItems.Result"/>
+<element name="TLResourceList.GetItems.Index"/>
+
+<element name="TLResourceList.Sort">
+<short>Sorts the list by resource name.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLResourceList.MergeSort">
+<short>
+Implements a MergeSort for the resource descriptions in the list.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResourceList.MergeSort.List">
+<short/>
+</element>
+<element name="TLResourceList.MergeSort.MergeList">
+<short/>
+</element>
+<element name="TLResourceList.MergeSort.Pos1">
+<short/>
+</element>
+<element name="TLResourceList.MergeSort.Pos2">
+<short/>
+</element>
+
+<element name="TLResourceList.Merge">
+<short>Performs the merge portion of the MergeSort method.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResourceList.Merge.List">
+<short/>
+</element>
+<element name="TLResourceList.Merge.MergeList">
+<short/>
+</element>
+<element name="TLResourceList.Merge.Pos1">
+<short/>
+</element>
+<element name="TLResourceList.Merge.Pos2">
+<short/>
+</element>
+<element name="TLResourceList.Merge.Pos3">
+<short/>
+</element>
+
+<element name="TLResourceList.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+Allocates resources needed for the internal lists used in the class instance, 
+and sets the default values for internal members.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLResourceList.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+Frees the values in and resources allocated to the internal lists for the 
+class instance.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLResourceList.Add">
+<short>
+Adds a resource description to the list with the specified values.
+</short>
+<descr>
+<p>
+ValueType is stored in uppercase.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLResourceList.Add.Name">
+<short>Name for the resource.</short>
+</element>
+<element name="TLResourceList.Add.ValueType">
+<short>Name for the Type used in the value.</short>
+</element>
+<element name="TLResourceList.Add.Value">
+<short>A single AnsiString value string for the type.</short>
+</element>
+<element name="TLResourceList.Add.Values">
+<short>An array with the String values for the type.</short>
+</element>
+
+<element name="TLResourceList.Find">
+<short>Returns the resource in the list with the given name and type.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResourceList.Find.Result">
+<short>
+TLResource instance for the resource found with the specified name and value 
+type.  
+</short>
+</element>
+<element name="TLResourceList.Find.Name">
+<short>
+Name of the resource to locate in the list.
+</short>
+</element>
+<element name="TLResourceList.Find.ValueType">
+<short>
+Type name for the resource to locate in the method. Should be uppercase, if 
+present.
+</short>
+</element>
+
+<element name="TLResourceList.Count">
+<short>Gets the number of resource descriptions in the list.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResourceList.Count.Result">
+<short>The number of resource descriptions in the list.</short>
+</element>
+
+<element name="TLResourceList.Items">
+<short>
+Provides Indexed access to the resource descriptions in the list.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLResourceList.Items.Index">
+<short/>
+</element>
+
+<element name="TLazarusResourceStream">
+<short>Helper class for streaming resources (read only).</short>
+<descr/>
+<seealso/>
+</element>
+
+<!-- private -->
+<element link="#lcl.lresources.TLazarusResourceStream.Res" name="TLazarusResourceStream.FLRes"/>
+
+<element name="TLazarusResourceStream.FPRes">
+<short>Resource in FPC format.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazarusResourceStream.Initialize">
+<short>Initializes the resource descriptor.</short>
+<descr>
+<p>
+The descriptor must already exist.
+</p>
+</descr>
+<errors>EResNotFound if the resource does not yet exist.
+</errors>
+<seealso/>
+</element>
+<element name="TLazarusResourceStream.Initialize.Name">
+<short>The resource name.</short>
+</element>
+<element name="TLazarusResourceStream.Initialize.ResType">
+<short>The resource type, can be Nil.</short>
+</element>
+
+<!-- public -->
+<element name="TLazarusResourceStream.Create">
+<short>Creates an resource stream for a named resource.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazarusResourceStream.Create.ResName">
+<short>The resource name.</short>
+</element>
+<element name="TLazarusResourceStream.Create.ResType">
+<short>The resource type, can be Nil.</short>
+</element>
+
+<element name="TLazarusResourceStream.CreateFromID">
+<short>Creates an resource stream for a resource ID.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazarusResourceStream.CreateFromID.ResID">
+<short>The resource ID.</short>
+</element>
+<element name="TLazarusResourceStream.CreateFromID.ResType">
+<short>The resource type.</short>
+</element>
+
+<element name="TLazarusResourceStream.CreateFromHandle">
+<short>Creates an resource stream from an resource descriptor.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazarusResourceStream.CreateFromHandle.AHandle">
+<short/>
+</element>
+<element name="TLazarusResourceStream.CreateFromHandle.Instance">
+<short/>
+</element>
+
+<element name="TLazarusResourceStream.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+Calls the UnlockResource and FreeResource routines when resource descriptors 
+are used for the platform. Calls the inherited method prior to exit.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazarusResourceStream.Write">
+<short>Raises an error on an attempt to write to the stream.</short>
+<descr>
+<p>
+The stream data must be provided by the implemented constructors and methods.
+</p>
+</descr>
+<errors>
+Raises a EStreamError exception with the message in 
+SCantWriteResourceStreamError.
+</errors>
+<seealso/>
+</element>
+<element name="TLazarusResourceStream.Write.Result">
+<short/>
+</element>
+<element name="TLazarusResourceStream.Write.Buffer">
+<short/>
+</element>
+<element name="TLazarusResourceStream.Write.Count">
+<short/>
+</element>
+
+<element name="TLazarusResourceStream.Res">
+<short>The resource descriptor, owned by the global resource list.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TAbstractTranslator">
+<short>Abstract base class for translators used in the LCL.</short>
+<descr>
+<p>
+<var>TAbstractTranslator</var> is a class which specifies the base class 
+string and property translators used in the Lazarus Component Library 
+(<b>LCL</b>). It defines an abstract virtual method used to translate string 
+properties when they are read from a Lazarus Resource Stream (<b>LRS</b>).
+</p>
+<p>
+Do not create instances of TAbstractTranslator; use one of the descendent 
+class like <var>TUpdateTranslator</var>, <var>TDefaultTranslator</var>, or 
+<var>TPOTranslator</var>.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.lcltranslator.TUpdateTranslator">TUpdateTranslator</link>
+<link id="#lcl.lcltranslator.TDefaultTranslator">TDefaultTranslator</link>
+<link id="#lcl.lcltranslator.TPOTranslator">TPOTranslator</link>
+</seealso>
+</element>
+
+<!-- public -->
+<element name="TAbstractTranslator.TranslateStringProperty">
+<short>Specifies a method used to translate a String property.</short>
+<descr>
+<p>
+<var>TranslateStringProperty</var> is an abstract virtual method which 
+defines the method used to translate a <var>String</var> property in a 
+persistent object instance. TranslateStringProperty must be implemented in a 
+descendent class to perform the actions needed to retrieve and translate the 
+specified property value.
+</p>
+<p>
+The address for the method is assigned as the <var>OnReadStringProperty</var> 
+event handler in <var>TReader</var> class instances.
+</p>
+</descr>
+<seealso>
+<link id="TLRSObjectReader"/>
+<link id="#rtl.classes.TReader">TReader</link>
+<link id="#rtl.classes.TFiler">TFiler</link>
+</seealso>
+</element>
+<element name="TAbstractTranslator.TranslateStringProperty.Sender">
+<short>Object for the event notification.</short>
+</element>
+<element name="TAbstractTranslator.TranslateStringProperty.Instance">
+<short>
+Persistent object with the property value translated in the method.
+</short>
+</element>
+<element name="TAbstractTranslator.TranslateStringProperty.PropInfo">
+<short>RTTI information for the property translated in the method.</short>
+</element>
+<element name="TAbstractTranslator.TranslateStringProperty.Content">
+<short>
+Variable parameter where the translated value for the property is returned.
+</short>
+</element>
+
+<element name="LRSTranslator">
+<short>
+Variable with the default translator used in CreateLRSReader.
+</short>
+<descr>
+<p>
+The value for the variable is assigned when SetDefaultLang is called.
+</p>
+</descr>
+<seealso>
+<link id="CreateLRSReader"/>
+<link id="#lcl.lcltranslator.SetDefaultLang">SetDefaultLang</link>
+</seealso>
+</element>
+
+<element name="TLRSItemType">
+<short>Stack item type for the nested resource reader/writer.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSItemType.lrsitCollection">
+<short>A list terminated by an EndList.</short>
+</element>
+<element name="TLRSItemType.lrsitComponent">
+<short>A component has two lists: properties and children.</short>
+</element>
+<element name="TLRSItemType.lrsitList">
+<short>A list with a known (stored) number of entries.</short>
+</element>
+<element name="TLRSItemType.lrsitProperty">
+<short/>
+</element>
+
+<element name="TLRSORStackItem">
+<short>
+Stack item for the <link id="TLRSObjectReader">nested resource reader</link>.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSORStackItem.Name">
+<short>Name for the item on the LRS Reader Object stack.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSORStackItem.ItemType">
+<short>Identifies the type for the stack item.</short>
+<descr>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLRSORStackItem.Root">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSORStackItem.PushCount">
+<short>The number of contained collections, needing an EndList.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSORStackItem.ItemNr">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRSORStackItem" name="PLRSORStackItem"/>
+
+<element name="TLRSObjectReader">
+<short>Reader for resource streams.</short>
+<descr>
+<p>
+Uses an stack for reading nested objects.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<!-- private -->
+<element link="#lcl.lresources.TLRSObjectReader.Stream" name="TLRSObjectReader.FStream"/>
+
+<element name="TLRSObjectReader.FBuffer">
+<short>The input stream buffer.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FBufSize">
+<short>Size of the input buffer.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FBufPos">
+<short>Current position in the input buffer.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FBufEnd">
+<short>The number of bytes in the buffer.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FStack">
+<short>The object stack.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FStackPointer">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.FStackCapacity">
+<short>The Length of the allocated stack.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRSObjectReader.Reader" name="TLRSObjectReader.FReader"/>
+
+<element name="TLRSObjectReader.SkipProperty">
+<short>Skip the property name, then the property value.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.SkipSetBody">
+<short>Skips until the next empty string.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.Push">
+<short>Push a new resource item.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.Push.ItemType">
+<short/>
+</element>
+<element name="TLRSObjectReader.Push.AName">
+<short/>
+</element>
+<element name="TLRSObjectReader.Push.Root">
+<short>The Component whose properties follow.</short>
+</element>
+<element name="TLRSObjectReader.Push.PushCount">
+<short>The number of contained lists, which need an EndList.</short>
+</element>
+
+<element name="TLRSObjectReader.Pop">
+<short>Pop an item, or decrement its PushCount.</short>
+<descr>
+<p>
+Called on EndList (vaNull) encountered
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.ClearStack">
+<short>Destroys the stack, during reader destruction.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.InternalReadValue">
+<short>Reads the 1-byte value type.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.InternalReadValue.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.EndPropertyIfOpen">
+<short>Terminate reading a Component list (properties or children).</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.ReadIntegerContent">
+<short>Reads an 4 byte integer value.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadIntegerContent.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.Create">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.Create.AStream">
+<short>The input stream.</short>
+</element>
+<element name="TLRSObjectReader.Create.BufSize">
+<short>The stream buffer size to allocate.</short>
+</element>
+
+<element name="TLRSObjectReader.Destroy"/>
+
+<element name="TLRSObjectReader.NextValue">
+<short>Peek the next byte (value type indicator).</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.NextValue.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadValue">
+<short>
+Reads the next ValueType. Pops or pushes a stack item if required (for list 
+or collection).
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadValue.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.BeginRootComponent">
+<short>Reads the filer signature from the input.</short>
+<descr/>
+<errors>
+EReadError 'Invalid Filer Signature' on filer signature mismatch.
+</errors>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.BeginComponent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.BeginComponent.Flags">
+<short/>
+</element>
+<element name="TLRSObjectReader.BeginComponent.AChildPos">
+<short/>
+</element>
+<element name="TLRSObjectReader.BeginComponent.CompClassName">
+<short/>
+</element>
+<element name="TLRSObjectReader.BeginComponent.CompName">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.BeginProperty">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.BeginProperty.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.GetStackPath">
+<short>Returns the qualified current item name.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.GetStackPath.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.Read">
+<short>Read a number of bytes from the input stream.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.Read.Buf">
+<short/>
+</element>
+<element name="TLRSObjectReader.Read.Count">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadBinary">
+<short>Reads binary data, stored with a Length prefix.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadBinary.DestData">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadFloat">
+<short>Reads an Extended value (10 Bytes).</short>
+<descr>The result may have less bytes, when Extended is not a 10 byte 
+value.</descr>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadFloat.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadSingle">
+<short>Reads an Single value (4 bytes).</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadSingle.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadCurrency">
+<short>Reads an Currency value (8 bytes).</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadCurrency.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadDate">
+<short>Reads an Date value (8 bytes).</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadDate.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadIdent">
+<short>Reads an identifier, maybe a name or a standard key (which is not 
+stored).
+</short>
+<descr/>
+<errors>GDB error on an unexpected ValueType.</errors>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadIdent.Result">
+<short/>
+</element>
+<element name="TLRSObjectReader.ReadIdent.ValueType">
+<short>The expected type: vaIdent for an stored name, or vaNil, vaFalse, 
+vaTrue, vaNull for an standard string.
+</short>
+</element>
+
+<element name="TLRSObjectReader.ReadInt8">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadInt8.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadInt16">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadInt16.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadInt32">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadInt32.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadInt64">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadInt64.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadSet">
+<short>Reads enum member names, until an empty string is read.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadSet.Result">
+<short>The constructed set, as an Integer.</short>
+</element>
+<element name="TLRSObjectReader.ReadSet.EnumType">
+<short>The expected set type.</short>
+</element>
+
+<element name="TLRSObjectReader.ReadStr">
+<short>Reads an ShortString.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadStr.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadString.Result">
+<short/>
+</element>
+<element name="TLRSObjectReader.ReadString.StringType">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadWideString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadWideString.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.ReadUnicodeString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.ReadUnicodeString.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectReader.SkipComponent">
+<short>Skips an entire Component.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectReader.SkipComponent.SkipComponentInfos">
+<short>If True: skip prefix, component class name and component object name.
+</short>
+</element>
+
+<element name="TLRSObjectReader.SkipValue">
+<short>Skips the next value.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.Stream">
+<short>The input stream.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectReader.Reader">
+<short>The root component reader.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRSObjectReader" name="TLRSObjectReaderClass"/>
+
+<element name="TLRSOWStackItemState">
+<short>Tracking what already has been stored or written.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSOWStackItemState.lrsowsisStarted">
+<short>now writing header.</short>
+</element>
+<element name="TLRSOWStackItemState.lrsowsisHeaderWritten">
+<short>
+header saved on stack, not yet written to stream, waiting for data.
+</short>
+</element>
+<element name="TLRSOWStackItemState.lrsowsisDataWritten">
+<short>header written to stream, data written.</short>
+</element>
+
+<element name="TLRSOWStackItem">
+<short>Stack item for the <link id="TLRSObjectWriter">nested resource 
+writer</link>.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.Name">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.ItemType">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.Root">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.PushCount">
+<short>waiting for this number of Pops.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.ItemNr">
+<short>Index in a collection or list.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.SkipIfEmpty">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.State">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.Buffer">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.BufCount">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSOWStackItem.BufCapacity">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="PLRSOWStackItem" link="#lcl.lresources.TLRSOWStackItem"/>
+
+<element name="TLazObjectWriterString">
+<short>
+Compiler version-specific alias for String values used in TLRSObjectWriter.
+</short>
+<descr>
+<p>
+<var>TLazObjectWriterString</var> is the type passed as an argument to the 
+WriteString method in TLRSObjectWriter.
+</p>
+<p>
+For FPC version 3.3.1 and later, it is an alias to the RawByteString type. For 
+previous FPC versions, it is an alias to the String type.
+</p>
+</descr>
+<version>
+Added in LazUtils version 3.0.
+</version>
+<seealso>
+<link id="TLRSObjectWriter.WriteString"/>
+</seealso>
+</element>
+
+<element name="TLRSObjectWriter">
+<short>Object writer for Lazarus Resource Streams.</short>
+<descr>
+The TLRSObjectWriter can find empty entries and omit writing them to stream.
+</descr>
+<seealso/>
+</element>
+
+<!-- private -->
+<element name="TLRSObjectWriter.FStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FBuffer">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FBufSize">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FBufPos">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FSignatureWritten">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FStack">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FStackPointer">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.FStackCapacity">
+<short/>
+</element>
+
+<element link="#lcl.lresources.TLRSObjectWriter.WriteEmptyInheritedChilds" name="TLRSObjectWriter.FWriteEmptyInheritedChilds"/>
+
+<element link="#lcl.lresources.TLRSObjectWriter.Writer" name="TLRSObjectWriter.FWriter"/>
+
+<element name="TLRSObjectWriter.Push">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.Push.ItemType">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Push.AName">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Push.Root">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Push.PushCount">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Push.SkipIfEmpty">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.EndHeader">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.Pop">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.Pop.WriteNull">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.ClearStack">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.FlushStackToStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.WriteToStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteToStream.Buffer">
+<short/>
+</element>
+<element name="TLRSObjectWriter.WriteToStream.Count">
+<short/>
+</element>
+
+<!-- protected -->
+<element name="TLRSObjectWriter.FlushBuffer">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.WriteValue">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteValue.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteStr">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteStr.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteIntegerContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteIntegerContent.i">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteWordContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteWordContent.w">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteInt64Content">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteInt64Content.i">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteSingleContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteSingleContent.s">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteDoubleContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteDoubleContent.d">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteExtendedContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteExtendedContent.e">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteCurrencyContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteCurrencyContent.c">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteWideStringContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteWideStringContent.ws">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteWordsReversed">
+<short>Writes multiples words (WideChar) with reversed byte order.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteWordsReversed.p">
+<short/>
+</element>
+<element name="TLRSObjectWriter.WriteWordsReversed.Count">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteNulls">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteNulls.Count">
+<short/>
+</element>
+
+<!-- public -->
+<element name="TLRSObjectWriter.Create">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.Create.Stream">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Create.BufSize">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.Destroy"/>
+
+<element name="TLRSObjectWriter.BeginCollection">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.BeginComponent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.BeginComponent.Component">
+<short/>
+</element>
+<element name="TLRSObjectWriter.BeginComponent.Flags">
+<short/>
+</element>
+<element name="TLRSObjectWriter.BeginComponent.ChildPos">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.BeginList">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.EndList">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.BeginProperty">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.BeginProperty.PropName">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.EndProperty">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.GetStackPath">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.GetStackPath.Result">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.Write">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.Write.Buffer">
+<short/>
+</element>
+<element name="TLRSObjectWriter.Write.Count">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteBinary">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteBinary.Buffer">
+<short/>
+</element>
+<element name="TLRSObjectWriter.WriteBinary.Count">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteBoolean">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteBoolean.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteFloat">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteFloat.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteSingle">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteSingle.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteCurrency">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteCurrency.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteDate">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteDate.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteIdent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteIdent.Ident">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteInteger">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteInteger.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteMethodName">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteMethodName.Name">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteSet">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteSet.Value">
+<short/>
+</element>
+<element name="TLRSObjectWriter.WriteSet.SetType">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteString">
+<short>
+Writes a string value using the format for the LRS object writer.
+</short>
+<descr>
+<p>
+<var>WriteString</var> is an overridden method in <var>TLazObjectWriter</var> 
+used to store the specified string value to the storage format used in the 
+writer class. 
+</p>
+<p>
+WriteString uses the length of the specified string in Value to determine the 
+actions needed in the method. If the value can be represented using the 
+ShortString type (255 characters or less), WriteValue is called to write a 
+single Byte value with the length for the vaString type. For longer string 
+values, an Integer value is written using the Endian-ness for the platform. 
+The Write method is called to store the string content when the length is a 
+positive non-zero value.
+</p>
+<p>
+WriteString implements the abstract virtual method defined in 
+TAbstractObjectWriter.
+</p>
+</descr>
+<version>
+Modified in LCL version 3.0 to use the TLazObjectWriterString type 
+instead of the String type in the Value argument.
+</version>
+<seealso>
+<link id="#rtl.classes.TAbstractObjectWriter">TAbstractObjectWriter</link>
+</seealso>
+</element>
+<element name="TLRSObjectWriter.WriteString.Value">
+<short>String value stored in the method.</short>
+</element>
+
+<element name="TLRSObjectWriter.WriteWideString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteWideString.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteUnicodeString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRSObjectWriter.WriteUnicodeString.Value">
+<short/>
+</element>
+
+<element name="TLRSObjectWriter.WriteEmptyInheritedChilds">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRSObjectWriter.Writer">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRSObjectWriter" name="TLRSObjectWriterClass"/>
+
+<element name="TLRPositionLink">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRPositionLink.LFMPosition">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRPositionLink.LRSPosition">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLRPositionLink.Data">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRPositionLink" name="PLRPositionLink"/>
+
+<element name="TLRPositionLinks">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<!-- private -->
+<element name="TLRPositionLinks.FItems">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element link="#lcl.lresources.TLRPositionLinks.Count" name="TLRPositionLinks.FCount"/>
+
+<element link="#lcl.lresources.TLRPositionLinks.Data" name="TLRPositionLinks.GetData"/>
+<element name="TLRPositionLinks.GetData.Result"/>
+<element name="TLRPositionLinks.GetData.Index"/>
+
+<element link="#lcl.lresources.TLRPositionLinks.LFM" name="TLRPositionLinks.GetLFM"/>
+<element name="TLRPositionLinks.GetLFM.Result"/>
+<element name="TLRPositionLinks.GetLFM.Index"/>
+
+<element link="#lcl.lresources.TLRPositionLinks.LRS" name="TLRPositionLinks.GetLRS"/>
+<element name="TLRPositionLinks.GetLRS.Result"/>
+<element name="TLRPositionLinks.GetLRS.Index"/>
+
+<element name="TLRPositionLinks.SetCount">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.SetCount.AValue">
+<short/>
+</element>
+
+<element link="#lcl.lresources.TLRPositionLinks.Data" name="TLRPositionLinks.SetData"/>
+<element name="TLRPositionLinks.SetData.Index"/>
+<element name="TLRPositionLinks.SetData.AValue"/>
+
+<element link="#lcl.lresources.TLRPositionLinks.LFM" name="TLRPositionLinks.SetLFM"/>
+<element name="TLRPositionLinks.SetLFM.Index"/>
+<element name="TLRPositionLinks.SetLFM.AValue"/>
+
+<element link="#lcl.lresources.TLRPositionLinks.LRS" name="TLRPositionLinks.SetLRS"/>
+<element name="TLRPositionLinks.SetLRS.Index"/>
+<element name="TLRPositionLinks.SetLRS.AValue"/>
+
+<!-- public -->
+<element name="TLRPositionLinks.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+Allocates the internal list used to store values in the Data property.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLRPositionLinks.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+Frees resources allocated for the Data property, and calls the inherited 
+method prior to exit.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLRPositionLinks.Clear">
+<short>Removes items stored in the Data property.</short>
+<descr>
+<p>
+Sets the value in the Count property to 0, which causes the items stored in 
+Data to be freed.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLRPositionLinks.Sort">
+<short>Sort the items by LFM or LRS position.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.Sort.LFMPositions">
+<short>True for sorting by LFM position.</short>
+</element>
+
+<element name="TLRPositionLinks.IndexOf">
+<short>Searches for an item by LFM or LRS position.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.IndexOf.Result">
+<short/>
+</element>
+<element name="TLRPositionLinks.IndexOf.Position">
+<short/>
+</element>
+<element name="TLRPositionLinks.IndexOf.LFMPositions">
+<short>True for searching an LFM position.</short>
+</element>
+
+<element name="TLRPositionLinks.IndexOfRange">
+<short>Find a random item within an position range.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.IndexOfRange.Result">
+<short/>
+</element>
+<element name="TLRPositionLinks.IndexOfRange.FromPos">
+<short>First acceptable position.</short>
+</element>
+<element name="TLRPositionLinks.IndexOfRange.ToPos">
+<short>First position after the range (exclude).</short>
+</element>
+<element name="TLRPositionLinks.IndexOfRange.LFMPositions">
+<short>True for searching LFM positions.</short>
+</element>
+
+<element name="TLRPositionLinks.SetPosition">
+<short>Change the position of an item within the given position range.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.SetPosition.FromPos">
+<short>First acceptable position.</short>
+</element>
+<element name="TLRPositionLinks.SetPosition.ToPos">
+<short>First position after the range (exclude).</short>
+</element>
+<element name="TLRPositionLinks.SetPosition.MappedPos">
+<short>The new position.</short>
+</element>
+<element name="TLRPositionLinks.SetPosition.LFMtoLRSPositions">
+<short>True for using LFM positions.</short>
+</element>
+
+<element name="TLRPositionLinks.Add">
+<short>
+Adds a new item to the Data property using the specified positions and 
+pointer to the item data.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.Add.LFMPos">
+<short/>
+</element>
+<element name="TLRPositionLinks.Add.LRSPos">
+<short/>
+</element>
+<element name="TLRPositionLinks.Add.AData">
+<short/>
+</element>
+
+<element name="TLRPositionLinks.LFM">
+<short>Indexed access to the LFM positions.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.LFM.Index">
+<short/>
+</element>
+
+<element name="TLRPositionLinks.LRS">
+<short>Indexed access to the LRS positions.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.LRS.Index">
+<short/>
+</element>
+
+<element name="TLRPositionLinks.Data">
+<short>Indexed access to the Data pointers.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLRPositionLinks.Data.Index">
+<short/>
+</element>
+
+<element name="TLRPositionLinks.Count">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser">
+<short>
+Deprecated. Parser for UTF-8-encoded identifiers, string, and number literals.
+</short>
+<descr>
+<p>
+Use <link id="TUTF8Parser.NextToken"/> to get the next token.
+The token type also is available in Token.
+</p>
+<p>
+Allowed whitespace is newline (CR,LF), tab and space.
+</p>
+<p>
+Allowed identifiers consist of ASCII letters, digits or underscore.
+</p>
+<p>
+Strings are a sequence of quoted strings or #nn characters.
+</p>
+<p>
+Numbers are parsed as integer or floating point values,
+with toFloat values subdivided into number, single, date or currency,
+according to FloatType.
+</p>
+<p>
+All other characters are returned literally.
+</p>
+</descr>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso>
+<link id="#rtl.classes.TParser">RTL.Classes.TParser</link>    
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TUTF8Parser.fStream"/>
+<element name="TUTF8Parser.fBuf"/>
+<element name="TUTF8Parser.fBufLen"/>
+<element name="TUTF8Parser.fPos"/>
+<element name="TUTF8Parser.fLineStart"/>
+<element name="TUTF8Parser.fFloatType"/>
+<element name="TUTF8Parser.fSourceLine"/>
+<element name="TUTF8Parser.fToken"/>
+<element name="TUTF8Parser.fEofReached"/>
+<element name="TUTF8Parser.fLastTokenStr"/>
+
+<element name="TUTF8Parser.GetTokenName">
+<short>
+Deprecated. The name of a token, maybe the Token character itself.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.GetTokenName.Result"/>
+<element name="TUTF8Parser.GetTokenName.aTok"/>
+
+<element name="TUTF8Parser.LoadBuffer">
+<short>
+Deprecated. Fills the buffer from the input stream.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.CheckLoadBuffer">
+<short>
+Deprecated. Skips to the next non-null character.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.ProcessChar">
+<short>
+Deprecated. Add the current character to the token string.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.IsNumber">
+<short>
+Deprecated. True when the current character is a digit.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.IsNumber.Result"/>
+
+<element name="TUTF8Parser.IsHexNum">
+<short>
+Deprecated. True when the current character is a hex digit.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.IsHexNum.Result"/>
+
+<element name="TUTF8Parser.IsAlpha">
+<short>
+Deprecated. True when the current character is an ASCII character (or 
+underscore).
+</short>
+<descr>
+Should mean: all allowed characters in an identifier.
+[To be updated for Unicode identifiers].
+</descr>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.IsAlpha.Result"/>
+
+<element name="TUTF8Parser.IsAlphaNum">
+<short>
+Deprecated. True when the current character is a digit or IsAlpha.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.IsAlphaNum.Result"/>
+
+<element name="TUTF8Parser.GetHexValue">
+<short>
+Deprecated. Returns the value of a hex digit.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.GetHexValue.Result"/>
+<element name="TUTF8Parser.GetHexValue.c"/>
+
+<element name="TUTF8Parser.GetAlphaNum">
+<short>
+Deprecated. Parses and returns an identifier.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<errors>
+EParserError when the current character is not valid for an identifier.
+</errors>
+<seealso/>
+</element>
+<element name="TUTF8Parser.GetAlphaNum.Result"/>
+
+<element name="TUTF8Parser.HandleNewLine">
+<short>
+Deprecated. Skip CR/LF, adjust SourceLine.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.SkipSpaces">
+<short>
+Deprecated. Skip space and tab chars.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.SkipWhitespace">
+<short>
+Deprecated. Skip all whitespace characters.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleEof">
+<short>
+Deprecated. Marks end of input reached (fEofReached).
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleAlphaNum">
+<short>
+Deprecated. Parse an identifier.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleNumber">
+<short>
+Deprecated. Parse a number, recognizing trailing floating point format 
+specifiers.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleHexNumber">
+<short>
+Deprecated. Parse a hex number, prefix the token string with '$'.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+<errors>
+EParserError when no valid hex digit was found.
+</errors>
+</element>
+
+<element name="TUTF8Parser.HandleQuotedString">
+<short>
+Deprecated. Parse an quoted string, excluding the leading and trailing quotes.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<errors>
+EParserError on an unterminated string literal.
+</errors>
+<seealso/>
+</element>
+<element name="TUTF8Parser.HandleQuotedString.Result"/>
+
+<element name="TUTF8Parser.HandleDecimalString">
+<short>
+Deprecated. Parse an decimal Unicode codepoint, return it as an UTF-8 string.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.HandleDecimalString.Result"/>
+<element name="TUTF8Parser.HandleDecimalString.ascii">
+<short>Is set to False on a non-ASCII character.</short>
+</element>
+
+<element name="TUTF8Parser.HandleString">
+<short>
+Deprecated. Parses a string literal.
+</short>
+<descr>
+<p>
+The string can consist of quoted strings and Unicode codepoints.
+Surrounding quote characters are removed.
+</p>
+<p>
+The result is stored in fLastTokenStr, in UTF-8 encoding.
+</p>
+<p>
+The resulting token is toString for all-ASCII strings, else toWString.
+</p>
+</descr>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleMinus">
+<short>
+Deprecated. Tries to parse a negative number, or a single '-' character.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.HandleUnknown">
+<short>
+Deprecated. Sets Token to the unrecognized character (no error).
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<!-- public -->
+<element name="TUTF8Parser.Create">
+<short>
+Deprecated. Constructor for the class instance.
+</short>
+<descr>
+<p>
+<var>Create</var> is the constructor for the class instance.
+</p>
+<p>
+Create allocates a 4K buffer used to store the values read from Stream. The 
+buffer is examined in the methods for the class. It initializes internal 
+members used in the parser implementation to their default values. The 
+internal buffer is loaded with the first 4K block of values in Stream, and 
+the NextToken method is called to position the parser on the first token in 
+the buffered values.
+</p>
+</descr>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.Create.Stream">
+<short>Stream with the values parser in the class.</short>
+</element>
+
+<element name="TUTF8Parser.Destroy">
+<short>
+Deprecated. Destructor for the class instance.
+</short>
+<descr>
+<p>
+<var>Destroy</var> is the overridden destructor for the class instance. It 
+moves the stream to the position returned from <var>SourcePos</var> (the 
+position for the last processed value in the internal buffer). Destroy free 
+the memory allocated for the internal buffer in the class instance.
+</p>
+</descr>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.CheckToken">
+<short>
+Deprecated. Asserts that Token is of the expected type.
+</short>
+<descr/>
+<seealso/>
+<errors>
+EParserError when Token doesn't match the expected type.
+</errors>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+</element>
+<element name="TUTF8Parser.CheckToken.T">
+<short>The expected token type.</short>
+</element>
+
+<element name="TUTF8Parser.CheckTokenSymbol">
+<short>
+Deprecated. Asserts that the given name was parsed (case insensitive).
+</short>
+<descr/>
+<seealso/>
+<errors>
+EParserError when Token doesn't match the expected type or name.
+</errors>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+</element>
+<element name="TUTF8Parser.CheckTokenSymbol.S">
+<short>The expected identifier.</short>
+</element>
+
+<element name="TUTF8Parser.Error">
+<short>
+Deprecated. Raises an EParserError with the given message.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.Error.Ident">
+<short>The message text.</short>
+</element>
+
+<element name="TUTF8Parser.ErrorFmt">
+<short>
+Deprecated. Raises an EParserError with the formatted message.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.ErrorFmt.Ident">
+<short>The Format string.</short>
+</element>
+<element name="TUTF8Parser.ErrorFmt.Args">
+<short>The arguments to be formatted.</short>
+</element>
+
+<element name="TUTF8Parser.ErrorStr">
+<short>
+Deprecated. Raises an EParserError with the given message, adding source 
+position information.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.ErrorStr.Message"/>
+
+<element name="TUTF8Parser.HexToBinary">
+<short>
+Deprecated. Writes an hex value into the output stream.
+</short>
+<descr>
+<p>
+The hex digits must occur in pairs, for every byte.
+</p>
+<p>
+The binary bytes are written in input order (highest first).
+</p>
+</descr>
+<errors>
+EParserError on unpaired hex digits.
+</errors>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.HexToBinary.Stream">
+<short>The output stream.</short>
+</element>
+
+<element name="TUTF8Parser.NextToken">
+<short>
+Deprecated. Parses the next token.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.NextToken.Result">
+<short>The token type.</short>
+</element>
+
+<element name="TUTF8Parser.SourcePos">
+<short>
+Deprecated. Returns the current position in the input stream.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.SourcePos.Result"/>
+
+<element name="TUTF8Parser.TokenComponentIdent">
+<short>
+Deprecated. Parses an (possibly) qualified identifier, after a symbol has been 
+parsed.
+</short>
+<descr/>
+<errors>
+EParserError when Token is not toSymbol.
+</errors>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.TokenComponentIdent.Result"/>
+
+<element name="TUTF8Parser.TokenFloat">
+<short>
+Deprecated. Returns the binary value of a floating point number.
+</short>
+<descr/>
+<errors>
+EParserError on an invalid number.
+</errors>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.TokenFloat.Result"/>
+
+<element name="TUTF8Parser.TokenInt">
+<short>Deprecated. Returns the binary value of an integral number.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.TokenInt.Result"/>
+
+<element name="TUTF8Parser.TokenString">
+<short>
+Deprecated. Returns the last parsed token as an string.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.TokenString.Result"/>
+
+<element name="TUTF8Parser.TokenSymbolIs">
+<short>
+Deprecated. Compares the parsed symbol with the given string (case-insensitive).
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+<element name="TUTF8Parser.TokenSymbolIs.Result">
+<short>True when a matching symbol has been parsed.</short>
+</element>
+<element name="TUTF8Parser.TokenSymbolIs.S"/>
+
+<element name="TUTF8Parser.FloatType">
+<short>
+Deprecated. The type of the parsed floating point number. (number, date...).
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.SourceLine">
+<short>
+Deprecated. The current line number in the input stream.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TUTF8Parser.SourceColumn">
+<short>
+Deprecated. The current column number in the source line.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TUTF8Parser.SourceColumn.Result"/>
+
+<element name="TUTF8Parser.Token">
+<short>
+Deprecated. The last parsed token type.
+</short>
+<descr/>
+<version>
+Deprecated in LCL version 3.0. Use Classes.TParser instead.
+</version>
+<seealso/>
+</element>
+
+<element name="TCustomLazComponentQueue">
+<short>
+A queue to stream components, used for multi-threading or network.
+</short>
+<descr>
+<p>
+ConvertComponentAsString converts a component to binary format with a leading 
+size information (using WriteLRSInt64MB).
+</p>
+<p>
+When streaming components over network, they will arrive in chunks. 
+TCustomLazComponentQueue tells you, if a whole component has arrived.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<!-- private -->
+<element name="TCustomLazComponentQueue.FOnFindComponentClass" link="#lcl.lresources.TCustomLazComponentQueue.OnFindComponentClass"/>
+
+<!-- protected -->
+<element name="TCustomLazComponentQueue.FQueue">
+<short>Member with the dynamic storage for the queue..</short>
+</element>
+
+<element name="TCustomLazComponentQueue.ReadComponentSize">
+<short>Reads the component size and the length for the size value.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponentSize.Result">
+<short>
+False if there is not enough storage in the queue for the component size.
+</short>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponentSize.ComponentSize">
+<short>Size of the component.</short>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponentSize.SizeLength">
+<short>Number of bytes needed for the component size value.</short>
+</element>
+
+<!-- public -->
+<element name="TCustomLazComponentQueue.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+Allocates resources needed for the internal queue storage.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.Create.TheOwner">
+<short>Owner of the class instance.</short>
+</element>
+
+<element name="TCustomLazComponentQueue.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+Frees resources allocated to the internal queue storage.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TCustomLazComponentQueue.Clear">
+<short>Clears all values in the internal queue storage.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TCustomLazComponentQueue.Write">
+<short>Pushes values in Buffer onto the internal storage queue.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.Write.Result">
+<short>Number of bytes added to the queue in the method.</short>
+</element>
+<element name="TCustomLazComponentQueue.Write.Buffer">
+<short>
+Untyped buffer with values pushed onto the internal queue storage.
+</short>
+</element>
+<element name="TCustomLazComponentQueue.Write.Count">
+<short>Number of bytes in Buffer.</short>
+</element>
+
+<element name="TCustomLazComponentQueue.CopyFrom">
+<short>
+Copies the specified number of bytes from the stream and pushes the values 
+onto the queue.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.CopyFrom.Result">
+<short/>
+</element>
+<element name="TCustomLazComponentQueue.CopyFrom.AStream">
+<short/>
+</element>
+<element name="TCustomLazComponentQueue.CopyFrom.Count">
+<short/>
+</element>
+
+<element name="TCustomLazComponentQueue.HasComponent">
+<short>
+Determines whether the queue contains the entire contents of the component at 
+the top of the queue.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.HasComponent.Result">
+<short/>
+</element>
+
+<element name="TCustomLazComponentQueue.ReadComponent">
+<short>Reads a component from the queue and sets it owner.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponent.Result">
+<short/>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponent.AComponent">
+<short/>
+</element>
+<element name="TCustomLazComponentQueue.ReadComponent.NewOwner">
+<short/>
+</element>
+
+<element name="TCustomLazComponentQueue.ConvertComponentAsString">
+<short>
+Converts a component to binary format with a leading size information (using 
+WriteLRSInt64MB).
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomLazComponentQueue.ConvertComponentAsString.Result">
+<short/>
+</element>
+<element name="TCustomLazComponentQueue.ConvertComponentAsString.AComponent">
+<short/>
+</element>
+
+<element name="TCustomLazComponentQueue.OnFindComponentClass">
+<short>
+Event handler signalled to get the class type for the specified class name in 
+a TReader instance.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazComponentQueue">
+<short>Publishes property from the ancestor class.</short>
+<descr/>
+<seealso/>
+</element>
+
+<!-- published -->
+<element name="TLazComponentQueue.Name">
+<short>Published Name for the component queue.</short>
+</element>
+
+<element name="TLazComponentQueue.OnFindComponentClass">
+<short>
+Published event handler used to get the class type for a give class name.
+</short>
+</element>
+
+<element name="TPropertyToSkip">
+<short>
+Contains information about a property omitted from LCL component streaming.
+</short>
+<descr>
+<p>
+<var>TPropertyToSkip</var> is a record type with information about a property 
+in a persistent class that is omitted during LCL component streaming. 
+TPropertyToSkip is the type maintained in the TPropertiesToSkip list when the 
+RegisterPropertyToSkip routine is called.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TPropertyToSkip.PersistentClass">
+<short>Class type for the persistent object with the omitted property.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropertyToSkip.PropertyName">
+<short>Name for the omitted property.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropertyToSkip.Note">
+<short>A note about the omitted property.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropertyToSkip.HelpKeyword">
+<short>Help keyword for the omitted property.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="PRemovedProperty" link="#lcl.lresources.TPropertyToSkip"/>
+
+<element name="TPropertiesToSkip">
+<short>
+Implements a list used to store properties which are skipped during LCL 
+streaming.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<!-- private -->
+<element name="TPropertiesToSkip.GetItem"/>
+<element name="TPropertiesToSkip.GetItem.Result"/>
+<element name="TPropertiesToSkip.GetItem.AIndex"/>
+
+<element name="TPropertiesToSkip.SetItem"/>
+<element name="TPropertiesToSkip.SetItem.AIndex"/>
+<element name="TPropertiesToSkip.SetItem.AValue"/>
+
+<!-- protected -->
+<element name="TPropertiesToSkip.Notify">
+<short>
+Handles a notification action when the specified Pointer is added to or 
+removed from the list.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TPropertiesToSkip.Notify.Ptr">
+<short/>
+</element>
+<element name="TPropertiesToSkip.Notify.Action">
+<short/>
+</element>
+
+<element name="TPropertiesToSkip.DoPropertyNotFound">
+<short>
+Determines if the specified property type and name exists and is handled in 
+the list.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.Reader">
+<short/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.Instance">
+<short/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.PropName">
+<short/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.IsPath">
+<short/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.Handled">
+<short/>
+</element>
+<element name="TPropertiesToSkip.DoPropertyNotFound.Skip">
+<short/>
+</element>
+
+<!-- public -->
+<element name="TPropertiesToSkip.IndexOf">
+<short>
+Gets the ordinal position in the list where the property type and name is 
+stored.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TPropertiesToSkip.IndexOf.Result">
+<short>Ordinal position in the list, or -1 when not found.</short>
+</element>
+<element name="TPropertiesToSkip.IndexOf.AInstance">
+<short>Property instance to locate in the list.</short>
+</element>
+<element name="TPropertiesToSkip.IndexOf.APropertyName">
+<short>Name for the property type to locate in the list.</short>
+</element>
+<element name="TPropertiesToSkip.IndexOf.AClass">
+<short>Class type for the property to located in the list.</short>
+</element>
+
+<element name="TPropertiesToSkip.Add">
+<short>
+Adds the specified property type and name to the list when not already 
+present.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TPropertiesToSkip.Add.Result">
+<short>
+Ordinal position in the list where the skipped property was found or stored.
+</short>
+</element>
+<element name="TPropertiesToSkip.Add.APersistentClass">
+<short>Class type for the skipped property.</short>
+</element>
+<element name="TPropertiesToSkip.Add.APropertyName">
+<short>Name for the skipped property.</short>
+</element>
+<element name="TPropertiesToSkip.Add.ANote">
+<short>Note to associate with the skipped property.</short>
+</element>
+<element name="TPropertiesToSkip.Add.AHelpKeyWord">
+<short>Help keyword for the skipped property.</short>
+</element>
+
+<element name="TPropertiesToSkip.Items">
+<short>
+Provides indexed access to skipped properties in the list by their ordinal 
+position.
+</short>
+<descr>
+<p>
+Items is an indexed PRemovedProperty property used to access skipped property 
+definitions by their ordinal position in the list. Read and write access for 
+the property value ensures the inherited Get or Put methods are called.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TPropertiesToSkip.Items.AIndex">
+<short>Ordinal position for the indexed property value.</short>
+</element>
+
+<element name="ObjStreamMaskInherited">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="ObjStreamMaskChildPos">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="ObjStreamMaskInline">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="LazarusResources">
+<short>The list with all of the loaded standard resources.</short>
+<descr/>
+<seealso>
+<link id="TLResourceList"/>
+</seealso>
+</element>
+
+<element name="PropertiesToSkip">
+<short>
+Unit global variable with all of the registered skipped properties.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="LRSObjectReaderClass">
+<short>Class type for Lazarus Object Reader instances.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="LRSObjectWriterClass">
+<short>Class type for Lazarus Object Writer instances.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="InitResourceComponent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="InitResourceComponent.Result">
+<short/>
+</element>
+<element name="InitResourceComponent.Instance">
+<short/>
+</element>
+<element name="InitResourceComponent.RootAncestor">
+<short/>
+</element>
+
+<element name="InitLazResourceComponent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="InitLazResourceComponent.Result">
+<short/>
+</element>
+<element name="InitLazResourceComponent.Instance">
+<short/>
+</element>
+<element name="InitLazResourceComponent.RootAncestor">
+<short/>
+</element>
+
+<element name="CreateLRSReader">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CreateLRSReader.Result">
+<short/>
+</element>
+<element name="CreateLRSReader.s">
+<short/>
+</element>
+<element name="CreateLRSReader.DestroyDriver">
+<short/>
+</element>
+
+<element name="CreateLRSWriter">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CreateLRSWriter.Result">
+<short/>
+</element>
+<element name="CreateLRSWriter.s">
+<short/>
+</element>
+<element name="CreateLRSWriter.DestroyDriver">
+<short/>
+</element>
+
+<element name="GetClassNameFromLRSStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="GetClassNameFromLRSStream.Result">
+<short/>
+</element>
+<element name="GetClassNameFromLRSStream.s">
+<short/>
+</element>
+<element name="GetClassNameFromLRSStream.IsInherited">
+<short/>
+</element>
+
+<element name="GetComponentInfoFromLRSStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="GetComponentInfoFromLRSStream.s">
+<short/>
+</element>
+<element name="GetComponentInfoFromLRSStream.ComponentName">
+<short/>
+</element>
+<element name="GetComponentInfoFromLRSStream.ComponentClassName">
+<short/>
+</element>
+<element name="GetComponentInfoFromLRSStream.IsInherited">
+<short/>
+</element>
+
+<element name="WriteComponentAsBinaryToStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteComponentAsBinaryToStream.AStream">
+<short/>
+</element>
+<element name="WriteComponentAsBinaryToStream.AComponent">
+<short/>
+</element>
+
+<element name="ReadComponentFromBinaryStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadComponentFromBinaryStream.AStream">
+<short/>
+</element>
+<element name="ReadComponentFromBinaryStream.RootComponent">
+<short/>
+</element>
+<element name="ReadComponentFromBinaryStream.OnFindComponentClass">
+<short/>
+</element>
+<element name="ReadComponentFromBinaryStream.TheOwner">
+<short/>
+</element>
+<element name="ReadComponentFromBinaryStream.Parent">
+<short/>
+</element>
+<element name="ReadComponentFromBinaryStream.ReaderRoot">
+<short/>
+</element>
+
+<element name="WriteComponentAsTextToStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteComponentAsTextToStream.AStream">
+<short/>
+</element>
+<element name="WriteComponentAsTextToStream.AComponent">
+<short/>
+</element>
+
+<element name="ReadComponentFromTextStream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadComponentFromTextStream.AStream">
+<short/>
+</element>
+<element name="ReadComponentFromTextStream.RootComponent">
+<short/>
+</element>
+<element name="ReadComponentFromTextStream.OnFindComponentClass">
+<short/>
+</element>
+<element name="ReadComponentFromTextStream.TheOwner">
+<short/>
+</element>
+<element name="ReadComponentFromTextStream.Parent">
+<short/>
+</element>
+
+<element name="SaveComponentToConfig">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="SaveComponentToConfig.Config">
+<short/>
+</element>
+<element name="SaveComponentToConfig.Path">
+<short/>
+</element>
+<element name="SaveComponentToConfig.AComponent">
+<short/>
+</element>
+
+<element name="LoadComponentFromConfig">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LoadComponentFromConfig.Config">
+<short/>
+</element>
+<element name="LoadComponentFromConfig.Path">
+<short/>
+</element>
+<element name="LoadComponentFromConfig.RootComponent">
+<short/>
+</element>
+<element name="LoadComponentFromConfig.OnFindComponentClass">
+<short/>
+</element>
+<element name="LoadComponentFromConfig.TheOwner">
+<short/>
+</element>
+<element name="LoadComponentFromConfig.Parent">
+<short/>
+</element>
+
+<element name="CompareComponents">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CompareComponents.Result">
+<short/>
+</element>
+<element name="CompareComponents.Component1">
+<short/>
+</element>
+<element name="CompareComponents.Component2">
+<short/>
+</element>
+
+<element name="CompareMemStreams">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CompareMemStreams.Result">
+<short/>
+</element>
+<element name="CompareMemStreams.Stream1">
+<short/>
+</element>
+<element name="CompareMemStreams.Stream2">
+<short/>
+</element>
+
+<element name="BinaryToLazarusResourceCode">
+<short/>
+<descr>
+<p>
+FPC is not optimized for building a constant string out of thousands of 
+lines. It needs huge amounts of memory and becomes very slow. Therefore big 
+files are split into several strings.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="BinaryToLazarusResourceCode.BinStream">
+<short/>
+</element>
+<element name="BinaryToLazarusResourceCode.ResStream">
+<short/>
+</element>
+<element name="BinaryToLazarusResourceCode.ResourceName">
+<short/>
+</element>
+<element name="BinaryToLazarusResourceCode.ResourceType">
+<short/>
+</element>
+
+<element name="LFMtoLRSfile">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LFMtoLRSfile.Result">
+<short/>
+</element>
+<element name="LFMtoLRSfile.LFMfilename">
+<short/>
+</element>
+
+<element name="LFMtoLRSstream">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LFMtoLRSstream.Result">
+<short/>
+</element>
+<element name="LFMtoLRSstream.LFMStream">
+<short/>
+</element>
+<element name="LFMtoLRSstream.LRSStream">
+<short/>
+</element>
+
+<element name="FindLFMClassName">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="FindLFMClassName.Result">
+<short/>
+</element>
+<element name="FindLFMClassName.LFMStream">
+<short/>
+</element>
+
+<element name="ReadLFMHeader">
+<short/>
+<descr>
+<p>
+<var>ReadLFMHeader</var> is an overloaded procedure used to read the header 
+for the LFM resource. The overloaded variants allow the LFM content to be read 
+from either a TStream instance or a string value.
+</p>
+<p>
+Values for the LFM resource type (optional), component name, and class name 
+are returned in the corresponding output variables.
+</p>
+<p>
+ReadLFMHeader is used to implement portions of the Lazarus IDE like the form 
+editor, project inspector, and source code file manager.
+</p>
+</descr>
+<version>
+Modified in LCL 3.0 to support use of unit name as a name space for classes in 
+a LFM resource.
+</version>
+<seealso/>
+</element>
+<element name="ReadLFMHeader.LFMStream">
+<short>
+TStream instance with the LFM content read in the routine.
+</short>
+</element>
+<element name="ReadLFMHeader.LFMType">
+<short>
+Output variable which returns the type token for a resource item.
+</short>
+</element>
+<element name="ReadLFMHeader.LFMComponentName">
+<short>
+Output variable which returns the component name token for a resource item.
+</short>
+</element>
+<element name="ReadLFMHeader.LFMClassName">
+<short>
+Output variable which returns the class name token for a resource item. Allows 
+unit name to be included as a name space for the class.
+</short>
+</element>
+<element name="ReadLFMHeader.LFMSource">
+<short>
+String type with the LFM content read in the routine.
+</short>
+</element>
+
+<element name="ReadLFMHeaderFromFile">
+<short>
+Reads the LFM header from the specified file name.
+</short>
+<descr/>
+<seealso>
+<link id="ReadLFMHeader"/>
+</seealso>
+</element>
+<element name="ReadLFMHeaderFromFile.Result">
+<short>
+Returns <b>True</b> if the resource header is successfully read from the file 
+and the LFM class name contains a non-empty value.
+</short>
+</element>
+<element name="ReadLFMHeaderFromFile.Filename">
+<short>
+File with the LFM content read in the routine.
+</short>
+</element>
+<element name="ReadLFMHeaderFromFile.LFMType">
+<short>
+Returns the resource type in the LFM header. Normally 'object'.
+</short>
+</element>
+<element name="ReadLFMHeaderFromFile.LFMComponentName">
+<short>
+Returns the component name read from the LFM header. Like 'Form1'.
+</short>
+</element>
+<element name="ReadLFMHeaderFromFile.LFMClassName">
+<short>
+Returns the class name read from the LFM header. Like 'TForm1', but may also 
+include a unit name space such as 'ns.unit2/TForm2'.
+</short>
+</element>
+
+<element name="CreateLFMFile">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CreateLFMFile.Result">
+<short/>
+</element>
+<element name="CreateLFMFile.AComponent">
+<short/>
+</element>
+<element name="CreateLFMFile.LFMStream">
+<short/>
+</element>
+
+<element name="TLRSStreamOriginalFormat">
+<short>
+Represent the LRS stream format offered as the original content for conversion 
+routines like LRSObjectToText and LRSObjectResToText.
+</short>
+<descr/>
+<seealso>
+<link id="LRSObjectToText"/>
+<link id="LRSObjectResToText"/>
+<link id="TestFormStreamFormat"/>
+<link id="FormDataToText"/>
+</seealso>
+</element>
+<element name="TLRSStreamOriginalFormat.sofUnknown">
+<short>
+Format for the LRS stream is unknown.
+</short>
+</element>
+<element name="TLRSStreamOriginalFormat.sofBinary">
+<short>
+LRS stream contains binary content.
+</short>
+</element>
+<element name="TLRSStreamOriginalFormat.sofText">
+<short>
+LRS stream contains the text content.
+</short>
+</element>
+
+<element name="LRSObjectBinaryToText">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LRSObjectBinaryToText.Input">
+<short/>
+</element>
+<element name="LRSObjectBinaryToText.Output">
+<short/>
+</element>
+<element name="LRSObjectTextToBinary.Links">
+<short/>
+</element>
+
+<element name="LRSObjectTextToBinary">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LRSObjectTextToBinary.Input">
+<short/>
+</element>
+<element name="LRSObjectTextToBinary.Output">
+<short/>
+</element>
+
+<element name="LRSObjectToText">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LRSObjectToText.Input">
+<short/>
+</element>
+<element name="LRSObjectToText.Output">
+<short/>
+</element>
+<element name="LRSObjectToText.OriginalFormat">
+<short/>
+</element>
+
+<element name="LRSObjectResourceToText">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LRSObjectResourceToText.Input">
+<short/>
+</element>
+<element name="LRSObjectResourceToText.Output">
+<short/>
+</element>
+
+<element name="LRSObjectResToText">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="LRSObjectResToText.Input">
+<short/>
+</element>
+<element name="LRSObjectResToText.Output">
+<short/>
+</element>
+<element name="LRSObjectResToText.OriginalFormat">
+<short/>
+</element>
+
+<element name="TestFormStreamFormat">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TestFormStreamFormat.Result">
+<short/>
+</element>
+<element name="TestFormStreamFormat.Stream">
+<short/>
+</element>
+
+<element name="FormDataToText">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="FormDataToText.FormStream">
+<short/>
+</element>
+<element name="FormDataToText.TextStream">
+<short/>
+</element>
+
+<element name="DefineRectProperty">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="DefineRectProperty.Filer">
+<short/>
+</element>
+<element name="DefineRectProperty.Name">
+<short/>
+</element>
+<element name="DefineRectProperty.ARect">
+<short/>
+</element>
+<element name="DefineRectProperty.DefaultRect">
+<short/>
+</element>
+
+<element name="ReverseBytes">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReverseBytes.p">
+<short/>
+</element>
+<element name="ReverseBytes.Count">
+<short/>
+</element>
+
+<element name="ReverseByteOrderInWords">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReverseByteOrderInWords.p">
+<short/>
+</element>
+<element name="ReverseByteOrderInWords.Count">
+<short/>
+</element>
+
+<element name="ConvertLRSExtendedToDouble">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ConvertLRSExtendedToDouble.Result">
+<short/>
+</element>
+<element name="ConvertLRSExtendedToDouble.p">
+<short/>
+</element>
+
+<element name="ConvertEndianBigDoubleToLRSExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ConvertEndianBigDoubleToLRSExtended.BigEndianDouble">
+<short/>
+</element>
+<element name="ConvertEndianBigDoubleToLRSExtended.LRSExtended">
+<short/>
+</element>
+
+<element name="ConvertLEDoubleToLRSExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ConvertLEDoubleToLRSExtended.LEDouble">
+<short/>
+</element>
+<element name="ConvertLEDoubleToLRSExtended.LRSExtended">
+<short/>
+</element>
+
+<element name="ReadLRSShortInt">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSShortInt.Result">
+<short/>
+</element>
+<element name="ReadLRSShortInt.s">
+<short/>
+</element>
+
+<element name="ReadLRSByte">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSByte.Result">
+<short/>
+</element>
+<element name="ReadLRSByte.s">
+<short/>
+</element>
+
+<element name="ReadLRSSmallInt">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSSmallInt.Result">
+<short/>
+</element>
+<element name="ReadLRSSmallInt.s">
+<short/>
+</element>
+
+<element name="ReadLRSWord">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSWord.Result">
+<short/>
+</element>
+<element name="ReadLRSWord.s">
+<short/>
+</element>
+
+<element name="ReadLRSInteger">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSInteger.Result">
+<short/>
+</element>
+<element name="ReadLRSInteger.s">
+<short/>
+</element>
+
+<element name="ReadLRSCardinal">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSCardinal.Result">
+<short/>
+</element>
+<element name="ReadLRSCardinal.s">
+<short/>
+</element>
+
+<element name="ReadLRSInt64">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSInt64.Result">
+<short/>
+</element>
+<element name="ReadLRSInt64.s">
+<short/>
+</element>
+
+<element name="ReadLRSSingle">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSSingle.Result">
+<short/>
+</element>
+<element name="ReadLRSSingle.s">
+<short/>
+</element>
+
+<element name="ReadLRSDouble">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSDouble.Result">
+<short/>
+</element>
+<element name="ReadLRSDouble.s">
+<short/>
+</element>
+
+<element name="ReadLRSExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSExtended.Result">
+<short/>
+</element>
+<element name="ReadLRSExtended.s">
+<short/>
+</element>
+
+<element name="ReadLRSCurrency">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSCurrency.Result">
+<short/>
+</element>
+<element name="ReadLRSCurrency.s">
+<short/>
+</element>
+
+<element name="ReadLRSWideString">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSWideString.Result">
+<short/>
+</element>
+<element name="ReadLRSWideString.s">
+<short/>
+</element>
+
+<element name="ReadLRSEndianLittleExtendedAsDouble">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSEndianLittleExtendedAsDouble.Result">
+<short/>
+</element>
+<element name="ReadLRSEndianLittleExtendedAsDouble.s">
+<short/>
+</element>
+
+<element name="ReadLRSValueType">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSValueType.Result">
+<short/>
+</element>
+<element name="ReadLRSValueType.s">
+<short/>
+</element>
+
+<element name="ReadLRSInt64MB">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="ReadLRSInt64MB.Result">
+<short/>
+</element>
+<element name="ReadLRSInt64MB.s">
+<short/>
+</element>
+
+<element name="WriteLRSSmallInt">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSSmallInt.s">
+<short/>
+</element>
+<element name="WriteLRSSmallInt.i">
+<short/>
+</element>
+
+<element name="WriteLRSWord">
+<short>
+Writes a Word value to the specified resource stream.
+</short>
+<descr>
+<p>
+For platforms where FPC_LITTLE_ENDIAN is defined, the Write method in the 
+Stream is called write the bytes in the word value. For Big Endian platforms, 
+the WriteLRSReversedWord routine is called to write the byte values to the 
+stream.
+</p>
+</descr>
+<seealso>
+<link id="WriteLRSReversedWord"/>
+</seealso>
+</element>
+<element name="WriteLRSWord.s">
+<short>
+TStream instance where the value is written.
+</short>
+</element>
+<element name="WriteLRSWord.w">
+<short>
+Word value written in the routine.
+</short>
+</element>
+
+<element name="WriteLRSInteger">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSInteger.s">
+<short/>
+</element>
+<element name="WriteLRSInteger.i">
+<short/>
+</element>
+
+<element name="WriteLRSCardinal">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSCardinal.s">
+<short/>
+</element>
+<element name="WriteLRSCardinal.c">
+<short/>
+</element>
+
+<element name="WriteLRSSingle">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSSingle.s">
+<short/>
+</element>
+<element name="WriteLRSSingle.si">
+<short/>
+</element>
+
+<element name="WriteLRSDouble">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSDouble.s">
+<short/>
+</element>
+<element name="WriteLRSDouble.d">
+<short/>
+</element>
+
+<element name="WriteLRSExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSExtended.s">
+<short/>
+</element>
+<element name="WriteLRSExtended.e">
+<short/>
+</element>
+
+<element name="WriteLRSInt64">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSInt64.s">
+<short/>
+</element>
+<element name="WriteLRSInt64.i">
+<short/>
+</element>
+
+<element name="WriteLRSCurrency">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSCurrency.s">
+<short/>
+</element>
+<element name="WriteLRSCurrency.c">
+<short/>
+</element>
+
+<element name="WriteLRSWideStringContent">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSWideStringContent.s">
+<short/>
+</element>
+<element name="WriteLRSWideStringContent.w">
+<short/>
+</element>
+
+<element name="WriteLRSInt64MB">
+<short>
+Writes an integer value, using the smallest possible representation.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSInt64MB.s">
+<short/>
+</element>
+<element name="WriteLRSInt64MB.Value">
+<short/>
+</element>
+
+<element name="WriteLRSReversedWord">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSReversedWord.s">
+<short/>
+</element>
+<element name="WriteLRSReversedWord.w">
+<short/>
+</element>
+
+<element name="WriteLRS4BytesReversed">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRS4BytesReversed.s">
+<short/>
+</element>
+<element name="WriteLRS4BytesReversed.p">
+<short/>
+</element>
+
+<element name="WriteLRS8BytesReversed">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRS8BytesReversed.s">
+<short/>
+</element>
+<element name="WriteLRS8BytesReversed.p">
+<short/>
+</element>
+
+<element name="WriteLRS10BytesReversed">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRS10BytesReversed.s">
+<short/>
+</element>
+<element name="WriteLRS10BytesReversed.p">
+<short/>
+</element>
+
+<element name="WriteLRSNull">
+<short>
+Writes the specified number of Null characters to a TStream instance.
+</short>
+<descr>
+<p>
+An ASCII NUL character has the value #0.
+</p>  
+</descr>
+<seealso/>
+</element>
+<element name="WriteLRSNull.s">
+<short>
+TStream instance where the Null characters are written in the routine.
+</short>
+</element>
+<element name="WriteLRSNull.Count">
+<short>
+Number of Null characters written to the stream. If 0 is specified, a single 
+null character is still written to the stream.
+</short>
+</element>
+
+<element name="WriteLRSEndianBigDoubleAsEndianLittleExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSEndianBigDoubleAsEndianLittleExtended.s">
+<short/>
+</element>
+<element name="WriteLRSEndianBigDoubleAsEndianLittleExtended.EndBigDouble">
+<short/>
+</element>
+
+<element name="WriteLRSDoubleAsExtended">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSDoubleAsExtended.s">
+<short/>
+</element>
+<element name="WriteLRSDoubleAsExtended.ADouble">
+<short/>
+</element>
+
+<element name="WriteLRSReversedWords">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="WriteLRSReversedWords.s">
+<short/>
+</element>
+<element name="WriteLRSReversedWords.p">
+<short/>
+</element>
+<element name="WriteLRSReversedWords.Count">
+<short/>
+</element>
+
+<element name="FloatToLFMStr">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="FloatToLFMStr.Result">
+<short/>
+</element>
+<element name="FloatToLFMStr.Value">
+<short/>
+</element>
+<element name="FloatToLFMStr.Precision">
+<short/>
+</element>
+<element name="FloatToLFMStr.Digits">
+<short/>
+</element>
+
+<element name="CompareLRPositionLinkWithLFMPosition">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CompareLRPositionLinkWithLFMPosition.Result">
+<short/>
+</element>
+<element name="CompareLRPositionLinkWithLFMPosition.Item1">
+<short/>
+</element>
+<element name="CompareLRPositionLinkWithLFMPosition.Item2">
+<short/>
+</element>
+
+<element name="CompareLRPositionLinkWithLRSPosition">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="CompareLRPositionLinkWithLRSPosition.Result">
+<short/>
+</element>
+<element name="CompareLRPositionLinkWithLRSPosition.Item1">
+<short/>
+</element>
+<element name="CompareLRPositionLinkWithLRSPosition.Item2">
+<short/>
+</element>
+
+<element name="RegisterPropertyToSkip">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="RegisterPropertyToSkip.PersistentClass">
+<short/>
+</element>
+<element name="RegisterPropertyToSkip.PropertyName">
+<short/>
+</element>
+<element name="RegisterPropertyToSkip.Note">
+<short/>
+</element>
+<element name="RegisterPropertyToSkip.HelpKeyWord">
+<short/>
+</element>
+
+<element name="Register">
+<short>Registers the component TLazComponentQueue.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="ReadError">
+<short>Raises an EReadError exception.</short>
+</element>
+
+<element name="PropValueError">
+<short>Raises an InvalidPropertyValue EReadError.</short>
+</element>
+
+</module>
+<!-- LResources -->
+</package>
+</fpdoc-descriptions>

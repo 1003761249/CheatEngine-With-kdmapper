@@ -1,0 +1,219 @@
+object SelectPropertiesForm: TSelectPropertiesForm
+  Left = 411
+  Height = 448
+  Top = 175
+  Width = 481
+  ActiveControl = LBProperties
+  Caption = 'Select properties'
+  ClientHeight = 448
+  ClientWidth = 481
+  Constraints.MinHeight = 403
+  Constraints.MinWidth = 350
+  OnClose = SelectPropertiesFormClose
+  OnCreate = SelectPropertiesFormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.7'
+  object PTop: TPanel
+    Left = 0
+    Height = 248
+    Top = 0
+    Width = 481
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 248
+    ClientWidth = 481
+    FullRepaint = False
+    TabOrder = 0
+    object PProperties: TPanel
+      Left = 243
+      Height = 248
+      Top = 0
+      Width = 238
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 248
+      ClientWidth = 238
+      FullRepaint = False
+      TabOrder = 0
+      object LProperties: TLabel
+        Left = 6
+        Height = 17
+        Top = 6
+        Width = 226
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = '&Properties'
+        FocusControl = LBProperties
+        Layout = tlCenter
+        ParentColor = False
+      end
+      object LBProperties: TListBox
+        Left = 6
+        Height = 213
+        Top = 29
+        Width = 226
+        Align = alClient
+        BorderSpacing.Around = 6
+        ItemHeight = 0
+        MultiSelect = True
+        OnDblClick = LBPropertiesDblClick
+        Sorted = True
+        TabOrder = 0
+      end
+    end
+    object PComponents: TPanel
+      Left = 0
+      Height = 248
+      Top = 0
+      Width = 239
+      Align = alLeft
+      BevelOuter = bvNone
+      Caption = 'PComponents'
+      ClientHeight = 248
+      ClientWidth = 239
+      FullRepaint = False
+      TabOrder = 1
+      object LComponents: TLabel
+        Left = 6
+        Height = 17
+        Top = 6
+        Width = 227
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = 'Co&mponents'
+        FocusControl = LBComponents
+        Layout = tlCenter
+        ParentColor = False
+      end
+      object LBComponents: TListBox
+        Left = 6
+        Height = 213
+        Top = 29
+        Width = 227
+        Align = alClient
+        BorderSpacing.Around = 6
+        ItemHeight = 0
+        OnSelectionChange = LBComponentsSelectionChange
+        Sorted = True
+        TabOrder = 0
+      end
+    end
+    object VSplitter: TSplitter
+      Left = 239
+      Height = 248
+      Top = 0
+      Width = 4
+    end
+  end
+  object HSplitter: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 4
+    Top = 248
+    Width = 481
+    Align = alTop
+    Beveled = True
+    ResizeAnchor = akTop
+  end
+  object PBottom: TPanel
+    Left = 0
+    Height = 196
+    Top = 252
+    Width = 481
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 196
+    ClientWidth = 481
+    Constraints.MinHeight = 170
+    FullRepaint = False
+    TabOrder = 1
+    object LLBSelected: TLabel
+      Left = 10
+      Height = 17
+      Top = 3
+      Width = 130
+      BorderSpacing.Around = 6
+      Caption = '&Selected Properties'
+      FocusControl = LBSelected
+      ParentColor = False
+    end
+    object LBSelected: TListBox
+      AnchorSideLeft.Control = PBottom
+      AnchorSideTop.Control = LLBSelected
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BAdd
+      AnchorSideBottom.Control = ButtonPanel1
+      Left = 6
+      Height = 114
+      Top = 26
+      Width = 352
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Around = 6
+      ItemHeight = 0
+      MultiSelect = True
+      TabOrder = 0
+    end
+    object ButtonPanel1: TButtonPanel
+      Left = 6
+      Height = 44
+      Top = 146
+      Width = 469
+      OKButton.Name = 'OKButton'
+      OKButton.DefaultCaption = True
+      HelpButton.Name = 'HelpButton'
+      HelpButton.DefaultCaption = True
+      CloseButton.Name = 'CloseButton'
+      CloseButton.DefaultCaption = True
+      CancelButton.Name = 'CancelButton'
+      CancelButton.DefaultCaption = True
+      TabOrder = 1
+      ShowButtons = [pbOK, pbCancel, pbHelp]
+    end
+    object BAdd: TBitBtn
+      AnchorSideTop.Control = LBSelected
+      AnchorSideRight.Control = PBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 364
+      Height = 28
+      Top = 26
+      Width = 111
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 6
+      Caption = '&Add'
+      OnClick = BAddClick
+      TabOrder = 2
+    end
+    object BDelete: TBitBtn
+      AnchorSideLeft.Control = BAdd
+      AnchorSideTop.Control = BAdd
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BAdd
+      AnchorSideRight.Side = asrBottom
+      Left = 364
+      Height = 28
+      Top = 60
+      Width = 111
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 6
+      Caption = '&Delete'
+      OnClick = BDeleteClick
+      TabOrder = 3
+    end
+    object BClear: TBitBtn
+      AnchorSideLeft.Control = BDelete
+      AnchorSideTop.Control = BDelete
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BDelete
+      AnchorSideRight.Side = asrBottom
+      Left = 364
+      Height = 28
+      Top = 94
+      Width = 111
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 6
+      Caption = 'C&lear'
+      OnClick = BClearClick
+      TabOrder = 4
+    end
+  end
+end

@@ -1,0 +1,37 @@
+{ This unit was automatically created by update_allunits }
+unit AllLCLIntfUnits;
+interface
+uses
+  gtk1def{%H-},
+  gtk1int{%H-},
+  gtk1wsprivate{%H-},
+  gtkdebug{%H-},
+  gtkdef{%H-},
+  gtkextra{%H-},
+  gtkfontcache{%H-},
+  gtkglobals{%H-},
+  gtkint{%H-},
+  gtkmsgqueue{%H-},
+  gtkproc{%H-},
+  gtkthemes{%H-},
+  gtkwinapiwindow{%H-},
+  gtkwsbuttons{%H-},
+  gtkwscalendar{%H-},
+  gtkwschecklst{%H-},
+  gtkwscomctrls{%H-},
+  gtkwscontrols{%H-},
+  gtkwsdialogs{%H-},
+  gtkwsextctrls{%H-},
+  gtkwsextdlgs{%H-},
+  gtkwsfactory{%H-},
+  gtkwsforms{%H-},
+  gtkwsgrids{%H-},
+  gtkwsimglist{%H-},
+  gtkwsmenus{%H-},
+  gtkwspairsplitter{%H-},
+  gtkwsprivate{%H-},
+  gtkwsspin{%H-},
+  gtkwsstdctrls{%H-},
+  interfaces{%H-};
+implementation
+end.

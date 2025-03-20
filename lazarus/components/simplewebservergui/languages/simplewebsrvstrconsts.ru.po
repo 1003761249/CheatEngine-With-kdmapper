@@ -1,0 +1,326 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: simplewebsrvstrconsts.rsswadd
+msgid "Add"
+msgstr "Добавить"
+
+#: simplewebsrvstrconsts.rsswaddcustomserver
+msgid "Add Custom Server"
+msgstr "Добавить пользовательский сервер"
+
+#: simplewebsrvstrconsts.rsswaddextracommandlineoptionsforthecommandwhichstarts
+msgid "Add extra command-line options for the command which starts the webserver."
+msgstr "Добавить дополнительные параметры в команду запуска веб-сервера."
+
+#: simplewebsrvstrconsts.rsswaddlocation
+msgid "Add Location"
+msgstr "Добавить расположение"
+
+#: simplewebsrvstrconsts.rsswaddsimplewebserverlocation
+msgid "Add Simple Web Server Location"
+msgstr "Добавить расположение на простом веб-сервере"
+
+#: simplewebsrvstrconsts.rsswanarbitrarynamefortheurlsubfolder
+msgid "An arbitrary name for the URL subfolder"
+msgstr "Произвольное имя для подкаталога в адресе"
+
+#: simplewebsrvstrconsts.rsswbindingofsocketfailed
+msgid "Binding of socket failed"
+msgstr "Не удалось привязать сокет"
+
+#: simplewebsrvstrconsts.rsswbrowsertoopenhtmlpagemacroswsbrowser
+msgid "Browser to open HTML page, macro $(SWSBrowser)"
+msgstr "Браузер для открытия страницы HTML, макрос $(SWSBrowser)"
+
+#: simplewebsrvstrconsts.rsswcannotfindbrowsersee
+msgid "Cannot find browser. See"
+msgstr "Невозможно найти браузер. Смотрите"
+
+#: simplewebsrvstrconsts.rsswcommandlineparameters
+msgid "Command line parameters"
+msgstr "Параметры командной строки"
+
+#: simplewebsrvstrconsts.rsswconfigure
+msgid "Configure"
+msgstr "Настроить"
+
+#: simplewebsrvstrconsts.rsswcopylocation
+msgid "Copy Location"
+msgstr "Копировать расположение"
+
+#: simplewebsrvstrconsts.rsswcopyorigin
+msgid "Copy Origin"
+msgstr "Копировать происхождение"
+
+#: simplewebsrvstrconsts.rsswcopyurl
+msgid "Copy URL"
+msgstr "Копировать адрес URL"
+
+#: simplewebsrvstrconsts.rsswcopyworkingdirectorypath
+msgid "Copy Working Directory Path"
+msgstr "Копировать путь к рабочему каталогу"
+
+#: simplewebsrvstrconsts.rsswcustomserver
+msgid "Custom Server"
+msgstr "Пользовательский сервер"
+
+#: simplewebsrvstrconsts.rsswdelete
+msgid "Delete?"
+msgstr "Удалить?"
+
+#: simplewebsrvstrconsts.rsswdelete2
+msgid "Delete"
+msgstr "Удалить"
+
+#: simplewebsrvstrconsts.rsswdeletelocation
+#, object-pascal-format
+msgid "Delete location \"%s\"?"
+msgstr "Удалить расположение \"%s\"?"
+
+#: simplewebsrvstrconsts.rsswdeleteserverat
+#, object-pascal-format
+msgid "Delete server at \"%s\"?"
+msgstr "Удалить сервер, расположенный в \"%s\"?"
+
+#: simplewebsrvstrconsts.rsswdirectorynotfound
+msgid "Directory not found."
+msgstr "Каталог не найден."
+
+#: simplewebsrvstrconsts.rsswerror
+msgid "Error"
+msgstr "Ошибка"
+
+#: simplewebsrvstrconsts.rsswerrorcheckingwhichprocessusestcpport
+#, object-pascal-format
+msgid "Error checking which process uses TCP port %s:"
+msgstr "Ошибка при поиске процесса, использующего порт %s:"
+
+#: simplewebsrvstrconsts.rsswerrorcreatingdirectory
+msgid "Error creating directory"
+msgstr "Ошибка при создании каталога"
+
+#: simplewebsrvstrconsts.rsswerrorfindingfreetcpport
+msgid "Error finding free TCP port:"
+msgstr "Ошибка при поиске свободного порта TCP:"
+
+#: simplewebsrvstrconsts.rsswerrorkillingprocess
+#, object-pascal-format
+msgid "Error killing process %s:"
+msgstr "Ошибка при принудительном завершении процесса %s:"
+
+#: simplewebsrvstrconsts.rsswerrorwriting
+#, object-pascal-format
+msgid "Error writing \"%s\":"
+msgstr "Ошибка при записи \"%s\":"
+
+#: simplewebsrvstrconsts.rsswexecutable
+msgid "Executable"
+msgstr "Исполнимый файл"
+
+#: simplewebsrvstrconsts.rsswfilenotfound
+#, object-pascal-format
+msgid "File not found: \"%s\""
+msgstr "Файл не найден: \"%s\""
+
+#: simplewebsrvstrconsts.rsswinvalidmacrosee
+msgid "Invalid macro. See"
+msgstr "Некорректный макрос. Смотрите"
+
+#: simplewebsrvstrconsts.rsswinvalidport
+msgid "Invalid Port."
+msgstr "Некорректный порт."
+
+#: simplewebsrvstrconsts.rsswkillpid
+#, object-pascal-format
+msgid "Kill PID %s"
+msgstr "Завершить принудительно процесс с PID %s"
+
+#: simplewebsrvstrconsts.rsswkillprocess
+msgid "Kill process?"
+msgstr "Завершить процесс принудительно?"
+
+#: simplewebsrvstrconsts.rsswlocaldirectory
+msgid "Local Directory"
+msgstr "Локальный каталог"
+
+#: simplewebsrvstrconsts.rsswlocaldirectorynotfound
+msgid "Local directory not found:"
+msgstr "Локальный каталог не найден:"
+
+#: simplewebsrvstrconsts.rsswlocation
+msgid "Location"
+msgstr "Расположение"
+
+#: simplewebsrvstrconsts.rsswlocationalreadyused
+msgid "Location already used."
+msgstr "Расположение уже используется."
+
+#: simplewebsrvstrconsts.rsswmissingcontroller
+msgid "missing controller"
+msgstr "отсутствует контроллер"
+
+#: simplewebsrvstrconsts.rsswmissinglocaldirectory
+msgid "Missing local directory."
+msgstr "Отсутствует локальный каталог."
+
+#: simplewebsrvstrconsts.rsswmissinglocation
+msgid "Missing Location."
+msgstr "Отсутствует расположение."
+
+#: simplewebsrvstrconsts.rsswmissingserverexecutable
+msgid "Missing server executable."
+msgstr "Отсутствует исполнимый файл сервера."
+
+#: simplewebsrvstrconsts.rsswnote
+msgid "Note"
+msgstr "Примечание"
+
+#: simplewebsrvstrconsts.rssworigin
+msgid "Origin"
+msgstr "Происхождение"
+
+#: simplewebsrvstrconsts.rsswparameterspleaseusemacroport
+msgid "Parameters (please use macro $(port))"
+msgstr "Параметры (используйте макрос $(port))"
+
+#: simplewebsrvstrconsts.rsswport
+msgid "Port"
+msgstr "Порт"
+
+#: simplewebsrvstrconsts.rsswportalreadyused
+msgid "Port already used."
+msgstr "Порт уже используется."
+
+#: simplewebsrvstrconsts.rsswsaddress
+msgid "Address"
+msgstr "Адрес"
+
+#: simplewebsrvstrconsts.rsswsbindany
+msgid "Bind Any"
+msgstr "Привязать все"
+
+#: simplewebsrvstrconsts.rsswselectdirectory
+msgid "Select Directory"
+msgstr "Выберите каталог"
+
+#: simplewebsrvstrconsts.rsswserverdirectorynotfound
+#, object-pascal-format
+msgid "Server directory \"%s\" not found."
+msgstr "Каталог сервера \"%s\" не найден."
+
+#: simplewebsrvstrconsts.rsswserverexecutablenotfound
+msgid "Server executable not found."
+msgstr "Исполнимый файл сервера не найден."
+
+#: simplewebsrvstrconsts.rsswserverexecutablenotfoundinpath
+#, object-pascal-format
+msgid "Server executable \"%s\" not found in PATH."
+msgstr "Исполнимый файл сервера \"%s\" не найден в PATH."
+
+#: simplewebsrvstrconsts.rsswserverexecutablenotfoundinpath2
+msgid "Server executable not found in PATH."
+msgstr "Исполнимый файл сервера не найден в PATH."
+
+#: simplewebsrvstrconsts.rsswserverexeisnotexecutable
+#, object-pascal-format
+msgid "Server exe is not executable: \"%s\""
+msgstr "Файл сервера не является исполнимым: \"%s\""
+
+#: simplewebsrvstrconsts.rsswserverexeisnotexecutable2
+msgid "Server exe is not executable."
+msgstr "Файл сервера не является исполнимым."
+
+#: simplewebsrvstrconsts.rsswserverextracommandlineoptionsoneperline
+msgid "Server extra command-line options (one per line)"
+msgstr "Дополнительные параметры команды запуска сервера (по одному на строку)"
+
+#: simplewebsrvstrconsts.rsswsimplewebserveraddress
+msgid "Simple Web Server Address"
+msgstr "Адрес простого веб-сервера"
+
+#: simplewebsrvstrconsts.rsswsimplewebserverexecutable
+msgid "Simple Web Server Executable"
+msgstr "Исполнимый файл простого веб-сервера"
+
+#: simplewebsrvstrconsts.rsswsimplewebserverport
+msgid "Simple Web Server Port"
+msgstr "Порт простого веб-сервера"
+
+#: simplewebsrvstrconsts.rsswspathofcompileserver
+msgid "Path of compileserver, macro $(SWSExe)"
+msgstr "Путь к серверу компиляции, макрос $(SWSExe)"
+
+#: simplewebsrvstrconsts.rsswsportmacro
+msgctxt "simplewebsrvstrconsts.rsswsportmacro"
+msgid "Port, macro $(SWSPort)"
+msgstr "Порт, макрос $(SWSPort)"
+
+#: simplewebsrvstrconsts.rsswstartserver
+msgid "Start Server"
+msgstr "Запустить сервер"
+
+#: simplewebsrvstrconsts.rsswstitle
+msgid "Simple Web Server"
+msgstr "Простой веб-сервер"
+
+#: simplewebsrvstrconsts.rsswstopserver
+msgid "Stop Server"
+msgstr "Остановить сервер"
+
+#: simplewebsrvstrconsts.rsswsuserorigin
+msgid "User"
+msgstr "Пользователь"
+
+#: simplewebsrvstrconsts.rsswtcpport102465535youcanusemacroportforbelowparams
+msgid "TCP Port 1024..65535 (you can use macro $(port) for below params)"
+msgstr "Порт TCP из диапазона 1024..65535 (можно использовать макрос $(port) в параметрах ниже)"
+
+#: simplewebsrvstrconsts.rsswthefollowingprocessalreadylistens
+msgid "The following process already listens:"
+msgstr "Его уже занял следующий процесс:"
+
+#: simplewebsrvstrconsts.rsswthereisalreadyaserveronportoriginpath
+#, object-pascal-format
+msgid "There is already a server on port %s:%sOrigin: %sPath: %s"
+msgstr "На порту %s уже имеется сервер:%sПроисхождение: %sПуть: %s"
+
+#: simplewebsrvstrconsts.rsswtoolsoptionssimplewebserverbrowser
+msgid "Tools / Options / Simple Web Server / Browser"
+msgstr "Сервис / Параметры / Простой веб-сервер / Браузер"
+
+#: simplewebsrvstrconsts.rsswtryanotherport
+msgid "Try another port"
+msgstr "Попробовать другой порт"
+
+#: simplewebsrvstrconsts.rsswunabletoaddlocation
+msgid "Unable to add location:"
+msgstr "Не удалось добавить расположение:"
+
+#: simplewebsrvstrconsts.rsswusethisbrowserwhenopeningtheurlorhtmlfileofawebbro
+msgid "Use this browser when opening the URL or HTML file of a web browser project"
+msgstr "Браузер для открытия предназначенного для него проекта по указанному адресу либо из файла HTML"
+
+#: simplewebsrvstrconsts.rsswworkingdirectory
+msgid "Working Directory"
+msgstr "Рабочий каталог"
+
+#: simplewebsrvstrconsts.rsswworkingdirectoryondiskusuallywheretheserverfetches
+msgid "Working directory on disk, usually where the server fetches files from"
+msgstr "Рабочий каталог на диске, из которого обычно сервер читает файлы"
+
+#: simplewebsrvstrconsts.rsswwrongcompileserverexe
+#, object-pascal-format
+msgid "Wrong compileserver exe: %s"
+msgstr "Некорректный исполнимый файл сервера компиляции: %s"
+

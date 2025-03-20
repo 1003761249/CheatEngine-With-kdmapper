@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lazutils">
+<!--
+====================================================================
+Laz_XMLWrite
+====================================================================
+-->
+<module name="Laz_XMLWrite">
+<short>Provides routines used to write XML documents or nodes.</short>
+<descr>
+<p>
+<file>laz_xmlwrite.pas</file> is part of the <file>LazUtils</file> package.
+</p>
+</descr>
+
+<element name="Classes"/>
+<element name="laz2_DOM"/>
+<element name="laz2_XMLWrite"/>
+
+<element name="WriteXML" link="laz2_XMLWrite.WriteXML"/>
+<element name="WriteXML.Element" link="laz2_XMLWrite.WriteXML.Element"/>
+<element name="WriteXML.AFileName" link="laz2_XMLWrite.WriteXML.AFileName"/>
+<element name="WriteXML.AStream" link="laz2_XMLWrite.WriteXML.AStream"/>
+
+<element name="WriteXMLFile" link="laz2_XMLWrite.WriteXMLFile"/>
+<element name="WriteXMLFile.doc" link="laz2_XMLWrite.WriteXMLFile.doc"/>
+<element name="WriteXMLFile.AFileName" link="laz2_XMLWrite.WriteXMLFile.AFileName"/>
+<element name="WriteXMLFile.AFile" link="laz2_XMLWrite.WriteXMLFile.AFile"/>
+<element name="WriteXMLFile.AStream" link="laz2_XMLWrite.WriteXMLFile.AStream"/>
+
+</module>
+<!-- Laz_XMLWrite -->
+
+</package>
+</fpdoc-descriptions>

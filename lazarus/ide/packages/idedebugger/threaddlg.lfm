@@ -1,0 +1,78 @@
+object ThreadsDlg: TThreadsDlg
+  Left = 345
+  Height = 240
+  Top = 428
+  Width = 774
+  BorderStyle = bsSizeToolWin
+  Caption = 'Threads'
+  ClientHeight = 240
+  ClientWidth = 774
+  LCLVersion = '2.3.0.0'
+  object lvThreads: TListView
+    Left = 0
+    Height = 214
+    Top = 26
+    Width = 774
+    Align = alClient
+    Columns = <    
+      item
+        Width = 20
+      end    
+      item
+        Caption = 'Id'
+      end    
+      item
+        Caption = 'TargetId'
+        Width = 100
+      end    
+      item
+        Caption = 'State'
+      end    
+      item
+        Caption = 'Source'
+        Width = 150
+      end    
+      item
+        Caption = 'Line'
+      end    
+      item
+        Caption = 'Function'
+        Width = 300
+      end>
+    ReadOnly = True
+    RowSelect = True
+    SortType = stText
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnClick = lvThreadsClick
+    OnDblClick = lvThreadsDblClick
+    OnSelectItem = lvThreadsSelectItem
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 774
+    Caption = 'ToolBar1'
+    ShowCaptions = True
+    TabOrder = 1
+    object tbCurrent: TToolButton
+      Left = 1
+      Top = 2
+      Caption = 'tbCurrent'
+      OnClick = tbCurrentClick
+    end
+    object tbGoto: TToolButton
+      Left = 60
+      Top = 2
+      Caption = 'tbGoto'
+      OnClick = lvThreadsDblClick
+    end
+    object tbSuspend: TToolButton
+      Left = 105
+      Top = 2
+      Caption = 'tbSuspend'
+      OnClick = tbSuspendClick
+    end
+  end
+end

@@ -1,0 +1,83 @@
+object PackageI18NOptionsFrame: TPackageI18NOptionsFrame
+  Left = 0
+  Height = 322
+  Top = 0
+  Width = 551
+  ClientHeight = 322
+  ClientWidth = 551
+  TabOrder = 0
+  DesignLeft = 452
+  DesignTop = 255
+  object I18NGroupBox: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = EnableI18NCheckBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 126
+    Top = 28
+    Width = 551
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 6
+    Caption = 'i18n Options'
+    ClientHeight = 96
+    ClientWidth = 547
+    TabOrder = 1
+    object PoOutDirLabel: TLabel
+      AnchorSideLeft.Control = I18NGroupBox
+      AnchorSideTop.Control = I18NGroupBox
+      Left = 6
+      Height = 18
+      Top = 6
+      Width = 128
+      BorderSpacing.Around = 6
+      Caption = 'PO Output Directory:'
+      ParentColor = False
+    end
+    object PoForFormsCheckBox: TCheckBox
+      AnchorSideLeft.Control = I18NGroupBox
+      AnchorSideTop.Control = POOutDirEdit
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 22
+      Top = 68
+      Width = 162
+      BorderSpacing.Around = 6
+      Caption = 'PoForFormsCheckBox'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object POOutDirEdit: TEditButton
+      AnchorSideLeft.Control = I18NGroupBox
+      AnchorSideTop.Control = PoOutDirLabel
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 6
+      Height = 32
+      Top = 30
+      Width = 536
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Around = 6
+      ButtonWidth = 25
+      MaxLength = 0
+      NumGlyphs = 1
+      OnButtonClick = POOutDirButtonClick
+      PasswordChar = #0
+      TabOrder = 0
+    end
+  end
+  object EnableI18NCheckBox: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 0
+    Height = 22
+    Top = 0
+    Width = 99
+    Caption = 'Enable i18n'
+    OnChange = EnableI18NCheckBoxChange
+    TabOrder = 0
+  end
+end

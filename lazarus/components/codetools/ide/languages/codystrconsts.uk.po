@@ -1,0 +1,898 @@
+# Olexandr Pylypchuk <pilipchukap@rambler.ru>, 2016, 2017, 2019.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-09-20 21:01+0200\n"
+"Last-Translator: Olexandr Pylypchuk <lxlalexlxl@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: codystrconsts.crsaddassignmethod
+msgid "Add Assign Method"
+msgstr "Додати метод Assign"
+
+#: codystrconsts.crsaddassignmethod2
+msgid "Add Assign Method ..."
+msgstr "Додати метод Assign ..."
+
+#: codystrconsts.crsaddawithblock
+msgid "Add a \"With\" Block"
+msgstr "Додати блок \"With\""
+
+#: codystrconsts.crsaddunittoimplementationusessection
+msgctxt "codystrconsts.crsaddunittoimplementationusessection"
+msgid "Add unit to implementation uses section"
+msgstr "Додати модуль до секції uses в implementation"
+
+#: codystrconsts.crsaddwithblock
+msgid "Add \"With\" Block"
+msgstr "Додати блок \"With\""
+
+#: codystrconsts.crsalreadydefined
+msgid "Already defined"
+msgstr "Вже визначений"
+
+#: codystrconsts.crsalreadydefinedat
+#, object-pascal-format
+msgid "Already defined at %s"
+msgstr "Вже визначений в %s"
+
+#: codystrconsts.crsandmoreidentifiers
+#, object-pascal-format
+msgid "... and %s more identifiers"
+msgstr "... і ще %s ідентифікатор(ів)"
+
+#: codystrconsts.crsany
+msgid "Any"
+msgstr "Будь-який"
+
+#: codystrconsts.crsawindowforthelazarusideitcanbedockedlikethecodeexp
+msgid "A window for the Lazarus IDE. It can be docked like the Code Explorer or the FPDoc Editor. This also creates a menu item in the View menu and a short cut."
+msgstr "Вікно для ІСР Lazarus. Його можна прикріпити, як Оглядач коду або Редактор FPDoc. Також буде створено елемент у меню Перегляд і сполучення клавіш."
+
+#: codystrconsts.crsbtncancel
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: codystrconsts.crsbtnok
+msgid "&OK"
+msgstr "&Гаразд"
+
+#: codystrconsts.crsbyfpccfg
+msgid "by fpc.cfg"
+msgstr "в fpc.cfg"
+
+#: codystrconsts.crscamaddassignmethodtoclass
+#, object-pascal-format
+msgid "Add Assign method to class %s"
+msgstr "Додати метод Assign до класу %s"
+
+#: codystrconsts.crscamcallinherited
+msgid "Call inherited"
+msgstr "Викликати успадкований"
+
+#: codystrconsts.crscamcallinheritedonlyifwrongclass
+msgid "Call inherited only if wrong class"
+msgstr "Викликати успадкований лише для невірного класу"
+
+#: codystrconsts.crscamcursorisnotinapascalclassdeclaration
+msgid "cursor is not in a pascal class declaration"
+msgstr "курсор не знаходиться в оголошенні класу Паскаля"
+
+#: codystrconsts.crscamexistsalready
+msgid "exists already"
+msgstr "вже існує"
+
+#: codystrconsts.crscaminherited
+msgid "Inherited:"
+msgstr "Успадкований:"
+
+#: codystrconsts.crscaminvalididentifier
+msgid "invalid identifier"
+msgstr "невірний ідентифікатор"
+
+#: codystrconsts.crscammethod
+msgid "Method:"
+msgstr "Метод:"
+
+#: codystrconsts.crscammethodname
+msgid "Method name:"
+msgstr "Ім'я методу:"
+
+#: codystrconsts.crscamnewmethod
+msgid "New method:"
+msgstr "Новий метод:"
+
+#: codystrconsts.crscamoverride
+msgid "Override"
+msgstr "Перекрити"
+
+#: codystrconsts.crscamparametername
+msgid "Parameter name:"
+msgstr "Ім'я параметру:"
+
+#: codystrconsts.crscamparametertype
+msgid "Parameter type:"
+msgstr "Тип параметру:"
+
+#: codystrconsts.crscampleasepositionthecursorofthesourceeditorinapascalc
+msgid "Please position the cursor of the source editor in a pascal class declaration before invoking \"Add Assign method\"."
+msgstr "Перед викликом \"Додати метод Assign\" встановіть курсор редактора сирцевого коду на оголошенні класу Паскаля."
+
+#: codystrconsts.crscamprivate
+msgid "private"
+msgstr "приватний"
+
+#: codystrconsts.crscamproperty
+#, object-pascal-format
+msgid "%s property"
+msgstr "%s властивість"
+
+#: codystrconsts.crscamprotected
+msgid "protected"
+msgstr "захищений"
+
+#: codystrconsts.crscampublic
+msgid "public"
+msgstr "публічний"
+
+#: codystrconsts.crscampublished
+msgid "published"
+msgstr "опублікований"
+
+#: codystrconsts.crscamselectmemberstoassign
+msgid "Select members to assign:"
+msgstr "Вибір членів для присвоєння:"
+
+#: codystrconsts.crscamthereisnoinheritedmethod
+msgid "There is no inherited method."
+msgstr "Немає успадкованого методу."
+
+#: codystrconsts.crscamvar
+#, object-pascal-format
+msgid "%s var"
+msgstr "%s змінна"
+
+#: codystrconsts.crscamvisibility
+msgid "?visibility?"
+msgstr "?видимість?"
+
+#: codystrconsts.crscamwrittenbyproperty
+#, object-pascal-format
+msgid "%s, written by property %s"
+msgstr "%s, записаний властивістю %s"
+
+#: codystrconsts.crscaretoutsideofcode
+msgid "Caret outside of code"
+msgstr "Каретка за межами коду"
+
+#: codystrconsts.crscheetaheditor
+msgid "Cheetah Editor"
+msgstr "Гепардовий редактор"
+
+#: codystrconsts.crsclose
+msgid "&Close"
+msgstr "&Закрити"
+
+#: codystrconsts.crscloseotherpackageandopennew
+msgid "Close other package and open new"
+msgstr "Закрити інший пакунок і створити новий"
+
+#: codystrconsts.crscodebuffers
+msgid "CodeBuffers"
+msgstr "Буфери коду"
+
+#: codystrconsts.crscodenodeinformation
+msgid "Code Node Information"
+msgstr "Інформація про вузол коду"
+
+#: codystrconsts.crscodyfindoverloads
+msgid "Cody - Find Overloads"
+msgstr "Cody - Знайти перевантажені"
+
+#: codystrconsts.crscodyidentifierdictionary
+msgid "Identifier Dictionary"
+msgstr "Словник ідентифікаторів"
+
+#: codystrconsts.crscogeneral
+msgctxt "codystrconsts.crscogeneral"
+msgid "General"
+msgstr "Загальні"
+
+#: codystrconsts.crscompatibility
+msgid "Compatibility"
+msgstr "Сумісність"
+
+#: codystrconsts.crscompatible
+msgid "compatible"
+msgstr "сумісний"
+
+#: codystrconsts.crsconfigurenewidewindow
+msgid "Configure new IDE window"
+msgstr "Налаштувати нове вікно ІСР"
+
+#: codystrconsts.crscontains
+msgid "Contains"
+msgstr "Містить"
+
+#: codystrconsts.crscontinue
+msgid "Continue"
+msgstr "Продовжити"
+
+#: codystrconsts.crscopydeclarationtoclipboard
+msgid "Copy declaration to Clipboard"
+msgstr "Копіювати оголошення в буфер"
+
+#: codystrconsts.crscount
+msgid "Count"
+msgstr "Кількість"
+
+#: codystrconsts.crscousespath
+msgctxt "codystrconsts.crscousespath"
+msgid "Uses path"
+msgstr "Шлях Uses"
+
+#: codystrconsts.crscuallfiles
+#, object-pascal-format
+msgid "%s|All files (%s)|%s"
+msgstr "%s|Всі файли (%s)|%s"
+
+#: codystrconsts.crscupascalpaspppaspp
+msgid "Pascal (*.pas;*.pp)|*.pas;*.pp"
+msgstr "Pascal (*.pas;*.pp)|*.pas;*.pp"
+
+#: codystrconsts.crscupleaseplacethecursorofthesourceeditorinanimplement
+msgid "Please place the cursor of the source editor in an implementation of an overridden method."
+msgstr "Встановіть курсор редактора сирцевого коду на реалізації перевизначеного методу."
+
+#: codystrconsts.crscuselectfiletoinsertatcursor
+msgid "Select file to insert at cursor"
+msgstr "Вибір файлу для вставки в місці курсора"
+
+#: codystrconsts.crscutdeclarationtoclipboard
+msgid "Cut declaration to Clipboard"
+msgstr "Вирізати оголошення в буфер"
+
+#: codystrconsts.crscuthefileseemstobeabinaryproceed
+msgid "The file seems to be a binary. Proceed?"
+msgstr "Ймовірно файл є двійковим. Продовжити?"
+
+#: codystrconsts.crscuunabletoloadfile
+#, object-pascal-format
+msgid "Unable to load file \"%s\"%s%s"
+msgstr "Не можу завантажити файл \"%s\"%s%s"
+
+#: codystrconsts.crscuwarning
+msgid "Warning"
+msgstr "Попередження"
+
+#: codystrconsts.crscwerror
+msgid "Error"
+msgstr "Помилка"
+
+#: codystrconsts.crscwpleaseplacethecursorofthesourceeditoronawithvariab
+msgid "Please place the cursor of the source editor on a With variable."
+msgstr "Встановіть курсор редактора сирцевого коду на на змінній With."
+
+#: codystrconsts.crsdeclarevariable
+msgid "Declare Variable"
+msgstr "Оголосити змінну"
+
+#: codystrconsts.crsdeclarevariable2
+msgid "Declare Variable ..."
+msgstr "Оголосити змінну ..."
+
+#: codystrconsts.crsdeclarevariable3
+#, object-pascal-format
+msgid "Declare variable \"%s\""
+msgstr "Оголосити змінну \"%s\""
+
+#: codystrconsts.crsdeletepackage
+msgid "Delete package?"
+msgstr "Видалити пакунок?"
+
+#: codystrconsts.crsdeleteunit
+msgid "Delete unit?"
+msgstr "Видалити модуль?"
+
+#: codystrconsts.crsdistance
+msgid "Distance"
+msgstr "Відстань"
+
+#: codystrconsts.crsdvisakeyword
+#, object-pascal-format
+msgid "\"%s\" is a keyword."
+msgstr "\"%s\" це ключове слово."
+
+#: codystrconsts.crserror
+#, object-pascal-format
+msgid "Error: %s"
+msgstr "Помилка: %s"
+
+#: codystrconsts.crserrorcursorisnotinaprojectunit
+msgid "Error: cursor is not in a project unit"
+msgstr "Помилка: курсор знаходиться не в модулі проєкту"
+
+#: codystrconsts.crserrorneedsourceeditoratprocedurecallordeclaration
+msgid "Error: Need source editor at procedure call or declaration"
+msgstr "Помилка: курсор в редакторі слід встановити на виклику або оголошенні процедури"
+
+#: codystrconsts.crsexact
+msgid "exact"
+msgstr "точна відповідність"
+
+#: codystrconsts.crsexplodeawithblock
+msgid "Explode a \"With\" Block"
+msgstr "Зруйнувати блок \"With\""
+
+#: codystrconsts.crsexpression
+msgid "Expression"
+msgstr "Вираз"
+
+#: codystrconsts.crsextendunitpath
+msgid "Extend unit path"
+msgstr "Розширити шлях до модулів"
+
+#: codystrconsts.crsfile
+msgid "File"
+msgstr "Файл"
+
+#: codystrconsts.crsfiledoesnotexistanymore
+#, object-pascal-format
+msgid "File \"%s\" does not exist anymore."
+msgstr "Файл \"%s\" більше не існує."
+
+#: codystrconsts.crsfilenotfound
+msgid "File not found"
+msgstr "Файл не знайдено"
+
+#: codystrconsts.crsfilereaderror
+msgid "File read error"
+msgstr "Помилка читання файлу"
+
+#: codystrconsts.crsfilter
+msgid "(Filter)"
+msgstr "(Фільтр)"
+
+#: codystrconsts.crsfilter2
+msgid "Filter"
+msgstr "Фільтр"
+
+#: codystrconsts.crsfindgdbbacktraceline
+msgid "Find GDB backtrace line"
+msgstr "Знайти рядок зворотного трасування GDB"
+
+#: codystrconsts.crsfindproceduremethodoverloads
+msgid "Find Procedure/Method Overloads"
+msgstr "Знайти перевантаження процедури/методу"
+
+#: codystrconsts.crsfindsourceofgdbbacktrace
+msgid "Find source of GDB backtrace"
+msgstr "Знайти джерело зворотного трасування GDB"
+
+#: codystrconsts.crsflags
+msgid "Flags"
+msgstr "Прапорці"
+
+#: codystrconsts.crsfpcunitwithoutppu
+msgid "FPC unit without ppu"
+msgstr "Модуль FPC без ppu"
+
+#: codystrconsts.crsframeworks
+msgid "Frameworks"
+msgstr "Платформи"
+
+#: codystrconsts.crsgbytes
+msgid "Gbytes"
+msgstr "ГБ"
+
+#: codystrconsts.crshelp
+msgid "&Help"
+msgstr "&Довідка"
+
+#: codystrconsts.crshideabstractmethodsandmethodsofclassinterfaces
+msgid "Hide abstract methods and methods of class interfaces"
+msgstr "Призовати абстрактні методи і методи інтерфейсів класу"
+
+#: codystrconsts.crshideunitsofotherprojects
+msgid "Hide units of other projects"
+msgstr "Приховати модулі з інших проєктів"
+
+#: codystrconsts.crsideintegration
+msgid "IDE Integration"
+msgstr "Інтегрування в ІСР"
+
+#: codystrconsts.crsidentifiernotfound
+msgid "Identifier not found"
+msgstr "Ідентифікатор не знайдено"
+
+#: codystrconsts.crsidentifiernotfoundinunit
+#, object-pascal-format
+msgid "Identifier \"%s\" not found in unit \"%s\". Maybe the identifier does not exist for this platform or maybe the identifier was deleted/renamed."
+msgstr "Ідентифікатор \"%s\" у модулі \"%s\" не знайдено. Можливо він не існує для даної платформи або був вилучений/перейменований."
+
+#: codystrconsts.crsidewindowdockable
+msgid "IDE window, dockable"
+msgstr "Вікно ІСР, прикріплюване"
+
+#: codystrconsts.crsifidentifierisaddedtotheimplementationsectionandne
+msgctxt "codystrconsts.crsifidentifierisaddedtotheimplementationsectionandne"
+msgid "If identifier is added to the implementation section and needed unit needs to be added, add to the uses section of the implementation"
+msgstr "Якщо ідентифікатор додано до розділу implementation і потрібно додати необхідний модуль, додайте до розділу uses в implementation"
+
+#: codystrconsts.crsifuncheckedlistalsoprocedureswithsamenameandincomp
+msgid "If unchecked list also procedures with same name and incompatible parameter lists."
+msgstr "Якщо не позначено, показує також процедури з такими ж назвами і несумісними списками параметрів."
+
+#: codystrconsts.crsimpossibledependency
+msgid "Impossible dependency"
+msgstr "Неможлива залежність"
+
+#: codystrconsts.crsin
+#, object-pascal-format
+msgid "in \"%s\""
+msgstr "в \"%s\""
+
+#: codystrconsts.crsincompatible
+msgid "incompatible"
+msgstr "несумісний"
+
+#: codystrconsts.crsinimplementation
+msgid "In implementation"
+msgstr "В реалізації"
+
+#: codystrconsts.crsininterface
+msgid "In interface"
+msgstr "В інтерфейсі"
+
+#: codystrconsts.crsinsertcallinherited
+msgid "Insert Call Inherited"
+msgstr "Вставить виклик успадкованого"
+
+#: codystrconsts.crsinsertfileatcursor
+msgid "Insert File Contents at Cursor ..."
+msgstr "Вставити вміст файлу в позицію курсора ..."
+
+#: codystrconsts.crsinsertint64idyyyyddmmhhnnss
+msgid "Insert int64 ID YYYYDDMMhhnnss"
+msgstr "Вставити int64 ID РРРРДДММггххсс"
+
+#: codystrconsts.crsjump
+msgid "Jump"
+msgstr "Перейти"
+
+#: codystrconsts.crsjumpto
+msgid "&Jump to"
+msgstr "&Перейти до"
+
+#: codystrconsts.crsjumpto2
+msgid "Jump to"
+msgstr "Перейти до"
+
+#: codystrconsts.crskbytes
+msgid "kbytes"
+msgstr "кБ"
+
+#: codystrconsts.crslinkedfiles
+msgid "Linked files"
+msgstr "Зв'язані файли"
+
+#: codystrconsts.crslinks
+msgid "Links"
+msgstr "Зв'язки"
+
+#: codystrconsts.crsloaddictionaryafter
+#, object-pascal-format
+msgid "Load dictionary after %s"
+msgstr "Завантажити словник після %s"
+
+#: codystrconsts.crslocalvariableof
+#, object-pascal-format
+msgid "Local variable of %s"
+msgstr "Локальні змінні %s"
+
+#: codystrconsts.crsmainsourcefile
+#, object-pascal-format
+msgid "Main source file: %s"
+msgstr "Основний файл коду: %s"
+
+#: codystrconsts.crsmbytes
+msgid "Mbytes"
+msgstr "МБ"
+
+#: codystrconsts.crsmemberof
+#, object-pascal-format
+msgid "%s member of %s %s"
+msgstr "%s членів %s %s"
+
+#: codystrconsts.crsmenuitemcaption
+msgid "Menu item caption:"
+msgstr "Підпис елемента меню:"
+
+#: codystrconsts.crsminutes
+#, object-pascal-format
+msgid "%s minutes"
+msgstr "%s хвилин"
+
+#: codystrconsts.crsmissing
+msgid "missing ..."
+msgstr "відсутній ..."
+
+#: codystrconsts.crsname
+msgid "Name"
+msgstr "Назва"
+
+#: codystrconsts.crsnoneselected
+msgid "none selected"
+msgstr "нічого не вибрано"
+
+#: codystrconsts.crsnooverloadsfoundinprojectunits
+msgid "no overloads found in project units"
+msgstr "у модулях проєкту перевантажень не знайдено"
+
+#: codystrconsts.crsnoproject
+msgid "No project"
+msgstr "Немає проєкту"
+
+#: codystrconsts.crsnotethenameoftheformmustbeavalidpascalidentifieran
+msgid "Note: The name of the form must be a valid pascal identifier and unique across the whole IDE, which includes all packages. Prepend the name with an abbreviation of your package. The prefixes \"IDE\", \"Laz\", \"Pkg\" are already used by the IDE itself."
+msgstr "Примітка: назва форми має бути коректним ідентифікатором Паскаля і унікальною у всьому ІСР, включно з пакетами. Додавайте до початку назви скорочення назви пакета. Префікси \"IDE\", \"Laz\", \"Pkg\" вже використовуються в самому ІСР."
+
+#: codystrconsts.crsnounitselected
+msgid "No unit selected"
+msgstr "Модуль не вибраний"
+
+#: codystrconsts.crsonclipboard
+msgid "On clipboard"
+msgstr "На буфер обміну"
+
+#: codystrconsts.crsonlydescendantsof
+#, object-pascal-format
+msgid "Only descendants of %s"
+msgstr "Тільки нащадки %s"
+
+#: codystrconsts.crsonlymethods
+msgid "Only methods"
+msgstr "Лише методи"
+
+#: codystrconsts.crsonlynonmethods
+msgid "Only non methods"
+msgstr "Лише не методи"
+
+#: codystrconsts.crsonlyprocedureswithcompatibleparameters
+msgid "Only procedures with compatible parameters"
+msgstr "Лише процедури з сумісними параметрами"
+
+#: codystrconsts.crsoptions
+msgid "Options"
+msgstr "Параметри"
+
+#: codystrconsts.crsotherobjectfiles
+msgid "Other object files"
+msgstr "Інші об'єктні файли"
+
+#: codystrconsts.crsothersharedlibraries
+msgid "Other shared libraries"
+msgstr "Інші спільні бібліотеки"
+
+#: codystrconsts.crsotherstaticlibraries
+msgid "Other static libraries"
+msgstr "Інші статичні бібліотеки"
+
+#: codystrconsts.crspackage
+msgid "Package"
+msgstr "Пакунок"
+
+#: codystrconsts.crspackage2
+#, object-pascal-format
+msgid "Package: %s"
+msgstr "Пакунок: %s"
+
+#: codystrconsts.crspackagenotfound
+msgid "Package not found"
+msgstr "Пакунок не знайдено"
+
+#: codystrconsts.crspackagenotfounditshouldbein
+#, object-pascal-format
+msgid "Package \"%s\" not found. It should be in \"%s\"."
+msgstr "Пакунок \"%s\" не знайдено. Він повинен бути в \"%s\"."
+
+#: codystrconsts.crspackagesunitsidentifiersfile
+#, object-pascal-format
+msgid "Packages: %s, Units: %s, Identifiers: %s%sDatabase: %s"
+msgstr "Пакунків: %s, модулів: %s, ідентифікаторів: %s%sБаза даних: %s"
+
+#: codystrconsts.crspackagewithsamename
+msgid "Package with same name"
+msgstr "Пакунок з такою ж назвою"
+
+#: codystrconsts.crsparseerror
+msgid "Parse error"
+msgstr "Помилка розбору"
+
+#: codystrconsts.crspastelinesofagdbbacktrace
+msgid "Paste lines of a gdb backtrace:"
+msgstr "Вставити рядки стеку викликів GDB:"
+
+#: codystrconsts.crspleaseopenaprojectfirst
+msgid "Please open a project first."
+msgstr "Спочатку відкрийте проєкт."
+
+#: codystrconsts.crspleaseplacethecursorofthesourceeditoratanidentifie
+#, object-pascal-format
+msgid "Please place the cursor of the source editor at an identifier in a statement.%sFor example:%sMyVar:=3;"
+msgstr "Встановіть курсор редактора сирцевого коду на ідентифікатор в операторі.%sНаприклад:%sMyVar:=3;"
+
+#: codystrconsts.crspleaseplacethecursorofthesourceeditoronanidentifie
+msgid "Please place the cursor of the source editor on an identifier of a declaration."
+msgstr "Встановіть курсор редактора сирцевого коду на ідентифікатор в оголошенні."
+
+#: codystrconsts.crspleaseselectsomecodeinthesourceeditor
+msgid "Please select some code in the Source Editor."
+msgstr "Виберіть якийсь код у Редакторі коду"
+
+#: codystrconsts.crspleaseselectsomecodeinthesourceeditorforanewwithbl
+msgid "Please select some code in the Source Editor for a new \"With\" block. No candidate for a with expression was found."
+msgstr "Виберіть у Редакторі коду якийсь код для нового блока \"With\". Кандидатів для виразу with не знайдено."
+
+#: codystrconsts.crspleasespecifyalocation
+msgid "Please specify a location"
+msgstr "Вкажіть розміщення"
+
+#: codystrconsts.crspleasespecifyatype
+msgid "Please specify a type"
+msgstr "Вкажіть тип"
+
+#: codystrconsts.crsppu
+#, object-pascal-format
+msgid "PPU: %s"
+msgstr "PPU: %s"
+
+#: codystrconsts.crsppufilesofproject
+#, object-pascal-format
+msgid "PPU files of project \"%s\""
+msgstr "Файли PPU проєкту \"%s\""
+
+#: codystrconsts.crsprivate
+msgid "Private"
+msgstr "Приватний"
+
+#: codystrconsts.crsprojecthasnomainsourcefile
+msgid "Project has no main source file."
+msgstr "Проєкт не має основного файлу з кодом."
+
+#: codystrconsts.crsprojectoutput
+msgid "Project Output"
+msgstr "Вивід проєкту"
+
+#: codystrconsts.crsprotected
+msgid "Protected"
+msgstr "Захищений"
+
+#: codystrconsts.crspublic
+msgid "Public"
+msgstr "Публічний"
+
+#: codystrconsts.crspublished
+msgid "Published"
+msgstr "Опублікований"
+
+#: codystrconsts.crsreallydeletethepackagefromthedatabasenotethisdoe
+#, object-pascal-format
+msgid "Really delete the package from the database?%sNote: This does not change the source or any configuration.%s%s\"%s\""
+msgstr "Справді видалити пакунок з бази даних?%sПримітка: Сирці і конфігурація не зміняться.%s%s\"%s\""
+
+#: codystrconsts.crsreallydeletetheunitfromthedatabasenotethisdoesno
+#, object-pascal-format
+msgid "Really delete the unit from the database?%sNote: This does not change the source or any configuration.%s%sunit: \"%s\""
+msgstr "Справді видалити модуль з бази даних?%sПримітка: Сирці і конфігурація не зміняться.%s%sмодуль: \"%s\""
+
+#: codystrconsts.crsrefresh
+msgid "Refresh"
+msgstr "Оновити"
+
+#: codystrconsts.crsrelations
+msgid "Relations:"
+msgstr "Зв’язки"
+
+#: codystrconsts.crsreport
+msgid "Report"
+msgstr "Звіт"
+
+#: codystrconsts.crssavedictionaryevery
+#, object-pascal-format
+msgid "Save dictionary every %s"
+msgstr "Зберігати словник кожні %s"
+
+#: codystrconsts.crssavedictionarynow
+msgid "Save dictionary now"
+msgstr "Зберегти словник зараз"
+
+#: codystrconsts.crssavetofile
+#, object-pascal-format
+msgid "Save to file %s"
+msgstr "Зберегти у файл %s"
+
+#: codystrconsts.crsscanning
+msgid "Scanning ..."
+msgstr "Триває пошук ..."
+
+#: codystrconsts.crsscanningsunits
+#, object-pascal-format
+msgid "Scanning: %s units ..."
+msgstr "Триває пошук: %s модулів ..."
+
+#: codystrconsts.crssearching
+msgid "searching ..."
+msgstr "пошук ..."
+
+#: codystrconsts.crsseconds
+#, object-pascal-format
+msgid "%s seconds"
+msgstr "%s секунд"
+
+#: codystrconsts.crsselectexpression
+msgid "Select expression"
+msgstr "Виберіть вираз"
+
+#: codystrconsts.crsshowcodetoolsnodeinfo
+msgid "Show CodeTools Node Info ..."
+msgstr "Показати дані про вузол CodeTools ..."
+
+#: codystrconsts.crsshowcodydict
+#, object-pascal-format
+msgid "Show Cody Dictionary for \"%s\""
+msgstr "Показати словник Cody для \"%s\""
+
+#: codystrconsts.crsshowonlyidentifierscontainingfiltertext
+msgid "Show only identifiers containing filter text"
+msgstr "Показати лише ідентифікатори, які містять текст фільтру"
+
+#: codystrconsts.crsshowonlyidentifiersstartingwithfiltertext
+msgid "Show only identifiers starting with filter text"
+msgstr "Показати лише ідентифікатори, які починаються текстом фільтру"
+
+#: codystrconsts.crsshowunitidentifierdictionary
+msgid "Show Unit / Identifier Dictionary ..."
+msgstr "Показати словник модулів/ідентифікаторів ..."
+
+#: codystrconsts.crsshowusedppufiles
+msgid "Show Used .ppu Files ..."
+msgstr "Показати використовувані файли .ppu ..."
+
+#: codystrconsts.crssizeofofile
+msgid "Size of .o file"
+msgstr "Розмір .o файлу"
+
+#: codystrconsts.crssizeofppufile
+msgid "Size of .ppu file"
+msgstr "Розмір .ppu файлу"
+
+#: codystrconsts.crssource
+#, object-pascal-format
+msgid "Source: %s"
+msgstr "Вихідний код: %s"
+
+#: codystrconsts.crsstarts
+msgid "Starts"
+msgstr "Починаються"
+
+#: codystrconsts.crsthedictionaryisloadedondemandorafterthistime
+msgid "The dictionary is loaded on demand or after this time"
+msgstr "Словник завантажується за потребою або через такий час"
+
+#: codystrconsts.crsthedictionaryissavedinintervals
+msgid "The dictionary is saved in intervals"
+msgstr "Словник зберігається з зазначеним інтервалом часу"
+
+#: codystrconsts.crstheidentifierisalreadydefined
+#, object-pascal-format
+msgid "The identifier \"%s\" is already defined."
+msgstr "Ідентифікатор \"%s\" вже визначений."
+
+#: codystrconsts.crsthereisalreadyanotherpackageloadedwiththesamenameo
+#, object-pascal-format
+msgid "There is already another package loaded with the same name.%sOpen package: %s%sNew package: %s%sOnly one package can be loaded at a time."
+msgstr "Пакет з такою назвою вже завантажено.%sВідкритий пакет: %s%sНовий пакет: %s%sМоже бути завантажений тільки один такий пакет."
+
+#: codystrconsts.crsthetargetunithasthesamenameasthecurrentunitfreepas
+#, object-pascal-format
+msgid "The target unit has the same name as the current unit.%s Free Pascal does not support that."
+msgstr "Цільовий модуль має таку ж назву, як поточний модуль.%s Free Pascal цього не підтримує."
+
+#: codystrconsts.crstheunitispartofitcannotuseanotherpackagewiththesam
+#, object-pascal-format
+msgid "The unit \"%s\"%sis part of \"%s\".%sIt can not use another package with the same name:%s\"%s\""
+msgstr "Модуль \"%s\"%sє частиною \"%s\".%sВін не може використовувати інший пакунок з такою ж назвою:%s\"%s\""
+
+#: codystrconsts.crsthisunitislocatedinthefreepascalsourcesbutnoppufil
+msgid "This unit is located in the Free Pascal sources, but no ppu file is installed. Maybe this unit is not available for this target platform."
+msgstr "Модуль знаходиться в сирцях Free Pascal, але ppu-file не встановлено. Можливо цей модуль не доступний для даної цільової платформи.Модуль знаходиться в сирцях Free Pascal, але ppu-file не встановлено. Можливо цей модуль не доступний для даної цільової платформи."
+
+#: codystrconsts.crstotal
+msgid "Total"
+msgstr "Загалом"
+
+#: codystrconsts.crstype
+msgid "Type"
+msgstr "Тип"
+
+#: codystrconsts.crsunabletodelete
+#, object-pascal-format
+msgid "Unable to delete \"%s\""
+msgstr "Неможливо видалити \"%s\""
+
+#: codystrconsts.crsunabletoreadfile
+#, object-pascal-format
+msgid "Unable to read file \"%s\"."
+msgstr "Неможливо прочитати файл \"%s\"."
+
+#: codystrconsts.crsunabletorenameto
+#, object-pascal-format
+msgid "unable to rename \"%s\" to \"%s\""
+msgstr "неможливо змінити назву файлу \"%s\" на \"%s\""
+
+#: codystrconsts.crsunit
+msgid "Unit"
+msgstr "Модуль"
+
+#: codystrconsts.crsunit2
+#, object-pascal-format
+msgid "Unit: %s"
+msgstr "Модуль: %s"
+
+#: codystrconsts.crsunitidentifierdictionary
+msgid "Unit / Identifier Dictionary"
+msgstr "Словник модулів/ідентифікаторів"
+
+#: codystrconsts.crsunitnameclash
+msgid "Unit name clash"
+msgstr "Конфлікт назв модулів"
+
+#: codystrconsts.crsunitobjectfiles
+msgid "Unit object files"
+msgstr "Об'єктні файли модулів"
+
+#: codystrconsts.crsunits
+msgid "Units"
+msgstr "Модулі"
+
+#: codystrconsts.crsunitsharedlibraries
+msgid "Unit shared libraries"
+msgstr "Спільні бібліотеки модулів"
+
+#: codystrconsts.crsunitss
+#, object-pascal-format
+msgid "Units: %s"
+msgstr "Модулі: %s"
+
+#: codystrconsts.crsunitstaticlibraries
+msgid "Unit static libraries"
+msgstr "Статичні бібліотеки модулів"
+
+#: codystrconsts.crsusedby
+msgid "Used by"
+msgstr "Використовується"
+
+#: codystrconsts.crsuseidentifier
+msgid "&Use identifier"
+msgstr "&Використати ідентифікатор"
+
+#: codystrconsts.crsuses
+msgid "Uses"
+msgstr "Використовує"
+
+#: codystrconsts.crsvirtualunit
+msgid "Virtual Unit"
+msgstr "Віртуальний модуль"
+
+#: codystrconsts.crswhere
+msgid "Where"
+msgstr "Розміщення"
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="idescout"/>
+    <Type Value="DesignTime"/>
+    <Author Value="Michael Van Canneyt"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="IDE addon showing the &quot;IDE Scout&quot; - a quick search window for IDE commands.
+See the ReadMe.txt included in the package for a more detailed explanation."/>
+    <License Value="Modified LGPL-2"/>
+    <Version Release="1"/>
+    <Files Count="5">
+      <Item1>
+        <Filename Value="regidescout.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="RegIDEScout"/>
+      </Item1>
+      <Item2>
+        <Filename Value="frmscout.pas"/>
+        <UnitName Value="frmscout"/>
+      </Item2>
+      <Item3>
+        <Filename Value="ReadMe.txt"/>
+        <Type Value="Binary"/>
+      </Item3>
+      <Item4>
+        <Filename Value="idescoutoptions.pas"/>
+        <UnitName Value="IDEScoutOptions"/>
+      </Item4>
+      <Item5>
+        <Filename Value="idescoutstrconsts.pas"/>
+        <UnitName Value="IDEScoutStrConsts"/>
+      </Item5>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="IDEIntf"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,10 @@
+Name=fcl-json
+Version=3.2.2
+Checksum=1513316672
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\fcl-json\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,fcl-base|1513316664,rtl-objpas|1513316664
+NeedLibC=N
+FPMakeAddIn=N

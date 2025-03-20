@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: dockedstrconsts.sallowsizingcaption
+msgid "Allow size changing"
+msgstr "Разрешить изменение размера"
+
+#: dockedstrconsts.sallowsizinghint
+msgid "Grips can change size in Anchor Editor"
+msgstr "Менять размер компонента узлами захвата в редакторе привязок"
+
+#: dockedstrconsts.sanchorbottomcolorcaption
+msgid "Bottom Anchor"
+msgstr "Нижняя привязка"
+
+#: dockedstrconsts.sanchorcontrolbordercaption
+msgid "Border Around Control"
+msgstr "Область зазора вокруг компонента"
+
+#: dockedstrconsts.sanchorcontrolcolorcaption
+msgid "Control Background"
+msgstr "Фон компонента"
+
+#: dockedstrconsts.sanchorleftcolorcaption
+msgid "Left Anchor"
+msgstr "Левая привязка"
+
+#: dockedstrconsts.sanchorrightcolorcaption
+msgid "Right Anchor"
+msgstr "Правая привязка"
+
+#: dockedstrconsts.sanchors
+msgid "Anchors"
+msgstr "Привязки"
+
+#: dockedstrconsts.sanchortabvisiblecaption
+msgid "Show Anchors Tab"
+msgstr "Показывать вкладку привязок"
+
+#: dockedstrconsts.sanchortabvisiblehint
+msgid "Show Anchor Editor"
+msgstr "Показывать редактор привязок"
+
+#: dockedstrconsts.sanchortargetcolorcaption
+msgid "Anchor Target"
+msgstr "Объект привязки"
+
+#: dockedstrconsts.sanchortopcolorcaption
+msgid "Top Anchor"
+msgstr "Верхняя привязка"
+
+#: dockedstrconsts.sargumentoutofrange
+msgctxt "dockedstrconsts.sargumentoutofrange"
+msgid "Argument out of range."
+msgstr "Аргумент вне границ диапазона."
+
+#: dockedstrconsts.sattachcontrol
+msgid "Attach Control"
+msgstr "Привязать компонент"
+
+#: dockedstrconsts.sattachpoint
+msgid "Attach Control Sides"
+msgstr "Привязать стороны компонента"
+
+#: dockedstrconsts.sattachside
+msgid "Attach Control Side"
+msgstr "Привязать сторону компонента"
+
+#: dockedstrconsts.scaptiondockedformeditor
+msgid "Docked Form Editor"
+msgstr "Встроенный редактор форм"
+
+#: dockedstrconsts.scapturedistancecaption
+msgid "Capture Distance"
+msgstr "Расстояние захвата"
+
+#: dockedstrconsts.scapturedistancehint
+msgid "Minimal distance to capture a control with mouse"
+msgstr "Минимальное расстояние для захвата компонента мышью"
+
+#: dockedstrconsts.scirculardependency
+msgid "This will create a circular dependency."
+msgstr "Это действие создаст порочный круг зависимостей."
+
+#: dockedstrconsts.scode
+msgctxt "dockedstrconsts.scode"
+msgid "Code"
+msgstr "Код"
+
+#: dockedstrconsts.scolorscaption
+msgid "Colors"
+msgstr "Цвета"
+
+#: dockedstrconsts.sdesigner
+msgctxt "dockedstrconsts.sdesigner"
+msgid "Form"
+msgstr "Форма"
+
+#: dockedstrconsts.sdetachcontrol
+msgid "Detach Control"
+msgstr "Отвязать компонент"
+
+#: dockedstrconsts.sdetachpoint
+msgid "Detach Control Sides"
+msgstr "Отвязать стороны компонента"
+
+#: dockedstrconsts.sdetachside
+msgid "Detach Control Side"
+msgstr "Отвязать сторону компонента"
+
+#: dockedstrconsts.sforcerefreshingcaption
+msgid "Force Refreshing At Sizing"
+msgstr "Принудительно обновлять при изменении размера"
+
+#: dockedstrconsts.sforcerefreshinghint
+msgid "Force refreshing form when user is sizing it"
+msgstr "Принудительно обновлять форму при изменении её размера"
+
+#: dockedstrconsts.smouseborderfactorcaption
+msgid "Mouse cursor factor for BorderSpacing property"
+msgstr "Масштаб движения курсора мыши для свойства BorderSpacing"
+
+#: dockedstrconsts.smouseborderfactorhint
+msgid "Mouse cursor factor is used to set small values of BorderSpacing property more precisely"
+msgstr "Масштаб движения курсора мыши используется для более точной установки малых значений свойства BorderSpacing"
+
+#: dockedstrconsts.sresizercolorcaption
+msgid "Resizer Color"
+msgstr "Цвет области изменения размера"
+
+#: dockedstrconsts.sresizercolorhint
+msgid "Color of resizer bars"
+msgstr "Цвет области изменения размера"
+
+#: dockedstrconsts.stabpositionbottom
+msgid "Bottom"
+msgstr "Снизу"
+
+#: dockedstrconsts.stabpositioncaption
+msgid "Tab Position"
+msgstr "Положение заголовков вкладок"
+
+#: dockedstrconsts.stabpositionhint
+msgid "Position of Code, Form, Anchors tabs"
+msgstr "Положение заголовков вкладок \"Код\", \"Форма\", \"Привязки\""
+
+#: dockedstrconsts.stabpositionleft
+msgid "Left"
+msgstr "Слева"
+
+#: dockedstrconsts.stabpositionright
+msgid "Right"
+msgstr "Справа"
+
+#: dockedstrconsts.stabpositiontop
+msgid "Top"
+msgstr "Сверху"
+
+#: dockedstrconsts.streataligncaption
+msgid "Automatically treat Align properties"
+msgstr "Автоматически обрабатывать свойства Align"
+
+#: dockedstrconsts.streatalignhint
+msgid "Automatically replace Align properties with appropriate Anchors"
+msgstr "Автоматически заменять свойства Align соответствующими привязками"
+
+#: dockedstrconsts.streatbordercaption
+msgid "Automatically treat BorderSpacing properties"
+msgstr "Автоматически обрабатывать свойства BorderSpacing"
+
+#: dockedstrconsts.streatborderhint
+msgid "Automatically replace BorderSpacing.Around properties of controls and adapt BorderSpacing.Left/Right/Top/Bottom if needed"
+msgstr "Автоматически заменять свойства BorderSpacing.Around компонентов и корректировать BorderSpacing.Left/Right/Top/Bottom при необходимости"
+
+#: dockedstrconsts.swarningcaption
+msgid "Warning"
+msgstr "Предупреждение"
+

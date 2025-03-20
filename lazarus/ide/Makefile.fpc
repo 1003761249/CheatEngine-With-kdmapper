@@ -1,0 +1,240 @@
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[package]
+name=lazaruside
+version=1.1
+
+[require]
+libc=y
+packages=regexpr
+
+[target]
+programs=lazarus startlazarus lazbuild
+
+[compiler]
+options=-gl -vbqewnhi -Sci -dlcl$(LCL_PLATFORM) $(DBG_OPTIONS)
+unittargetdir=../units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM)
+unitdir=../designer \
+        ../debugger \
+        ../debugger/frames \
+        ../converter \
+        ../packager \
+        ../packager/frames \
+        ../components/custom \
+        $(HEAPTRC_UNIT_PATH) \
+        frames \
+        .
+includedir=include include/$(OS_TARGET) ../images
+targetdir=..
+
+[clean]
+files=$(wildcard $(COMPILER_UNITTARGETDIR)/*$(OEXT)) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*$(PPUEXT)) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*$(RSTEXT)) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*.lfm) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*.or) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*.res) \
+      $(wildcard ../designer/*$(OEXT)) $(wildcard ../designer/*$(PPUEXT)) \
+      $(wildcard ../debugger/*$(OEXT)) $(wildcard ../debugger/*$(PPUEXT)) \
+      $(wildcard ../converter/*$(OEXT)) $(wildcard ../converter/*$(PPUEXT)) \
+      $(wildcard ../packager/*$(OEXT)) $(wildcard ../packager/*$(PPUEXT)) \
+      $(wildcard ../*$(OEXT)) $(wildcard ../*$(PPUEXT)) \
+      $(wildcard *$(OEXT)) $(wildcard *$(PPUEXT)) $(wildcard *$(RSTEXT))
+
+[install]
+fpcpackage=n
+basedir=share/lazarus/ide
+
+[dist]
+destdir=$(BASEDIR)/dist
+
+[prerules]
+RCPP?=$(firstword $(strip $(subst /,$(PATHSEP),$(wildcard $(addsuffix /cpp$(SRCEXEEXT),$(SEARCHPATH))))))
+
+ifneq ($(findstring $(OS_TARGET),win32 win64),)
+  HEAPTRC_UNIT_PATH=include/win
+endif
+
+#
+# LCL Platform
+ifndef LCL_PLATFORM
+ifneq ($(findstring $(OS_TARGET),win32 win64),)
+LCL_PLATFORM=win32
+else
+ifeq ($(OS_TARGET),darwin)
+LCL_PLATFORM=cocoa
+else
+LCL_PLATFORM=gtk2
+endif
+endif
+endif
+export LCL_PLATFORM
+
+DBG_OPTIONS=
+ifeq ($(OS_TARGET),darwin)
+DBG_OPTIONS=-gw
+endif
+
+#
+LAZARUS_OPT=$(LAZARUS_LIBPATHS)
+ifeq ($(LCL_PLATFORM),cocoa)
+LAZARUS_OPT+=-k-framework -kCocoa -k-weak_framework -kUserNotifications
+endif
+
+#
+# Options to compile an IDE without extra packages
+DEFAULT_IDE_OPTIONS= \
+  -Fu../packager/units/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/codetools/units/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/debuggerintf/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/lazutils/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/freetype/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../lcl/units/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../lcl/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/buildintf/units/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/ideintf/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/synedit/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazcontrols/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazcontrols/design/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazdebuggers/lazdebuggerintf/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/lazdebuggers/cmdlinedebuggerbase/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazdebuggergdbmi/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lclextensions/lib/$(CPU_TARGET)-$(OS_TARGET)-$(LCL_PLATFORM) \
+  -Fu../components/virtualtreeview/lib/$(CPU_TARGET)-$(OS_TARGET)-$(LCL_PLATFORM) \
+  -Fu../components/fpdebug/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/lazdebuggers/lazdebuggerfp/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazdebuggers/lazdebuggerlldb/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/lazdebuggers/lazdebuggerfplldb/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fupackages/ideconfig/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fupackages/idedebugger/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM)
+
+#
+# Options to compile an IDE with a lot of packages
+BIG_IDE_OPTIONS=-dBigIDE $(DEFAULT_IDE_OPTIONS) \
+  -Fu../components/synedit/design/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/rtticontrols/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/cairocanvas/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/printers/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/printers/design/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/tdbf/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/turbopower_ipro/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/turbopower_ipro/design/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/fpcunit/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/fpcunit/ide/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/projecttemplates/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/sqldb/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/sdf/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/leakview/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/memds/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/tachart/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/todolist/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/datetimectrls/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/datetimectrls/design/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/jcf2/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/jcf2/IdePlugin/lazarus/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/chmhelp/packages/help/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/chmhelp/packages/idehelp/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/instantfpc/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/externhelp/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/PascalScript/Source/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/macroscript/lib/$(CPU_TARGET)-$(OS_TARGET) \
+  -Fu../components/onlinepackagemanager/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/simplewebservergui/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/projectgroups/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/pas2js/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/exampleswindow/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/charactermap/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM) \
+  -Fu../components/charactermap/design/lib/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM)
+
+#
+# Options for compiling lazbuild
+LAZBUILD_OPT=$(LAZARUS_LIBPATHS)
+
+#
+# apptype gui
+ifneq ($(findstring $(OS_TARGET),win32 win64),)
+LAZARUS_OPT+= -WG
+BIG_IDE_OPTIONS+= -WG
+endif
+
+#-----------------------------------------------------------------------------
+[rules]
+.PHONY: ide bigide starter lazbuilder all clean cleanide purge revisioninc codepage
+
+#-----------------------------------------------------------------------------
+revisioninc:
+ifneq ($(USESVN2REVISIONINC),0)
+ifeq ($(wildcard ../tools/svn2revisioninc$(SRCEXEEXT)),)
+	$(MAKE) -C ../tools svn2revisioninc$(SRCEXEEXT) OS_TARGET=$(OS_SOURCE) CPU_TARGET=$(CPU_SOURCE) OPT=''
+endif
+	../tools/svn2revisioninc$(SRCEXEEXT) .. revision.inc
+endif
+
+#-----------------------------------------------------------------------------
+# compile IDE without extra packages
+idepackages:
+        $(MAKE) -C packages/ideconfig
+        $(MAKE) -C packages/idedebugger
+
+#-----------------------------------------------------------------------------
+# compile IDE without extra packages
+ide: $(COMPILER_UNITTARGETDIR) revisioninc
+        $(MAKE) --assume-new=lazarus.pp lazarus$(EXEEXT) OPT='$(DEFAULT_IDE_OPTIONS) $(LAZARUS_OPT) $(OPT)'
+
+#-----------------------------------------------------------------------------
+# compile IDE with some extra packages
+bigide: $(COMPILER_UNITTARGETDIR) revisioninc
+        -$(DEL) $(COMPILER_UNITTARGETDIR)/pkgmanager$(PPUEXT)
+        $(MAKE) --assume-new=lazarus.pp lazarus$(EXEEXT) OPT='$(BIG_IDE_OPTIONS) $(LAZARUS_OPT) $(OPT)'
+
+#-----------------------------------------------------------------------------
+starter: $(COMPILER_UNITTARGETDIR)
+        $(MAKE) --assume-new=startlazarus.lpr startlazarus$(EXEEXT) OPT='$(DEFAULT_IDE_OPTIONS) $(LAZARUS_OPT) $(OPT)'
+
+#-----------------------------------------------------------------------------
+lazbuilder: $(COMPILER_UNITTARGETDIR)
+        $(MAKE) --assume-new=lazbuild.lpr lazbuild$(EXEEXT) OPT='$(DEFAULT_IDE_OPTIONS) $(LAZBUILD_OPT) $(OPT)'
+
+#-----------------------------------------------------------------------------
+all: ide starter lazbuilder
+
+#-----------------------------------------------------------------------------
+cleanide:
+        -$(DEL) $(wildcard *$(OEXT))
+        -$(DEL) $(wildcard *$(PPUEXT))
+        -$(DEL) $(wildcard *$(RSTEXT))
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*$(OEXT))
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*$(PPUEXT))
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*$(RSTEXT))
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*.lfm)
+        -$(DEL) $(wildcard ../*$(OEXT))
+        -$(DEL) $(wildcard ../*$(PPUEXT))
+        -$(DEL) $(wildcard ../designer/*$(OEXT))
+        -$(DEL) $(wildcard ../designer/*$(PPUEXT))
+        -$(DEL) $(wildcard ../debugger/*$(OEXT))
+        -$(DEL) $(wildcard ../debugger/*$(PPUEXT))
+        -$(DEL) $(wildcard ../packager/*$(OEXT))
+        -$(DEL) $(wildcard ../packager/*$(PPUEXT))
+        -$(DEL) $(wildcard ../converter/*$(OEXT))
+        -$(DEL) $(wildcard ../converter/*$(PPUEXT))
+        -$(DEL) $(wildcard ../doceditor/*$(OEXT))
+        -$(DEL) $(wildcard ../doceditor/*$(PPUEXT))
+ifneq ($(findstring $(OS_TARGET),win32 win64),)
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*.or)
+        -$(DEL) $(wildcard $(COMPILER_UNITTARGETDIR)/*.res)
+endif
+
+cleanlaz: clean cleanide
+        $(MAKE) -C packages/ideconfig clean
+        $(MAKE) -C packages/idedebugger clean
+        ${DELTREE} ../units/*
+
+purge: cleanlaz
+
+distclean: cleanlaz
+
+#install: $(INSTALLTARGET) $(addsuffix _install,$(TARGET_DIRS))
+# end.
+

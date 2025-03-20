@@ -1,0 +1,332 @@
+object DesktopForm: TDesktopForm
+  Left = 334
+  Height = 310
+  Top = 319
+  Width = 450
+  BorderIcons = [biSystemMenu]
+  Caption = 'DesktopForm'
+  ClientHeight = 310
+  ClientWidth = 450
+  Constraints.MinHeight = 310
+  Constraints.MinWidth = 350
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 270
+    Width = 438
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    BorderSpacing.Around = 0
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    OKButton.DefaultCaption = False
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.OnClick = HelpButtonClick
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Close'
+    CancelButton.DefaultCaption = False
+    TabOrder = 4
+    ShowButtons = [pbClose, pbHelp]
+    object ExportBitBtn: TBitBtn
+      Left = 179
+      Height = 26
+      Top = 8
+      Width = 0
+      Align = alCustom
+      AutoSize = True
+      Caption = 'ExportBitBtn'
+      Constraints.MinWidth = 25
+      OnClick = ExportBitBtnClick
+      TabOrder = 4
+    end
+    object ImportBitBtn: TBitBtn
+      Left = 271
+      Height = 26
+      Top = 8
+      Width = 0
+      Align = alCustom
+      AutoSize = True
+      Caption = 'ImportBitBtn'
+      Constraints.MinWidth = 25
+      OnClick = ImportActionClick
+      TabOrder = 5
+    end
+  end
+  object DesktopListBox: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel1
+    AnchorSideBottom.Control = AssociatedDebugDesktopLabel
+    Left = 6
+    Height = 178
+    Top = 6
+    Width = 290
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 4
+    ItemHeight = 18
+    OnDblClick = SetActiveDesktopActionClick
+    OnDrawItem = DesktopListBoxDrawItem
+    OnKeyPress = DesktopListBoxKeyPress
+    OnSelectionChange = DesktopListBoxSelectionChange
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+  end
+  object AutoSaveActiveDesktopCheckBox: TCheckBox
+    AnchorSideLeft.Control = DesktopListBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = LblGrayedInfo
+    Left = 6
+    Height = 17
+    Top = 230
+    Width = 140
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 6
+    Caption = 'Auto save active desktop'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object LblGrayedInfo: TLabel
+    AnchorSideLeft.Control = DesktopListBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Panel1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 6
+    Height = 13
+    Top = 253
+    Width = 438
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 4
+    Caption = 'Grayed desktops are for undocked environment.'
+    ParentColor = False
+    WordWrap = True
+  end
+  object AssociatedDebugDesktopComboBox: TComboBox
+    AnchorSideLeft.Control = DesktopListBox
+    AnchorSideRight.Control = DesktopListBox
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = AutoSaveActiveDesktopCheckBox
+    Left = 6
+    Height = 21
+    Top = 203
+    Width = 290
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 6
+    ItemHeight = 13
+    OnChange = AssociatedDebugDesktopComboBoxChange
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object AssociatedDebugDesktopLabel: TLabel
+    AnchorSideLeft.Control = DesktopListBox
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = DesktopListBox
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = AssociatedDebugDesktopComboBox
+    Left = 6
+    Height = 13
+    Top = 188
+    Width = 290
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 2
+    Caption = 'AssociatedDebugDesktopLabel'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+    WordWrap = True
+  end
+  object Panel1: TPanel
+    AnchorSideTop.Control = DesktopListBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LblGrayedInfo
+    Left = 302
+    Height = 247
+    Top = 6
+    Width = 142
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    BevelOuter = bvNone
+    ChildSizing.VerticalSpacing = 2
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 247
+    ClientWidth = 142
+    TabOrder = 3
+    object SaveAsButton: TBitBtn
+      Left = 0
+      Height = 24
+      Top = 0
+      Width = 142
+      Action = SaveAsAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object SetActiveDesktopButton: TBitBtn
+      Left = 0
+      Height = 24
+      Top = 26
+      Width = 142
+      Action = SetActiveDesktopAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object SetDebugDesktopButton: TBitBtn
+      Left = 0
+      Height = 24
+      Top = 52
+      Width = 142
+      Action = SetDebugDesktopAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object RenameButton: TBitBtn
+      Left = 0
+      Height = 24
+      Top = 78
+      Width = 142
+      Action = RenameAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object DeleteButton: TBitBtn
+      Left = 0
+      Height = 24
+      Top = 104
+      Width = 142
+      Action = DeleteAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object MoveUpButton: TBitBtn
+      Tag = -1
+      Left = 0
+      Height = 24
+      Top = 130
+      Width = 142
+      Action = MoveUpAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object MoveDownButton: TBitBtn
+      Tag = 1
+      Left = 0
+      Height = 24
+      Top = 156
+      Width = 142
+      Action = MoveDownAction
+      AutoSize = True
+      Constraints.MinHeight = 24
+      Constraints.MinWidth = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+  end
+  object ExportMenu: TPopupMenu
+    left = 28
+    top = 24
+    object ExportItem: TMenuItem
+      Action = ExportAction
+      OnClick = ExportActionClick
+    end
+    object ExportAllItem: TMenuItem
+      Action = ExportAllAction
+      OnClick = ExportAllActionClick
+    end
+  end
+  object ActionList1: TActionList
+    left = 89
+    top = 24
+    object SaveAsAction: TAction
+      Caption = 'SaveAsAction'
+      OnExecute = SaveAsActionClick
+      ShortCut = 16467
+    end
+    object SetActiveDesktopAction: TAction
+      Caption = 'SetActiveDesktopAction'
+      OnExecute = SetActiveDesktopActionClick
+      ShortCut = 16397
+    end
+    object SetDebugDesktopAction: TAction
+      Caption = 'SetDebugDesktopAction'
+      OnExecute = SetDebugDesktopActionClick
+      ShortCut = 16452
+    end
+    object RenameAction: TAction
+      Caption = 'RenameAction'
+      OnExecute = RenameActionClick
+      ShortCut = 16466
+    end
+    object DeleteAction: TAction
+      Caption = 'DeleteAction'
+      OnExecute = DeleteActionClick
+      ShortCut = 16430
+    end
+    object MoveUpAction: TAction
+      Tag = -1
+      Caption = 'MoveUpAction'
+      OnExecute = MoveUpDownActionClick
+      ShortCut = 16422
+    end
+    object MoveDownAction: TAction
+      Tag = 1
+      Caption = 'MoveDownAction'
+      OnExecute = MoveUpDownActionClick
+      ShortCut = 16424
+    end
+    object ExportAction: TAction
+      Caption = 'ExportAction'
+      OnExecute = ExportActionClick
+      ShortCut = 16453
+    end
+    object ExportAllAction: TAction
+      Caption = 'ExportAllAction'
+      OnExecute = ExportAllActionClick
+      ShortCut = 24645
+    end
+    object ImportAction: TAction
+      Caption = 'ImportAction'
+      OnExecute = ImportActionClick
+      ShortCut = 16457
+    end
+  end
+end

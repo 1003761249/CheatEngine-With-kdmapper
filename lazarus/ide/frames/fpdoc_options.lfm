@@ -1,0 +1,93 @@
+object FpDocOptionsFrame: TFpDocOptionsFrame
+  Left = 0
+  Height = 380
+  Top = 0
+  Width = 476
+  ClientHeight = 380
+  ClientWidth = 476
+  TabOrder = 0
+  Visible = False
+  DesignLeft = 452
+  DesignTop = 239
+  object LazDocPathsGroupBox: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 207
+    Top = 0
+    Width = 476
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    Caption = 'LazDocPathsGroupBox'
+    ClientHeight = 188
+    ClientWidth = 472
+    TabOrder = 0
+    object LazDocListBox: TListBox
+      Left = 6
+      Height = 108
+      Top = 6
+      Width = 460
+      Align = alTop
+      BorderSpacing.Around = 6
+      ItemHeight = 0
+      OnSelectionChange = LazDocListBoxSelectionChange
+      TabOrder = 0
+    end
+    object LazDocAddPathButton: TBitBtn
+      AnchorSideLeft.Control = LazDocPathsGroupBox
+      AnchorSideTop.Control = LazDocListBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 29
+      Top = 120
+      Width = 166
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'LazDocAddPathButton'
+      Enabled = False
+      OnClick = LazDocAddPathButtonClick
+      TabOrder = 1
+    end
+    object LazDocDeletePathButton: TBitBtn
+      AnchorSideLeft.Control = LazDocAddPathButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LazDocAddPathButton
+      Left = 182
+      Height = 29
+      Top = 120
+      Width = 182
+      AutoSize = True
+      BorderSpacing.Left = 10
+      Caption = 'LazDocDeletePathButton'
+      Enabled = False
+      OnClick = LazDocDeletePathButtonClick
+      TabOrder = 2
+    end
+    object LazDocPathEdit: TDirectoryEdit
+      AnchorSideLeft.Control = LazDocPathsGroupBox
+      AnchorSideTop.Control = LazDocAddPathButton
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LazDocListBox
+      AnchorSideRight.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 155
+      Width = 460
+      Directory = 'LazDocPathEdit'
+      DialogOptions = [ofPathMustExist, ofEnableSizing, ofViewDetail]
+      ShowHidden = False
+      ButtonWidth = 25
+      NumGlyphs = 1
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      MaxLength = 0
+      TabOrder = 3
+      OnChange = LazDocPathEditChange
+      Text = 'LazDocPathEdit'
+    end
+  end
+end

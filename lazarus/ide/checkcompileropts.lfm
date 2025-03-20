@@ -1,0 +1,88 @@
+object CheckCompilerOptsDlg: TCheckCompilerOptsDlg
+  Left = 653
+  Height = 389
+  Top = 418
+  Width = 624
+  BorderIcons = [biSystemMenu]
+  Caption = 'CheckCompilerOptsDlg'
+  ClientHeight = 389
+  ClientWidth = 624
+  Position = poScreenCenter
+  LCLVersion = '1.5'
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 174
+    Width = 624
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 29
+    Top = 354
+    Width = 612
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbClose]
+    ShowBevel = False
+  end
+  object OutputTreeView: TTreeView
+    Left = 6
+    Height = 140
+    Top = 208
+    Width = 612
+    Align = alClient
+    BorderSpacing.Around = 6
+    PopupMenu = OutputPopupMenu
+    ReadOnly = True
+    TabOrder = 2
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+  end
+  object TestMemo: TMemo
+    Left = 6
+    Height = 139
+    Top = 29
+    Width = 612
+    Align = alTop
+    BorderSpacing.Around = 6
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object LabelTest: TLabel
+    Left = 6
+    Height = 17
+    Top = 6
+    Width = 612
+    Align = alTop
+    BorderSpacing.Around = 6
+    Caption = 'LabelTest'
+    ParentColor = False
+  end
+  object LabelOutput: TLabel
+    Left = 6
+    Height = 17
+    Top = 185
+    Width = 612
+    Align = alTop
+    BorderSpacing.Around = 6
+    Caption = 'LabelOutput'
+    ParentColor = False
+  end
+  object OutputPopupMenu: TPopupMenu
+    left = 472
+    top = 392
+    object CopyOutputMenuItem: TMenuItem
+      Caption = 'CopyOutputMenuItem'
+      OnClick = CopyOutputMenuItemClick
+    end
+  end
+end

@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Péter Gábor <ptrg@freemail.hu>\n"
+"Language-Team: Magyar (Hungarian)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: guitestrunner.rsalltests
+msgid "All Tests"
+msgstr "Minden teszt"
+
+#: guitestrunner.rserrors
+#, object-pascal-format
+msgid "%s    Errors: %s"
+msgstr "%s    Hibák: %s"
+
+#: guitestrunner.rsexception
+#, object-pascal-format
+msgid "Exception: %s"
+msgstr "Kivétel: %s"
+
+#: guitestrunner.rsexceptioncla
+#, object-pascal-format
+msgid "Exception class: %s"
+msgstr "Kivétel osztály: %s"
+
+#: guitestrunner.rsexceptionmes
+#, object-pascal-format
+msgid "Exception message: %s"
+msgstr "Kivétel üzenet: %s"
+
+#: guitestrunner.rsfailures
+#, object-pascal-format
+msgid "%s     Failures: %s"
+msgstr "%s     Hibák: %s"
+
+#: guitestrunner.rslinenumber
+#, object-pascal-format
+msgid "Line number: %s"
+msgstr "Sorszám: %s"
+
+#: guitestrunner.rsmessage
+#, object-pascal-format
+msgid "Message: %s"
+msgstr "Üzenet: %s"
+
+#: guitestrunner.rsmethodname
+#, object-pascal-format
+msgid "Method name: %s"
+msgstr "Metódus neve: %s"
+
+#: guitestrunner.rsnumberofexec
+#, object-pascal-format
+msgid "Number of executed tests: %s  Time elapsed: %s"
+msgstr "Futtatott tesztek száma: %s  Felhasznált idő: %s"
+
+#: guitestrunner.rsrun
+msgid "Run "
+msgstr "Futtatás"
+
+#: guitestrunner.rsrunning
+#, object-pascal-format
+msgid "Running %s"
+msgstr "Futtatás: %s"
+
+#: guitestrunner.rsruns
+#, object-pascal-format
+msgid "Runs: %s/%s"
+msgstr "Futtatás: %s/%s"
+
+#: guitestrunner.rsunitname
+#, object-pascal-format
+msgid "Unit name: %s"
+msgstr "Unit név: %s"
+
+#: guitestrunner.sactcheckall
+msgid "Select all tests"
+msgstr "Minden teszt kijelölése"
+
+#: guitestrunner.sactcheckcurrentsuite
+msgid "Select current suite"
+msgstr "Az aktuális sorozat kijelölése"
+
+#: guitestrunner.sactcloseform
+msgid "Quit"
+msgstr "Kilépés"
+
+#: guitestrunner.sactcloseformh
+msgid "Quit testing"
+msgstr "Kilépés a tesztelésből"
+
+#: guitestrunner.sactcopyalltoclipboard
+msgid "Copy text to clipboard"
+msgstr "Szöveg másolása a vágólapra"
+
+#: guitestrunner.sactcopyalltoclipboardh
+msgid "Copy the entire text to clipboard"
+msgstr "Teljes szöveg másolása a vágólapra"
+
+#: guitestrunner.sactrunaction
+msgid "&Run all"
+msgstr "Összes futtatása"
+
+#: guitestrunner.sactrunactionh
+msgid "Run all checked tests"
+msgstr "Minden kijelölt teszt futtatása"
+
+#: guitestrunner.sactrunhighlightedtest
+msgctxt "guitestrunner.sactrunhighlightedtest"
+msgid "Run selected"
+msgstr "Kijelölt futtatása"
+
+#: guitestrunner.sactrunhighlightedtesth
+msgid "Run selected test"
+msgstr "A kiválasztott teszt futtatása"
+
+#: guitestrunner.sactsaveresults
+msgid "Save results"
+msgstr "Eredmények mentése"
+
+#: guitestrunner.sactsaveresultsh
+msgid "Save XML results to file"
+msgstr "XML eredmény mentése fájlba"
+
+#: guitestrunner.sactuncheckall
+msgid "Deselect all tests"
+msgstr "Összes teszt kijelölésének törlése"
+
+#: guitestrunner.sactuncheckcurrentsuite
+msgid "Deselect current suite"
+msgstr "Az aktuális sorozat kijelölésének törlése"
+
+#: guitestrunner.sbtnclose
+msgid "Close"
+msgstr "Bezárás"
+
+#: guitestrunner.sbtnrun
+msgid "Run"
+msgstr "Futtatás"
+
+#: guitestrunner.sbtnrunh
+msgctxt "guitestrunner.sbtnrunh"
+msgid "Run highlighted test"
+msgstr "A kiemelt teszt futtatása"
+
+#: guitestrunner.sfrmguitest
+msgid "FPCUnit - run unit test"
+msgstr "FPCUnit - unit teszt futtatása"
+
+#: guitestrunner.smiactions
+msgid "Actions"
+msgstr "Műveletek"
+
+#: guitestrunner.smiedit
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: guitestrunner.smitesttree
+msgid "Test tree"
+msgstr "Teszt-fa"
+
+#: guitestrunner.stshresults
+msgid "Results XML"
+msgstr "Eredmények XML-ként"
+
+#: guitestrunner.stshtree
+msgid "Testcase tree"
+msgstr "Tesztesetek fája"
+

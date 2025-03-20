@@ -1,0 +1,560 @@
+# Olexandr Pylypchuk <pilipchukap@rambler.ru>, 2017.
+# admin <lxlalexlxl@ukr.net>, 2017, 2018, 2019, 2020, 2023.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-06-08 19:00+0300\n"
+"Last-Translator: lxlalexlxl <lxlalexlxl@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: tachartstrconsts.descolor
+msgid "Color"
+msgstr "Колір"
+
+#: tachartstrconsts.desdatapointeditor
+msgid "DataPoints editor"
+msgstr "Редактор точок даних"
+
+#: tachartstrconsts.desdeleterow
+msgid "Delete row"
+msgstr "Видалити рядок"
+
+#: tachartstrconsts.desinsertrow
+msgid "Insert row"
+msgstr "Вставити рядок"
+
+#: tachartstrconsts.desmovedown
+msgid "Move down"
+msgstr "Перемістити вниз"
+
+#: tachartstrconsts.desmoveup
+msgid "Move up"
+msgstr "Перемістити вгору"
+
+#: tachartstrconsts.desnointeger
+msgid "Value must be an integer."
+msgstr "Значення повинне бути цілим."
+
+#: tachartstrconsts.desnonumber
+msgid "Non-numeric value."
+msgstr "Нечислове значення."
+
+#: tachartstrconsts.destext
+msgid "Text"
+msgstr "Текст"
+
+#: tachartstrconsts.rsadd
+msgid "Add"
+msgstr "Додати"
+
+#: tachartstrconsts.rsareaseries
+msgid "Area series"
+msgstr "Діаграма з областями"
+
+#: tachartstrconsts.rsautoscale
+msgid "Auto scale"
+msgstr "Автоматичний масштаб"
+
+#: tachartstrconsts.rsaxisclicktool
+msgid "Axis click"
+msgstr "Клацання осі"
+
+#: tachartstrconsts.rsbarseries
+msgid "Bar series"
+msgstr "Гістограма"
+
+#: tachartstrconsts.rsbottom
+msgid "Bottom"
+msgstr "Нижня"
+
+#: tachartstrconsts.rsboxandwhiskerseries
+msgid "Box-and-whiskers series"
+msgstr "Діаграма розмаху"
+
+#: tachartstrconsts.rsbsbdiagonal
+msgid "backward-diagonal hatch"
+msgstr "зворотна діагональна штриховка"
+
+#: tachartstrconsts.rsbsclear
+msgctxt "tachartstrconsts.rsbsclear"
+msgid "no fill"
+msgstr "без заливки"
+
+#: tachartstrconsts.rsbscross
+msgid "crossed"
+msgstr "перехресна штриховка"
+
+#: tachartstrconsts.rsbsdiagcross
+msgid "diagonally crossed"
+msgstr "діагональна перехресна штриховка"
+
+#: tachartstrconsts.rsbsfdiagonal
+msgid "forward-diagonal hatch"
+msgstr "пряма діагональна штриховка"
+
+#: tachartstrconsts.rsbshorizontal
+msgid "horizontally hatched"
+msgstr "горизонтальна штриховка"
+
+#: tachartstrconsts.rsbsimage
+msgid "image fill"
+msgstr "заливка зображенням"
+
+#: tachartstrconsts.rsbspattern
+msgid "pattern fill"
+msgstr "заливка візерунком"
+
+#: tachartstrconsts.rsbsplineseries
+msgid "B-Spline series"
+msgstr "Діаграма з B-сплайнами"
+
+#: tachartstrconsts.rsbssolid
+msgid "solid fill"
+msgstr "суцільна заливка"
+
+#: tachartstrconsts.rsbsvertical
+msgid "vertically hatched"
+msgstr "вертикальна штриховка"
+
+#: tachartstrconsts.rsbubbleseries
+msgid "Bubble series"
+msgstr "Бульбашкова діаграма"
+
+#: tachartstrconsts.rscirclesymbol
+msgid "Circle"
+msgstr "Круг"
+
+#: tachartstrconsts.rscolormapseries
+msgid "Color map series"
+msgstr "Діаграма з картою кольорів"
+
+#: tachartstrconsts.rsconstantline
+msgid "Constant line"
+msgstr "Лінія сталої"
+
+#: tachartstrconsts.rscrosssymbol
+msgid "Plus"
+msgstr "Плюс"
+
+#: tachartstrconsts.rscubicsplineseries
+msgid "Cubic spline series"
+msgstr "Діаграма з кубічними сплайнами"
+
+#: tachartstrconsts.rscumulativenormaldistribution
+msgid "Cumulative normal distribution"
+msgstr "Масштаб нормального розподілу"
+
+#: tachartstrconsts.rsdatapointclick
+msgid "Data point click"
+msgstr "Клацання точки даних"
+
+#: tachartstrconsts.rsdatapointcrosshair
+msgid "Data point crosshair"
+msgstr "Перехрестя точки даних"
+
+#: tachartstrconsts.rsdatapointdrag
+msgid "Data point drag"
+msgstr "Перетягування точки даних"
+
+#: tachartstrconsts.rsdatapointhint
+msgid "Data point hint"
+msgstr "Спливна підказка точки даних"
+
+#: tachartstrconsts.rsdatapointmarksclicktool
+msgid "Data point marks click"
+msgstr "Клацання позначок точок даних"
+
+#: tachartstrconsts.rsdelete
+msgid "Delete"
+msgstr "Видалити"
+
+#: tachartstrconsts.rsdiagcrosssymbol
+msgid "Cross"
+msgstr "Хрест"
+
+#: tachartstrconsts.rsdiamondsymbol
+msgid "Diamond"
+msgstr "Ромб"
+
+#: tachartstrconsts.rsdistancemeasurement
+msgid "Distance measurement"
+msgstr "Вимірювання відстані"
+
+#: tachartstrconsts.rsdowntrianglesymbol
+msgid "Down triangle"
+msgstr "Трикутник з вершиною донизу"
+
+#: tachartstrconsts.rserrfitdimerror
+msgid "Non-matching count of x and y values."
+msgstr "Невідповідна кількість значень x і y."
+
+#: tachartstrconsts.rserrfitmoreparamsthanvalues
+msgid "There are more fitting parameters than data values."
+msgstr "Параметрів апроксимування більше, ніж значень даних."
+
+#: tachartstrconsts.rserrfitnobasefunctions
+msgid "Not enough user-provided base functions."
+msgstr "Не вистачає наданих користувачем базових функцій."
+
+#: tachartstrconsts.rserrfitnofitparams
+msgid "No fit parameters specified."
+msgstr "Не задачі параметри апроксимації."
+
+#: tachartstrconsts.rserrfitsingular
+msgid "Fitting matrix is (nearly) singular."
+msgstr "Матриця апроксимування (майже) одинична."
+
+#: tachartstrconsts.rserrillegalfitparamcount
+msgid "The number of fit parameters cannot be less than 1."
+msgstr "Число параметрів апроксимації не може бути меншим від 1."
+
+#: tachartstrconsts.rserrinvalidresulttype
+#, object-pascal-format
+msgid "Expression result type must be integer or float. Got \"%s\"."
+msgstr "Тип значення виразу повинен бути цілим або дійсним. Отримано \"%s\"."
+
+#: tachartstrconsts.rserrnumericaloverflow
+msgid "Numerical overflow."
+msgstr "Числове переповнення."
+
+#: tachartstrconsts.rsexpressioncolormapseries
+msgid "Math expression color map series"
+msgstr "Колірна карта"
+
+#: tachartstrconsts.rsexpressionseries
+msgid "Math expression series"
+msgstr "Ряд математичних виразів"
+
+#: tachartstrconsts.rsfieldseries
+msgid "Vector field series"
+msgstr "Діаграма з векторним полем"
+
+#: tachartstrconsts.rsfitadjcoefficientofdetermination
+msgid "Adj. coefficient of determination"
+msgstr "Скоригований коефіцієнт детермінації"
+
+#: tachartstrconsts.rsfitchisquared
+msgid "Chi-squared"
+msgstr "Хі-квадрат"
+
+#: tachartstrconsts.rsfitcoefficientofdetermination
+msgid "Coefficient of determination (R2)"
+msgstr "Коефіцієнт детермінації (R2)"
+
+#: tachartstrconsts.rsfitdegreesoffreedom
+msgid "Degrees of freedom"
+msgstr "Ступені вільності"
+
+#: tachartstrconsts.rsfiterrorsumofsquares
+msgid "Error sum of squares (SSE)"
+msgstr "Сума квадратів похибок (SSE)"
+
+#: tachartstrconsts.rsfitnumfitparams
+msgid "Number of fit parameters"
+msgstr "Кількість придатних параметрів"
+
+#: tachartstrconsts.rsfitnumobservations
+msgid "Number of observations"
+msgstr "Кількість спостережень"
+
+#: tachartstrconsts.rsfitpvalue
+msgid "p value"
+msgstr "Значення p"
+
+#: tachartstrconsts.rsfitreducedchisquared
+msgid "Reduced Chi-squared"
+msgstr "Зменшена хі-квадрат"
+
+#: tachartstrconsts.rsfitregressionsumofsquares
+msgid "Regression sum of squares (SSR)"
+msgstr "Сума квадратів регресії (SSR)"
+
+#: tachartstrconsts.rsfitresidualstandarderror
+msgid "Residual standard error"
+msgstr "Остаточна стандартна похибка"
+
+#: tachartstrconsts.rsfittotalsumofsquares
+msgid "Total sum of squares (SST)"
+msgstr "Загальна сума квадратів (SSE)"
+
+#: tachartstrconsts.rsfittvalue
+msgid "t value"
+msgstr "Значення t"
+
+#: tachartstrconsts.rsfitvarianceratio
+msgid "Variance ratio F"
+msgstr "Коефіцієнт варіації F"
+
+#: tachartstrconsts.rsfullstarsymbol
+msgid "Star (full)"
+msgstr "Зірка (повна)"
+
+#: tachartstrconsts.rsfunctionseries
+msgid "Function series"
+msgstr "Діаграма за функцією"
+
+#: tachartstrconsts.rsheaderfooterclicktool
+msgid "Header/footer click"
+msgstr "Клацання верхнього/нижнього колонтитулів"
+
+#: tachartstrconsts.rshexagonsymbol
+msgid "Hexagon"
+msgstr "Шестикутник"
+
+#: tachartstrconsts.rshidden
+msgid "hidden"
+msgstr "прихована"
+
+#: tachartstrconsts.rshighbracketsymbol
+msgid "High bracket"
+msgstr "Дужка вгорі"
+
+#: tachartstrconsts.rshorbarsymbol
+msgid "Horizontal bar"
+msgstr "Горизонтальна риска"
+
+#: tachartstrconsts.rsinvalidlogbase
+msgid "Logarithm base must be > 0 and <> 1."
+msgstr "Основа логарифма має бути > 0 і <> 1."
+
+#: tachartstrconsts.rsinverted
+msgid "inverted"
+msgstr "зворотна"
+
+#: tachartstrconsts.rsleastsquaresfitseries
+msgid "Least-squares fit series"
+msgstr "Діаграма за методом найменших квадратів"
+
+#: tachartstrconsts.rsleft
+msgid "Left"
+msgstr "Ліва"
+
+#: tachartstrconsts.rsleftbracketsymbol
+msgid "Left bracket"
+msgstr "Дужка ліворуч"
+
+#: tachartstrconsts.rslefttrianglesymbol
+msgid "Left triangle"
+msgstr "Трикутник з вершиною ліворуч"
+
+#: tachartstrconsts.rslegendclicktool
+msgid "Legend click"
+msgstr "Клацання легенди"
+
+#: tachartstrconsts.rslinear
+msgid "Linear"
+msgstr "Лінійний масштаб"
+
+#: tachartstrconsts.rslineseries
+msgid "Line series"
+msgstr "Графік"
+
+#: tachartstrconsts.rslistsourcecolorerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not an integer."
+msgstr "%0:s.DataPoints рядок \"%1:s\" не є цілим числом."
+
+#: tachartstrconsts.rslistsourcenumericerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not a valid number."
+msgstr "%0:s.DataPoints рядок \"%1:s\" не є правильним числом."
+
+#: tachartstrconsts.rslistsourcestringformaterror
+#, object-pascal-format
+msgid "The data value count in the %0:s.DataPoints string \"%1:s\" differs from what is expected from XCount and YCount."
+msgstr "Число значень даних в %0:s.DataPoints рядку \"%1:s\" відрізняється від очікуваного з XCount і YCount."
+
+#: tachartstrconsts.rslogarithmic
+msgid "Logarithmic"
+msgstr "Логарифмічний масштаб"
+
+#: tachartstrconsts.rslowbracketsymbol
+msgid "Low bracket"
+msgstr "Дужка внизу"
+
+#: tachartstrconsts.rsmanhattanplotseries
+msgid "Manhattan plot series"
+msgstr "Манхеттенська діаграма"
+
+#: tachartstrconsts.rsmovedown
+msgid "Down"
+msgstr "Вниз"
+
+#: tachartstrconsts.rsmoveup
+msgid "Up"
+msgstr "Вгору"
+
+#: tachartstrconsts.rsnosymbol
+msgid "(none)"
+msgstr "(немає)"
+
+#: tachartstrconsts.rsopenhighlowcloseseries
+msgid "Open-high-low-close series"
+msgstr "Біржова діаграма"
+
+#: tachartstrconsts.rspanningbyclick
+msgid "Panning by click"
+msgstr "Панорамування клацанням"
+
+#: tachartstrconsts.rspanningbydrag
+msgid "Panning by drag"
+msgstr "Панорамування перетягуванням"
+
+#: tachartstrconsts.rspanningbymousewheel
+msgid "Panning by mouse wheel"
+msgstr "Панорамування коліщатком миші"
+
+#: tachartstrconsts.rsparametriccurveseries
+msgid "Parametric curve series"
+msgstr "Діаграма з параметричними кривими"
+
+#: tachartstrconsts.rspieseries
+msgid "Pie series"
+msgstr "Кругова діаграма"
+
+#: tachartstrconsts.rspointsymbol
+msgid "Point"
+msgstr "Точка"
+
+#: tachartstrconsts.rspolarseries
+msgid "Polar series"
+msgstr "Пелюсткова діаграма"
+
+#: tachartstrconsts.rspolygonseries
+msgid "Polygon series"
+msgstr "Багатокутна діаграма"
+
+#: tachartstrconsts.rspsclear
+msgctxt "tachartstrconsts.rspsclear"
+msgid "no line"
+msgstr "немає лінії"
+
+#: tachartstrconsts.rspsdash
+msgid "dashed line"
+msgstr "штрихова лінія"
+
+#: tachartstrconsts.rspsdashdot
+msgid "dash-dot"
+msgstr "штрихпунктирна лінія"
+
+#: tachartstrconsts.rspsdashdotdot
+msgid "dash-dot-dot"
+msgstr "штрихпунктирна лінія з двома крапками"
+
+#: tachartstrconsts.rspsdot
+msgid "dotted line"
+msgstr "пунктирна лінія"
+
+#: tachartstrconsts.rspsinsideframe
+msgid "solid (inside frame)"
+msgstr "суцільна лінія (всередині рамки)"
+
+#: tachartstrconsts.rspspattern
+msgid "patterned line"
+msgstr "лінія з візерунком"
+
+#: tachartstrconsts.rspssolid
+msgid "solid line"
+msgstr "суцільна лінія"
+
+#: tachartstrconsts.rsrectanglesymbol
+msgid "Rectangle"
+msgstr "Прямокутник"
+
+#: tachartstrconsts.rsright
+msgid "Right"
+msgstr "Права"
+
+#: tachartstrconsts.rsrightbracketsymbol
+msgid "Right bracket"
+msgstr "Дужка праворуч"
+
+#: tachartstrconsts.rsrighttrianglesymbol
+msgid "Right triangle"
+msgstr "Трикутник з вершиною праворуч"
+
+#: tachartstrconsts.rssourcecounterror
+#, object-pascal-format
+msgid "%0:s requires a chart source with at least %1:d %2:s value(s) per data point."
+msgstr "%0:s потребує джерела діаграми з принаймні %1:d %2:s значенням(и) на точку даних."
+
+#: tachartstrconsts.rssourcecounterror2
+#, object-pascal-format
+msgid "This %0:s instance must have at least %1:d %2:s value(s) per data point."
+msgstr "Цей примірник %0:s повинен мати принаймні %1:d %2:s значень на точку даних."
+
+#: tachartstrconsts.rssourcenoteditable
+msgid "Editable chart source required"
+msgstr "Потрібне джерело діаграми, доступне для редагування"
+
+#: tachartstrconsts.rssourcesorterror
+#, object-pascal-format
+msgid "Selected sorting parameters are not supported by %s."
+msgstr "Вибрані параметри сортування не підтримуються %s."
+
+#: tachartstrconsts.rsstarsymbol
+msgid "Star (lines)"
+msgstr "Зірка (з ліній)"
+
+#: tachartstrconsts.rstop
+msgid "Top"
+msgstr "Верхня"
+
+#: tachartstrconsts.rstrianglesymbol
+msgid "Triangle"
+msgstr "Трикутник"
+
+#: tachartstrconsts.rsuserdefined
+msgctxt "tachartstrconsts.rsuserdefined"
+msgid "User-defined"
+msgstr "Користувацький"
+
+#: tachartstrconsts.rsuserdefinedtool
+msgctxt "tachartstrconsts.rsuserdefinedtool"
+msgid "User-defined"
+msgstr "Користувацький"
+
+#: tachartstrconsts.rsuserdrawnseries
+msgid "User-drawn series"
+msgstr "Користувацька діаграма"
+
+#: tachartstrconsts.rsvertbarsymbol
+msgid "Vertical bar"
+msgstr "Вертикальна риска"
+
+#: tachartstrconsts.rszoombyclick
+msgid "Zoom by click"
+msgstr "Змінення масштабу клацанням"
+
+#: tachartstrconsts.rszoombydrag
+msgid "Zoom by drag"
+msgstr "Змінення масштабу перетягуванням"
+
+#: tachartstrconsts.rszoombymousewheel
+msgid "Zoom by mouse-wheel"
+msgstr "Змінення масштабу коліщатком миші"
+
+#: tachartstrconsts.sesserieseditortitle
+msgid "Edit series"
+msgstr "Редактор діаграм"
+
+#: tachartstrconsts.tasaxistransformseditortitle
+msgid "Edit axis transformations"
+msgstr "Редактор масштабів осей"
+
+#: tachartstrconsts.tasfailedsubcomponentrename
+#, object-pascal-format
+msgid "Failed to rename components: %s"
+msgstr "Неможливо перейменувати компоненти: %s"
+
+#: tachartstrconsts.tastoolseditortitle
+msgid "Edit tools"
+msgstr "Редактор засобів діаграм"
+

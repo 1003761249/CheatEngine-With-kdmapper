@@ -1,0 +1,12 @@
+# converted to unix by root on mail.armin.d at Mon Apr 16 00:36:06 CEST 2001
+ NWDSEConvertEntryName,
+ NWDSEGetLocalAttrID,
+ NWDSEGetLocalClassID,
+ NWDSEGetLocalEntryID,
+ NWDSEGetLocalEntryName,
+ NWDSEGetLocalAttrName,
+ NWDSEGetLocalClassName,
+ NWDSERegisterForEvent,
+ NWDSERegisterForEventWithResult,
+ NWDSEUnRegisterForEvent
+

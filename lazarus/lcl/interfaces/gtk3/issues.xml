@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="lcl">
+	<widgetset name="gtk3">
+		<issue name="TMenuItem.Default">
+			<short>Default property is not supported</short>
+		</issue>
+		<issue name="TEdit.NumbersOnly">
+			<short>NumbersOnly property is not supported</short>
+		</issue>
+		<issue name="TPageControl.MultiLine">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.MultiSelect">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.RaggedRight">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.ScrollOpposite">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.Style">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.TabHeight">
+			<short>Changing of default tab height is not supported</short>
+		</issue>
+		<issue name="TPageControl.TabWidth">
+			<short>Changing of default tab width is not supported</short>
+		</issue>
+		<issue name="TCalendar.MinDate">
+			<short>MinDate property is not (fully) supported</short>
+      <descr>While programmatically setting a date is limited by MinDate/MaxDate, the calendar still allow to select dates that are out of that range</descr>
+		</issue>
+		<issue name="TCalendar.MaxDate">
+			<short>MaxDate property is not (fully) supported</short>
+      <descr>While programmatically setting a date is limited by MinDate/MaxDate, the calendar still allow to select dates that are out of that range</descr>
+		</issue>
+		<issue name="TDateEdit.MinDate">
+			<short>TDateEdit.MinDate is not supported by the native Calendar.</short>
+		</issue>
+		<issue name="TDateEdit.MaxDate">
+			<short>TDateEdit.MaxDate is not supported by the native Calendar.</short>
+		</issue>
+		<issue name="TListView.OnChanging">
+			<short>The OnChanging event is not supported</short>
+		</issue>
+	</widgetset>
+</package>

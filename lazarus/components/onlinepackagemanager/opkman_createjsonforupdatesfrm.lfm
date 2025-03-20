@@ -1,0 +1,102 @@
+object CreateJSONForUpdatesFrm: TCreateJSONForUpdatesFrm
+  Left = 524
+  Height = 304
+  Top = 275
+  Width = 580
+  BorderIcons = [biSystemMenu]
+  Caption = 'CreateJSONForUpdatesFrm'
+  ClientHeight = 304
+  ClientWidth = 580
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 300
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PopupMode = pmExplicit
+  Position = poOwnerFormCenter
+  LCLVersion = '2.1.0.0'
+  object pnButtons: TPanel
+    Left = 0
+    Height = 41
+    Top = 263
+    Width = 580
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 580
+    TabOrder = 1
+    object bCreate: TButton
+      Left = 415
+      Height = 26
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Create'
+      OnClick = bCreateClick
+      TabOrder = 0
+    end
+    object bClose: TButton
+      Left = 491
+      Height = 26
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Close'
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object bHelp: TButton
+      Left = 339
+      Height = 26
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Help'
+      OnClick = bHelpClick
+      TabOrder = 2
+    end
+  end
+  object pnTop: TPanel
+    Left = 0
+    Height = 72
+    Top = 0
+    Width = 580
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 72
+    ClientWidth = 580
+    TabOrder = 0
+    Visible = False
+    object lbLinkToZip: TLabel
+      Left = 15
+      Height = 15
+      Top = 16
+      Width = 104
+      Caption = 'Link to package zip:'
+      ParentColor = False
+    end
+    object edLinkToZip: TEdit
+      Left = 15
+      Height = 23
+      Top = 32
+      Width = 498
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 0
+    end
+    object bTest: TButton
+      Left = 516
+      Height = 25
+      Top = 31
+      Width = 50
+      Anchors = [akTop, akRight]
+      Caption = 'Test'
+      OnClick = bTestClick
+      TabOrder = 1
+    end
+  end
+  object SD: TSaveDialog
+    DefaultExt = '.json'
+    Filter = '*.json|*.json'
+    left = 75
+    top = 145
+  end
+end

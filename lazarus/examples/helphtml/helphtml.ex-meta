@@ -1,0 +1,11 @@
+{
+  "HelpHTML" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Help",
+      "HTML",
+      "Browser"
+    ],
+    "Description" : "Demonstrates the html help components. THTMLHelpDatabase is a database that contains the mapping from Keyword to html page. THTMLBrowserHelpViewer is a viewer for HTML pages. It simply starts a web browser."
+  }
+}

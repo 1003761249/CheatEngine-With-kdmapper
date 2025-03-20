@@ -1,0 +1,7 @@
+#
+# Here we set processor dependent include file names.
+#
+
+CPUNAMES=m68k lowmath math set cpuh
+CPUINCNAMES=$(addsuffix .inc,$(CPUNAMES))
+

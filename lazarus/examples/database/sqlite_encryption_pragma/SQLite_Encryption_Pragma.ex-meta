@@ -1,0 +1,5 @@
+{ "SQLite_Encryption_Pragma" : {
+   "Category" : "DBase",
+   "Keywords" : ["DBase","SQLite3","Encryption","Pragma"],
+   "Description" : "Simple SQLite3 Demo with Encryption and Pragma. Creation of an SQLite3 Database, Encrypting, Changing the key, Creating Tables, Index and adding rows, performing queries.\n\nUses a hard wired sqlite3 library name only on Windows.\n\nSee the included readme.txt file.\n"}
+}

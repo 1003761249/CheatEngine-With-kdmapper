@@ -1,0 +1,303 @@
+object LazFindInFilesDialog: TLazFindInFilesDialog
+  Left = 408
+  Height = 472
+  Top = 154
+  Width = 461
+  ActiveControl = TextToFindComboBox
+  AutoSize = True
+  Caption = 'Find in files'
+  ClientHeight = 472
+  ClientWidth = 461
+  Constraints.MinHeight = 430
+  Constraints.MinWidth = 400
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.1.0.0'
+  object OptionsCheckGroupBox: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ReplaceTextComboBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 92
+    Top = 82
+    Width = 449
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Options'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.HorizontalSpacing = 6
+    ChildSizing.VerticalSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 62
+    ClientWidth = 445
+    Columns = 2
+    Items.Strings = (
+      'Case sensitive'
+      'Whole words only'
+      'Regular expressions'
+      'Multi Line'
+    )
+    TabOrder = 3
+    Data = {
+      0400000002020202
+    }
+  end
+  object WhereRadioGroup: TRadioGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = OptionsCheckGroupBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 92
+    Top = 180
+    Width = 449
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Where'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.HorizontalSpacing = 6
+    ChildSizing.VerticalSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 62
+    ClientWidth = 445
+    Columns = 2
+    ItemIndex = 1
+    Items.Strings = (
+      'search all in project'
+      'search all editor files'
+      'search in directories'
+      'search in active file'
+    )
+    OnClick = WhereRadioGroupClick
+    TabOrder = 4
+  end
+  object DirectoriesOptionsGroupBox: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = WhereRadioGroup
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 145
+    Top = 278
+    Width = 449
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Directories'
+    ClientHeight = 115
+    ClientWidth = 445
+    Enabled = False
+    TabOrder = 5
+    object DirectoriesLabel: TLabel
+      AnchorSideLeft.Control = DirectoriesOptionsGroupBox
+      AnchorSideTop.Control = DirectoriesComboBox
+      AnchorSideTop.Side = asrCenter
+      Left = 6
+      Height = 18
+      Top = 13
+      Width = 70
+      BorderSpacing.Left = 6
+      Caption = 'Directories:'
+      FocusControl = DirectoriesComboBox
+      ParentColor = False
+    end
+    object FileMaskLabel: TLabel
+      AnchorSideLeft.Control = DirectoriesOptionsGroupBox
+      AnchorSideTop.Control = DirectoriesComboBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 18
+      Top = 50
+      Width = 57
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 12
+      Caption = 'File mask'
+      FocusControl = FileMaskComboBox
+      ParentColor = False
+    end
+    object DirectoriesComboBox: TComboBox
+      AnchorSideLeft.Control = DirectoriesLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = DirectoriesOptionsGroupBox
+      AnchorSideRight.Control = DirectoriesBrowse
+      Left = 82
+      Height = 32
+      Top = 6
+      Width = 318
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      ItemHeight = 24
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object DirectoriesBrowse: TBitBtn
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = DirectoriesComboBox
+      AnchorSideRight.Control = DirectoriesOptionsGroupBox
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = DirectoriesComboBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 406
+      Height = 32
+      Top = 6
+      Width = 33
+      Anchors = [akTop, akRight, akBottom]
+      BorderSpacing.Right = 6
+      Caption = '...'
+      Layout = blGlyphTop
+      OnClick = DirectoriesBrowseClick
+      TabOrder = 1
+    end
+    object FileMaskComboBox: TComboBox
+      AnchorSideLeft.Control = FileMaskLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = FileMaskLabel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = DirectoriesComboBox
+      AnchorSideRight.Side = asrBottom
+      Left = 69
+      Height = 32
+      Top = 43
+      Width = 331
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      ItemHeight = 24
+      TabOrder = 2
+      Text = '*.pas;*.pp;*.inc'
+    end
+    object IncludeSubDirsCheckBox: TCheckBox
+      AnchorSideLeft.Control = DirectoriesOptionsGroupBox
+      AnchorSideTop.Control = FileMaskComboBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 22
+      Top = 87
+      Width = 168
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 12
+      BorderSpacing.Bottom = 6
+      Caption = 'Include sub directories'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+    end
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 29
+    Top = 437
+    Width = 449
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.OnClick = OKButtonClick
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.OnClick = HelpButtonClick
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 6
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+  object ReplaceTextComboBox: TComboBox
+    AnchorSideLeft.Control = ReplaceCheckBox
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = TextToFindComboBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 88
+    Height = 32
+    Top = 44
+    Width = 367
+    Anchors = [akTop, akLeft, akRight]
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactRetainPrefixCase, cbactSearchAscending]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    Enabled = False
+    ItemHeight = 24
+    TabOrder = 2
+  end
+  object ReplaceCheckBox: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ReplaceTextComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 6
+    Height = 22
+    Top = 49
+    Width = 76
+    BorderSpacing.Left = 6
+    Caption = 'Replace'
+    Enabled = False
+    OnChange = ReplaceCheckBoxChange
+    TabOrder = 1
+  end
+  object TextToFindLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = TextToFindComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 6
+    Height = 18
+    Top = 13
+    Width = 76
+    BorderSpacing.Left = 6
+    Caption = 'Text To Find:'
+    FocusControl = TextToFindComboBox
+    ParentColor = False
+  end
+  object TextToFindComboBox: TComboBox
+    AnchorSideLeft.Control = TextToFindLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 88
+    Height = 32
+    Top = 6
+    Width = 367
+    Anchors = [akTop, akLeft, akRight]
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactRetainPrefixCase, cbactSearchAscending]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    ItemHeight = 24
+    TabOrder = 0
+  end
+  object SelectDirectoryDialog: TSelectDirectoryDialog
+    FilterIndex = 0
+    Options = [ofExtensionDifferent,ofFileMustExist,ofEnableSizing,ofViewDetail]
+    Left = 180
+    Top = 70
+  end
+end

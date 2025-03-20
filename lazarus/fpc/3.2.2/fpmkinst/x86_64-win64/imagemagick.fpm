@@ -1,0 +1,10 @@
+Name=imagemagick
+Version=3.2.2
+Checksum=1513316684
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\imagemagick\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl
+NeedLibC=Y
+FPMakeAddIn=N

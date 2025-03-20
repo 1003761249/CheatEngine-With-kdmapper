@@ -1,0 +1,548 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tachartstrconsts.descolor
+msgid "Color"
+msgstr "Väri"
+
+#: tachartstrconsts.desdatapointeditor
+msgid "DataPoints editor"
+msgstr "Datapisteiden muokkain"
+
+#: tachartstrconsts.desdeleterow
+msgid "Delete row"
+msgstr "Poista rivi"
+
+#: tachartstrconsts.desinsertrow
+msgid "Insert row"
+msgstr "Lisää rivi"
+
+#: tachartstrconsts.desmovedown
+msgid "Move down"
+msgstr ""
+
+#: tachartstrconsts.desmoveup
+msgid "Move up"
+msgstr ""
+
+#: tachartstrconsts.desnointeger
+msgid "Value must be an integer."
+msgstr ""
+
+#: tachartstrconsts.desnonumber
+msgid "Non-numeric value."
+msgstr ""
+
+#: tachartstrconsts.destext
+msgid "Text"
+msgstr "Teksti"
+
+#: tachartstrconsts.rsadd
+msgid "Add"
+msgstr "Lisää"
+
+#: tachartstrconsts.rsareaseries
+msgid "Area series"
+msgstr "Aluekuvaaja"
+
+#: tachartstrconsts.rsautoscale
+msgid "Auto scale"
+msgstr "Automaattinen skaalaus"
+
+#: tachartstrconsts.rsaxisclicktool
+msgid "Axis click"
+msgstr ""
+
+#: tachartstrconsts.rsbarseries
+msgid "Bar series"
+msgstr "Pylväskuvaaja"
+
+#: tachartstrconsts.rsbottom
+msgid "Bottom"
+msgstr ""
+
+#: tachartstrconsts.rsboxandwhiskerseries
+msgid "Box-and-whiskers series"
+msgstr "Laatikko-jana kuvaaja"
+
+#: tachartstrconsts.rsbsbdiagonal
+msgid "backward-diagonal hatch"
+msgstr ""
+
+#: tachartstrconsts.rsbsclear
+msgctxt "tachartstrconsts.rsbsclear"
+msgid "no fill"
+msgstr ""
+
+#: tachartstrconsts.rsbscross
+msgid "crossed"
+msgstr ""
+
+#: tachartstrconsts.rsbsdiagcross
+msgid "diagonally crossed"
+msgstr ""
+
+#: tachartstrconsts.rsbsfdiagonal
+msgid "forward-diagonal hatch"
+msgstr ""
+
+#: tachartstrconsts.rsbshorizontal
+msgid "horizontally hatched"
+msgstr ""
+
+#: tachartstrconsts.rsbsimage
+msgid "image fill"
+msgstr ""
+
+#: tachartstrconsts.rsbspattern
+msgid "pattern fill"
+msgstr ""
+
+#: tachartstrconsts.rsbsplineseries
+msgid "B-Spline series"
+msgstr "B-käyrä kuvaaja"
+
+#: tachartstrconsts.rsbssolid
+msgid "solid fill"
+msgstr "alueen täyttö"
+
+#: tachartstrconsts.rsbsvertical
+msgid "vertically hatched"
+msgstr ""
+
+#: tachartstrconsts.rsbubbleseries
+msgid "Bubble series"
+msgstr "Kuplakuvaaja"
+
+#: tachartstrconsts.rscirclesymbol
+msgid "Circle"
+msgstr ""
+
+#: tachartstrconsts.rscolormapseries
+msgid "Color map series"
+msgstr "Värikarttakuvaaja"
+
+#: tachartstrconsts.rsconstantline
+msgid "Constant line"
+msgstr "Kiinteä viiva"
+
+#: tachartstrconsts.rscrosssymbol
+msgid "Plus"
+msgstr ""
+
+#: tachartstrconsts.rscubicsplineseries
+msgid "Cubic spline series"
+msgstr "Kuutiokäyräkuvaaja"
+
+#: tachartstrconsts.rscumulativenormaldistribution
+msgid "Cumulative normal distribution"
+msgstr "Kumulatiivinen normaalijakauma"
+
+#: tachartstrconsts.rsdatapointclick
+msgid "Data point click"
+msgstr "Datapisteen klikkaus"
+
+#: tachartstrconsts.rsdatapointcrosshair
+msgid "Data point crosshair"
+msgstr "Datapisteen tähtäin"
+
+#: tachartstrconsts.rsdatapointdrag
+msgid "Data point drag"
+msgstr "Datapisteen vetäminen"
+
+#: tachartstrconsts.rsdatapointhint
+msgid "Data point hint"
+msgstr "Datapisteen vihje"
+
+#: tachartstrconsts.rsdatapointmarksclicktool
+msgid "Data point marks click"
+msgstr ""
+
+#: tachartstrconsts.rsdelete
+msgid "Delete"
+msgstr "Poista"
+
+#: tachartstrconsts.rsdiagcrosssymbol
+msgid "Cross"
+msgstr ""
+
+#: tachartstrconsts.rsdiamondsymbol
+msgid "Diamond"
+msgstr ""
+
+#: tachartstrconsts.rsdistancemeasurement
+msgid "Distance measurement"
+msgstr "Etäisyysmittaus"
+
+#: tachartstrconsts.rsdowntrianglesymbol
+msgid "Down triangle"
+msgstr ""
+
+#: tachartstrconsts.rserrfitdimerror
+msgid "Non-matching count of x and y values."
+msgstr ""
+
+#: tachartstrconsts.rserrfitmoreparamsthanvalues
+msgid "There are more fitting parameters than data values."
+msgstr ""
+
+#: tachartstrconsts.rserrfitnobasefunctions
+msgid "Not enough user-provided base functions."
+msgstr ""
+
+#: tachartstrconsts.rserrfitnofitparams
+msgid "No fit parameters specified."
+msgstr ""
+
+#: tachartstrconsts.rserrfitsingular
+msgid "Fitting matrix is (nearly) singular."
+msgstr ""
+
+#: tachartstrconsts.rserrillegalfitparamcount
+msgid "The number of fit parameters cannot be less than 1."
+msgstr ""
+
+#: tachartstrconsts.rserrinvalidresulttype
+#, object-pascal-format
+msgid "Expression result type must be integer or float. Got \"%s\"."
+msgstr ""
+
+#: tachartstrconsts.rserrnumericaloverflow
+msgid "Numerical overflow."
+msgstr ""
+
+#: tachartstrconsts.rsexpressioncolormapseries
+msgid "Math expression color map series"
+msgstr ""
+
+#: tachartstrconsts.rsexpressionseries
+msgid "Math expression series"
+msgstr ""
+
+#: tachartstrconsts.rsfieldseries
+msgid "Vector field series"
+msgstr ""
+
+#: tachartstrconsts.rsfitadjcoefficientofdetermination
+msgid "Adj. coefficient of determination"
+msgstr ""
+
+#: tachartstrconsts.rsfitchisquared
+msgid "Chi-squared"
+msgstr ""
+
+#: tachartstrconsts.rsfitcoefficientofdetermination
+msgid "Coefficient of determination (R2)"
+msgstr ""
+
+#: tachartstrconsts.rsfitdegreesoffreedom
+msgid "Degrees of freedom"
+msgstr ""
+
+#: tachartstrconsts.rsfiterrorsumofsquares
+msgid "Error sum of squares (SSE)"
+msgstr ""
+
+#: tachartstrconsts.rsfitnumfitparams
+msgid "Number of fit parameters"
+msgstr ""
+
+#: tachartstrconsts.rsfitnumobservations
+msgid "Number of observations"
+msgstr ""
+
+#: tachartstrconsts.rsfitpvalue
+msgid "p value"
+msgstr ""
+
+#: tachartstrconsts.rsfitreducedchisquared
+msgid "Reduced Chi-squared"
+msgstr ""
+
+#: tachartstrconsts.rsfitregressionsumofsquares
+msgid "Regression sum of squares (SSR)"
+msgstr ""
+
+#: tachartstrconsts.rsfitresidualstandarderror
+msgid "Residual standard error"
+msgstr ""
+
+#: tachartstrconsts.rsfittotalsumofsquares
+msgid "Total sum of squares (SST)"
+msgstr ""
+
+#: tachartstrconsts.rsfittvalue
+msgid "t value"
+msgstr ""
+
+#: tachartstrconsts.rsfitvarianceratio
+msgid "Variance ratio F"
+msgstr ""
+
+#: tachartstrconsts.rsfullstarsymbol
+msgid "Star (full)"
+msgstr ""
+
+#: tachartstrconsts.rsfunctionseries
+msgid "Function series"
+msgstr "Funktiokuvaaja"
+
+#: tachartstrconsts.rsheaderfooterclicktool
+msgid "Header/footer click"
+msgstr ""
+
+#: tachartstrconsts.rshexagonsymbol
+msgid "Hexagon"
+msgstr ""
+
+#: tachartstrconsts.rshidden
+msgid "hidden"
+msgstr ""
+
+#: tachartstrconsts.rshighbracketsymbol
+msgid "High bracket"
+msgstr ""
+
+#: tachartstrconsts.rshorbarsymbol
+msgid "Horizontal bar"
+msgstr ""
+
+#: tachartstrconsts.rsinvalidlogbase
+msgid "Logarithm base must be > 0 and <> 1."
+msgstr ""
+
+#: tachartstrconsts.rsinverted
+msgid "inverted"
+msgstr ""
+
+#: tachartstrconsts.rsleastsquaresfitseries
+msgid "Least-squares fit series"
+msgstr "Pienimpään neliösummaan sopiva kuvaaja"
+
+#: tachartstrconsts.rsleft
+msgid "Left"
+msgstr ""
+
+#: tachartstrconsts.rsleftbracketsymbol
+msgid "Left bracket"
+msgstr ""
+
+#: tachartstrconsts.rslefttrianglesymbol
+msgid "Left triangle"
+msgstr ""
+
+#: tachartstrconsts.rslegendclicktool
+msgid "Legend click"
+msgstr ""
+
+#: tachartstrconsts.rslinear
+msgid "Linear"
+msgstr "Lineaarinen"
+
+#: tachartstrconsts.rslineseries
+msgid "Line series"
+msgstr "Viivakuvaaja"
+
+#: tachartstrconsts.rslistsourcecolorerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not an integer."
+msgstr ""
+
+#: tachartstrconsts.rslistsourcenumericerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not a valid number."
+msgstr ""
+
+#: tachartstrconsts.rslistsourcestringformaterror
+#, object-pascal-format
+msgid "The data value count in the %0:s.DataPoints string \"%1:s\" differs from what is expected from XCount and YCount."
+msgstr ""
+
+#: tachartstrconsts.rslogarithmic
+msgid "Logarithmic"
+msgstr "Logaritminen"
+
+#: tachartstrconsts.rslowbracketsymbol
+msgid "Low bracket"
+msgstr ""
+
+#: tachartstrconsts.rsmanhattanplotseries
+msgid "Manhattan plot series"
+msgstr "Manhattan-kuvaaja"
+
+#: tachartstrconsts.rsmovedown
+msgid "Down"
+msgstr "Alas"
+
+#: tachartstrconsts.rsmoveup
+msgid "Up"
+msgstr "Ylös"
+
+#: tachartstrconsts.rsnosymbol
+msgid "(none)"
+msgstr ""
+
+#: tachartstrconsts.rsopenhighlowcloseseries
+msgid "Open-high-low-close series"
+msgstr ""
+
+#: tachartstrconsts.rspanningbyclick
+msgid "Panning by click"
+msgstr "Vieritys klikkaamalla"
+
+#: tachartstrconsts.rspanningbydrag
+msgid "Panning by drag"
+msgstr "Vieritys vetämällä"
+
+#: tachartstrconsts.rspanningbymousewheel
+msgid "Panning by mouse wheel"
+msgstr "Vieritys hiiren rullalla"
+
+#: tachartstrconsts.rsparametriccurveseries
+msgid "Parametric curve series"
+msgstr ""
+
+#: tachartstrconsts.rspieseries
+msgid "Pie series"
+msgstr "Piirakkakuvaaja"
+
+#: tachartstrconsts.rspointsymbol
+msgid "Point"
+msgstr ""
+
+#: tachartstrconsts.rspolarseries
+msgid "Polar series"
+msgstr "Napakuvaaja"
+
+#: tachartstrconsts.rspolygonseries
+msgid "Polygon series"
+msgstr ""
+
+#: tachartstrconsts.rspsclear
+msgctxt "tachartstrconsts.rspsclear"
+msgid "no line"
+msgstr "ei viivaa"
+
+#: tachartstrconsts.rspsdash
+msgid "dashed line"
+msgstr "katkoviiva"
+
+#: tachartstrconsts.rspsdashdot
+msgid "dash-dot"
+msgstr "pistekatkoviiva"
+
+#: tachartstrconsts.rspsdashdotdot
+msgid "dash-dot-dot"
+msgstr "pistepistekatkoviiva"
+
+#: tachartstrconsts.rspsdot
+msgid "dotted line"
+msgstr "pisteviiva"
+
+#: tachartstrconsts.rspsinsideframe
+msgid "solid (inside frame)"
+msgstr ""
+
+#: tachartstrconsts.rspspattern
+msgid "patterned line"
+msgstr ""
+
+#: tachartstrconsts.rspssolid
+msgid "solid line"
+msgstr "ehytviiva"
+
+#: tachartstrconsts.rsrectanglesymbol
+msgid "Rectangle"
+msgstr ""
+
+#: tachartstrconsts.rsright
+msgid "Right"
+msgstr ""
+
+#: tachartstrconsts.rsrightbracketsymbol
+msgid "Right bracket"
+msgstr ""
+
+#: tachartstrconsts.rsrighttrianglesymbol
+msgid "Right triangle"
+msgstr ""
+
+#: tachartstrconsts.rssourcecounterror
+#, object-pascal-format
+msgid "%0:s requires a chart source with at least %1:d %2:s value(s) per data point."
+msgstr ""
+
+#: tachartstrconsts.rssourcecounterror2
+#, object-pascal-format
+msgid "This %0:s instance must have at least %1:d %2:s value(s) per data point."
+msgstr ""
+
+#: tachartstrconsts.rssourcenoteditable
+msgid "Editable chart source required"
+msgstr ""
+
+#: tachartstrconsts.rssourcesorterror
+#, object-pascal-format
+msgid "Selected sorting parameters are not supported by %s."
+msgstr ""
+
+#: tachartstrconsts.rsstarsymbol
+msgid "Star (lines)"
+msgstr ""
+
+#: tachartstrconsts.rstop
+msgid "Top"
+msgstr ""
+
+#: tachartstrconsts.rstrianglesymbol
+msgid "Triangle"
+msgstr ""
+
+#: tachartstrconsts.rsuserdefined
+msgctxt "tachartstrconsts.rsuserdefined"
+msgid "User-defined"
+msgstr "Käyttäjän määrittelemä"
+
+#: tachartstrconsts.rsuserdefinedtool
+#, fuzzy
+msgctxt "tachartstrconsts.rsuserdefinedtool"
+msgid "User-defined"
+msgstr "Käyttäjän määrittelemä"
+
+#: tachartstrconsts.rsuserdrawnseries
+msgid "User-drawn series"
+msgstr "Käyttäjän piirtämä kuvaaja"
+
+#: tachartstrconsts.rsvertbarsymbol
+msgid "Vertical bar"
+msgstr ""
+
+#: tachartstrconsts.rszoombyclick
+msgid "Zoom by click"
+msgstr "Zoomaus klikkaamalla"
+
+#: tachartstrconsts.rszoombydrag
+msgid "Zoom by drag"
+msgstr "Zoomaus vetämällä"
+
+#: tachartstrconsts.rszoombymousewheel
+msgid "Zoom by mouse-wheel"
+msgstr "Zoomaus hiiren rullalla"
+
+#: tachartstrconsts.sesserieseditortitle
+msgid "Edit series"
+msgstr "Muokkaa kuvaajia"
+
+#: tachartstrconsts.tasaxistransformseditortitle
+msgid "Edit axis transformations"
+msgstr "Muokkaa akselimuunnoksia"
+
+#: tachartstrconsts.tasfailedsubcomponentrename
+#, object-pascal-format
+msgid "Failed to rename components: %s"
+msgstr "Uudelleennimeäminen epäonnistui komponenteissa: %s"
+
+#: tachartstrconsts.tastoolseditortitle
+msgid "Edit tools"
+msgstr "Muokkaustyökalut"
+

@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "Nutraukti"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Pridėti"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Visada"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "Pri&dėti"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "&Tęsti"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Pašalinti"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "&Pridėti…"
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "Į&galintas"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "&Tinka"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Tęsti"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Kopijuoti"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Iškirpti"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Pašalinti"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Pasyvus"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Pridėti…"
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Veiksnus"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Žinynas"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "Ignoruoti"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Niekada"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "Ne"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "gerai"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Įdėti"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Taip"
+

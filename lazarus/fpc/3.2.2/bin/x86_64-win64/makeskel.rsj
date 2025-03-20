@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":267179490,"name":"makeskel.stitle","sourcebytes":[77,97,107,101,83,107,101,108,32,45,32,70,80,68,111,99,32,115,107,101,108,101,116,111,110,32,88,77,76,32,100,101,115,99,114,105,112,116,105,111,110,32,102,105,108,101,32,103,101,110,101,114,97,116,111,114],"value":"MakeSkel - FPDoc skeleton XML description file generator"},
+{"hash":99991661,"name":"makeskel.sversion","sourcebytes":[86,101,114,115,105,111,110,32,37,115,32,91,37,115,93],"value":"Version %s [%s]"},
+{"hash":187035902,"name":"makeskel.scmdlinehelp","sourcebytes":[83,101,101,32,100,111,99,117,109,101,110,116,97,116,105,111,110,32,102,111,114,32,117,115,97,103,101,46],"value":"See documentation for usage."},
+{"hash":214644050,"name":"makeskel.scmdlineinvalidoption","sourcebytes":[73,103,110,111,114,105,110,103,32,117,110,107,110,111,119,110,32,111,112,116,105,111,110,32,34,37,115,34],"value":"Ignoring unknown option \"%s\""},
+{"hash":79326126,"name":"makeskel.snopackagenameprovided","sourcebytes":[80,108,101,97,115,101,32,115,112,101,99,105,102,121,32,97,32,112,97,99,107,97,103,101,32,110,97,109,101,32,119,105,116,104,32,45,45,112,97,99,107,97,103,101,61,60,110,97,109,101,62],"value":"Please specify a package name with --package=<name>"},
+{"hash":246505630,"name":"makeskel.soutputmustnotbedescr","sourcebytes":[79,117,116,112,117,116,32,102,105,108,101,32,109,117,115,116,32,98,101,32,100,105,102,102,101,114,101,110,116,32,102,114,111,109,32,100,101,115,99,114,105,112,116,105,111,110,32,102,105,108,101,110,97,109,101,115,46],"value":"Output file must be different from description filenames."},
+{"hash":143203827,"name":"makeskel.screatingnewnode","sourcebytes":[67,114,101,97,116,105,110,103,32,100,111,99,117,109,101,110,116,97,116,105,111,110,32,102,111,114,32,110,101,119,32,110,111,100,101,32,58,32,37,115],"value":"Creating documentation for new node : %s"},
+{"hash":60966388,"name":"makeskel.snodenotreferenced","sourcebytes":[68,111,99,117,109,101,110,116,97,116,105,111,110,32,110,111,100,101,32,34,37,115,34,32,110,111,32,108,111,110,103,101,114,32,117,115,101,100],"value":"Documentation node \"%s\" no longer used"},
+{"hash":4940926,"name":"makeskel.sdone","sourcebytes":[68,111,110,101,46],"value":"Done."}
+]}

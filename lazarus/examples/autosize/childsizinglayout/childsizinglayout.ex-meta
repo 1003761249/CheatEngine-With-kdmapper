@@ -1,0 +1,11 @@
+{
+  "ChildSizingLayout" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Layout",
+      "Sizing",
+      "ChildSizing"
+    ],
+    "Description" : "This is a demonstration of the TWinControl.ChildSizing.Layout property."
+  }
+}

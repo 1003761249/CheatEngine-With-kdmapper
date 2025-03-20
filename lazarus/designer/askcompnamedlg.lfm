@@ -1,0 +1,112 @@
+object AskCompNameDialog: TAskCompNameDialog
+  Left = 299
+  Height = 224
+  Top = 177
+  Width = 393
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'AskCompNameDialog'
+  ClientHeight = 224
+  ClientWidth = 393
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object NameLabel: TLabel
+    Left = 6
+    Height = 15
+    Top = 6
+    Width = 381
+    Align = alTop
+    BorderSpacing.Around = 6
+    Caption = 'NameLabel'
+    ParentColor = False
+    WordWrap = True
+  end
+  object NameEdit: TEdit
+    AnchorSideTop.Control = NameLabel
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 23
+    Top = 27
+    Width = 381
+    Align = alTop
+    BorderSpacing.Around = 6
+    OnChange = NameEditChange
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    Text = 'NameEdit'
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 192
+    Width = 381
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+  object InfoPanel: TPanel
+    AnchorSideLeft.Control = NameEdit
+    AnchorSideTop.Control = TextMemo
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NameEdit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 6
+    Height = 50
+    Top = 136
+    Width = 381
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    BevelOuter = bvNone
+    Caption = 'InfoPanel'
+    Color = clInfoBk
+    Font.Color = clInfoText
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+  end
+  object TextLabel: TLabel
+    AnchorSideTop.Control = NameEdit
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 56
+    Width = 49
+    Caption = 'TextLabel'
+    ParentColor = False
+    WordWrap = True
+  end
+  object TextMemo: TMemo
+    AnchorSideLeft.Control = NameLabel
+    AnchorSideTop.Control = TextLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NameLabel
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 53
+    Top = 77
+    Width = 381
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    OnChange = NameEditChange
+    OnEnter = TextMemoEnter
+    ParentShowHint = False
+    ScrollBars = ssAutoBoth
+    ShowHint = True
+    TabOrder = 1
+  end
+end

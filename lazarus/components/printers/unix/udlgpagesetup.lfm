@@ -1,0 +1,158 @@
+object dlgPageSetup: TdlgPageSetup
+  Left = 323
+  Height = 514
+  Top = 135
+  Width = 447
+  ActiveControl = frmPageSetup.cbPaper
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'dlgPageSetup'
+  ChildSizing.LeftRightSpacing = 8
+  ChildSizing.TopBottomSpacing = 4
+  ChildSizing.VerticalSpacing = 6
+  ClientHeight = 514
+  ClientWidth = 447
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  inline frmPageSetup: TframePageSetup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 8
+    Height = 460
+    Top = 4
+    Width = 430
+    ClientHeight = 460
+    ClientWidth = 430
+    DesignLeft = 388
+    DesignTop = 96
+    inherited panSetup: TPanel
+      Top = 242
+      Width = 430
+      ClientWidth = 430
+      TabOrder = 1
+      inherited gpPaper: TGroupBox
+        Width = 430
+        ClientWidth = 428
+        inherited cbPaper: TComboBox
+          Width = 330
+        end
+        inherited cbSource: TComboBox
+          Width = 330
+        end
+      end
+      inherited gpMargins: TGroupBox
+        Width = 309
+        ClientWidth = 307
+        inherited panMargins: TPanel
+          Width = 307
+          ClientWidth = 307
+          inherited lblBottom: TLabel
+            Left = 157
+          end
+          inherited lblRight: TLabel
+            Left = 157
+          end
+          inherited txtLeft: TFloatSpinEdit
+            Left = 78
+          end
+          inherited txtRight: TFloatSpinEdit
+            Left = 226
+          end
+          inherited txtTop: TFloatSpinEdit
+            Left = 78
+          end
+          inherited txtBottom: TFloatSpinEdit
+            Left = 226
+          end
+          inherited Label1: TLabel
+            Left = 153
+          end
+        end
+      end
+    end
+    inherited panPreview: TPanel
+      Height = 242
+      Width = 430
+      ClientHeight = 242
+      ClientWidth = 430
+      Constraints.MinHeight = 0
+      TabOrder = 0
+      inherited pbPreview: TPaintBox
+        Height = 242
+        Width = 430
+      end
+    end
+  end
+  object PanelButtons: TPanel
+    AnchorSideLeft.Control = frmPageSetup
+    AnchorSideTop.Control = frmPageSetup
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = frmPageSetup
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 36
+    Top = 470
+    Width = 430
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Bottom = 8
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 6
+    ClientHeight = 36
+    ClientWidth = 430
+    FullRepaint = False
+    TabOrder = 1
+    TabStop = True
+    object btnCancel: TButton
+      AnchorSideTop.Control = btnOk
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = btnOk
+      Left = 274
+      Height = 35
+      Top = 1
+      Width = 75
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Cancel = True
+      Caption = 'Cancel'
+      Constraints.MinWidth = 75
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object btnOk: TButton
+      AnchorSideTop.Control = PanelButtons
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = PanelButtons
+      AnchorSideRight.Side = asrBottom
+      Left = 355
+      Height = 35
+      Top = 1
+      Width = 75
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Caption = 'OK'
+      Constraints.MinWidth = 75
+      Default = True
+      ModalResult = 1
+      TabOrder = 2
+    end
+    object btnPrinter: TButton
+      AnchorSideLeft.Control = PanelButtons
+      AnchorSideTop.Control = PanelButtons
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 35
+      Top = 1
+      Width = 75
+      AutoSize = True
+      Caption = 'Printer...'
+      Constraints.MinWidth = 75
+      OnClick = btnPrinterClick
+      TabOrder = 0
+    end
+  end
+end

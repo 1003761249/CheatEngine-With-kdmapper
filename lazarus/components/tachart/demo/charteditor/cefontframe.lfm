@@ -1,0 +1,165 @@
+object ChartFontFrame: TChartFontFrame
+  Left = 0
+  Height = 84
+  Top = 0
+  Width = 301
+  ClientHeight = 84
+  ClientWidth = 301
+  TabOrder = 0
+  DesignLeft = 332
+  DesignTop = 128
+  object cmbFontName: TComboBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 301
+    Anchors = [akTop, akLeft, akRight]
+    ItemHeight = 15
+    OnChange = cmbFontNameChange
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object cbBold: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Panel2
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 19
+    Top = 60
+    Width = 45
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 8
+    Caption = 'Bold'
+    Font.Style = [fsBold]
+    OnChange = cbBoldChange
+    ParentFont = False
+    TabOrder = 2
+  end
+  object cbItalic: TCheckBox
+    AnchorSideLeft.Control = cbBold
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = cbBold
+    Left = 53
+    Height = 19
+    Top = 60
+    Width = 45
+    BorderSpacing.Left = 8
+    Caption = 'Italic'
+    Font.Style = [fsItalic]
+    OnChange = cbItalicChange
+    ParentFont = False
+    TabOrder = 3
+  end
+  object cbUnderline: TCheckBox
+    AnchorSideLeft.Control = cbItalic
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = cbBold
+    AnchorSideRight.Side = asrBottom
+    Left = 106
+    Height = 19
+    Top = 60
+    Width = 78
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 6
+    Caption = 'Underlined'
+    Font.Style = [fsUnderline]
+    OnChange = cbUnderlineChange
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Panel2: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = cmbFontName
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 31
+    Top = 23
+    Width = 301
+    Anchors = [akTop, akLeft, akRight]
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+    ChildSizing.ShrinkHorizontal = crsHomogenousSpaceResize
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 31
+    ClientWidth = 301
+    TabOrder = 1
+    object cmbFontSize: TComboBox
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      Left = 0
+      Height = 23
+      Top = 6
+      Width = 144
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 16
+      ItemHeight = 15
+      OnChange = cmbFontSizeChange
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object Panel1: TPanel
+      AnchorSideRight.Control = cbFontColor
+      Left = 160
+      Height = 23
+      Top = 6
+      Width = 97
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 16
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 97
+      TabOrder = 1
+      object lblOrientation: TLabel
+        AnchorSideLeft.Control = Panel1
+        AnchorSideTop.Control = seOrientation
+        AnchorSideTop.Side = asrCenter
+        Left = 0
+        Height = 15
+        Top = 4
+        Width = 31
+        Caption = 'Angle'
+        FocusControl = seOrientation
+      end
+      object seOrientation: TSpinEdit
+        AnchorSideLeft.Control = lblOrientation
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel1
+        AnchorSideTop.Side = asrCenter
+        Left = 39
+        Height = 23
+        Top = 0
+        Width = 58
+        BorderSpacing.Left = 8
+        MaxValue = 360
+        MinValue = -360
+        OnChange = seOrientationChange
+        TabOrder = 0
+      end
+    end
+    object cbFontColor: TColorButton
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 273
+      Height = 23
+      Top = 6
+      Width = 28
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 6
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      Margin = 2
+      OnColorChanged = cbFontColorColorChanged
+    end
+  end
+end

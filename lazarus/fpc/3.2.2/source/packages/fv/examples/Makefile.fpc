@@ -1,0 +1,15 @@
+#
+#   Makefile.fpc for Free Vision Test/Examples
+#
+
+[target]
+programs=testapp
+
+[compiler]
+includedir=../src
+
+[require]
+packages=fv
+
+[default]
+fpcdir=../../..

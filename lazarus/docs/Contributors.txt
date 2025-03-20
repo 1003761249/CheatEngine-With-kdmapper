@@ -1,0 +1,252 @@
+#The following people contributed to Lazarus:
+
+A. J. Venter
+Алексей Лагунов
+Alexander Grau
+Alexander S. Klenin
+Alexander Shiyan
+Alexandr Gridnev
+Alexandre Leclerc
+Alexandru Alexandrov
+Alexey Torgashin
+Andreas Hausladen
+Andreas Schneider
+Andrew Haines
+Andrew Johnson
+Andrey Sobol
+Andrey Zubarev
+Anton A. Panferov
+Anton Kavalenka
+Antônio Galvão
+Arnold Bosch
+Attila Tamás - Hungarian translation
+August Klein
+Babak Mahmoudabadi
+Balázs Székely
+Bald Zhang
+Bart Broersma
+Benito van der Zander
+Bent Normann Olsen
+Bernd Engelhardt
+Bernd Kreuss
+Bernd Mueller
+Bob Wingard
+Bogusław Brandys
+Boian Mitov
+Boris Arko
+Boris Glavin
+Boris Popov
+Brad Campbell
+Bruce Tulloch
+Chris Rorden
+Christian Budde
+Christian Iversen
+Christian Ulrich
+Christo Crause
+Christopher Kirkpatrick
+Cliff Baeseman
+Colin Western
+Curtis White
+Daniel Oom
+Daniel Simões de Almeida
+Darek Mazur
+Darius Blaszijk
+Dávid Fehér - Hungarian translation
+David Guadagnini
+David Jenkins
+David Pethes
+David Zimmer
+Dean Zobec
+Denis Golovan
+Denis Kozlov
+Denis Volodarsky
+Derit Agustin
+Dimitrios Chr. Ioannidis
+Diogo Piçarra
+Dirk Schiphorst
+Dmitry Boyarintsev
+Domingo Galmés
+Dominique Louis
+Don Siders
+Ere Maijala
+Eric Chapman
+Erivelton Silva
+Erwin van den Bosch
+Eugene Kryukov
+Evgen A. Palamarchuck
+Ezik Shlomi
+Fabrizio Fellini
+Fathony Luthfillah (x2nie)
+Felipe Monteiro de Carvalho
+Flávio Etrusco
+Florian Koeberle
+Francisco Manuel
+Gabor Boros
+Gerard Visent
+Gilles Vasseur - French translation
+Giuliano Colla
+Giulio Bernardi
+GongYu
+Graeme Geldenhuys
+Grzegorz Zakrzewski
+Gustavo Carreno
+Hakan Kizilhan
+Hans Luijten
+Hans-Joachim Ott
+Hans-Peter Diettrich
+Haruyuki Fujimaki
+Henry Vermaak
+Hwang Weng Sun
+Ido Kanner
+Igor Paliychuk
+Imad Goubaa
+James Chandler Jr.
+Jan Adamec
+Jan Foster
+Janusz Tomczak
+Jarto Tarpio
+Jason King
+Jeffrey A. Wormsley
+Jeroen van Idekinge
+Jesus Reyes
+JiXian Yang
+Jörg Braun - German translation
+Johannes Muller
+Jonas Maebe
+Joost van der Sluis
+Jose Alonso Cardenas M.
+José Martínez - Spanish translation
+Jose Mejuto
+Jouke Rensma
+Juan Salvador Pérez García
+Juha Manninen
+Júnior Gonçalves
+Justin Smyth
+Karl Brandt
+Keith Bowes
+Kevin Jesshope
+Khaled Shagrouni
+Kostas Michalopoulos
+Krzysztof Dibowski
+Ladislav Michl
+Laurent Jacques
+Leslie Kaye
+Louis Hoefler
+Luca Olivetti
+Lucas Martin
+Ludo Brands
+Luis R. Hilario B.
+Luís Rodrigues
+Luiz Américo
+Maciej Izak (hnb)
+Marc Fokker
+Marc Geldon
+Marc Weustink
+Marcelo Borges de Paula
+Marcin Wiązowski
+Mario Bonati
+Mario Ray Mahardhika
+Marius Ellen
+Mark Bravington
+Mark Morgan Lloyd
+Markus Muller
+Martin Friebe
+Martin Patik
+Martin Smat
+Márton Papp
+Martyn Ranyard
+Massimo Magnano
+Massimo Soricetti
+Matthijs Willemstein
+Mattias Gärtner
+Mattias Hansson
+Maxim Ganetsky
+Mazen Neifer
+Micha Nelissen
+Michael A. Hess
+Michael Fuchs
+Michael W. Vogel
+Michal Bukovjan
+Michal Gawrycki
+Michalis Kamburelis
+Mike Sapsard
+Mike Thompson
+Nikolay Ermolov
+Nur Cholif Murtadho
+Olivier Guilbaud
+Olexandr Pylypchuk - Ukrainian translation
+Olly Cain
+Ondrej Pokorny
+Pascal Riekenberg
+Patrick Chevalley
+Paul Ishenin
+Paul Michell
+Pawel Trochimczuk
+Percy Van Den bylaardt
+Peter Dyson
+Péter Gábor
+Petr Kristan
+Philip J. Hess
+Philippe Picard
+Pierre Gillmann
+Pino Toscano
+Przemyslaw Nagay
+Radek Cervinka
+Raul Moratalla
+Razvan Adrian Bogdan
+Reimar Grabowski
+Reinier Olislagers
+Roland Hahn - Component icons
+Roozbeh GHolizadeh
+Rostislav Okulov
+Salvatore Coppola
+Samuel Herzog
+Samuel Liddicott
+Sandro Cumerlato
+Sean McIlwain
+Sebastian Gasiorek
+Seppo Suutarla - Finnish translation
+Sérgio Marcelo
+Shane Miller
+Sileno Goedicke
+Silvio Clécio
+Simon Ameis
+Slavko Fedorik
+Stefan Hille
+Takeda Matsuki
+Tamás Kálcza - Hungarian translation
+Taras Boychuk
+Theo Lustenberger
+Tim P. Launchbury
+Tobias Giesen
+Tom Lisjac
+Tomáš Gregorovič
+Tomasz Wieckowski
+Tony Maro
+Vaclav Valicek
+Valdas Jankūnas
+Valdinilson Lourenço da Cunha
+Vasily I. Volchenko
+Vincent Beuselinck
+Vincent Snijders
+Vladimir Serotyukov
+Vladimir Zhirov
+Vojtech Cihak
+Wanderlan Santos dos Anjos
+Werner Pamler
+Wojciech Malinowski
+WooBean
+Yauheni Nazimau
+Yuichiro Takahashi
+Yuriy Yeroshkin
+Yury Sidorov
+Zaenal Mutaqin
+Zaher Dirkey
+Zdravko Gabrovski
+Zeljan Rikalo
+Zheng Jian Ping aka "robsean" - Simplified Chinese translation
+Žilvinas Ledas
+Zoë Peterson
+Zoltanleo
+
+#and special thanks to the FPC team.

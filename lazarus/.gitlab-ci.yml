@@ -1,0 +1,332 @@
+variables:
+  FPC_OLDSTABLE_VER: 3.2.0
+  FPC_STABLE_VER: 3.2.2     # make sure to properly adjust FOOTER variable value in docs-fpdoc-stable job on version bump (needed only once)
+  FPC_FIXES_VER: 3.2.3
+  FPC_MAIN_VER: 3.3.1
+
+  IMAGE_TAG: $CI_REGISTRY_IMAGE/debian-x86-64:latest
+  QT5PAS_SRC: lcl/interfaces/qt5/cbindings
+  QT6PAS_SRC: lcl/interfaces/qt6/cbindings
+
+workflow:  # these rules enable pipeline for merge requests and try to avoid duplicate pipelines
+  rules:
+#    - when: never  # uncomment this line to disable pipeline (useful for service needs)
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+default:
+  image: $IMAGE_TAG
+
+stages:  # List of stages for jobs, and their order of execution
+  - prepenv
+  - clearcaches
+  - prepcaches
+  - build
+
+.runscheduled:  # this hidden job defines a rule, which, if referenced by job, enables it to always run in scheduled pipeline
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+
+.manualjob:  # this hidden job defines a rule, which, if referenced by job, allows it to be skipped without errors
+  rules:
+    - when: manual
+      allow_failure: true
+
+.onsuccessjob:  # this hidden job defines a rule, which, if referenced by job, configures it to be run when previous ones completed successfully
+  rules:
+    - when: on_success
+
+update-build-env:  # This job updates building environment image. Run it if FPC version constants and/or buildenv.Dockerfile were changed.
+  stage: prepenv
+  image: docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build --pull
+                   --build-arg FPC_OLDSTABLE_VER=$FPC_OLDSTABLE_VER
+                   --build-arg FPC_STABLE_VER=$FPC_STABLE_VER
+                   --build-arg FPC_FIXES_VER=$FPC_FIXES_VER
+                   --build-arg FPC_MAIN_VER=$FPC_MAIN_VER
+                   -t $IMAGE_TAG - < buildenv.Dockerfile
+    - docker push $IMAGE_TAG
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+      allow_failure: true
+    - when: never
+
+clear-qt5pas-bindings:  # clear Qt5 Pascal bindings cache if changes are detected, as in this case full rebuild is needed
+  stage: clearcaches
+  script:
+    - echo "Clearing Qt5Pas bindings cache."
+  cache:
+    key: qt5pas-cache-$CI_COMMIT_REF_SLUG
+    policy: push
+    untracked: true
+  rules:
+    - changes:
+        - $QT5PAS_SRC/**/*
+
+clear-qt6pas-bindings:  # clear Qt6 Pascal bindings cache if changes are detected, as in this case full rebuild is needed
+  stage: clearcaches
+  script:
+    - echo "Clearing Qt6Pas bindings cache."
+  cache:
+    key: qt6pas-cache-$CI_COMMIT_REF_SLUG
+    policy: push
+    untracked: true
+  rules:
+    - changes:
+        - $QT6PAS_SRC/**/*
+
+update-qt5pas-bindings:  # build and cache Qt5 Pascal bindings
+  stage: prepcaches
+  script:
+    - cd $QT5PAS_SRC
+    - qmake -query
+    - qmake
+    - make
+  cache:
+    key: qt5pas-cache-$CI_COMMIT_REF_SLUG
+    paths:
+      - $QT5PAS_SRC/
+
+update-qt6pas-bindings:  # build and cache Qt6 Pascal bindings
+  stage: prepcaches
+  script:
+    - cd $QT6PAS_SRC
+    - qmake6 -query
+    - qmake6
+    - make
+  cache:
+    key: qt6pas-cache-$CI_COMMIT_REF_SLUG
+    paths:
+      - $QT6PAS_SRC/
+
+.useqt5cache:  # this hidden job defines cache configuration used by Qt5 IDE building jobs
+  script:
+    - cd $QT5PAS_SRC         # install Qt5 Pascal bindings
+    - make install
+    - cd $CI_PROJECT_DIR
+  cache:
+    key: qt5pas-cache-$CI_COMMIT_REF_SLUG
+    policy: pull
+    paths:
+      - $QT5PAS_SRC/
+
+.useqt6cache:  # this hidden job defines cache configuration used by Qt6 IDE building jobs
+  script:
+    - cd $QT6PAS_SRC         # install Qt6 Pascal bindings
+    - make install
+    - cd $CI_PROJECT_DIR
+  cache:
+    key: qt6pas-cache-$CI_COMMIT_REF_SLUG
+    policy: pull
+    paths:
+      - $QT6PAS_SRC/
+
+x86_64-gtk2-oldstable:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk2
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-gtk2-stable:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk2
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]
+
+x86_64-gtk2-fixes:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_FIXES_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk2
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-gtk2-main:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_MAIN_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk2
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-gtk3-oldstable:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk3
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-gtk3-stable:
+  stage: build
+  script:
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=gtk3
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]
+
+x86_64-qt5-oldstable:
+  extends: .useqt5cache
+  stage: build
+  script:
+    - !reference [.useqt5cache, script]
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=qt5
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]
+
+x86_64-qt5-stable:
+  extends: .useqt5cache
+  stage: build
+  script:
+    - !reference [.useqt5cache, script]
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=qt5
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-qt6-oldstable:
+  extends: .useqt6cache
+  stage: build
+  script:
+    - !reference [.useqt6cache, script]
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=qt6
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-qt6-stable:
+  extends: .useqt6cache
+  stage: build
+  script:
+    - !reference [.useqt6cache, script]
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 CPU_TARGET=x86_64 LCL_PLATFORM=qt6
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]
+
+i386-win32-oldstable:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcross386 OS_TARGET=win32 CPU_TARGET=i386 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+i386-win32-stable:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcross386 OS_TARGET=win32 CPU_TARGET=i386 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]
+
+i386-win32-fixes:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_FIXES_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_FIXES_VER/ppcross386 OS_TARGET=win32 CPU_TARGET=i386 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+i386-win32-main:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_MAIN_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_MAIN_VER/ppcross386 OS_TARGET=win32 CPU_TARGET=i386 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-win64-oldstable:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_OLDSTABLE_VER/ppcx64 OS_TARGET=win64 CPU_TARGET=x86_64 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+x86_64-win64-stable:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64
+    - make bigide FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 OS_TARGET=win64 CPU_TARGET=x86_64 LCL_PLATFORM=win32
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.manualjob, rules]
+
+
+.docs-build:
+  stage: build
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64
+    - cd docs/html
+    - unzip -j /doc-chm.zip -d ../chm
+    - $CI_PROJECT_DIR/lazbuild --compiler=/usr/lib/fpc/$FPC_STABLE_VER/ppcx64 --lazarusdir=$CI_PROJECT_DIR build_lcl_docs.lpi
+    - ./build_lcl_docs --fpdoc /usr/bin/fpdoc-$FPDOC_VER --fpcdocs=../chm --outfmt chm --footer $FOOTER
+    - ./build_lcl_docs --fpdoc /usr/bin/fpdoc-$FPDOC_VER --fpcdocs=../chm --outfmt html --footer $FOOTER
+  artifacts:
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - docs/chm/
+      - docs/html/lcl/lcl/
+      - docs/html/lazutils/lazutils/
+    expire_in: 1 week
+
+docs-fpdoc-main:
+  extends: .docs-build
+  variables:
+    FPDOC_VER: $FPC_MAIN_VER
+    FOOTER: "@locallclfooter.xml"
+  rules:
+    - !reference [.manualjob, rules]
+
+docs-fpdoc-fixes:
+  extends: .docs-build
+  variables:
+    FPDOC_VER: $FPC_FIXES_VER
+    FOOTER: "@locallclfooter.xml"
+  rules:
+    - !reference [.manualjob, rules]
+
+docs-fpdoc-stable:
+  extends: .docs-build
+  variables:
+    FPDOC_VER: $FPC_STABLE_VER
+    FOOTER: "locallclfooter.xml"
+  rules:
+    - !reference [.manualjob, rules]
+
+tests-codetools: # run Codetools tests and output results in JUnit format (for this FPC 3.3.1 and up is needed)
+  stage: build
+  variables:
+    OUTPUT_FILE: testresults_codetools.xml
+  script:
+    - make lazbuild FPC=/usr/lib/fpc/$FPC_MAIN_VER/ppcx64
+    - cd components/codetools/tests
+    - $CI_PROJECT_DIR/lazbuild --compiler=/usr/lib/fpc/$FPC_MAIN_VER/ppcx64 --lazarusdir=$CI_PROJECT_DIR runtestscodetools.lpi
+    - FPCDIR=/fpcsrc/$FPC_MAIN_VER ./runtestscodetools --all --format=junit --file=$CI_PROJECT_DIR/$OUTPUT_FILE
+  artifacts:
+    when: always
+    paths:
+      - $OUTPUT_FILE
+    reports:
+      junit: $OUTPUT_FILE
+  rules:
+    - !reference [.runscheduled, rules]
+    - !reference [.onsuccessjob, rules]

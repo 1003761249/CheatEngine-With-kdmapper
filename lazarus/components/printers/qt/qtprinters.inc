@@ -1,0 +1,780 @@
+{%MainUnit ../osprinters.pas}
+{
+  Implementation for qtlcl printing
+  Author: Zeljan Rikalo
+
+ *****************************************************************************
+  This file is part of the Lazarus Component Library (LCL)
+
+  See the file COPYING.modifiedLGPL.txt, included in this distribution,
+  for details about the license.
+ *****************************************************************************
+ }
+Uses InterfaceBase, LCLIntf;
+
+{.$DEFINE UsePrinterSupportedPapers}
+{$IFDEF MSWINDOWS}
+{$DEFINE QTPAPERSONDEMAND}
+{$ENDIF}
+
+{$IF DEFINED(QTPAPERSONDEMAND) AND DEFINED(UsePrinterSupportedPapers)}
+{$UNDEF UsePrinterSupportedPapers}
+{$ENDIF}
+
+const
+  DEFAULT_PAPER_NAME = 'A4';
+
+{ TQtPrinters }
+
+function TQtPrinters.GetPaperSize(const Str: String): QtLCLPrinterPageSize;
+var
+  i: Integer;
+begin
+  DoInitializeCachePapers;
+  i := IndexOfPaper(Str);
+  if i>=0 then
+    result := FPapers[i].PageSize
+  else
+    Result := {$IFDEF LCLQt6}QPageSizeId_A4{$ELSE}{$IFDEF LCLQt5}QPagedPaintDeviceA4{$ELSE}QPrinterA4{$ENDIF}{$ENDIF};
+end;
+
+procedure TQtPrinters.BeginPage;
+begin
+  if Assigned(Canvas) then
+    Canvas.Handle := HDC(QtDefaultPrinter.PrinterContext);
+end;
+
+procedure TQtPrinters.EndPage;
+begin
+  QtDefaultPrinter.PrinterContext;
+
+  if Assigned(Canvas) then Canvas.Handle := 0;
+  QtDefaultPrinter.endDoc;
+end;
+
+procedure TQtPrinters.EnumQPrinters(Lst: TStrings);
+var
+  i: Integer;
+  PrnInfo: QPrinterInfoH;
+  {$IF DEFINED(LCLQt5) OR DEFINED(LCLQt6)}
+  AList: QStringListH;
+  DefaultPrn: WideString;
+  {$ELSE}
+  Prntr: QPrinterInfoH;
+  PrnList: TPtrIntArray;
+  {$ENDIF}
+  PrnName: WideString;
+begin
+  inherited DoEnumPrinters(Lst);
+  {$IF DEFINED(LCLQt5) OR DEFINED(LCLQt6)}
+  Lst.Clear;
+  AList := QStringList_create();
+  PrnInfo := QPrinterInfo_create();
+  try
+    QPrinterInfo_availablePrinterNames(AList);
+    QPrinterInfo_defaultPrinter(PrnInfo);
+    QPrinterInfo_printerName(PrnInfo, @DefaultPrn);
+    for i := 0 to QStringList_size(AList) - 1 do
+    begin
+      QStringList_at(AList, @PrnName, I);
+      if DefaultPrn = PrnName then
+        Lst.InsertObject(0, PrnName{%H-}, nil)
+      else
+        Lst.AddObject(PrnName{%H-}, nil);
+    end;
+  finally
+    QPrinterInfo_destroy(PrnInfo);
+    QStringList_destroy(AList);
+  end;
+  {$ELSE}
+  PrnInfo := QPrinterInfo_create();
+  try
+    PrnInfo := QPrinterInfo_create();
+    Lst.Clear;
+    QPrinterInfo_availablePrinters(@PrnList);
+    for i := Low(PrnList) to High(PrnList) do
+    begin
+      Prntr := QPrinterInfoH(PrnList[i]);
+      if Assigned(Prntr) and not QPrinterInfo_isNull(Prntr) then
+      begin
+        QPrinterInfo_printerName(Prntr, @PrnName);
+        if QPrinterInfo_isDefault(Prntr) then
+          Lst.InsertObject(0, PrnName{%H-}, Prntr)
+        else
+          Lst.AddObject(PrnName{%H-}, Prntr);
+      end;
+    end;
+  finally
+    QPrinterInfo_destroy(PrnInfo);
+  end;
+  {$ENDIF}
+end;
+
+function TQtPrinters.GetColorMode: QPrinterColorMode;
+begin
+  Result := QtDefaultPrinter.ColorMode;
+end;
+
+function TQtPrinters.GetFullPage: Boolean;
+begin
+  Result := QtDefaultPrinter.FullPage;
+end;
+
+function TQtPrinters.GetPageOrder: QPrinterPageOrder;
+begin
+  Result := QtDefaultPrinter.PageOrder;
+end;
+
+procedure TQtPrinters.SetColorMode(const AValue: QPrinterColorMode);
+begin
+  QtDefaultPrinter.ColorMode := AValue;
+end;
+
+procedure TQtPrinters.SetFullPage(const AValue: Boolean);
+begin
+  QtDefaultPrinter.FullPage := AValue;
+end;
+
+procedure TQtPrinters.SetPageOrder(const AValue: QPrinterPageOrder);
+begin
+  QtDefaultPrinter.PageOrder := AValue;
+end;
+
+procedure TQtPrinters.CachePapers(OnlySupportedByPrinter: boolean);
+const
+  {$IFDEF LCLQt6}
+  ArrPapers: array[0..QPageSizeId_LastPageSize] of string[119] = (
+    'Letter', 'Legal', 'Executive', 'A0', 'A1', 'A2', 'A3',
+    'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'B0', 'B1', 'B2',
+    'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10', 'C5E',
+    'Comm10E', 'DLE', 'Folio', 'Ledger', 'Tabloid', 'Custom',
+    'A3Extra', 'A4Extra', 'A4Plus', 'A4Small', 'A5Extra', 'B5Extra',
+    'JisB0', 'JisB1', 'JisB2', 'JisB3', 'JisB4', 'JisB5', 'JisB6',
+    'JisB7', 'JisB8', 'JisB9', 'JisB10', 'AnsiC', 'AnsiD', 'AnsiE' {51},
+    'LegalExtra', 'LetterExtra', 'LetterPlus', 'LetterSmall',
+    'TabloidExtra', 'ArchA', 'ArchB', 'ArchC', 'ArchD', 'ArchE',
+    'Imperial7x9', 'Imperial8x10', 'Imperial9x11', 'Imperial9x12', 'Imperial10x11',
+    'Imperial10x13', 'Imperial10x14', 'Imperial12x11', 'Imperial15x11',
+    'ExecutiveStandard' {71}, 'Note', 'Quarto', 'Statement', 'SuperA', 'SuperB',
+    'Postcard', 'DoublePostcard','Prc16K', 'Prc32K', 'Prc32KBig', 'FanFoldUS',
+    'FanFoldGerman', 'FanFoldGermanLegal',
+    'EnvelopeB4', 'EnvelopeB5', 'EnvelopeB6', 'EnvelopeC0', 'EnvelopeC1',
+    'EnvelopeC2', 'EnvelopeC3', 'EnvelopeC4', 'EnvelopeC6', 'EnvelopeC65' {94},
+    'EnvelopeC7', 'EnvelopeC9', 'EnvelopeC11', 'EnvelopeC12', 'EnvelopeC14',
+    'EnvelopeMonarch', 'EnvelopePersonal', 'EnvelopeChou3', 'EnvelopeChou4',
+    'EnvelopeInvite', 'EnvelopeItalian', 'EnvelopeKaku2', 'EnvelopeKaku3',
+    'EnvelopePrc1', 'EnvelopePrc2', 'EnvelopePrc3', 'EnvelopePrc4',
+    'EnvelopePrc5', 'EnvelopePrc6', 'EnvelopePrc7', 'EnvelopePrc8',
+    'EnvelopePrc9', 'EnvelopePrc10', 'EnvelopeYou4'
+    );
+
+  {$ELSE}
+  {$IFDEF LCLQt5}
+  ArrPapers: array[0..QPagedPaintDeviceCustom] of string[12] = (
+  {$ELSE}
+  ArrPapers: array[QPrinterA4..QPrinterCustom] of string[12] = (
+  {$ENDIF}
+    'A4',       'B5',         'Letter',     'Legal',      'Executive',
+    'A0',       'A1',         'A2',         'A3',         'A5',
+    'A6',       'A7',         'A8',         'A9',         'B0',
+    'B1',       'B10',        'B2',         'B3',         'B4',
+    'B6',       'B7',         'B8',         'B9',         'C5E',
+    'Comm10E',  'DLE',        'Folio',      'Ledger',     'Tabloid',
+    'Custom');
+  {$ENDIF}
+var
+  PrinterList: TStringList;
+  Info: QPrinterInfoH;
+  Arr: TPtrIntArray;
+  {$IF DEFINED(LCLQt5) OR DEFINED(LCLQt6)}
+  APrnName: WideString;
+  {$ENDIF}
+  CurrentPageSize, PageSize: QtLCLPrinterPageSize;
+  Index: Integer;
+  customPaperAdded: boolean;
+
+  procedure Add(PaperName: string; PgSize: QtLCLPrinterPageSize);
+  var
+    i: Integer;
+  begin
+    {$ifdef UsePrinterSupportedPapers}
+    // Apparently when Qt retrieve the papers from the printer source engine
+    // any printer supported paper that does not match a Qt known paper it is
+    // assigned a PageSize of 30 (Custom/Unknown).
+    //
+    // TODO: Find out if it is possible to get the dimensions of such custom
+    //       papers, in such case assign to every custom paper a number and
+    //       report them.
+    //
+    // In the mean time, in order to not present the user with multiple
+    // custom papers, just one is allowed.
+    {$endif}
+
+    {$IFDEF LCLQt6}
+    if (PgSize = QPageSizeId_Custom) and customPaperAdded then
+    {$ELSE}
+    if (pgSize=30) and customPaperAdded then
+    {$ENDIF}
+      exit;
+    i := Length(FPapers);
+    SetLength(FPapers, i+1);
+    FPapers[i].PaperName := PaperName;
+
+    //CustomPageSize should be automatically set by setting different paper size
+    //than known paper size. Qt4 asserts when CustomPageSize is directly setted up.
+    {$IFNDEF QTPAPERSONDEMAND}
+    {$IFDEF LCLQt}
+    if pgSize < 30 then
+    {$ENDIF}
+    QtDefaultPrinter.PageSize := PgSize;
+    {$ENDIF}
+    FPapers[i].PageSize := PgSize;
+
+    {$IFDEF QTPAPERSONDEMAND}
+    FPapers[i].PageRect := Rect(0, 0, 0, 0);
+    FPapers[i].PaperRect := Rect(0, 0, 0, 0);
+    // imediatelly fill current papersize
+    if QtDefaultPrinter.PageSize = FPapers[i].PageSize then
+    begin
+    {$ENDIF}
+      FPapers[i].PageRect := QtDefaultPrinter.PageRect;
+      FPapers[i].PaperRect := QtDefaultPrinter.PaperRect;
+    {$IFDEF QTPAPERSONDEMAND}
+    end;
+    {$ENDIF}
+
+    if PaperName=DEFAULT_PAPER_NAME then
+      FDefaultPaperIndex := i;
+    if pgSize=30 then
+      customPaperAdded := true;
+    // DebugLn('Cached: %20s PaperRect=%s PageRect=%s pgSize %d',[PaperName, dbgs(FPapers[i].PaperRect), dbgs(FPapers[i].PageRect), pgSize]);
+  end;
+
+  procedure AddAll;
+  var
+    i: Integer;
+    {$IF DEFINED(LCLQt5) OR DEFINED(LCLQt6)}
+    oldPageSize: QtLCLPrinterPageSize;
+    {$ENDIF}
+  begin
+    {$IFDEF LCLQt6}
+    oldPageSize := QtDefaultPrinter.PageSize;
+    for i := QPageSizeId_Letter to QPageSizeId_LastPageSize do
+      Add(ArrPapers[i], i);
+    if oldPageSize <> QtDefaultPrinter.PageSize then
+      QtDefaultPrinter.PageSize := oldPageSize;
+    {$ELSE}
+    {$IFDEF LCLQt5}
+    oldPageSize := QtDefaultPrinter.PageSize;
+    for i:=QPagedPaintDeviceA4 to QPagedPaintDeviceCustom do
+      Add(ArrPapers[i], i);
+    if oldPageSize <> QtDefaultPrinter.PageSize then
+      QtDefaultPrinter.PageSize := oldPageSize;
+    {$ELSE}
+    for i:=QPrinterA4 to QPrinterCustom do
+      Add(ArrPapers[i], i);
+    {$ENDIF}
+    {$ENDIF}
+  end;
+
+begin
+  customPaperAdded := false;
+  SetLength(FPapers, 0);
+  if not OnlySupportedByPrinter then
+  begin
+    AddAll;
+    exit;
+  end;
+
+  PrinterList := TStringList.Create;
+  try
+    CurrentPageSize := QtDefaultPrinter.PageSize;
+
+    EnumQPrinters(PrinterList);
+    Index := PrinterList.IndexOf(UTF16ToUTF8(QtDefaultPrinter.PrinterName));
+    if Index>=0 then
+    begin
+      {$IF DEFINED(LCLQt5) OR DEFINED(LCLQt6)}
+      Info := QPrinterInfo_create();
+      APrnName := PrinterList{%H-}[Index];
+      QPrinterInfo_printerInfo(Info, @APrnName);
+      {$ELSE}
+      Info := QPrinterInfoH(PrinterList.Objects[Index]);
+      {$ENDIF}
+      {$IFDEF LCLQt6}
+      // rewrite in qt62.pas
+      QPrinterInfo_supportedPaperSizes(Info, Arr);
+      {$ELSE}
+      QPrinterInfo_supportedPaperSizes(Info, @Arr);
+      {$ENDIF}
+
+      {$IFDEF LCLQt5}
+      QPrinterInfo_destroy(Info);
+      {$ENDIF}
+      for PageSize in Arr do
+        {$IFDEF LCLQt6}
+        for Index := QPageSizeId_Letter to QPageSizeId_LastPageSize do
+        {$ELSE}
+        {$IFDEF LCLQt5}
+        for Index := QPagedPaintDeviceA4 to QPagedPaintDeviceCustom do
+        {$ELSE}
+        for Index := QPrinterA4 to QPrinterCustom do
+        {$ENDIF}
+        {$ENDIF}
+        begin
+          if Index=PageSize then
+            Add(ArrPapers[Index], PageSize);
+        end;
+    end else
+      AddAll;
+  finally
+    QtDefaultPrinter.PageSize := CurrentPageSize;
+    PrinterList.Free;
+  end;
+end;
+
+function TQtPrinters.IndexOfPaper(const Paper: string; RetDefault: boolean): Integer;
+var
+  i: Integer;
+begin
+  result := -1;
+  DoInitializeCachePapers;
+  for i:=0 to Length(FPapers)-1 do
+  begin
+    if FPapers[i].PaperName=Paper then begin
+      result := i;
+      exit;
+    end;
+  end;
+  if RetDefault and (Length(FPapers)>0) then
+    result := FDefaultPaperIndex;
+end;
+
+function TQtPrinters.IndexOfPageSize(const PageSize: QtLCLPrinterPageSize): Integer;
+var
+  i: Integer;
+begin
+  result := -1;
+  DoInitializeCachePapers;
+  for i:=0 to Length(FPapers)-1 do begin
+    if FPapers[i].PageSize=PageSize then begin
+      result := i;
+      exit;
+    end;
+  end;
+  if Length(FPapers)>0 then
+    result := FDefaultPaperIndex;
+end;
+
+constructor TQtPrinters.Create;
+begin
+  inherited Create;
+  FCachePapersInitialized := False;
+end;
+
+procedure TQtPrinters.DoDestroy;
+begin
+  FPapers := nil;
+  QtDefaultPrinter.endDoc;
+  inherited DoDestroy;
+end;
+
+procedure TQtPrinters.DoInitializeCachePapers;
+begin
+  if not FCachePapersInitialized then
+  begin
+    FCachePapersInitialized := True;
+    CachePapers(false);
+  end;
+end;
+
+function TQtPrinters.Write(const Buffer; Count: Integer; out Written: Integer): Boolean;
+begin
+  Result := False;
+  CheckRawMode(True);
+  Written := 0;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.Write(): Raw mode is not yet supported');
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.RawModeChanging;
+begin
+  inherited RawModeChanging;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.RawModeChanging(): Raw mode is not yet supported');
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.Validate;
+var
+  P: String;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.Validate()');
+  {$ENDIF}
+  DoInitializeCachePapers;
+  // if target paper is not supported, use the default
+  P := DoGetPaperName;
+  if PaperSize.SupportedPapers.IndexOf(P) = -1 then
+    DoSetPaperName(DoGetDefaultPaperName);
+end;
+
+function TQtPrinters.GetXDPI: Integer;
+begin
+  Result :=  QtDefaultPrinter.Resolution;
+  
+  {DO NOT INITIALIZE PRINTERCONTEXT HERE , ASK DIRECTLY QPAINTDEVICE !}
+  if (Printers.Count>0) and not RawMode then
+    Result := QPaintDevice_logicalDpiX(QtDefaultPrinter.Handle);
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.GetXDPI() Result=',IntToStr(Result));
+  {$ENDIF}
+end;
+
+function TQtPrinters.GetYDPI: Integer;
+begin
+  Result := QtDefaultPrinter.Resolution;
+  
+  {DO NOT INITIALIZE PRINTERCONTEXT HERE , ASK DIRECTLY QPAINTDEVICE !}
+  if (Printers.Count>0) and not RawMode then
+     Result := QPaintDevice_logicalDpiY(QtDefaultPrinter.Handle);
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.GetYDPI() Result=',IntToStr(Result));
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.DoBeginDoc;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoBeginDoc()');
+  {$ENDIF}
+  QtDefaultPrinter.DocName := UTF8ToUTF16(Title);
+  BeginPage;
+end;
+
+procedure TQtPrinters.DoNewPage;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoNewPage()');
+  {$ENDIF}
+  QtDefaultPrinter.PrinterContext;
+  QtDefaultPrinter.NewPage;
+end;
+
+procedure TQtPrinters.DoEndDoc(aAborted: Boolean);
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoEndDoc()');
+  {$ENDIF}
+  inherited DoEndDoc(aAborted);
+  EndPage;
+end;
+
+procedure TQtPrinters.DoAbort;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoAbort()');
+  {$ENDIF}
+  inherited DoAbort;
+  if QtDefaultPrinter.Abort then
+    QtDefaultPrinter.endDoc;
+end;
+
+procedure TQtPrinters.DoEnumPrinters(Lst: TStrings);
+var
+  Str: WideString;
+  i: Integer;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoEnumPrinters()');
+  {$ENDIF}
+  DoInitializeCachePapers;
+  Str := QtDefaultPrinter.PrinterName;
+  EnumQPrinters(Lst);
+  i := Lst.IndexOf(Str{%H-});
+  if i > 0 then
+    Lst.Move(i, 0);
+end;
+
+procedure TQtPrinters.DoResetPrintersList;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoResetPrintersList()');
+  {$ENDIF}
+  inherited DoResetPrintersList;
+end;
+
+procedure TQtPrinters.DoEnumPapers(Lst: TStrings);
+var
+  Paper: TPaperRec;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoEnumPapers()');
+  {$ENDIF}
+  DoInitializeCachePapers;
+  Lst.Clear;
+  for Paper in FPapers do
+    Lst.Add(Paper.PaperName);
+end;
+
+function TQtPrinters.DoGetPaperName: string;
+var
+  i: Integer;
+begin
+  DoInitializeCachePapers;
+  i := IndexOfPageSize(QtDefaultPrinter.PageSize);
+  if i>=0 then
+    result := FPapers[i].PaperName
+  else
+    result := DEFAULT_PAPER_NAME;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetPaperName() Result=',Result);
+  {$ENDIF}
+end;
+
+function TQtPrinters.DoGetDefaultPaperName: string;
+begin
+  DoInitializeCachePapers;
+  if Length(FPapers)>0 then
+    result := FPapers[FDefaultPaperIndex].PaperName
+  else
+    result := DEFAULT_PAPER_NAME;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetDefaultPaperName() Result=',Result);
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.DoSetPaperName(aName: string);
+var
+  O: TPrinterOrientation;
+  i: Integer;
+begin
+  DoInitializeCachePapers;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoSetPaperName() AName=',AName);
+  {$ENDIF}
+  O := DoGetOrientation;
+  i := IndexOfPaper(aName, false);
+  if i >= 0 then
+  begin
+    QtDefaultPrinter.PageSize := FPapers[i].PageSize;
+    {$IFDEF QTPAPERSONDEMAND}
+    if FPapers[i].PaperRect = Rect(0, 0, 0, 0) then
+    begin
+      FPapers[i].PageRect := QtDefaultPrinter.PageRect;
+      FPapers[i].PaperRect := QtDefaultPrinter.PaperRect;
+    end;
+    {$ENDIF}
+    DoSetOrientation(O);
+  end else
+    raise Exception.Create('TQtPrinters: Paper '+AName+' not supported.');
+end;
+
+function TQtPrinters.DoGetPaperRect(aName: string; var aPaperRc: TPaperRect
+  ): Integer;
+var
+  i: Integer;
+  {$IFDEF QTPAPERSONDEMAND}
+  APageSize: {$IFDEF LCLQt}QPrinterPageSize{$ELSE}QPagedPaintDevicePageSize{$ENDIF};
+  {$ENDIF}
+begin
+  DoInitializeCachePapers;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetPaperRect() AName=', AName);
+  {$ENDIF}
+  Result := inherited DoGetPaperRect(aName,aPaperRc);
+  i := IndexOfPaper(aName);
+  if i >= 0 then
+    with FPapers[i] do
+    begin
+      {When we set QPrinter into FullPage, rect is not same
+       on all platforms, this is fixed with qt-4.4}
+      {$IFDEF QTPAPERSONDEMAND}
+      APageSize := QtDefaultPrinter.PageSize;
+      if (PaperRect = Rect(0, 0, 0, 0)) then
+      begin
+        QtDefaultPrinter.PageSize := PageSize;
+        PageRect := QtDefaultPrinter.PageRect;
+        PaperRect := QtDefaultPrinter.PaperRect;
+      end;
+      {$ENDIF}
+      if Orientation in [poPortrait, poReversePortrait] then
+      begin
+        APaperRC.WorkRect := PageRect;
+        APaperRC.PhysicalRect := PaperRect;
+      end else begin
+        APaperRC.WorkRect :=
+          Rect(PageRect.Top, PageRect.Left, PageRect.Bottom, PageRect.Right);
+        APaperRC.PhysicalRect :=
+          Rect(PaperRect.Top, PaperRect.Left, PaperRect.Bottom, PaperRect.Right);
+      end;
+      {$IFDEF QTPAPERSONDEMAND}
+      if APageSize <> QtDefaultPrinter.PageSize then
+        QtDefaultPrinter.PageSize := APageSize;
+      {$ENDIF}
+      Result := 1;
+    end;
+end;
+
+function TQtPrinters.DoSetPrinter(aName: string): Integer;
+var
+  StrList: TStringList;
+  i: integer;
+begin
+  DoInitializeCachePapers;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoSetPrinter() aName=', aName);
+  {$ENDIF}
+  StrList := TStringList.Create;
+  if (Printers.Count = 0) or (Printers.IndexOf(aName) = -1) then
+    EnumQPrinters(StrList)
+  else
+    StrList.Assign(Printers);
+  try
+    Result := StrList.IndexOf(AName);
+    if Result >= 0 then
+    begin
+      if not QtDefaultPrinter.PrinterActive then
+      begin
+        QtDefaultPrinter.PrinterName := UTF8Decode(aName);
+
+        {$IFDEF QTPAPERSONDEMAND}
+        for i := 0 to High(FPapers) do
+        begin
+          if FPapers[i].PageSize = QtDefaultPrinter.PageSize then
+          begin
+            if FPapers[i].PaperRect = Rect(0, 0, 0, 0) then
+            begin
+              FPapers[i].PageRect := QtDefaultPrinter.PageRect;
+              FPapers[i].PaperRect := QtDefaultPrinter.PaperRect;
+            end;
+            break;
+          end;
+        end;
+        {$ENDIF}
+
+        {$ifdef UsePrinterSupportedPapers}
+        CachePapers(true);
+        {$endif}
+      end
+      else
+        raise Exception.Create('TQtPrinters: Cannot change printer while printing active !');
+    end;
+  finally
+    StrList.Free;
+  end;
+end;
+
+function TQtPrinters.DoGetCopies: Integer;
+begin
+  DoInitializeCachePapers;
+  inherited DoGetCopies;
+  Result := QtDefaultPrinter.NumCopies;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetCopies() Result=', IntToStr(Result));
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.DoSetCopies(aValue: Integer);
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoSetCopies() AValue=', IntToStr(AValue));
+  {$ENDIF}
+  DoInitializeCachePapers;
+  inherited DoSetCopies(AValue);
+  QtDefaultPrinter.NumCopies := AValue;
+end;
+
+function TQtPrinters.DoGetOrientation: TPrinterOrientation;
+var
+  O: QPrinterOrientation;
+begin
+  DoInitializeCachePapers;
+  Result := inherited DoGetOrientation;
+  O := QtDefaultPrinter.Orientation;
+  case O of
+    QPrinterPortrait: Result := poPortrait;
+    QPrinterLandscape: Result := poLandscape;
+  end;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetOrientation() Result=', IntToStr(Ord(Result)));
+  {$ENDIF}
+end;
+
+procedure TQtPrinters.DoSetOrientation(aValue: TPrinterOrientation);
+var
+  O: QPrinterOrientation;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoSetOrientation() AValue=', IntToStr(Ord(AValue)));
+  {$ENDIF}
+  DoInitializeCachePapers;
+  inherited DoSetOrientation(aValue);
+
+  case AValue of
+    poPortrait: O := QPrinterPortrait;
+    poLandscape: O := QPrinterLandscape;
+    poReversePortrait: O := QPrinterPortrait;
+    poReverseLandscape: O := QPrinterLandscape;
+  end;
+  if QtDefaultPrinter.Orientation <> O then
+    QtDefaultPrinter.Orientation := O;
+end;
+
+function TQtPrinters.GetPrinterType: TPrinterType;
+begin
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.GetPrinterType() Result=', IntToStr(Ord(Result)));
+  {$ENDIF}
+  DoInitializeCachePapers;
+  Result := inherited GetPrinterType;
+  {no type at this moment, QPrinterInfo (qt-4.4) should have this}
+  Result := ptLocal;
+end;
+
+function TQtPrinters.DoGetPrinterState: TPrinterState;
+var
+  State: QPrinterPrinterState;
+begin
+  DoInitializeCachePapers;
+  Result := inherited DoGetPrinterState;
+  Result := psNoDefine;
+  
+  State := QtDefaultPrinter.PrinterState;
+  case State of
+    QPrinterIdle: Result := psReady;
+    QPrinterActive: Result := psPrinting;
+    QPrinterAborted,
+    QPrinterError: Result := psStopped;
+  end;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.DoGetPrinterState() Result=', IntToStr(Ord(Result)));
+  {$ENDIF}
+end;
+
+function TQtPrinters.GetCanPrint: Boolean;
+begin
+  DoInitializeCachePapers;
+  Result := inherited GetCanPrint;
+  Result := (DoGetPrinterState <> psStopped);
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.GetCanPrint() Result=',BoolToStr(Result));
+  {$ENDIF}
+end;
+
+function TQtPrinters.GetCanRenderCopies: Boolean;
+begin
+  DoInitializeCachePapers;
+  Result := inherited GetCanRenderCopies;
+  Result := True;
+  {$IFDEF VERBOSE_QT_PRINTING}
+  DebugLn('TQtPrinters.GetCanRenderCopies() Result=',BoolToStr(Result));
+  {$ENDIF}
+end;
+
+initialization
+  Printer := TQtPrinters.Create;
+  
+finalization
+  FreeAndNil(Printer);

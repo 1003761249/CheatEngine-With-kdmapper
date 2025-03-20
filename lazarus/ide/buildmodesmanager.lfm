@@ -1,0 +1,192 @@
+object BuildModesForm: TBuildModesForm
+  Left = 396
+  Height = 354
+  Top = 484
+  Width = 612
+  ActiveControl = BuildModesStringGrid
+  BorderIcons = [biSystemMenu]
+  Caption = 'BuildModesForm'
+  ClientHeight = 354
+  ClientWidth = 612
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 322
+    Width = 600
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 4
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+  object ToolBar1: TToolBar
+    AnchorSideLeft.Control = btnCreateDefaultModes
+    AnchorSideTop.Control = btnCreateDefaultModes
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 28
+    Top = 37
+    Width = 154
+    Align = alNone
+    BorderSpacing.Top = 6
+    ButtonHeight = 26
+    ButtonWidth = 26
+    Caption = 'ToolBar1'
+    EdgeBorders = []
+    EdgeInner = esNone
+    EdgeOuter = esNone
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    object ToolButtonAdd: TToolButton
+      Left = 1
+      Top = 0
+      Caption = 'ToolButtonAdd'
+      OnClick = AddSpeedButtonClick
+    end
+    object ToolButtonDelete: TToolButton
+      Left = 27
+      Top = 0
+      Caption = 'ToolButtonDelete'
+      OnClick = DeleteSpeedButtonClick
+    end
+    object ToolButtonMoveUp: TToolButton
+      Left = 58
+      Top = 0
+      Caption = 'ToolButtonMoveUp'
+      OnClick = MoveUpSpeedButtonClick
+    end
+    object ToolButtonMoveDown: TToolButton
+      Left = 84
+      Top = 0
+      Caption = 'ToolButtonMoveDown'
+      OnClick = MoveDownSpeedButtonClick
+    end
+    object ToolButton5: TToolButton
+      Left = 110
+      Height = 26
+      Top = 0
+      Caption = 'ToolButton5'
+      Style = tbsDivider
+    end
+    object ToolButtonDiff: TToolButton
+      Left = 115
+      Top = 0
+      Caption = 'ToolButtonDiff'
+      OnClick = DiffSpeedButtonClick
+    end
+    object ToolButton1: TToolButton
+      Left = 53
+      Height = 26
+      Top = 0
+      Caption = 'ToolButton1'
+      Style = tbsDivider
+    end
+  end
+  object NoteLabel: TLabel
+    AnchorSideLeft.Control = ToolBar1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ToolBar1
+    AnchorSideTop.Side = asrCenter
+    Left = 166
+    Height = 15
+    Top = 44
+    Width = 55
+    BorderSpacing.Left = 6
+    Caption = 'NoteLabel'
+    Font.Color = clMaroon
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BuildModesStringGrid: TStringGrid
+    AnchorSideLeft.Control = ToolBar1
+    AnchorSideTop.Control = ToolBar1
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 244
+    Top = 71
+    Width = 602
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFillColumns = True
+    BorderSpacing.Top = 6
+    ColCount = 3
+    Columns = <    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        MaxSize = 50
+        Title.Caption = 'Active'
+        Width = 200
+      end    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        MaxSize = 50
+        Title.Caption = 'InSession'
+        Width = 200
+      end    
+      item
+        MaxSize = 500
+        SizePriority = 100
+        Title.Caption = 'Title'
+        Width = 200
+      end>
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goRowSelect, goThumbTracking, goSmoothScroll]
+    TabOrder = 3
+    TitleStyle = tsNative
+    OnCheckboxToggled = BuildModesCheckboxToggled
+    OnDrawCell = BuildModesStringGridDrawCell
+    OnSelection = BuildModesStringGridSelection
+    OnValidateEntry = BuildModesStringGridValidateEntry
+    ColWidths = (
+      200
+      200
+      200
+    )
+  end
+  object btnCreateDefaultModes: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 25
+    Top = 6
+    Width = 166
+    AutoSize = True
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Create now for this project'
+    OnClick = btnCreateDefaultModesClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object RenameButton: TButton
+    AnchorSideTop.Control = btnCreateDefaultModes
+    AnchorSideRight.Control = BuildModesStringGrid
+    AnchorSideRight.Side = asrBottom
+    Left = 539
+    Height = 25
+    Top = 6
+    Width = 69
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    Caption = '&Rename'
+    OnClick = RenameButtonClick
+    TabOrder = 2
+  end
+  object BuildModesPopupMenu: TPopupMenu
+    left = 168
+    top = 260
+  end
+end

@@ -1,0 +1,189 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2021-11-25 14:35+0100\n"
+"Last-Translator: Vasseur Gilles <gillesvasseur58@gmail.com>\n"
+"Language-Team: Vasseur Gilles <gillesvasseur58@gmail.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0\n"
+
+#: dockedstrconsts.sallowsizingcaption
+msgid "Allow size changing"
+msgstr "Autoriser le changement de taille"
+
+#: dockedstrconsts.sallowsizinghint
+msgid "Grips can change size in Anchor Editor"
+msgstr "Les poignées peuvent changer de taille dans l'éditeur d'ancre"
+
+#: dockedstrconsts.sanchorbottomcolorcaption
+msgid "Bottom Anchor"
+msgstr "Ancrer le bas"
+
+#: dockedstrconsts.sanchorcontrolbordercaption
+msgid "Border Around Control"
+msgstr "Contrôle autour du bord"
+
+#: dockedstrconsts.sanchorcontrolcolorcaption
+msgid "Control Background"
+msgstr "Arrière-plan du contrôle"
+
+#: dockedstrconsts.sanchorleftcolorcaption
+msgid "Left Anchor"
+msgstr "Ancre à gauche"
+
+#: dockedstrconsts.sanchorrightcolorcaption
+msgid "Right Anchor"
+msgstr "Ancre à droite"
+
+#: dockedstrconsts.sanchors
+msgid "Anchors"
+msgstr "Ancres"
+
+#: dockedstrconsts.sanchortabvisiblecaption
+msgid "Show Anchors Tab"
+msgstr "Afficher l'onglet des ancres"
+
+#: dockedstrconsts.sanchortabvisiblehint
+msgid "Show Anchor Editor"
+msgstr "Afficher l'éditeur d'ancres"
+
+#: dockedstrconsts.sanchortargetcolorcaption
+msgid "Anchor Target"
+msgstr "Cible de l'ancre"
+
+#: dockedstrconsts.sanchortopcolorcaption
+msgid "Top Anchor"
+msgstr "Ancre au sommet"
+
+#: dockedstrconsts.sargumentoutofrange
+msgctxt "dockedstrconsts.sargumentoutofrange"
+msgid "Argument out of range."
+msgstr "Argument hors limites."
+
+#: dockedstrconsts.sattachcontrol
+msgid "Attach Control"
+msgstr "Attacher le contrôle"
+
+#: dockedstrconsts.sattachpoint
+msgid "Attach Control Sides"
+msgstr "Attacher les côtés du contrôle"
+
+#: dockedstrconsts.sattachside
+msgid "Attach Control Side"
+msgstr "Attacher le côté du contrôle"
+
+#: dockedstrconsts.scaptiondockedformeditor
+msgid "Docked Form Editor"
+msgstr "Éditeur de fenêtre ancrée"
+
+#: dockedstrconsts.scapturedistancecaption
+msgid "Capture Distance"
+msgstr "Distance de capture"
+
+#: dockedstrconsts.scapturedistancehint
+msgid "Minimal distance to capture a control with mouse"
+msgstr "Distance minimale pour capturer un contrôle avec la souris"
+
+#: dockedstrconsts.scirculardependency
+msgid "This will create a circular dependency."
+msgstr "Cela va créer une dépendance circulaire."
+
+#: dockedstrconsts.scode
+msgctxt "dockedstrconsts.scode"
+msgid "Code"
+msgstr "Code"
+
+#: dockedstrconsts.scolorscaption
+msgid "Colors"
+msgstr "Couleurs"
+
+#: dockedstrconsts.sdesigner
+msgctxt "dockedstrconsts.sdesigner"
+msgid "Form"
+msgstr "Fiche"
+
+#: dockedstrconsts.sdetachcontrol
+msgid "Detach Control"
+msgstr "Détacher le contrôle"
+
+#: dockedstrconsts.sdetachpoint
+msgid "Detach Control Sides"
+msgstr "Détacher les côtés du contrôle"
+
+#: dockedstrconsts.sdetachside
+msgid "Detach Control Side"
+msgstr "Détacher le côté du contrôle"
+
+#: dockedstrconsts.sforcerefreshingcaption
+msgid "Force Refreshing At Sizing"
+msgstr "Forcer le rafraîchissement lors du redimensionnement"
+
+#: dockedstrconsts.sforcerefreshinghint
+msgid "Force refreshing form when user is sizing it"
+msgstr "Forcer l'actualisation de la fiche lorsque l'utilisateur la dimensionne"
+
+#: dockedstrconsts.smouseborderfactorcaption
+msgid "Mouse cursor factor for BorderSpacing property"
+msgstr "Facteur de curseur de souris pour la propriété BorderSpacing"
+
+#: dockedstrconsts.smouseborderfactorhint
+msgid "Mouse cursor factor is used to set small values of BorderSpacing property more precisely"
+msgstr "Le facteur du curseur de la souris est utilisé pour définir plus précisément les petites valeurs de la propriété BorderSpacing"
+
+#: dockedstrconsts.sresizercolorcaption
+msgid "Resizer Color"
+msgstr "Couleur de redimensionnement"
+
+#: dockedstrconsts.sresizercolorhint
+msgid "Color of resizer bars"
+msgstr "Couleur des barres de redimensionnement"
+
+#: dockedstrconsts.stabpositionbottom
+msgid "Bottom"
+msgstr "Bas"
+
+#: dockedstrconsts.stabpositioncaption
+msgid "Tab Position"
+msgstr "Position d'onglet"
+
+#: dockedstrconsts.stabpositionhint
+msgid "Position of Code, Form, Anchors tabs"
+msgstr "Position des onglets Code, Fiche, Ancres"
+
+#: dockedstrconsts.stabpositionleft
+msgid "Left"
+msgstr "Gauche"
+
+#: dockedstrconsts.stabpositionright
+msgid "Right"
+msgstr "Droite"
+
+#: dockedstrconsts.stabpositiontop
+msgid "Top"
+msgstr "Haut"
+
+#: dockedstrconsts.streataligncaption
+msgid "Automatically treat Align properties"
+msgstr "Traiter automatiquement les propriétés d'alignement"
+
+#: dockedstrconsts.streatalignhint
+msgid "Automatically replace Align properties with appropriate Anchors"
+msgstr "Remplacer automatiquement les propriétés d'alignement par les ancres appropriées"
+
+#: dockedstrconsts.streatbordercaption
+msgid "Automatically treat BorderSpacing properties"
+msgstr "Traiter automatiquement les propriétés BorderSpacing"
+
+#: dockedstrconsts.streatborderhint
+msgid "Automatically replace BorderSpacing.Around properties of controls and adapt BorderSpacing.Left/Right/Top/Bottom if needed"
+msgstr "Remplacer automatiquement les propriétés BorderSpacing.Around des contrôles et adapter BorderSpacing.Left/Right/Top/Bottom si nécessaire"
+
+#: dockedstrconsts.swarningcaption
+msgid "Warning"
+msgstr "Avertissement"
+

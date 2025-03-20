@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+LCLMemManager
+====================================================================
+-->
+<module name="LCLMemManager">
+<short>
+Base class for a memory manager used in the LCL and its interfaces.
+</short>
+<descr>
+<p>
+<file>lclmemmanager.pas</file> contains classes and type used to define the 
+base class for various memory managers used in the Lazarus Component Library
+(<b>LCL</b>) and its interfaces. An own memory manager is somewhat faster and
+makes debugging and profiling easier.
+</p>
+<p>
+<file>lclmemmanager.pas</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+<p>
+Author: Mattias Gaertner
+</p>
+</descr>
+
+<!-- unresolved references -->
+<element name="Classes"/>
+<element name="Math"/>
+
+<element name="PLCLMemManagerItem">
+<short>Pointer to a TLCLMemManagerItem type.</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManagerItem">
+<short>
+Represents a memory manager item with a pointer to the next item in the list.
+</short>
+<descr>
+</descr>
+<seealso>
+<link id="PLCLMemManagerItem"/>
+</seealso>
+</element>
+
+<element name="TLCLMemManagerItem.Next">
+<short>Pointer to the next item in the memory manager.</short>
+<descr>
+</descr>
+<seealso>
+<link id="PLCLMemManagerItem"/>
+</seealso>
+</element>
+
+<element name="TLCLMemManager">
+<short>Template for memory manager implementations.</short>
+<descr>
+<p>
+<var>TLCLMemManager</var> is a class which provides a template for memory
+manager implementations used in the LCL. It is used as a base class for
+specialized memory managers in widgetset classes.
+</p>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.SetMaxFreeRatio">
+<short>Sets the value for the MaximumFreeCountRatio property.</short>
+<seealso>
+<link id="TLCLMemManager.MaximumFreeCountRatio"/>
+</seealso>
+</element>
+<element name="TLCLMemManager.SetMaxFreeRatio.NewValue">
+<short>New value for the property.</short>
+</element>
+
+<element name="TLCLMemManager.SetMinFree">
+<short>Sets the value for the MinimumFreeCount property.</short>
+<seealso>
+<link id="TLCLMemManager.MinimumFreeCount"/>
+</seealso>
+</element>
+<element name="TLCLMemManager.SetMinFree.NewValue">
+<short>New value for the property.</short>
+</element>
+
+<element name="TLCLMemManager.FFirstFree">
+<short>
+Internal member with the pointer the first item in the memory manager.
+</short>
+</element>
+
+<element name="TLCLMemManager.FFreeCount">
+<short>Member used to store the value for the FreeCount property.</short>
+</element>
+
+<element name="TLCLMemManager.FCount">
+<short>Member used to store the value for the Count property.</short>
+</element>
+
+<element name="TLCLMemManager.FMinFree">
+<short>
+Member used to store the value for the MinimumFreeCount property.
+</short>
+</element>
+
+<element name="TLCLMemManager.FMaxFreeRatio">
+<short>
+Member used to store the value for the MaximumFreeCountRatio property.
+</short>
+</element>
+
+<element name="TLCLMemManager.FAllocatedCount">
+<short>
+Member used to store the value for the AllocatedCount property.
+</short>
+</element>
+
+<element name="TLCLMemManager.FFreedCount">
+<short>
+Member used to store the value for the FreedCount property.
+</short>
+</element>
+
+<element name="TLCLMemManager.DisposeItem">
+<short>
+Maintains values in FreeCount and Count when the memory manager item is freed.
+</short>
+<descr>
+</descr>
+<seealso>
+<link id="TLCLMemManager.FreeCount"/>
+<link id="TLCLMemManager.MinimumFreeCount"/>
+<link id="TLCLMemManager.MaximumFreeCountRatio"/>
+<link id="TLCLMemManager.Count"/>
+</seealso>
+</element>
+<element name="TLCLMemManager.DisposeItem.AnItem">
+<short>Pointer to the memory manager item.</short>
+</element>
+
+<element name="TLCLMemManager.NewItem">
+<short>
+Gets a pointer to a free memory manager item, or creates a new one.
+</short>
+<descr>
+</descr>
+<seealso>
+<link id="TLCLMemManager.FFirstFree"/>
+<link id="TLCLMemManager.FreeCount"/>
+<link id="TLCLMemManager.AllocatedCount"/>
+<link id="TLCLMemManager.Count"/>
+<link id="PLCLMemManagerItem"/>
+</seealso>
+</element>
+<element name="TLCLMemManager.NewItem.Result">
+<short>Pointer to the new memory manager item.</short>
+</element>
+
+<element name="TLCLMemManager.FreeFirstItem">
+<short>
+Frees the first item in the memory manager and maintains the list.
+</short>
+<descr>
+</descr>
+<seealso>
+<link id="TLCLMemManager.FFirstFree"/>
+<link id="PLCLMemManagerItem"/>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.MinimumFreeCount">
+<short>
+Minimum block size that can be freed in the memory manager.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.MaximumFreeCountRatio">
+<short>
+Threshold which determines if the memory manager marks a block or frees it.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.Count">
+<short>
+Total number of items in the memory manager list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.FreeCount">
+<short>
+Number of items marked as free in the list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.AllocatedCount">
+<short>
+Number of items allocated in the memory manager list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.FreedCount">
+<short>
+Number of freed memory blocks in the list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.Clear">
+<short>
+Frees all items in the memory manager list.
+</short>
+<descr>
+<p>
+Called from the destructor for the class instance.
+</p>
+</descr>
+<errors>
+</errors>
+<seealso>
+<link id="TLCLMemManager.FreeFirstItem"/>
+<link id="TLCLMemManager.FreeCount"/>
+<link id="TLCLMemManager.FreedCount"/>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+Calls the inherited constructor on entry, and sets the default values for
+properties in the class instance.
+</p>
+</descr>
+<seealso>
+<link id="TLCLMemManager.Destroy"/>
+</seealso>
+</element>
+
+<element name="TLCLMemManager.Destroy">
+<short>
+Destructor for the class instance.
+</short>
+<descr>
+<p>
+Calls Clear to remove all items in the memory manager list. Calls the 
+inherited
+destructor prior to exit.
+</p>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLEnumItemsMethod">
+<short>
+Defines an object procedure type used to enumerate memory manager items.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+<element name="TLCLEnumItemsMethod.Item">
+<short>Pointer to a memory manager item enumerated in the procedure.</short>
+</element>
+
+<element name="TLCLNonFreeMemManager">
+<short>A memory manager for records without freeing.</short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FItemSize">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FItems">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FCurItem">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FEndItem">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FCurSize">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.FFirstSize">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.ClearOnCreate">
+<short>
+Public member used to control zero-filling memory allocated for items.
+</short>
+<descr>
+Used in the NewItem method.
+</descr>
+<seealso>
+<link id="TLCLNonFreeMemManager.NewItem"/>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.ItemSize">
+<short>
+Size of the memory allocated for each item in the list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.Clear">
+<short>
+Frees memory allocated to items, and frees the list.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.Create">
+<short>
+Constructor for the class instance.
+</short>
+<descr>
+<p>
+Sets ItemSize to the value specified in TheItemSize, and sets the size of the
+first item to 4 times the ItemSize value.
+</p>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+<element name="TLCLNonFreeMemManager.Create.TheItemSize">
+<short/>
+</element>
+
+<element name="TLCLNonFreeMemManager.Destroy">
+<short>
+Destructor for the class instance.
+</short>
+<descr>
+<p>
+Calls Clear on entry.
+Calls the inherited destructor prior to exit.
+</p>
+</descr>
+<seealso>
+<link id="TLCLNonFreeMemManager.Create"/>
+</seealso>
+</element>
+
+<element name="TLCLNonFreeMemManager.NewItem">
+<short>Gets a Pointer to a new item in the list.</short>
+<descr>
+</descr>
+<seealso>
+<link id="TLCLNonFreeMemManager.ClearOnCreate"/>
+<link id="TLCLNonFreeMemManager.ItemSize"/>
+</seealso>
+</element>
+<element name="TLCLNonFreeMemManager.NewItem.Result">
+<short>Pointer to the item added to the internal list.</short>
+</element>
+
+<element name="TLCLNonFreeMemManager.EnumerateItems">
+<short>
+Enumerates items in the list using the specified object procedure.
+</short>
+<descr>
+</descr>
+<seealso>
+<link id="TLCLNonFreeMemManager.ItemSize"/>
+<link id="TLCLEnumItemsMethod"/>
+</seealso>
+</element>
+<element name="TLCLNonFreeMemManager.EnumerateItems.Method">
+<short>Object procedure used to enumerate the items in the list.</short>
+</element>
+
+<element name="TStreamSizeType">
+<short>
+Alias to the type used for stream sizes.
+</short>
+<descr>
+<p>
+<var>PtrInt</var> for FPC 2.04.02 or higher.
+<var>LongInt</var> for versions prior to FPC 2.04.02.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TExtMemoryStream">
+<short>
+Implements an extended memory stream with a minimum growth factor.
+</short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<element name="TExtMemoryStream.Realloc">
+<short>
+Reallocates memory for the stream using the specified capacity.
+</short>
+<descr>
+<p>
+<var>Realloc</var> is an overridden method in <var>TExtMemoryStream</var>.
+It ensures that the new <var>Capacity</var> is at least 25% larger than the
+existing Capacity. Realloc calls the inherited method to re-allocate memory 
+to the
+size needed.
+</p>
+</descr>
+<seealso>
+<link id="TExtMemoryStream.Capacity"/>
+<link id="#rtl.classes.TMemoryStream">TMemoryStream</link>
+</seealso>
+</element>
+<element name="TExtMemoryStream.Realloc.Result">
+<short>Pointer to the newly allocated memory for the stream.</short>
+</element>
+<element name="TExtMemoryStream.Realloc.NewCapacity">
+<short>New capacity requested in the method.</short>
+</element>
+
+<element name="TExtMemoryStream.Capacity">
+<short>Size of the allocated memory for the stream.</short>
+<descr>
+<p>
+<var>Capacity</var> is a public <var>PtrInt</var> property in TExtMemoryStream
+which contains the memory size allocated for the stream. Setting a new value 
+for
+the property causes the <var>Realloc</var> method to be called to re-allocate
+memory to the requested value.
+</p>
+</descr>
+<seealso>
+<link id="TExtMemoryStream.Realloc"/>
+</seealso>
+</element>
+
+</module>
+<!-- LCLMemManager -->
+</package>
+</fpdoc-descriptions>

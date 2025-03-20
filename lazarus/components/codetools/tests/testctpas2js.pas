@@ -1,0 +1,312 @@
+{
+ Test all with:
+   ./runtests --format=plain --suite=TTestPas2js
+
+ Test specific with:
+   ./runtests --format=plain --suite=TestPas2js_ReadSettings
+}
+unit TestCTPas2js;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, CodeToolManager, FileProcs, DefineTemplates, LinkScanner,
+  CodeCache, ExprEval, TestGlobals, LazLogger, LazFileUtils, LazUTF8, fpcunit,
+  testregistry, TestFindDeclaration;
+
+type
+
+  { TCustomTestPas2js }
+
+  TCustomTestPas2js = class(TCustomTestFindDeclaration)
+  private
+    FAutoSearchPas2js: boolean;
+    FBaseDir: string;
+    FCode: TCodeBuffer;
+    FPas2jsFilename: string;
+    FRTLDirDefines: TDefineTemplate;
+    FUnitSetCache: TFPCUnitSetCache;
+    FVirtualDirDefines: TDefineTemplate;
+  protected
+    procedure SetUp; override;
+    procedure TearDown; override;
+    procedure DoParseModule(aCode: TCodeBuffer; out Tool: TCodeTool); virtual;
+  public
+    constructor Create; override;
+    destructor Destroy; override;
+    procedure Add(const s: string);
+    procedure Add(Args: array of const);
+    function FindPas2js: string;
+    function StartProgram: boolean; override;
+    procedure ParseModule; virtual;
+    procedure WriteSource(CleanPos: integer; Tool: TCodeTool);
+    procedure WriteSource(const CursorPos: TCodeXYPosition);
+    property AutoSearchPas2js: boolean read FAutoSearchPas2js write FAutoSearchPas2js;
+    property Code: TCodeBuffer read FCode;
+    property Pas2jsFilename: string read FPas2jsFilename write FPas2jsFilename; // compiler filename
+    property UnitSetCache: TFPCUnitSetCache read FUnitSetCache write FUnitSetCache;
+    property RTLDirDefines: TDefineTemplate read FRTLDirDefines write FRTLDirDefines;
+    property VirtualDirDefines: TDefineTemplate read FVirtualDirDefines write FVirtualDirDefines;
+    property BaseDir: string read FBaseDir write FBaseDir;
+  end;
+
+  { TTestPas2js }
+
+  TTestPas2js = class(TCustomTestPas2js)
+  published
+    procedure TestPas2js_ReadSettings;
+    procedure TestPas2js_FindDeclaration;
+    procedure TestPas2js_FindDeclaration_AWait;
+  end;
+
+implementation
+
+{ TCustomTestPas2js }
+
+procedure TCustomTestPas2js.SetUp;
+var
+  CurUnitSet: TFPCUnitSetCache;
+  UnitSetID, SystemFilename, RTLDir: String;
+  CompilerDefines: TDefineTemplate;
+begin
+  inherited SetUp;
+  if (Pas2jsFilename='') and AutoSearchPas2js then begin
+    FPas2jsFilename:=FindPas2js;
+    AutoSearchPas2js:=false;
+  end;
+  if FPas2jsFilename<>'' then begin
+    if UnitSetCache=nil then begin
+      UnitSetCache:=CodeToolBoss.CompilerDefinesCache.FindUnitSet(Pas2jsFilename,
+        '','','','',true);
+      // parse compiler settings
+      UnitSetCache.Init;
+
+      SystemFilename:=UnitSetCache.GetUnitSrcFile('system',false);
+      if SystemFilename='' then
+        Fail('pas2js system unit not found');
+      RTLDir:=ExtractFilePath(SystemFilename);
+      // set pas2js for rtl directory
+      RTLDirDefines:=TDefineTemplate.Create(
+        'RTLDirPas2js', 'set pas2js as compiler',
+        '',ChompPathDelim(RTLDir),da_Directory);
+      RTLDirDefines.AddChild(TDefineTemplate.Create('Reset','','','',da_UndefineAll));
+      // create template for Pas2js settings
+      CompilerDefines:=CreateFPCTemplate(UnitSetCache,nil);
+      RTLDirDefines.AddChild(CompilerDefines);
+      CodeToolBoss.DefineTree.Add(RTLDirDefines);
+    end;
+    UnitSetID:=UnitSetCache.GetUnitSetID;
+
+    // set pas2js for virtual directory
+    if VirtualDirDefines=nil then begin
+      VirtualDirDefines:=TDefineTemplate.Create(
+        'VirtualDirPas2js', 'set pas2js as compiler',
+        '',VirtualDirectory,da_Directory);
+      VirtualDirDefines.AddChild(TDefineTemplate.Create('Reset','','','',da_UndefineAll));
+      // create template for Pas2js settings
+      CompilerDefines:=CreateFPCTemplate(UnitSetCache,nil);
+      VirtualDirDefines.AddChild(CompilerDefines);
+    end;
+    CodeToolBoss.DefineTree.Add(VirtualDirDefines);
+
+    // check
+    CurUnitSet:=CodeToolBoss.GetUnitSetForDirectory('');
+    if CurUnitSet=nil then
+      Fail('CodeToolBoss.GetUnitSetForDirectory=nil');
+    if CurUnitSet<>UnitSetCache then
+      AssertEquals('UnitSet VirtualDirectory should be pas2js',UnitSetID,CurUnitSet.GetUnitSetID);
+
+    if CodeToolBoss.GetPascalCompilerForDirectory('')<>pcPas2js then
+      AssertEquals('VirtualDirectory compiler should be pas2js',
+        PascalCompilerNames[pcPas2js],
+        PascalCompilerNames[CodeToolBoss.GetPascalCompilerForDirectory('')]);
+
+
+  end;
+  FCode:=CodeToolBoss.CreateFile('test1.pas');
+end;
+
+procedure TCustomTestPas2js.TearDown;
+begin
+  FCode:=nil;
+  if VirtualDirDefines<>nil then
+    CodeToolBoss.DefineTree.RemoveDefineTemplate(VirtualDirDefines);
+
+  inherited TearDown;
+end;
+
+procedure TCustomTestPas2js.DoParseModule(aCode: TCodeBuffer; out
+  Tool: TCodeTool);
+var
+  i: Integer;
+  Line: String;
+begin
+  if not CodeToolBoss.Explore(aCode,Tool,true) then begin
+    debugln(aCode.Filename+'------------------------------------------');
+    for i:=1 to aCode.LineCount do begin
+      Line:=aCode.GetLine(i-1,false);
+      if i=CodeToolBoss.ErrorLine then
+        System.Insert('|',Line,CodeToolBoss.ErrorColumn);
+      debugln(Format('%:4d: ',[i]),Line);
+    end;
+    debugln('Error: '+CodeToolBoss.ErrorDbgMsg);
+    Fail('PascalParser failed: '+CodeToolBoss.ErrorMessage);
+  end;
+end;
+
+constructor TCustomTestPas2js.Create;
+begin
+  inherited Create;
+  FAutoSearchPas2js:=true;
+  FBaseDir:='pas2js';
+end;
+
+destructor TCustomTestPas2js.Destroy;
+begin
+  if (RTLDirDefines<>nil) and (CodeToolBoss<>nil) then
+    CodeToolBoss.DefineTree.RemoveDefineTemplate(RTLDirDefines);
+  inherited Destroy;
+end;
+
+procedure TCustomTestPas2js.Add(const s: string);
+begin
+  FCode.Source:=FCode.Source+s+LineEnding;
+end;
+
+procedure TCustomTestPas2js.Add(Args: array of const);
+begin
+  FCode.Source:=FCode.Source+LinesToStr(Args);
+end;
+
+function TCustomTestPas2js.FindPas2js: string;
+var
+  ShortFilename: String;
+begin
+  Result:=GetEnvironmentVariable('PAS2JS');
+  if Result<>'' then begin
+    if not FileExistsUTF8(Result) then
+      Fail('Environment variable PAS2JS is non existing file "'+Result+'"');
+    exit;
+  end;
+  ShortFilename:='pas2js'+ExeExt;
+  Result:=SearchFileInPath(ShortFilename,'',
+                           GetEnvironmentVariableUTF8('PATH'),PathSeparator,ctsfcDefault);
+end;
+
+function TCustomTestPas2js.StartProgram: boolean;
+begin
+  if FPas2jsFilename='' then exit(false);
+  Result:=true;
+  AssertEquals('compiler kind',PascalCompilerNames[pcPas2js],PascalCompilerNames[UnitSetCache.GetCompilerKind]);
+end;
+
+procedure TCustomTestPas2js.ParseModule;
+var
+  Tool: TCodeTool;
+begin
+  Add('end.');
+  DoParseModule(Code,Tool);
+end;
+
+procedure TCustomTestPas2js.WriteSource(CleanPos: integer; Tool: TCodeTool);
+var
+  Caret: TCodeXYPosition;
+begin
+  if Tool=nil then
+    Fail('TCustomTestPas2js.WriteSource: missing Tool');
+  if not Tool.CleanPosToCaret(CleanPos,Caret) then
+    Fail('TCustomTestPas2js.WriteSource: invalid cleanpos '+IntToStr(CleanPos)+' Tool='+Tool.MainFilename);
+  WriteSource(Caret);
+end;
+
+procedure TCustomTestPas2js.WriteSource(const CursorPos: TCodeXYPosition);
+var
+  CurCode: TCodeBuffer;
+  i: Integer;
+  Line: String;
+begin
+  CurCode:=CursorPos.Code;
+  if CurCode=nil then
+    Fail('TCustomTestPas2js.WriteSource CurCode=nil');
+  for i:=1 to CurCode.LineCount do begin
+    Line:=CurCode.GetLine(i-1,false);
+    if (i=CursorPos.Y) then begin
+      write('*');
+      Line:=LeftStr(Line,CursorPos.X-1)+'|'+copy(Line,CursorPos.X,length(Line));
+    end;
+    writeln(Format('%:4d: ',[i]),Line);
+  end;
+end;
+
+{ TTestPas2js }
+
+procedure TTestPas2js.TestPas2js_ReadSettings;
+var
+  Cfg: TPCTargetConfigCache;
+  aFilename, AnUnitName, InFilename, SystemUnit: String;
+begin
+  if Pas2jsFilename='' then exit;
+
+  AssertEquals('compiler kind',PascalCompilerNames[pcPas2js],PascalCompilerNames[UnitSetCache.GetCompilerKind]);
+  Cfg:=UnitSetCache.GetConfigCache(false);
+  if not Cfg.Defines.Contains('PAS2JS_FULLVERSION') then
+    Fail('macro PAS2JS_FULLVERSION is misssing');
+  SystemUnit:=Cfg.Units['system'];
+  if SystemUnit='' then
+    Fail('pas2js.cfg is missing path to system unit');
+
+  AnUnitName:='system';
+  InFilename:='';
+  aFilename:=CodeToolBoss.DirectoryCachePool.FindUnitSourceInCompletePath('',AnUnitName,InFilename,true);
+  if aFilename='' then
+    Fail('system unit not found from virtual directory');
+  if CompareFilenames(aFilename,SystemUnit)<>0 then
+    AssertEquals('pas2js system unit',SystemUnit,aFilename);
+end;
+
+procedure TTestPas2js.TestPas2js_FindDeclaration;
+begin
+  if not StartProgram then exit;
+  Add([
+  'var Cow: longint;',
+  'begin',
+  '  cow{declaration:Cow}:=3;',
+  '  test1{declaration:Test1}.cow{declaration:Cow}:=3;',
+  'end.',
+  '']);
+  ParseModule;
+  //FindDeclarations(Code);
+end;
+
+procedure TTestPas2js.TestPas2js_FindDeclaration_AWait;
+begin
+  if not StartProgram then exit;
+  Add([
+  '{$modeswitch externalclass}',
+  'type',
+  '  TJSPromise = class external name ''Promise''',
+  '  end;',
+  'function Crawl(d: double = 1.3): word; ',
+  'begin',
+  'end;',
+  'function Run(d: double): word; async;',
+  'var',
+  '  p: TJSPromise;',
+  'begin',
+  '  Result:=await(word,p{declaration:Run.p});',
+  '  Result:=await(1);',
+  '  Result:=await(Crawl{declaration:Crawl});',
+  '  Result:=await(Crawl{declaration:Crawl}(4.5));',
+  'end;',
+  'begin',
+  '  Run{declaration:run}(3);',
+  'end.']);
+  FindDeclarations(Code);
+end;
+
+initialization
+  RegisterTest(TTestPas2js);
+end.
+

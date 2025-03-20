@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+#, fuzzy
+msgid "Abort"
+msgstr "Abortar"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Añadir"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Siempre"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "&Añadir"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "&Continuar"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Borrar"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "&Añadir ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "&Activado"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "&Aceptar"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Continuar"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Copiar"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Cortar"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Borrar"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Añadir ..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Activo"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Ayuda"
+
+#: ideintfstrconsts.lisignore
+#, fuzzy
+msgid "Ignore"
+msgstr "Ignorar"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Nunca"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "No"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "Aceptar"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Pegar"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Sí"
+

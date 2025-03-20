@@ -1,0 +1,769 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Marcelo B Paula\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.13\n"
+"Language: pt_BR\n"
+
+#: syneditstrconst.scannotpause
+msgid "Can only pause when recording"
+msgstr "Só se pode pausar, quando gravando"
+
+#: syneditstrconst.scannotplay
+msgid "Cannot playback macro when recording"
+msgstr "Não se pode tocar macro quando gravando"
+
+#: syneditstrconst.scannotrecord
+msgid "Cannot record macro when recording"
+msgstr "Não se pode gravar macro quando gravando"
+
+#: syneditstrconst.scannotresume
+msgid "Can only resume when paused"
+msgstr "Só se pode reiniciar quando pausado"
+
+#: syneditstrconst.syns_attrannotation
+msgid "Annotation"
+msgstr "Anotação"
+
+#: syneditstrconst.syns_attrasp
+msgid "Asp"
+msgstr "Asp"
+
+#: syneditstrconst.syns_attrassembler
+msgid "Assembler"
+msgstr "Assembler"
+
+#: syneditstrconst.syns_attrattributename
+msgid "Attribute Name"
+msgstr "Nome Atributo"
+
+#: syneditstrconst.syns_attrattributevalue
+msgid "Attribute Value"
+msgstr "Valor Atributo"
+
+#: syneditstrconst.syns_attrblock
+msgid "Block"
+msgstr "Bloco"
+
+#: syneditstrconst.syns_attrbrackets
+msgid "Brackets"
+msgstr "Parênteses"
+
+#: syneditstrconst.syns_attrcaselabel
+msgid "Case label"
+msgstr "Rótulo \"Case\""
+
+#: syneditstrconst.syns_attrcdata
+msgid "CDATA"
+msgstr "CDATA"
+
+#: syneditstrconst.syns_attrcdatasection
+msgid "CDATA Section"
+msgstr "Seção CDATA"
+
+#: syneditstrconst.syns_attrcharacter
+msgid "Character"
+msgstr "Caractere"
+
+#: syneditstrconst.syns_attrchunkmarker
+msgid "Diff Chunk Marker"
+msgstr "Marcador fragmento \"Diff\""
+
+#: syneditstrconst.syns_attrchunkmixed
+msgid "Diff Chunk Line Counts"
+msgstr "Contagem linhas fragmento \"Diff\" "
+
+#: syneditstrconst.syns_attrchunknew
+msgid "Diff Chunk New Line Count"
+msgstr "Nova contagem linha fragmento \"Diff\" "
+
+#: syneditstrconst.syns_attrchunkorig
+msgid "Diff Chunk Original Line Count"
+msgstr "Contagem original linhas fragmento \"Diff\""
+
+#: syneditstrconst.syns_attrclass
+msgid "Class"
+msgstr "Classe"
+
+#: syneditstrconst.syns_attrcomment
+msgid "Comment"
+msgstr "Comentário"
+
+#: syneditstrconst.syns_attrcondition
+msgid "Condition"
+msgstr "Condição"
+
+#: syneditstrconst.syns_attrdatatype
+msgid "Data type"
+msgstr "Tipo Dado"
+
+#: syneditstrconst.syns_attrdefaultpackage
+msgid "Default packages"
+msgstr "Pacotes padrão"
+
+#: syneditstrconst.syns_attrdir
+msgid "Direction"
+msgstr "Direção"
+
+#: syneditstrconst.syns_attrdirective
+msgid "Directive"
+msgstr "Diretiva"
+
+#: syneditstrconst.syns_attrdoctype
+msgid "DOCTYPE"
+msgstr "DOCTYPE"
+
+#: syneditstrconst.syns_attrdoctypesection
+msgid "DOCTYPE Section"
+msgstr "Seção DOCTYPE"
+
+#: syneditstrconst.syns_attrdocumentation
+msgid "Documentation"
+msgstr "Documentação"
+
+#: syneditstrconst.syns_attrelementname
+msgid "Element Name"
+msgstr "Nome Elemento"
+
+#: syneditstrconst.syns_attrembedsql
+msgid "Embedded SQL"
+msgstr "SQL embutido"
+
+#: syneditstrconst.syns_attrembedtext
+msgid "Embedded text"
+msgstr "Texto embutido"
+
+#: syneditstrconst.syns_attrentityreference
+msgid "Entity Reference"
+msgstr "Referência Entidade"
+
+#: syneditstrconst.syns_attrescapeampersand
+msgid "Escape ampersand"
+msgstr "Escape ampersand"
+
+#: syneditstrconst.syns_attrevent
+msgid "Event"
+msgstr "Evento"
+
+#: syneditstrconst.syns_attrexception
+msgid "Exception"
+msgstr "Exceção"
+
+#: syneditstrconst.syns_attrflags
+msgid "Flags"
+msgstr "Flags"
+
+#: syneditstrconst.syns_attrfloat
+msgid "Float"
+msgstr "Flutuante"
+
+#: syneditstrconst.syns_attrform
+msgid "Form"
+msgstr "Formulário"
+
+#: syneditstrconst.syns_attrfunction
+msgid "Function"
+msgstr "Função"
+
+#: syneditstrconst.syns_attrhexadecimal
+msgid "Hexadecimal"
+msgstr "Hexadecimal"
+
+#: syneditstrconst.syns_attricon
+msgid "Icon reference"
+msgstr "Referência ícone"
+
+#: syneditstrconst.syns_attridedirective
+msgid "IDE Directive"
+msgstr "Diretiva IDE"
+
+#: syneditstrconst.syns_attridentifier
+msgid "Identifier"
+msgstr "Identificador"
+
+#: syneditstrconst.syns_attrillegalchar
+msgid "Illegal char"
+msgstr "Caractere ilegal"
+
+#: syneditstrconst.syns_attrinclude
+msgid "Include"
+msgstr "Inclusão"
+
+#: syneditstrconst.syns_attrindirect
+msgid "Indirect"
+msgstr "Indireto"
+
+#: syneditstrconst.syns_attrinternalfunction
+msgid "Internal function"
+msgstr "Função interna"
+
+#: syneditstrconst.syns_attrinvalidsymbol
+msgid "Invalid symbol"
+msgstr "Símbolo inválido"
+
+#: syneditstrconst.syns_attrkey
+msgid "Key"
+msgstr "Tecla"
+
+#: syneditstrconst.syns_attrlabel
+msgid "Label"
+msgstr "Rótulo"
+
+#: syneditstrconst.syns_attrlineadded
+msgid "Diff Added line"
+msgstr "Linha Adicionada \"Diff\""
+
+#: syneditstrconst.syns_attrlinechanged
+msgid "Diff Changed Line"
+msgstr "Linha Modificada \"Diff\""
+
+#: syneditstrconst.syns_attrlinecontext
+msgid "Diff Context Line"
+msgstr "Linha Contexto \"Diff\""
+
+#: syneditstrconst.syns_attrlineremoved
+msgid "Diff Removed Line"
+msgstr "Linha Removida \"Diff\""
+
+#: syneditstrconst.syns_attrmacro
+msgid "Macro"
+msgstr "Macro"
+
+#: syneditstrconst.syns_attrmarker
+msgid "Marker"
+msgstr "Marcador"
+
+#: syneditstrconst.syns_attrmathmode
+msgid "Math Mode"
+msgstr "Modo Aritmético"
+
+#: syneditstrconst.syns_attrmeasurementunitvalue
+msgid "Measurement unit"
+msgstr "Unidade de medida"
+
+#: syneditstrconst.syns_attrmessage
+msgid "Message"
+msgstr "Mensagem"
+
+#: syneditstrconst.syns_attrmiscellaneous
+msgid "Miscellaneous"
+msgstr "Miscelânea"
+
+#: syneditstrconst.syns_attrnamespaceattrname
+msgid "Namespace Attribute Name"
+msgstr "Nome Atributo \"Namespace\""
+
+#: syneditstrconst.syns_attrnamespaceattrvalue
+msgid "Namespace Attribute Value"
+msgstr "Valor Atributo \"Namespace\""
+
+#: syneditstrconst.syns_attrnewfile
+msgid "Diff New File"
+msgstr "Novo Arquivo \"Diff\""
+
+#: syneditstrconst.syns_attrnonreservedkeyword
+msgid "Non-reserved keyword"
+msgstr "Palavra-chave não reservada"
+
+#: syneditstrconst.syns_attrnull
+msgid "Null"
+msgstr "Nulo"
+
+#: syneditstrconst.syns_attrnumber
+msgid "Number"
+msgstr "Número"
+
+#: syneditstrconst.syns_attroctal
+msgid "Octal"
+msgstr "Octal"
+
+#: syneditstrconst.syns_attroperator
+msgid "Operator"
+msgstr "Operador"
+
+#: syneditstrconst.syns_attrorigfile
+msgid "Diff Original File"
+msgstr "Arquivo Original \"Diff\""
+
+#: syneditstrconst.syns_attrpasdockey
+msgid "PasDoc Keyword"
+msgstr ""
+
+#: syneditstrconst.syns_attrpasdocsymbol
+msgid "PasDoc Symbol"
+msgstr ""
+
+#: syneditstrconst.syns_attrpasdocunknown
+msgid "PasDoc Unknown"
+msgstr ""
+
+#: syneditstrconst.syns_attrplsql
+msgid "Reserved word (PL/SQL)"
+msgstr "Palavra reservada (PL/SQL)"
+
+#: syneditstrconst.syns_attrpragma
+msgid "Pragma"
+msgstr "Pragma"
+
+#: syneditstrconst.syns_attrpreprocessor
+msgid "Preprocessor"
+msgstr "Pré-processador"
+
+#: syneditstrconst.syns_attrprevvalue
+msgid "Previous value"
+msgstr "Valor anterior"
+
+#: syneditstrconst.syns_attrprocedureheadername
+msgid "Procedure header name"
+msgstr "Nome de cabeçalho da \"Procedure\""
+
+#: syneditstrconst.syns_attrprocessinginstr
+msgid "Processing Instruction"
+msgstr "Processando Instrução"
+
+#: syneditstrconst.syns_attrqualifier
+msgid "Qualifier"
+msgstr "Qualificador"
+
+#: syneditstrconst.syns_attrregister
+msgid "Register"
+msgstr "Register"
+
+#: syneditstrconst.syns_attrreservedword
+msgid "Reserved word"
+msgstr "Palavra reservada"
+
+#: syneditstrconst.syns_attrroundbracket
+msgid "Round Bracket"
+msgstr "Parênteses"
+
+#: syneditstrconst.syns_attrrpl
+msgid "Rpl"
+msgstr "Rpl"
+
+#: syneditstrconst.syns_attrrplcomment
+msgid "Rpl comment"
+msgstr "Comentário Rpl"
+
+#: syneditstrconst.syns_attrrplkey
+msgid "Rpl key"
+msgstr "Chave Rpl"
+
+#: syneditstrconst.syns_attrsasm
+msgid "SASM"
+msgstr "SASM"
+
+#: syneditstrconst.syns_attrsasmcomment
+msgid "SASM Comment"
+msgstr "Comentário SASM"
+
+#: syneditstrconst.syns_attrsasmkey
+msgid "SASM Key"
+msgstr "Chave SASM"
+
+#: syneditstrconst.syns_attrsecondreservedword
+msgid "Second reserved word"
+msgstr "Segunda palavra reservada"
+
+#: syneditstrconst.syns_attrsection
+msgid "Section"
+msgstr "Seção"
+
+#: syneditstrconst.syns_attrselectorvalue
+msgid "Selector"
+msgstr "Seletor"
+
+#: syneditstrconst.syns_attrspace
+msgid "Space"
+msgstr "Espaço"
+
+#: syneditstrconst.syns_attrspecialvariable
+msgid "Special variable"
+msgstr "Variável especial"
+
+#: syneditstrconst.syns_attrsqlkey
+msgid "SQL keyword"
+msgstr "Palavra-chave SQL"
+
+#: syneditstrconst.syns_attrsqlplus
+msgid "SQL*Plus command"
+msgstr "Comando SQL*Plus"
+
+#: syneditstrconst.syns_attrsquarebracket
+msgid "Square Bracket"
+msgstr "Colchetes"
+
+#: syneditstrconst.syns_attrstring
+msgid "String"
+msgstr "Sequência caracteres"
+
+#: syneditstrconst.syns_attrsymbol
+msgid "Symbol"
+msgstr "Símbolo"
+
+#: syneditstrconst.syns_attrsyntaxerror
+msgid "SyntaxError"
+msgstr "ErroSintaxe"
+
+#: syneditstrconst.syns_attrsystem
+msgid "System functions and variables"
+msgstr "Funções e variáveis sistema"
+
+#: syneditstrconst.syns_attrsystemvalue
+msgid "System value"
+msgstr "Valor sistema"
+
+#: syneditstrconst.syns_attrtablename
+msgid "Table Name"
+msgstr "Nome Tabela"
+
+#: syneditstrconst.syns_attrterminator
+msgid "Terminator"
+msgstr "Terminador"
+
+#: syneditstrconst.syns_attrtexcommand
+msgid "TeX Command"
+msgstr "Comando TeX"
+
+#: syneditstrconst.syns_attrtext
+msgid "Text"
+msgstr "Texto"
+
+#: syneditstrconst.syns_attrtextmathmode
+msgid "Text in Math Mode"
+msgstr "Texto no Modo Aritmético"
+
+#: syneditstrconst.syns_attrunknownword
+msgid "Unknown word"
+msgstr "Palavra desconhecida"
+
+#: syneditstrconst.syns_attruser
+msgid "User functions and variables"
+msgstr "Funções e variáveis usuário"
+
+#: syneditstrconst.syns_attruserfunction
+msgid "User functions"
+msgstr "Funções usuário"
+
+#: syneditstrconst.syns_attrvalue
+msgid "Value"
+msgstr "Valor"
+
+#: syneditstrconst.syns_attrvariable
+msgid "Variable"
+msgstr "Variável"
+
+#: syneditstrconst.syns_attrwhitespace
+msgid "Whitespace"
+msgstr "Espaço branco"
+
+#: syneditstrconst.syns_copy
+msgid "&Copy"
+msgstr ""
+
+#: syneditstrconst.syns_cut
+msgid "C&ut"
+msgstr ""
+
+#: syneditstrconst.syns_delete
+msgid "&Delete"
+msgstr ""
+
+#: syneditstrconst.syns_duplicateshortcutmsg
+#, object-pascal-format
+msgid "The keystroke \"%s\" is already assigned to another editor command. (%s)"
+msgstr "A sequência de teclas \"%s\" está atribuída a outro comando do editor. (%s)"
+
+#: syneditstrconst.syns_eduplicateshortcut
+msgid "Mouse-Shortcut already exists"
+msgstr "Atalho do \"Mouse\" já existe"
+
+#: syneditstrconst.syns_emcbreakpointtoggle
+msgid "Toggle Breakpoint"
+msgstr "Alternar Ponto de Parada"
+
+#: syneditstrconst.syns_emccodefoldcollaps
+msgid "Fold Code"
+msgstr "Retrair Código"
+
+#: syneditstrconst.syns_emccodefoldcollaps_opt
+msgid "Nodes,One,\"All on line\",\"At Caret\",\"Current Node\""
+msgstr "Ramificações,Uma,\"Todas na linha\",\"Na Marca\",\"Ramificação Atual\""
+
+#: syneditstrconst.syns_emccodefoldcontextmenu
+msgid "Fold Menu"
+msgstr "Retrair Menu"
+
+#: syneditstrconst.syns_emccodefoldexpand
+msgid "Unfold Code"
+msgstr "Expandir Código"
+
+#: syneditstrconst.syns_emccodefoldexpand_opt
+msgid "Nodes,One,\"All on line\""
+msgstr "Ramificações,Uma,\"Todas na linha\""
+
+#: syneditstrconst.syns_emccontextmenu
+msgid "Popup Menu"
+msgstr "Menu Popup"
+
+#: syneditstrconst.syns_emccontextmenucaretmove_opt
+msgid "\"Move caret, when selection exists\", Never, \"Click outside\", Always"
+msgstr "\"Mover marca, quando existir seleção\", Nunca, \"Clicar fora\", Sempre"
+
+#: syneditstrconst.syns_emcmouselink
+msgid "Source Link"
+msgstr "Vínculo Fonte"
+
+#: syneditstrconst.syns_emcmouselink_opt
+msgid "Underline,yes, no"
+msgstr "Sublinhado,sim,não"
+
+#: syneditstrconst.syns_emcnone
+msgid "No Action"
+msgstr "Sem Ação"
+
+#: syneditstrconst.syns_emcoverviewguttergotomark
+msgid "Jump to Mark (Overview Gutter)"
+msgstr "Saltar para Marca (Medianiz Visão Geral)"
+
+#: syneditstrconst.syns_emcoverviewgutterscrollto
+msgid "Scroll (Overview Gutter)"
+msgstr "Rolagem (Medianiz Visão Geral)"
+
+#: syneditstrconst.syns_emcpasteselection
+msgid "Quick Paste Selection"
+msgstr "Colar Seleção Rapidamente"
+
+#: syneditstrconst.syns_emcpluginmulticaretselectiontocarets
+msgid "Set carets at EOL in selected lines"
+msgstr "Configurar cursores texto no EOL das linhas selecionadas"
+
+#: syneditstrconst.syns_emcpluginmulticarettogglecaret
+msgid "Toggle extra caret"
+msgstr "Alternar cursor texto extra"
+
+#: syneditstrconst.syns_emcselection_opt
+msgid "Mode,Begin,Continue"
+msgstr "Modo,Iniciar,Continuar"
+
+#: syneditstrconst.syns_emcselectline
+msgid "Select Line"
+msgstr "Selecionar linha"
+
+#: syneditstrconst.syns_emcselectline_opt
+msgid "\"Include spaces\",no,yes"
+msgstr "\"Incluir espaços\",não,sim"
+
+#: syneditstrconst.syns_emcselectpara
+msgid "Select Paragraph"
+msgstr "Selecionar Parágrafo"
+
+#: syneditstrconst.syns_emcselectword
+msgid "Select Word"
+msgstr "Selecionar Palavra"
+
+#: syneditstrconst.syns_emcstartcolumnselections
+msgid "Column Selection"
+msgstr "Seleção Coluna"
+
+#: syneditstrconst.syns_emcstartdragmove
+msgid "Drag Selection"
+msgstr "Arrastar Seleção"
+
+#: syneditstrconst.syns_emcstartdragmove_opt
+msgid "\"Caret on up if not dragged\",yes,no"
+msgstr "\"Cursor texto acima se não arrastado\",sim,não"
+
+#: syneditstrconst.syns_emcstartlineselections
+msgid "Line Selection"
+msgstr "Seleção Linha"
+
+#: syneditstrconst.syns_emcstartlineselectionsnoneempty
+msgid "Line Selection (select immediate)"
+msgstr "Seleção Linha (selecionar imediato)"
+
+#: syneditstrconst.syns_emcstartselection
+msgid "Selection"
+msgstr "Seleção"
+
+#: syneditstrconst.syns_emcstartselectlines
+msgid "Selection (lines)"
+msgstr "Seleção (linhas)"
+
+#: syneditstrconst.syns_emcstartselecttokens
+msgid "Selection (tokens) "
+msgstr "Seleção (símbolos)"
+
+#: syneditstrconst.syns_emcstartselectwords
+msgid "Selection (words)"
+msgstr "Seleção (palavras)"
+
+#: syneditstrconst.syns_emcsyneditcommand
+msgid "IDE Command"
+msgstr "Comando IDE"
+
+#: syneditstrconst.syns_emcwheelhorizscrolldown
+msgid "Wheel scroll down (Horizontal)"
+msgstr "Roda, rolar para baixo (horizontal)"
+
+#: syneditstrconst.syns_emcwheelhorizscrollup
+msgid "Wheel scroll up (Horizontal)"
+msgstr "Roda, rolar para cima (horizontal)"
+
+#: syneditstrconst.syns_emcwheelscrolldown
+msgid "Wheel scroll down"
+msgstr "Roda, rolar para baixo"
+
+#: syneditstrconst.syns_emcwheelscrollup
+msgid "Wheel scroll up"
+msgstr "Roda, rolar para cima"
+
+#: syneditstrconst.syns_emcwheelscroll_opt
+msgid "Speed,\"System settings\",Lines,Pages,\"Pages (less one line)\""
+msgstr "Velocidade, \"Definições de sistema\",Linhas,Páginas,\"Páginas (menos uma linha)\""
+
+#: syneditstrconst.syns_emcwheelvertscrolldown
+msgid "Wheel scroll down (Vertical)"
+msgstr "Roda, rolar para baixo (vertical)"
+
+#: syneditstrconst.syns_emcwheelvertscrollup
+msgid "Wheel scroll up (Vertical)"
+msgstr "Roda, rolar para cima (vertical)"
+
+#: syneditstrconst.syns_emcwheelzoomin
+msgid "Wheel zoom in"
+msgstr "Roda, mais zoom"
+
+#: syneditstrconst.syns_emcwheelzoomnorm
+msgid "Wheel zoom default"
+msgstr "Roda, zoom padrão"
+
+#: syneditstrconst.syns_emcwheelzoomout
+msgid "Wheel zoom out"
+msgstr "Roda, menos zoom"
+
+#: syneditstrconst.syns_exporterformathtml
+msgid "HTML"
+msgstr "HTML"
+
+#: syneditstrconst.syns_exporterformatrtf
+msgid "RTF"
+msgstr "RTF"
+
+#: syneditstrconst.syns_filterbatch
+msgid "MS-DOS Batch Files (*.bat;*.cmd)|*.bat;*.cmd"
+msgstr "Arquivos Lote MS-DOS (*.bat;*.cmd)|*.bat;*.cmd"
+
+#: syneditstrconst.syns_filtercpp
+msgid "C++ Files (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh"
+msgstr "Arquivos C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh"
+
+#: syneditstrconst.syns_filtercss
+msgid "Cascading Stylesheets (*.css)|*.css"
+msgstr "Folhas Estilo Cascata (*.css)|*.css"
+
+#: syneditstrconst.syns_filterhtml
+msgid "HTML Document (*.htm,*.html)|*.htm;*.html"
+msgstr "Documento HTML (*.htm,*.html)|*.htm;*.html"
+
+#: syneditstrconst.syns_filterini
+msgid "INI Files (*.ini)|*.ini"
+msgstr "Arquivos INI (*.ini)|*.ini"
+
+#: syneditstrconst.syns_filterjava
+msgid "Java Files (*.java)|*.java"
+msgstr "Arquivos Java (*.java)|*.java"
+
+#: syneditstrconst.syns_filterjscript
+msgid "Javascript Files (*.js)|*.js"
+msgstr "Arquivos Javascript (*.js)|*.js"
+
+#: syneditstrconst.syns_filterlfm
+msgid "Lazarus Form Files (*.lfm)|*.lfm"
+msgstr "Arquivos Formulários Lazarus (*.lfm)|*.lfm"
+
+#: syneditstrconst.syns_filterpascal
+msgid "Pascal Files (*.pas,*.dpr,*.dpk,*.inc)|*.pas;*.dpr;*.dpk;*.inc"
+msgstr "Arquivos Pascal (*.pas,*.dpr,*.dpk,*.inc)|*.pas;*.dpr;*.dpk;*.inc"
+
+#: syneditstrconst.syns_filterperl
+msgid "Perl Files (*.pl,*.pm,*.cgi)|*.pl;*.pm;*.cgi"
+msgstr "Arquivos Perl (*.pl,*.pm,*.cgi)|*.pl;*.pm;*.cgi"
+
+#: syneditstrconst.syns_filterphp
+msgid "PHP Files (*.php,*.php3,*.phtml,*.inc)|*.php;*.php3;*.phtml;*.inc"
+msgstr "Arquivos PHP (*.php,*.php3,*.phtml,*.inc)|*.php;*.php3;*.phtml;*.inc"
+
+#: syneditstrconst.syns_filterpo
+msgid "Po Files (*.po)|*.po"
+msgstr "Arquivos PO (*.po)|*.po"
+
+#: syneditstrconst.syns_filterpython
+msgid "Python Files (*.py)|*.py"
+msgstr "Arquivos Python (*.py)|*.py"
+
+#: syneditstrconst.syns_filtersql
+msgid "SQL Files (*.sql)|*.sql"
+msgstr "Arquivos SQL (*.sql)|*.sql"
+
+#: syneditstrconst.syns_filtertex
+msgid "TeX Files (*.tex)|*.tex"
+msgstr "Arquivos TeX (*.tex)|*.tex"
+
+#: syneditstrconst.syns_filterunixshellscript
+msgid "UNIX Shell Scripts (*.sh)|*.sh"
+msgstr "UNIX Shell Scripts (*.sh)|*.sh"
+
+#: syneditstrconst.syns_filtervisualbasic
+msgid "Visual Basic Files (*.bas)|*.bas"
+msgstr "Arquivos Visual Basic (*.bas)|*.bas"
+
+#: syneditstrconst.syns_filterxml
+msgid "XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd"
+msgstr "Documento XML (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd"
+
+#: syneditstrconst.syns_paste
+msgid "&Paste"
+msgstr ""
+
+#: syneditstrconst.syns_previewscrollinfofmt
+#, object-pascal-format
+msgid "Page: %d"
+msgstr "Página: %d"
+
+#: syneditstrconst.syns_redo
+msgid "&Redo"
+msgstr ""
+
+#: syneditstrconst.syns_scrollinfofmt
+#, object-pascal-format
+msgid "%d - %d"
+msgstr "%d - %d"
+
+#: syneditstrconst.syns_scrollinfofmttop
+#, object-pascal-format
+msgid "Top Line: %d"
+msgstr "Linha Topo: %d"
+
+#: syneditstrconst.syns_selectall
+msgid "Select &all"
+msgstr ""
+
+#: syneditstrconst.syns_shortcutnone
+msgid "<none>"
+msgstr "<nenhum>"
+
+#: syneditstrconst.syns_undo
+msgid "&Undo"
+msgstr ""
+
+#: syneditstrconst.syns_untitled
+msgid "Untitled"
+msgstr "Sem título"
+

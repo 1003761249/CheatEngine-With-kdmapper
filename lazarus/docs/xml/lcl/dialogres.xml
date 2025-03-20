@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+DialogRes
+====================================================================
+-->
+<module name="DialogRes">
+<short>
+Contains types and constants used to access scalable dialog images.
+</short>
+<descr>
+<p>
+<file>DialogRes.pas</file> contains constants and types used to access 
+scalable images as TIcon or TImage resources used on dialog forms. This unit 
+registers a handler routine in the initialization section which frees the 
+DialogImages variable in the unit when LCL units have been finalized.
+</p>
+<p>
+<file>DialogRes.pas</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved references -->
+<element name="lcltype"/>
+<element name="graphics"/>
+<element name="themes"/>
+<element name="controls"/>
+<element name="imglist"/>
+<element name="interfacebase"/>
+<element name="lclintf"/>
+<element name="lclproc"/>
+<element name="sysutils"/>
+<element name="classes"/>
+
+<element name="TDialogImage">
+<short>
+Defines a range with image identifiers for glyphs used in dialog resources.
+</short>
+<descr>
+<p>
+<var>TDialogImage</var> is a range type with identifiers for the images used 
+on glyph icons in the LCL. The range is defined using constant values defined 
+in the <file>LCLType</file> unit. The values are used to access glyph image 
+names in <file>DialogRes.pas</file> and their index positions in 
+TDialogImageList.
+</p>
+</descr>
+<seealso>
+<link id="TDialogImageList"/>
+</seealso>
+</element>
+
+<!-- 
+<link id="DialogResName"/>
+Warning: Target ID of <link> in unit "DialogRes", element "TDialogImage", 
+is unknown: "DialogResName".
+This is a false warning. The topic is present and the XML is valid.
+-->
+
+<element name="DialogResName">
+<short>
+Contains the base names for glyph resources used on dialogs.
+</short>
+<descr>
+<p>
+<var>DialogResName</var> is an array constant which contains strings with the 
+base resource names for glyph images used on dialogs. The array elements are 
+indexed by the values in the TDialogImage range type. For example:
+</p>
+<code>
+sResName := DialogResName[idDialogError] // returns 'dialog_error'
+</code>
+<p>
+This base resource name can then be combined with a scaling suffix, like 
+'_150' or '_200', to form the complete name for the desired icon resource.
+</p>
+</descr>
+<seealso>
+<link id="TDialogImage"/>
+<link id="TDialogImageList"/>
+<link id="DialogGlyphs"/>
+</seealso>
+</element>
+
+<element name="TDialogImageList">
+<short>
+Implements a multi-resolution image list used for a dialog icon loaded from a 
+resource file.
+</short>
+<descr>
+<p>
+<var>TDialogImageList</var> is a <var>TLCLGlyphs</var> descendant which 
+implements an image list for a single dialog icon used in the LCL. It 
+registers multiple resolutions for the glyph images including 16, 24, 32, 48, 
+and 64 pixels variants. The default image size is 32x32 pixels. The different 
+image sizes are loaded by calling the ThemeServices.GetStockImage method when 
+theme services are available.
+</p>
+<p>
+Applications do not need to create an instance of the class. Use the 
+DialogGlyphs function to access the singleton with glyph icons created and 
+filled in the implementation section.
+</p>
+<p>
+Use the Width and Height select a different default size for images in the 
+list.
+</p>
+<p>
+Use the DialogIcon property to access get the ordinal position in the image 
+list for an icon using its TDialogImage image identifier.
+</p>
+</descr>
+<seealso>
+<link id="TDialogImage"/>
+<link id="#lcl.imglist.TLCLGlyphs">TLCLGlyphs</link>
+<link id="#lcl.themes.ThemeServices">ThemeServices</link>
+<link id="#lcl.themes.TThemeServices.GetStockImage">TThemeServices.GetStockImage</link>
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TDialogImageList.fDialogIndexes"/>
+<element name="TDialogImageList.LoadImage"/>
+<element name="TDialogImageList.LoadImage.AIndex"/>
+<element name="TDialogImageList.GetDialogIcon"/>
+<element name="TDialogImageList.GetDialogIcon.Result"/>
+<element name="TDialogImageList.GetDialogIcon.AIndex"/>
+
+<!-- public -->
+<element name="TDialogImageList.Create">
+<short>
+Constructor for the class instance.
+</short>
+<descr>
+<p>
+<var>Create</var> is the overridden constructor for the class instance. It 
+calls the inherited method on entry to initialize the storage for the class 
+and to enable image scaling.
+</p>
+<p>
+Create initializes the internal array with the index positions for the glyphs 
+in the class. The default Width and Height for the icons are set to 32 
+pixels. It registers image resolutions for the icons using 16, 24, 32, 48, 
+and 64 pixel image sizes.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.imglist.TLCLGlyphs.Create">TLCLGlyphs.Create</link>
+<link id="#lcl.imglist.TLCLGlyphs.RegisterResolutions">TLCLGlyphs.RegisterResolutions</link>
+<link id="#lcl.imglist.TCustomImageList.Scaled">TCustomImageList.Scaled</link>
+</seealso>
+</element>
+<element name="TDialogImageList.Create.AOwner">
+<short>
+Component which owns the class instance.
+</short>
+</element>
+
+<element name="TDialogImageList.DialogIcon">
+<short>
+Provides indexed access an image index for the dialog icon identified in 
+AIndex.
+</short>
+<descr>
+<p>
+<var>DialogIcon</var> is a read-only <var>Integer</var> property used to get 
+the ordinal position in internal storage where the image specified in 
+<var>AIndex</var> is stored. 
+</p>
+<p>
+The <var>AIndex</var> argument is a value from the TDialogImage enumeration, 
+and contains an identifier used to locate the corresponding image.
+</p>
+<p>
+For example:
+</p>
+<code>
+Image := TImage.Create(AOwner);
+Image.Parent := AParent;
+Image.Images := DialogGlyphs;
+Image.ImageIndex := DialogGlyphs.DialogIcon[idDialogShield];
+Image.Proportional := True;
+Image.Stretch := True;
+Image.StretchOutEnabled := False;
+Image.Center := True;
+</code>
+</descr>
+<seealso/>
+</element>
+<element name="TDialogImageList.DialogIcon.AIndex">
+<short>
+Image identifier used to get the index position for the specified image 
+identifier.
+</short>
+</element>
+
+<element name="DialogGlyphs">
+<short>
+Gets the image list with glyph images used on dialogs.
+</short>
+<descr>
+<p>
+<var>DialogGlyphs</var> is a <var>TDialogImageList</var> function which 
+returns the image list with the glyphs used for dialog icons. DialogGlyphs is 
+used to implement TTaskDialog and the DefaultPromptDialog routine.
+</p>
+<p>
+DialogGlyphs replaces the deprecated GetDialogIcon routine in the 
+<file>dialogs.pp</file> unit.
+</p>
+<code>
+Image := TImage.Create(AOwner);
+Image.Parent := AParent;
+Image.Images := DialogGlyphs;
+Image.ImageIndex := DialogGlyphs.DialogIcon[idDialogShield];
+Image.Proportional := True;
+Image.Stretch := True;
+Image.StretchOutEnabled := False;
+Image.Center := True;
+</code>
+</descr>
+<seealso>
+<link id="TDialogImageList"/>
+<link id="#lcl.dialogs.DefaultPromptDialog">DefaultPromptDialog</link>
+<link id="#lcl.lcltaskdialog.TTaskDialog.Execute">TTaskDialog.Execute</link>
+</seealso>
+</element>
+<element name="DialogGlyphs.Result">
+<short>
+Returns the TDialogImageList singleton defined in the implementation section.
+</short>
+</element>
+
+</module>
+<!-- DialogRes -->
+</package>
+</fpdoc-descriptions>

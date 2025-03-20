@@ -1,0 +1,217 @@
+; This file contains several sections, one for each database type. 
+
+; Select here which section is to be used currently, 
+; i.e. which database you want to use
+[Database]
+type=bufdataset
+
+; These sections are for the various types of databases:
+
+[interbase]
+; Interbase or Firebird database:
+
+; The connector specifies the DB component that has to be used. The 'sql'
+; connector tests the SQLDB components
+connector=sql
+; Here you can give some parameters, which are specific for each connector. The
+; SQL connector uses this parameter to specify the connection that should be
+; used - i.e. the database server;
+connectorparams=interbase
+
+; The name of the database. The database could be empty. You only need read and
+; write rights.
+name=/opt/firebird/data/testdb.fdb
+
+; user to log in with
+; Default username/password for Interbase/Firebird
+; is sysdba/masterkey. Change to your situation.
+user=sysdba
+
+; password to log in with
+; masterke or masterkey is default for Interbase/Firebird
+password=masterkey
+
+; hostname or IP address 
+; of the database server
+hostname=localhost
+
+; connection character set
+charset=
+
+; SQL command log file (for sqldb databases)
+; will be appended to each run
+; uncomment to use
+;logfile=sql.log
+
+
+[firebirdembedded]
+; Firebird embedded
+; Same as Firebird, except we leave the host name blank
+; and specify a db without path.
+; Make sure your Firebird embedded library files (.dll/.so/.dylib)
+; are installed; e.g. on Windows, you can put them in this
+; directory.
+; Test code will create db if it doesn't exist; you can
+; delete an existing db file before the test to start
+; fresh.
+connector=sql
+connectorparams=interbase
+name=fbembedtest.fdb
+user=sysdba
+password=masterkey
+hostname=
+charset=
+
+[mysql55]
+; MySQL 5.5 database:
+connector=sql
+connectorparams=mysql55
+name=testdb
+user=root
+password=
+hostname=127.0.0.1
+
+[mysql56]
+; MySQL 5.6 database:
+connector=sql
+connectorparams=mysql56
+name=testdb
+user=root
+password=
+hostname=127.0.0.1
+
+[mysql57]
+; MySQL 5.7 database:
+connector=sql
+connectorparams=mysql57
+name=testdb
+user=root
+password=
+hostname=127.0.0.1
+charset=utf8mb4
+
+[mssql]
+; MS SQL Server database:
+connector=sql
+connectorparams=mssql
+name=pubs
+; If you want to use trusted authentication/SSPI, leave
+; user and password blank
+user=sa
+password=
+; You can specify the port after a colon, e.g.
+; hostname=mssqlserver:1433
+; You can also specify the instance after a backslash, e.g.
+; hostname=127.0.0.1\SQLEXPRESS
+; See mssqlconn documentation
+hostname=127.0.0.1
+charset=utf8
+
+[odbc]
+; ODBC database:
+connector=sql
+connectorparams=odbc
+name=testdb
+user=root
+password=
+hostname=127.0.0.1
+
+[oracle]
+; Oracle database:
+connector=sql
+connectorparams=oracle
+; SID or instance name:
+name=xe
+user=system
+password=
+hostname=127.0.0.1
+
+[postgresql]
+; PostgreSQL database:
+connector=sql
+connectorparams=postgresql
+name=testdb
+user=
+password=
+hostname=127.0.0.1
+
+[sqlite]
+; SQLite database:
+connector=sql
+connectorparams=sqlite3
+name=test.db
+charset=utf-8
+
+[sybase]
+; Sybase ASE database
+connector=sql
+connectorparams=sybase
+name=testdb
+user=sa
+password=
+; You can specify the port after a colon, e.g.
+; hostname=bigbadserver:5000
+; See mssqlconn documentation
+hostname=127.0.0.1
+
+; end of sqldb relational databases
+; next are file/memory-based databases:
+
+[dbf]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+; Connectorparams specifies table level/compatibility level:
+; 3=DBase III
+; 4=DBase IV
+; 7=Visual DBase 7 for Windows
+; 25=FoxPro
+; 30=Visual FoxPro
+connectorparams=4
+
+[dbase3]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+connectorparams=3
+
+[dbase4]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+connectorparams=4
+
+[dbase7]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+; 7=Visual DBase 7 for Windows
+connectorparams=7
+
+[foxpro]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+; 25=FoxPro
+connectorparams=25
+
+[visualfoxpro]
+; TDBf: DBase/FoxPro database:
+connector=dbf
+; 30=Visual FoxPro
+connectorparams=25
+
+[memds]
+; MemDS simple in memory dataset:
+connector=memds
+
+[bufdataset]
+; BufDataset in memory dataset:
+connector=bufdataset
+
+[sdfdataset]
+; sdfdataset file-based dataset:
+connector=sdfds
+; subdirectory for the sdf files:
+name=sdftest
+
+[sqlite3dataset]
+; TSqlite3Dataset dataset:
+connector=sqlite3ds
+; datafile
+name=testsqlite3ds.db

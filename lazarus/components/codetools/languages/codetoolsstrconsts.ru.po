@@ -1,0 +1,973 @@
+msgid ""
+msgstr ""
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Project-Id-Version: lazaruside\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-10-13 01:30+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Language: ru\n"
+"X-Generator: Poedit 1.7.7\n"
+
+#: codetoolsstrconsts.crsbracketnotfound
+msgid "bracket ) not found"
+msgstr "скобка ) не найдена"
+
+#: codetoolsstrconsts.crsbracketnotfound2
+msgid "bracket ] not found"
+msgstr "скобка ] не найдена"
+
+#: codetoolsstrconsts.crsclosingbracketnotfound
+msgid "closing bracket not found"
+msgstr "закрывающая скобка не найдена"
+
+#: codetoolsstrconsts.crsfoundunexpectedat
+#, object-pascal-format
+msgid "%s, found unexpected %s at %s"
+msgstr "%s, найден неожиданный %s в %s"
+
+#: codetoolsstrconsts.crsrecordendnotfound
+msgid "record end not found"
+msgstr "конец записи не найден"
+
+#: codetoolsstrconsts.ctsaddsdirtoincludepath
+#, object-pascal-format
+msgid "adds %s to IncPath"
+msgstr "добавляет %s к IncPath"
+
+#: codetoolsstrconsts.ctsaddsdirtosourcepath
+#, object-pascal-format
+msgid "adds %s to SrcPath"
+msgstr "добавляет %s в пути к исходным кодам"
+
+#: codetoolsstrconsts.ctsancestorisnotproperty
+msgid "ancestor of untyped property is not a property"
+msgstr "предок нетипизированного свойства не является свойством"
+
+#: codetoolsstrconsts.ctsanlclproject
+msgid "an LCL project"
+msgstr "проект LCL"
+
+#: codetoolsstrconsts.ctsanonymdefinitionsarenotallowed
+#, object-pascal-format
+msgid "Anonymous %s definitions are not allowed"
+msgstr "Анонимные определения %s не разрешаются"
+
+#: codetoolsstrconsts.ctsawithoutb
+#, object-pascal-format
+msgid "%s without %s"
+msgstr "%s без %s"
+
+#: codetoolsstrconsts.ctsbasetypeofnotfound
+#, object-pascal-format
+msgid "base type of \"%s\" not found"
+msgstr "основной тип \"%s\" не найден"
+
+#: codetoolsstrconsts.ctsbeginatwithoutend
+#, object-pascal-format
+msgid "begin at %s without end"
+msgstr "begin на %s без end"
+
+#: codetoolsstrconsts.ctsbinaryoperator
+msgid "binary operator"
+msgstr "бинарный оператор"
+
+#: codetoolsstrconsts.ctsbracketcloseexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket close expected, but %s found"
+msgstr "ожидается закрывающая скобка, но найдено %s"
+
+#: codetoolsstrconsts.ctsbracketnotfound
+#, object-pascal-format
+msgid "bracket %s not found"
+msgstr "скобка %s не найдена"
+
+#: codetoolsstrconsts.ctsbracketopenexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket open expected, but %s found"
+msgstr "ожидается открывающая скобка, но найдено %s"
+
+#: codetoolsstrconsts.ctscannotaddaunittotheimplementationbecauseonlyaunith
+msgid "cannot add a unit to the implementation, because only a unit has one"
+msgstr "невозможно использовать модуль в секции Implementation, потому что она имеется только у модуля"
+
+#: codetoolsstrconsts.ctscharacterconstantoutofrange
+msgid "character constant out of range"
+msgstr "символьная константа имеет недопустимое значение"
+
+#: codetoolsstrconsts.ctscircleindefinitions
+msgid "circle in definitions"
+msgstr "цикл в определениях"
+
+#: codetoolsstrconsts.ctsclassidentifierexpected
+msgid "class identifier expected"
+msgstr "ожидается идентификатор класса"
+
+#: codetoolsstrconsts.ctsclassnodewithoutparentnode
+msgid "class node without parent node"
+msgstr "описание класса без предка"
+
+#: codetoolsstrconsts.ctsclassnotfound
+#, object-pascal-format
+msgid "class \"%s\" not found"
+msgstr "класс \"%s\" не найден"
+
+#: codetoolsstrconsts.ctsclassnotfound2
+#, object-pascal-format
+msgid "class not found \"%s\""
+msgstr "класс \"%s\" не найден"
+
+#: codetoolsstrconsts.ctsclassofdefinitionnotresolved
+#, object-pascal-format
+msgid "\"class of\" definition not resolved: %s"
+msgstr "Не найдено ранее упомянутое \"class of\": %s"
+
+#: codetoolsstrconsts.ctsclasssnotfound
+#, object-pascal-format
+msgid "Class %s not found"
+msgstr "Класс %s не найден"
+
+#: codetoolsstrconsts.ctsclasswithoutname
+msgid "class without name"
+msgstr "класс без имени"
+
+#: codetoolsstrconsts.ctscommandlineparameters
+msgid "Command line parameters"
+msgstr "Параметры командной строки "
+
+#: codetoolsstrconsts.ctscommentendnotfound
+msgid "Comment end not found"
+msgstr "Не найден конец комментария"
+
+#: codetoolsstrconsts.ctscompiledsrcpath
+msgid "Compiled SrcPath"
+msgstr "Путь к откомпилированному коду"
+
+#: codetoolsstrconsts.ctscompiler
+msgid "Compiler"
+msgstr "Компилятор"
+
+#: codetoolsstrconsts.ctscomponentsdirectory
+msgid "Components Directory"
+msgstr "Каталог компонентов"
+
+#: codetoolsstrconsts.ctsconstant
+msgid "constant"
+msgstr "константа"
+
+#: codetoolsstrconsts.ctscursorposoutsideofcode
+msgid "cursor pos outside of code"
+msgstr "курсор находится вне исходного кода"
+
+#: codetoolsstrconsts.ctscustomcomponentsdirectory
+msgid "Custom Components Directory"
+msgstr "Каталог компонентов пользователя"
+
+#: codetoolsstrconsts.ctsdebuggerdirectory
+msgid "Debugger Directory"
+msgstr "Каталог отладчика"
+
+#: codetoolsstrconsts.ctsdefaultancestornotfound
+#, object-pascal-format
+msgid "default ancestor %s not found"
+msgstr "предок по умолчанию %s не найден"
+
+#: codetoolsstrconsts.ctsdefaultclassancestortobjectnotfound
+msgid "default class ancestor TObject not found"
+msgstr "класс-предок по умолчанию - TObject - не найден"
+
+#: codetoolsstrconsts.ctsdefaultdispinterfaceancestoridispatchnotfound
+msgid "default dispinterface ancestor IDispatch not found"
+msgstr "предок DispInterface по умолчанию (IDispatch) не найден"
+
+#: codetoolsstrconsts.ctsdefaultfpcsource2operatingsystem
+msgid "Default fpc source Operating System 2"
+msgstr "Исходная операционная система 2 для fpc по умолчанию"
+
+#: codetoolsstrconsts.ctsdefaultfpcsourceoperatingsystem
+msgid "Default fpc source Operating System"
+msgstr "Исходная операционная система для fpc по умолчанию"
+
+#: codetoolsstrconsts.ctsdefaultfpcsymbol
+msgid "Default fpc symbol"
+msgstr "Символ fpc по умолчанию"
+
+#: codetoolsstrconsts.ctsdefaultfpctargetoperatingsystem
+msgid "Default fpc target Operating System"
+msgstr "Целевая операционная система для fpc по умолчанию"
+
+#: codetoolsstrconsts.ctsdefaultfpctargetprocessor
+msgid "Default fpc target processor"
+msgstr "Целевой процессор для fpc по умолчанию"
+
+#: codetoolsstrconsts.ctsdefaultinterfaceancestoriinterfacenotfound
+msgid "default interface ancestor IInterface not found"
+msgstr "интерфейс-предок по умолчанию - IInterface - не найден"
+
+#: codetoolsstrconsts.ctsdefaultjavaclassancestorjlobjectnotfound
+msgid "default java class ancestor JLObject not found"
+msgstr "предок классов Java по умолчанию (JLObject) не найден"
+
+#: codetoolsstrconsts.ctsdefaultparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "default parameter expected, but %s found"
+msgstr "ожидается параметр по умолчанию, но найдено %s"
+
+#: codetoolsstrconsts.ctsdefaultpropertynotfound
+msgid "default property not found"
+msgstr "свойство по умолчанию не найдено"
+
+#: codetoolsstrconsts.ctsdefaultspecifierredefined
+msgid "default specifier redefined"
+msgstr "спецификатор default переопределён"
+
+#: codetoolsstrconsts.ctsdefine
+msgid "Define "
+msgstr "Определить "
+
+#: codetoolsstrconsts.ctsdefinelcl
+msgid "Define LCL"
+msgstr "Задать переменную LCL"
+
+#: codetoolsstrconsts.ctsdefinelclwidgetset
+msgid "Define LCLwidgetset, e.g. LCLgtk"
+msgstr "Задать LCLwidgetset, например, LCLgtk"
+
+#: codetoolsstrconsts.ctsdefinemacroname
+#, object-pascal-format
+msgid "Define Macro %s"
+msgstr "Задать макрос %s"
+
+#: codetoolsstrconsts.ctsdefineprocessortype
+msgid "Define processor type"
+msgstr "Задать тип процессора"
+
+#: codetoolsstrconsts.ctsdefsforlazarussources
+msgid "Definitions for the Lazarus Sources"
+msgstr "Определения для исходного кода Lazarus"
+
+#: codetoolsstrconsts.ctsdesignerdirectory
+msgid "Designer Directory"
+msgstr "Каталог дизайнера"
+
+#: codetoolsstrconsts.ctsdispidparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "dispid parameter expected, but %s found"
+msgstr "ожидается параметр dispid, но найдено %s"
+
+#: codetoolsstrconsts.ctsdispidspecifierredefined
+msgid "dispid specifier redefined"
+msgstr "спецификатор dispid переопределён"
+
+#: codetoolsstrconsts.ctsduplicateidentifier
+#, object-pascal-format
+msgid "duplicate identifier: %s"
+msgstr "дублирущийся идентификатор: %s"
+
+#: codetoolsstrconsts.ctselse
+msgid "else"
+msgstr "иначе"
+
+#: codetoolsstrconsts.ctsendforclassnotfound
+msgid "\"end\" for class/object not found"
+msgstr "не найден \"end\" для класса/объекта"
+
+#: codetoolsstrconsts.ctsendforrecordnotfound
+msgid "end for record not found"
+msgstr "конец записи не найден"
+
+#: codetoolsstrconsts.ctsendoffile
+msgid "end of file"
+msgstr "конец файла"
+
+#: codetoolsstrconsts.ctsendofsourceexpectedbutatomfound
+#, object-pascal-format
+msgid "expected end., but %s found"
+msgstr "ожидается end., но найдено %s"
+
+#: codetoolsstrconsts.ctsendofsourcenotfound
+msgid "End of source not found."
+msgstr "Не найден конец исходного кода."
+
+#: codetoolsstrconsts.ctsenumerationtype
+msgid "enumeration type"
+msgstr "тип перечисления"
+
+#: codetoolsstrconsts.ctserrorduringcreationofnewprocbodies
+msgid "error during creation of new proc bodies"
+msgstr "ошибка при создании новых тел процедур"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewclassparts
+msgid "error during inserting new class parts"
+msgstr "ошибка при вставке новых частей класса"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewusessection
+msgid "error during inserting new units to the main uses section"
+msgstr "ошибка при вставке новых модулей в главное выражение uses"
+
+#: codetoolsstrconsts.ctserrorindirectiveexpression
+msgid "error in directive expression"
+msgstr "ошибка в выражении директивы"
+
+#: codetoolsstrconsts.ctserrorinparamlist
+msgid "error in paramlist"
+msgstr "ошибка в списке параметров"
+
+#: codetoolsstrconsts.ctsexpected
+#, object-pascal-format
+msgid "\"%s\" expected"
+msgstr "Ожидается \"%s\""
+
+#: codetoolsstrconsts.ctsexpectedamethodtypebutfound
+#, object-pascal-format
+msgid "expected a method type, but found %s"
+msgstr "ожидается тип метода, но найдено %s"
+
+#: codetoolsstrconsts.ctsexpectedbutfound
+#, object-pascal-format
+msgid "expected (, but found %s"
+msgstr "ожидается (, но найдено %s"
+
+#: codetoolsstrconsts.ctsexpectedbutfound2
+#, object-pascal-format
+msgid "expected ), but found %s"
+msgstr "ожидается ), но найдено %s"
+
+#: codetoolsstrconsts.ctsexpectedbutfound3
+#, object-pascal-format
+msgid "expected :=, but %s found"
+msgstr "ожидается оператор :=, но найдено %s"
+
+#: codetoolsstrconsts.ctsexpectedidentifierbutfound
+#, object-pascal-format
+msgid "expected identifier, but found %s"
+msgstr "ожидается идентификатор, но найдено %s"
+
+#: codetoolsstrconsts.ctsexpectedsemicolonofstatementbutfound
+#, object-pascal-format
+msgid "expected ; of statement, but found %s"
+msgstr "ожидается точка с запятой оператора, но найдено %s"
+
+#: codetoolsstrconsts.ctsexportsclauseonlyallowedinlibraries
+msgid "exports clause only allowed in libraries"
+msgstr "выражение exports разрешается только в библиотеках"
+
+#: codetoolsstrconsts.ctsexprtypemustbeclassorrecord
+msgid "expression type must be class or record type"
+msgstr "тип выражения должен быть объектом или записью"
+
+#: codetoolsstrconsts.ctsfileisreadonly
+msgid "file is read only"
+msgstr "файл только для чтения"
+
+#: codetoolsstrconsts.ctsforward
+msgid "Forward"
+msgstr "Предваряющее"
+
+#: codetoolsstrconsts.ctsforwardclassdefinitionnotresolved
+#, object-pascal-format
+msgid "Forward class definition not resolved: %s"
+msgstr "Не найдена реализация ранее объявленного класса: %s"
+
+#: codetoolsstrconsts.ctsfpdocsystemon
+msgid "enable FPDocSystem"
+msgstr "включить FPDocSystem"
+
+#: codetoolsstrconsts.ctsfreepascalcompilerinitialmacros
+msgid "Free Pascal Compiler initial macros"
+msgstr "Макросы инициализации компилятора FreePascal"
+
+#: codetoolsstrconsts.ctsfreepascalcomponentlibrary
+msgid "Free Pascal Component Library"
+msgstr "Библиотека компонентов FreePascal"
+
+#: codetoolsstrconsts.ctsfreepascalsourcedir
+msgid "Free Pascal Source Directory"
+msgstr "Каталог исходного кода FreePascal"
+
+#: codetoolsstrconsts.ctsfreepascalsourcesplusdesc
+#, object-pascal-format
+msgid "Free Pascal Sources, %s"
+msgstr "Исходный код FreePascal, %s"
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass"
+msgid "function GetEnumerator not found in this class"
+msgstr "функция GetEnumerator не найдена в данном классе"
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2"
+msgid "function GetEnumerator not found in this class"
+msgstr "функция GetEnumerator не найдена в данном классе"
+
+#: codetoolsstrconsts.ctsgenericidentifier
+msgid "generic identifier"
+msgstr "идентификатор обобщённого типа"
+
+#: codetoolsstrconsts.ctshaserror
+msgid "HasError"
+msgstr "Ошибка"
+
+#: codetoolsstrconsts.ctshelperisnotallowed
+#, object-pascal-format
+msgid "Helper after %s is not allowed"
+msgstr "Модификатор \"helper\" после %s не разрешается"
+
+#: codetoolsstrconsts.ctsidedirectory
+msgid "IDE Directory"
+msgstr "Каталог IDE"
+
+#: codetoolsstrconsts.ctsidentexpectedbutatomfound
+#, object-pascal-format
+msgid "identifier expected, but %s found"
+msgstr "ожидается идентификатор, но найдено %s"
+
+#: codetoolsstrconsts.ctsidentexpectedbuteoffound
+msgid "unexpected end of file (identifier expected)"
+msgstr "неожиданный конец файла (ожидается идентификатор)"
+
+#: codetoolsstrconsts.ctsidentexpectedbutkeywordfound
+#, object-pascal-format
+msgid "identifier expected, but keyword %s found"
+msgstr "ожидается идентификатор, но найдено ключевое слово %s"
+
+#: codetoolsstrconsts.ctsidentifier
+msgid "identifier"
+msgstr "идентификатор"
+
+#: codetoolsstrconsts.ctsidentifieralreadydefined
+#, object-pascal-format
+msgid "Identifier %s already defined"
+msgstr "Идентификатор %s уже определён"
+
+#: codetoolsstrconsts.ctsidentifiernotfound
+#, object-pascal-format
+msgid "identifier not found: %s"
+msgstr "не найден идентификатор: %s"
+
+#: codetoolsstrconsts.ctsifdefdarwin
+msgid "IfDef Darwin"
+msgstr "IfDef Darwin"
+
+#: codetoolsstrconsts.ctsifdeflinux
+msgid "IfDef Linux"
+msgstr "IfDef Linux"
+
+#: codetoolsstrconsts.ctsifdefwindows
+msgid "IfDef Windows"
+msgstr "IfDef Windows"
+
+#: codetoolsstrconsts.ctsiflclwidgettypeequalsgtk2
+msgid "If LCLWidgetType=gtk2 then"
+msgstr "Если LCLWidgetType=gtk2, то"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos
+msgid "If TargetOS<>SrcOS"
+msgstr "Если TargetOS<>SrcOS"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos2
+msgid "If TargetOS<>SrcOS2"
+msgstr "Если TargetOS<>SrcOS2"
+
+#: codetoolsstrconsts.ctsiftargetosisnotwin32
+msgid "If TargetOS<>win32 then"
+msgstr "Если TargetOS<>win32, то"
+
+#: codetoolsstrconsts.ctsillegalcircleinusedunits
+#, object-pascal-format
+msgid "illegal circle using unit: %s"
+msgstr "неверное циклическое использование модуля: %s"
+
+#: codetoolsstrconsts.ctsillegalqualifier
+#, object-pascal-format
+msgid "illegal qualifier %s found"
+msgstr "обнаружен некорректный квалификатор %s"
+
+#: codetoolsstrconsts.ctsimplementationnodenotfound
+msgid "implementation node not found"
+msgstr "слово implementation не найдено"
+
+#: codetoolsstrconsts.ctsincludecircledetected
+msgid "Include circle detected"
+msgstr "Обнаружено циклическое включение"
+
+#: codetoolsstrconsts.ctsincludedirectoriesplusdirs
+#, object-pascal-format
+msgid "include directories: %s"
+msgstr "каталоги включаемых файлов: %s"
+
+#: codetoolsstrconsts.ctsincludefilenotfound
+#, object-pascal-format
+msgid "include file not found \"%s\""
+msgstr "включаемый файл не найден \"%s\""
+
+#: codetoolsstrconsts.ctsincompatibletypesgotexpected
+#, object-pascal-format
+msgid "incompatibles types: expected \"%s\" but got \"%s\""
+msgstr "несовместимые типы: ожидается \"%s\", но получен \"%s\""
+
+#: codetoolsstrconsts.ctsindexparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "index parameter expected, but %s found"
+msgstr "ожидается параметр индекса, но найдено %s"
+
+#: codetoolsstrconsts.ctsindexspecifierredefined
+msgid "index specifier redefined"
+msgstr "спецификатор index переопределён"
+
+#: codetoolsstrconsts.ctsinheritedkeywordonlyallowedinmethods
+msgid "inherited keyword only allowed in methods"
+msgstr "ключевое слово inherited разрешено только в методах"
+
+#: codetoolsstrconsts.ctsinstalldirectory
+msgid "Install Directory"
+msgstr "Каталог установки"
+
+#: codetoolsstrconsts.ctsinstallerdirectories
+msgid "Installer directories"
+msgstr "Каталоги инсталлятора"
+
+#: codetoolsstrconsts.ctsinterfacesectionnotfound
+msgid "interface section not found"
+msgstr "секция interface не найдена"
+
+#: codetoolsstrconsts.ctsinvalidclassname
+#, object-pascal-format
+msgid "invalid class name=\"%s\""
+msgstr "неверное имя класса=\"%s\""
+
+#: codetoolsstrconsts.ctsinvalidclassname2
+#, object-pascal-format
+msgid "invalid class name \"%s\""
+msgstr "неверное имя класса \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidflagvaluefordirective
+#, object-pascal-format
+msgid "invalid flag value \"%s\" for directive %s"
+msgstr "неверное значение флага \"%s\" для директивы %s"
+
+#: codetoolsstrconsts.ctsinvalidmode
+#, object-pascal-format
+msgid "invalid mode \"%s\""
+msgstr "неверный режим \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidoperator
+#, object-pascal-format
+msgid "invalid operator %s"
+msgstr "неверный оператор %s"
+
+#: codetoolsstrconsts.ctsinvalidpositionforinsertionofstatements
+msgid "invalid position for insertion of statements"
+msgstr "некорректная позиция для вставки операторов"
+
+#: codetoolsstrconsts.ctsinvalidsubrange
+msgid "invalid subrange"
+msgstr "неверный поддиапазон"
+
+#: codetoolsstrconsts.ctsinvalidtype
+msgid "invalid type"
+msgstr "неверный тип"
+
+#: codetoolsstrconsts.ctsinvalidvariablename
+#, object-pascal-format
+msgid "invalid variable name \"%s\""
+msgstr "неверное имя переменной \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidvariabletype
+#, object-pascal-format
+msgid "invalid variable type \"%s\""
+msgstr "неверный тип переменной \"%s\""
+
+#: codetoolsstrconsts.ctskeyword
+msgid "keyword"
+msgstr "ключевое слово"
+
+#: codetoolsstrconsts.ctskeywordexampleexpectedbutatomfound
+#, object-pascal-format
+msgid "keyword (e.g. %s) expected, but %s found"
+msgstr "ожидается ключевое слово (например, %s), но найдено %s"
+
+#: codetoolsstrconsts.ctskeywordin
+msgid "keyword \"in\""
+msgstr "ключевое слово \"in\""
+
+#: codetoolsstrconsts.ctslazarusmaindirectory
+msgid "lazarus main directory"
+msgstr "главный каталог lazarus"
+
+#: codetoolsstrconsts.ctslazarussources
+msgid "Lazarus Sources"
+msgstr "Исходный код Lazarus"
+
+#: codetoolsstrconsts.ctsmethodhasnodeclaration
+#, object-pascal-format
+msgid "method \"%s\" has no declaration"
+msgstr "метод \"%s\" не имеет объявления"
+
+#: codetoolsstrconsts.ctsmethodname
+msgid "method name"
+msgstr "имя метода"
+
+#: codetoolsstrconsts.ctsmethodsignaturesnotfoundinclass
+#, object-pascal-format
+msgid "Method signature %s not found in class"
+msgstr "Сигнатура метода %s не найдена в классе"
+
+#: codetoolsstrconsts.ctsmethodtypedefinitionnotfound
+msgid "method type definition not found"
+msgstr "не найдено описание типа метода"
+
+#: codetoolsstrconsts.ctsmissing
+msgid "missing :="
+msgstr "отсутствует оператор :="
+
+#: codetoolsstrconsts.ctsmissingenumlist
+msgid "missing enum list"
+msgstr "отсутствует список перечисления"
+
+#: codetoolsstrconsts.ctsmissingpointafterend
+msgid "missing . after end"
+msgstr "отсутствует точка (.) после end"
+
+#: codetoolsstrconsts.ctsmissingtypeidentifier
+msgid "missing type identifier"
+msgstr "отсутствует идентификатор типа"
+
+#: codetoolsstrconsts.ctsnameddirectory
+#, object-pascal-format
+msgid "%s Directory"
+msgstr "Каталог %s"
+
+#: codetoolsstrconsts.ctsnamedproject
+#, object-pascal-format
+msgid "%s Project"
+msgstr "Проект %s"
+
+#: codetoolsstrconsts.ctsneededbymode
+#, object-pascal-format
+msgid " (needed by mode \"%s\")"
+msgstr " (требуется для режима \"%s\")"
+
+#: codetoolsstrconsts.ctsnesteddefinitionsarenotallowed
+#, object-pascal-format
+msgid "Nested %s definitions are not allowed"
+msgstr "Вложенные определения %s не разрешаются"
+
+#: codetoolsstrconsts.ctsnewprocbodynotfound
+msgid "new proc body not found"
+msgstr "тело новой процедуры не найдено"
+
+#: codetoolsstrconsts.ctsnocontextnodefoundatcursor
+msgid "no context node found at cursor"
+msgstr "не найдено контекстного элемента у курсора"
+
+#: codetoolsstrconsts.ctsnodefaultspecifierdefinedtwice
+msgid "nodefault specifier defined twice"
+msgstr "спецификатор nodefault определён дважды"
+
+#: codetoolsstrconsts.ctsnopascalcodefound
+#, object-pascal-format
+msgid "no pascal code found (first token is %s)"
+msgstr "не найдено кода Паскаля (первый элемент - %s)"
+
+#: codetoolsstrconsts.ctsnoscanneravailable
+msgid "No scanner available"
+msgstr "Отсутствуют доступные лексические анализаторы"
+
+#: codetoolsstrconsts.ctsnoscannerfound
+#, object-pascal-format
+msgid "No scanner found for \"%s\". If this is an include file, please open the main source first."
+msgstr "Не найдено лексического анализатора для \"%s\". Если это включаемый файл, откройте сначала главный файл исходного кода."
+
+#: codetoolsstrconsts.ctsnotenoughgenparams
+msgid "Not enough actual generic parameters"
+msgstr "Недостаточное количество фактических параметров обобщённого типа"
+
+#: codetoolsstrconsts.ctsoldmethodnotfound
+#, object-pascal-format
+msgid "old method not found: %s"
+msgstr "не найден старый метод: %s"
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound
+#, object-pascal-format
+msgid "operand expected but %s found"
+msgstr "ожидается операнд, но найдено %s"
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound2
+#, object-pascal-format
+msgid "operand expected, but %s found"
+msgstr "ожидается операнд, но найдено %s"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutatomfound
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutatomfound"
+msgid "operator expected, but %s found"
+msgstr "ожидается оператор, но найдено %s"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbuteoffound
+msgid "unexpected end of file (operator expected)"
+msgstr "неожиданный конец файла (ожидается оператор)"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound
+#, object-pascal-format
+msgid "operator expected but %s found"
+msgstr "ожидается оператор, но найдено %s"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound2
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutfound2"
+msgid "operator expected, but %s found"
+msgstr "ожидается оператор, но найдено %s"
+
+#: codetoolsstrconsts.ctsothercompilerdefines
+#, object-pascal-format
+msgid "%s Compiler Defines"
+msgstr "Определения компилятора %s"
+
+#: codetoolsstrconsts.ctspackagedirectories
+msgid "Package directories"
+msgstr "Каталоги пакетов"
+
+#: codetoolsstrconsts.ctspackagerdirectory
+msgid "Packager Directory"
+msgstr "Каталог менеджера пакетов"
+
+#: codetoolsstrconsts.ctspackagerregistrationdirectory
+msgid "Packager Registration Directory"
+msgstr "Каталог регистрации менеджера пакетов"
+
+#: codetoolsstrconsts.ctspackagerunitsdirectory
+msgid "Packager Units Directory"
+msgstr "Каталог модулей менеджера пакетов"
+
+#: codetoolsstrconsts.ctspointhintprocstartat
+msgid ".  Hint: proc start at "
+msgstr ". Подсказка: начало процедуры в "
+
+#: codetoolsstrconsts.ctspointstartat
+msgid ". start at "
+msgstr ". Начало в "
+
+#: codetoolsstrconsts.ctspositionnotinsource
+msgid "Position not in source"
+msgstr "Позиция находится вне исходного кода"
+
+#: codetoolsstrconsts.ctsprocedureorfunctionorconstructorordestructor
+msgid "procedure or function or constructor or destructor"
+msgstr "процедура, либо функция, либо конструктор, либо деструктор"
+
+#: codetoolsstrconsts.ctsprocessorspecific
+msgid "processor specific"
+msgstr "специфичный для процессора"
+
+#: codetoolsstrconsts.ctsproperttypeexpectedbutatomfound
+#, object-pascal-format
+msgid "property type expected, but %s found"
+msgstr "ожидается тип свойства, но найдено %s"
+
+#: codetoolsstrconsts.ctspropertycurrentnotfound
+msgid "property Current not found"
+msgstr "свойство Current не найдено"
+
+#: codetoolsstrconsts.ctspropertyspecifieralreadydefined
+#, object-pascal-format
+msgid "property specifier already defined: %s"
+msgstr "спецификатор свойства уже задан: %s"
+
+#: codetoolsstrconsts.ctsqualifierexpectedbutatomfound
+#, object-pascal-format
+msgid "qualifier expected but %s found"
+msgstr "ожидается квалификатор, но найдено %s"
+
+#: codetoolsstrconsts.ctsresetalldefines
+msgid "Reset all defines"
+msgstr "Сбросить все определения"
+
+#: codetoolsstrconsts.ctsresulttypeoffunctiongetenumeratornotfound
+msgid "result type of function GetEnumerator not found"
+msgstr "тип результата функции GetEnumerator не найден"
+
+#: codetoolsstrconsts.ctsruntimelibrary
+msgid "Runtime library"
+msgstr "Библиотека времени исполнения"
+
+#: codetoolsstrconsts.ctsscannedfiles
+#, object-pascal-format
+msgid "Scanned files: %s"
+msgstr "Просмотренных файлов: %s"
+
+#: codetoolsstrconsts.ctssemicolonafterpropspecmissing
+#, object-pascal-format
+msgid "; expected after \"%s\" property specifier, but %s found"
+msgstr "после спецификатора свойства \"%s\" ожидается точка с запятой, но найдено %s"
+
+#: codetoolsstrconsts.ctssemicolonnotfound
+msgid "semicolon not found"
+msgstr "точка с запятой не найдена"
+
+#: codetoolsstrconsts.ctssetsincpathto
+#, object-pascal-format
+msgid "sets IncPath to %s"
+msgstr "устанавливает пути к включениям в %s"
+
+#: codetoolsstrconsts.ctssetssrcpathto
+#, object-pascal-format
+msgid "sets SrcPath to %s"
+msgstr "устанавливает пути к исходным кодам в %s"
+
+#: codetoolsstrconsts.ctssourcefilenamesforstandardfpcunits
+msgid "Source filenames for the standard fpc units"
+msgstr "Имена файлов исходного кода для стандартных модулей fpc"
+
+#: codetoolsstrconsts.ctssourceisnotunit
+msgid "source is not unit"
+msgstr "исходный код не является модулем"
+
+#: codetoolsstrconsts.ctssourcenotfoundunit
+#, object-pascal-format
+msgid "source not found: unit %s. Check your FPC source directory."
+msgstr "не найден исходный код: модуль %s. Проверьте путь к исходному коду FPC."
+
+#: codetoolsstrconsts.ctssrcpathinitialization
+msgid "SrcPath Initialization"
+msgstr "Инициализация путей к исходному коду"
+
+#: codetoolsstrconsts.ctsstrexpectedbutatomfound
+#, object-pascal-format
+msgid "expected %s, but %s found"
+msgstr "ожидается %s, но найдено %s"
+
+#: codetoolsstrconsts.ctsstringconstant
+msgid "string constant"
+msgstr "строковая константа"
+
+#: codetoolsstrconsts.ctssyntaxerrorinexpr
+#, object-pascal-format
+msgid "Syntax Error in expression \"%s\""
+msgstr "Синтаксическая ошибка в выражении \"%s\""
+
+#: codetoolsstrconsts.ctstermnotsimple
+msgid "Term has no simple type"
+msgstr "Определение не имеет простого типа"
+
+#: codetoolsstrconsts.ctsthenexpectedbutfound
+#, object-pascal-format
+msgid "then expected, but %s found"
+msgstr "ожидается then, но найдено %s"
+
+#: codetoolsstrconsts.ctstoolsdirectory
+msgid "Tools Directory"
+msgstr "Каталог средств пользователя"
+
+#: codetoolsstrconsts.ctstype
+msgid "type"
+msgstr "тип"
+
+#: codetoolsstrconsts.ctstypeidentifier
+msgid "type identifier"
+msgstr "идентификатор типа"
+
+#: codetoolsstrconsts.ctstypeisonlyallowedingenericsendofclassnotfound
+msgid "type is only allowed in generics, end of class not found"
+msgstr "секция type разрешена только в обобщённых типах, конец класса не найден"
+
+#: codetoolsstrconsts.ctstypesectionofclassnotfound
+msgid "type section of class not found"
+msgstr "секция type класса не найдена"
+
+#: codetoolsstrconsts.ctsunabletoapplychanges
+msgid "unable to apply changes"
+msgstr "невозможно применить изменения"
+
+#: codetoolsstrconsts.ctsunabletocompleteproperty
+msgid "unable to complete property"
+msgstr "невозможно завершить свойство"
+
+#: codetoolsstrconsts.ctsundefine
+msgid "Undefine "
+msgstr "Снять определение "
+
+#: codetoolsstrconsts.ctsunexpectedendofsource
+msgid "unexpected end of source"
+msgstr "неожиданный конец исходного кода"
+
+#: codetoolsstrconsts.ctsunexpectedkeyword
+#, object-pascal-format
+msgid "unexpected keyword \"%s\""
+msgstr "неожиданное ключевое слово \"%s\""
+
+#: codetoolsstrconsts.ctsunexpectedkeyword2
+#, object-pascal-format
+msgid "unexpected keyword %s"
+msgstr "неожиданное ключевое слово %s"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinasmblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in asm block found"
+msgstr "обнаружено неожиданное ключевое слово \"%s\" в блоке ассемблера"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinbeginendblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in begin..end found"
+msgstr "обнаружено неожиданное ключевое слово \"%s\" в операторных скобках (begin..end)"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordwhilereadingbackwards
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" found while reading blocks backwards"
+msgstr "обнаружено неожиданное ключевое слово \"%s\" при чтении блоков в обратном порядке"
+
+#: codetoolsstrconsts.ctsunexpectedsectionkeyword
+#, object-pascal-format
+msgid "unexpected section keyword %s found"
+msgstr "обнаружено неожиданное ключевое слово секции %s"
+
+#: codetoolsstrconsts.ctsunexpectedsubrangeoperatorfound
+msgid "unexpected subrange operator '..' found"
+msgstr "обнаружен неожиданный оператор поддиапазона '..'"
+
+#: codetoolsstrconsts.ctsunitnotfound
+#, object-pascal-format
+msgid "unit not found: %s"
+msgstr "модуль не найден: %s"
+
+#: codetoolsstrconsts.ctsunitpathinitialization
+msgid "UnitPath Initialization"
+msgstr "Инициализация путей к модулям"
+
+#: codetoolsstrconsts.ctsunknownfunction
+#, object-pascal-format
+msgid "Unknown function %s"
+msgstr "Неизвестная функция %s"
+
+#: codetoolsstrconsts.ctsunknownmainfilename
+msgid "(unknown mainfilename)"
+msgstr "(неизвестное имя главного файла)"
+
+#: codetoolsstrconsts.ctsunknownsubdescriptor
+#, object-pascal-format
+msgid "(unknown subdescriptor %s)"
+msgstr "(неизвестный субдескриптор %s)"
+
+#: codetoolsstrconsts.ctsunparsed
+msgid "Unparsed"
+msgstr "Непроанализированное"
+
+#: codetoolsstrconsts.ctsusedunitisnotapascalunit
+msgid "used unit is not a pascal unit"
+msgstr "используемый модуль не является модулем Паскаля"
+
+#: codetoolsstrconsts.ctsutilsdirectories
+msgid "Utils directories"
+msgstr "Каталоги утилит"
+
+#: codetoolsstrconsts.ctsvarisonlyallowedingenericsendofclassnotfound
+msgid "var is only allowed in generics, end of class not found"
+msgstr "секция var разрешена только в обобщённых типах, конец класса не найден"
+
+#: codetoolsstrconsts.ctswordnotfound
+#, object-pascal-format
+msgid "\"%s\" not found"
+msgstr "\"%s\" не найдено"
+

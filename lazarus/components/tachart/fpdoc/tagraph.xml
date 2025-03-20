@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="TAChartLazarusPkg">
+    <module name="TAGraph">
+      <element name="TChart.Title">
+        <short>Chart title.</short>
+      </element>
+      <element name="TChart.AllowZoom">
+        <short>If <var>true</var>, the user can zoom chart with the mouse.</short>
+        <descr>Allows the user to zoom the chart by drawing a new zoom rectangle with the mouse while holding down the left mouse button.
+</descr>
+      </element>
+      <element name="TChart">
+        <short>Main charting component.</short>
+        <descr><p>The chart is composed of a list of <link id="TBasicChartSeries">series</link>, a list of <link id="TAChartAxis.TChartAxis">axes</link> and fixed <link id="TATypes.TChartElement">elements</link> like legend, title and footer.</p><p>Chart methods work with four coordinate systems:</p><ul><li><b>Axis coordinates</b> (known in some other applications as object coordinates) -- they are "raw" coordinate values obtained from the data. As the name implies, axis coordinates are interpreted in terms of specific axis -- the same coordinate value may have different meaning depending on the axis it is applied to.</li><li><b>Graph coordinates</b> are converted from the axis coordinates by means of axis transformations, such as logarithmic scale. Graph coordinates are common to all objects in the chart. Consider the graph coordinates as an invisible graphing paper behind the chart; its x axis is horizontal running from left to right, and its y axis is vertical running from bottom to top even if a series is rotated.</li><li><b>Image coordinates</b> (aka screen coordinates) are converted from graph coordinates based on the chart viewport. This transformation is always linear and can be influenced by chart tools such as zooming and panning.</li><li><b>Device coordinates</b> are usually equal to screen coordinates, but may be adjusted to the drawing back-end to accommodate different physical resolutions (DPI values). See, for example, printer drawer.</li>
+          </ul>
+        </descr>
+      </element>
+      <element name="TChart.BackColor">
+        <short>Color of back plane of the chart.</short>
+        <descr>Note that <var>BackColor</var> is different form the <link id="TChart.Color">Color</link> property
+which is used to paint the background of the entire <var>TChart</var>, including legend, axes and title/footer.
+</descr>
+        <seealso><link id="TChart.Color">Color</link>
+        </seealso>
+      </element>
+      <element name="TChart.Depth">
+        <short>The length of Z axis in 3D mode, in pixels. Zero value means 2D mode.</short>
+      </element>
+      <element name="TChart.ExpandPercentage">
+        <short>Default extent size is increased by this percent. May be negative.</short>
+        <descr>
+          <p>To ensure full visualization of the extreme points of the chart, it is usually a good idea to set the default zoom value so that the default extent is slightly greater than the extent of chart data.</p>
+          <p>This can be done by either setting the <var>ExpandPercentage</var> property, which increases the extent value relatively, setting the <link id="TChart.Extent">extent</link>manually, or setting absolute <link id="TChart.Margins">margins</link>.</p>
+        </descr>
+        <seealso>
+          <link id=""/>
+          <link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.Series">
+        <short>List of chart series.</short>
+        <descr><p>To add or remove series at run-time,
+use 
+<link id="TChart.AddSeries">AddSeries</link> and 
+<link id="TChart.DeleteSeries">DeleteSeries</link> methods.
+</p><p>Use <link id="TChartSeriesCount">SeriesCount</link> to determine the number of series contained in the chart.</p>
+        </descr>
+        <seealso><link id=""/><link id=""/><link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.SeriesCount">
+        <short>Returns the number of chart series, including inactive ones.</short>
+      </element>
+      <element name="TChart.Foot">
+        <short>Chart footer.</short>
+      </element>
+      <element name="TChart.Frame">
+        <short>The pen to draw a frame around the chart's viewport.</short>
+        <descr><p>The position of the frame is coincient with the default axis position. </p><p>Set <var>Frame.Visible</var> to <var>false</var> to turn off frame drawing.
+</p>
+        </descr>
+      </element>
+      <element name="TChart.AxisList">
+        <short>List of chart <link id="TATypes.TChartAxis">axes</link>.</short>
+      </element>
+      <element name="TChart.BottomAxis">
+        <short>Bottom axis of the chart.</short>
+        <descr>Retrieves the first axis from the 
+<link id="TChart.AxisList"><var>AxisList</var>
+          </link> of the chart with
+
+<link id="TATypes.TChartAxis.Alignment"><var>Alignment</var>
+          </link> set to
+
+<link id="TATypes.TChartAxisAlignment"><var>calBottom</var>
+          </link>.
+</descr>
+        <seealso><link id="TAChartAxis.TChartAxis"/>
+        </seealso>
+      </element>
+      <element name="TChart.LeftAxis">
+        <short>Left axis of the chart.</short>
+        <descr>Retrieves the first axis from the <link id="TChart.AxisList"><var>AxisList</var>
+          </link> of the chart with
+<link id="TATypes.TChartAxis.Alignment"><var>Alignment</var>
+          </link> set to
+<link id="TATypes.TChartAxisAlignment"><var>calLeft</var>
+          </link>.
+</descr>
+        <seealso><link id="TAChartAxis.TChartAxis"/>
+        </seealso>
+      </element>
+      <element name="TChart.Legend">
+        <short>Chart legend.</short>
+      </element>
+      <element name="TChart.Margins">
+        <short>Margins around the chart sides in default extent, in pixels.</short>
+        <seealso><link id="TChart.BorderSpacing">BorderSpacing</link><link id="TChart.ExpandPercentage">ExpandPercentage</link><link id="TChart.Extent">Extent</link>
+        </seealso>
+        <descr>Note that the margins set by this property have effect only on the default extent.
+Use <link id="TChart.BorderSpacing">BorderSpacing</link> property to set margins
+independently of zoom level.
+</descr>
+      </element>
+      <element name="TChart.Extent">
+        <short>Manual overrides for the chart extent borders.</short>
+        <descr><p>The <var>Extent</var> defines the unzoomed viewport of the chart.</p><p>Values entered here override any other automatic extent calculation.</p>
+        </descr>
+      </element>
+      <element name="TBasicChartSeries">
+        <short>The basic chart series class. Do not inherit or instantiate directly.</short>
+      <descr><var>TBasicChartSeries</var> is an abstract class which provides only the minimum
+set of properties and methods in order to be able to be usable by TAChart.
+</descr>
+      </element>
+      <element name="TBasicChartSeries.Draw">
+        <short>Draws the series using the specified drawer</short>
+      </element>
+      <element name="TBasicChartSeries.IsEmpty">
+        <short>Returns <var>true</var> if the series contains no data.</short>
+      </element>
+      <element name="TBasicChartSeries.Active">
+        <short>If <var>true</var>, this series is visible and taken into account in extent calculation.</short>
+      </element>
+      <element name="TBasicChartSeries.Depth">
+        <short>The extent of the series along Z axis, in pixels. Zero for 2D series.</short>
+        <seealso><link id="TBasicChartSeries.ZPosition">ZPosition</link><link id="TChart.Depth">TChart.Depth</link>
+        </seealso>
+      </element>
+      <element name="TBasicChartSeries.ParentChart">
+        <short>The chart owning this series</short>
+      </element>
+      <element name="TBasicChartSeries.ShowInLegend">
+        <short>If <var>true</var>, this series is displayed in the legend.</short>
+      </element>
+      <element name="TBasicChartSeries.Title">
+        <short>Series title to show in legend.</short>
+      </element>
+      <element name="TBasicChartSeries.ZPosition">
+        <short>Offset of the series along the Z axis, in pixels. Also determines the series drawing order.</short>
+        <descr><p>The series are drawn in order of decreasing <var>ZPosition</var> value.</p><p>So to bring series on 2D chart to front, set it's <var>ZPosition</var> to 0.</p>
+        </descr>
+        <seealso><link id="TBasicChartSeries.Depth">Depth</link><link id="TChart.Depth">TChart.Depth</link>
+        </seealso>
+      </element>
+      <element name="TChartSeriesList">
+        <short>The list of chart series.</short>
+      </element>
+      <element name="TChartSeriesList.Items">
+        <short>Retrieve char series by index.</short>
+      </element>
+      <element name="TBasicChartSeries.AfterAdd">
+        <short>Called after the series was added to a chart.</short>
+        <seealso><link id="TChart.AddSeries">TChart.AddSeries</link>
+        </seealso>
+      </element>
+      <element name="TBasicChartSeries.AfterDraw">
+        <short>Called after the series is drawn.</short>
+      </element>
+      <element name="TBasicChartSeries.BeforeDraw">
+        <short>Called before the series is drawn.</short>
+      </element>
+      <element name="TBasicChartSeries.GetLegendItems">
+        <short>Get the list of legend items for this series.</short>
+        <descr>Note that the series may return several items.
+For example, <link id="TASeries.TPieSeries">pie series</link> displays a separate legend item for each pie slice.</descr>
+      </element>
+      <element name="TBasicChartSeries.UpdateBounds">
+        <short>Update the default chart extent according to this series data.</short>
+      </element>
+      <element name="TBasicChartSeries.UpdateMargins">
+        <short>Update chart margins according to this series data.</short>
+        <descr>In particular, margins are used to make room for labels.</descr>
+      </element>
+      <element name="TChart.AddSeries">
+        <short>Adds the specified series to the chart.</short>
+        <descr>Note that the series can only belong to a single chart.
+</descr>
+      </element>
+      <element name="TChart.ClearSeries">
+        <short>Removes all series from the chart.</short>
+        <descr>Note that the series are <b>not </b>destroyed.
+</descr>
+      </element>
+      <element name="TChart.DeleteSeries">
+        <short>Deletes the specified series from the chart.</short>
+        <descr>Note that the series is <b>not</b> destroyed.
+</descr>
+        <seealso>
+          <link id="TChart.RemoveSeries"/>
+        </seealso>
+      </element>
+      <element name="TChart.PaintOnCanvas">
+        <short>Draw the chart on a given canvas.</short>
+        <descr><p>The canvas passed to this method not necessarily is that of the screen. It can be the canvas provided by some other drawing device, such as a bitmap or the printer.</p><p>Note, however, that this method is out-dated; the recommended method of drawing is by calling the method <var>Draw</var> which allows painting also on devices which do not have a canvas.</p>
+        </descr>
+        <seealso><link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.ZoomFull">
+        
+        <seealso><var><link id="TChart.GetFullExtent"/>
+          </var>
+        </seealso>
+      </element>
+      <element name="TChart.SaveToImage">
+        <short>Returns a raster image of the given type with the screenshot of the chart.</short>
+        <descr>The image must be freed by calling code.</descr>
+        <seealso>
+          <link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.SaveToFile">
+        <short>Saves chart screenshot to a file as a raster image of the given type.</short>
+        <seealso>
+          <link id=""/>
+          <link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.SaveToBitmapFile">
+        <short>Save chart screenshot to a file as a bitmap image.</short>
+        <descr>Deprecated. Use SaveToFile(TBitmap, fileName) instead.</descr>
+        <seealso>
+          <link id="TChart.SaveToFile">SaveToFile</link>
+        </seealso>
+      </element>
+      <element name="TBasicChartSeries.GetNearestPoint">
+        <short>Get the series point nearest to <var>APoint</var> as measured by <var>ADistFunc</var>.</short>
+        <descr>Return <var>true</var> if such a point exists.</descr>
+      </element>
+      <element name="TChart.GraphToImage">
+        <short>Converts a point from graph coordinates to image coordinates.</short>
+        <seealso><link id="TChart.ImageToGraph"/><link id="TChart.XGraphToImage"/><link id="TChart.YGraphToImage"/>
+        </seealso>
+      </element>
+      <element name="TChart.ImageToGraph">
+        <short>Converts a point from image coordinates to graph coordinates.</short>
+        <seealso>
+          <link id="TChart.GraphToImage"/>
+          <link id="TChart.XImageToGraph"/>
+          <link id="TChart.YImageToGraph"/>
+        </seealso>
+      </element>
+      <element name="TChart.XGraphToImage">
+        <short>Converts the X coordinate of a point from graph coordinates to image coordinates.</short>
+        <seealso>
+          <link id="TChart.XImageToGraph"/>
+          <link id="TChart.YGraphToImage"/>
+          <link id="TChart.GraphToImage"/>
+        </seealso>
+      </element>
+      <element name="TChart.YGraphToImage">
+        <short>Converts the Y coordinate of a point from graph units to image units.</short>
+        <seealso>
+          <link id="TChart.YImageToGraph"/>
+          <link id="TChart.XGraphToImage"/>
+          <link id="TChart.GraphToImage"/>
+        </seealso>
+      </element>
+      <element name="TChart.XImageToGraph">
+        <short>Converts the X coordinate of a point from image coordinates to graph coordinates.</short>
+        <seealso>
+          <link id="TChart.XGraphToImage"/>
+          <link id="TChart.YImageToGraph"/>
+          <link id="TChart.ImageToGraph"/>
+        </seealso>
+      </element>
+      <element name="TChart.YImageToGraph">
+        <short>Converts the Y coordinate of a point from image units to graph units.</short>
+        <seealso><link id="TChart.YGraphToImage"/><link id="TChart.XImageToGraph"/><link id="TChart.ImageToGraph"/>
+        </seealso>
+      </element>
+      <element name="TChart.CurrentExtent">
+        <short>Returns the chart extent at the current zoom level.</short>
+        <descr>The extent is the visible viewport of the chart. It is given in graph coordinates.
+In addition to the viewport requested for zooming it also contains the inner
+chart margin and the space reserved for series marks.
+</descr>
+        <seealso><link id="TChart.LogicalExtent">LogicalExtent</link>
+        </seealso>
+      </element>
+      <element name="TChart.XGraphMax">
+        <short>Returns the maximum x value of the chart in graph units</short>
+        <descr>Deprecated, use 
+<link id="TChart.CurrentExtent">CurrentExtent</link> instead.
+</descr>
+      </element>
+      <element name="TChart.XGraphMin">
+        <short>Returns the minimum x value of the chart in graph coordinates</short>
+        <descr>Deprecated, use 
+
+<link id="TChart.CurrentExtent">CurrentExtent</link> instead.</descr>
+      </element>
+      <element name="TChart.YGraphMax">
+        <short>Returns the maximum y value of the chart, in graph coordinates</short>
+        <descr>Deprecated, use <link id="TChart.CurrentExtent">CurrentExtent</link> instead.
+</descr>
+        <seealso><link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.YGraphMin">
+        <short>Returns the minimum y value of the chart in graph coordinates</short>
+        <descr>Deprecated, use <link id="TChart.CurrentExtent">CurrentExtent</link> instead.</descr>
+        <seealso>
+          <link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.CopyToClipboardBitmap">
+        <short>Copies a bitmap screenshot of the chart to the clipboard.</short>
+        <seealso><link id="TChart.SaveToFile"/>
+        </seealso>
+      </element>
+      <element name="Register" skip="1"/>
+      <element name="RegisterSeriesClass" skip="1"/>
+      <element name="TChart.EraseBackground" skip="1"><short>This overridden background painting method does nothing because the background will be painted over anyway.</short><descr>The inherited behaviour is ignored.
+</descr>
+      </element>
+      <element name="TChart.GetChildren" skip="1"/>
+      <element name="TChart.Paint" skip="1"/>
+      <element name="TChart.SetChildOrder" skip="1"/>
+      <element name="TChart.AllowPanning">
+        <short>If <var>true</var>, the user can drag the visible viewport of the chart with the mouse.</short>
+        <descr>Allows the user to pan the chart by dragging the visible vieport with the right mouse button.</descr>
+      </element>
+      <element name="TChart.PaintOnCanvas.Draw"/>
+      <element name="TChart.Draw">
+        <short>Draws the chart using the given drawing back-end</short>
+        <descr>This method draws the chart by means of the given drawing back-end, 
+<var>Drawer</var>. Unlike 
+<var>PaintOnCanvas</var> the chart can be drawn on non-canvas devices, such as a svg file or OpenGL context.
+</descr>
+        <seealso><link id=""/>
+        </seealso>
+      </element>
+      <element name="TChart.Create">
+        <short>Creates the chart</short>
+      </element>
+      <element name="TChart.Destroy">
+        <short>Destroys the chart</short>
+      </element>
+      <element name="TChart.IsPointInViewPort">
+        <short>Returns <var>true</var> when the given point (in graph coordinates) is inside or at the boundaries of the chart's viewport (area spanned by the axes)</short>
+      </element>
+      <element name="TChart.Clone">
+        <short>Creates a new chart and copies all properties of the current chart to it.</short>
+      </element>
+      <element name="TChart.DisableRedrawing">
+        <short>Disables redrawing of the chart</short>
+        <descr><p>Useful when many data points are added.</p><p>Must be accompanied by <var>EnableRedrawing</var>, otherwise the chart will
+not be updated any more.</p>
+        </descr>
+      </element>
+      <element name="TChart.DrawLegendOn">
+        <short>Draws the legend on the specified canvas in the given rectangle</short>
+        <descr>Useful to paint the legend outside the chart control.
+</descr>
+      </element>
+      <element name="TChart.EnableRedrawing">
+        <short>Enables redrawing of the chart</short>
+        <descr>Must be called after redrawing of the chart has been deactivated by calling
+DisableRedrawing. Otherwise the chart will not be updated any more.
+</descr>
+      </element>
+      <element name="TChart.GetFullExtent">
+        <short>Returns the full extent of the chart</short>
+        <descr>The full extent is the unzoomed viewport of the chart. This is usually determined
+automatically as the area encompassing all the data from series and axis ranges.
+</descr>
+      </element>
+      <element name="TChart.Prepare">
+        <short>Initializes extents and transformations before the chart is drawn.</short>
+        <descr>This method normally is executed automatically. It must be called explicitly, however,
+when the chart's extent is needed before the chart has been painted, e.g. in the
+form's OnCreate event.
+</descr>
+      </element>
+      <element name="TChart.RemoveSeries">
+        <short>Removes the specified series from the chart</short>
+        <descr>Note that the series is <b>not</b> destroyed.
+</descr>
+      </element>
+      <element name="TChart.UsesBuiltinToolset">
+        <short>Returns <var>true</var> when the built-in toolset is active.</short>
+        <descr>The built-in toolset is responsible for the default zooming and panning capabilities of the chart.
+When a separate <var>TChartToolset</var> is added in order to get more control over these
+processed or to use other tools the built-in toolset is de-activated and this function returns <var>false</var>.
+</descr>
+      </element>
+      <element name="TChart.StyleChanged">
+        
+        <descr>When any property of any chart element is changed the method <var>StyleChanged</var>
+is called. It typically requests a repaint of the chart and notifies other elements
+of the changes.
+</descr>
+      <short>Part of the notification chain</short>
+      </element>
+      <element name="TChart.IsZoomed">
+        <short>Returns <var>true</var> when the chart is zoomed.</short>
+      </element>
+      <element name="TChart.LogicalExtent">
+        <short>Returns the extent of the viewport requested by the user</short>
+        <descr>The <var>LogicalExtent</var> does not contain the the inner margins and the
+space reserved for the series labels. It is given in graph coordinates.
+</descr>
+        <seealso><link id="TChart.CurrentExtent">CurrentExtent</link>
+        </seealso>
+      </element>
+      <element name="TChart.MinDataSpace">
+        <short>Defines the minimum height of the <var>LogicalExtent</var>
+        </short>
+        <descr>When series labels are displayed and <var>AutoMarks</var> is <var>true</var> then space is reserved
+for the labels and is no longer available for plotting. The <var>MinDataSpace</var> avoids
+that the series can completely disappear when very long or very high labels are
+displayed.
+</descr>
+      </element>
+      <element name="TChart.AxisVisible">
+        <short>Can be used to hide all axes</short>
+        <seealso><var><link id="TAChartAxisUtils.TBasicChartAxis.Visible"/>
+          </var>
+        </seealso>
+      </element>
+    <element name="TChart.AutoFocus"><short>Automatically focuses the chart when the mouse is moved over it</short><descr>This is needed by <link id="TATools.TChartToolset">chart tools</link> when they
+are supposed to be activated by a key press.
+</descr>
+      </element><element name="TBasicChartSeries.SetActive"><short>Setter procedure for the property <link id="TBasicChartSeries.Active"><var>Active</var>
+          </link>
+        </short>
+      </element><element name="TBasicChartSeries.Transparency"><short>Transparency of the series</short><descr><ul><li><var>Transparency=0</var> means "completely opaque".</li><li><var>Transparency=255</var> means "completely transparent", i.e. the object is not visible at all.</li>
+          </ul><p><b>Compatibility note</b>: The FPVectorial and TFPCanvas drawers currently do
+not support transparency because of limitations of the underlying libraries.
+Printer and WMF drawers can not support transparency in principle.</p><p/><p><b>Optimization note:</b> Transparency support in the LCL is rudimentary.
+The current TCanvas drawer implementation, therefore, may be slow with many transparent
+series and large charts. To improve efficiency, it is recommended to use as
+few different transparency levels as possible and to not interleave series
+with different transparencies. Alternatively, use BGRABitmap as back-end,
+since it has a faster transparency implementation.</p>
+        </descr><seealso><var><link id="TADrawUtils.TTransparency"/>
+          </var>
+        </seealso>
+      </element><element name="TBasicChartSeries.AxisToGraphX"><short>Converts the x coordinate of a point from axis to graph units</short><descr><p><b>Axis coordinates</b> (known in some other applications as object coordinates)
+refer to the "raw" coordinate values obtained from the data.
+As the name implies, axis coordinates are interpreted in terms of the specific axis
+-- the same coordinate value may have different meanings depending on the axis it is applied to.</p><p><b>Graph coordinates</b> are converted from the axis coordinates using axis transformations, such as logarithmic scale.
+Graph coordinates are common to all objects in the chart.
+Consider the graph coordinates as an invisible graphing paper behind the chart;
+its x axis is horizontal running from left to right, and its y axis is vertical
+running from bottom to top even if a series is rotated.</p><p><b>Image coordinates</b> roughly correspond to the screen pixels and are
+  converted from graph coordinates based on the chart viewport. This transformation is always linear and can be influenced by chart tools such as zooming and panning.</p>
+        </descr>
+      </element><element name="TBasicChartSeries.AxisToGraphY"><short>Converts the y coordinate of a point from axis to graph units</short><descr><p><b>Axis coordinates</b> (known in some other applications as object coordinates)
+refer to the "raw" coordinate values obtained from the data.
+As the name implies, axis coordinates are interpreted in terms of the specific axis
+-- the same coordinate value may have different meanings depending on the axis it is applied to.</p><p><p><b>Image coordinates</b> roughly correspond to the screen pixels and are
+  converted from graph coordinates based on the chart viewport. This transformation is always linear and can be influenced by chart tools such as zooming and panning.</p><b>Graph coordinates</b> are converted from the axis coordinates using axis transformations, such as logarithmic scale.
+Graph coordinates are common to all objects in the chart.
+Consider the graph coordinates as an invisible graphing paper behind the chart;
+its x axis is horizontal running from left to right, and its y axis is vertical
+running from bottom to top even if a series is rotated.</p>
+        </descr>
+      </element><element name="TBasicChartSeries.GraphToAxisX"><short>Converts the x coordinate of a point from graph to axis units</short><descr><p><b>Axis coordinates</b> (known in some other applications as object coordinates)
+refer to the "raw" coordinate values obtained from the data.
+As the name implies, axis coordinates are interpreted in terms of the specific axis
+-- the same coordinate value may have different meanings depending on the axis it is applied to.</p><p><b>Graph coordinates</b> are converted from the axis coordinates using axis transformations, such as logarithmic scale.
+Graph coordinates are common to all objects in the chart.
+Consider the graph coordinates as an invisible graphing paper behind the chart;
+its x axis is horizontal running from left to right, and its y axis is vertical
+running from bottom to top even if a series is rotated.</p><p><b>Image coordinates</b> roughly correspond to the screen pixels and are
+  converted from graph coordinates based on the chart viewport. This transformation is always linear and can be influenced by chart tools such as zooming and panning.</p>
+        </descr>
+      </element><element name="TBasicChartSeries.GraphToAxisY"><short>Converts the y coordinate of a point from graph to axis units</short><descr><p><b>Axis coordinates</b> (known in some other applications as object coordinates)
+refer to the "raw" coordinate values obtained from the data.
+As the name implies, axis coordinates are interpreted in terms of the specific axis
+-- the same coordinate value may have different meanings depending on the axis it is applied to.</p><p><b>Graph coordinates</b> are converted from the axis coordinates using axis transformations, such as logarithmic scale.
+Graph coordinates are common to all objects in the chart.
+Consider the graph coordinates as an invisible graphing paper behind the chart;
+its x axis is horizontal running from left to right, and its y axis is vertical
+running from bottom to top even if a series is rotated.</p><p><b>Image coordinates</b> roughly correspond to the screen pixels and are
+  converted from graph coordinates based on the chart viewport. This transformation is always linear and can be influenced by chart tools such as zooming and panning.</p>
+        </descr>
+      </element><element name="TBasicChartSeries.GetGraphBounds"><short>Returns the rectangle (in graph units) which tightly encloses all points of the series</short>
+      </element><element name="TBasicChartSeries.GetAxisBounds"><short>Determines the minimum and maximum value on the given axis covered by all data points of the series</short><descr>The function returns <var>false</var> when the specified axis is not assigned to the
+series, otherwise <var>true</var>.
+</descr>
+      </element>
+    <element name="TBasicChartSeries.Shadow"><short>Defines parameters of a drop shadow for the series</short><seealso><var><link id="TATypes.TChartShadow"/>
+          </var>
+        </seealso>
+      </element><element name="TChart.Notify"><short>Notification of the chart</short><descr><p>Is called by a
+<link id="TChartElement">chart element</link> to notify the chart of something which is specified by
+<var>ACommand</var> and both parameters <var>AParam1</var> and <var>AParam2</var>.
+The chart responds by sending the result in the parameter
+<var>AData</var>.</p><p>Needed for example by the axis to query the extent covered by
+  all series using this axis (cannot be called directly because TAChartAxis
+  does not "use" TACustomSeries. </p><p/>
+        </descr>
+      </element>
+    <element name="TChart.OnAfterCustomDrawBackground"><short>The event <var>OnAfterCustomDrawBackground</var> fires after the background of the chart has been painted</short><descr>After the background of the chart has been painted the event <var>OnAfterCustomDrawBackground</var> is 
+    generated and gives the user the opportunity to paint on the background additional stationary information 
+    such as a logo or similar.
+<p>The event has the corresponding chart, the currently active drawer and the rectangle spanning the background as parameters. 
+  Note that there is a similar event, <link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link>, 
+  however, that works only with drawing backends supporting a canvas and thus has been marked as deprecated.
+</p>
+        </descr>
+        <seealso><link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link><link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link><link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link><link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnAfterDrawBackground">
+<short>The event <var>OnAfterDrawBackground</var> fires after the background of the chart has been painted</short>
+<descr>When the background of the chart (i.e. the entire area covered by the chart) 
+has been painted the event <var>OnAfterDrawBackground</var> is generated and 
+gives to user the opportunity to paint on the background additional stationary information such as a logo or similar.
+<p>The event has the corresponding chart, the canvas to be drawn, and the rectangle spanning 
+the background as parameters.</p><p>Note that this event is deprecated and will be removed because painting works only on 
+drawing backends which support a <var>TCanvas</var>. Use the more general 
+<link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link> as a replacement.
+</p>
+        </descr>
+<seealso><link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link><link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link><link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link><link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnBeforeDrawBackground">
+  <short>The event <var>OnBeforeDrawBackground</var> fires before the background of the chart will be painted</short>
+<descr>Before the background of the chart will be painted the event <var>OnBeforeDrawBackground</var> 
+is generated and gives the user the opportunity to replace the built-in drawing 
+routine by user-defined drawing code, e.g. for painting a gradient or providing an image background. 
+Note that this custom drawing is executed only when the parameter <var>ADoDefaultDrawing</var> is false.
+<p>This event is deprecated and will be removed because painting works only on drawing backends supporting a <var>TCanvas</var>. Use the more general 
+<link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link> as a replacement.
+</p>
+        </descr>
+<seealso><link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link><link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link><link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link><link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link>
+        </seealso>
+      </element>
+
+<element name="TChart.OnBeforeCustomDrawBackground">
+<short>The event <var>OnBeforeCustomDrawBackground</var> fires before the background of the chart will be painted</short>
+<descr>Before the background of the chart will be painted the event 
+<var>OnBeforeCustomDrawBackground</var> is generated to allow custom painting of 
+the entire background by user code. This way the background can be drawn with a 
+gradient or with a background image. Note that built-in drawing is skipped only if the event 
+parameter <var>ADoDefaultDrawing</var> is set to false in the event handler.
+<p>Besides the <var>ADoDefaultDrawing</var> parameter, the event has the corresponding chart, the currently active drawer and the rectangle spanning the background as parameters.
+</p><p>Note that there is a similar event, <link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link>, 
+however, that works only with drawing backends supporting a canvas and thus has been marked as <i>deprecated</i>.
+</p>
+        </descr>
+<seealso><link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link><link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link><link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link><link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnAfterCustomDrawBackWall">
+<short>The event <var>OnAfterCustomDrawBackWall</var> fires after the back-wall of the chart has been painted</short>
+<descr>The back-wall of a chart is the inner chart rectangle spanned by the axes. 
+After this rectangle has been painted the event <var>OnAfterCustomDrawBackWall</var> 
+is generated to give the user the opportunity to draw something over this 
+default back-wall, e.g. a logo or similar.
+<p>The event has the corresponding chart, the currently active drawer and the rectangle spanning the back-wall as parameters. 
+</p><p>Note that there is a similar event, <link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link>, 
+however, that works only with drawing backends supporting a canvas and thus has been marked as deprecated.
+</p>
+        </descr>
+<seealso><link id="TChart.OnAfterDrawBackWall">OnAfterDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link><link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link><link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link><link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnAfterDrawBackWall">
+<short>The event <var>OnAfterDrawBackWall</var> fires after the back-wall of the chart has been painted</short>
+<descr>The back-wall of a chart is the inner chart rectangle spanned by the axes. 
+After this rectangle has been painted the event <var>OnAfterDrawBackWall</var> 
+is generated and gives the user the opportunity to draw something over this 
+default back-wall, e.g. a logo or similar.
+<p>The event has the corresponding chart, the canvas to be drawn, and the rectangle spanning the backwall as parameters. 
+</p><p>Note that this event is deprecated and will be removed because painting works only 
+on drawing backends which support a <var>TCanvas</var>. Use the more general 
+<link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link> as a replacement.
+</p>
+        </descr>
+<seealso><link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link><link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link><link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link><link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link><link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link><link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link><link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnBeforeCustomDrawBackWall">
+<short>The event <var>OnBeforeCustomDrawBackWall</var> fires before the back-wall 
+of the chart will be painted</short>
+<descr>The back-wall of a chart is the inner chart rectangle spanned by the axes.
+Before this rectangle is painted the event <var>OnBeforeCustomDrawBackWall</var> 
+is generated with the boolean parameter <var>ADoDefaultDrawing</var> which, if set to <var>false</var>, 
+allows to replace the built-in painting routine by user code, e.g. for filling 
+the back-wall with a gradient or with a background image.
+<p>Besides the <var>ADoDefaultDrawing</var> parameter, the event has the corresponding 
+chart, the currently active drawer and the rectangle spanning the background as parameters.
+</p>
+<p>Note that there is a similar event, <link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link>. 
+That works, however, only with drawing backends supporting a canvas and thus has been marked as deprecated.
+</p>
+        </descr>
+<seealso>
+<link id="TChart.AfterDrawBackWall">OnAfterDrawBackWall</link>
+<link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link>
+<link id="TChart.OnBeforeDrawBackWall">OnBeforeDrawBackWall</link>
+<link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link>
+<link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link>
+<link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link>
+<link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link>
+        </seealso>
+      </element>
+      
+<element name="TChart.OnBeforeDrawBackWall">
+<short>The event <var>OnBeforeDrawBackWall</var> fires before the back-wall of the chart will be painted</short>
+<descr>The back-wall of a chart is the inner chart rectangle spanned by the axes. 
+Before this rectangle is painted the event <var>OnBeforeDrawBackWall</var> is generated 
+with the boolean parameter <var>ADoDefaultDrawing</var> which, if set to false, 
+allows to replace the built-in painting routine by user code, e.g. for filling 
+with a gradient or with a background image.
+<p>Besides the <var>ADoDefaultDrawing</var> parameter, the event has the 
+corresponding chart, the canvas on which painting occurs, as well as the 
+rectangle spanning the background as parameters.
+</p>
+<p>This event is deprecated and will be removed because painting works only on 
+drawing backends supporting a <var>TCanvas</var>. Use the more general 
+<link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link> 
+as a replacement.
+</p>
+</descr>
+<seealso>
+<link id="TChart.OnBeforeCustomDrawBackWall">OnBeforeCustomDrawBackWall</link>
+<link id="TChart.AfterDrawBackWall">OnAfterDrawBackWall</link>
+<link id="TChart.OnAfterCustomDrawBackWall">OnAfterCustomDrawBackWall</link>
+<link id="TChart.OnAfterDrawBackground">OnAfterDrawBackground</link>
+<link id="TChart.OnAfterCustomDrawBackground">OnAfterCustomDrawBackground</link>
+<link id="TChart.OnBeforeDrawBackground">OnBeforeDrawBackground</link>
+<link id="TChart.OnBeforeCustomDrawBackground">OnBeforeCustomDrawBackground</link>
+        </seealso>
+      </element>
+    <element name="TChart.OnAfterPaint"><short>The event <var>OnAfterPaint</var> is fired at the very end of the painting cycle of a chart</short><descr>When painting of a chart is complete, i.e. when all subitems such as axes, series, legend, titles have been drawn and immediately before the chart's Paint method is exited, the event <var>OnAfterPaint</var> is generated. It can be used for logging or time measurement purposes. Do not call anything which itself triggers a new drawing cycle because the event will fire again and again and make the application hang.
+</descr><seealso><link id="TChart.OnAfterDraw">OnAfterDraw</link>
+        </seealso>
+      </element><element name="TChart.OnDrawLegend"><short>The event <var>OnDrawLegend</var> can be used to custom-draw the chart legend.</short><descr>When a handler has been assigned to the <var>OnDrawlegend</var> event painting of the chart legend is done by this user code rather than the built-in default drawing code.
+<p>The rectangle passed as the <var>LegendRect</var> parameter is the rectangle that would be covered by the built-in legend.
+</p>
+        </descr>
+      </element><element name="TChart.OnAfterDraw"><short>The event <var>OnAfterDraw</var> is the last event of the drawing cycle of the chart</short><seealso><link id="TChart.OnAfterPaint">OnAfterPaint</link>
+        </seealso><descr>Before the chart's drawing cycle ends the event <var>OnAfterDraw</var> is generated. Here, the user has the last opportunity to paint something over the finished chart by using the currently active drawer given as a parameter.
+</descr>
+      </element><element name="TChart.OnFullExtentChanged"><short>A change in the chart's full extent triggers the event <var>OnFullExtentChanged</var>
+        </short><descr>When data are added to a series such that the range of values is extended, or when the user manually sets the chart's Extent property, the event <var>OnFullExtentChanged</var> is generated. This way, for example, gui elements displaying the axis range can be updated.
+</descr><seealso><link id="TChart.OnExtentChanged">OnExtentChanged</link>
+        </seealso>
+      </element><element name="TChart.OnExtentChanged"><short>The event <var>OnExtentChanged</var> fires when the chart's visible viewport changed, for example by zooming or panning.</short><descr>When the user zooms or pans a chart the visible viewport changes. To notify the application of this change the event <var>OnExtentChanged</var> is generated.
+</descr><seealso><link id="TChart.OnFullExtentChanged">OnFullExtentChanged</link>
+        </seealso>
+      </element><element name="TChart.OnExtentValidate"><short>The event <var>OnExtentValidate</var> checks whether a change of the chart's extent is allowed or not</short><descr>Zooming or panning outside the chart's FullExtent can lead to a loss of the visible viewport. To prevent this a handler for the <var>OnExtentValidate</var> event can be provided in which the boolean variable <var>AllowChange</var> should signal that the extent given in the argument <var>ALogicalExtent</var> is possible. If not, the <var>ALogicalExtent</var> can be set to the valid extent to be used instead.
+</descr>
+      </element><element name="TChart.Proportional"><short><var>Proportional</var>, when set to <var>true</var>, applies the same scaling factor to the x and y axis.</short>
+      </element>
+    <element name="TChart.ScalingValid"><short>Indicates whether the scaling parameters for the conversion between graph and image coordinates have valid values.</short>
+      </element><element name="TChart.ActiveToolIndex"><short>Returns the index of the currently active chart tool in the toolset attached to the chart.</short>
+      </element>
+    <element name="TChart.MouseDown"><short>The inherited handler for MouseDown events is overridden to dispatch the event to the ChartToolset assigned to the chart.</short>
+      </element><element name="TChart.MouseMove"><short>The inherited handler for MouseMove events is overridden to dispatch the event to the ChartToolset assigned to the chart.</short>
+      </element><element name="TChart.MouseUp"><short>The inherited handler for MouseUp events is overridden to dispatch the event to the ChartToolset assigned to the chart.</short>
+      </element>
+      <element name="TChart.GetAllSeriesAxisLimits"><short>Determines the data range covered by all series assigned to the specified axis. Minimum and maximum are returned in axis units.</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

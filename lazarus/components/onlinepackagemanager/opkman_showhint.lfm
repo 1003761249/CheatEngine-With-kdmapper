@@ -1,0 +1,117 @@
+object ShowHintFrm: TShowHintFrm
+  Left = 407
+  Height = 325
+  Top = 233
+  Width = 563
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsNone
+  Caption = 'ShowHintFrm'
+  ClientHeight = 325
+  ClientWidth = 563
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnDestroy = FormDestroy
+  OnKeyUp = FormKeyUp
+  PopupMode = pmExplicit
+  LCLVersion = '2.1.0.0'
+  object pnMain: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 325
+    Top = 0
+    Width = 563
+    Align = alClient
+    Anchors = [akLeft, akRight, akBottom]
+    BevelInner = bvLowered
+    ClientHeight = 325
+    ClientWidth = 563
+    ParentColor = False
+    TabOrder = 0
+    object pnPackageName: TPanel
+      AnchorSideLeft.Control = pnMain
+      AnchorSideRight.Control = pnMain
+      AnchorSideRight.Side = asrBottom
+      Left = 12
+      Height = 22
+      Top = 2
+      Width = 539
+      Align = alTop
+      BorderSpacing.Left = 10
+      BorderSpacing.Right = 10
+      BevelOuter = bvNone
+      Caption = 'Package Name'
+      TabOrder = 0
+    end
+    object pnDescription: TPanel
+      Left = 2
+      Height = 57
+      Top = 24
+      Width = 559
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 57
+      ClientWidth = 559
+      ParentFont = False
+      TabOrder = 1
+      object mDescription: TMemo
+        AnchorSideLeft.Control = pnDescription
+        AnchorSideTop.Control = pnDescription
+        AnchorSideRight.Control = pnDescription
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = pnDescription
+        AnchorSideBottom.Side = asrBottom
+        Left = 10
+        Height = 53
+        Top = 2
+        Width = 539
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 10
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 10
+        BorderSpacing.Bottom = 2
+        BorderStyle = bsNone
+        Lines.Strings = (
+          'aaaaaaaaaa'
+          'bbbbbbbb'
+        )
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object sbLazPackages: TScrollBox
+      AnchorSideLeft.Control = pnMain
+      AnchorSideTop.Control = pnDescription
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = pnMain
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = pnMain
+      AnchorSideBottom.Side = asrBottom
+      Left = 12
+      Height = 238
+      Top = 83
+      Width = 539
+      HorzScrollBar.Page = 1
+      VertScrollBar.Page = 1
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 10
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 10
+      BorderSpacing.Bottom = 2
+      BorderStyle = bsNone
+      TabOrder = 2
+    end
+  end
+  object tmWait: TTimer
+    Enabled = False
+    OnTimer = tmWaitTimer
+    Left = 40
+    Top = 160
+  end
+end

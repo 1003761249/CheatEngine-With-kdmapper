@@ -1,0 +1,192 @@
+object IDEInspectDlg: TIDEInspectDlg
+  Left = 430
+  Height = 596
+  Top = 155
+  Width = 498
+  BorderStyle = bsSizeToolWin
+  Caption = 'IDEInspectDlg'
+  ClientHeight = 596
+  ClientWidth = 498
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 200
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnMouseDown = DataGridMouseDown
+  OnShow = FormShow
+  LCLVersion = '2.3.0.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 573
+    Width = 498
+    Panels = <>
+  end
+  object PageControl: TPageControl
+    Left = 0
+    Height = 523
+    Top = 50
+    Width = 498
+    ActivePage = ErrorPage
+    Align = alClient
+    TabIndex = 3
+    TabOrder = 1
+    OnMouseDown = DataGridMouseDown
+    object DataPage: TTabSheet
+      Caption = 'DataPage'
+      OnMouseDown = DataGridMouseDown
+    end
+    object PropertiesPage: TTabSheet
+      Caption = 'PropertiesPage'
+      OnMouseDown = DataGridMouseDown
+    end
+    object MethodsPage: TTabSheet
+      Caption = 'MethodsPage'
+      OnMouseDown = DataGridMouseDown
+    end
+    object ErrorPage: TTabSheet
+      Caption = 'ErrorPage'
+      ClientHeight = 495
+      ClientWidth = 490
+      OnMouseDown = DataGridMouseDown
+      PopupMenu = PopupMenu1
+      TabVisible = False
+      object ErrorLabel: TLabel
+        Left = 0
+        Height = 1
+        Top = 0
+        Width = 490
+        Align = alTop
+        ParentColor = False
+        PopupMenu = PopupMenu1
+        OnMouseDown = DataGridMouseDown
+      end
+    end
+  end
+  inline WatchInspectNav1: TWatchInspectNav
+    Height = 50
+    Width = 498
+    Align = alTop
+    ClientHeight = 50
+    ClientWidth = 498
+    inherited ToolBar1: TToolBar
+      Height = 68
+      Width = 498
+      inherited tbDivPower: TToolButton
+        Height = 22
+      end
+      inherited tbDivForwBackw: TToolButton
+        Height = 22
+      end
+      inherited tbDivFlags: TToolButton
+        Height = 22
+      end
+      inherited tbDivCol: TToolButton
+        Left = 151
+        Height = 22
+        Top = 24
+      end
+      inherited edFilter: TEditButton
+        Left = 1
+        Top = 24
+      end
+      inherited ArrayNavigationBar1: TArrayNavigationBar
+        Left = 156
+        Height = 23
+        Top = 24
+        Width = 253
+        ClientHeight = 23
+        ClientWidth = 253
+        TabOrder = 1
+        inherited btnArrayFastDown: TSpeedButton
+          Height = 23
+        end
+        inherited btnArrayFastUp: TSpeedButton
+          Height = 23
+        end
+        inherited edArrayStart: TSpinEditEx
+          Height = 23
+        end
+        inherited btnArrayStart: TSpeedButton
+          Height = 23
+        end
+        inherited btnArrayEnd: TSpeedButton
+          Height = 23
+        end
+        inherited Label1: TLabel
+          Height = 23
+        end
+        inherited btnArrayPageDec: TSpeedButton
+          Height = 23
+        end
+        inherited edArrayPageSize: TSpinEditEx
+          Height = 23
+        end
+        inherited btnArrayPageInc: TSpeedButton
+          Height = 23
+        end
+        inherited lblBounds: TLabel
+          Height = 23
+        end
+      end
+      inherited tbDivArray: TToolButton
+        Left = 409
+        Height = 22
+        Top = 24
+      end
+      inherited BtnAddWatch: TToolButton
+        Left = 414
+        Top = 24
+      end
+      inherited BtnInspect: TToolButton
+        Left = 53
+        Top = 46
+      end
+      inherited BtnEvaluate: TToolButton
+        Left = 1
+        Top = 46
+      end
+      inherited tbDivAdd: TToolButton
+        Left = 99
+        Height = 22
+        Top = 46
+      end
+      inherited btnEvalHistory: TToolButton
+        Left = 104
+        Top = 46
+      end
+    end
+    inherited Panel1: TPanel
+      Width = 498
+      ClientWidth = 498
+      inherited EdInspect: TComboBox
+        Width = 476
+      end
+      inherited BtnExecute: TSpeedButton
+        Left = 477
+      end
+    end
+  end
+  object TimerClearData: TTimer
+    Enabled = False
+    Interval = 750
+    OnTimer = TimerClearDataTimer
+    Left = 441
+    Top = 10
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 186
+    Top = 211
+    object menuCopyValue: TMenuItem
+      Caption = 'menuCopyValue'
+      OnClick = menuCopyValueClick
+    end
+  end
+  object TimerFilter: TTimer
+    Interval = 250
+    OnTimer = TimerFilterTimer
+    Left = 409
+    Top = 155
+  end
+end

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+====================================================================
+AllLCLUnits
+====================================================================
+-->
+
+<module name="AllLCLUnits">
+<short>
+Includes all of the LCL units and registers their components in the Lazarus 
+IDE.
+</short>
+<descr>
+<var>AllLCLUnits</var> - a dummy unit containing a <var>Uses</var> clause 
+listing all the units in the Lazarus Component Library. It is used in make 
+files as a checklist for compiling/building the Lazarus IDE. It also includes 
+implementation routines used to register all of the LCL components in the Lazarus IDE as part of the LCLBase package.
+</descr>
+
+<!-- unresolved references -->
+<element name="CheckLst"/>
+<element name="Clipbrd"/>
+<element name="ColorBox"/>
+<element name="ComCtrls"/>
+<element name="Controls"/>
+<element name="CustomTimer"/>
+<element name="DBActns"/>
+<element name="DBCtrls"/>
+<element name="DBGrids"/>
+<element name="DefaultTranslator"/>
+<element name="Dialogs"/>
+<element name="ExtCtrls"/>
+<element name="ExtDlgs"/>
+<element name="ExtGraphics"/>
+<element name="FileCtrl"/>
+<element name="Forms"/>
+<element name="Graphics"/>
+<element name="GraphUtil"/>
+<element name="Grids"/>
+<element name="HelpIntfs"/>
+<element name="IcnsTypes"/>
+<element name="ImageListCache"/>
+<element name="ImgList"/>
+<element name="IniPropStorage"/>
+<element name="InterfaceBase"/>
+<element name="IntfGraphics"/>
+<element name="LazHelpHTML"/>
+<element name="LazHelpIntf"/>
+<element name="LCLClasses"/>
+<element name="LCLIntf"/>
+<element name="LCLMemManager"/>
+<element name="LCLMessageGlue"/>
+<element name="LCLProc"/>
+<element name="LCLResCache"/>
+<element name="LCLStrConsts"/>
+<element name="LCLType"/>
+<element name="Menus"/>
+<element name="LCLUnicodeData"/>
+<element name="LCLVersion"/>
+<element name="LMessages"/>
+<element name="LResources"/>
+<element name="MaskEdit"/>
+<element name="PairSplitter"/>
+<element name="PopupNotifier"/>
+<element name="PostScriptCanvas"/>
+<element name="PostScriptPrinter"/>
+<element name="PostScriptUnicode"/>
+<element name="Printers"/>
+<element name="PropertyStorage"/>
+<element name="RubberBand"/>
+<element name="ShellCtrls"/>
+<element name="Spin"/>
+<element name="StdActns"/>
+<element name="StdCtrls"/>
+<element name="Themes"/>
+<element name="TmSchema"/>
+<element name="Toolwin"/>
+<element name="UTrace"/>
+<element name="XMLPropStorage"/>
+<element name="TimePopup"/>
+<element name="Messages"/>
+<element name="WSButtons"/>
+<element name="WSCalendar"/>
+<element name="WSCheckLst"/>
+<element name="WSComCtrls"/>
+<element name="WSControls"/>
+<element name="WSDesigner"/>
+<element name="WSDialogs"/>
+<element name="WSExtCtrls"/>
+<element name="WSExtDlgs"/>
+<element name="WSFactory"/>
+<element name="WSForms"/>
+<element name="WSGrids"/>
+<element name="WSImgList"/>
+<element name="WSLCLClasses"/>
+<element name="WSMenus"/>
+<element name="WSPairSplitter"/>
+<element name="WSProc"/>
+<element name="WSReferences"/>
+<element name="WSSpin"/>
+<element name="WSStdCtrls"/>
+<element name="WSToolwin"/>
+<element name="ActnList"/>
+<element name="AsyncProcess"/>
+<element name="ButtonPanel"/>
+<element name="Buttons"/>
+<element name="Calendar"/>
+<element name="RegisterLCL"/>
+<element name="ValEdit"/>
+<element name="LazCanvas"/>
+<element name="LazDialogs"/>
+<element name="LazRegions"/>
+<element name="CustomDrawn_Common"/>
+<element name="CustomDrawnControls"/>
+<element name="CustomDrawnDrawers"/>
+<element name="LazDeviceApis"/>
+<element name="LDockTree"/>
+<element name="LazFreeTypeIntfDrawer"/>
+<element name="CustomDrawn_WinXP"/>
+<element name="CustomDrawn_Android"/>
+<element name="Arrow"/>
+<element name="EditBtn"/>
+<element name="ComboEx"/>
+<element name="DBExtCtrls"/>
+<element name="CustomDrawn_Mac"/>
+<element name="CalcForm"/>
+<element name="LCLTranslator"/>
+<element name="GroupedEdit"/>
+<element name="LCLTaskDialog"/>
+<element name="WSLazDeviceAPIS"/>
+<element name="LCLPlatformDef"/>
+<element name="IndustrialBase"/>
+<element name="JSONPropStorage"/>
+<element name="LCLExceptionStackTrace"/>
+<element name="LazarusPackageIntf"/>
+
+</module>
+<!-- AllLCLUnits -->
+
+</package>
+</fpdoc-descriptions>

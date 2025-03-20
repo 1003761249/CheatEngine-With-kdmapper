@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InIDEConfig"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <BuildModes>
+      <Item Name="O0" Default="True"/>
+      <Item Name="O0riota">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0   NO-gt1">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0riota1  NO-gt">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0 -gt">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0 -gtt">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0 -gttt">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O0 -gtttt &lt;nil>">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O1">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O1riota">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O2">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O2riota">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O3">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O3riota">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O4">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O4riota">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="O1 - SynFoldDebug SynFoldSaveDebug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CPPInline Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <SharedMatrixOptions Count="16">
+        <Item1 ID="394047217475" Targets="SynEdit" Modes="O0riota,O1riota,O2riota,O3riota,O4riota" Value="-CR"/>
+        <Item2 ID="832332610162" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0riota,O1riota,O2riota,O3riota,O4riota,O1 - SynFoldDebug SynFoldSaveDebug,O0riota1  NO-gt,O0 -gt,O0 -gtt,O0 -gttt,O0 -gtttt &lt;nil>" Value="-dSynCheckPaintLock -dSynClipboardExceptions -dAssertSynMemIndex -dSynAssert -dSynAssertFold"/>
+        <Item3 ID="476451423372" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0,O0riota,O0riota1  NO-gt,O0 -gt,O0 -gtt,O0 -gttt,O0 -gtttt &lt;nil>,O0   NO-gt1" Value="-O-"/>
+        <Item4 ID="353669118028" Targets="#project,SynEdit,LCL,LazUtils" Modes="O1,O1riota,O1 - SynFoldDebug SynFoldSaveDebug" Value="-O-1"/>
+        <Item5 ID="705666282637" Targets="#project,SynEdit,LCL,LazUtils" Modes="O2,O2riota" Value="-O-2"/>
+        <Item6 ID="139516671950" Targets="#project,SynEdit,LCL,LazUtils" Modes="O3,O3riota" Value="-O-3"/>
+        <Item7 ID="951152446553" Targets="#project,SynEdit,LCL,LazUtils" Modes="O4,O4riota" Value="-O-4"/>
+        <Item8 ID="290834599239" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0riota,O1riota,O2riota,O3riota,O4riota,O1 - SynFoldDebug SynFoldSaveDebug,O0 -gtttt &lt;nil>,O0 -gttt,O0 -gtt,O0 -gt,O0riota1  NO-gt" Value="-Criot"/>
+        <Item9 ID="862413201644" Targets="#project,SynEdit,LCL,LazUtils" Value="-CR"/>
+        <Item10 ID="552061010909" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0riota,O1riota,O2riota,O3riota,O4riota,O1 - SynFoldDebug SynFoldSaveDebug,O0riota1  NO-gt,O0 -gt,O0 -gtt,O0 -gttt,O0 -gtttt &lt;nil>" Value="-Sa"/>
+        <Item11 ID="362454399046" Targets="#project,SynEdit,LCL,LazUtils" Modes="O1 - SynFoldDebug SynFoldSaveDebug,O0 -gt" Value="-gt- -gt"/>
+        <Item12 ID="710122956011" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0 -gtt" Value="-gt- -gtt"/>
+        <Item13 ID="041078026067" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0 -gttt" Value="-gt- -gttt"/>
+        <Item14 ID="961200635277" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0 -gtttt &lt;nil>" Value="-gt- -gtttt"/>
+        <Item15 ID="901082361902" Targets="#project,SynEdit,LCL,LazUtils" Modes="O0riota1  NO-gt,O0   NO-gt1,O4,O3,O2,O1" Value="-gt-"/>
+        <Item16 ID="058689630976" Targets="#project,SynEdit,LCL,LazUtils" Modes="O1 - SynFoldDebug SynFoldSaveDebug" Value="-dSynFoldDebug -dSynFoldSaveDebug"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes>
+        <Mode Name="default">
+          <local>
+            <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+          </local>
+        </Mode>
+      </Modes>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="SynEdit"/>
+      </Item>
+      <Item>
+        <PackageName Value="CodeTools"/>
+      </Item>
+      <Item>
+        <PackageName Value="FPCUnitTestRunner"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="SynTest.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsynselection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSynSelection"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestBase"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsynbeautifier.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSynBeautifier"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsyncroedit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSyncroEdit"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testtrimspace.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestTrimSpace"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testhighlightxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestHighlightXml"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testhighlightmulti.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestHighlightMulti"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testbasicsynedit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestBasicSynEdit"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testfoldedview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestFoldedView"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testhighlightpas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestHighlightPas"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testmarkupwordgroup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestMarkupwordGroup"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testbookmarks.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestBookMarks"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsynsharededits.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSynSharedEdits"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testblockindent.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestBlockIndent"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testhighlighterlfm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestHighlighterLfm"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testhighlightfoldbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestHighlightFoldBase"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsyntextarea.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSynTextArea"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testnavigation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestNavigation"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testmarkupifdef.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestMarkupIfDef"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testpaintcolormerging.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestPaintColorMerging"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testmarkupfoldcoloring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestMarkupFoldColoring"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testsynmulticaret.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestSynMultiCaret"/>
+      </Unit>
+      <Unit>
+        <Filename Value="testwordwrap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestWordWrap"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="units\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CPPInline Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Checks>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+        <UseHeaptrc Value="True"/>
+      </Debugging>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-gt
+-dWithSynBiDi"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

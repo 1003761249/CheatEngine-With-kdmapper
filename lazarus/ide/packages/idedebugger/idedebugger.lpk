@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="IdeDebugger"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Lazarus Team"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="frames"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="GUI Debugger Frontend for the IDE"/>
+    <License Value="GPL-2"/>
+    <Version Release="1"/>
+    <Files>
+      <Item>
+        <Filename Value="idedebuggerbase.pas"/>
+        <UnitName Value="IdeDebuggerBase"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerpackage.pas"/>
+        <Type Value="Main Unit"/>
+        <UnitName Value="idedebuggerpackage"/>
+      </Item>
+      <Item>
+        <Filename Value="debugger.pp"/>
+        <UnitName Value="Debugger"/>
+      </Item>
+      <Item>
+        <Filename Value="processdebugger.pp"/>
+        <UnitName Value="ProcessDebugger"/>
+      </Item>
+      <Item>
+        <Filename Value="processlist.pas"/>
+        <UnitName Value="ProcessList"/>
+      </Item>
+      <Item>
+        <Filename Value="debuggertreeview.pas"/>
+        <UnitName Value="DebuggerTreeView"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerutils.pas"/>
+        <UnitName Value="IdeDebuggerUtils"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerwatchresult.pas"/>
+        <UnitName Value="IdeDebuggerWatchResult"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerwatchresprinter.pas"/>
+        <UnitName Value="IdeDebuggerWatchResPrinter"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerwatchresutils.pas"/>
+        <UnitName Value="IdeDebuggerWatchResUtils"/>
+      </Item>
+      <Item>
+        <Filename Value="arraynavigationframe.pas"/>
+        <UnitName Value="ArrayNavigationFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerstringconstants.pas"/>
+        <UnitName Value="IdeDebuggerStringConstants"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerbackendvalueconv.pas"/>
+        <UnitName Value="IdeDebuggerBackendValueConv"/>
+      </Item>
+      <Item>
+        <Filename Value="idedbgvalueconvertersettingsframe.pas"/>
+        <UnitName Value="IdeDbgValueConverterSettingsFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item>
+      <Item>
+        <Filename Value="frames\idedebugger_valconv_options.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="IdeDebugger_ValConv_Options"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggeropts.pas"/>
+        <UnitName Value="IdeDebuggerOpts"/>
+      </Item>
+      <Item>
+        <Filename Value="idedebuggerwatchresultjson.pas"/>
+        <UnitName Value="IdeDebuggerWatchResultJSon"/>
+      </Item>
+      <Item>
+        <Filename Value="frames\watchinspecttoolbar.pas"/>
+        <UnitName Value="WatchInspectToolbar"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item>
+      <Item>
+        <Filename Value="basedebugmanager.pas"/>
+        <UnitName Value="BaseDebugManager"/>
+      </Item>
+      <Item>
+        <Filename Value="watchpropertydlg.pp"/>
+        <UnitName Value="WatchPropertyDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="debuggerdlg.pp"/>
+        <UnitName Value="DebuggerDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="watchesdlg.pp"/>
+        <UnitName Value="WatchesDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="callstackdlg.pp"/>
+        <UnitName Value="CallStackDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="localsdlg.pp"/>
+        <UnitName Value="LocalsDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="threaddlg.pp"/>
+        <UnitName Value="ThreadDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="breakpropertydlggroups.pas"/>
+        <UnitName Value="BreakPropertyDlgGroups"/>
+      </Item>
+      <Item>
+        <Filename Value="historydlg.pp"/>
+        <UnitName Value="HistoryDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="pseudoterminaldlg.pp"/>
+        <UnitName Value="PseudoTerminalDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="registersdlg.pp"/>
+        <UnitName Value="RegistersDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="debugoutputform.pp"/>
+        <UnitName Value="DebugOutputForm"/>
+      </Item>
+      <Item>
+        <Filename Value="exceptiondlg.pas"/>
+        <UnitName Value="ExceptionDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="feedbackdlg.pp"/>
+        <UnitName Value="FeedbackDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="debugattachdialog.pas"/>
+        <UnitName Value="DebugAttachDialog"/>
+      </Item>
+      <Item>
+        <Filename Value="breakpropertydlg.pas"/>
+        <UnitName Value="BreakPropertyDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="evaluatedlg.pp"/>
+        <UnitName Value="EvaluateDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="inspectdlg.pas"/>
+        <UnitName Value="InspectDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="breakpointsdlg.pp"/>
+        <UnitName Value="BreakPointsDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="assemblerdlg.pp"/>
+        <UnitName Value="AssemblerDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="dbgtreeviewwatchdata.pas"/>
+        <UnitName Value="DbgTreeViewWatchData"/>
+      </Item>
+      <Item>
+        <Filename Value="envdebuggeroptions.pas"/>
+        <UnitName Value="EnvDebuggerOptions"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="LazDebuggerGdbmi"/>
+      </Item>
+      <Item>
+        <PackageName Value="SynEdit"/>
+      </Item>
+      <Item>
+        <PackageName Value="IdeConfig"/>
+      </Item>
+      <Item>
+        <PackageName Value="LazDebuggerFp"/>
+      </Item>
+      <Item>
+        <PackageName Value="LazControlDsgn"/>
+      </Item>
+      <Item>
+        <PackageName Value="laz.virtualtreeview_package"/>
+      </Item>
+      <Item>
+        <PackageName Value="DebuggerIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,376 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Marcelo B Paula\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.13\n"
+
+#: strpas2jsdesign.pjscreateajavascriptmoduleinsteadofascript
+msgid "Create a javascript module instead of a script"
+msgstr "Criar um módulo javascript ao invés de um script"
+
+#: strpas2jsdesign.pjsdatompackagetemplatedirectory
+msgid "Atom package template directory"
+msgstr "Diretório de modelos de pacote do Atom"
+
+#: strpas2jsdesign.pjsdawebapplicationusingelectrontorunasdesktopapplicat
+msgid "A pas2js Web Application using Electron to run as desktop application."
+msgstr "Uma aplicação web pas2js usando Electron para executar como uma aplicação desktop."
+
+#: strpas2jsdesign.pjsdbrowse
+msgid "Browse"
+msgstr "Navegar"
+
+#: strpas2jsdesign.pjsdbtnselectfile
+msgid "Select the file"
+msgstr "Selecionar o arquivo"
+
+#: strpas2jsdesign.pjsdbuttoncancel
+msgid "Cancel refresh"
+msgstr "Cancelar atualização"
+
+#: strpas2jsdesign.pjsdcreateinitialhtmlpage
+msgid "Create initial HTML page"
+msgstr "Criar página HTML inicial"
+
+#: strpas2jsdesign.pjsddirectorynotfound
+#, object-pascal-format
+msgid "directory \"%s\" not found"
+msgstr "diretório \"%s\" não encontrado"
+
+#: strpas2jsdesign.pjsdelectronwebapplication
+msgid "Electron Web Application"
+msgstr "Aplicação Web Electron"
+
+#: strpas2jsdesign.pjsderror
+msgid "Error"
+msgstr "Erro"
+
+#: strpas2jsdesign.pjsdfilenamedoesnotstartwithpas2js
+msgid "filename does not start with \"pas2js\""
+msgstr "nome de arquivo não se inicia com \"pas2js\""
+
+#: strpas2jsdesign.pjsdfilenotexecutable
+#, object-pascal-format
+msgid "file \"%s\" not executable"
+msgstr "arquivo \"%s\" não é executável"
+
+#: strpas2jsdesign.pjsdfilenotfound
+#, object-pascal-format
+msgid "file \"%s\" not found"
+msgstr "arquivo \"%s\" não encontrado"
+
+#: strpas2jsdesign.pjsdhtmlfilenotfound
+#, object-pascal-format
+msgid ""
+"Cannot find the HTML Source file for the class in unit %s:\n"
+"%s\n"
+"Would you like to select the file from disk?"
+msgstr ""
+"Impossível encontrar arquivo fonte HTML para a classe na unidade %s:\n"
+"%s\n"
+"Deseja selecionar o arquivo no disco?"
+
+#: strpas2jsdesign.pjsdhtmlfilter
+msgid "HTML Files|*.html|All files|*.*"
+msgstr "Arquivos HTML|*.html|Todos os arquivos|*.*"
+
+#: strpas2jsdesign.pjsdhtmlsourcefilenotfound
+msgid "HTML Source not found"
+msgstr "Fonte HTML não encontrado"
+
+#: strpas2jsdesign.pjsdletrtlshowuncaughtexceptions
+msgid "Let RTL show uncaught exceptions"
+msgstr "Permitir RTL exibir exceções não capturadas"
+
+#: strpas2jsdesign.pjsdlocationonsimplewebserver
+msgid "Location on Simple Web Server"
+msgstr "Local no Servidor Web Simples"
+
+#: strpas2jsdesign.pjsdmaintainhtmlpage
+msgid "Maintain HTML page"
+msgstr "Manter página HTML"
+
+#: strpas2jsdesign.pjsdmissingpathtopas2js
+msgid "missing path to pas2js"
+msgstr "caminho ausente para pas2js"
+
+#: strpas2jsdesign.pjsdmoduleappdescription
+msgid "A pas2js library that is transpiled to a JavaScript module."
+msgstr "Uma biblioteca pas2js que é transcompilada para um módulo JavaScript"
+
+#: strpas2jsdesign.pjsdmoduleapplication
+msgid "Pas2JS Library / JavaScript module"
+msgstr "Biblioteca Pas2JS / módulo JavaScript"
+
+#: strpas2jsdesign.pjsdnewatompackage
+msgid "Atom package"
+msgstr "Pacote Atom"
+
+#: strpas2jsdesign.pjsdnewatompackagedescr
+msgid "A pas2js program running as Atom package."
+msgstr "Um programa pas2js executando como um pacote Atom"
+
+#: strpas2jsdesign.pjsdnewprojectfile
+msgid "New project file"
+msgstr "Novo arquivo de projeto"
+
+#: strpas2jsdesign.pjsdnewvscodeextension
+msgid "Visual Studio Code extension"
+msgstr "Extensão de código do Visual Studio"
+
+#: strpas2jsdesign.pjsdnewvscodeextensiondescr
+msgid "A pas2js program running as Visual Studio Code extension."
+msgstr "Um programa pas2js executando como uma extensão de código do Visual Studio"
+
+#: strpas2jsdesign.pjsdnodejsappdescription
+msgctxt "strpas2jsdesign.pjsdnodejsappdescription"
+msgid "A pas2js program running in node.js."
+msgstr "Um programa pas2js executando em node.js."
+
+#: strpas2jsdesign.pjsdnodejsapplication
+msgctxt "strpas2jsdesign.pjsdnodejsapplication"
+msgid "Node.js Application"
+msgstr "Aplicação Node.js"
+
+#: strpas2jsdesign.pjsdnodejsprojectoptions
+msgid "NodeJS project options"
+msgstr "Opções de projeto NodeJS"
+
+#: strpas2jsdesign.pjsdoverwrite
+msgid "Overwrite?"
+msgstr "Sobrescrever?"
+
+#: strpas2jsdesign.pjsdoverwritefiles
+msgid "Overwrite files:"
+msgstr "Sobrescrever arquivos:"
+
+#: strpas2jsdesign.pjsdpas2jsbrowserprojectoptions
+msgid "Pas2JS Browser project options"
+msgstr "Navegador de opções de projeto Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jscurrentprojecturl
+msgid "Pas2JS current project URL"
+msgstr "URL atual de projeto Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsexecutable
+msgid "Pas2JS executable"
+msgstr "Executável Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsselectedbrowserexecutable
+msgid "Pas2JS selected browser executable"
+msgstr "Executável selecionado do navegador Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsselectedelectronexcutable
+msgid "Pas2JS selected Electron excutable"
+msgstr "Pas2JS executável Electron selecionado"
+
+#: strpas2jsdesign.pjsdpas2jsselectednodejsexcutable
+msgid "Pas2JS selected NodeJS excutable"
+msgstr "Executável NodeJS selecionado Pas2JS"
+
+#: strpas2jsdesign.pjsdpathofelectronexecutablemacropas2jselectron
+msgid "Path of Electron executable, macro $(Pas2JSElectron)"
+msgstr "Caminho do executável Electron, macro $(Pas2JSElectron)"
+
+#: strpas2jsdesign.pjsdpathofnodejsexecutable
+msgid "Path of Node.js executable, macro $(Pas2JSNodeJS)"
+msgstr "Caminho do executável Node.js, macro $(Pas2JSNodeJS)"
+
+#: strpas2jsdesign.pjsdpathofxmacropas2js
+#, object-pascal-format
+msgctxt "strpas2jsdesign.pjsdpathofxmacropas2js"
+msgid "Path of %s, macro $(pas2js)"
+msgstr "Caminho de %s, macro $(pas2js)"
+
+#: strpas2jsdesign.pjsdpleasechooseafilewithfullpath
+msgid "Please choose a file with full path."
+msgstr "Favor escolher um arquivo com caminho completo"
+
+#: strpas2jsdesign.pjsdportnumbertostartallocatingfrom
+msgid "Port number to start allocating from, macro $(Pas2JSWebServerPort)"
+msgstr "Número de porta de onde iniciar alocação, macro $(Pas2JSWebServerPort)"
+
+#: strpas2jsdesign.pjsdprogressivewebappdescription
+msgid "A pas2js Web Application using a service worker, a manifest, and more to be installable."
+msgstr "Uma aplicação web pas2js usando um \"servisse worker\", um manifesto, e mais para ser instalável."
+
+#: strpas2jsdesign.pjsdprogressivewebapplication
+msgid "Progressive Web Application"
+msgstr "Aplicação Web Progressiva"
+
+#: strpas2jsdesign.pjsdprojecthtmlpage
+msgid "Project HTML page:"
+msgstr "Página HTML do projeto:"
+
+#: strpas2jsdesign.pjsdprojectisawebbrowserpas2jsproject
+msgid "Project is a Web Browser (pas2js) project"
+msgstr "Projeto é uma Navegador Web (pas2js)"
+
+#: strpas2jsdesign.pjsdprojectpascalfile
+msgid "Project Pascal file"
+msgstr "Arquivo de projeto Pascal"
+
+#: strpas2jsdesign.pjsdresetcompilecommand
+msgid "Reset Compile command"
+msgstr "Comando redefinir compilação"
+
+#: strpas2jsdesign.pjsdresetruncommand
+msgid "Reset Run command"
+msgstr "Comando redefinir execução"
+
+#: strpas2jsdesign.pjsdrun
+msgid "Run"
+msgstr "Executar"
+
+#: strpas2jsdesign.pjsdrunrtlwhenallpageresourcesarefullyloaded
+msgid "Run RTL when all page resources are fully loaded"
+msgstr "Rodar RTL quando todas as páginas de recursos forem totalmente carregadas"
+
+#: strpas2jsdesign.pjsdselectatomtemplatedir
+msgid "Select Atom package template directory"
+msgstr "Selecionar diretório de modelos de pacote do Atom"
+
+#: strpas2jsdesign.pjsdselectbrowserexecutable
+msgid "Select browser executable"
+msgstr "Selecionar executável do navegador"
+
+#: strpas2jsdesign.pjsdselectnodejsexecutable
+msgid "Select Node.js executable"
+msgstr "Selecionar executável Node.js"
+
+#: strpas2jsdesign.pjsdselectpas2jsexecutable
+msgid "Select pas2js executable"
+msgstr "Selecionar executável pas2js"
+
+#: strpas2jsdesign.pjsdselectvscodetemplatedir
+msgid "Select Visual Studio Code extension template directory"
+msgstr "Selecionar diretório de modelos de extensão de código do Visual Studio"
+
+#: strpas2jsdesign.pjsdselectxexecutable
+#, object-pascal-format
+msgid "Select %s executable"
+msgstr "Selecionar executável %s"
+
+#: strpas2jsdesign.pjsdserverinstanceswillbestartedwithaportstartingfromt
+msgid "Server instances will be started with a port starting from this number, increasing per new project"
+msgstr "Instâncias servidoras serão iniciadas com uma porta começando por este número, aumentando à cada novo projeto"
+
+#: strpas2jsdesign.pjsdserviceworker
+msgid "Pas2JS Service Worker"
+msgstr "Pas2JS Service Worker"
+
+#: strpas2jsdesign.pjsdserviceworkerdescription
+msgid "A pas2js program running as cache for a web app. It does not run standalone."
+msgstr "Um programa pas2js executando como cache para um app web. Ele não executa sozinho."
+
+#: strpas2jsdesign.pjsdstarthttpserveronport
+msgid "Start HTTP Server on port"
+msgstr "Iniciar servidor HTTP na porta"
+
+#: strpas2jsdesign.pjsdthesimplewebserverisautomaticallystartedonrunthelo
+msgid "The Simple Web Server is automatically started on Run. The location is like a subfolder in the URL serving the disk folder of the HTML file."
+msgstr "Um Servidor Web Simples é automaticamente iniciado no Executar. A localização é como um subpasta na URL servindo a pasta no disco do arquivo HTML."
+
+#: strpas2jsdesign.pjsdusebrowserapplicationobject
+msgid "Use Browser Application object"
+msgstr "Usar objeto \"Browser Application\""
+
+#: strpas2jsdesign.pjsdusebrowserconsoleunittodisplaywritelnoutput
+msgid "Use BrowserConsole unit to display writeln() output"
+msgstr "Usar unidade BrowserConsole para exibir saída writeln()."
+
+#: strpas2jsdesign.pjsdusenodejsapplicationobject
+msgid "Use NodeJS Application object"
+msgstr "Usar objeto \"NodeJS Application\""
+
+#: strpas2jsdesign.pjsdusethisurltostartapplication
+msgid "Use this URL to start application"
+msgstr "Usar esta URL para iniciar a aplicação"
+
+#: strpas2jsdesign.pjsdusethiswhenyoustartyourownhttpserver
+msgid "Use this when you start your own HTTP server"
+msgstr "Use isto quando você iniciar seu próprio servidor HTTP"
+
+#: strpas2jsdesign.pjsdusewasiapplicationobject
+msgid "Run WebAssembly program:"
+msgstr "Executar programa WebAssembly:"
+
+#: strpas2jsdesign.pjsdvisualstudiocodeextensiontemplatedirectory
+msgid "Visual Studio Code extension template directory"
+msgstr "Diretório de modelos de extensão de código do Visual Studio"
+
+#: strpas2jsdesign.pjsdwebappdescription
+msgctxt "strpas2jsdesign.pjsdwebappdescription"
+msgid "A pas2js program running in the browser."
+msgstr "Um programa pas2js executando no navegador."
+
+#: strpas2jsdesign.pjsdwebapplication
+msgctxt "strpas2jsdesign.pjsdwebapplication"
+msgid "Web Browser Application"
+msgstr "Aplicação navegador web"
+
+#: strpas2jsdesign.pjsdwebprojectpas2js
+msgid "Web Project (pas2js)"
+msgstr "Projeto Web (pas2js)"
+
+#: strpas2jsdesign.pjsdwebserverandbrowseroptions
+msgid "Web server and browser options"
+msgstr "Opções servidor Web e navegador"
+
+#: strpas2jsdesign.pjsdyoucanuseidemacroslikemakeexewithoutafullpathissea
+#, object-pascal-format
+msgid "You can use IDE macros like $MakeExe(). Without a full path, %s is searched in PATH."
+msgstr "Você pode usar macros IDE como \"$MakeExe()\". Sem um caminho completo, %s é pesquisado em \"PATH\""
+
+#: strpas2jsdesign.pjsexecuterunparameters
+msgid "Execute Run Parameters"
+msgstr "Executar parâmetros de execução"
+
+#: strpas2jsdesign.pjsmakepas2jsproject
+msgid "Make pas2js project"
+msgstr "Criar projeto pas2js"
+
+#: strpas2jsdesign.pjsrefreshallclassesfromhtml
+msgid "Refresh all classes from HTML source"
+msgstr "Atualizar todas as classes do fonte HTML"
+
+#: strpas2jsdesign.pjsrefreshclassfromhtml
+msgid "Refresh class from HTML source"
+msgstr "Atualizar classes do fonte HTML"
+
+#: strpas2jsdesign.pjswasiprogramfiletexthint
+msgid "Name of your WebAssembly file"
+msgstr "Nome do seu arquivo WebAssembly"
+
+#: strpas2jsdesign.rscreateclassfromhtmldescription
+msgid "Create a Pas2JS \"form\" class definition from HTML file using ID attributes in the HTML file."
+msgstr "Criar um formulário de definição de classe Pas2JS do arquivo HTML usando atributos ID no arquivo HTML."
+
+#: strpas2jsdesign.rscreateclassfromhtmlname
+msgid "Pas2JS class definition from HTML file"
+msgstr "Definição de classe Pas2JS do arquivo HTML"
+
+#: strpas2jsdesign.rscreateunitfromtypescript
+msgid "Pas2JS import unit from TypeScript declaration module"
+msgstr "Unidade de importação Pas2JS do módulo de declaração TypeScript"
+
+#: strpas2jsdesign.rscreateunitfromtypescriptdescription
+msgid "Create a Pas2JS import unit from a TypeScript declaration module."
+msgstr "Criar uma unidade de importação Pas2JS de um módulo de declaração TypeScript."
+
+#: strpas2jsdesign.rsdtsdidnotproduceoutput
+msgid "The DTS2pas tool did not produce an output file."
+msgstr "A ferramenta DTS2pas não produziu um arquivo de saída."
+
+#: strpas2jsdesign.rshttprequestfailed
+#, object-pascal-format
+msgid "HTML request to service URL %s failed: %s"
+msgstr "Requisição HTML a URL do serviço %s falhou: %s"
+

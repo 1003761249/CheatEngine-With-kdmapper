@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lazutils">
+<!--
+====================================================================
+LazDbgLog
+====================================================================
+-->
+<module name="LazDbgLog">
+<short>Contains utility routines used in the Lazarus Debugger and IDE.</short>
+<descr>
+<p>
+<file>lazdbglog.pas</file> is part of the <file>LazUtils</file> package.
+</p>
+</descr>
+
+<element name="MemSizeString">
+<short>
+Returns the memory size needed for the specified string value including a 4-byte Pointer for the string length.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="MemSizeString.Result">
+<short>
+PtrUInt value with the number of bytes needed for the string including its 
+length.
+</short>
+</element>
+<element name="MemSizeString.s">
+<short>
+String examined to get the Length of the memory used for the value.
+</short>  
+</element>
+
+<element name="MemSizeFPList">
+<short>
+Returns the memory size needed for the specified TFPList instance, or 0 when 
+List is unassigned.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="MemSizeFPList.Result">
+<short>
+PtrUInt value with the number of bytes needed for the TFPList instance 
+including the Pointers needed for its current Capacity.
+</short>
+</element>
+<element name="MemSizeFPList.List">
+<short>
+TFPList instance examined in the routine.
+</short>
+</element>
+
+<element name="GetStringRefCount">
+<short>
+Returns the reference count for the specified String.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="GetStringRefCount.Result">
+<short>
+PtrInt value with the reference count for S, or -1 if S is an empty string ('').
+</short>
+</element>
+<element name="GetStringRefCount.s">
+<short>
+Constant string parameter examined in the routine.  
+</short>
+</element>
+
+</module>
+<!-- LazDbgLog -->
+
+</package>
+</fpdoc-descriptions>

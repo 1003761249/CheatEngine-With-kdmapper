@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+XMLPropStorage
+====================================================================
+-->
+<module name="XMLPropStorage">
+<short>
+Contains a component that stores Form Session Properties in XML format.
+</short>
+<descr>
+<p>
+In this unit you can find an implementation of a name/value pair storage 
+container in XML format.
+</p>
+<p>
+This container will get the Form's Session Properties that you setup in 
+<link id="#lcl.forms.TForm">TForm.SessionProperties</link> 
+and read/write them to the file specified in 
+<link id="#lcl.xmlpropstorage.TXMLPropStorage.FileName">TXMLPropStorage.FileName</link>.
+</p>
+</descr>
+
+<!-- unresolved type references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="XMLConf"/>
+<element name="DOM"/>
+<element name="XMLRead"/>
+<element name="XMLWrite"/>
+<element name="LCLProc"/>
+<element name="Forms"/>
+<element name="LazConfigStorage"/>
+<element name="LazUTF8"/>
+
+<element name="TPropStorageXMLConfig">
+<short>
+Wrapper for the TXMLConfig class defined in the FCL <file>XMLConf.pp</file> 
+unit.
+</short>
+<descr>
+<p>
+More information about TXMLConfig and XMLConf are available on the FPC wiki 
+at:
+</p>
+<p>
+<url href="http://wiki.freepascal.org/xmlconf">XMLConf</url>
+</p>
+<p>
+<url href="http://wiki.freepascal.org/TXMLConfig">TXMLConfig</url>
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TPropStorageXMLConfig.DeleteSubNodes">
+<short>Deletes sub nodes on a path.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropStorageXMLConfig.DeleteSubNodes.ARootNode">
+<short>The path of the node to have it's sub nodes deleted.</short>
+</element>
+
+<element name="TPropStorageXMLConfig.LoadFromStream">
+<short>Loads XML content from a stream.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropStorageXMLConfig.LoadFromStream.s">
+<short>The stream to load the XML content from.</short>
+</element>
+
+<element name="TPropStorageXMLConfig.SaveToStream">
+<short>Saves XML content to a stream.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TPropStorageXMLConfig.SaveToStream.s">
+<short>The stream to save the XML content to.</short>
+</element>
+
+<element name="TPropStorageXMLConfig.XMLDoc">
+<short>Contains the XML document.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TCustomXMLPropStorage">
+<short>
+Implements the base class for XML storage of Form Session properties.
+</short>
+<descr>
+<p>
+<var>TCustomXMLPropStorage</var> is a <var>TFormPropertyStorage</var> 
+descendant used to save or restore properties values in an XML file. It 
+introduces new properties, methods, and members needed to read or write values 
+in an XML file.
+</p>
+<p>
+Values read or written using the class are defined in the SessionProperties for 
+a TForm or a TFrame instance. At design-time, use the SessionProperties 
+property editor in the Object Inspector to maintain the property names. At 
+run-time, the property names can be assigned using a string like:
+</p>
+<code>
+Form1.SessionProperties := 'Width;Height;Image1.Width';
+</code>
+<p>
+Use the FileName property to specify where the XML content is stored.
+</p>
+<p>
+Use the RootNodePath property to specify the path to a node in the XML document 
+where the XML content is stored.
+</p>
+<p>
+At run-time, default handler routines (attached to the parent form) are used to 
+Save or Restore the content in the XML file when the form is created or 
+destroyed.
+</p>
+<p>
+Use the StoredValues property to specify property names which cannot be 
+assigned to the form session properties using the Object Inspector. It can be 
+used for properties which cannot be represented as a singular value or do not 
+have published visibility. Use the OnSaveProperties and OnRestoreProperties 
+event handlers to store or restore (respectively) the values for these items in 
+StoredValues.
+</p>
+<p>
+The class can alo be used to save and restore properties for TFrame instances 
+on a form, but it requires some additional coding. The RootNodePath must be 
+specified to identify the path where the TFrame values are stored. In addition, 
+the SessionProperties for the frame must be assigned in an overridden 
+constructor and the Restore method must be called to reload the values. The 
+Save method method also be called in na overridden Destructor for the frame.
+</p>
+<p>
+A demonstration program is located in the examples directory at:
+</p>
+<code>$(LazarusDir)/examples/propstorage</code>
+<p>
+A tutorial for TXMLPropStorage is located on the Lazarus Wiki at:
+</p>
+<p>
+<url href="https://wiki.lazarus.freepascal.org/TXMLPropStorage">
+https://wiki.lazarus.freepascal.org/TXMLPropStorage
+</url>
+</p>
+<p>
+Use TINIPropStorage or TJsonPropStorage components to save and restore session 
+properties using either a .INI file or a JSON (JavaScript Object Notation) file.
+</p>
+</descr>
+<seealso>
+<link id="TXMLPropStorage"/>
+<link id="#lcl.forms.TFormPropertyStorage">TFormPropertyStorage</link>
+<link id="#lcl.forms.TForm.SessionProperties">TForm.SessionProperties</link>
+<link id="#lcl.inipropstorage.TINIPropStorage">TINIPropStorage</link>
+<link id="#lcl.jsonpropstorage.TJSONPropStorage">TJSONPropStorage</link>
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TCustomXMLPropStorage.FCount"/>
+<element name="TCustomXMLPropStorage.FFileName"/>
+<element name="TCustomXMLPropStorage.FXML"/>
+<element name="TCustomXMLPropStorage.FRootNode"/>
+<element name="TCustomXMLPropStorage.FRootNodePath"/>
+
+<!-- protected -->
+<element name="TCustomXMLPropStorage.GetXMLFileName">
+<short>
+Gets the value for the FileName property.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.GetXMLFileName.Result">
+<short>
+The current value for the FileName property.
+</short>
+</element> 
+
+<element name="TCustomXMLPropStorage.RootSection">
+<short>Returns the name of the RootSection.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.RootSection.Result">
+<short>The current value for the RootSection property.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.FixPath">
+<short>
+Turns '.' notation into '/' notation for the XPATH-like implementation in 
+<url href="http://wiki.freepascal.org/xmlconf">XMLConf</url>.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.FixPath.Result">
+<short>The fixed path is returned with '.' replaced by '/'.</short>
+</element>
+<element name="TCustomXMLPropStorage.FixPath.APath">
+<short>The path to be fixed.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.XMLConfig">
+<short>
+Property to access the XML configuration file where the content is stored.
+</short>
+<descr/>
+<seealso>
+<link id="#lcl.xmlpropstorage.TPropStorageXMLConfig">TPropStorageXMLConfig</link>
+</seealso>
+</element>
+
+<element name="TCustomXMLPropStorage.StorageNeeded">
+<short>Ensures the underlying storage object is allocated at run-time.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.StorageNeeded.ReadOnly">
+<short><b>True</b> if the item is read-only. Not used in the method.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.FreeStorage">
+<short>Frees the underlying storage object for the class instance.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TCustomXMLPropStorage.DoReadString">
+<short>
+Implements reading of a value from the underlying storage container.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.DoReadString.Result">
+<short>The value of the section/ident requested.</short>
+</element>
+<element name="TCustomXMLPropStorage.DoReadString.Section">
+<short>The section to be read.</short>
+</element>
+<element name="TCustomXMLPropStorage.DoReadString.Ident">
+<short>The ident to be read.</short>
+</element>
+<element name="TCustomXMLPropStorage.DoReadString.TheDefault">
+<short>If no value is available then return this as the default value.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.DoWriteString">
+<short>
+Implements writing of a string value to the underlying storage container.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.DoWriteString.Section">
+<short>The section to be written.</short>
+</element>
+<element name="TCustomXMLPropStorage.DoWriteString.Ident">
+<short>The ident to be written.</short>
+</element>
+<element name="TCustomXMLPropStorage.DoWriteString.Value">
+<short>The value to be written.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.DoEraseSections">
+<short>Erases a section from the underlying storage container.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TCustomXMLPropStorage.DoEraseSections.ARootSection">
+<short>The path to the section that will be erased.</short>
+</element>
+
+<element name="TCustomXMLPropStorage.FileName">
+<short>
+Name of the file where the property data is saved in XML format.
+</short>
+<descr>
+<p>
+A default file name derived from the application name is used if no value is 
+specified in the property. For Windows, the file has an '.xml' extension, and 
+is stored in the same directory as the application executable. For example: 
+'PROGRAMNAME.XML'. For Linux, the file (with a leading '.' and without an 
+extension) is stored in the home directory for the current user. For example: 
+'.PROGRAMNAME'.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TCustomXMLPropStorage.RootNodePath">
+<short>
+Path to the root node in the XML file.
+</short>
+<descr>
+<p>
+Provides the name path to the XML node where the property values are stored in 
+FileName. It overrides the inherited RootSection value when provided, and 
+determines the DOM node where property values are stored in the SaveProperties
+method.
+</p>
+<p>
+If the class is used for session properties on a TFrame instance, RootNodePath 
+must be specified with a path for the frame instance. For example: 
+'TApplication/Frame1'.
+</p>
+</descr>
+<seealso>
+<link id="TCustomXMLPropStorage.RootSection"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.SaveProperties">TCustomPropertyStorage.SaveProperties</link>
+</seealso>
+</element>
+
+<element name="TXMLPropStorage">
+<short>
+Implements a class for XML storage of Form Session properties.
+</short>
+<descr>
+<p>
+<var>TXMLPropStorage</var> is a <var>TCustomXMLPropStorage</var> descendant 
+used to save or restore properties values using an XML file. It introduces new 
+properties, methods, and members needed to read or write values in an XML file.
+</p>
+<p>
+Values read or written using the class are defined in the SessionProperties for 
+a TForm or TFrame instance. At design-time, use the SessionProperties property 
+editor in the Object Inspector to maintain the property names. At run-time, the 
+property names can be assigned using a string like:
+</p>
+<code>
+Form1.SessionProperties := 'Width;Height;Image1.Width';
+</code>
+<p>
+Use the FileName property to specify where the XML content is stored.
+</p>
+<p>
+Use the RootNodePath property to specify the path to a node in the XML document 
+where the XML content is stored.
+</p>
+<p>
+At run-time, default handler routines (attached to the parent form) are used to Save or Restore the content in the XML file.
+</p>
+<p>
+Use the StoredValues property to specify property names which cannot be 
+assigned to the form session properties using the Object Inspector. It can be 
+used for properties which cannot be represented as a singular value or do not 
+have published visibility. Use the OnSavingProperties and OnRestoreProperties 
+event handlers to store or restore (respectively) the values for these items in 
+StoredValues.
+</p>
+<p>
+TXMLPropStorage can alo be used to save and restore properties for TFrame 
+instances on a form, but it requires some additional coding. The RootNodePath 
+must be specified to identify the path where the TFrame values are stored. In 
+addition, the SessionProperties for the frame must be assigned in an overridden 
+constructor and the Restore method must be called to reload the values. The 
+Save method method also be called in na overridden Destructor for the frame.
+</p>
+<p>
+A demonstration program is located in the examples directory at:
+</p>
+<code>$(LazarusDir)/examples/propstorage</code>
+<p>
+A tutorial for TXMLPropStorage is located on the Lazarus Wiki at:
+</p>
+<p>
+<url href="https://wiki.lazarus.freepascal.org/TXMLPropStorage">
+https://wiki.lazarus.freepascal.org/TXMLPropStorage
+</url>
+</p>
+<p>
+Use TINIPropStorage or TJsonPropStorage components to save and restore session 
+properties using either a .INI file or a JSON (JavaScript Object Notation) file.
+</p>
+</descr>
+<seealso>
+<link id="TCustomXMLPropStorage"/>
+<link id="#lcl.forms.TForm.SessionProperties">TForm.SessionProperties</link>
+<link id="#lcl.inipropstorage.TINIPropStorage">TINIPropStorage</link>
+<link id="#lcl.jsonpropstorage.TJSONPropStorage">TJSONPropStorage</link>
+</seealso>
+</element>
+
+<element name="TXMLPropStorage.StoredValues" link="#lcl.propertystorage.TCustomPropertyStorage.StoredValues"/>
+
+<element name="TXMLPropStorage.FileName" link="#lcl.xmlpropstorage.TCustomXmlPropStorage.FileName"/>
+
+<element name="TXMLPropStorage.RootNodePath" link="#lcl.xmlpropstorage.TCustomXmlPropStorage.RootNodePath"/>
+
+<element name="TXMLPropStorage.Active" link="#lcl.propertystorage.TCustomPropertyStorage.Active"/>
+
+<element name="TXMLPropStorage.OnSavingProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnSavingProperties"/>
+
+<element name="TXMLPropStorage.OnSaveProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnSaveProperties"/>
+
+<element name="TXMLPropStorage.OnRestoringProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnRestoringProperties"/>
+
+<element name="TXMLPropStorage.OnRestoreProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnRestoreProperties"/>
+
+<element name="TXMLConfigStorage">
+<short>
+Implements a configuration storage mechanism using XML-tagged content.
+</short>
+<descr>
+<p>
+<var>TXMLConfigStorage</var> is a <var>TConfigStorage</var> descendant which 
+implements an XML-storage mechanism for configuration or other values.
+</p>
+<p>
+TXMLConfigStorage allows names (paths) and values to be accessed using an 
+XPATH-like syntax.
+</p>
+<p>
+It provides implementations of the abstract virtual methods defined in the 
+ancestor class. It provides overridden constructors that allow the class 
+instance to be created for a qualified file name, a TXMLConfig instance, a 
+subset of values in a TXMLConfig instance, or a stream. Internally, it use 
+TXMLConfig as the storage for values in the class instance.
+</p>
+<p>
+Use the XMLConfig property to access the internal storage for class instance. 
+Use the overridden methods to read, write, or delete the names and values in 
+the class instance. For example:
+</p>
+<ul>
+<li>DeleteFullPathValue</li>
+<li>GetFullPathValue</li>
+<li>SetDeleteFullPathValue</li>
+<li>SetFullPathValue</li>
+</ul>
+</descr>
+<seealso>
+<link id="#lazutils.lazconfigstorage.TConfigStorage">TConfigStorage</link>
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TXMLConfigStorage.FFilename"/>
+<element name="TXMLConfigStorage.FFreeXMLConfig"/>
+<element name="TXMLConfigStorage.FXMLConfig"/>
+
+<!-- protected -->
+<element name="TXMLConfigStorage.GetFullPathValue">
+<short>
+Gets the String value stored at the specified path in the XML storage.
+</short>
+<descr>
+<p>
+Calls the GetValue method for the internal TXMLConfig instance.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.GetFullPathValue.Result">
+<short>
+Value retrieved from the internal storage, or ADefault when the path is not 
+found.
+</short>
+</element>
+<element name="TXMLConfigStorage.GetFullPathValue.APath">
+<short>Path to the XML node with the requested value.</short>
+</element>
+<element name="TXMLConfigStorage.GetFullPathValue.ADefault">
+<short>
+Default value returned if APath is not found in the internal storage.
+</short>
+</element>
+
+<element name="TXMLConfigStorage.SetFullPathValue">
+<short>Sets the value for the specified path.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.SetFullPathValue.APath">
+<short>Path to the XML node where the value is stored.</short>
+</element>
+<element name="TXMLConfigStorage.SetFullPathValue.AValue">
+<short>Value stored in the XML node for the specified path.</short>
+</element>
+
+<element name="TXMLConfigStorage.SetDeleteFullPathValue">
+<short>
+Sets the value for or deletes the XML node at the specified path.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.SetDeleteFullPathValue.APath">
+<short>
+Path to the XML node with the value updated or removed in the method.
+</short>
+</element>
+<element name="TXMLConfigStorage.SetDeleteFullPathValue.AValue">
+<short>
+Value for the specified path. An empty value causes the path to be removed.
+</short>
+</element>
+
+<element name="TXMLConfigStorage.DeleteFullPath">
+<short>
+Deletes the XML node and its content and the specified path.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.DeleteFullPath.APath">
+<short>Path to the XML node removed in the method.</short>
+</element>
+
+<element name="TXMLConfigStorage.DeleteFullPathValue">
+<short>Deletes the value stored in the XML node at the specified path.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.DeleteFullPathValue.APath">
+<short>Path to the XML node with the value removed in the method.</short>
+</element>
+
+<!-- public -->
+<element name="TXMLConfigStorage.Clear">
+<short>Removes all XML nodes stored in the XMLConfig storage.</short>
+<descr>
+<p>
+Calls the Clear method in XMLConfig.
+</p>
+</descr>
+<seealso>
+<link id="TXMLConfigStorage.XMLConfig"/>
+</seealso>
+</element>
+
+<element name="TXMLConfigStorage.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+<var>Create</var> is the overridden, overloaded constructor for the class 
+instance. The overloaded variants allow the XML content to read from various 
+sources like a file name, a TXMLConfig instance, a scoped TXMLConfig 
+instance, or a TStream instance.
+</p>
+<p>
+Use WriteToDisk or SaveToStream to specify where the XML content is stored .
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.Create.Filename">
+<short>Qualified file name where the XML content is stored.</short>
+</element>
+<element name="TXMLConfigStorage.Create.LoadFromDisk">
+<short>
+True to load existing XML content from the file, or False to create an empty 
+storage.
+</short>
+</element>
+<element name="TXMLConfigStorage.Create.TheXMLConfig">
+<short>
+TXMLConfig instance where the XML paths and values are stored.
+</short>
+</element>
+<element name="TXMLConfigStorage.Create.StartPath">
+<short>
+Initial path for values read and written in the class instance.
+</short>
+</element>
+<element name="TXMLConfigStorage.Create.s">
+<short>
+Stream with the XML content loaded in the XMLConfig storage.
+</short>
+</element>
+
+<element name="TXMLConfigStorage.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+<var>Destroy</var> is the overridden destructor for the class instance. It 
+uses the value in FreeXMLConfig to determine whether the TXMLConfig instance 
+in XMLConfig is freed in the method. When set to True, XMLConfig is freed and 
+set to Nil.
+</p>
+<p>
+Destroy calls the inherited destructor prior to exiting from the method.
+</p>
+</descr>
+<seealso>
+<link id="TXMLConfigStorage.Create"/>
+<link id="TXMLConfigStorage.FreeXMLConfig"/>
+<link id="TXMLConfigStorage.XMLConfig"/>
+</seealso>
+</element>
+
+<element name="TXMLConfigStorage.XMLConfig">
+<short>
+TXMLConfig with the values accessed and maintained in the class instance.
+</short>
+<descr>
+Read-only TXMLConfig property.
+</descr>
+<seealso/>
+</element>
+
+<element name="TXMLConfigStorage.FreeXMLConfig">
+<short>
+Indicates whether the TXMLConfig instance is freed when the class is 
+destroyed.
+</short>
+<descr>
+<p>
+<var>FreeXMLConfig</var> is a <var>Boolean</var> property which indicates if 
+the TXMLConfig instance in XMLConfig is freed when the class instance is 
+destroyed.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TXMLConfigStorage.WriteToDisk">
+<short>Stores the values in XMLConfig to the specified file name.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TXMLConfigStorage.GetFilename">
+<short>Gets the file name passed as an argument to the constructor.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.GetFilename.Result">
+<short>File passed as an argument to the overloaded constructor.</short>
+</element>
+
+<element name="TXMLConfigStorage.SaveToStream">
+<short>
+Saves the content in XMLConfig to the specified TStream instance.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TXMLConfigStorage.SaveToStream.s">
+<short>TStream instance where the XML content is stored.</short>
+</element>
+
+<element name="Register">
+<short>
+Registers 
+<link id="#lcl.xmlpropstorage.TXMLPropStorage">TXMLPropStorage</link> 
+on the 'Misc' tab in the component palette.
+</short>
+<descr/>
+<seealso>
+<link id="#lcl.xmlpropstorage.TXMLPropStorage">TXMLPropStorage</link>
+</seealso>
+</element>
+
+</module>
+</package>
+<!-- XMLPropStorage -->
+</fpdoc-descriptions>

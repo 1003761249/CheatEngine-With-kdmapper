@@ -1,0 +1,43 @@
+object ConfirmPackageListDialog: TConfirmPackageListDialog
+  Left = 342
+  Height = 273
+  Top = 152
+  Width = 462
+  BorderIcons = [biSystemMenu]
+  Caption = 'ConfirmPackageListDialog'
+  ClientHeight = 273
+  ClientWidth = 462
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.5'
+  object PackagesGrid: TStringGrid
+    Left = 6
+    Height = 229
+    Top = 6
+    Width = 450
+    Align = alClient
+    AutoEdit = False
+    BorderSpacing.Around = 6
+    ColCount = 3
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking, goColSpanning, goSmoothScroll]
+    TabOrder = 0
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 241
+    Width = 450
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+end

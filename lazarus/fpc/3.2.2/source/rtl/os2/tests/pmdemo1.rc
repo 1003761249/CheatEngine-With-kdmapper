@@ -1,0 +1,23 @@
+/******************
+ * Name : TEXT.RC *
+ ******************/
+
+#include "PMDEMO1.H"
+
+MENU    ID_ClientWindow
+  BEGIN
+     SUBMENU "~File",100
+       BEGIN
+          MENUITEM "~Open...",101
+          MENUITEM "~Exit",109
+       END
+     SUBMENU "~Help",200
+       BEGIN
+          MENUITEM "~About...",201
+       END
+  END
+/*
+
+  Revision 1.2  2002/09/07 16:01:25  peter
+    * old logs removed and tabs fixed
+

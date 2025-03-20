@@ -1,0 +1,10 @@
+Name=vcl-compat
+Version=3.2.2
+Checksum=1513316699
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\vcl-compat\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,fcl-base|1513316664,fcl-xml|1513316665,fcl-web|1513316681,rtl-extra|1513316663
+NeedLibC=N
+FPMakeAddIn=N

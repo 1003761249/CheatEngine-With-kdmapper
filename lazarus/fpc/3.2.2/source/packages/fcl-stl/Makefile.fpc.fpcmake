@@ -1,0 +1,23 @@
+#
+#   Makefile.fpc for Free Component Library
+#
+
+[package]
+name=fcl-stl
+version=3.2.2
+
+[target]
+units=garrayutils gdeque gmap gpriorityqueue gqueue gset gstack gutil gvector ghashset ghashmap
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../..
+
+[compiler]
+options=-S2h
+sourcedir=src
+
+[rules]
+.NOTPARALLEL:

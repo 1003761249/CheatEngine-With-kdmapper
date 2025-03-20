@@ -1,0 +1,555 @@
+unit TTestDebuggerClasses;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, DbgIntfDebuggerBase, IdeDebuggerBase, Debugger,
+  IdeDebuggerWatchResult, LazDebuggerIntf, LazDebuggerIntfBaseTypes,
+  LazDebuggerValueConverter, LazDebuggerTemplate;
+
+type
+
+  { TTestCallStack }
+
+  TTestCallStack = class(TCallStackBase)
+  private
+    FList: TList;
+  protected
+    procedure Clear; virtual;
+    function  GetCount: Integer; override;
+    function  GetEntryBase(AIndex: Integer): TCallStackEntry; override;
+    //function  GetEntry(AIndex: Integer): TIdeCallStackEntry; virtual;
+//    procedure AddEntry(AnEntry: TIdeCallStackEntry); virtual; // must be added in correct order
+//    procedure AssignEntriesTo(AnOther: TTestCallStack); virtual;
+//  public
+//    procedure SetCountValidity({%H-}AValidity: TDebuggerDataState); override;
+//    procedure SetHasAtLeastCountInfo({%H-}AValidity: TDebuggerDataState; {%H-}AMinCount: Integer = - 1);  override;
+//    procedure SetCurrentValidity({%H-}AValidity: TDebuggerDataState); override;
+  public
+    constructor Create;
+    destructor Destroy; override;
+//    procedure Assign(AnOther: TCallStackBase); override;
+//    procedure PrepareRange({%H-}AIndex, {%H-}ACount: Integer); override;
+//    procedure ChangeCurrentIndex(ANewIndex: Integer); virtual;
+//    function HasAtLeastCount(ARequiredMinCount: Integer): TNullableBool; virtual; // Can be faster than getting the full count
+//    function CountLimited(ALimit: Integer): Integer; override;
+//    property Entries[AIndex: Integer]: TIdeCallStackEntry read GetEntry;
+  end;
+
+  { TTestCallStackList }
+
+  TTestCallStackList = class(TCallStackList)
+  protected
+    function NewEntryForThread(const AThreadId: Integer): TCallStackBase; override;
+  end;
+
+  { TTestCallStackMonitor }
+
+  TTestCallStackMonitor = class(TCallStackMonitor)
+  protected
+    function CreateCallStackList: TCallStackList; override;
+  end;
+
+  TTestThreadsMonitor = class;
+  { TTestThreads }
+
+  TTestThreads = class(TThreads)
+  private
+    FMonitor: TTestThreadsMonitor;
+    FDataValidity: TDebuggerDataState;
+  public
+    constructor Create;
+    function  Count: Integer; override;
+    procedure Clear; override;
+    procedure SetValidity(AValidity: TDebuggerDataState); override;
+    property DataValidity: TDebuggerDataState read FDataValidity;
+  end;
+
+  { TTestThreadsMonitor }
+
+  TTestThreadsMonitor = class(TThreadsMonitor)
+  protected
+    procedure DoStateEnterPause; override;
+    function CreateThreads: TThreads; override;
+    procedure RequestData;
+  end;
+
+  { TTestWatchValue }
+
+  TTestWatchValue = class(specialize TDbgDataRequestTemplateBase<TWatchValue, IDbgWatchValueIntf>, IDbgWatchValueIntf)
+  private
+    FCurrentResData: TCurrentResData;
+    FUpdateCount: Integer;
+  protected
+    (* IDbgWatchValueIntf *)
+    procedure BeginUpdate; reintroduce;
+    procedure EndUpdate; reintroduce;
+    function ResData: IDbgWatchDataIntf;
+    function GetDbgValConverter: ILazDbgValueConvertSelectorIntf;
+  protected
+    procedure RequestData;
+    function GetTypeInfo: TDBGType; override;
+    function GetValidity: TDebuggerDataState; override;
+    function GetValue: String; override;
+    procedure SetValue(AValue: String); override;
+  public
+    constructor Create(AOwnerWatch: TWatch;
+                       const AThreadId: Integer;
+                       const AStackFrame: Integer
+                      );
+    constructor Create(AOwnerWatch: TWatch); override;
+    destructor Destroy; override;
+  end;
+
+  { TTestWatchValueList }
+
+  TTestWatchValueList = class(TWatchValueList)
+  protected
+    function CreateEntry(const {%H-}AThreadId: Integer; const {%H-}AStackFrame: Integer): TWatchValue; override;
+  end;
+
+  { TTestWatch }
+
+  TTestWatch = class(TWatch)
+    function CreateValueList: TWatchValueList; override;
+    procedure RequestData(AWatchValue: TTestWatchValue);
+  public
+  end;
+
+  TTestWatchesMonitor = class;
+  { TTestWatches }
+
+  TTestWatches = class(TWatches)
+  protected
+    FMonitor: TTestWatchesMonitor;
+    function WatchClass: TWatchClass; override;
+    procedure RequestData(AWatchValue: TTestWatchValue);
+  end;
+
+  { TTestWatchesMonitor }
+
+  TTestWatchesMonitor = class(TWatchesMonitor)
+  private
+    FWatches: TWatches;
+  protected
+    procedure DoStateChangeEx(const AOldState, ANewState: TDBGState); override;
+    procedure RequestData(AWatchValue: TTestWatchValue);
+    function CreateWatches: TWatches;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    property Watches: TWatches read FWatches;
+  end;
+
+  TTestRegistersMonitor = class;
+  { TTestRegisters }
+
+  TTestRegisters = class(TRegisters)
+  private
+    FMonitor: TTestRegistersMonitor;
+  protected
+    procedure DoDataValidityChanged(AnOldValidity: TDebuggerDataState); override;
+  public
+    function Count: Integer; reintroduce; override;
+  end;
+
+  { TTEstRegistersList }
+
+  TTestRegistersList = class(TRegistersList)
+  private
+    FMonitor: TTestRegistersMonitor;
+  protected
+    function CreateEntry(AThreadId, AStackFrame: Integer): TRegisters; override;
+  end;
+
+  { TTestRegistersMonitor }
+
+  TTestRegistersMonitor = class(TRegistersMonitor)
+  protected
+    function CreateRegistersList: TRegistersList; override;
+    procedure RequestData(ARegisters: TRegisters);
+    procedure DoStateEnterPause; override;
+    procedure DoStateLeavePause; override;
+  end;
+
+implementation
+
+{ TTestCallStack }
+
+procedure TTestCallStack.Clear;
+var
+  i: Integer;
+begin
+  for i := 0 to FList.Count - 1 do
+    TObject(FList[i]).Free;
+  FList.Clear;
+end;
+
+function TTestCallStack.GetCount: Integer;
+begin
+  Result := FList.Count;
+end;
+
+function TTestCallStack.GetEntryBase(AIndex: Integer): TCallStackEntry;
+begin
+  Result := TCallStackEntry(FList[AIndex]);
+end;
+
+constructor TTestCallStack.Create;
+begin
+  FList := TList.Create;
+  inherited Create;
+end;
+
+destructor TTestCallStack.Destroy;
+begin
+  inherited Destroy;
+  Clear;
+  FreeAndNil(FList);
+end;
+
+{ TTestThreads }
+
+constructor TTestThreads.Create;
+begin
+  inherited Create;
+  FDataValidity := ddsUnknown;
+end;
+
+function TTestThreads.Count: Integer;
+begin
+  if (FDataValidity = ddsUnknown) then begin
+    FDataValidity := ddsRequested;
+    FMonitor.RequestData;
+  end;
+
+  Result := inherited Count;
+end;
+
+procedure TTestThreads.Clear;
+begin
+  FDataValidity := ddsUnknown;
+  inherited Clear;
+end;
+
+procedure TTestThreads.SetValidity(AValidity: TDebuggerDataState);
+begin
+  if FDataValidity = AValidity then exit;
+  FDataValidity := AValidity;
+  if FDataValidity = ddsUnknown then Clear;
+end;
+
+{ TTestThreadsMonitor }
+
+procedure TTestThreadsMonitor.DoStateEnterPause;
+begin
+  inherited DoStateEnterPause;
+  TTestThreads(Threads).SetValidity(ddsUnknown);
+end;
+
+function TTestThreadsMonitor.CreateThreads: TThreads;
+begin
+  Result := TTestThreads.Create;
+  TTestThreads(Result).FMonitor := Self;
+end;
+
+procedure TTestThreadsMonitor.RequestData;
+begin
+  if Supplier <> nil
+  then Supplier.RequestMasterData;
+end;
+
+{ TTestRegistersMonitor }
+
+function TTestRegistersMonitor.CreateRegistersList: TRegistersList;
+begin
+  Result := TTestRegistersList.Create;
+  TTestRegistersList(Result).FMonitor := Self;
+end;
+
+procedure TTestRegistersMonitor.RequestData(ARegisters: TRegisters);
+begin
+  if Supplier <> nil
+  then Supplier.RequestData(ARegisters)
+  else ARegisters.DataValidity := ddsInvalid;
+end;
+
+procedure TTestRegistersMonitor.DoStateEnterPause;
+begin
+  inherited DoStateEnterPause;
+  RegistersList.Clear;
+end;
+
+procedure TTestRegistersMonitor.DoStateLeavePause;
+begin
+  inherited DoStateLeavePause;
+  RegistersList.Clear;
+end;
+
+{ TTEstRegistersList }
+
+function TTestRegistersList.CreateEntry(AThreadId, AStackFrame: Integer): TRegisters;
+begin
+  Result := TTestRegisters.Create(AThreadId, AStackFrame);
+  TTestRegisters(Result).FMonitor := FMonitor;
+end;
+
+{ TTestRegisters }
+
+procedure TTestRegisters.DoDataValidityChanged(AnOldValidity: TDebuggerDataState);
+begin
+  inherited DoDataValidityChanged(AnOldValidity);
+end;
+
+function TTestRegisters.Count: Integer;
+begin
+  case DataValidity of
+    ddsUnknown:   begin
+        AddReference;
+        try
+          Result := 0;
+          DataValidity := ddsRequested;
+          FMonitor.RequestData(Self);  // Locals can be cleared, if debugger is "run" again
+          if DataValidity = ddsValid then Result := inherited Count();
+        finally
+          ReleaseReference;
+        end;
+      end;
+    ddsRequested, ddsEvaluating: Result := 0;
+    ddsValid:                    Result := inherited Count;
+    ddsInvalid, ddsError:        Result := 0;
+  end;
+end;
+
+{ TTestWatches }
+
+function TTestWatches.WatchClass: TWatchClass;
+begin
+  Result := TTestWatch;
+end;
+
+procedure TTestWatches.RequestData(AWatchValue: TTestWatchValue);
+begin
+  TTestWatchesMonitor(FMonitor).RequestData(AWatchValue);
+end;
+
+{ TTestWatchesMonitor }
+
+procedure TTestWatchesMonitor.DoStateChangeEx(const AOldState, ANewState: TDBGState);
+begin
+  inherited DoStateChangeEx(AOldState, ANewState);
+  if ANewState <> dsError then
+    Watches.ClearValues;
+end;
+
+procedure TTestWatchesMonitor.RequestData(AWatchValue: TTestWatchValue);
+begin
+  if Supplier <> nil
+  then Supplier.RequestData(AWatchValue)
+  else AWatchValue.Validity := ddsInvalid;
+end;
+
+function TTestWatchesMonitor.CreateWatches: TWatches;
+begin
+  Result := TTestWatches.Create;
+  TTestWatches(Result).FMonitor := Self;
+end;
+
+constructor TTestWatchesMonitor.Create;
+begin
+  inherited Create;
+  FWatches := CreateWatches;
+end;
+
+destructor TTestWatchesMonitor.Destroy;
+begin
+  inherited Destroy;
+  FreeAndNil(FWatches);
+end;
+
+{ TTestWatchValue }
+
+procedure TTestWatchValue.BeginUpdate;
+begin
+  AddReference;
+  inc(FUpdateCount);
+end;
+
+procedure TTestWatchValue.EndUpdate;
+var
+  NewValid: TDebuggerDataState;
+begin
+  //assert(Validity = ddsRequested, 'TCurrentWatchValue.EndUpdate: Validity = ddsRequested');
+  dec(FUpdateCount);
+  if (FUpdateCount = 0) then begin
+    NewValid := ddsValid;
+
+    FCurrentResData := FCurrentResData.RootResultData;
+    if (FCurrentResData <> nil) and (FCurrentResData.NewResultData <> nil) then begin
+      FCurrentResData.Done;
+      SetResultData(FCurrentResData.NewResultData);
+
+      if ResultData.ValueKind = rdkError then
+        NewValid := ddsError;
+
+      FreeAndNil(FCurrentResData);
+    end
+    else
+      NewValid := ddsInvalid;
+
+    if Validity = ddsRequested then
+      SetValidity(NewValid)
+    else
+      DoDataValidityChanged(ddsRequested);
+  end;
+  ReleaseReference; // Last statemnet, may call Destroy
+end;
+
+function TTestWatchValue.ResData: IDbgWatchDataIntf;
+begin
+  if FCurrentResData = nil then
+    FCurrentResData := TCurrentResData.Create;
+  Result := FCurrentResData;
+end;
+
+function TTestWatchValue.GetDbgValConverter: ILazDbgValueConvertSelectorIntf;
+begin
+  Result := nil;
+end;
+
+procedure TTestWatchValue.RequestData;
+begin
+  TTestWatch(Watch).RequestData(self);
+end;
+
+function TTestWatchValue.GetTypeInfo: TDBGType;
+var
+  i: Integer;
+begin
+  Result := nil;
+  if not Watch.Enabled then
+    exit;
+  i := DbgStateChangeCounter;  // workaround for state changes during TWatchValue.GetValue
+  if Validity = ddsUnknown then begin
+    Validity := ddsRequested;
+    RequestData;
+    if i <> DbgStateChangeCounter then exit;
+  end;
+  case Validity of
+    ddsRequested,
+    ddsEvaluating: Result := nil;
+    ddsValid:      Result := inherited GetTypeInfo;
+    ddsInvalid,
+    ddsError:      Result := nil;
+  end;
+end;
+
+function TTestWatchValue.GetValidity: TDebuggerDataState;
+begin
+  if FUpdateCount > 0 then
+    Result := ddsRequested  // prevent reading FValue
+  else
+    Result := inherited GetValidity;
+end;
+
+function TTestWatchValue.GetValue: String;
+var
+  i: Integer;
+begin
+  if not Watch.Enabled then begin
+    Result := '<disabled>';
+    exit;
+  end;
+  i := DbgStateChangeCounter;  // workaround for state changes during TWatchValue.GetValue
+  if Validity = ddsUnknown then begin
+    Result := '<evaluating>';
+    Validity := ddsRequested;
+    RequestData;
+    if i <> DbgStateChangeCounter then exit; // in case the debugger did run.
+    // TODO: The watch can also be deleted by the user
+  end;
+  case Validity of
+    ddsRequested, ddsEvaluating: Result := '<evaluating>';
+    ddsValid:                    Result := inherited GetValue;
+    ddsInvalid:                  Result := '<invalid>';
+    ddsError:                    Result := '<Error: '+ (inherited GetValue) +'>';
+  end;
+end;
+
+procedure TTestWatchValue.SetValue(AValue: String);
+begin
+  BeginUpdate;
+  ResData.CreatePrePrinted(AValue);
+  EndUpdate;
+end;
+
+constructor TTestWatchValue.Create(AOwnerWatch: TWatch; const AThreadId: Integer;
+  const AStackFrame: Integer);
+begin
+  inherited Create(AOwnerWatch);
+  Validity := ddsUnknown;
+  FDisplayFormat := Watch.DisplayFormat;
+  FEvaluateFlags := Watch.EvaluateFlags;
+  FRepeatCount   := Watch.RepeatCount;
+  FThreadId := AThreadId;
+  FStackFrame := AStackFrame;
+end;
+
+constructor TTestWatchValue.Create(AOwnerWatch: TWatch);
+begin
+  inherited Create(AOwnerWatch);
+  Validity := ddsUnknown;
+  FDisplayFormat := Watch.DisplayFormat;
+  FEvaluateFlags := Watch.EvaluateFlags;
+  FRepeatCount   := Watch.RepeatCount;
+end;
+
+destructor TTestWatchValue.Destroy;
+begin
+  inherited Destroy;
+  DoDestroy;
+end;
+
+{ TTestWatchValueList }
+
+function TTestWatchValueList.CreateEntry(const AThreadId: Integer;
+  const AStackFrame: Integer): TWatchValue;
+begin
+  Result := TTestWatchValue.Create(Watch, AThreadId, AStackFrame);
+  Add(Result);
+end;
+
+{ TTestWatch }
+
+function TTestWatch.CreateValueList: TWatchValueList;
+begin
+  Result := TTestWatchValueList.Create(Self);
+end;
+
+procedure TTestWatch.RequestData(AWatchValue: TTestWatchValue);
+begin
+  if Collection <> nil
+  then TTestWatches(Collection).RequestData(AWatchValue)
+  else AWatchValue.Validity := ddsInvalid;
+end;
+
+{ TTestCallStackMonitor }
+
+function TTestCallStackMonitor.CreateCallStackList: TCallStackList;
+begin
+  Result := TTestCallStackList.Create;
+end;
+
+{ TTestCallStackList }
+
+function TTestCallStackList.NewEntryForThread(const AThreadId: Integer): TCallStackBase;
+begin
+  Result := TTestCallStack.Create;
+  Result.ThreadId := AThreadId;
+  add(Result);
+end;
+
+end.
+

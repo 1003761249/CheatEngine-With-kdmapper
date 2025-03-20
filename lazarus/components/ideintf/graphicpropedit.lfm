@@ -1,0 +1,208 @@
+object GraphicPropertyEditorForm: TGraphicPropertyEditorForm
+  Left = 389
+  Height = 381
+  Top = 166
+  Width = 436
+  ActiveControl = LoadButton
+  Caption = 'Load Image Dialog'
+  ClientHeight = 381
+  ClientWidth = 436
+  Constraints.MinHeight = 180
+  Constraints.MinWidth = 200
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object GroupBox1: TGroupBox
+    Left = 6
+    Height = 336
+    Top = 6
+    Width = 424
+    Align = alClient
+    BorderSpacing.Around = 6
+    Caption = 'Picture'
+    ClientHeight = 309
+    ClientWidth = 420
+    TabOrder = 0
+    object ScrollBox: TScrollBox
+      AnchorSideRight.Control = GroupBox1
+      AnchorSideBottom.Control = GroupBox1
+      Left = 6
+      Height = 297
+      Top = 6
+      Width = 322
+      HorzScrollBar.Page = 100
+      HorzScrollBar.Tracking = True
+      VertScrollBar.Page = 100
+      VertScrollBar.Tracking = True
+      Align = alClient
+      BorderSpacing.Around = 6
+      ClientHeight = 293
+      ClientWidth = 318
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnResize = ScrollBoxResize
+      object ImagePreview: TImage
+        Left = 0
+        Height = 100
+        Top = 0
+        Width = 100
+        AutoSize = True
+        Center = True
+        OnPaintBackground = ImagePreviewPaintBackground
+      end
+    end
+    object LoadSaveBtnPanel: TPanel
+      Left = 334
+      Height = 309
+      Top = 0
+      Width = 86
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 309
+      ClientWidth = 86
+      TabOrder = 1
+      object LoadButton: TButton
+        Left = 6
+        Height = 25
+        Top = 6
+        Width = 74
+        Action = FileOpenAction
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        TabOrder = 0
+      end
+      object SaveButton: TButton
+        AnchorSideLeft.Control = LoadButton
+        AnchorSideTop.Control = LoadButton
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = LoadButton
+        AnchorSideRight.Side = asrBottom
+        Left = 6
+        Height = 25
+        Top = 37
+        Width = 74
+        Action = FileSaveAction
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        TabOrder = 1
+      end
+      object ClearButton: TButton
+        AnchorSideLeft.Control = LoadButton
+        AnchorSideTop.Control = SaveButton
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = LoadButton
+        AnchorSideRight.Side = asrBottom
+        Left = 6
+        Height = 25
+        Top = 68
+        Width = 74
+        Action = ClearAction
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        TabOrder = 2
+      end
+      object CopyButton: TButton
+        AnchorSideLeft.Control = LoadButton
+        AnchorSideTop.Control = ClearButton
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = LoadButton
+        AnchorSideRight.Side = asrBottom
+        Left = 6
+        Height = 25
+        Top = 99
+        Width = 74
+        Action = CopyAction
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 6
+        TabOrder = 3
+      end
+      object PasteButton: TButton
+        AnchorSideLeft.Control = LoadButton
+        AnchorSideTop.Control = CopyButton
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = LoadButton
+        AnchorSideRight.Side = asrBottom
+        Left = 6
+        Height = 25
+        Top = 130
+        Width = 74
+        Action = PasteAction
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 6
+        TabOrder = 4
+      end
+    end
+  end
+  object OkCancelButtonPanel: TButtonPanel
+    Left = 6
+    Height = 27
+    Top = 348
+    Width = 424
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+  object OpenDialog: TOpenPictureDialog
+    left = 138
+    top = 182
+  end
+  object SaveDialog: TSavePictureDialog
+    left = 186
+    top = 182
+  end
+  object ActionList: TActionList
+    left = 355
+    top = 244
+    object CopyAction: TEditCopy
+      Category = 'Edit'
+      Caption = '&Copy'
+      Hint = 'Copy'
+      OnExecute = CopyActionExecute
+      OnUpdate = CopyActionUpdate
+      ShortCut = 16451
+    end
+    object PasteAction: TEditPaste
+      Category = 'Edit'
+      Caption = '&Paste'
+      Hint = 'Paste'
+      OnExecute = PasteActionExecute
+      OnUpdate = PasteActionUpdate
+      ShortCut = 16470
+    end
+    object FileOpenAction: TAction
+      Category = 'File'
+      Caption = 'Load'
+      OnExecute = FileOpenActionExecute
+      ShortCut = 16463
+    end
+    object FileSaveAction: TAction
+      Category = 'File'
+      Caption = 'Save'
+      OnExecute = FileSaveActionExecute
+      OnUpdate = FileSaveActionUpdate
+      ShortCut = 16467
+    end
+    object ClearAction: TEditDelete
+      Category = 'Edit'
+      Caption = 'Clear'
+      Hint = 'Delete'
+      OnExecute = ClearActionExecute
+      ShortCut = 46
+    end
+  end
+end

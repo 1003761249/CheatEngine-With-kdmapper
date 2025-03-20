@@ -1,0 +1,81 @@
+object ReportDataDisplay: TReportDataDisplay
+  Left = 0
+  Height = 277
+  Top = 0
+  Width = 327
+  ClientHeight = 277
+  ClientWidth = 327
+  LCLVersion = '1.9.0.0'
+  TabOrder = 0
+  DesignLeft = 658
+  DesignTop = 245
+  object PCData: TPageControl
+    Left = 0
+    Height = 277
+    Top = 0
+    Width = 327
+    ActivePage = TSData
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TSData: TTabSheet
+      Caption = 'Data'
+      ClientHeight = 242
+      ClientWidth = 321
+      object TVData: TTreeView
+        Left = 0
+        Height = 242
+        Top = 0
+        Width = 321
+        Align = alClient
+        DragMode = dmAutomatic
+        HideSelection = False
+        ReadOnly = True
+        RightClickSelect = True
+        RowSelect = True
+        TabOrder = 0
+        OnMouseDown = TVDataMouseDown
+        OnStartDrag = TVDataStartDrag
+        Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      end
+    end
+    object TSVariables: TTabSheet
+      Caption = 'Variables'
+      ClientHeight = 242
+      ClientWidth = 321
+      object TVVariables: TTreeView
+        Left = 0
+        Height = 242
+        Top = 0
+        Width = 321
+        Align = alClient
+        DragMode = dmAutomatic
+        ReadOnly = True
+        TabOrder = 0
+        OnMouseDown = TVVariablesMouseDown
+        OnStartDrag = LBVariablesStartDrag
+        Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Functions'
+      ClientHeight = 242
+      ClientWidth = 321
+      object TVFunctions: TTreeView
+        Left = 0
+        Height = 242
+        Top = 0
+        Width = 321
+        Align = alClient
+        DragMode = dmAutomatic
+        HideSelection = False
+        ReadOnly = True
+        RightClickSelect = True
+        RowSelect = True
+        TabOrder = 0
+        OnStartDrag = TVFunctionsStartDrag
+        Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      end
+    end
+  end
+end

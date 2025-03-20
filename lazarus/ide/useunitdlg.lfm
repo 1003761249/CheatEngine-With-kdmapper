@@ -1,0 +1,126 @@
+object UseUnitDialog: TUseUnitDialog
+  Left = 315
+  Height = 422
+  Top = 177
+  Width = 363
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Add unit to uses section'
+  ClientHeight = 422
+  ClientWidth = 363
+  Constraints.MinHeight = 150
+  Constraints.MinWidth = 200
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel1: TButtonPanel
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 26
+    Top = 390
+    Width = 351
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.Enabled = False
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 4
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+  object SectionRadioGroup: TRadioGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 6
+    Height = 51
+    Top = 333
+    Width = 351
+    Anchors = [akLeft, akRight, akBottom]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Insert into Uses Section'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 31
+    ClientWidth = 347
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Interface'
+      'Implementation'
+    )
+    OnClick = SectionRadioGroupClick
+    TabOrder = 3
+  end
+  object UnitsListBox: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = FilterEdit
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = AllUnitsCheckBox
+    Left = 6
+    Height = 267
+    Top = 35
+    Width = 351
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    OnDblClick = UnitsListBoxDblClick
+    OnDrawItem = UnitsListBoxDrawItem
+    Style = lbOwnerDrawFixed
+    TabOrder = 1
+  end
+  object AllUnitsCheckBox: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = SectionRadioGroup
+    Left = 6
+    Height = 19
+    Top = 308
+    Width = 93
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Around = 6
+    Caption = 'Show all units'
+    OnChange = AllUnitsCheckBoxChange
+    TabOrder = 2
+  end
+  object FilterEdit: TListFilterEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 23
+    Top = 6
+    Width = 351
+    OnAfterFilter = FilterEditAfterFilter
+    OnFilterItemEx = FilterEditFilterItemEx
+    ButtonWidth = 23
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    NumGlyphs = 1
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 0
+    OnKeyDown = FilterEditKeyDown
+    FilteredListbox = UnitsListBox
+  end
+end

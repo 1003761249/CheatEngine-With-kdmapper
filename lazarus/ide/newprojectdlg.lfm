@@ -1,0 +1,90 @@
+object NewProjectDialog: TNewProjectDialog
+  Left = 371
+  Height = 302
+  Top = 381
+  Width = 561
+  BorderIcons = [biSystemMenu]
+  Caption = 'NewProjectDialog'
+  ClientHeight = 302
+  ClientWidth = 561
+  Position = poScreenCenter
+  LCLVersion = '1.5'
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    Left = 6
+    Height = 258
+    Top = 6
+    Width = 549
+    Align = alClient
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 258
+    ClientWidth = 549
+    TabOrder = 0
+    object DescriptionGroupBox: TGroupBox
+      Left = 274
+      Height = 258
+      Top = 0
+      Width = 275
+      Align = alClient
+      Caption = 'DescriptionGroupBox'
+      ClientHeight = 238
+      ClientWidth = 271
+      TabOrder = 1
+      object HelpLabel: TLabel
+        Left = 6
+        Height = 226
+        Top = 6
+        Width = 259
+        Align = alClient
+        BorderSpacing.Around = 6
+        Caption = 'HelpLabel'
+        ParentColor = False
+        WordWrap = True
+      end
+    end
+    object Splitter1: TSplitter
+      Left = 269
+      Height = 258
+      Top = 0
+      Width = 5
+    end
+    object Tree: TTreeView
+      Left = 0
+      Height = 258
+      Top = 0
+      Width = 269
+      Align = alLeft
+      Anchors = []
+      HideSelection = False
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      OnDblClick = OkClick
+      OnSelectionChanged = TreeSelectionChange
+      Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 270
+    Width = 549
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.OnClick = OkClick
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.OnClick = HelpButtonClick
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+end

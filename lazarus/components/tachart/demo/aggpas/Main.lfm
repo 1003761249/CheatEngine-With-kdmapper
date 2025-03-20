@@ -1,0 +1,134 @@
+object MainForm: TMainForm
+  Left = 352
+  Height = 370
+  Top = 169
+  Width = 785
+  Caption = 'MainForm'
+  ClientHeight = 370
+  ClientWidth = 785
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.3.0.0'
+  object ChartPaintBox: TPaintBox
+    AnchorSideLeft.Control = Bevel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BottomPanel
+    Left = 400
+    Height = 333
+    Top = 6
+    Width = 379
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    OnPaint = ChartPaintBoxPaint
+  end
+  object BottomPanel: TPanel
+    Left = 6
+    Height = 19
+    Top = 345
+    Width = 773
+    Align = alBottom
+    AutoSize = True
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 19
+    ClientWidth = 773
+    TabOrder = 0
+    object cbAggPas: TCheckBox
+      AnchorSideLeft.Control = BottomPanel
+      AnchorSideTop.Control = BottomPanel
+      AnchorSideTop.Side = asrCenter
+      Left = 0
+      Height = 19
+      Top = 0
+      Width = 193
+      Caption = 'Use AggPas for standard drawing'
+      OnClick = cbAggPasClick
+      TabOrder = 0
+    end
+  end
+  object Chart: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Bevel1
+    AnchorSideBottom.Control = BottomPanel
+    Left = 6
+    Height = 333
+    Top = 6
+    Width = 378
+    AxisList = <    
+      item
+        Visible = False
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clSkyBlue
+    Legend.BackgroundBrush.Color = clWhite
+    Legend.Visible = True
+    Margins.Left = 25
+    Margins.Right = 25
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'Standard'
+    )
+    Title.Visible = True
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    Color = clMoneyGreen
+    object ChartPieSeries: TPieSeries
+      Title = 'Pie'
+      ZPosition = 1
+      Source = RandomChartSource
+    end
+    object ChartConstantLine: TConstantLine
+      Pen.Color = clTeal
+      Pen.Width = 3
+      Title = 'const'
+    end
+    object ChartLineSeries: TLineSeries
+      Title = 'Line'
+      ZPosition = 2
+      LinePen.Color = clAqua
+      LinePen.Width = 3
+      Marks.Format = '%2:s %1:.2f%%'
+      Marks.Style = smsLabelPercent
+      Pointer.Style = psRightBracket
+      Pointer.Visible = True
+      ShowPoints = True
+      Source = RandomChartSource
+    end
+  end
+  object Bevel1: TBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 390
+    Height = 50
+    Top = 138
+    Width = 4
+    Shape = bsSpacer
+  end
+  object RandomChartSource: TRandomChartSource
+    PointsNumber = 10
+    RandSeed = 1733195749
+    XMax = 10
+    YMax = 10
+    YMin = 1
+    Left = 496
+    Top = 168
+  end
+  object ChartGUIConnectorAggPas: TChartGUIConnectorAggPas
+    Left = 496
+    Top = 264
+  end
+end

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="OnlinePackageManager"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Balázs Székely"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="vst\include\intf\$(LCLWidgetType);vst\include\$(LCLWidgetType)"/>
+        <OtherUnitFiles Value="vst;vst\units\$(LCLWidgetType);fpcmod;frames"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx5024="True"/>
+        </CompilerMessages>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Online Package Manager is a tool that automates the process of installing, upgrading, configuring Lazarus packages. The packages are stored in the main repository(see repository column) as zip files, along with a JSON file. The JSON contains all necessary information about the packages. On request the packages are downloaded/extracted/compiled/installed into the IDE. If available, it&apos;s also possible to update a previously installed package from the maintainer webpage.
+
+For more info please visit: http://wiki.freepascal.org/Online_Package_Manager"/>
+    <License Value="GPL"/>
+    <Version Major="1" Release="1" Build="2"/>
+    <Files Count="30">
+      <Item1>
+        <Filename Value="onlinepackagemanagerintf.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="onlinepackagemanagerintf"/>
+      </Item1>
+      <Item2>
+        <Filename Value="opkman_mainfrm.pas"/>
+        <UnitName Value="opkman_mainfrm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item2>
+      <Item3>
+        <Filename Value="opkman_optionsfrm.pas"/>
+        <UnitName Value="opkman_optionsfrm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item3>
+      <Item4>
+        <Filename Value="opkman_const.pas"/>
+        <UnitName Value="opkman_const"/>
+      </Item4>
+      <Item5>
+        <Filename Value="opkman_visualtree.pas"/>
+        <UnitName Value="opkman_visualtree"/>
+      </Item5>
+      <Item6>
+        <Filename Value="opkman_serializablepackages.pas"/>
+        <UnitName Value="opkman_serializablepackages"/>
+      </Item6>
+      <Item7>
+        <Filename Value="opkman_downloader.pas"/>
+        <UnitName Value="opkman_downloader"/>
+      </Item7>
+      <Item8>
+        <Filename Value="opkman_common.pas"/>
+        <UnitName Value="opkman_common"/>
+      </Item8>
+      <Item9>
+        <Filename Value="opkman_progressfrm.pas"/>
+        <UnitName Value="opkman_progressfrm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item9>
+      <Item10>
+        <Filename Value="opkman_zipper.pas"/>
+        <UnitName Value="opkman_zipper"/>
+      </Item10>
+      <Item11>
+        <Filename Value="opkman_installer.pas"/>
+        <UnitName Value="opkman_installer"/>
+      </Item11>
+      <Item12>
+        <Filename Value="opkman_packagelistfrm.pas"/>
+        <UnitName Value="opkman_packagelistfrm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item12>
+      <Item13>
+        <Filename Value="opkman_options.pas"/>
+        <UnitName Value="opkman_options"/>
+      </Item13>
+      <Item14>
+        <Filename Value="opkman_createrepositorypackagefrm.pas"/>
+        <UnitName Value="opkman_createrepositorypackagefrm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item14>
+      <Item15>
+        <Filename Value="opkman_categoriesfrm.pas"/>
+        <UnitName Value="opkman_categoriesfrm"/>
+      </Item15>
+      <Item16>
+        <Filename Value="opkman_packagedetailsfrm.pas"/>
+        <UnitName Value="opkman_packagedetailsfrm"/>
+      </Item16>
+      <Item17>
+        <Filename Value="opkman_updates.pas"/>
+        <UnitName Value="opkman_updates"/>
+      </Item17>
+      <Item18>
+        <Filename Value="opkman_createjsonforupdatesfrm.pas"/>
+        <UnitName Value="opkman_createjsonforupdatesfrm"/>
+      </Item18>
+      <Item19>
+        <Filename Value="opkman_uploader.pas"/>
+        <UnitName Value="opkman_uploader"/>
+      </Item19>
+      <Item20>
+        <Filename Value="opkman_repositories.pas"/>
+        <UnitName Value="opkman_repositories"/>
+      </Item20>
+      <Item21>
+        <Filename Value="opkman_createrepositoryfrm.pas"/>
+        <UnitName Value="opkman_createrepositoryfrm"/>
+      </Item21>
+      <Item22>
+        <Filename Value="opkman_repositorydetailsfrm.pas"/>
+        <UnitName Value="opkman_repositorydetailsfrm"/>
+      </Item22>
+      <Item23>
+        <Filename Value="opkman_addrepositorypackagefrm.pas"/>
+        <UnitName Value="opkman_addrepositorypackagefrm"/>
+      </Item23>
+      <Item24>
+        <Filename Value="opkman_intf.pas"/>
+        <UnitName Value="opkman_intf"/>
+      </Item24>
+      <Item25>
+        <Filename Value="opkman_intf_packagelistfrm.pas"/>
+        <UnitName Value="opkman_intf_packagelistfrm"/>
+      </Item25>
+      <Item26>
+        <Filename Value="opkman_showhint.pas"/>
+        <UnitName Value="opkman_showhint"/>
+      </Item26>
+      <Item27>
+        <Filename Value="opkman_showhintbase.pas"/>
+        <UnitName Value="opkman_showhintbase"/>
+      </Item27>
+      <Item28>
+        <Filename Value="opkman_colorsfrm.pas"/>
+        <UnitName Value="opkman_colorsfrm"/>
+      </Item28>
+      <Item29>
+        <Filename Value="opkman_maindm.pas"/>
+        <UnitName Value="opkman_maindm"/>
+      </Item29>
+      <Item30>
+        <Filename Value="opkman_opensslfrm.pas"/>
+        <UnitName Value="opkman_OpenSSLfrm"/>
+      </Item30>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="laz.virtualtreeview_package"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

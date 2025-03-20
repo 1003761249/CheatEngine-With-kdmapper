@@ -1,0 +1,99 @@
+object Form1: TForm1
+  Left = 308
+  Height = 319
+  Top = 132
+  Width = 688
+  Caption = 'Form1'
+  ClientHeight = 319
+  ClientWidth = 688
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object OpenGLControl1: TOpenGLControl
+    AnchorSideLeft.Control = Bevel1
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 343
+    Height = 319
+    Top = 0
+    Width = 345
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoResizeViewport = True
+    OnPaint = OpenGLControl1Paint
+  end
+  object Chart1: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Bevel1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 319
+    Top = 0
+    Width = 343
+    AxisList = <    
+      item
+        Marks.LabelFont.Color = clTeal
+        Marks.LabelFont.Height = -13
+        Marks.LabelFont.Name = 'Arial'
+        Marks.Frame.Style = psSolid
+        Marks.LabelBrush.Color = clYellow
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelFont.Height = -13
+        Marks.LabelFont.Name = 'Arial'
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clSilver
+    Title.Font.Color = clBlue
+    Title.Font.Height = -19
+    Title.Font.Name = 'Arial'
+    Title.Font.Style = [fsItalic]
+    Title.Text.Strings = (
+      'Standard'
+    )
+    Title.Visible = True
+    OnAfterPaint = Chart1AfterPaint
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Color = clSkyBlue
+    object Chart1LineSeries1: TLineSeries
+      LinePen.Color = clBlue
+      LinePen.Width = 3
+      Source = RandomChartSource1
+    end
+    object Chart1BarSeries1: TBarSeries
+      Transparency = 127
+      BarBrush.Color = clGreen
+      Source = RandomChartSource1
+    end
+    object Chart1PieSeries1: TPieSeries
+      Source = RandomChartSource1
+    end
+  end
+  object Bevel1: TBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 343
+    Height = 50
+    Top = 73
+    Width = 2
+  end
+  object RandomChartSource1: TRandomChartSource
+    PointsNumber = 10
+    RandSeed = 1792875960
+    XMax = 10
+    YMax = 10
+    Left = 210
+    Top = 161
+  end
+end

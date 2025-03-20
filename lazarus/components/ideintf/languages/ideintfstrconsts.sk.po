@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "Zrušiť"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Pridať"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Vždy"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "&Pridať"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "Pokračovať"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Zmazať"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "Prid&ať ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "&Povolené"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "&OK"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Pokračovať"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Kopírovať"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Vystrihnúť"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Zmazať"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Zakázané"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Pridať..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Povolené"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Pomoc"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "Ignorovať"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Nikdy"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "Nie"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "OK"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Vložiť"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Áno"
+

@@ -1,0 +1,5 @@
+{ "lrFclPDFExport_demo" : {
+   "Category" : "LazReport",
+   "Keywords" : ["LazReport","PDF","lrPDFExport","lr_pdfexport"],
+   "Description" : "Demonstrates how to generate PDF reports from LazReport.\nRequires the package lr_PDFExport be installed before loading.\n"}
+}

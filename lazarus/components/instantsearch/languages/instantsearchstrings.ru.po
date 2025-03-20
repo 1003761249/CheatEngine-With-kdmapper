@@ -1,0 +1,537 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: instantsearchstrings.lrsabortoperation
+msgid "No, abort operation"
+msgstr "Нет, прервать операцию"
+
+#: instantsearchstrings.lrsallprojects
+msgid "All projects"
+msgstr "Все проекты"
+
+#: instantsearchstrings.lrsalltreesneedindexing
+msgid "All source trees must be indexed."
+msgstr "Все деревья исходного кода должны быть проиндексированы."
+
+#: instantsearchstrings.lrsautomation
+msgid "Automation"
+msgstr "Автоматизация"
+
+#: instantsearchstrings.lrscancelsearch
+msgid "Cancel search"
+msgstr "Отменить поиск"
+
+#: instantsearchstrings.lrscannotconnecttomanticore
+#, object-pascal-format
+msgid "Error \"%s\" trying to connect to Manticore server: %s"
+msgstr "Ошибка \"%s\" при подключении к серверу Manticore: %s"
+
+#: instantsearchstrings.lrscannotdeleteindexwhileindexing
+msgid "Cannot delete an index while an indexing operation is in progress."
+msgstr "Невозможно удалить индекс, пока идёт операция его построения."
+
+#: instantsearchstrings.lrscannotindexindexinprogress
+msgid "Cannot start an index operation while another one is in progress."
+msgstr "Невозможно начать операцию с индексом, пока идёт другая."
+
+#: instantsearchstrings.lrsconfigneeded
+msgid "Configuration needed"
+msgstr "Требуется настройка"
+
+#: instantsearchstrings.lrsconfigneededreason
+#, object-pascal-format
+msgid ""
+"Instant search is not yet configured:\n"
+"%s"
+msgstr ""
+"Мгновенный поиск ещё не настроен:\n"
+"%s"
+
+#: instantsearchstrings.lrsconfigure
+msgid "Configure Instant Search"
+msgstr "Настроить мгновенный поиск"
+
+#: instantsearchstrings.lrsconfirm
+msgid "Confirmation"
+msgstr "Подтверждение"
+
+#: instantsearchstrings.lrsconfirmdeletetree
+#, object-pascal-format
+msgid ""
+"Delete tree \"%s\", are you sure?\n"
+"This action cannot be undone."
+msgstr ""
+"Вы действительно хотите удалить дерево \"%s\"?\n"
+"Это действие невозможно отменить."
+
+#: instantsearchstrings.lrsconnectiontestfailed
+#, object-pascal-format
+msgid ""
+"Connection test failed, reason:\n"
+"%s"
+msgstr ""
+"Проверка соединения завершилась с ошибкой по причине:\n"
+"%s"
+
+#: instantsearchstrings.lrsconnectiontestok
+msgid "Connection test succeeded!"
+msgstr "Соединение успешно проверено!"
+
+#: instantsearchstrings.lrscreateindex
+msgid "Create index table"
+msgstr "Создать таблицу индекса"
+
+#: instantsearchstrings.lrscreateindex2
+msgid "Create index"
+msgstr "Создать индекс"
+
+#: instantsearchstrings.lrscreateindexbuttonhint
+msgid "Create the index table. You need to test the connection first."
+msgstr "Создать таблицу индекса. Сначала требуется проверить соединение."
+
+#: instantsearchstrings.lrscreateindexfailed
+#, object-pascal-format
+msgid ""
+"Creation of index %s failed, reason:\n"
+"%s"
+msgstr ""
+"Создать индекс %s не удалось по причине:\n"
+"%s"
+
+#: instantsearchstrings.lrscreateindexwithname
+#, object-pascal-format
+msgid "Create index with name %s?"
+msgstr "Создать индекс с именем %s?"
+
+#: instantsearchstrings.lrscurrentproject
+msgid "Active project"
+msgstr "Активный проект"
+
+#: instantsearchstrings.lrsdeleteindex
+msgid "Delete index"
+msgstr "Удалить индекс"
+
+#: instantsearchstrings.lrsdeleteindexfailed
+#, object-pascal-format
+msgid ""
+"Deletion of index %s failed, reason:\n"
+"%s"
+msgstr ""
+"Удалить индекс %s не удалось по причине:\n"
+"%s"
+
+#: instantsearchstrings.lrsdeleteindexhint
+msgid "Prompt for index name and delete the index."
+msgstr "Удалить индекс с запрошенным именем."
+
+#: instantsearchstrings.lrsdonotcreateindex
+msgid "No, do not create the index"
+msgstr "Нет, не создавать индекс"
+
+#: instantsearchstrings.lrsenterhostnameleaveemptyforlocalhost
+msgid "Enter hostname, leave empty for localhost"
+msgstr "Введите имя сервера, оставьте пустым для localhost"
+
+#: instantsearchstrings.lrserrnamecannotbeempty
+msgid "Source tree name cannot be empty."
+msgstr "Имя дерева исходного кода не может быть пустым."
+
+#: instantsearchstrings.lrserrorconnecting
+#, object-pascal-format
+msgid "Error \"%s\" attempting to connect to Manticore server."
+msgstr "Ошибка \"%s\" при подключении к серверу Manticore."
+
+#: instantsearchstrings.lrserrorduplicatename
+#, object-pascal-format
+msgid ""
+"Duplicate tree name: %s.\n"
+"Please choose another name."
+msgstr ""
+"Дерево с именем %s уже имеется.\n"
+"Выберите другое имя."
+
+#: instantsearchstrings.lrserrorminlengthis2
+msgid "There should be at least two characters to search."
+msgstr "Должно быть хотя бы два символа для поиска."
+
+#: instantsearchstrings.lrserrorsearching
+#, object-pascal-format
+msgid "Error \"%s\" when searching using Manticore server."
+msgstr "Ошибка \"%s\" при поиске с помощью сервера Manticore."
+
+#: instantsearchstrings.lrserrpathdoesnotexist
+#, object-pascal-format
+msgid ""
+"Directory \"%s\" does not exist.\n"
+"Please select an existing directory."
+msgstr ""
+"Каталог \"%s\" не существует.\n"
+"Выберите другой."
+
+#: instantsearchstrings.lrsfinishedindexingproject
+#, object-pascal-format
+msgid "Finished indexing project \"%s\". Processed %d files."
+msgstr "Индексирование проекта \"%s\" завершено. Обработано файлов: %d."
+
+#: instantsearchstrings.lrsfinishedindexingtree
+#, object-pascal-format
+msgid "Finished indexing tree \"%s\". Processed %d files."
+msgstr "Индексирование дерева \"%s\" завершено. Обработано файлов: %d."
+
+#: instantsearchstrings.lrshost
+msgid "Hostname"
+msgstr "Имя сервера"
+
+#: instantsearchstrings.lrsidledisconnecttime
+msgid "Idle disconnect time"
+msgstr "Отключаться при простое"
+
+#: instantsearchstrings.lrsindexalreadyexists
+#, object-pascal-format
+msgid "Index table \"%s\" already exists."
+msgstr "Таблица индекса \"%s\" уже имеется."
+
+#: instantsearchstrings.lrsindexdeleted
+#, object-pascal-format
+msgid "Index %s successfully deleted."
+msgstr "Индекс %s успешно удалён."
+
+#: instantsearchstrings.lrsindexingoperationfinished
+msgid "Finished indexing operation."
+msgstr "Индексирование завершено."
+
+#: instantsearchstrings.lrsindexingoptions
+msgid "Indexing and searching"
+msgstr "Индексирование и поиск"
+
+#: instantsearchstrings.lrsindexingprojectterminated
+#, object-pascal-format
+msgid "Indexing project \"%s\" was terminated. Processed %d files."
+msgstr "Индексирование проекта \"%s\" прервано. Обработано файлов: %d."
+
+#: instantsearchstrings.lrsindexlater
+msgid "No, do not index now"
+msgstr "Нет, не индексировать сейчас"
+
+#: instantsearchstrings.lrsindexname
+msgid "Index name"
+msgstr "Имя индекса"
+
+#: instantsearchstrings.lrsindexneedssave
+msgid ""
+"In order to index a source tree, the settings must be saved.\n"
+"Save settings?"
+msgstr ""
+"Для индексирования дерева исходного кода требуется сохранить параметры.\n"
+"Сделать это?"
+
+#: instantsearchstrings.lrsindexnotfoundcreate
+#, object-pascal-format
+msgid ""
+"Search index table \"%s\" was not found.\n"
+"Create it?"
+msgstr ""
+"Таблица поискового индекса \"%s\" не найдена.\n"
+"Создать её?"
+
+#: instantsearchstrings.lrsindexnow
+msgid "Would you like to start indexing them now?"
+msgstr "Начать индексирование сейчас?"
+
+#: instantsearchstrings.lrsindexoperationfailed
+msgid "Failed to start index operation."
+msgstr "Не удалось начать операцию с индексом."
+
+#: instantsearchstrings.lrsindexproject
+msgid "Index project for Instant Search"
+msgstr "Индексировать проект для мгновенного поиска"
+
+#: instantsearchstrings.lrsindexprojectdelay1
+msgid "in"
+msgstr "через"
+
+#: instantsearchstrings.lrsindexprojectdelay2
+msgid "minutes after open"
+msgstr "минут после открытия"
+
+#: instantsearchstrings.lrsindexprojectmoment
+msgid "Index project when"
+msgstr "Момент индексирования проекта"
+
+#: instantsearchstrings.lrsindexprojectstrategy
+msgid "Mark project indexable"
+msgstr "Пометка проекта индексируемым"
+
+#: instantsearchstrings.lrsindextodelete
+msgid "Enter the name of the index to delete. This operation cannot be undone."
+msgstr "Введите имя индекса для удаления. Эта операция не может быть отменена."
+
+#: instantsearchstrings.lrsinstantsearch
+msgctxt "instantsearchstrings.lrsinstantsearch"
+msgid "Instant search"
+msgstr "Мгновенный поиск"
+
+#: instantsearchstrings.lrsinstantsearchmenu
+msgctxt "instantsearchstrings.lrsinstantsearchmenu"
+msgid "Instant search"
+msgstr "Мгновенный поиск"
+
+#: instantsearchstrings.lrsmanticoreoptions
+msgid "Manticore server"
+msgstr "Сервер Manticore"
+
+#: instantsearchstrings.lrsmanual
+msgid "Manual only"
+msgstr "Только вручную"
+
+#: instantsearchstrings.lrsmarkingindexable
+#, object-pascal-format
+msgid "Marking project \"%s\" as indexable."
+msgstr "Проект \"%s\" помечен индексируемым."
+
+#: instantsearchstrings.lrsmarkprojectindexable
+msgid "Mark project indexable for Instant Search"
+msgstr "Пометить проект индексируемым для мгновенного поиска"
+
+#: instantsearchstrings.lrsmaxclipbrdsearchtermlength
+msgid "Max. clipboard length"
+msgstr "Максимальная длина содержимого буфера обмена"
+
+#: instantsearchstrings.lrsminsearchlength
+msgid "Min. searchterm length"
+msgstr "Минимальная длина поисковой фразы"
+
+#: instantsearchstrings.lrsmysqlversion
+msgid "MySQL client version"
+msgstr "Версия клиента MySQL"
+
+#: instantsearchstrings.lrsneedindexing
+msgid "Source trees must be indexed"
+msgstr "Деревья исходного кода должны быть проиндексированы"
+
+#: instantsearchstrings.lrsnewtree
+#, object-pascal-format
+msgid "New source tree %d"
+msgstr "Новое дерево исходного кода %d"
+
+#: instantsearchstrings.lrsnoindex
+msgid "Search index table not found"
+msgstr "Таблица поискового индекса не найдена"
+
+#: instantsearchstrings.lrsnomysqlversion
+msgid "No MySQL Client library version was selected for MySQL transport."
+msgstr "Для транспорта MySQL не выбрана версия клиентской библиотеки."
+
+#: instantsearchstrings.lrsnosearchtrees
+msgid "No source trees were defined."
+msgstr "Не задано ни одного дерева исходного кода."
+
+#: instantsearchstrings.lrsnoservertrees
+msgid "Source trees were not yet indexed."
+msgstr "Деревья исходного кода ещё не были проиндексированы."
+
+#: instantsearchstrings.lrsnosuchindex
+#, object-pascal-format
+msgid "No such index exists: %s"
+msgstr "Индекс не существует: %s"
+
+#: instantsearchstrings.lrsnotconfigured
+msgid "User did not configure anything."
+msgstr "Пользователь ничего не настроил."
+
+#: instantsearchstrings.lrsnotproperlyconfigured
+#, object-pascal-format
+msgid "Instant search is not properly configured to connect to Manticore server: %s"
+msgstr "Мгновенный поиск не настроен корректно для соединения с сервером Manticore: %s"
+
+#: instantsearchstrings.lrsnotransport
+msgid "No transport protocol was selected."
+msgstr "Не выбран транспортный протокол."
+
+#: instantsearchstrings.lrsonfirstsave
+msgid "Project is first saved"
+msgstr "Первое сохранение проекта"
+
+#: instantsearchstrings.lrsonopen
+msgid "Project is opened"
+msgstr "Открытие проекта"
+
+#: instantsearchstrings.lrsport
+msgid "Port"
+msgstr "Порт"
+
+#: instantsearchstrings.lrsprotocol
+msgid "Protocol"
+msgstr "Протокол"
+
+#: instantsearchstrings.lrsresultslimit
+msgid "Max. result count"
+msgstr "Максимальное количество результатов"
+
+#: instantsearchstrings.lrssave
+msgid "Yes, save settings"
+msgstr "Да, сохранить параметры"
+
+#: instantsearchstrings.lrssaveandindex
+msgid "Yes, index needed source trees"
+msgstr "Да, индексировать требующиеся деревья"
+
+#: instantsearchstrings.lrssaveandindexall
+msgid "Yes, index all source trees"
+msgstr "Да, индексировать все деревья"
+
+#: instantsearchstrings.lrssaveneeded
+msgid "Save settings required."
+msgstr "Требуется сохранить параметры."
+
+#: instantsearchstrings.lrssearchengine
+msgid "Search engine"
+msgstr "Механизм поиска"
+
+#: instantsearchstrings.lrssearchtexthint
+#, object-pascal-format
+msgid "Enter search text, at least %d characters"
+msgstr "Введите поисковую фразу (минимум символов: %d)"
+
+#: instantsearchstrings.lrssourcetreeadd
+msgid "Add"
+msgstr "Добавить"
+
+#: instantsearchstrings.lrssourcetreeaddhint
+msgid "Add a new source tree definition."
+msgstr "Добавить новое определение дерева исходного кода."
+
+#: instantsearchstrings.lrssourcetreeclear
+msgid "Clear"
+msgstr "Очистить"
+
+#: instantsearchstrings.lrssourcetreeclearall
+msgid "Clear all"
+msgstr "Очистить все"
+
+#: instantsearchstrings.lrssourcetreeclearallhint
+msgid "Remove all words in all source tree definitions."
+msgstr "Удалить все слова во всех определениях деревьев исходного кода."
+
+#: instantsearchstrings.lrssourcetreeclearhint
+msgid "Remove all words in the highlighted source tree definition."
+msgstr "Удалить все слова в выбранном определении дерева исходного кода."
+
+#: instantsearchstrings.lrssourcetreedelete
+msgid "Delete"
+msgstr "Удалить"
+
+#: instantsearchstrings.lrssourcetreedeletehint
+msgid "Delete the highlighted source tree definition."
+msgstr "Удалить выбранное определение дерева исходного кода."
+
+#: instantsearchstrings.lrssourcetreeedit
+msgid "Edit"
+msgstr "Редактировать"
+
+#: instantsearchstrings.lrssourcetreeedithint
+msgid "Edit the highlighted source tree definition."
+msgstr "Редактировать выбранное определение дерева исходного кода."
+
+#: instantsearchstrings.lrssourcetreeindex
+msgid "Index"
+msgstr "Индексировать"
+
+#: instantsearchstrings.lrssourcetrees
+msgid "Source trees"
+msgstr "Деревья исходного кода"
+
+#: instantsearchstrings.lrsstartindexingproject
+#, object-pascal-format
+msgid "Start indexing project \"%s\", directory: \"%s\""
+msgstr "Индексирование проекта \"%s\" , каталог: \"%s\""
+
+#: instantsearchstrings.lrsstartindexingtree
+#, object-pascal-format
+msgid "Start indexing tree \"%s\", directory: \"%s\""
+msgstr "Индексирование дерева \"%s\" , каталог: \"%s\""
+
+#: instantsearchstrings.lrstestbuttonhint
+msgid "Test the connection parameters."
+msgstr "Проверить параметры соединения."
+
+#: instantsearchstrings.lrstestconnection
+msgid "Test connection"
+msgstr "Проверить соединение"
+
+#: instantsearchstrings.lrsthesetreesneedindexing
+#, object-pascal-format
+msgid ""
+"The following source trees need to be indexed:\n"
+"%s"
+msgstr ""
+"Следующие деревья исходного кода требуется проиндексировать:\n"
+"%s"
+
+#: instantsearchstrings.lrsthisneedssavingsettings
+msgid "This operation runs in the background, and will cause the settings to be saved now."
+msgstr "Эта операция проводится в фоновом режиме и повлечёт немедленное сохранение параметров."
+
+#: instantsearchstrings.lrstimed
+msgid "Delayed after project open"
+msgstr "С задержкой после открытия проекта"
+
+#: instantsearchstrings.lrstreeallfiles
+msgid "All files"
+msgstr "Все файлы"
+
+#: instantsearchstrings.lrstreebasedir
+msgid "Path"
+msgstr "Путь"
+
+#: instantsearchstrings.lrstreebasedirhint
+msgid "Directory with source files"
+msgstr "Каталог с файлами исходного кода"
+
+#: instantsearchstrings.lrstreeenabled
+msgid "Enabled"
+msgstr "Включить"
+
+#: instantsearchstrings.lrstreeextensions
+msgid "Extensions"
+msgstr "Расширения"
+
+#: instantsearchstrings.lrstreeextensionshint
+msgid "Comma-separated list of extensions of files"
+msgstr "Список расширений файлов, разделённый запятыми"
+
+#: instantsearchstrings.lrstreename
+msgid "Name"
+msgstr "Имя"
+
+#: instantsearchstrings.lrstreenamehint
+msgid "Unique name for this tree"
+msgstr "Уникальное имя дерева"
+
+#: instantsearchstrings.lrstreenotfoundresfresh
+#, object-pascal-format
+msgid ""
+"Source tree %s not found.\n"
+"Please refresh search results."
+msgstr ""
+"Дерево исходного кода %s не найдено.\n"
+"Обновите результаты поиска."
+
+#: instantsearchstrings.lrstreerecurse
+msgid "Recurse"
+msgstr "С подкаталогами"
+
+#: instantsearchstrings.lrsyescreateindex
+msgid "Yes, create the index"
+msgstr "Да, создать индекс"
+

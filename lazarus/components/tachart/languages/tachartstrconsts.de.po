@@ -1,0 +1,559 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tachartlazaruspkg\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: tachartstrconsts.descolor
+msgid "Color"
+msgstr "Farbe"
+
+#: tachartstrconsts.desdatapointeditor
+msgid "DataPoints editor"
+msgstr "Datenpunkt-Editor"
+
+#: tachartstrconsts.desdeleterow
+msgid "Delete row"
+msgstr "Zeile löschen"
+
+#: tachartstrconsts.desinsertrow
+msgid "Insert row"
+msgstr "Zeile einfügen"
+
+#: tachartstrconsts.desmovedown
+msgid "Move down"
+msgstr "Nach oben"
+
+#: tachartstrconsts.desmoveup
+msgid "Move up"
+msgstr "Nach unten"
+
+#: tachartstrconsts.desnointeger
+msgid "Value must be an integer."
+msgstr "Wert muss eine ganze Zahl sein."
+
+#: tachartstrconsts.desnonumber
+msgid "Non-numeric value."
+msgstr "Kein numerischer Wert."
+
+#: tachartstrconsts.destext
+msgid "Text"
+msgstr "Text"
+
+#: tachartstrconsts.rsadd
+msgid "Add"
+msgstr "Hinzuf"
+
+#: tachartstrconsts.rsareaseries
+msgid "Area series"
+msgstr "Fläche-Diagramm"
+
+#: tachartstrconsts.rsautoscale
+msgid "Auto scale"
+msgstr "Auto-Skalierung"
+
+#: tachartstrconsts.rsaxisclicktool
+msgid "Axis click"
+msgstr "Klick auf Achse"
+
+#: tachartstrconsts.rsbarseries
+msgid "Bar series"
+msgstr "Säulen/Balken-Diagramm"
+
+#: tachartstrconsts.rsbottom
+msgid "Bottom"
+msgstr "Unten"
+
+#: tachartstrconsts.rsboxandwhiskerseries
+msgid "Box-and-whiskers series"
+msgstr "Box-und-Whisker-Plot"
+
+#: tachartstrconsts.rsbsbdiagonal
+msgid "backward-diagonal hatch"
+msgstr "rückwärts diagonal"
+
+#: tachartstrconsts.rsbsclear
+msgctxt "tachartstrconsts.rsbsclear"
+msgid "no fill"
+msgstr "ohne Füllung"
+
+#: tachartstrconsts.rsbscross
+msgid "crossed"
+msgstr "gekreuzt"
+
+#: tachartstrconsts.rsbsdiagcross
+msgid "diagonally crossed"
+msgstr "diagonal gekreuzt"
+
+#: tachartstrconsts.rsbsfdiagonal
+msgid "forward-diagonal hatch"
+msgstr "vorwärts diagonal"
+
+#: tachartstrconsts.rsbshorizontal
+msgid "horizontally hatched"
+msgstr "horizontal schraffiert"
+
+#: tachartstrconsts.rsbsimage
+msgid "image fill"
+msgstr "Bildfüllung"
+
+#: tachartstrconsts.rsbspattern
+msgid "pattern fill"
+msgstr "Musterfüllung"
+
+#: tachartstrconsts.rsbsplineseries
+msgid "B-Spline series"
+msgstr "B-Spline"
+
+#: tachartstrconsts.rsbssolid
+msgid "solid fill"
+msgstr "ganzflächig gefüllt"
+
+#: tachartstrconsts.rsbsvertical
+msgid "vertically hatched"
+msgstr "vertikal schraffiert"
+
+#: tachartstrconsts.rsbubbleseries
+msgid "Bubble series"
+msgstr "Blasen-Diagramm"
+
+#: tachartstrconsts.rscirclesymbol
+msgid "Circle"
+msgstr "Kreis"
+
+#: tachartstrconsts.rscolormapseries
+msgid "Color map series"
+msgstr "Farbkodiertes Diagramm"
+
+#: tachartstrconsts.rsconstantline
+msgid "Constant line"
+msgstr "Konstante Linie"
+
+#: tachartstrconsts.rscrosssymbol
+msgid "Plus"
+msgstr "Plus"
+
+#: tachartstrconsts.rscubicsplineseries
+msgid "Cubic spline series"
+msgstr "Kubischer Spline"
+
+#: tachartstrconsts.rscumulativenormaldistribution
+msgid "Cumulative normal distribution"
+msgstr "Kumulative Normalverteilung"
+
+#: tachartstrconsts.rsdatapointclick
+msgid "Data point click"
+msgstr "Klick auf Datenpunkt"
+
+#: tachartstrconsts.rsdatapointcrosshair
+msgid "Data point crosshair"
+msgstr "Fadenkreuz für Datenpunkte"
+
+#: tachartstrconsts.rsdatapointdrag
+msgid "Data point drag"
+msgstr "Datenpunkt verschieben"
+
+#: tachartstrconsts.rsdatapointhint
+msgid "Data point hint"
+msgstr "Datenpunkt-Hinweis"
+
+#: tachartstrconsts.rsdatapointmarksclicktool
+msgid "Data point marks click"
+msgstr "Klick auf Datenpunkt-Markierungen"
+
+#: tachartstrconsts.rsdelete
+msgid "Delete"
+msgstr "Entf"
+
+#: tachartstrconsts.rsdiagcrosssymbol
+msgid "Cross"
+msgstr "Kreuz"
+
+#: tachartstrconsts.rsdiamondsymbol
+msgid "Diamond"
+msgstr "Diamant"
+
+#: tachartstrconsts.rsdistancemeasurement
+msgid "Distance measurement"
+msgstr "Distanzmessung"
+
+#: tachartstrconsts.rsdowntrianglesymbol
+msgid "Down triangle"
+msgstr "Dreieck abwärts"
+
+#: tachartstrconsts.rserrfitdimerror
+msgid "Non-matching count of x and y values."
+msgstr "Nicht übereinstimmende Anzahl von x- und y-Werten."
+
+#: tachartstrconsts.rserrfitmoreparamsthanvalues
+msgid "There are more fitting parameters than data values."
+msgstr "Es gibt mehr Fit-Parameter als Daten-Werte."
+
+#: tachartstrconsts.rserrfitnobasefunctions
+msgid "Not enough user-provided base functions."
+msgstr "Zu wenig benutzerdefinierte Basis-Funktionen."
+
+#: tachartstrconsts.rserrfitnofitparams
+msgid "No fit parameters specified."
+msgstr "Keine Fit-Parameter angegeben."
+
+#: tachartstrconsts.rserrfitsingular
+msgid "Fitting matrix is (nearly) singular."
+msgstr "Die Fit-Matrix ist (fast) singulär."
+
+#: tachartstrconsts.rserrillegalfitparamcount
+msgid "The number of fit parameters cannot be less than 1."
+msgstr "Die Anzahl der Fitparameter kann nicht kleiner als 1 sein."
+
+#: tachartstrconsts.rserrinvalidresulttype
+#, object-pascal-format
+msgid "Expression result type must be integer or float. Got \"%s\"."
+msgstr "Der Typ des Ausdrucksergebnisses muss integer oder float sein, ist aber \"%s\"."
+
+#: tachartstrconsts.rserrnumericaloverflow
+msgid "Numerical overflow."
+msgstr "Numerischer Überlauf."
+
+#: tachartstrconsts.rsexpressioncolormapseries
+msgid "Math expression color map series"
+msgstr "Math. Funktion (farb-kodiert)"
+
+#: tachartstrconsts.rsexpressionseries
+msgid "Math expression series"
+msgstr "Math. Funktion"
+
+#: tachartstrconsts.rsfieldseries
+msgid "Vector field series"
+msgstr "Vektorfeld-Diagramm"
+
+#: tachartstrconsts.rsfitadjcoefficientofdetermination
+msgid "Adj. coefficient of determination"
+msgstr "Angepasstes Bestimmtheitsmaß"
+
+#: tachartstrconsts.rsfitchisquared
+msgid "Chi-squared"
+msgstr "Chi-Quadrat"
+
+#: tachartstrconsts.rsfitcoefficientofdetermination
+msgid "Coefficient of determination (R2)"
+msgstr "Bestimmtheitsmaß (R2)"
+
+#: tachartstrconsts.rsfitdegreesoffreedom
+msgid "Degrees of freedom"
+msgstr "Freiheitsgrade"
+
+#: tachartstrconsts.rsfiterrorsumofsquares
+msgid "Error sum of squares (SSE)"
+msgstr "Quadratsumme der Fehler (SSE)"
+
+#: tachartstrconsts.rsfitnumfitparams
+msgid "Number of fit parameters"
+msgstr "Zahl der Fitparameter"
+
+#: tachartstrconsts.rsfitnumobservations
+msgid "Number of observations"
+msgstr "Zahl der Beobachtungen"
+
+#: tachartstrconsts.rsfitpvalue
+msgid "p value"
+msgstr "p-Wert"
+
+#: tachartstrconsts.rsfitreducedchisquared
+msgid "Reduced Chi-squared"
+msgstr "Reduziertes Chi-Quadrat"
+
+#: tachartstrconsts.rsfitregressionsumofsquares
+msgid "Regression sum of squares (SSR)"
+msgstr "Quadratsumme der Regression (SSR)"
+
+#: tachartstrconsts.rsfitresidualstandarderror
+msgid "Residual standard error"
+msgstr "Quadratsumme der Residuen"
+
+#: tachartstrconsts.rsfittotalsumofsquares
+msgid "Total sum of squares (SST)"
+msgstr "Gesamte Quadratsumme (SST)"
+
+#: tachartstrconsts.rsfittvalue
+msgid "t value"
+msgstr "t-Wert"
+
+#: tachartstrconsts.rsfitvarianceratio
+msgid "Variance ratio F"
+msgstr "Varianzverhältnis"
+
+#: tachartstrconsts.rsfullstarsymbol
+msgid "Star (full)"
+msgstr "Stern (voll)"
+
+#: tachartstrconsts.rsfunctionseries
+msgid "Function series"
+msgstr "Funktions-Diagramm"
+
+#: tachartstrconsts.rsheaderfooterclicktool
+msgid "Header/footer click"
+msgstr "Klick auf Titel/Fußnote"
+
+#: tachartstrconsts.rshexagonsymbol
+msgid "Hexagon"
+msgstr "Sechseck"
+
+#: tachartstrconsts.rshidden
+msgid "hidden"
+msgstr "unsichtbar"
+
+#: tachartstrconsts.rshighbracketsymbol
+msgid "High bracket"
+msgstr "Klammer oben"
+
+#: tachartstrconsts.rshorbarsymbol
+msgid "Horizontal bar"
+msgstr "Waagrechter Strich"
+
+#: tachartstrconsts.rsinvalidlogbase
+msgid "Logarithm base must be > 0 and <> 1."
+msgstr "Die Logarithmus-Basis muss größer als 0 und darf nicht gleich 1 sein."
+
+#: tachartstrconsts.rsinverted
+msgid "inverted"
+msgstr "invertiert"
+
+#: tachartstrconsts.rsleastsquaresfitseries
+msgid "Least-squares fit series"
+msgstr "Fit"
+
+#: tachartstrconsts.rsleft
+msgid "Left"
+msgstr "Links"
+
+#: tachartstrconsts.rsleftbracketsymbol
+msgid "Left bracket"
+msgstr "Klammer links"
+
+#: tachartstrconsts.rslefttrianglesymbol
+msgid "Left triangle"
+msgstr "Dreieck nach links"
+
+#: tachartstrconsts.rslegendclicktool
+msgid "Legend click"
+msgstr "Klick auf Legende"
+
+#: tachartstrconsts.rslinear
+msgid "Linear"
+msgstr "Linear"
+
+#: tachartstrconsts.rslineseries
+msgid "Line series"
+msgstr "Linien-Diagramm"
+
+#: tachartstrconsts.rslistsourcecolorerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not an integer."
+msgstr "Der %0:s.DataPoints-String \"%1:s\" ist keine ganze Zahl."
+
+#: tachartstrconsts.rslistsourcenumericerror
+#, object-pascal-format
+msgid "The %0:s.DataPoints string \"%1:s\" is not a valid number."
+msgstr "Der %0:s.DataPoints-String \"%1:s\" ist keine gültige Zahl."
+
+#: tachartstrconsts.rslistsourcestringformaterror
+#, object-pascal-format, fuzzy, badformat
+msgid "The data value count in the %0:s.DataPoints string \"%1:s\" differs from what is expected from XCount and YCount."
+msgstr "Die Anzahl der Datenwerte im %s.DataPoints-String \"%s\" entspricht nicht der, die aufgrund von XCount und YCount erwartet wird."
+
+#: tachartstrconsts.rslogarithmic
+msgid "Logarithmic"
+msgstr "Logarithmisch"
+
+#: tachartstrconsts.rslowbracketsymbol
+msgid "Low bracket"
+msgstr "Klammer unten"
+
+#: tachartstrconsts.rsmanhattanplotseries
+msgid "Manhattan plot series"
+msgstr "Manhatten-Plot"
+
+#: tachartstrconsts.rsmovedown
+msgid "Down"
+msgstr "Ab"
+
+#: tachartstrconsts.rsmoveup
+msgid "Up"
+msgstr "Auf"
+
+#: tachartstrconsts.rsnosymbol
+msgid "(none)"
+msgstr "(nichts)"
+
+#: tachartstrconsts.rsopenhighlowcloseseries
+msgid "Open-high-low-close series"
+msgstr "Öffnungs-/Höchst-/Tiefst-/Schluss-Kurs"
+
+#: tachartstrconsts.rspanningbyclick
+msgid "Panning by click"
+msgstr "Verschieben durch Klicken"
+
+#: tachartstrconsts.rspanningbydrag
+msgid "Panning by drag"
+msgstr "Verschieben durch Ziehen"
+
+#: tachartstrconsts.rspanningbymousewheel
+msgid "Panning by mouse wheel"
+msgstr "Verschieben mit Mausrad"
+
+#: tachartstrconsts.rsparametriccurveseries
+msgid "Parametric curve series"
+msgstr "Parametrische Kurve"
+
+#: tachartstrconsts.rspieseries
+msgid "Pie series"
+msgstr "Torten-Diagramm"
+
+#: tachartstrconsts.rspointsymbol
+msgid "Point"
+msgstr "Punkt"
+
+#: tachartstrconsts.rspolarseries
+msgid "Polar series"
+msgstr "Polar-Diagramm"
+
+#: tachartstrconsts.rspolygonseries
+msgid "Polygon series"
+msgstr "Polygon-Diagramm"
+
+#: tachartstrconsts.rspsclear
+msgctxt "tachartstrconsts.rspsclear"
+msgid "no line"
+msgstr "keine Linie"
+
+#: tachartstrconsts.rspsdash
+msgid "dashed line"
+msgstr "gestrichelt"
+
+#: tachartstrconsts.rspsdashdot
+msgid "dash-dot"
+msgstr "strich-punkt"
+
+#: tachartstrconsts.rspsdashdotdot
+msgid "dash-dot-dot"
+msgstr "strich-punkt-punkt"
+
+#: tachartstrconsts.rspsdot
+msgid "dotted line"
+msgstr "gepunktelt"
+
+#: tachartstrconsts.rspsinsideframe
+msgid "solid (inside frame)"
+msgstr "ganzflächig (innerhalb)"
+
+#: tachartstrconsts.rspspattern
+msgid "patterned line"
+msgstr "gemustert"
+
+#: tachartstrconsts.rspssolid
+msgid "solid line"
+msgstr "durchgezogen"
+
+#: tachartstrconsts.rsrectanglesymbol
+msgid "Rectangle"
+msgstr "Rechteck"
+
+#: tachartstrconsts.rsright
+msgid "Right"
+msgstr "Rechts"
+
+#: tachartstrconsts.rsrightbracketsymbol
+msgid "Right bracket"
+msgstr "Klammer rechts"
+
+#: tachartstrconsts.rsrighttrianglesymbol
+msgid "Right triangle"
+msgstr "Dreieck nach rechs"
+
+#: tachartstrconsts.rssourcecounterror
+#, object-pascal-format
+msgid "%0:s requires a chart source with at least %1:d %2:s value(s) per data point."
+msgstr "%0:s benötigt eine Datenquelle mit mindestens %1:d %2:s-Wert(en) pro Datenpunkt."
+
+#: tachartstrconsts.rssourcecounterror2
+#, object-pascal-format
+msgid "This %0:s instance must have at least %1:d %2:s value(s) per data point."
+msgstr "Diese %0:s-Instanz muss mindestens %1:d %2:s-Wert(e) pro Datenpunkt zur Verfügung stellen."
+
+#: tachartstrconsts.rssourcenoteditable
+msgid "Editable chart source required"
+msgstr "Editierbare Chart-Datenquelle erforderlich"
+
+#: tachartstrconsts.rssourcesorterror
+#, object-pascal-format
+msgid "Selected sorting parameters are not supported by %s."
+msgstr "Die ausgewählten Sortier-Parameter werden von %s nicht unterstützt."
+
+#: tachartstrconsts.rsstarsymbol
+msgid "Star (lines)"
+msgstr "Stern (Linien)"
+
+#: tachartstrconsts.rstop
+msgid "Top"
+msgstr "Oben"
+
+#: tachartstrconsts.rstrianglesymbol
+msgid "Triangle"
+msgstr "Dreieck"
+
+#: tachartstrconsts.rsuserdefined
+msgctxt "tachartstrconsts.rsuserdefined"
+msgid "User-defined"
+msgstr "Benutzerdefiniert"
+
+#: tachartstrconsts.rsuserdefinedtool
+msgctxt "tachartstrconsts.rsuserdefinedtool"
+msgid "User-defined"
+msgstr "Benutzerdefiniert"
+
+#: tachartstrconsts.rsuserdrawnseries
+msgid "User-drawn series"
+msgstr "Benutzer-definiertes Diagramm"
+
+#: tachartstrconsts.rsvertbarsymbol
+msgid "Vertical bar"
+msgstr "Senkrechter Strich"
+
+#: tachartstrconsts.rszoombyclick
+msgid "Zoom by click"
+msgstr "Zoomen durch Klicken"
+
+#: tachartstrconsts.rszoombydrag
+msgid "Zoom by drag"
+msgstr "Zoomen durch Ziehen"
+
+#: tachartstrconsts.rszoombymousewheel
+msgid "Zoom by mouse-wheel"
+msgstr "Zoomen mit Mausrad"
+
+#: tachartstrconsts.sesserieseditortitle
+msgid "Edit series"
+msgstr "Datenreihe bearbeiten"
+
+#: tachartstrconsts.tasaxistransformseditortitle
+msgid "Edit axis transformations"
+msgstr "Achsentransformation bearbeiten"
+
+#: tachartstrconsts.tasfailedsubcomponentrename
+#, object-pascal-format
+msgid "Failed to rename components: %s"
+msgstr "Fehler beim Umbenennen von Komponenten: %s"
+
+#: tachartstrconsts.tastoolseditortitle
+msgid "Edit tools"
+msgstr "Werkzeuge bearbeiten"
+

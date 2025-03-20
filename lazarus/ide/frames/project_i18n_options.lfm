@@ -1,0 +1,179 @@
+object ProjectI18NOptionsFrame: TProjectI18NOptionsFrame
+  Left = 0
+  Height = 278
+  Top = 0
+  Width = 438
+  ClientHeight = 278
+  ClientWidth = 438
+  TabOrder = 0
+  DesignLeft = 467
+  DesignTop = 355
+  object EnableI18NCheckBox: TCheckBox
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 438
+    Align = alTop
+    Caption = 'Enable i18n'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    OnChange = EnableI18NCheckBoxChange
+  end
+  object I18NGroupBox: TGroupBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 115
+    Top = 29
+    Width = 438
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    BorderSpacing.InnerBorder = 4
+    Caption = 'i18n Options'
+    ClientHeight = 98
+    ClientWidth = 436
+    TabOrder = 1
+    object PoOutDirLabel: TLabel
+      Left = 6
+      Height = 16
+      Top = 6
+      Width = 123
+      BorderSpacing.Around = 6
+      Caption = 'PO Output Directory:'
+      ParentColor = False
+    end
+    object PoForFormsCheckBox: TCheckBox
+      AnchorSideLeft.Control = PoOutDirLabel
+      AnchorSideTop.Control = POOutDirEdit
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 23
+      Top = 67
+      Width = 159
+      Caption = 'PoForFormsCheckBox'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object POOutDirEdit: TEditButton
+      AnchorSideLeft.Control = I18NGroupBox
+      AnchorSideTop.Control = PoOutDirLabel
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 6
+      Height = 33
+      Top = 28
+      Width = 422
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      ButtonWidth = 25
+      MaxLength = 0
+      NumGlyphs = 1
+      ParentShowHint = False
+      PasswordChar = #0
+      ShowHint = True
+      TabOrder = 0
+      Text = 'POOutDirEdit'
+      OnButtonClick = POOutDirButtonClick
+    end
+  end
+  object ExcludedGroupBox: TGroupBox
+    Left = 0
+    Height = 100
+    Top = 150
+    Width = 438
+    Align = alClient
+    Caption = 'Excluded'
+    ChildSizing.LeftRightSpacing = 10
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.HorizontalSpacing = 10
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 83
+    ClientWidth = 436
+    TabOrder = 2
+    object ExcludedIdentifiersPanel: TPanel
+      Left = 10
+      Height = 73
+      Top = 5
+      Width = 203
+      BevelOuter = bvNone
+      Caption = 'ExcludedIdentifiersPanel'
+      ClientHeight = 73
+      ClientWidth = 203
+      TabOrder = 0
+      object ExcludedIdentifiersMemo: TMemo
+        Left = 0
+        Height = 55
+        Top = 18
+        Width = 203
+        Align = alClient
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+        OnChange = ExcludedIdentifiersMemoChange
+      end
+      object ExcludedIdentifiersLabel: TLabel
+        Left = 0
+        Height = 16
+        Top = 0
+        Width = 203
+        Align = alTop
+        BorderSpacing.Bottom = 2
+        Caption = 'Identifiers:'
+        ParentColor = False
+      end
+    end
+    object ExcludedOriginalsPanel: TPanel
+      Left = 223
+      Height = 73
+      Top = 5
+      Width = 203
+      BevelOuter = bvNone
+      Caption = 'ExcludedOriginalsPanel'
+      ClientHeight = 73
+      ClientWidth = 203
+      TabOrder = 1
+      object ExcludedOriginalsMemo: TMemo
+        Left = 0
+        Height = 55
+        Top = 18
+        Width = 203
+        Align = alClient
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+        OnChange = ExcludedOriginalsMemoChange
+      end
+      object ExcludedOriginalsLabel: TLabel
+        Left = 0
+        Height = 16
+        Top = 0
+        Width = 203
+        Align = alTop
+        BorderSpacing.Bottom = 2
+        Caption = 'Originals:'
+        ParentColor = False
+      end
+    end
+  end
+  object ForceUpdatePoFilesCheckBox: TCheckBox
+    Left = 0
+    Height = 23
+    Top = 255
+    Width = 438
+    Align = alBottom
+    BorderSpacing.Top = 5
+    Caption = 'Update PO files on next compile'
+    TabOrder = 3
+  end
+end

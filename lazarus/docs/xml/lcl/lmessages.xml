@@ -1,0 +1,2581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+LMessages
+====================================================================
+-->
+<module name="LMessages">
+<short>
+Contains Lazarus message codes and their mapping to message codes
+for other platforms/widgetsets.
+</short>
+<descr>
+<p>
+<file>lmessages.pp</file> contains Lazarus message codes and their mapping
+to message codes for other platforms/widgetsets.
+<file>lmessages.pp</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved external references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Types"/>
+<element name="LCLType"/>
+<element name="GraphType"/>
+<element name="Messages"/>
+
+<element name="LM_USER">
+<short/>
+<descr/>
+</element>
+
+<element name="WM_USER">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LCL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_ACTIVATEITEM">
+<short/>
+<descr>
+GTK internal. Should be removed later.
+</descr>
+</element>
+
+<element name="LM_CHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_FOCUS">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CLICKED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RELEASED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_ENTER">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LEAVE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CHECKRESIZE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SETEDITABLE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOVEWORD">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOVEPAGE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOVETOROW">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOVETOCOLUMN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KILLCHAR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KILLWORD">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KILLLINE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CONFIGUREEVENT">
+<short/>
+<descr>
+GTK internal. Should be removed later.
+</descr>
+</element>
+
+<element name="LM_EXIT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CLOSEQUERY">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DRAGSTART">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_QUIT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MONTHCHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_YEARCHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DAYCHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEFIRST2">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LBUTTONTRIPLECLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LBUTTONQUADCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MBUTTONTRIPLECLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MBUTTONQUADCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RBUTTONTRIPLECLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RBUTTONQUADCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEENTER">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSELEAVE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_XBUTTONTRIPLECLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_XBUTTONQUADCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSELAST2">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_GRABFOCUS">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DRAWLISTITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DEFERREDEDIT">
+<short/>
+<descr>
+Used in TCustomDBComboBox.
+</descr>
+</element>
+
+<element name="LM_SETCURSOR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_INTERFACEFIRST">
+<short/>
+<descr>
+IDs reserved for internal messages in the interfaces.
+</descr>
+</element>
+
+<element name="LM_INTERFACELAST">
+<short/>
+<descr>
+IDs reserved for internal messages in the interfaces.
+</descr>
+</element>
+
+<element name="LM_UNKNOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_IM_COMPOSITION ">
+<short/>
+<descr/>
+</element>
+
+<element name="GTK_IM_FLAG_START">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="GTK_IM_FLAG_PREEDIT">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="GTK_IM_FLAG_END">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="GTK_IM_FLAG_COMMIT">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="GTK_IM_FLAG_REPLACE">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="SC_SIZE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_MOVE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_MINIMIZE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_MAXIMIZE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_NEXTWINDOW">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_PREVWINDOW">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_CLOSE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_VSCROLL">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_HSCROLL">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_MOUSEMENU">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_KEYMENU">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_ARRANGE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_RESTORE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_TASKLIST">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_SCREENSAVE">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_HOTKEY">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_DEFAULT">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_MONITORPOWER">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_CONTEXTHELP">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="SC_SEPARATOR">
+<short/>
+<descr>
+System Menu Command.
+</descr>
+</element>
+
+<element name="LM_NULL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CREATE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DESTROY">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOVE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SIZE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_ACTIVATE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SETFOCUS">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KILLFOCUS">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_ENABLE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_GETTEXTLENGTH">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_PAINT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_ERASEBKGND">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SHOWWINDOW">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CANCELMODE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SETCURSOR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DRAWITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MEASUREITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DELETEITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_VKEYTOITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CHARTOITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SETFONT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_COMPAREITEM">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_WINDOWPOSCHANGING">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_WINDOWPOSCHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NOTIFY">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_HELP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NOTIFYFORMAT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CONTEXTMENU">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCCALCSIZE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCHITTEST">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCPAINT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCACTIVATE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_GETDLGCODE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCMOUSEMOVE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCLBUTTONDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCLBUTTONUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_NCLBUTTONDBLCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KEYFIRST">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KEYDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KEYUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CHAR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SYSKEYDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SYSKEYUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SYSCHAR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_KEYLAST">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_COMMAND">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SYSCOMMAND">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_TIMER">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_HSCROLL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_VSCROLL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORMSGBOX">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLOREDIT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORLISTBOX">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORBTN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORDLG">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORSCROLLBAR">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CTLCOLORSTATIC">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEFIRST">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEMOVE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LBUTTONDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LBUTTONUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_LBUTTONDBLCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RBUTTONDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RBUTTONUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_RBUTTONDBLCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MBUTTONDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MBUTTONUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MBUTTONDBLCLK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEWHEEL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_XBUTTONDOWN">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_XBUTTONUP">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_XBUTTONDBLCLICK">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSEHWHEEL">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_MOUSELAST">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_PARENTNOTIFY">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CAPTURECHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DROPFILES">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_SELCHANGE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_DPICHANGED">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CUT">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_COPY">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_PASTE">
+<short/>
+<descr/>
+</element>
+
+<element name="LM_CLEAR">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawItems">
+<short/>
+<descr>
+Message from the interface to the LCL.
+</descr>
+</element>
+
+<element name="TLMDrawItems.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawItems.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawItems.Ctl">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawItems.DrawItemStruct">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawItems.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawListItem">
+<short/>
+<descr>
+Message from the interface to the LCL.
+</descr>
+</element>
+
+<element name="TLMDrawListItem.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawListItem.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawListItem.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawListItem.DrawListItemStruct">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDrawListItem.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMeasureItem">
+<short/>
+<descr>
+Message from the interface to the LCL.
+</descr>
+</element>
+
+<element name="TLMMeasureItem.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMeasureItem.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMeasureItem.idCtl">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMeasureItem.MeasureItemStruct">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMeasureItem.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNoParams">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNoParams.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNoParams.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNoParams.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNoParams.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd.DC">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEraseBkgnd.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText.TextMax">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText.Text">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetText.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetTextLength">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.CharCode">
+<short/>
+<descr>
+Virtual Key constant (VK_XXX).
+</descr>
+</element>
+
+<element name="TLMKey.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.Unused2">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.KeyData">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKey.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMChar">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKeyDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKeyUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysChar">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysKeyDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysKeyUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TCMWantSpecialKey">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode.CharCode">
+<short/>
+<descr>
+Virtual Key constant (VK_XXX).
+</descr>
+</element>
+
+<element name="TLMGetDlgCode.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode.UnusedL">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMGetDlgCode.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCut">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCopy">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaste">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.CursorWnd">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.HitTest">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.MouseMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.Dummy">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetCursor.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.Keys">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.XPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.YPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.Pos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouse.Dummy">
+<short/>
+<descr>
+Needed for 64-bit alignment.
+</descr>
+</element>
+
+<element name="TLMMouse.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseMove">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.MoveType">
+<short/>
+<descr>
+0 = update, 1 = force RequestAlign, 128 = Source is Interface (Widget has 
+moved).
+</descr>
+</element>
+
+<element name="TLMMove.XPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.YPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.Pos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMove.Dummy">
+<short/>
+<descr>
+Needed for 64-bit alignment.
+</descr>
+</element>
+
+<element name="TLMMove.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="WA_INACTIVE">
+<short/>
+<descr/>
+</element>
+
+<element name="WA_ACTIVE">
+<short/>
+<descr/>
+</element>
+
+<element name="WA_CLICKACTIVE">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.Active">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.Minimized">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.ActiveWindow">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMActivate.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.Active">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.Unused2">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCActivate.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify.IDCtrl">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify.NMHdr">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotify.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat.From">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat.Command">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNotifyFormat.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint.DC">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint.PaintStruct">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMPaint.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="PWindowPos">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.hwnd">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.hwndInsertAfter">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.x">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.y">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.cx">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.cy">
+<short/>
+<descr/>
+</element>
+
+<element name="tagWINDOWPOS.flags">
+<short/>
+<descr/>
+</element>
+
+<element name="TWindowPos">
+<short/>
+<descr/>
+</element>
+
+<element name="WINDOWPOS">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg.WindowPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosMsg.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosChanged">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMWindowPosChanging">
+<short/>
+<descr/>
+</element>
+
+<element name="PNCCalcSizeParams">
+<short/>
+<descr/>
+</element>
+
+<element name="tagNCCalcSize_Params">
+<short/>
+<descr/>
+</element>
+
+<element name="tagNCCalcSize_Params.rgrc">
+<short/>
+<descr/>
+</element>
+
+<element name="tagNCCalcSize_Params.lpPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TNCCalcSizeParams">
+<short/>
+<descr/>
+</element>
+
+<element name="ncCalcSizeParams">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.CalcValidRects">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.CalcSize_Params">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCCalcSize.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysColorChange">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.CmdType">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.ActiveWnd">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.Key">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.XPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysCommand.YPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.CharCode">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.Unused2">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.KeyData">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSysDeadChar.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.ErrSpec">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.Unused1">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.Unused2">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSystemError.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMTimeChange">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetText">
+<short/>
+<descr>
+ToDo: Remove TLMSetText.
+</descr>
+</element>
+
+<element name="TLMSetText.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetText.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetText.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetText.Text">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetText.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="PLMMouseEvent">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseEvent">
+<short/>
+<descr>
+Similar to TCMMouseWheel from Delphi. Be very careful
+when changing because some ported components depend
+on the similarity.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseEvent.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseEvent.Button">
+<short/>
+<descr>
+1=left, 2=right, 3=middle.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.WheelDelta">
+<short/>
+<descr>
+-1 for up, 1 for down.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.Unused1">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseEvent.X">
+<short/>
+<descr>
+Under GTK this is LongInt.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.Y">
+<short/>
+<descr>
+Under GTK this is LongInt.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.Unused2">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMouseEvent.Result">
+<short/>
+<descr>
+To fit standard message size.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.UserData">
+<short/>
+<descr>
+Used under GTK.
+</descr>
+</element>
+
+<element name="TLMMouseEvent.State">
+<short/>
+<descr>
+For Windows, this is the equivalent of button.
+</descr>
+</element>
+
+<element name="TLMLButtonDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMRButtonDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMButtonDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMXButtonDown">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMLButtonDblClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMRButtonDblClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMButtonDblClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMXButtonDblClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMLButtonTripleClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMRButtonTripleClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMButtonTripleClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMXButtonTripleClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMLButtonQuadClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMRButtonQuadClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMButtonQuadClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMXButtonQuadClk">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMLButtonUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMRButtonUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMMButtonUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMXButtonUp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo.WinHandle">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo.WinControl">
+<short/>
+<descr>
+Can be Nil in special cases.
+</descr>
+</element>
+
+<element name="TLastMouseInfo.MousePos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo.Time">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo.ClickCount">
+<short/>
+<descr/>
+</element>
+
+<element name="TLastMouseInfo.Button">
+<short/>
+<descr>
+1=left, 2=right, 3=middle, 4=Extra.
+</descr>
+</element>
+
+<element name="TLastMouseInfo.Down">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus.FocusedWnd">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSetFocus.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.SizeType">
+<short/>
+<descr>
+See <file>lcltype.pp</file> (e. g. Size_Restored).
+</descr>
+</element>
+
+<element name="TLMSize.Width">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.Height">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMSize.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="PLMessage">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.WParam">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.LParam">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.WParamLo">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.WParamHi">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.LParamLo">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.LParamHi">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.ResultLo">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMessage.ResultHi">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMEnter">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMExit">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll">
+<short/>
+<descr>
+<p>
+TLMScroll does not have the same size as the VCL / Winapi counterpart.
+</p>
+</descr>
+</element>
+
+<element name="TLMScroll.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.ScrollCode">
+<short/>
+<descr>
+SB_xxx.
+</descr>
+</element>
+
+<element name="TLMScroll.SmallPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.ScrollBar">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMScroll.Pos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHScroll">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMVScroll">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.Show">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.Status">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMShowWindow.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMKillFocus">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.XPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.YPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.Pos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMNCHITTEST.Dummy">
+<short/>
+<descr>
+Needed for 64-bit alignment.
+</descr>
+</element>
+
+<element name="TLMNCHITTEST.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMDestroy">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.ItemID">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.NotifyCode">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.Ctl">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMCommand.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.hWnd">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.XPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.YPos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.Pos">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMContextMenu.Dummy">
+<short/>
+<descr>
+Needed for 64-bit alignment.
+</descr>
+</element>
+
+<element name="TLMContextMenu.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp.Msg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp.UnusedMsg">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp.Unused">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp.HelpInfo">
+<short/>
+<descr/>
+</element>
+
+<element name="TLMHelp.Result">
+<short/>
+<descr/>
+</element>
+
+<element name="CBN_ERRSPACE">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_SELCHANGE">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_DBLCLK">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_SETFOCUS">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_KILLFOCUS">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_EDITCHANGE">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_EDITUPDATE">
+<short/>
+<descr>
+Combo-Box Notification Code
+</descr>
+</element>
+
+<element name="CBN_DROPDOWN">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_CLOSEUP">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_SELENDOK">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="CBN_SELENDCANCEL">
+<short/>
+<descr>
+Combo-Box Notification Code.
+</descr>
+</element>
+
+<element name="GetMessageName">
+<short>
+Gets the string representation for the specified message constant.
+</short>
+<descr>
+<p>
+<var>GetMessageName</var> can be used to convert the Integer value in
+<var>AMessage</var> to a <var>String</var> representing the message name.
+It handles LCL-specific messages <b>RECEIVED</b> from the interface. There
+are no defines for the messages sent <b>TO</b> the interface.
+</p>
+</descr>
+</element>
+<element name="GetMessageName.Result">
+<short>String with the name for the message.</short>
+</element>
+<element name="GetMessageName.AMessage">
+<short>Message number converted in the routine.</short>
+</element>
+
+</module>
+<!-- LMessages -->
+</package>
+</fpdoc-descriptions>

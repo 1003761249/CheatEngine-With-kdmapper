@@ -1,0 +1,274 @@
+object PackageEditorForm: TPackageEditorForm
+  Left = 340
+  Height = 455
+  Top = 245
+  Width = 464
+  AllowDropFiles = True
+  BorderIcons = [biSystemMenu]
+  Caption = 'PackageEditorForm'
+  ClientHeight = 455
+  ClientWidth = 464
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 400
+  KeyPreview = True
+  OnClose = PackageEditorFormClose
+  OnCloseQuery = PackageEditorFormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnDropFiles = FormDropFiles
+  LCLVersion = '2.3.0.0'
+  object ToolBar: TToolBar
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 464
+    AutoSize = True
+    ButtonHeight = 46
+    ButtonWidth = 23
+    ParentFont = False
+    ShowCaptions = True
+    TabOrder = 0
+  end
+  object PropsGroupBox: TGroupBox
+    Left = 0
+    Height = 216
+    Top = 216
+    Width = 464
+    Align = alBottom
+    Caption = 'PropsGroupBox'
+    ClientHeight = 186
+    ClientWidth = 460
+    ParentFont = False
+    TabOrder = 3
+    object PropsPageControl: TPageControl
+      Left = 0
+      Height = 186
+      Top = 0
+      Width = 460
+      ActivePage = CommonOptionsTabSheet
+      Align = alClient
+      ParentFont = False
+      ShowTabs = False
+      TabIndex = 0
+      TabOrder = 0
+      object CommonOptionsTabSheet: TTabSheet
+        Caption = 'Common'
+        ParentFont = False
+      end
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 432
+    Width = 464
+    Panels = <>
+    ParentFont = False
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 211
+    Width = 464
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object FilterPanel: TPanel
+    Left = 0
+    Height = 28
+    Top = 48
+    Width = 464
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 28
+    ClientWidth = 464
+    ParentFont = False
+    TabOrder = 1
+    object DirectoryHierarchyButton: TSpeedButton
+      AnchorSideLeft.Control = OpenButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = OpenButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideBottom.Side = asrBottom
+      Left = 39
+      Height = 25
+      Top = 2
+      Width = 25
+      AllowAllUp = True
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 11
+      Constraints.MinHeight = 25
+      Constraints.MinWidth = 25
+      GroupIndex = 1
+      OnClick = DirectoryHierarchyButtonClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object SortAlphabeticallyButton: TSpeedButton
+      AnchorSideLeft.Control = DirectoryHierarchyButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = OpenButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideBottom.Side = asrBottom
+      Left = 65
+      Height = 25
+      Top = 2
+      Width = 25
+      AllowAllUp = True
+      AutoSize = True
+      BorderSpacing.Left = 1
+      Constraints.MinHeight = 25
+      Constraints.MinWidth = 25
+      GroupIndex = 2
+      OnClick = SortAlphabeticallyButtonClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object FilterEdit: TTreeFilterEdit
+      AnchorSideLeft.Control = MoveDownBtn
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = SortAlphabeticallyButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Side = asrBottom
+      Left = 163
+      Height = 32
+      Top = -2
+      Width = 300
+      ButtonWidth = 23
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 11
+      NumGlyphs = 1
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 0
+      OnKeyDown = FilterEditKeyDown
+      FilteredTreeview = ItemsTreeView
+    end
+    object OpenButton: TSpeedButton
+      AnchorSideLeft.Control = FilterPanel
+      AnchorSideTop.Control = FilterPanel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideBottom.Side = asrBottom
+      Left = 3
+      Height = 25
+      Top = 2
+      Width = 25
+      AllowAllUp = True
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 3
+      Constraints.MinHeight = 25
+      Constraints.MinWidth = 25
+      OnClick = OpenButtonClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object MoveUpBtn: TSpeedButton
+      AnchorSideLeft.Control = SortAlphabeticallyButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = OpenButton
+      AnchorSideTop.Side = asrCenter
+      Left = 101
+      Height = 26
+      Top = 1
+      Width = 25
+      BorderSpacing.Left = 11
+      Constraints.MinHeight = 25
+      Constraints.MinWidth = 25
+      Enabled = False
+      OnClick = MoveUpBtnClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+    object MoveDownBtn: TSpeedButton
+      AnchorSideLeft.Control = MoveUpBtn
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = OpenButton
+      AnchorSideTop.Side = asrCenter
+      Left = 127
+      Height = 26
+      Top = 1
+      Width = 25
+      BorderSpacing.Left = 1
+      Constraints.MinHeight = 25
+      Constraints.MinWidth = 25
+      Enabled = False
+      OnClick = MoveDownBtnClick
+      ShowHint = True
+      ParentFont = False
+      ParentShowHint = False
+    end
+  end
+  object ItemsTreeView: TTreeView
+    Left = 0
+    Height = 134
+    Top = 77
+    Width = 464
+    Align = alClient
+    BorderSpacing.Top = 1
+    DragMode = dmAutomatic
+    MultiSelect = True
+    MultiSelectStyle = [msControlSelect, msShiftSelect, msSiblingOnly]
+    ParentFont = False
+    PopupMenu = ItemsPopupMenu
+    ReadOnly = True
+    RightClickSelect = True
+    TabOrder = 2
+    OnAdvancedCustomDrawItem = ItemsTreeViewAdvancedCustomDrawItem
+    OnDblClick = ItemsTreeViewDblClick
+    OnDragDrop = ItemsTreeViewDragDrop
+    OnDragOver = ItemsTreeViewDragOver
+    OnKeyDown = ItemsTreeViewKeyDown
+    OnSelectionChanged = ItemsTreeViewSelectionChanged
+    Options = [tvoAllowMultiselect, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+  end
+  object ItemsPopupMenu: TPopupMenu
+    OnPopup = ItemsPopupMenuPopup
+    Left = 180
+    Top = 10
+  end
+  object UsePopupMenu: TPopupMenu
+    OnPopup = UsePopupMenuPopup
+    Left = 70
+    Top = 10
+  end
+  object MorePopupMenu: TPopupMenu
+    OnPopup = MorePopupMenuPopup
+    Left = 300
+    Top = 10
+  end
+  object AddPopupMenu: TPopupMenu
+    Left = 120
+    Top = 10
+    object mnuAddDiskFile: TMenuItem
+      Caption = 'Add file...'
+      Default = True
+      OnClick = mnuAddDiskFileClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object mnuAddNewFile: TMenuItem
+      Caption = 'New file of type...'
+      OnClick = mnuAddNewFileClick
+    end
+    object mnuAddNewComp: TMenuItem
+      Caption = 'New component...'
+      OnClick = mnuAddNewCompClick
+    end
+    object mnuAddNewReqr: TMenuItem
+      Caption = 'New requirement...'
+      OnClick = mnuAddNewReqrClick
+    end
+    object mnuAddFPMakeReq: TMenuItem
+      Caption = 'New FPMake requirement...'
+      OnClick = mnuAddFPMakeReqClick
+    end
+  end
+end

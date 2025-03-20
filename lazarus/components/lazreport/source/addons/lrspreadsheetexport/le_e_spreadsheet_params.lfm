@@ -1,0 +1,362 @@
+object leSpreadsheetParamsForm: TleSpreadsheetParamsForm
+  Left = 725
+  Height = 387
+  Top = 260
+  Width = 406
+  Caption = 'Export to spreadsheet'
+  ClientHeight = 387
+  ClientWidth = 406
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.7'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 339
+    Width = 394
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 333
+    Top = 0
+    Width = 406
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'General'
+      ClientHeight = 295
+      ClientWidth = 400
+      object GroupBox1: TGroupBox
+        AnchorSideLeft.Control = TabSheet1
+        AnchorSideRight.Control = TabSheet1
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 170
+        Top = 192
+        Width = 400
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        Caption = 'Page range'
+        ClientHeight = 148
+        ClientWidth = 396
+        TabOrder = 0
+        Visible = False
+        object AllPagesRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox1
+          AnchorSideTop.Control = GroupBox1
+          Left = 6
+          Height = 24
+          Top = 6
+          Width = 76
+          BorderSpacing.Around = 6
+          Caption = 'All page'
+          Checked = True
+          TabOrder = 0
+          TabStop = True
+        end
+        object CurrentPageRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox1
+          AnchorSideTop.Control = AllPagesRadioButton
+          AnchorSideTop.Side = asrBottom
+          Left = 6
+          Height = 24
+          Top = 36
+          Width = 109
+          BorderSpacing.Around = 6
+          Caption = 'Current page'
+          TabOrder = 1
+        end
+        object PagesRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox1
+          AnchorSideTop.Control = CurrentPageRadioButton
+          AnchorSideTop.Side = asrBottom
+          Left = 6
+          Height = 24
+          Top = 66
+          Width = 67
+          BorderSpacing.Around = 6
+          Caption = 'Pages:'
+          TabOrder = 2
+        end
+        object PagesEdit: TEdit
+          AnchorSideLeft.Control = PagesRadioButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = CurrentPageRadioButton
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GroupBox1
+          AnchorSideRight.Side = asrBottom
+          Left = 79
+          Height = 30
+          Top = 66
+          Width = 311
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Around = 6
+          TabOrder = 3
+        end
+        object Label1: TLabel
+          AnchorSideLeft.Control = GroupBox1
+          AnchorSideTop.Control = PagesEdit
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GroupBox1
+          AnchorSideRight.Side = asrBottom
+          Left = 6
+          Height = 40
+          Top = 102
+          Width = 384
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Around = 6
+          Caption = 'Enter page numbers and/or page ranges,'#10'separated by commas. For example, 1,3,5-12'
+          ParentColor = False
+        end
+      end
+      object GroupBox2: TGroupBox
+        AnchorSideLeft.Control = TabSheet1
+        AnchorSideTop.Control = TabSheet1
+        AnchorSideRight.Control = TabSheet1
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 124
+        Top = 0
+        Width = 400
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        Caption = 'Data grouping'
+        ClientHeight = 102
+        ClientWidth = 396
+        TabOrder = 1
+        object LikeReportRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox2
+          AnchorSideTop.Control = GroupBox2
+          Left = 6
+          Height = 24
+          Top = 6
+          Width = 119
+          BorderSpacing.Around = 6
+          Caption = 'Like the report'
+          Checked = True
+          TabOrder = 0
+          TabStop = True
+        end
+        object AllInOnePageRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox2
+          AnchorSideTop.Control = LikeReportRadioButton
+          AnchorSideTop.Side = asrBottom
+          Left = 6
+          Height = 24
+          Top = 36
+          Width = 119
+          BorderSpacing.Around = 6
+          Caption = 'All in one page'
+          TabOrder = 1
+        end
+        object RowsPerChunkRadioButton: TRadioButton
+          AnchorSideLeft.Control = GroupBox2
+          AnchorSideTop.Control = AllInOnePageRadioButton
+          AnchorSideTop.Side = asrBottom
+          Left = 6
+          Height = 24
+          Top = 66
+          Width = 228
+          BorderSpacing.Around = 6
+          Caption = 'Chunks. Each chunk has (rows):'
+          TabOrder = 2
+          Visible = False
+        end
+        object RowsPerChunkEdit: TSpinEdit
+          AnchorSideLeft.Control = RowsPerChunkRadioButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = AllInOnePageRadioButton
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GroupBox2
+          AnchorSideRight.Side = asrBottom
+          Left = 240
+          Height = 30
+          Top = 66
+          Width = 150
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Around = 6
+          MaxValue = 655360
+          MinValue = 1
+          TabOrder = 3
+          Value = 50
+          Visible = False
+        end
+      end
+      object OpenAfterExportCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet1
+        AnchorSideTop.Control = GroupBox2
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 130
+        Width = 141
+        BorderSpacing.Around = 6
+        Caption = 'Open after export'
+        TabOrder = 2
+      end
+      object AutoCreateFileCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet1
+        AnchorSideTop.Control = OpenAfterExportCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 160
+        Width = 124
+        BorderSpacing.Around = 6
+        Caption = 'Auto create file'
+        TabOrder = 3
+        Visible = False
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Export settings'
+      ClientHeight = 295
+      ClientWidth = 400
+      object ExportPicturesCheckBox: TCheckBox
+        AnchorSideLeft.Control = Label2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = TabSheet2
+        Left = 207
+        Height = 24
+        Top = 6
+        Width = 123
+        BorderSpacing.Around = 6
+        Caption = 'Export pictures'
+        TabOrder = 0
+      end
+      object MergeCellsCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = TabSheet2
+        Left = 6
+        Height = 24
+        Top = 6
+        Width = 99
+        BorderSpacing.Around = 6
+        Caption = 'Merge cells'
+        TabOrder = 1
+      end
+      object PageBreaksCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = MergeCellsCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 265
+        Width = 102
+        Anchors = [akLeft]
+        BorderSpacing.Around = 6
+        Caption = 'Page breaks'
+        TabOrder = 2
+        Visible = False
+      end
+      object DeleteEmptyRowsCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = MergeCellsCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 36
+        Width = 150
+        BorderSpacing.Around = 6
+        Caption = 'Delete empty rows'
+        TabOrder = 3
+      end
+      object ExportReportTitleCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = ExportPrintRangeCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 126
+        Width = 142
+        BorderSpacing.Around = 6
+        Caption = 'Export report title'
+        TabOrder = 8
+      end
+      object ExportPageFooterCheckBox: TCheckBox
+        AnchorSideLeft.Control = Label2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ExportPageHeaderCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 207
+        Height = 24
+        Top = 156
+        Width = 146
+        BorderSpacing.Around = 6
+        Caption = 'Export page footer'
+        TabOrder = 9
+      end
+      object ExportPageHeaderCheckBox: TCheckBox
+        AnchorSideLeft.Control = Label2
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ExportPrintRangeCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 207
+        Height = 24
+        Top = 126
+        Width = 150
+        BorderSpacing.Around = 6
+        Caption = 'Export page header'
+        TabOrder = 6
+      end
+      object ExportReportSummaryCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = ExportReportTitleCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 156
+        Width = 174
+        BorderSpacing.Around = 6
+        Caption = 'Export report summary'
+        TabOrder = 7
+      end
+      object ExportURLCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = DeleteEmptyRowsCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 66
+        Width = 60
+        BorderSpacing.Around = 6
+        Caption = 'URL''s'
+        TabOrder = 4
+      end
+      object ExportPrintRangeCheckBox: TCheckBox
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = ExportURLCheckBox
+        AnchorSideTop.Side = asrBottom
+        Left = 6
+        Height = 24
+        Top = 96
+        Width = 141
+        BorderSpacing.Around = 6
+        Caption = 'Export print range'
+        TabOrder = 5
+      end
+      object Label2: TLabel
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideTop.Control = TabSheet2
+        Left = 200
+        Height = 1
+        Top = 0
+        Width = 1
+        ParentColor = False
+      end
+    end
+  end
+end

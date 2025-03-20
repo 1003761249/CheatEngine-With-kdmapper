@@ -1,0 +1,1997 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Péter Gábor <ptrg@freemail.hu>\n"
+"Language-Team: Magyar (Hungarian)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+
+#: opkman_const.rsaddrepositorypackagefrm_bcancel_caption
+msgctxt "opkman_const.rsaddrepositorypackagefrm_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rsaddrepositorypackagefrm_bcancel_hint
+msgid "Close the dialog"
+msgstr "Ablak bezárása"
+
+#: opkman_const.rsaddrepositorypackagefrm_bok_caption
+msgctxt "opkman_const.rsaddrepositorypackagefrm_bok_caption"
+msgid "OK"
+msgstr "Ok"
+
+#: opkman_const.rsaddrepositorypackagefrm_bok_hint
+msgid "Close the dialog and create the package"
+msgstr "Ablak bezárása és a csomag létrehozása"
+
+#: opkman_const.rsaddrepositorypackagefrm_caption
+msgid "Add repository package"
+msgstr "Tárolócsomag hozzáadása"
+
+#: opkman_const.rsaddrepositorypackagefrm_rbaddexisting_caption
+msgid "Add existing repository package from file"
+msgstr "Tárolócsomag hozzáadása fájlból"
+
+#: opkman_const.rsaddrepositorypackagefrm_rbcreatenew_caption
+msgid "Create a new repository package"
+msgstr "Új tárolócsomag létrehozása"
+
+#: opkman_const.rscategoriesfrm_bcancel_caption
+msgctxt "opkman_const.rscategoriesfrm_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rscategoriesfrm_byes_caption
+msgctxt "opkman_const.rscategoriesfrm_byes_caption"
+msgid "OK"
+msgstr "Ok"
+
+#: opkman_const.rscategoriesfrm_caption1
+msgctxt "opkman_const.rscategoriesfrm_caption1"
+msgid "List with categories"
+msgstr "Kategóriák listája"
+
+#: opkman_const.rscategoriesfrm_caption2
+msgid "List with Lazarus versions"
+msgstr "Lazarus változatok listája"
+
+#: opkman_const.rscategoriesfrm_caption3
+msgid "List with FPC versions"
+msgstr "FPC változatok listája"
+
+#: opkman_const.rscategoriesfrm_caption4
+msgid "List with supported widgetsets"
+msgstr "Támogatott vezérlőkészletek listája"
+
+#: opkman_const.rscategoriesfrm_lbmessage_caption
+msgid "Please select (check) one or more items"
+msgstr "Válasszon ki (jelöljön be) egy vagy több elemet"
+
+#: opkman_const.rscolors_caption
+msgctxt "opkman_const.rscolors_caption"
+msgid "Colors"
+msgstr "Színek"
+
+#: opkman_const.rscolors_cd_title
+msgid "Select color"
+msgstr "Szín választása"
+
+#: opkman_const.rscreatejsonforupdatesfrm_bclose_caption
+msgctxt "opkman_const.rscreatejsonforupdatesfrm_bclose_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rscreatejsonforupdatesfrm_bcreate_caption
+msgctxt "opkman_const.rscreatejsonforupdatesfrm_bcreate_caption"
+msgid "Create"
+msgstr "Létrehozás"
+
+#: opkman_const.rscreatejsonforupdatesfrm_bhelp_caption
+msgctxt "opkman_const.rscreatejsonforupdatesfrm_bhelp_caption"
+msgid "Help"
+msgstr "Súgó"
+
+#: opkman_const.rscreatejsonforupdatesfrm_btest_caption
+msgid "Test"
+msgstr "Teszt"
+
+#: opkman_const.rscreatejsonforupdatesfrm_caption
+msgid "Create update JSON for package:"
+msgstr "JSON létrehozása a csomag frissítéséhez:"
+
+#: opkman_const.rscreatejsonforupdatesfrm_column0_text
+msgid "PackageFileName"
+msgstr "Csomagfájl neve"
+
+#: opkman_const.rscreatejsonforupdatesfrm_column1_text
+msgctxt "opkman_const.rscreatejsonforupdatesfrm_column1_text"
+msgid "Version"
+msgstr "Változat"
+
+#: opkman_const.rscreatejsonforupdatesfrm_column2_text
+msgid "Force notify"
+msgstr "Értesítés kényszerítése"
+
+#: opkman_const.rscreatejsonforupdatesfrm_column3_text
+msgid "Internal version"
+msgstr "Belső változat"
+
+#: opkman_const.rscreatejsonforupdatesfrm_error1
+msgid "Cannot create JSON for updates! Error message:"
+msgstr "A JSON állomány létrehozása a frissítésekhez nem sikerült! Hibaüzenet:"
+
+#: opkman_const.rscreatejsonforupdatesfrm_lblinktozip_caption
+msgid "Link to the package zip file"
+msgstr "A csomag zip fájljára mutató hivatkozás"
+
+#: opkman_const.rscreatejsonforupdatesfrm_message0
+msgid "Please check a repository package!"
+msgstr "Jelöljön ki egy tárolócsomagot!"
+
+#: opkman_const.rscreatejsonforupdatesfrm_message1
+msgid "Please check only one repository package!"
+msgstr "Csak egy tárolócsomagot jelöljön ki!"
+
+#: opkman_const.rscreatejsonforupdatesfrm_message2
+msgid "Please enter a valid URL!"
+msgstr "Adjon meg érvényes URL-t!"
+
+#: opkman_const.rscreatejsonforupdatesfrm_message3
+msgid "Please check at least one package file!"
+msgstr "Jelöljön ki legalább egy csomagfájlt!"
+
+#: opkman_const.rscreatejsonforupdatesfrm_message4
+msgid "JSON for updates successfully created."
+msgstr "A JSON állomány a frissítésekhez sikeresen létre lett hozva."
+
+#: opkman_const.rscreaterepositoryfrm_badd_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_badd_caption"
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: opkman_const.rscreaterepositoryfrm_badd_hint
+msgid "Add package to the current repository"
+msgstr "Csomag hozzáadása az aktuális tárolóhoz"
+
+#: opkman_const.rscreaterepositoryfrm_bcancel_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rscreaterepositoryfrm_bcancel_hint
+msgctxt "opkman_const.rscreaterepositoryfrm_bcancel_hint"
+msgid "Close this dialog"
+msgstr "Párbeszéd bezárása"
+
+#: opkman_const.rscreaterepositoryfrm_bcreate_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_bcreate_caption"
+msgid "Create"
+msgstr "Létrehozás"
+
+#: opkman_const.rscreaterepositoryfrm_bcreate_hint
+msgctxt "opkman_const.rscreaterepositoryfrm_bcreate_hint"
+msgid "Create private repository"
+msgstr "Személyes tároló létrehozása"
+
+#: opkman_const.rscreaterepositoryfrm_bdelete_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_bdelete_caption"
+msgid "Delete"
+msgstr "Törlés"
+
+#: opkman_const.rscreaterepositoryfrm_bdelete_hint
+msgid "Delete package from the current repository"
+msgstr "Csomag törlése az aktuális tárolóból"
+
+#: opkman_const.rscreaterepositoryfrm_bopen_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_bopen_caption"
+msgid "Open"
+msgstr "Megnyitás"
+
+#: opkman_const.rscreaterepositoryfrm_bopen_hint
+msgid "Open private respository"
+msgstr "Személyes tároló megynitása"
+
+#: opkman_const.rscreaterepositoryfrm_caption
+msgctxt "opkman_const.rscreaterepositoryfrm_caption"
+msgid "Create/Edit private repository"
+msgstr "Személyes tároló létrehozása/szerkesztése"
+
+#: opkman_const.rscreaterepositoryfrm_conf1
+#, object-pascal-format
+msgid "Are you sure you wish to delete package: \"%s\"?"
+msgstr "Biztosan törölni szeretné a(z) „%s” csomagot?"
+
+#: opkman_const.rscreaterepositoryfrm_conf2
+#, object-pascal-format
+msgid "The following file: \"%s\" already exists in the current repository. Overwrite?"
+msgstr "A következő fájl már létezik a tárolóban: \"%s\". Felülírás?"
+
+#: opkman_const.rscreaterepositoryfrm_error1
+#, object-pascal-format
+msgid ""
+"Cannot open private repository: \"%s\". Error message: \n"
+"\"%s\""
+msgstr ""
+"A személyes tároló nem nyitható meg: \"%s\". Hibaüzenet: \n"
+"\"%s\""
+
+#: opkman_const.rscreaterepositoryfrm_error3
+#, object-pascal-format
+msgid ""
+"Cannot save private repository: \"%s\". Error message: \n"
+"\"%s\""
+msgstr ""
+"A személyes tároló nem menthető: \"%s\". Hibaüzenet: \n"
+"\"%s\""
+
+#: opkman_const.rscreaterepositoryfrm_error4
+msgid "Cannot add package to repository!"
+msgstr "Nem lehet csomagot hozzáadni a tárolóhoz!"
+
+#: opkman_const.rscreaterepositoryfrm_error5
+#, object-pascal-format
+msgid "Cannot delete package: \"%s\"!"
+msgstr "A csomag nem törölhető: \"%s\""
+
+#: opkman_const.rscreaterepositoryfrm_info1
+#, object-pascal-format
+msgid ""
+"The following directory: \"%s\" is not empty.\n"
+"It's recommended to save the repository to an empty directory. Continue?"
+msgstr ""
+"A következő könyvtár nem üres: \"%s\"\n"
+"Jobb lenne a tárolót egy üres könyvtárba menteni. Folytatás?"
+
+#: opkman_const.rscreaterepositoryfrm_info3
+#, object-pascal-format
+msgid ""
+"The following package: \"%s\" is already in the current repository.\n"
+"Each repository and Lazarus package must be unique!"
+msgstr ""
+"A következő csomag már megtalálható az aktuális tárolóban: \"%s\"\n"
+"Minden tárolónak és Lazarus csomagnak csak egy példányban szabad létezni!"
+
+#: opkman_const.rscreaterepositoryfrm_info5
+#, object-pascal-format
+msgid ""
+"The following Lazarus package: \"%s\" is already in the current repository.\n"
+"Each repository and Lazarus package must be unique!"
+msgstr ""
+"A következő Lazarus csomag már megtalálható az aktuális tárolóban: \"%s\"\n"
+"Minden tárolónak és Lazarus csomagnak csak egy példányban szabad létezni!"
+
+#: opkman_const.rscreaterepositoryfrm_info7
+msgid "Package successfully added to repository."
+msgstr "A csomag sikeresen hozzá lett adva a tárolóhoz."
+
+#: opkman_const.rscreaterepositoryfrm_mirepdetails_caption
+msgid "Edit repository details"
+msgstr "Tároló leírásának szerkesztése"
+
+#: opkman_const.rscreaterepositoryfrm_repositoryaddress
+msgctxt "opkman_const.rscreaterepositoryfrm_repositoryaddress"
+msgid "Address"
+msgstr "Cím"
+
+#: opkman_const.rscreaterepositoryfrm_repositorydescription
+msgctxt "opkman_const.rscreaterepositoryfrm_repositorydescription"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rscreaterepositoryfrm_vstdetails_column0
+msgctxt "opkman_const.rscreaterepositoryfrm_vstdetails_column0"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rscreaterepositoryfrm_vstdetails_column1
+msgctxt "opkman_const.rscreaterepositoryfrm_vstdetails_column1"
+msgid "Data"
+msgstr "Adat"
+
+#: opkman_const.rscreaterepositoryfrm_vstpackages_column0
+msgid "Repository/Packages"
+msgstr "Tároló/Csomagok"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_author
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_author"
+msgid "Author"
+msgstr "Szerző"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_category
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_category"
+msgid "Category"
+msgstr "Kategória"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_dependecies
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_dependecies"
+msgid "Dependencies"
+msgstr "Függőségek"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_description
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_description"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_downloadurl
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_downloadurl"
+msgid "Update link (JSON)"
+msgstr "Frissítési hivatkozás (JSON)"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_fpccompatibility
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_fpccompatibility"
+msgid "FPC compatibility"
+msgstr "FPC kompatibilitás"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_homepageurl
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_homepageurl"
+msgid "Home page"
+msgstr "Honlap"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_lazcompatibility
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_lazcompatibility"
+msgid "Lazarus compatibility"
+msgstr "Lazarus kompatibilitás"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_license
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_license"
+msgid "License"
+msgstr "Licenc"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_packagetype
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_packagetype"
+msgid "Package type"
+msgstr "Csomag típusa"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_packagetype0
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_packagetype0"
+msgid "Designtime and runtime"
+msgstr "Tervezési és futásidejű"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_packagetype1
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_packagetype1"
+msgid "Designtime"
+msgstr "Tervezési"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_packagetype2
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_packagetype2"
+msgid "Runtime"
+msgstr "Futásidejű"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_packagetype3
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_packagetype3"
+msgid "Runtime only, cannot be installed in IDE"
+msgstr "Csak futásidejű, nem telepíthető az IDE-be"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_repositoryfiledate
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_repositoryfiledate"
+msgid "Available since"
+msgstr "Elérhetőség kezdete"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilehash
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilehash"
+msgid "Repository filehash"
+msgstr "Ellenőrzőösszeg (a tárolóban)"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilename
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilename"
+msgid "Repository filename"
+msgstr "Fájlnév (a tárolóban)"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilesize
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_repositoryfilesize"
+msgid "Repository filesize"
+msgstr "Fájlméret (a tárolóban)"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_supportedwidgetsets
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_supportedwidgetsets"
+msgid "Supported widgetsets"
+msgstr "Támogatott vezérlőkészletek"
+
+#: opkman_const.rscreaterepositoryfrm_vsttext_version
+msgctxt "opkman_const.rscreaterepositoryfrm_vsttext_version"
+msgid "Version"
+msgstr "Változat"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcancel_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcancel_hint
+msgctxt "opkman_const.rscreaterepositorypackagefrm_bcancel_hint"
+msgid "Close this dialog"
+msgstr "Párbeszéd bezárása"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcreate_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_bcreate_caption"
+msgid "Create"
+msgstr "Létrehozás"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcreate_caption1
+msgctxt "opkman_const.rscreaterepositorypackagefrm_bcreate_caption1"
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcreate_hint
+msgid "Create files locally"
+msgstr "Fájlok létrehozása helyben"
+
+#: opkman_const.rscreaterepositorypackagefrm_bcreate_hint1
+msgid "Add package to repository"
+msgstr "Csomag hozzáadása a tárolóhoz"
+
+#: opkman_const.rscreaterepositorypackagefrm_bhelp_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_bhelp_caption"
+msgid "Help"
+msgstr "Súgó"
+
+#: opkman_const.rscreaterepositorypackagefrm_bhelp_hint
+msgid "Open help"
+msgstr "Súgó megnyitása"
+
+#: opkman_const.rscreaterepositorypackagefrm_boptions_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_boptions_caption"
+msgid "Options"
+msgstr "Beállítások"
+
+#: opkman_const.rscreaterepositorypackagefrm_boptions_hint
+msgid "Open options dialog"
+msgstr "Beállítások ablakának megjelenítése"
+
+#: opkman_const.rscreaterepositorypackagefrm_bsubmit_caption
+msgid "Submit"
+msgstr "Küldés"
+
+#: opkman_const.rscreaterepositorypackagefrm_bsubmit_hint
+msgid "Submit files to remote server"
+msgstr "Fájlok küldése a távoli kiszolgálóra"
+
+#: opkman_const.rscreaterepositorypackagefrm_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_caption"
+msgid "Create repository package"
+msgstr "Tárolócsomag létrehozása"
+
+#: opkman_const.rscreaterepositorypackagefrm_error0
+msgid "Error reading package"
+msgstr "Hiba a csomag olvasása közben"
+
+#: opkman_const.rscreaterepositorypackagefrm_error1
+msgid "Cannot create zip file:"
+msgstr "A zip fájl nem hozható létre:"
+
+#: opkman_const.rscreaterepositorypackagefrm_error2
+msgid "Cannot create JSON file:"
+msgstr "A JSON fájl nem hozható létre:"
+
+#: opkman_const.rscreaterepositorypackagefrm_error3
+#, object-pascal-format
+msgid "Cannot send file: \"%s\""
+msgstr "A fájl nem küldhető el: \"%s\""
+
+#: opkman_const.rscreaterepositorypackagefrm_lbcategory_caption
+msgid "Category:"
+msgstr "Kategória:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbdisplayname_caption
+msgid "Display name:"
+msgstr "Megjelenítendő név:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbdownloadurl_caption
+msgid "Update link (JSON):"
+msgstr "Frissítési hivatkozás (JSON):"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbfpccompatibility_caption
+msgid "FPC compatibility:"
+msgstr "FPC kompatibilitás:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbhomepageurl_caption
+msgid "Home page:"
+msgstr "Honlap:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lblazcompatibility_caption
+msgid "Lazarus compatibility:"
+msgstr "Lazarus kompatibilitás:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbpackagedir_caption
+msgid "Package directory:"
+msgstr "Csomag könyvtára:"
+
+# Helyszűke miatt csak ennyi, egyébként "Támogatott vezérlőkészletek" lenne.
+#: opkman_const.rscreaterepositorypackagefrm_lbsupportedwidgetset_caption
+msgid "Supported widgetsets:"
+msgstr "Vezérlőkészlet támogatás:"
+
+#: opkman_const.rscreaterepositorypackagefrm_lbsvnurl_caption
+msgctxt "opkman_const.rscreaterepositorypackagefrm_lbsvnurl_caption"
+msgid "SVN:"
+msgstr "SVN:"
+
+#: opkman_const.rscreaterepositorypackagefrm_message0
+msgid "Please select a category for package:"
+msgstr "Válasszon kategóriát a csomag számára:"
+
+#: opkman_const.rscreaterepositorypackagefrm_message1
+msgid "Please enter supported Lazarus versions for package:"
+msgstr "Adja meg a csomag által támogatott Lazarus változatokat:"
+
+#: opkman_const.rscreaterepositorypackagefrm_message10
+msgid "Cancelling upload. Please wait..."
+msgstr "Feltöltés megszakítása. Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_message2
+msgid "Please enter supported FPC versions for package:"
+msgstr "Adja meg a csomag által támogatott FPC változatokat:"
+
+#: opkman_const.rscreaterepositorypackagefrm_message3
+msgid "Please enter supported widgetsets for package:"
+msgstr "Adja meg a csomag által támogatott vezérlőkészleteket:"
+
+#: opkman_const.rscreaterepositorypackagefrm_message4
+msgid "Compressing package. Please wait..."
+msgstr "Csomag tömörítése. Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_message5
+msgid "Creating JSON. Please wait..."
+msgstr "JSON létrehozása. Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_message6
+msgctxt "opkman_const.rscreaterepositorypackagefrm_message6"
+msgid "Creating JSON for updates. Please wait..."
+msgstr "JSON létrehozása a frissítésekhez. Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_message7
+msgctxt "opkman_const.rscreaterepositorypackagefrm_message7"
+msgid "Repository package successfully created."
+msgstr "A tárolócsomag létrehozása sikerült."
+
+#: opkman_const.rscreaterepositorypackagefrm_message8
+#, object-pascal-format
+msgid "Sending files (\"%s\"). Please wait..."
+msgstr "Fájlok küldése (\"%s\"). Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_message9
+msgid ""
+"Files successfully sent. Thank you for submitting packages!\n"
+"Your request will be processed in 24 hours."
+msgstr ""
+"A fájlok sikeresen el lettek küldve. Köszönet a csomagok beküldéséért!\n"
+"A kérés 24 órán belül fel lesz dolgozva."
+
+#: opkman_const.rscreaterepositorypackagefrm_nopackage
+msgid "No packages found!"
+msgstr "Nem találhatók csomagok!"
+
+#: opkman_const.rscreaterepositorypackagefrm_pncaption_caption0
+msgid "Available packages"
+msgstr "Elérhető csomagok"
+
+#: opkman_const.rscreaterepositorypackagefrm_pncaption_caption1
+msgctxt "opkman_const.rscreaterepositorypackagefrm_pncaption_caption1"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rscreaterepositorypackagefrm_pncaption_caption2
+msgctxt "opkman_const.rscreaterepositorypackagefrm_pncaption_caption2"
+msgid "Data"
+msgstr "Adat"
+
+#: opkman_const.rscreaterepositorypackagefrm_pnmessage_caption
+msgid "Please wait..."
+msgstr "Kis türelmet..."
+
+#: opkman_const.rscreaterepositorypackagefrm_sddtitledst
+msgid "Save repository package to..."
+msgstr "Tárolócsomag mentése máshová..."
+
+#: opkman_const.rscreaterepositorypackagefrm_sddtitlesrc
+msgid "Select package directory"
+msgstr "Csomag könyvtárának kiválasztása"
+
+#: opkman_const.rslazaruspackagemanager
+msgid "Online Package Manager"
+msgstr "Hálózati Csomagkezelő (OPM)"
+
+#: opkman_const.rsmainfrm_breturn_caption
+msgid "Return"
+msgstr "Visszatérés"
+
+#: opkman_const.rsmainfrm_cball_caption
+msgid "All/None"
+msgstr "Mind/Semmi"
+
+#: opkman_const.rsmainfrm_cball_hint
+msgid "Check/Uncheck packages"
+msgstr "Csomagok kijelölése / kijelölések törlése"
+
+#: opkman_const.rsmainfrm_cbfilterby_hint
+msgid "Filter package list by:"
+msgstr "Csomaglista szűrése"
+
+#: opkman_const.rsmainfrm_edfilter_hint
+msgid "Type filter text"
+msgstr "Szűrőszöveg bevitele"
+
+#: opkman_const.rsmainfrm_lbfilter_caption
+msgid "Filter by:"
+msgstr "Szűrés:"
+
+#: opkman_const.rsmainfrm_miascendent
+msgid "Ascendent"
+msgstr "Növekvő"
+
+#: opkman_const.rsmainfrm_mibydate
+msgid "By date"
+msgstr "Dátum szerint"
+
+#: opkman_const.rsmainfrm_mibyname
+msgid "By name"
+msgstr "Név szerint"
+
+#: opkman_const.rsmainfrm_micopytoclpbrd
+msgid "Copy to clipboard"
+msgstr "Másolás a vágólapra"
+
+#: opkman_const.rsmainfrm_micreatejsonforupdates
+msgid "Create JSON for updates"
+msgstr "JSON létrehozása a frissítésekhez"
+
+#: opkman_const.rsmainfrm_micreaterepository
+msgctxt "opkman_const.rsmainfrm_micreaterepository"
+msgid "Create private repository"
+msgstr "Személyes tároló létrehozása"
+
+#: opkman_const.rsmainfrm_micreaterepositorypackage
+msgctxt "opkman_const.rsmainfrm_micreaterepositorypackage"
+msgid "Create repository package"
+msgstr "Tárolócsomag létrehozása"
+
+#: opkman_const.rsmainfrm_midescendent
+msgid "Descendent"
+msgstr "Csökkenő"
+
+#: opkman_const.rsmainfrm_mifromexternalsource
+msgid "From third party repository"
+msgstr "Harmadik fél tárolójából"
+
+#: opkman_const.rsmainfrm_mifromrepository
+msgid "From official repository"
+msgstr "Hivatalos tárolóból"
+
+#: opkman_const.rsmainfrm_mijsonhide
+msgid "Hide JSON"
+msgstr "JSON elrejtése"
+
+#: opkman_const.rsmainfrm_mijsonshow
+msgid "Show JSON"
+msgstr "JSON megjelenítése"
+
+#: opkman_const.rsmainfrm_mijsonsort
+msgid "Sort"
+msgstr "Rendezés"
+
+#: opkman_const.rsmainfrm_miload
+msgid "Load packages"
+msgstr "Csomagok betöltése"
+
+#: opkman_const.rsmainfrm_miloadinstalled
+msgctxt "opkman_const.rsmainfrm_miloadinstalled"
+msgid "Installed"
+msgstr "Telepítve"
+
+#: opkman_const.rsmainfrm_miresetrating
+msgid "Reset rating"
+msgstr "Értékelés visszavonása"
+
+#: opkman_const.rsmainfrm_misave
+msgid "Save packages"
+msgstr "Csomagok mentése"
+
+#: opkman_const.rsmainfrm_misavechecked
+msgid "Checked"
+msgstr "Ellenőrizve"
+
+#: opkman_const.rsmainfrm_misavetofile
+msgid "Save to file"
+msgstr "Mentés fájlba"
+
+#: opkman_const.rsmainfrm_packagealreadydownloaded
+msgid "The following repository packages already exist in the target folder. Continue?"
+msgstr "A következő tárolócsomagok már léteznek a célkönyvtárban. Folytatás?"
+
+#: opkman_const.rsmainfrm_packagealreadyinstalled
+msgid "The following packages are already installed. Continue anyway?"
+msgstr "A következő csomagok már telepítve vannak. Folytatás mindenképp?"
+
+#: opkman_const.rsmainfrm_packageincompatible
+msgid "The following packages are not tested and the install might fail. Continue anyway?"
+msgstr "A következő csomagok nem voltak tesztelve és a telepítés valószínűleg sikertelen lesz. Folytatás mindenképp?"
+
+#: opkman_const.rsmainfrm_packagenamealreadyexists
+msgid "A package with the same name already exists!"
+msgstr "Egy csomag már létezik ugyanezzel a névvel!"
+
+#: opkman_const.rsmainfrm_packageupdate0
+msgid "The following repository packages are not available externally. The packages will be skipped. Continue?"
+msgstr "A következő tárolócsomagok nem érhetők el külső tárolóban. A csomagok ki lesznek hagyva. Folytatás?"
+
+#: opkman_const.rsmainfrm_packageupdate1
+msgid ""
+"None of the checked repository packages are available externally. Please make sure that package updates are enabled by default:\n"
+"Options->General->Check for package updates."
+msgstr ""
+"A kijelölt tárolócsomagok egyike sem érhető el külső tárolóban. Ellenőrizze, hogy a csomagok frissítése be van-e kapcsolva:\n"
+"Beállítások -> Általános -> Csomagfrissítések ellenőrzése"
+
+#: opkman_const.rsmainfrm_packageupdatewarning
+msgid ""
+"Installing packages from external link is not without a risk!\n"
+"Only install if you trust the package maintainer. Continue?"
+msgstr ""
+"A csomagok külső hivatkozásról történő telepítése nem kockázatmentes!\n"
+"Csak akkor telepítse ha megbízik a csomag karbantartójában. Folytatás?"
+
+#: opkman_const.rsmainfrm_resmessagechecksloaded
+#, object-pascal-format
+msgid "%s packages successfully loaded from file!"
+msgstr "%s csomag sikeresen betöltve fájlból!"
+
+#: opkman_const.rsmainfrm_resmessagecheckssaved
+#, object-pascal-format
+msgid "%s packages successfully saved to file!"
+msgstr "%s csomag sikeresen fájlba mentve!"
+
+#: opkman_const.rsmainfrm_rsdestdirerror
+#, object-pascal-format
+msgid "Cannot create directory \"%s\". Operation aborted."
+msgstr "A(z) \"%s\"  könyvtár nem hozható létre. A művelet megszakadt."
+
+#: opkman_const.rsmainfrm_rsmessagechangingrepository
+msgid "Changing repository. Please wait..."
+msgstr "Tároló váltása. Kist türelmet..."
+
+#: opkman_const.rsmainfrm_rsmessagedownload
+msgid "Downloading package list. Please wait..."
+msgstr "Csomaglista letöltése. Kis türelmet..."
+
+#: opkman_const.rsmainfrm_rsmessageerror0
+msgid "Cannot download package list. Error message:"
+msgstr "A csomaglista nem tölthető le. Hibaüzenet:"
+
+#: opkman_const.rsmainfrm_rsmessageerror1
+msgid "Invalid JSON file."
+msgstr "Érvénytelen JSON fájl."
+
+#: opkman_const.rsmainfrm_rsmessageerror2
+msgid "Remote server unreachable."
+msgstr "A távoli kiszolgáló nem érhető el."
+
+#: opkman_const.rsmainfrm_rsmessagenopackage
+msgid "No packages to show."
+msgstr "Nincs megjelenítendő csomag."
+
+#: opkman_const.rsmainfrm_rsmessagenorepository0
+msgid ""
+"Remote package repository not configured.\n"
+"Do you wish to configure it now?"
+msgstr ""
+"A távoli csomagtároló nincs beállítva.\n"
+"Szeretné most beállítani?"
+
+#: opkman_const.rsmainfrm_rsmessagenothingchacked
+msgid "Please check at least one package!"
+msgstr "Legalább egy csomagot ki kell jelölni!"
+
+#: opkman_const.rsmainfrm_rsmessagenothinginstalled
+msgid "No packages are installed. Please install at least one package first."
+msgstr "Nincsenek telepítve csomagok. Először telepíteni kell legalább egyet."
+
+#: opkman_const.rsmainfrm_rsmessageparsingjson
+msgid "Parsing JSON. Please wait..."
+msgstr "JSON elemzése. Kis türelmet..."
+
+#: opkman_const.rsmainfrm_rsnopackagetodownload
+msgid "Please check one or more packages!"
+msgstr "Jelöljön ki egy vagy több csomagot!"
+
+#: opkman_const.rsmainfrm_rspackagedependency0
+#, object-pascal-format
+msgid "Package \"%s\" depends on package \"%s\". Resolve dependency?"
+msgstr "A(z) \"%s\" csomag függ a(z) \"%s\" csomagtól. Függőség feloldása?"
+
+#: opkman_const.rsmainfrm_rspackagedependency1
+msgid "Not resolving dependencies might lead to install failure! Continue?"
+msgstr "A feloldatlan függőségek a telepítés sikertelenségét okozhatják! Folytatás?"
+
+#: opkman_const.rsmainfrm_rspackageinformation
+#, object-pascal-format
+msgid "Quick package information for \"%s\""
+msgstr "Gyors csomaginformációk: \"%s\""
+
+#: opkman_const.rsmainfrm_rspackagerating
+#, object-pascal-format
+msgid "Your vote for package \"%s\" is: %s. Thank you for voting!"
+msgstr "A(z) \"%s\" csomagra adott értékelésed: %s. Köszönet érte!"
+
+#: opkman_const.rsmainfrm_rsrepositorycleanup0
+msgid "This will delete all non-installed packages from local repository. Continue?"
+msgstr "Ez törli az összes nem telepített csomagot a helyi tárolóból. Folytatás?"
+
+#: opkman_const.rsmainfrm_rsrepositorycleanup1
+#, object-pascal-format
+msgid "%s packages deleted!"
+msgstr "%s csomag törölve!"
+
+#: opkman_const.rsmainfrm_rsuninstall
+#, object-pascal-format
+msgid ""
+"%sAre you sure you wish to uninstall the checked packages?\n"
+"Please note: in order for the changes to take effect you must rebuid the IDE."
+msgstr ""
+"%sBiztosan eltávolíthatók a kijelölt csomagok?\n"
+"Fontos: a változtatások érvénybelépéséhez az IDE újraépítése szükséges."
+
+#: opkman_const.rsmainfrm_rsuninstall_error
+#, object-pascal-format
+msgid "Cannot uninstall package \"%s\"!"
+msgstr "A(z) \"%s\" csomagot nem lehet eltávolítani!"
+
+#: opkman_const.rsmainfrm_rsuninstall_nothing
+msgid "None of the checked packages are installed. Nothing to uninstall."
+msgstr "A kijelölt csomagok egyike sincs telepítve, Nincs mit eltávolítani."
+
+#: opkman_const.rsmainfrm_spclear_hint
+msgid "Clear filter text"
+msgstr "Szűrőszöveg törlése"
+
+#: opkman_const.rsmainfrm_spcollapse_hint
+msgid "Collapse package tree"
+msgstr "Csomagfa összecsukása"
+
+#: opkman_const.rsmainfrm_spexpand_hint
+msgid "Expand package tree"
+msgstr "Csomagfa kibontása"
+
+#: opkman_const.rsmainfrm_tbcleanup_caption
+msgid "Cleanup"
+msgstr "Tisztítás"
+
+#: opkman_const.rsmainfrm_tbcleanup_hint
+msgid "Cleanup local repository"
+msgstr "Helyi tároló tisztítása"
+
+#: opkman_const.rsmainfrm_tbdownload_caption
+msgid "Download"
+msgstr "Letöltés"
+
+#: opkman_const.rsmainfrm_tbdownload_hint
+msgid "Download packages"
+msgstr "Csomagok letöltése"
+
+#: opkman_const.rsmainfrm_tbhelp_caption
+msgctxt "opkman_const.rsmainfrm_tbhelp_caption"
+msgid "Help"
+msgstr "Súgó"
+
+#: opkman_const.rsmainfrm_tbhelp_hint
+msgid "Help (http://wiki.freepascal.org/Online_Package_Manager)"
+msgstr "Súgó (http://wiki.freepascal.org/Online_Package_Manager)"
+
+#: opkman_const.rsmainfrm_tbinstall_caption
+msgid "Install"
+msgstr "Telepítés"
+
+#: opkman_const.rsmainfrm_tbinstall_hint
+msgid "Install packages"
+msgstr "Csomagok telepítése"
+
+#: opkman_const.rsmainfrm_tbopenrepo_caption
+msgctxt "opkman_const.rsmainfrm_tbopenrepo_caption"
+msgid "Local repo"
+msgstr "Helyi tároló"
+
+#: opkman_const.rsmainfrm_tbopenrepo_hint
+msgid "Open local repository"
+msgstr "Helyi tároló megnyitása"
+
+#: opkman_const.rsmainfrm_tboptions_caption
+msgctxt "opkman_const.rsmainfrm_tboptions_caption"
+msgid "Options"
+msgstr "Beállítások"
+
+#: opkman_const.rsmainfrm_tboptions_hint
+msgid "Show options dialog"
+msgstr "Beállítások ablakának megjelenítése"
+
+#: opkman_const.rsmainfrm_tbrefresh_caption
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: opkman_const.rsmainfrm_tbrefresh_hint
+msgid "Refresh package list"
+msgstr "Csomaglista frissítése"
+
+#: opkman_const.rsmainfrm_tbrepository_caption
+msgctxt "opkman_const.rsmainfrm_tbrepository_caption"
+msgid "Create"
+msgstr "Létrehozás"
+
+#: opkman_const.rsmainfrm_tbrepository_hint
+msgid "Create package or repository"
+msgstr "Csomag vagy tároló létrehozása"
+
+#: opkman_const.rsmainfrm_tbuninstall_caption
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: opkman_const.rsmainfrm_tbuninstall_hint
+msgid "Uninstall packages"
+msgstr "Csomagok eltávolítása"
+
+#: opkman_const.rsmainfrm_tbupdate_caption
+msgctxt "opkman_const.rsmainfrm_tbupdate_caption"
+msgid "Update"
+msgstr "Frissítés"
+
+#: opkman_const.rsmainfrm_tbupdate_hint
+msgid "Update packages from external URL"
+msgstr "Csomagok frissítése külső URL-ről"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_data
+msgid "Status/Data"
+msgstr "Állapot/Adat"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_installed
+msgctxt "opkman_const.rsmainfrm_vstheadercolumn_installed"
+msgid "Installed"
+msgstr "Telepítve"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_lazaruspackage
+msgid "Lazarus Package (.lpk)"
+msgstr "Lazarus csomag (.lpk)"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_packagename
+msgid "Packages"
+msgstr "Csomagok"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_rating
+msgid "Rating"
+msgstr "Értékelés"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_repository
+msgctxt "opkman_const.rsmainfrm_vstheadercolumn_repository"
+msgid "OPM repository"
+msgstr "OPM tároló"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_repository_hint
+msgid "Packages available in the OPM repository (https://packages.lazarus-ide.org/)"
+msgstr "A Hálózati Csomagkezelő tárolójában elérhető csomagok (https://packages.lazarus-ide.org/)"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_update
+msgctxt "opkman_const.rsmainfrm_vstheadercolumn_update"
+msgid "External repository"
+msgstr "Külső tároló"
+
+#: opkman_const.rsmainfrm_vstheadercolumn_update_hint
+msgid "Packages available at the developer's webpage (see node \"External link (JSON)\" for more details)"
+msgstr "A fejlesztő weblapján elérhető csomagok (részleteket a \"Külső hivatkozás (JSON)\" tartalmaz)"
+
+#: opkman_const.rsmainfrm_vsttext_author
+msgctxt "opkman_const.rsmainfrm_vsttext_author"
+msgid "Author"
+msgstr "Szerző"
+
+#: opkman_const.rsmainfrm_vsttext_category
+msgctxt "opkman_const.rsmainfrm_vsttext_category"
+msgid "Category"
+msgstr "Kategória"
+
+#: opkman_const.rsmainfrm_vsttext_comdesc
+msgid "Community description for metapackage"
+msgstr "Metacsomag leírása"
+
+#: opkman_const.rsmainfrm_vsttext_communitydescription
+msgid "Community description"
+msgstr "Leírás"
+
+#: opkman_const.rsmainfrm_vsttext_dependecies
+msgctxt "opkman_const.rsmainfrm_vsttext_dependecies"
+msgid "Dependencies"
+msgstr "Függőségek"
+
+#: opkman_const.rsmainfrm_vsttext_desc
+msgid "Description for package"
+msgstr "Leírás a csomaghoz"
+
+#: opkman_const.rsmainfrm_vsttext_description
+msgctxt "opkman_const.rsmainfrm_vsttext_description"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rsmainfrm_vsttext_downloadurl
+msgctxt "opkman_const.rsmainfrm_vsttext_downloadurl"
+msgid "External link (JSON)"
+msgstr "Külső hivatkozás (JSON)"
+
+#: opkman_const.rsmainfrm_vsttext_externaldeps
+msgctxt "opkman_const.rsmainfrm_vsttext_externaldeps"
+msgid "External dependencies"
+msgstr ""
+
+#: opkman_const.rsmainfrm_vsttext_externalmetapackagedeps
+msgctxt "opkman_const.rsmainfrm_vsttext_externalmetapackagedeps"
+msgid "External dependencies for metapackage"
+msgstr ""
+
+#: opkman_const.rsmainfrm_vsttext_fpccompatibility
+msgctxt "opkman_const.rsmainfrm_vsttext_fpccompatibility"
+msgid "FPC compatibility"
+msgstr "FPC kompatibilitás"
+
+#: opkman_const.rsmainfrm_vsttext_homepageurl
+msgctxt "opkman_const.rsmainfrm_vsttext_homepageurl"
+msgid "Home page"
+msgstr "Honlap"
+
+#: opkman_const.rsmainfrm_vsttext_install0
+msgctxt "opkman_const.rsmainfrm_vsttext_install0"
+msgid "No"
+msgstr "Nem"
+
+#: opkman_const.rsmainfrm_vsttext_install1
+msgctxt "opkman_const.rsmainfrm_vsttext_install1"
+msgid "Yes"
+msgstr "Igen"
+
+#: opkman_const.rsmainfrm_vsttext_install2
+msgid "Partially"
+msgstr "Részlegesen"
+
+#: opkman_const.rsmainfrm_vsttext_lazcompatibility
+msgctxt "opkman_const.rsmainfrm_vsttext_lazcompatibility"
+msgid "Lazarus compatibility"
+msgstr "Lazarus kompatibilitás"
+
+#: opkman_const.rsmainfrm_vsttext_lic
+msgid "License info for package"
+msgstr "Licenc információk a csomaghoz"
+
+#: opkman_const.rsmainfrm_vsttext_license
+msgctxt "opkman_const.rsmainfrm_vsttext_license"
+msgid "License"
+msgstr "Licenc"
+
+#: opkman_const.rsmainfrm_vsttext_open
+#, fuzzy
+msgctxt "opkman_const.rsmainfrm_vsttext_open"
+msgid "Open"
+msgstr "Megnyitás"
+
+#: opkman_const.rsmainfrm_vsttext_open_error
+#, fuzzy
+msgctxt "opkman_const.rsmainfrm_vsttext_open_error"
+msgid "Cannot open package file."
+msgstr "A csomagfájl nem nyitható meg."
+
+#: opkman_const.rsmainfrm_vsttext_open_notfound
+msgid "Package file not found."
+msgstr ""
+
+#: opkman_const.rsmainfrm_vsttext_orphanedpackage1
+msgid "Orphaned package"
+msgstr ""
+
+#: opkman_const.rsmainfrm_vsttext_orphanedpackage2
+msgid "currently has no active maintainer"
+msgstr ""
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory
+msgid "Package category"
+msgstr "Csomagkategória"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory0
+msgid "Charts and Graphs"
+msgstr "Diagramok és grafikák"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory1
+msgid "Cryptography"
+msgstr "Titkosítás"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory10
+msgid "Indicators and Gauges"
+msgstr "Kijelzők, mérők"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory11
+msgid "Labels"
+msgstr "Címkék"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory12
+msgid "LazIDEPlugins"
+msgstr "Lazarus IDE bővítmények"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory13
+msgid "List and Combo Boxes"
+msgstr "Listák és kombinált listák"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory14
+msgid "ListViews and TreeViews"
+msgstr "Lista- és fanézetek"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory15
+msgid "Menus"
+msgstr "Menük"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory16
+msgid "Multimedia"
+msgstr "Multimédia"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory17
+msgid "Networking"
+msgstr "Hálózat"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory18
+msgid "Panels"
+msgstr "Panelek"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory19
+msgid "Reporting"
+msgstr "Jelentés készítése"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory2
+msgid "DataControls"
+msgstr "Adat alapú vezérlők"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory20
+msgid "Science"
+msgstr "Tudomány"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory21
+msgid "Security"
+msgstr "Biztonság"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory22
+msgid "Shapes"
+msgstr "Alakzatok"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory23
+msgid "Sizers and Scrollers"
+msgstr "Méretezők és görgetők"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory24
+msgid "System"
+msgstr "Rendszer"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory25
+msgid "Tabbed Components"
+msgstr "Táblás komponensek"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory26
+msgid "Other"
+msgstr "Egyéb"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory27
+msgid "Games and Game Engines"
+msgstr "Játékok és játékmotorok"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory3
+msgid "Date and Time"
+msgstr "Dátum és idő"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory4
+msgid "Dialogs"
+msgstr "Párbeszédek"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory5
+msgid "Edit and Memos"
+msgstr "Szerkesztés és szövegbevitel"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory6
+msgid "Files and Drives"
+msgstr "Fájlok és meghajtók"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory7
+msgid "GUIContainers"
+msgstr "GUI tárolóelemek"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory8
+msgid "Graphics"
+msgstr "Grafika"
+
+#: opkman_const.rsmainfrm_vsttext_packagecategory9
+msgid "Grids"
+msgstr "Rácsok"
+
+#: opkman_const.rsmainfrm_vsttext_packageinfo
+msgid "Package info"
+msgstr "Csomag infó"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate0
+msgctxt "opkman_const.rsmainfrm_vsttext_packagestate0"
+msgid "Repository"
+msgstr "Tároló"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate1
+msgid "Downloaded"
+msgstr "Letöltve"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate2
+msgid "Extracted"
+msgstr "Kibontva"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate3
+msgctxt "opkman_const.rsmainfrm_vsttext_packagestate3"
+msgid "Installed"
+msgstr "Telepítve"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate4
+msgid "Up to date"
+msgstr "Naprakész"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate6
+msgctxt "opkman_const.rsmainfrm_vsttext_packagestate6"
+msgid "New version available"
+msgstr "Új változat érhető el"
+
+#: opkman_const.rsmainfrm_vsttext_packagestate7
+msgid "Ahead of OPM"
+msgstr "Frissebb a kezelt csomagnál"
+
+#: opkman_const.rsmainfrm_vsttext_packagestatus
+msgid "Package status"
+msgstr "Csomag állapota"
+
+#: opkman_const.rsmainfrm_vsttext_packagetype
+msgctxt "opkman_const.rsmainfrm_vsttext_packagetype"
+msgid "Package type"
+msgstr "Csomag típusa"
+
+#: opkman_const.rsmainfrm_vsttext_packagetype0
+msgctxt "opkman_const.rsmainfrm_vsttext_packagetype0"
+msgid "Designtime and runtime"
+msgstr "Tervezési és futásidejű"
+
+#: opkman_const.rsmainfrm_vsttext_packagetype1
+msgctxt "opkman_const.rsmainfrm_vsttext_packagetype1"
+msgid "Designtime"
+msgstr "Tervezési"
+
+#: opkman_const.rsmainfrm_vsttext_packagetype2
+msgctxt "opkman_const.rsmainfrm_vsttext_packagetype2"
+msgid "Runtime"
+msgstr "Futásidejű"
+
+#: opkman_const.rsmainfrm_vsttext_packagetype3
+msgctxt "opkman_const.rsmainfrm_vsttext_packagetype3"
+msgid "Runtime only, cannot be installed in IDE"
+msgstr "Csak futásidejű, nem telepíthető az IDE-be"
+
+#: opkman_const.rsmainfrm_vsttext_repositoryfiledate
+msgctxt "opkman_const.rsmainfrm_vsttext_repositoryfiledate"
+msgid "Available since"
+msgstr "Elérhető"
+
+#: opkman_const.rsmainfrm_vsttext_repositoryfilehash
+msgctxt "opkman_const.rsmainfrm_vsttext_repositoryfilehash"
+msgid "Repository filehash"
+msgstr "Ellenőrzőösszeg (a tárolóban)"
+
+#: opkman_const.rsmainfrm_vsttext_repositoryfilename
+msgctxt "opkman_const.rsmainfrm_vsttext_repositoryfilename"
+msgid "Repository filename"
+msgstr "Fájlnév (a tárolóban)"
+
+#: opkman_const.rsmainfrm_vsttext_repositoryfilesize
+msgctxt "opkman_const.rsmainfrm_vsttext_repositoryfilesize"
+msgid "Repository filesize"
+msgstr "Fájlméret (a tárolóban)"
+
+#: opkman_const.rsmainfrm_vsttext_supportedwidgetsets
+msgctxt "opkman_const.rsmainfrm_vsttext_supportedwidgetsets"
+msgid "Supported widgetsets"
+msgstr "Támogatott vezérlőkészletek"
+
+#: opkman_const.rsmainfrm_vsttext_svnurl
+msgctxt "opkman_const.rsmainfrm_vsttext_svnurl"
+msgid "SVN"
+msgstr "SVN"
+
+#: opkman_const.rsmainfrm_vsttext_version
+msgctxt "opkman_const.rsmainfrm_vsttext_version"
+msgid "Version"
+msgstr "Változat"
+
+#: opkman_const.rsmenulazaruspackagemanager
+msgid "Online Package Manager ..."
+msgstr ""
+
+#: opkman_const.rsopensslfrm_bp_cancelbutton_caption
+msgctxt "opkman_const.rsopensslfrm_bp_cancelbutton_caption"
+msgid "No"
+msgstr "Nem"
+
+#: opkman_const.rsopensslfrm_bp_okbutton_caption
+msgctxt "opkman_const.rsopensslfrm_bp_okbutton_caption"
+msgid "Yes"
+msgstr "Igen"
+
+#: opkman_const.rsopensslfrm_caption
+msgid "Download OpenSSL libraries"
+msgstr "OpenSSL függvénytárak letöltése"
+
+#: opkman_const.rsopensslfrm_chpermanent_caption
+msgid "Do not ask this question again"
+msgstr "Ne kérdezze újra"
+
+#: opkman_const.rsopensslfrm_lbmessage1_caption
+#, fuzzy
+#| msgid "In order to work properly, OPM needs the OpenSSL libraries: \"libeay32.dll\" and \"ssleay32.dll\""
+msgid "In order to work properly, OPM needs the OpenSSL libraries."
+msgstr "A Hálózati Csomagkezelő megfelelő működéséhez szükség van az OpenSSL függvénytárakra: \"libeay32.dll\" és \"ssleay32.dll\""
+
+#: opkman_const.rsopensslfrm_lbmessage2_caption
+msgid "Download these files from \"https://packages.lazarus-ide.org/\"?"
+msgstr "Biztosan letölti a fájlokat a \"https://packages.lazarus-ide.org/\" címről?"
+
+#: opkman_const.rsopminterfacerebuildconf
+msgid "In order for the changes to take effect you must rebuild the IDE. Rebuild now?"
+msgstr "A változások érvényre jutásához újra kell építeni az IDE-t. Újraépíti most?"
+
+#: opkman_const.rsopmintfpackagelistfrm_caption
+msgid "Install online packages"
+msgstr "Hálózati csomagok telepítése"
+
+#: opkman_const.rsopmintfpackagelistfrm_pninfo
+msgid "Please check before install: Lazarus/FPC compatibility, widgetset support, license and version info"
+msgstr "Telepítés előtt olvassa el: Lazarus/FPC kompatibilitás, vezérlőkészlet támogatás, engedély- és változatinformációk"
+
+#: opkman_const.rsopmintfpackagelistfrm_vstheadercolumn_data
+msgctxt "opkman_const.rsopmintfpackagelistfrm_vstheadercolumn_data"
+msgid "Data"
+msgstr "Adat"
+
+#: opkman_const.rsopmintfpackagelistfrm_vstheadercolumn_lazaruspackage
+msgid "Lazarus Package"
+msgstr "Lazarus csomag"
+
+#: opkman_const.rsoptions_badd_caption
+msgctxt "opkman_const.rsoptions_badd_caption"
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: opkman_const.rsoptions_bcolors_caption
+msgctxt "opkman_const.rsoptions_bcolors_caption"
+msgid "Colors"
+msgstr "Színek"
+
+#: opkman_const.rsoptions_bdelete_caption
+msgctxt "opkman_const.rsoptions_bdelete_caption"
+msgid "Delete"
+msgstr "Törlés"
+
+#: opkman_const.rsoptions_bedit_caption
+msgctxt "opkman_const.rsoptions_bedit_caption"
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: opkman_const.rsoptions_bpoptions_bhelp
+msgid "Restore defaults"
+msgstr "Alapértelmezések"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item0
+msgid "Every few minutes"
+msgstr "Néhány percenként"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item1
+msgid "Every hour"
+msgstr "Óránként"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item2
+msgid "Once per day"
+msgstr "Naponta egyszer"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item3
+msgid "Weekly"
+msgstr "Hetente"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item4
+msgid "Montly"
+msgstr "Havonta"
+
+#: opkman_const.rsoptions_cbcheckforupdates_item5
+msgctxt "opkman_const.rsoptions_cbcheckforupdates_item5"
+msgid "Never"
+msgstr "Soha"
+
+#: opkman_const.rsoptions_cbdelete_caption
+msgid "Delete downloaded zip files after installation/update"
+msgstr "A letöltött zip fájlok törlése telepítés/frissítés után"
+
+#: opkman_const.rsoptions_cbdelete_hint
+msgid "If this option is checked the downloaded zip file is always deleted after installation"
+msgstr "Ezen lehetőség kijelölése esetén a letöltött zip fájlok mindig törölve lesznek telepítés után"
+
+#: opkman_const.rsoptions_cbforcedownloadextract_caption
+msgid "Always force download and extract"
+msgstr "Mindig legyen végrehajtva a letöltés és kibontás"
+
+#: opkman_const.rsoptions_cbforcedownloadextract_hint
+msgid "If this option is checked the packages are always re-downloaded/extracted before install"
+msgstr "Ezen lehetőség kijelölése esetén a csomagok mindig újra le lesznek töltve / ki lesznek csomagolva telepítés előtt"
+
+#: opkman_const.rsoptions_cbloadjsonlocally_caption
+msgid "If available, parse the JSON from local source"
+msgstr "JSON elemzése helyi forrásból, ha elérhető"
+
+#: opkman_const.rsoptions_cbloadjsonlocally_hint
+msgid "If this option is checked the JSON is parsed from a local source (useful if the internet connection is slow). After 25 local parses, OPM will attempt a live update."
+msgstr "Ha ez be van jelölve, a JSON helyi forrásból kerül elemzésre (lassú az internetkapcsolat esetén hasznos). 25 helyi elemzés után a Hálózati Csomagkezelő megkísérli az élő frissítést."
+
+#: opkman_const.rsoptions_cbproxy_caption
+msgid "Use proxy"
+msgstr "Proxy használata"
+
+#: opkman_const.rsoptions_cbregular_caption
+msgid "Show regular icon for newly added packages after install"
+msgstr "Általános ikon megjelenítése az új csomagok esetén telepítés után"
+
+#: opkman_const.rsoptions_cbselectprofile_hint
+msgid "Choose a profile that best fits you"
+msgstr "Válassza ki az önnek megfelelő profilt"
+
+#: opkman_const.rsoptions_cbselectprofile_item0
+msgctxt "opkman_const.rsoptions_cbselectprofile_item0"
+msgid "Regular user"
+msgstr "Általános felhasználó"
+
+#: opkman_const.rsoptions_cbselectprofile_item1
+msgctxt "opkman_const.rsoptions_cbselectprofile_item1"
+msgid "Package maintainer"
+msgstr "Csomag karabantartó"
+
+#: opkman_const.rsoptions_cbusedefaulttheme_caption
+msgid "Use default theme manager"
+msgstr "Alapértelmezett témakezelő használata"
+
+#: opkman_const.rsoptions_edlocalrepositoryarchive_hint
+msgid "The folder where the zip files are downloaded from the remote repository"
+msgstr "A könyvtár ahová a zip fájlok le lesznek töltve a távoli tárolóból"
+
+#: opkman_const.rsoptions_edlocalrepositorypackages_hint
+msgid "The folder where the repository packages are extracted/installed"
+msgstr "A könyvtár ahová a tárolócsomagok kibontása/telepítése történik"
+
+#: opkman_const.rsoptions_edlocalrepositoryupdate_hint
+msgid "The folder where the zip files are downloaded from the package maintainer webpage"
+msgstr "A könyvtár ahová a zip fájlok le lesznek töltve a csomag karbantartójának weblapjáról"
+
+#: opkman_const.rsoptions_frmcaption
+msgctxt "opkman_const.rsoptions_frmcaption"
+msgid "Options"
+msgstr "Beállítások"
+
+#: opkman_const.rsoptions_gbproxysettings_caption
+msgid "Proxy settings"
+msgstr "Proxybeállítások"
+
+#: opkman_const.rsoptions_inputbox_caption
+msgid "Add new exclusion"
+msgstr "Új kizárás hozzáadása"
+
+#: opkman_const.rsoptions_inputbox_conf0
+#, object-pascal-format
+msgid "Delete selected extension (\"%s\")?"
+msgstr "A kiválasztott kiterjesztés törlése (\"%s\")?"
+
+#: opkman_const.rsoptions_inputbox_conf1
+#, object-pascal-format
+msgid "Delete selected folder (\"%s\")?"
+msgstr "A kiválasztott könyvtár törlése (\"%s\")?"
+
+#: opkman_const.rsoptions_inputbox_info0
+msgid "Please select a file extension!"
+msgstr "Válasszon ki egy fájlnévkiterjesztést!"
+
+#: opkman_const.rsoptions_inputbox_info1
+msgid "Please select a folder!"
+msgstr "Válasszon ki egy könyvtárat!"
+
+#: opkman_const.rsoptions_inputbox_text0
+msgid "Type the extension name:"
+msgstr "Fájlnév kiterjesztésének bevitele:"
+
+#: opkman_const.rsoptions_inputbox_text1
+msgid "Type the folder name:"
+msgstr "Könyvtárnév bevitele:"
+
+#: opkman_const.rsoptions_invaliddirectory_info
+msgid "Please enter a valid directory!"
+msgstr "Adjon meg egy érvényes könyvtárat!"
+
+#: opkman_const.rsoptions_lastupdate_never
+msgctxt "opkman_const.rsoptions_lastupdate_never"
+msgid "never"
+msgstr "soha"
+
+#: opkman_const.rsoptions_lbcheckforupdates_caption
+#, fuzzy
+#| msgid "Check for package updates"
+msgid "Check external repositories for package updates"
+msgstr "Csomagfrissítések ellenőrzése"
+
+#: opkman_const.rsoptions_lbcontimeout_caption
+msgid "Connection timeout (seconds):"
+msgstr "Kapcsolódás időtúllépése (másodperc):"
+
+#: opkman_const.rsoptions_lbcontimeout_hint
+msgid "The number of seconds after which package manager drops connection"
+msgstr "A másodpercek száma, melynek eltelte után a csomagkezelő bontja a kapcsolatot"
+
+#: opkman_const.rsoptions_lbdaystoshownewpackages_caption
+msgid "Show different icon for newly added packages for (days):"
+msgstr "Eltérő ikon megjelenítése az újonnan hozzáadott csomagok esetén (napok):"
+
+#: opkman_const.rsoptions_lbexcludefiles_hint
+msgctxt "opkman_const.rsoptions_lbexcludefiles_hint"
+msgid "These files will be excluded from repository packages (see: \"Create repository package\")"
+msgstr "Ezek a fájlok nem kerülnek be a tárolócsomagokba (lásd: \"Tárolócsomag létrehozása\")"
+
+#: opkman_const.rsoptions_lbexcludefolders_hint
+msgctxt "opkman_const.rsoptions_lbexcludefolders_hint"
+msgid "These folders will be excluded from repository packages (see: \"Create repository package\")"
+msgstr "Ezek a könyvtárak nem kerülnek be a tárolócsomagokba (lásd: \"Tárolócsomag létrehozása\")"
+
+#: opkman_const.rsoptions_lbfilterdirs_caption
+msgid "Excluded folders (packages)"
+msgstr "Kizárt könyvtárak (csomagok)"
+
+#: opkman_const.rsoptions_lbfilterfiles_caption
+msgid "Excluded files (packages)"
+msgstr "Kizárt fájlok (csomagok)"
+
+#: opkman_const.rsoptions_lblastupdate_caption
+msgid "Last update: "
+msgstr "Utolsó frissítés: "
+
+#: opkman_const.rsoptions_lblocalrepositoryarchive_caption
+msgid "Archive directory"
+msgstr "Archívumok könyvtára"
+
+#: opkman_const.rsoptions_lblocalrepositorypackages_caption
+msgid "Local repository"
+msgstr "Helyi tároló"
+
+#: opkman_const.rsoptions_lblocalrepositoryupdate_caption
+msgid "Update directory"
+msgstr "Frissítések könyvtára"
+
+#: opkman_const.rsoptions_lbpassword_caption
+msgid "Password"
+msgstr "Jelszó"
+
+#: opkman_const.rsoptions_lbport_caption
+msgid "Port"
+msgstr "Port"
+
+#: opkman_const.rsoptions_lbremoterepository_caption
+msgid "Remote repository"
+msgstr "Távoli tároló"
+
+#: opkman_const.rsoptions_lbselectprofile_caption
+msgid "Select profile"
+msgstr "Profil választása"
+
+#: opkman_const.rsoptions_lbserver_caption
+msgid "Server"
+msgstr "Kiszolgáló"
+
+#: opkman_const.rsoptions_lbusername_caption
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: opkman_const.rsoptions_proxyport_info
+msgid "Please enter the proxy server port!"
+msgstr "Adja meg a proxy kiszolgáló port-ját!"
+
+#: opkman_const.rsoptions_proxyserver_info
+msgid "Please enter the proxy server address!"
+msgstr "Adja meg a proxy kiszolgáló címét!"
+
+#: opkman_const.rsoptions_rbhintformoptions_caption
+msgid "Quick info for repository packages"
+msgstr "Gyors infó a tárolócsomagokról"
+
+#: opkman_const.rsoptions_rbhintformoptions_item0
+msgid "Behaves like a regular hint window"
+msgstr "Úgy viselkedik, mint egy tipp ablak"
+
+#: opkman_const.rsoptions_rbhintformoptions_item1
+msgid "It's triggered by SHIFT, moves with the mouse"
+msgstr "Megjelenítés SHIFT gombbal, mozgatás egérrel"
+
+#: opkman_const.rsoptions_rbhintformoptions_item2
+msgid "Off"
+msgstr "Kikapcsolva"
+
+#: opkman_const.rsoptions_rbopenssl_caption
+msgid "OpenSSL libraries (required for connection to remote repository)"
+msgstr ""
+
+#: opkman_const.rsoptions_rbopenssl_item0
+msgid "Automatically download files from \"https://packages.lazarus-ide.org/\""
+msgstr "Fájlok automatikus letöltése a \"https://packages.lazarus-ide.org/\" címről"
+
+#: opkman_const.rsoptions_rbopenssl_item1
+msgid "Show confirmation dialog before download"
+msgstr "Megerősítő párbeszédablak megjelenítése letöltés előtt"
+
+#: opkman_const.rsoptions_rbopenssl_item2
+msgid "Never download files"
+msgstr "Soha ne töltsön le fájlokat"
+
+#: opkman_const.rsoptions_remoterepository_information
+msgid "Please enter the remote repository address!"
+msgstr "Adja meg a távoli tároló címét!"
+
+#: opkman_const.rsoptions_restoredefaults_conf
+msgid "This will restore the default settings. Continue?"
+msgstr "Ez visszaállítja az alapértelmezett beállításokat. Folytatás?"
+
+#: opkman_const.rsoptions_tsfolders_caption
+msgid "Folders"
+msgstr "Könyvtárak"
+
+#: opkman_const.rsoptions_tsgeneral_caption
+msgid "General"
+msgstr "Általános"
+
+#: opkman_const.rsoptions_tsprofiles_caption
+msgid "Profiles"
+msgstr "Profilok"
+
+#: opkman_const.rsoptions_tsproxy_caption
+msgid "Proxy"
+msgstr "Proxy"
+
+#: opkman_const.rsoption_cbcbalreadyinstalledpackages_caption
+msgid "Warn me about already installed packages"
+msgstr "Figyelmeztessen a már telepített csomagokra"
+
+#: opkman_const.rsoption_cbcbalreadyinstalledpackages_hint
+msgid "If a package is already installed, OPM will show a warning message"
+msgstr "Ha egy csomag már telepítve van, a Hálózati Csomagkezelő megjelenít egy figyelmeztetést"
+
+#: opkman_const.rsoption_cbincompatiblepackage_caption
+msgid "Warn me about incompatible/untested packages"
+msgstr "Figyelmeztessen a nem kompatibilis / teszteletlen csomagokra"
+
+#: opkman_const.rsoption_cbincompatiblepackage_hint
+msgid "If a package is not compatible with the current widgetset or Lazarus/FPC version, OPM will show a warning message"
+msgstr "Ha egy csomag nem kompatibilis az aktuális vezérlőkészlettel vagy Lazarus/FPC változattal, a Hálózati Csomagkezelő megjelenít egy figyelmeztetést"
+
+#: opkman_const.rspackagelistfrm_bno_caption
+msgctxt "opkman_const.rspackagelistfrm_bno_caption"
+msgid "No"
+msgstr "Nem"
+
+#: opkman_const.rspackagelistfrm_bok_caption
+msgctxt "opkman_const.rspackagelistfrm_bok_caption"
+msgid "OK"
+msgstr "Ok"
+
+#: opkman_const.rspackagelistfrm_byes_caption
+msgctxt "opkman_const.rspackagelistfrm_byes_caption"
+msgid "Yes"
+msgstr "Igen"
+
+#: opkman_const.rspackagelistfrm_caption0
+msgid "Installed package list"
+msgstr "Telepített csomagok listája"
+
+#: opkman_const.rspackagelistfrm_caption1
+msgid "Downloaded package list"
+msgstr "Letöltött csomagok listája"
+
+#: opkman_const.rspackagelistfrm_caption2
+msgid "Update package list"
+msgstr "Csomaglista frissítése"
+
+#: opkman_const.rspackagelistfrm_caption3
+msgid "Incompatible package list"
+msgstr "Nem kompatibilis csomagok listája"
+
+#: opkman_const.rspackagelistfrm_curfpcver
+msgid "Current FPC version: "
+msgstr "Aktuális FPC változat: "
+
+#: opkman_const.rspackagelistfrm_curlazver
+msgid "Current Lazarus version: "
+msgstr "Aktuális Lazarus változat: "
+
+#: opkman_const.rspackagelistfrm_curws
+msgid "Current widgetset: "
+msgstr "Aktuális vezérlőkészlet: "
+
+#: opkman_const.rspackagelistfrm_incompatible
+msgid "Not tested"
+msgstr "Nincs tesztelve"
+
+#: opkman_const.rspackagelistfrm_lbhint_caption
+msgid "Hint: for more details move the mouse over the problematic column."
+msgstr "Tipp: további részletekért állítsa az egeret a problémás oszlop fölé."
+
+#: opkman_const.rspackagelistfrm_supfpcvers
+msgid "Supported FPC versions: "
+msgstr "Támogatott FPC változatok: "
+
+#: opkman_const.rspackagelistfrm_suplazvers
+msgid "Supported Lazarus versions: "
+msgstr "Támogatott Lazarus változatok: "
+
+#: opkman_const.rspackagelistfrm_supwss
+msgid "Supported widgetsets: "
+msgstr "Támogatott vezérlőkészletek: "
+
+#: opkman_const.rspackagesfound
+#, object-pascal-format
+msgid "(%s repository packages found, containing %s lpk files, total size %s)"
+msgstr "(%s tárolócsomag található, %s lpk fájlt tartalmaznak, teljes méretük %s)"
+
+#: opkman_const.rsprogressfrm_caption0
+msgid "Downloading packages"
+msgstr "Csomagok letöltése"
+
+#: opkman_const.rsprogressfrm_caption1
+msgid "Extracting packages"
+msgstr "Csomagok kibontása"
+
+#: opkman_const.rsprogressfrm_caption2
+msgid "Installing packages"
+msgstr "Csomagok telepítése"
+
+#: opkman_const.rsprogressfrm_caption3
+msgid "Updating packages"
+msgstr "Csomagok frissítése"
+
+#: opkman_const.rsprogressfrm_caption4
+msgid ". Please wait..."
+msgstr ". Kis türelmet..."
+
+#: opkman_const.rsprogressfrm_caption5
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: opkman_const.rsprogressfrm_cbextractopen_caption0
+msgid "Extract after download"
+msgstr "Kibontás letöltés után"
+
+#: opkman_const.rsprogressfrm_cbextractopen_caption1
+msgid "Open containing folder"
+msgstr "Tartalmazó könyvtár megnyitása"
+
+#: opkman_const.rsprogressfrm_conf0
+msgid "Continue with next one?"
+msgstr "Folytatás a következővel?"
+
+#: opkman_const.rsprogressfrm_error0
+msgid "Cannot download package:"
+msgstr "A csomag nem tölthető le:"
+
+#: opkman_const.rsprogressfrm_error1
+msgid "Error message:"
+msgstr "Hibaüzenet:"
+
+#: opkman_const.rsprogressfrm_error2
+msgid "Cannot extract package:"
+msgstr "A csomag nem bontható ki:"
+
+#: opkman_const.rsprogressfrm_error3
+msgid "Cannot install package:"
+msgstr "A csomag nem telepíthető:"
+
+#: opkman_const.rsprogressfrm_error4
+#, object-pascal-format
+msgctxt "opkman_const.rsprogressfrm_error4"
+msgid "Dependency \"%s\" not found!"
+msgstr "Függőség nem található: %s"
+
+#: opkman_const.rsprogressfrm_error5
+msgctxt "opkman_const.rsprogressfrm_error5"
+msgid "Cannot contact download site"
+msgstr "Nem lehet kapcsolódni a letöltési oldalhoz"
+
+#: opkman_const.rsprogressfrm_error6
+msgid "No valid download link found."
+msgstr "Nem található érvényes letöltési hivatkozás."
+
+#: opkman_const.rsprogressfrm_error7
+msgctxt "opkman_const.rsprogressfrm_error7"
+msgid "Cannot open package file."
+msgstr "A csomagfájl nem nyitható meg."
+
+#: opkman_const.rsprogressfrm_error8
+msgid "Cannot compile package."
+msgstr "A csomag nem fordítható le."
+
+#: opkman_const.rsprogressfrm_error9
+msgid "Cannot install package."
+msgstr "A csomag nem telepíthető."
+
+#: opkman_const.rsprogressfrm_info0
+msgctxt "opkman_const.rsprogressfrm_info0"
+msgid "Installing package:"
+msgstr "Csomag telepítése:"
+
+#: opkman_const.rsprogressfrm_info1
+msgctxt "opkman_const.rsprogressfrm_info1"
+msgid "Success."
+msgstr "Sikerült."
+
+#: opkman_const.rsprogressfrm_info2
+#, object-pascal-format
+msgid "Contacting download site for \"%s\" (%s)"
+msgstr "Kapcsolódás a letöltési oldalhoz: \"%s\" (%s)"
+
+#: opkman_const.rsprogressfrm_info3
+msgid "Preparing to download. Please wait..."
+msgstr "Letöltés előkészítése. Kis türelmet..."
+
+#: opkman_const.rsprogressfrm_info4
+msgid "Canceling. Please wait..."
+msgstr "Megszakítás. Kis türelmet..."
+
+#: opkman_const.rsprogressfrm_info5
+msgid "Opening package:"
+msgstr "Csomag megnyitása:"
+
+#: opkman_const.rsprogressfrm_info6
+msgctxt "opkman_const.rsprogressfrm_info6"
+msgid "Compiling package:"
+msgstr "Csomag fordítása:"
+
+#: opkman_const.rsprogressfrm_lbelapsed_caption
+msgid "Elapsed:"
+msgstr "Eltelt:"
+
+#: opkman_const.rsprogressfrm_lbpackage_caption
+msgid "Package:"
+msgstr "Csomag:"
+
+#: opkman_const.rsprogressfrm_lbreceivedtotal_caption0
+msgid "Received (total):"
+msgstr "Fogadva (összesen):"
+
+#: opkman_const.rsprogressfrm_lbreceivedtotal_caption1
+msgid "Unzipped (total):"
+msgstr "Kitömörítve (összesen):"
+
+#: opkman_const.rsprogressfrm_lbreceived_caption0
+msgid "Received:"
+msgstr "Fogadva:"
+
+#: opkman_const.rsprogressfrm_lbreceived_caption1
+msgid "Unzipped:"
+msgstr "Kitömörítve:"
+
+#: opkman_const.rsprogressfrm_lbremaining_caption
+msgid "Remaining:"
+msgstr "Hátralévő:"
+
+#: opkman_const.rsprogressfrm_lbspeedcalc_caption
+msgid "Estimating. Please wait..."
+msgstr "Becslés. Kis türelmet..."
+
+#: opkman_const.rsprogressfrm_lbspeed_caption
+msgid "Speed:"
+msgstr "Sebesség:"
+
+#: opkman_const.rsrepositories_badd_caption
+msgctxt "opkman_const.rsrepositories_badd_caption"
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: opkman_const.rsrepositories_bcancel_caption
+msgctxt "opkman_const.rsrepositories_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rsrepositories_bdelete_caption
+msgctxt "opkman_const.rsrepositories_bdelete_caption"
+msgid "Delete"
+msgstr "Törlés"
+
+#: opkman_const.rsrepositories_bedit_caption
+msgctxt "opkman_const.rsrepositories_bedit_caption"
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: opkman_const.rsrepositories_bok_caption
+msgctxt "opkman_const.rsrepositories_bok_caption"
+msgid "OK"
+msgstr "Ok"
+
+#: opkman_const.rsrepositories_caption
+msgid "Repositories"
+msgstr "Tárolók"
+
+#: opkman_const.rsrepositories_confirmation0
+#, object-pascal-format
+msgid "Delete selected repository \"%s\"?"
+msgstr "A kijelölt \"%s\" tároló törlése?"
+
+#: opkman_const.rsrepositories_info1
+#, object-pascal-format
+msgid "The following repository: \"%s\" is already in the list."
+msgstr "A következő tároló már szerepel a listában: \"%s\""
+
+#: opkman_const.rsrepositories_inputbox_caption0
+msgid "Add repository"
+msgstr "Tároló hozzáadása"
+
+#: opkman_const.rsrepositories_inputbox_caption1
+msgid "Edit repository"
+msgstr "Tároló szerkesztése"
+
+#: opkman_const.rsrepositories_inputbox_text
+msgid "Type the repository address:"
+msgstr "Tároló címének begépelése:"
+
+#: opkman_const.rsrepositories_vst_headercolumn
+msgid "Repository Address"
+msgstr "Tároló címe"
+
+#: opkman_const.rsrepositorydetailsfrm_bcancel_caption
+msgctxt "opkman_const.rsrepositorydetailsfrm_bcancel_caption"
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: opkman_const.rsrepositorydetailsfrm_bcancel_hint
+msgid "Close the dialog without saving"
+msgstr "Ablak bezárása mentés nélkül"
+
+#: opkman_const.rsrepositorydetailsfrm_bok_caption
+msgctxt "opkman_const.rsrepositorydetailsfrm_bok_caption"
+msgid "OK"
+msgstr "Ok"
+
+#: opkman_const.rsrepositorydetailsfrm_bok_hint
+msgid "Save and close the dialog"
+msgstr "Mentés és az ablak bezárása"
+
+#: opkman_const.rsrepositorydetailsfrm_caption
+msgid "Repository details"
+msgstr "Tároló részletei"
+
+#: opkman_const.rsrepositorydetailsfrm_edaddress_hint
+msgid "Enter the repository address (e.g.: \"http://localhost/packages/\")"
+msgstr "Adja meg a tároló címét (pl. \"http://localhost/packages/\")"
+
+#: opkman_const.rsrepositorydetailsfrm_edname_hint
+msgid "Enter the repository name"
+msgstr "Adja meg a tároló nevét"
+
+#: opkman_const.rsrepositorydetailsfrm_info1
+msgid "Please enter the repository name."
+msgstr "Adja meg a tároló nevét"
+
+#: opkman_const.rsrepositorydetailsfrm_lbaddress_caption
+msgctxt "opkman_const.rsrepositorydetailsfrm_lbaddress_caption"
+msgid "Address"
+msgstr "Cím"
+
+#: opkman_const.rsrepositorydetailsfrm_lbdescription_caption
+msgctxt "opkman_const.rsrepositorydetailsfrm_lbdescription_caption"
+msgid "Description"
+msgstr "Leírás"
+
+#: opkman_const.rsrepositorydetailsfrm_lbname_caption
+msgid "Name"
+msgstr "Név"
+
+#: opkman_const.rsrepositorydetailsfrm_mdescription_hint
+msgid "Enter the repository description"
+msgstr "Adja meg a tároló leírását"
+

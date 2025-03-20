@@ -1,0 +1,770 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: X-1.9\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: 郑建平@夏宗萍 aka  robsean <robsean@126.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: syneditstrconst.scannotpause
+msgid "Can only pause when recording"
+msgstr "录制宏时只能暂停"
+
+#: syneditstrconst.scannotplay
+msgid "Cannot playback macro when recording"
+msgstr "录制宏时无法回放宏"
+
+#: syneditstrconst.scannotrecord
+msgid "Cannot record macro when recording"
+msgstr "不能录制宏 当记录时"
+
+#: syneditstrconst.scannotresume
+msgid "Can only resume when paused"
+msgstr "只能恢复 当暂停时"
+
+#: syneditstrconst.syns_attrannotation
+msgid "Annotation"
+msgstr "注释"
+
+#: syneditstrconst.syns_attrasp
+msgid "Asp"
+msgstr ""
+
+#: syneditstrconst.syns_attrassembler
+msgid "Assembler"
+msgstr "汇编"
+
+#: syneditstrconst.syns_attrattributename
+msgid "Attribute Name"
+msgstr "属性名称"
+
+#: syneditstrconst.syns_attrattributevalue
+msgid "Attribute Value"
+msgstr "属性值"
+
+#: syneditstrconst.syns_attrblock
+msgid "Block"
+msgstr "语句块"
+
+#: syneditstrconst.syns_attrbrackets
+msgid "Brackets"
+msgstr "括号"
+
+#: syneditstrconst.syns_attrcaselabel
+msgid "Case label"
+msgstr ""
+
+#: syneditstrconst.syns_attrcdata
+msgid "CDATA"
+msgstr "CDATA"
+
+#: syneditstrconst.syns_attrcdatasection
+msgid "CDATA Section"
+msgstr ""
+
+#: syneditstrconst.syns_attrcharacter
+msgid "Character"
+msgstr "字符"
+
+#: syneditstrconst.syns_attrchunkmarker
+msgid "Diff Chunk Marker"
+msgstr "比较Chunk标记"
+
+#: syneditstrconst.syns_attrchunkmixed
+msgid "Diff Chunk Line Counts"
+msgstr ""
+
+#: syneditstrconst.syns_attrchunknew
+msgid "Diff Chunk New Line Count"
+msgstr ""
+
+#: syneditstrconst.syns_attrchunkorig
+msgid "Diff Chunk Original Line Count"
+msgstr ""
+
+#: syneditstrconst.syns_attrclass
+msgid "Class"
+msgstr "类"
+
+#: syneditstrconst.syns_attrcomment
+msgid "Comment"
+msgstr "注释"
+
+#: syneditstrconst.syns_attrcondition
+msgid "Condition"
+msgstr "状态"
+
+#: syneditstrconst.syns_attrdatatype
+msgid "Data type"
+msgstr "Data类型"
+
+#: syneditstrconst.syns_attrdefaultpackage
+msgid "Default packages"
+msgstr "默认包"
+
+#: syneditstrconst.syns_attrdir
+msgid "Direction"
+msgstr "方向"
+
+#: syneditstrconst.syns_attrdirective
+msgid "Directive"
+msgstr "指令"
+
+#: syneditstrconst.syns_attrdoctype
+msgid "DOCTYPE"
+msgstr ""
+
+#: syneditstrconst.syns_attrdoctypesection
+msgid "DOCTYPE Section"
+msgstr ""
+
+#: syneditstrconst.syns_attrdocumentation
+msgid "Documentation"
+msgstr "文档"
+
+#: syneditstrconst.syns_attrelementname
+msgid "Element Name"
+msgstr "元素名称"
+
+#: syneditstrconst.syns_attrembedsql
+msgid "Embedded SQL"
+msgstr "嵌入SQL"
+
+#: syneditstrconst.syns_attrembedtext
+msgid "Embedded text"
+msgstr "嵌入文本"
+
+#: syneditstrconst.syns_attrentityreference
+msgid "Entity Reference"
+msgstr "实体参考"
+
+#: syneditstrconst.syns_attrescapeampersand
+msgid "Escape ampersand"
+msgstr ""
+
+#: syneditstrconst.syns_attrevent
+msgid "Event"
+msgstr "事件"
+
+#: syneditstrconst.syns_attrexception
+msgid "Exception"
+msgstr "异常"
+
+#: syneditstrconst.syns_attrflags
+msgid "Flags"
+msgstr ""
+
+#: syneditstrconst.syns_attrfloat
+msgid "Float"
+msgstr "浮点值(Float)"
+
+#: syneditstrconst.syns_attrform
+msgid "Form"
+msgstr "窗体"
+
+#: syneditstrconst.syns_attrfunction
+msgid "Function"
+msgstr "函数"
+
+#: syneditstrconst.syns_attrhexadecimal
+msgid "Hexadecimal"
+msgstr "十六进制"
+
+#: syneditstrconst.syns_attricon
+msgid "Icon reference"
+msgstr "Icon参考"
+
+#: syneditstrconst.syns_attridedirective
+msgid "IDE Directive"
+msgstr "IDE指令"
+
+#: syneditstrconst.syns_attridentifier
+msgid "Identifier"
+msgstr "标识符"
+
+#: syneditstrconst.syns_attrillegalchar
+msgid "Illegal char"
+msgstr ""
+
+#: syneditstrconst.syns_attrinclude
+msgid "Include"
+msgstr "包含(include)"
+
+#: syneditstrconst.syns_attrindirect
+msgid "Indirect"
+msgstr ""
+
+#: syneditstrconst.syns_attrinternalfunction
+msgid "Internal function"
+msgstr "内部函数"
+
+#: syneditstrconst.syns_attrinvalidsymbol
+msgid "Invalid symbol"
+msgstr "无效符号"
+
+#: syneditstrconst.syns_attrkey
+msgid "Key"
+msgstr ""
+
+#: syneditstrconst.syns_attrlabel
+msgid "Label"
+msgstr ""
+
+#: syneditstrconst.syns_attrlineadded
+msgid "Diff Added line"
+msgstr "比较添加的行"
+
+#: syneditstrconst.syns_attrlinechanged
+msgid "Diff Changed Line"
+msgstr "比较变更的行"
+
+#: syneditstrconst.syns_attrlinecontext
+msgid "Diff Context Line"
+msgstr "比较上下文的行"
+
+#: syneditstrconst.syns_attrlineremoved
+msgid "Diff Removed Line"
+msgstr "比较移除的行"
+
+#: syneditstrconst.syns_attrmacro
+msgid "Macro"
+msgstr "宏"
+
+#: syneditstrconst.syns_attrmarker
+msgid "Marker"
+msgstr "标记"
+
+#: syneditstrconst.syns_attrmathmode
+msgid "Math Mode"
+msgstr "数学模式"
+
+#: syneditstrconst.syns_attrmeasurementunitvalue
+msgid "Measurement unit"
+msgstr ""
+
+#: syneditstrconst.syns_attrmessage
+msgid "Message"
+msgstr "信息"
+
+#: syneditstrconst.syns_attrmiscellaneous
+msgid "Miscellaneous"
+msgstr ""
+
+#: syneditstrconst.syns_attrnamespaceattrname
+msgid "Namespace Attribute Name"
+msgstr "命名空间属性名称"
+
+#: syneditstrconst.syns_attrnamespaceattrvalue
+msgid "Namespace Attribute Value"
+msgstr "命名空间属性值"
+
+#: syneditstrconst.syns_attrnewfile
+msgid "Diff New File"
+msgstr "比较新建文件"
+
+#: syneditstrconst.syns_attrnonreservedkeyword
+msgid "Non-reserved keyword"
+msgstr "非保留关键字"
+
+#: syneditstrconst.syns_attrnull
+msgid "Null"
+msgstr "Null"
+
+#: syneditstrconst.syns_attrnumber
+msgid "Number"
+msgstr "数字"
+
+#: syneditstrconst.syns_attroctal
+msgid "Octal"
+msgstr "八进制"
+
+#: syneditstrconst.syns_attroperator
+msgid "Operator"
+msgstr "操作符"
+
+#: syneditstrconst.syns_attrorigfile
+msgid "Diff Original File"
+msgstr "比较原始文件"
+
+#: syneditstrconst.syns_attrpasdockey
+msgid "PasDoc Keyword"
+msgstr ""
+
+#: syneditstrconst.syns_attrpasdocsymbol
+msgid "PasDoc Symbol"
+msgstr ""
+
+#: syneditstrconst.syns_attrpasdocunknown
+msgid "PasDoc Unknown"
+msgstr ""
+
+#: syneditstrconst.syns_attrplsql
+msgid "Reserved word (PL/SQL)"
+msgstr "保留字(PL/SQL)"
+
+#: syneditstrconst.syns_attrpragma
+msgid "Pragma"
+msgstr "附注"
+
+#: syneditstrconst.syns_attrpreprocessor
+msgid "Preprocessor"
+msgstr "预处理程序"
+
+#: syneditstrconst.syns_attrprevvalue
+msgid "Previous value"
+msgstr "前一个值"
+
+#: syneditstrconst.syns_attrprocedureheadername
+msgid "Procedure header name"
+msgstr ""
+
+#: syneditstrconst.syns_attrprocessinginstr
+msgid "Processing Instruction"
+msgstr "处理指令"
+
+#: syneditstrconst.syns_attrqualifier
+msgid "Qualifier"
+msgstr "限定词"
+
+#: syneditstrconst.syns_attrregister
+msgid "Register"
+msgstr "注册"
+
+#: syneditstrconst.syns_attrreservedword
+msgid "Reserved word"
+msgstr "保留字"
+
+#: syneditstrconst.syns_attrroundbracket
+msgid "Round Bracket"
+msgstr "圆括号"
+
+#: syneditstrconst.syns_attrrpl
+msgid "Rpl"
+msgstr ""
+
+#: syneditstrconst.syns_attrrplcomment
+msgid "Rpl comment"
+msgstr "Rpl comment(注释)"
+
+#: syneditstrconst.syns_attrrplkey
+msgid "Rpl key"
+msgstr ""
+
+#: syneditstrconst.syns_attrsasm
+msgid "SASM"
+msgstr "SASM"
+
+#: syneditstrconst.syns_attrsasmcomment
+msgid "SASM Comment"
+msgstr "SASM注释"
+
+#: syneditstrconst.syns_attrsasmkey
+msgid "SASM Key"
+msgstr ""
+
+#: syneditstrconst.syns_attrsecondreservedword
+msgid "Second reserved word"
+msgstr "第二个保留字"
+
+#: syneditstrconst.syns_attrsection
+msgid "Section"
+msgstr "部分(section)"
+
+#: syneditstrconst.syns_attrselectorvalue
+msgid "Selector"
+msgstr "选择器"
+
+#: syneditstrconst.syns_attrspace
+msgid "Space"
+msgstr "空格"
+
+#: syneditstrconst.syns_attrspecialvariable
+msgid "Special variable"
+msgstr "特殊变量"
+
+#: syneditstrconst.syns_attrsqlkey
+msgid "SQL keyword"
+msgstr "SQL关键字"
+
+#: syneditstrconst.syns_attrsqlplus
+msgid "SQL*Plus command"
+msgstr ""
+
+#: syneditstrconst.syns_attrsquarebracket
+msgid "Square Bracket"
+msgstr "方括号"
+
+#: syneditstrconst.syns_attrstring
+msgid "String"
+msgstr "字符串"
+
+#: syneditstrconst.syns_attrsymbol
+msgid "Symbol"
+msgstr "符号"
+
+#: syneditstrconst.syns_attrsyntaxerror
+msgid "SyntaxError"
+msgstr "语法错误"
+
+#: syneditstrconst.syns_attrsystem
+msgid "System functions and variables"
+msgstr "系统函数和变量"
+
+#: syneditstrconst.syns_attrsystemvalue
+msgid "System value"
+msgstr "系统值"
+
+#: syneditstrconst.syns_attrtablename
+msgid "Table Name"
+msgstr "Table名称"
+
+#: syneditstrconst.syns_attrterminator
+msgid "Terminator"
+msgstr "终止符"
+
+#: syneditstrconst.syns_attrtexcommand
+msgid "TeX Command"
+msgstr "TeX命令"
+
+#: syneditstrconst.syns_attrtext
+msgid "Text"
+msgstr "文本"
+
+#: syneditstrconst.syns_attrtextmathmode
+msgid "Text in Math Mode"
+msgstr "文本在数学模式"
+
+#: syneditstrconst.syns_attrunknownword
+msgid "Unknown word"
+msgstr "未知字"
+
+#: syneditstrconst.syns_attruser
+msgid "User functions and variables"
+msgstr "用户函数和变量"
+
+#: syneditstrconst.syns_attruserfunction
+msgid "User functions"
+msgstr "用户函数"
+
+#: syneditstrconst.syns_attrvalue
+msgid "Value"
+msgstr "值"
+
+#: syneditstrconst.syns_attrvariable
+msgid "Variable"
+msgstr "变量"
+
+#: syneditstrconst.syns_attrwhitespace
+msgid "Whitespace"
+msgstr "空白"
+
+#: syneditstrconst.syns_copy
+msgid "&Copy"
+msgstr ""
+
+#: syneditstrconst.syns_cut
+msgid "C&ut"
+msgstr ""
+
+#: syneditstrconst.syns_delete
+msgid "&Delete"
+msgstr ""
+
+#: syneditstrconst.syns_duplicateshortcutmsg
+#, object-pascal-format
+msgid "The keystroke \"%s\" is already assigned to another editor command. (%s)"
+msgstr ""
+
+#: syneditstrconst.syns_eduplicateshortcut
+msgid "Mouse-Shortcut already exists"
+msgstr "鼠标快捷方式已经存在"
+
+#: syneditstrconst.syns_emcbreakpointtoggle
+msgid "Toggle Breakpoint"
+msgstr "切换断点"
+
+#: syneditstrconst.syns_emccodefoldcollaps
+msgid "Fold Code"
+msgstr "折叠代码"
+
+#: syneditstrconst.syns_emccodefoldcollaps_opt
+msgid "Nodes,One,\"All on line\",\"At Caret\",\"Current Node\""
+msgstr ""
+
+#: syneditstrconst.syns_emccodefoldcontextmenu
+msgid "Fold Menu"
+msgstr "折叠菜单"
+
+#: syneditstrconst.syns_emccodefoldexpand
+msgid "Unfold Code"
+msgstr "展开代码"
+
+#: syneditstrconst.syns_emccodefoldexpand_opt
+msgid "Nodes,One,\"All on line\""
+msgstr ""
+
+#: syneditstrconst.syns_emccontextmenu
+msgid "Popup Menu"
+msgstr "弹出式菜单"
+
+#: syneditstrconst.syns_emccontextmenucaretmove_opt
+msgid "\"Move caret, when selection exists\", Never, \"Click outside\", Always"
+msgstr ""
+
+#: syneditstrconst.syns_emcmouselink
+msgid "Source Link"
+msgstr "源文件链接"
+
+#: syneditstrconst.syns_emcmouselink_opt
+msgid "Underline,yes, no"
+msgstr "下划线,是,否"
+
+#: syneditstrconst.syns_emcnone
+msgid "No Action"
+msgstr "没有动作"
+
+#: syneditstrconst.syns_emcoverviewguttergotomark
+msgid "Jump to Mark (Overview Gutter)"
+msgstr ""
+
+#: syneditstrconst.syns_emcoverviewgutterscrollto
+msgid "Scroll (Overview Gutter)"
+msgstr ""
+
+#: syneditstrconst.syns_emcpasteselection
+msgid "Quick Paste Selection"
+msgstr "快速粘贴选择"
+
+#: syneditstrconst.syns_emcpluginmulticaretselectiontocarets
+msgid "Set carets at EOL in selected lines"
+msgstr ""
+
+#: syneditstrconst.syns_emcpluginmulticarettogglecaret
+msgid "Toggle extra caret"
+msgstr ""
+
+#: syneditstrconst.syns_emcselection_opt
+msgid "Mode,Begin,Continue"
+msgstr ""
+
+#: syneditstrconst.syns_emcselectline
+msgid "Select Line"
+msgstr "选择行"
+
+#: syneditstrconst.syns_emcselectline_opt
+msgid "\"Include spaces\",no,yes"
+msgstr "\"包括空格\",否,是"
+
+#: syneditstrconst.syns_emcselectpara
+msgid "Select Paragraph"
+msgstr "选择分段(Paragraph)"
+
+#: syneditstrconst.syns_emcselectword
+msgid "Select Word"
+msgstr "选择单词"
+
+#: syneditstrconst.syns_emcstartcolumnselections
+msgid "Column Selection"
+msgstr "列选择"
+
+#: syneditstrconst.syns_emcstartdragmove
+msgid "Drag Selection"
+msgstr "拖拽选择"
+
+#: syneditstrconst.syns_emcstartdragmove_opt
+msgid "\"Caret on up if not dragged\",yes,no"
+msgstr ""
+
+#: syneditstrconst.syns_emcstartlineselections
+msgid "Line Selection"
+msgstr "行选择"
+
+#: syneditstrconst.syns_emcstartlineselectionsnoneempty
+msgid "Line Selection (select immediate)"
+msgstr "行选择(选择最近的)(select immediate)"
+
+#: syneditstrconst.syns_emcstartselection
+msgid "Selection"
+msgstr "选择"
+
+#: syneditstrconst.syns_emcstartselectlines
+msgid "Selection (lines)"
+msgstr "选择(行)"
+
+#: syneditstrconst.syns_emcstartselecttokens
+msgid "Selection (tokens) "
+msgstr ""
+
+#: syneditstrconst.syns_emcstartselectwords
+msgid "Selection (words)"
+msgstr "选择(单词)"
+
+#: syneditstrconst.syns_emcsyneditcommand
+msgid "IDE Command"
+msgstr "IDE命令"
+
+#: syneditstrconst.syns_emcwheelhorizscrolldown
+msgid "Wheel scroll down (Horizontal)"
+msgstr "滚轮下滚(水平)"
+
+#: syneditstrconst.syns_emcwheelhorizscrollup
+msgid "Wheel scroll up (Horizontal)"
+msgstr "滚轮上滚(垂直)"
+
+#: syneditstrconst.syns_emcwheelscrolldown
+msgid "Wheel scroll down"
+msgstr "滚轮下滚"
+
+#: syneditstrconst.syns_emcwheelscrollup
+msgid "Wheel scroll up"
+msgstr "滚轮上滚"
+
+#: syneditstrconst.syns_emcwheelscroll_opt
+msgid "Speed,\"System settings\",Lines,Pages,\"Pages (less one line)\""
+msgstr "速度,\"系统设置\",行,页,\"页(至少一行)\""
+
+#: syneditstrconst.syns_emcwheelvertscrolldown
+msgid "Wheel scroll down (Vertical)"
+msgstr "滚轮下滚(水平)"
+
+#: syneditstrconst.syns_emcwheelvertscrollup
+msgid "Wheel scroll up (Vertical)"
+msgstr "滚轮上滚(垂直)"
+
+#: syneditstrconst.syns_emcwheelzoomin
+msgid "Wheel zoom in"
+msgstr "滚轮放大"
+
+#: syneditstrconst.syns_emcwheelzoomnorm
+msgid "Wheel zoom default"
+msgstr "滚轮缩放默认"
+
+#: syneditstrconst.syns_emcwheelzoomout
+msgid "Wheel zoom out"
+msgstr "滚轮缩小"
+
+#: syneditstrconst.syns_exporterformathtml
+msgid "HTML"
+msgstr "HTML"
+
+#: syneditstrconst.syns_exporterformatrtf
+msgid "RTF"
+msgstr "RTF"
+
+#: syneditstrconst.syns_filterbatch
+msgid "MS-DOS Batch Files (*.bat;*.cmd)|*.bat;*.cmd"
+msgstr "MS-DOS批处理文件(*.bat;*.cmd)|*.bat;*.cmd"
+
+#: syneditstrconst.syns_filtercpp
+msgid "C++ Files (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh"
+msgstr "C++文件(*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh"
+
+#: syneditstrconst.syns_filtercss
+msgid "Cascading Stylesheets (*.css)|*.css"
+msgstr "级联样式表(*.css)|*.css"
+
+#: syneditstrconst.syns_filterhtml
+msgid "HTML Document (*.htm,*.html)|*.htm;*.html"
+msgstr "HTML文档(*.htm,*.html)|*.htm;*.html"
+
+#: syneditstrconst.syns_filterini
+msgid "INI Files (*.ini)|*.ini"
+msgstr "INI文件(*.ini)|*.ini"
+
+#: syneditstrconst.syns_filterjava
+msgid "Java Files (*.java)|*.java"
+msgstr "Java文件(*.java)|*.java"
+
+#: syneditstrconst.syns_filterjscript
+msgid "Javascript Files (*.js)|*.js"
+msgstr "Javascript文件(*.js)|*.js"
+
+#: syneditstrconst.syns_filterlfm
+msgid "Lazarus Form Files (*.lfm)|*.lfm"
+msgstr "Lazarus窗体(Form)文件(*.lfm)|*.lfm"
+
+#: syneditstrconst.syns_filterpascal
+msgid "Pascal Files (*.pas,*.dpr,*.dpk,*.inc)|*.pas;*.dpr;*.dpk;*.inc"
+msgstr "Pascal文件(*.pas,*.dpr,*.dpk,*.inc)|*.pas;*.dpr;*.dpk;*.inc"
+
+#: syneditstrconst.syns_filterperl
+msgid "Perl Files (*.pl,*.pm,*.cgi)|*.pl;*.pm;*.cgi"
+msgstr "Perl文件(*.pl,*.pm,*.cgi)|*.pl;*.pm;*.cgi"
+
+#: syneditstrconst.syns_filterphp
+msgid "PHP Files (*.php,*.php3,*.phtml,*.inc)|*.php;*.php3;*.phtml;*.inc"
+msgstr "PHP文件(*.php,*.php3,*.phtml,*.inc)|*.php;*.php3;*.phtml;*.inc"
+
+#: syneditstrconst.syns_filterpo
+msgid "Po Files (*.po)|*.po"
+msgstr "Po文件(*.po)|*.po"
+
+#: syneditstrconst.syns_filterpython
+msgid "Python Files (*.py)|*.py"
+msgstr "Python文件(*.py)|*.py"
+
+#: syneditstrconst.syns_filtersql
+msgid "SQL Files (*.sql)|*.sql"
+msgstr "SQL文件(*.sql)|*.sql"
+
+#: syneditstrconst.syns_filtertex
+msgid "TeX Files (*.tex)|*.tex"
+msgstr "TeX文件(*.tex)|*.tex"
+
+#: syneditstrconst.syns_filterunixshellscript
+msgid "UNIX Shell Scripts (*.sh)|*.sh"
+msgstr "UNIX Shell文件(*.sh)|*.sh"
+
+#: syneditstrconst.syns_filtervisualbasic
+msgid "Visual Basic Files (*.bas)|*.bas"
+msgstr "Visual Basic文件(*.bas)|*.bas"
+
+#: syneditstrconst.syns_filterxml
+msgid "XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd"
+msgstr "XML文档(*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd"
+
+#: syneditstrconst.syns_paste
+msgid "&Paste"
+msgstr ""
+
+#: syneditstrconst.syns_previewscrollinfofmt
+#, object-pascal-format
+msgid "Page: %d"
+msgstr "页:%d"
+
+#: syneditstrconst.syns_redo
+msgid "&Redo"
+msgstr ""
+
+#: syneditstrconst.syns_scrollinfofmt
+#, object-pascal-format
+msgid "%d - %d"
+msgstr "%d - %d"
+
+#: syneditstrconst.syns_scrollinfofmttop
+#, object-pascal-format
+msgid "Top Line: %d"
+msgstr "顶部行(Top Line):%d"
+
+#: syneditstrconst.syns_selectall
+msgid "Select &all"
+msgstr ""
+
+#: syneditstrconst.syns_shortcutnone
+msgid "<none>"
+msgstr "<none>"
+
+#: syneditstrconst.syns_undo
+msgid "&Undo"
+msgstr ""
+
+#: syneditstrconst.syns_untitled
+msgid "Untitled"
+msgstr "无标题(Untitled)"
+

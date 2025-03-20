@@ -1,0 +1,253 @@
+object PathEditorDialog: TPathEditorDialog
+  Left = 420
+  Height = 450
+  Top = 156
+  Width = 570
+  AutoSize = True
+  Caption = 'PathEditorDialog'
+  ClientHeight = 450
+  ClientWidth = 570
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 500
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object PathGroupBox: TGroupBox
+    AnchorSideLeft.Control = ButtonPanel1
+    AnchorSideRight.Control = ButtonPanel1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = AddTemplateButton
+    Left = 6
+    Height = 375
+    Top = 6
+    Width = 558
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 6
+    Caption = 'PathGroupBox'
+    ClientHeight = 355
+    ClientWidth = 556
+    Constraints.MinHeight = 194
+    Constraints.MinWidth = 488
+    TabOrder = 0
+    object DeleteButton: TBitBtn
+      AnchorSideLeft.Control = AddButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = PathGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 190
+      Height = 25
+      Top = 324
+      Width = 91
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'DeleteButton'
+      Enabled = False
+      OnClick = DeleteButtonClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object PathListBox: TListBox
+      AnchorSideLeft.Control = PathGroupBox
+      AnchorSideTop.Control = PathGroupBox
+      AnchorSideRight.Control = MoveUpButton
+      AnchorSideBottom.Control = DirectoryEdit
+      Left = 6
+      Height = 281
+      Top = 6
+      Width = 513
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+      ItemHeight = 0
+      OnDrawItem = PathListBoxDrawItem
+      OnKeyDown = PathListBoxKeyDown
+      OnSelectionChange = PathListBoxSelectionChange
+      PopupMenu = PopupMenu1
+      ScrollWidth = 511
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object ReplaceButton: TBitBtn
+      AnchorSideLeft.Control = PathGroupBox
+      AnchorSideBottom.Control = PathGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 25
+      Top = 324
+      Width = 98
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'ReplaceButton'
+      Enabled = False
+      OnClick = ReplaceButtonClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object AddButton: TBitBtn
+      AnchorSideLeft.Control = ReplaceButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = PathGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 110
+      Height = 25
+      Top = 324
+      Width = 74
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'AddButton'
+      Enabled = False
+      OnClick = AddButtonClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object DeleteInvalidPathsButton: TBitBtn
+      AnchorSideLeft.Control = DeleteButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = PathGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 287
+      Height = 25
+      Top = 324
+      Width = 168
+      Anchors = [akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'DeleteInvalidPathsButton'
+      Enabled = False
+      OnClick = DeleteInvalidPathsButtonClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object DirectoryEdit: TShortPathEdit
+      AnchorSideLeft.Control = PathListBox
+      AnchorSideRight.Control = PathListBox
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = ReplaceButton
+      Left = 6
+      Height = 25
+      Top = 293
+      Width = 513
+      OnAcceptDirectory = DirectoryEditAcceptDirectory
+      ShowHidden = False
+      ButtonWidth = 25
+      NumGlyphs = 1
+      Anchors = [akLeft, akRight, akBottom]
+      MaxLength = 0
+      TabOrder = 1
+      OnChange = DirectoryEditChange
+    end
+    object MoveUpButton: TSpeedButton
+      AnchorSideLeft.Control = PathGroupBox
+      AnchorSideRight.Control = PathGroupBox
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PathGroupBox
+      AnchorSideBottom.Side = asrBottom
+      Left = 525
+      Height = 25
+      Top = 87
+      Width = 25
+      Anchors = [akRight]
+      BorderSpacing.Around = 6
+      OnClick = MoveUpButtonClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object MoveDownButton: TSpeedButton
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = MoveUpButton
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = MoveUpButton
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 525
+      Height = 25
+      Top = 121
+      Width = 25
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 9
+      OnClick = MoveDownButtonClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 418
+    Width = 558
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+  object AddTemplateButton: TBitBtn
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 16
+    Height = 25
+    Top = 387
+    Width = 133
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'AddTemplateButton'
+    OnClick = AddTemplateButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object BrowseDialog: TSelectDirectoryDialog
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 350
+    top = 50
+  end
+  object PopupMenu1: TPopupMenu
+    left = 130
+    top = 100
+    object CopyMenuItem: TMenuItem
+      Caption = 'Copy All'
+      OnClick = CopyMenuItemClick
+    end
+    object PasteMenuItem: TMenuItem
+      Caption = 'Paste'
+      OnClick = PasteMenuItemClick
+    end
+    object SeparMenuItem: TMenuItem
+      Caption = '-'
+    end
+    object ExportMenuItem: TMenuItem
+      Caption = 'Export to file'
+      OnClick = ExportMenuItemClick
+    end
+    object ImportMenuItem: TMenuItem
+      Caption = 'Import from file'
+      OnClick = ImportMenuItemClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 240
+    top = 100
+  end
+  object SaveDialog1: TSaveDialog
+    left = 350
+    top = 100
+  end
+end

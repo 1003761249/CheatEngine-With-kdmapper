@@ -1,0 +1,675 @@
+object MainForm: TMainForm
+  Left = 450
+  Height = 480
+  Top = 226
+  Width = 666
+  ActiveControl = PCRecent
+  Caption = 'Lazarus Database Desktop'
+  ClientHeight = 480
+  ClientWidth = 666
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  SessionProperties = 'Height;Left;Top;Width;WindowState'
+  LCLVersion = '3.99.0.0'
+  object TBMain: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 666
+    ButtonHeight = 24
+    ButtonWidth = 24
+    Images = ImgDatamodule.AppImages
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object TBSave: TToolButton
+      Left = 49
+      Top = 2
+      Action = ASave
+    end
+    object TBOPen: TToolButton
+      Left = 25
+      Top = 2
+      HelpType = htKeyword
+      HelpKeyword = 'Open a new Data Dictionary'
+      Action = AOpen
+    end
+    object TBNew: TToolButton
+      Left = 1
+      Top = 2
+      Action = ANew
+    end
+    object ToolButton1: TToolButton
+      Left = 73
+      Height = 24
+      Top = 2
+      Style = tbsSeparator
+    end
+    object TBNewTable: TToolButton
+      Left = 113
+      Top = 2
+      Action = ANewTable
+    end
+    object TBNewField: TToolButton
+      Left = 137
+      Top = 2
+      Action = ANewField
+    end
+    object ToolButton2: TToolButton
+      Left = 257
+      Height = 24
+      Top = 2
+      Style = tbsSeparator
+    end
+    object TBDeleteTable: TToolButton
+      Left = 265
+      Top = 2
+      Action = ADeleteObject
+    end
+    object ToolButton3: TToolButton
+      Left = 289
+      Height = 24
+      Top = 2
+      Style = tbsSeparator
+    end
+    object TBGenerateSQL: TToolButton
+      Left = 297
+      Top = 2
+      Action = AGenerateSQL
+    end
+    object TBAddIndex: TToolButton
+      Left = 185
+      Top = 2
+      Action = ANewIndex
+    end
+    object ToolButton5: TToolButton
+      Left = 321
+      Top = 2
+      Action = ACreateCode
+    end
+    object TBAddSequence: TToolButton
+      Left = 209
+      Top = 2
+      Action = AAddSequence
+    end
+    object ToolButton4: TToolButton
+      Left = 233
+      Top = 2
+      Action = AAddDomain
+    end
+    object ToolButton6: TToolButton
+      Left = 161
+      Top = 2
+      Action = AAddForeignKey
+    end
+    object ToolButton7: TToolButton
+      Left = 105
+      Height = 24
+      Top = 2
+      Caption = 'ToolButton7'
+      Style = tbsSeparator
+    end
+    object ToolButton8: TToolButton
+      Left = 81
+      Top = 2
+      Action = ANewConnection
+    end
+    object ToolButton9: TToolButton
+      Left = 345
+      Height = 24
+      Top = 2
+      Caption = 'ToolButton9'
+      Style = tbsDivider
+    end
+    object ToolButton10: TToolButton
+      Left = 350
+      Top = 2
+      Action = AExit
+    end
+  end
+  object PCRecent: TPageControl
+    Left = 0
+    Height = 434
+    Top = 26
+    Width = 460
+    ActivePage = TSAll
+    Align = alClient
+    Images = ImgDatamodule.AppImages
+    TabIndex = 2
+    TabOrder = 1
+    object TSConnections: TTabSheet
+      Caption = 'Connections'
+      ClientHeight = 406
+      ClientWidth = 452
+      ImageIndex = 38
+      object LVConnections: TListView
+        Left = 0
+        Height = 406
+        Top = 0
+        Width = 452
+        Align = alClient
+        Columns = <        
+          item
+            Caption = 'Name'
+            Width = 120
+          end        
+          item
+            Caption = 'Driver'
+            Width = 120
+          end        
+          item
+            Caption = 'Last used'
+            Width = 150
+          end        
+          item
+            Caption = 'Description'
+            Width = 260
+          end>
+        PopupMenu = PMRecentConnections
+        ReadOnly = True
+        RowSelect = True
+        SortType = stText
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnDblClick = OpenRecentConnection
+        OnKeyUp = LVConnectionsKeyUp
+      end
+    end
+    object TSRecent: TTabSheet
+      Caption = 'Dictionaries'
+      ClientHeight = 406
+      ClientWidth = 452
+      ImageIndex = 32
+      object LVDicts: TListView
+        Left = 0
+        Height = 406
+        Top = 0
+        Width = 452
+        Align = alClient
+        Columns = <        
+          item
+            Caption = 'Name'
+            Width = 10
+          end        
+          item
+            Caption = 'Filename'
+            Width = 10
+          end        
+          item
+            Caption = 'Last used on'
+            Width = 617
+          end>
+        PopupMenu = PMDataDict
+        ReadOnly = True
+        RowSelect = True
+        SortColumn = 2
+        SortType = stText
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnDblClick = OpenRecentDatadict
+        OnKeyUp = LVDictsKeyUp
+      end
+    end
+    object TSAll: TTabSheet
+      Caption = 'Connections/Dictionaries'
+      ClientHeight = 406
+      ClientWidth = 452
+      ImageIndex = 29
+      object TVAll: TTreeView
+        Left = 0
+        Height = 406
+        Top = 0
+        Width = 452
+        Align = alClient
+        Images = ImgDatamodule.AppImages
+        PopupMenu = PMAll
+        ReadOnly = True
+        TabOrder = 0
+        OnDblClick = TVAllDblClick
+        Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      end
+    end
+  end
+  object PStatus: TPanel
+    Left = 0
+    Height = 20
+    Top = 460
+    Width = 666
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 20
+    ClientWidth = 666
+    TabOrder = 2
+    Visible = False
+    object PBSTatus: TProgressBar
+      Left = 0
+      Height = 20
+      Top = 0
+      Width = 128
+      Align = alLeft
+      TabOrder = 1
+    end
+    object PStatusText: TPanel
+      Left = 128
+      Height = 20
+      Top = 0
+      Width = 538
+      Align = alClient
+      Alignment = taLeftJustify
+      BevelOuter = bvLowered
+      TabOrder = 0
+    end
+  end
+  object PCItems: TPageControl
+    Left = 466
+    Height = 434
+    Top = 26
+    Width = 200
+    Align = alRight
+    Images = ImgDatamodule.AppImages
+    TabOrder = 3
+    OnCloseTabClicked = DoCloseTabClick
+    Options = [nboShowCloseButtons, nboKeyboardTabSwitch]
+  end
+  object SRecent: TSplitter
+    Left = 460
+    Height = 434
+    Top = 26
+    Width = 6
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object MainMenu1: TMainMenu
+    Images = ImgDatamodule.AppImages
+    Left = 40
+    Top = 80
+    object MFIle: TMenuItem
+      Caption = '&File'
+      object MenuItem1: TMenuItem
+        Action = ANew
+      end
+      object MIOpen: TMenuItem
+        Action = AOpen
+      end
+      object MISave: TMenuItem
+        Action = ASave
+      end
+      object MISaveAs: TMenuItem
+        Action = ASaveAs
+      end
+      object MICloseSep: TMenuItem
+        Caption = '-'
+      end
+      object MIClose: TMenuItem
+        Action = AClose
+      end
+      object MICloseAll: TMenuItem
+        Action = ACloseAll
+      end
+      object MISep: TMenuItem
+        Caption = '-'
+      end
+      object MIExit: TMenuItem
+        Action = AExit
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = '&Edit'
+      object MICut: TMenuItem
+        Action = ACut
+      end
+      object MenuItem3: TMenuItem
+        Action = ACopy
+      end
+      object MIPaste: TMenuItem
+        Action = APaste
+      end
+    end
+    object MIDataDict: TMenuItem
+      Caption = '&Dictionary'
+      OnClick = MIDataDictClick
+      object MIImport: TMenuItem
+        Caption = '&Import'
+        ImageIndex = 37
+      end
+      object MIDDSep: TMenuItem
+        Caption = '-'
+      end
+      object MINewTable: TMenuItem
+        Action = ANewTable
+      end
+      object MINewField: TMenuItem
+        Action = ANewField
+      end
+      object MenuItem4: TMenuItem
+        Action = ANewIndex
+      end
+      object MenuItem7: TMenuItem
+        Action = AAddForeignKey
+      end
+      object MenuItem5: TMenuItem
+        Action = AAddDomain
+      end
+      object MenuItem6: TMenuItem
+        Action = AAddSequence
+      end
+      object MIDDSep2: TMenuItem
+        Caption = '-'
+      end
+      object MIDeleteTable: TMenuItem
+        Action = ADeleteObject
+      end
+      object MIDDSep3: TMenuItem
+        Caption = '-'
+      end
+      object MIGenerateSQL: TMenuItem
+        Action = AGenerateSQL
+      end
+      object MICreateCode: TMenuItem
+        Action = ACreateCode
+      end
+    end
+    object MIConnection: TMenuItem
+      Caption = 'Connections'
+      object MINewConnection: TMenuItem
+        Caption = '&New connection'
+        ImageIndex = 31
+      end
+      object MIOpenRecentConnection: TMenuItem
+        Action = AOpenConnection
+      end
+      object MIDeleteRecentConnection: TMenuItem
+        Action = ADeleteConnection
+      end
+    end
+    object MView: TMenuItem
+      Caption = '&View'
+      object MIListView: TMenuItem
+        AutoCheck = True
+        Caption = 'Legacy List View'
+        OnClick = MIListViewClick
+      end
+    end
+  end
+  object ALMain: TActionList
+    Images = ImgDatamodule.AppImages
+    Left = 104
+    Top = 136
+    object ASave: TAction
+      Category = 'File'
+      Caption = '&Save'
+      Hint = 'Save Data Dictionary'
+      ImageIndex = 14
+      OnExecute = ASaveExecute
+      OnUpdate = HaveDDEditor
+      ShortCut = 16467
+    end
+    object ANew: TAction
+      Category = 'File'
+      Caption = '&New'
+      Hint = 'Create a new Data Dictionary'
+      ImageIndex = 13
+      OnExecute = ANewExecute
+      ShortCut = 16462
+    end
+    object AExit: TAction
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Quit this program'
+      ImageIndex = 33
+      OnExecute = AExitExecute
+      ShortCut = 16465
+    end
+    object AOpen: TAction
+      Category = 'File'
+      Caption = '&Open...'
+      HelpKeyword = 'Open a new Data Dictionary'
+      ImageIndex = 12
+      OnExecute = AOpenExecute
+      ShortCut = 16463
+    end
+    object AClose: TAction
+      Category = 'File'
+      Caption = '&Close'
+      Hint = 'Close current Data Dictionary'
+      OnExecute = ACloseExecute
+      OnUpdate = HaveTab
+      ShortCut = 16471
+    end
+    object ACut: TEditCut
+      Category = 'Edit'
+      Caption = 'Cu&t'
+      Hint = 'Cut'
+      ImageIndex = 34
+      ShortCut = 16472
+    end
+    object ACopy: TEditCopy
+      Category = 'Edit'
+      Caption = '&Copy'
+      Hint = 'Copy'
+      ImageIndex = 35
+      ShortCut = 16451
+    end
+    object APaste: TEditPaste
+      Category = 'Edit'
+      Caption = '&Paste'
+      Hint = 'Paste'
+      ImageIndex = 36
+      ShortCut = 16470
+    end
+    object ACloseAll: TAction
+      Category = 'File'
+      Caption = 'Close &All'
+      Hint = 'Close all Data Dictionaries'
+      OnExecute = ACloseAllExecute
+      OnUpdate = HaveTabs
+      ShortCut = 49239
+    end
+    object ANewTable: TAction
+      Category = 'Dictionary'
+      Caption = 'New &table'
+      Hint = 'Create a new table'
+      ImageIndex = 17
+      OnExecute = ANewTableExecute
+      OnUpdate = HaveDataDict
+      ShortCut = 16468
+    end
+    object ANewField: TAction
+      Category = 'Dictionary'
+      Caption = 'New &field'
+      Hint = 'Create a new field in the current table'
+      ImageIndex = 18
+      OnExecute = ANewFieldExecute
+      OnUpdate = ANewFieldUpdate
+      ShortCut = 16454
+    end
+    object ADeleteObject: TAction
+      Category = 'Dictionary'
+      Caption = 'Delete &Object'
+      Hint = 'Delete the currently selected object'
+      ImageIndex = 16
+      OnExecute = ADeleteObjectExecute
+      OnUpdate = ADeleteObjectUpdate
+    end
+    object AGenerateSQL: TAction
+      Category = 'Dictionary'
+      Caption = '&Generate SQL'
+      Hint = 'Generate SQL statements for the current table'
+      ImageIndex = 20
+      OnExecute = AGenerateSQLExecute
+      OnUpdate = AllowSQL
+      ShortCut = 16455
+    end
+    object ASaveAs: TAction
+      Category = 'File'
+      Caption = 'Save &as'
+      Hint = 'Save datadictionary as'
+      ImageIndex = 15
+      OnExecute = SaveAsExecute
+      OnUpdate = HaveDDEditor
+    end
+    object ANewConnection: TAction
+      Category = 'Connections'
+      Caption = '&New connection'
+      ImageIndex = 31
+      OnExecute = ANewConnectionExecute
+      ShortCut = 49230
+    end
+    object ADeleteConnection: TAction
+      Category = 'Connections'
+      Caption = '&Delete connection'
+      ImageIndex = 48
+      OnExecute = ADeleteConnectionExecute
+      OnUpdate = HaveRecentConnection
+      ShortCut = 49220
+    end
+    object ACopyConnection: TAction
+      Category = 'Connections'
+      Caption = '&Copy connection'
+    end
+    object ANewIndex: TAction
+      Category = 'Dictionary'
+      Caption = 'New index'
+      Hint = 'Add new index to current table'
+      ImageIndex = 28
+      OnExecute = ANewIndexExecute
+      OnUpdate = ANewIndexUpdate
+    end
+    object ACreateCode: TAction
+      Category = 'Dictionary'
+      Caption = 'Create &code'
+      Hint = 'Create code from definition or data'
+      ImageIndex = 11
+      OnExecute = ACreateCodeExecute
+      OnUpdate = ACreateCodeUpdate
+    end
+    object AAddSequence: TAction
+      Category = 'Dictionary'
+      Caption = 'New sequence'
+      Hint = 'Add a sequence'
+      ImageIndex = 24
+      OnExecute = AAddSequenceExecute
+      OnUpdate = AAddSequenceUpdate
+    end
+    object AAddForeignKey: TAction
+      Category = 'Dictionary'
+      Caption = 'New Foreign key'
+      Hint = 'Add a foreign key to the table'
+      ImageIndex = 26
+      OnExecute = AAddForeignKeyExecute
+      OnUpdate = AAddForeignKeyUpdate
+    end
+    object AAddDomain: TAction
+      Category = 'Dictionary'
+      Caption = 'New domain'
+      Hint = 'Add a domain to the data dictionary'
+      ImageIndex = 22
+      OnExecute = AAddDomainExecute
+      OnUpdate = AAddDomainUpdate
+    end
+    object AOpenConnection: TAction
+      Category = 'Connections'
+      Caption = '&Open connection'
+      Hint = 'Open selected recent connection'
+      ImageIndex = 45
+      OnExecute = OpenRecentConnection
+      OnUpdate = HaveRecentConnection
+    end
+    object AOpenRecentDatadict: TAction
+      Category = 'File'
+      Caption = 'Open'
+      Hint = 'Open selected recent datadictionary'
+      OnExecute = OpenRecentDatadict
+      OnUpdate = HaveRecentDataDict
+    end
+    object ADeleteRecentDataDict: TAction
+      Category = 'File'
+      Caption = '&Delete'
+      OnExecute = ADeleteRecentDataDictExecute
+      OnUpdate = HaveRecentDataDict
+    end
+  end
+  object ODDD: TOpenDialog
+    DefaultExt = '.fdd'
+    FilterIndex = 0
+    Options = [ofReadOnly, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 104
+    Top = 80
+  end
+  object PSMain: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'lazdde'
+    IniSection = 'main'
+    Left = 160
+    Top = 136
+  end
+  object SDDD: TSaveDialog
+    DefaultExt = '.fdd'
+    FilterIndex = 0
+    Left = 160
+    Top = 80
+  end
+  object PMRecentConnections: TPopupMenu
+    Images = ImgDatamodule.AppImages
+    Left = 160
+    Top = 200
+    object PMINewConnection: TMenuItem
+      Action = ANewConnection
+    end
+    object PMIOpenConnection: TMenuItem
+      Action = AOpenConnection
+    end
+    object PMIDeleteConnection: TMenuItem
+      Action = ADeleteConnection
+    end
+  end
+  object PMDataDict: TPopupMenu
+    Images = ImgDatamodule.AppImages
+    Left = 43
+    Top = 200
+    object PMINewDataDict: TMenuItem
+      Action = ANew
+      OnClick = ANewExecute
+    end
+    object PMIOpenDataDict: TMenuItem
+      Action = AOpenRecentDatadict
+      OnClick = OpenRecentDatadict
+    end
+    object MenuItem8: TMenuItem
+      Action = ADeleteRecentDataDict
+      OnClick = ADeleteRecentDataDictExecute
+    end
+  end
+  object PMAll: TPopupMenu
+    Images = ImgDatamodule.AppImages
+    OnPopup = PMAllPopup
+    Left = 160
+    Top = 256
+    object PMIOpenConnectionA: TMenuItem
+      Action = AOpenConnection
+    end
+    object PMINewConnectionA: TMenuItem
+      Action = ANewConnection
+    end
+    object PMIDeleteConnectionA: TMenuItem
+      Action = ADeleteConnection
+    end
+    object MenuItem10: TMenuItem
+      Caption = '-'
+    end
+    object PMIOpenDataDictA: TMenuItem
+      Action = AOpenRecentDatadict
+    end
+    object PMINewDataDictA: TMenuItem
+      Action = ANew
+    end
+    object PMIDeleteDataDictA: TMenuItem
+      Action = ADeleteRecentDataDict
+    end
+  end
+end

@@ -1,0 +1,10 @@
+Name=fpmkunit
+Version=3.2.2
+Checksum=1513316682
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\fpmkunit\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,hash|1513316664,paszlib|1513316664,fcl-process|1513316677,libtar|1513316676
+NeedLibC=N
+FPMakeAddIn=N

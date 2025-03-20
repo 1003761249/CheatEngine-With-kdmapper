@@ -1,0 +1,980 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-11-03 18:05+0100\n"
+"Last-Translator: J.Salvador Pérez <salvaperez@escomposlinux.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: codetoolsstrconsts.crsbracketnotfound
+msgid "bracket ) not found"
+msgstr ""
+
+#: codetoolsstrconsts.crsbracketnotfound2
+msgid "bracket ] not found"
+msgstr ""
+
+#: codetoolsstrconsts.crsclosingbracketnotfound
+msgid "closing bracket not found"
+msgstr ""
+
+#: codetoolsstrconsts.crsfoundunexpectedat
+#, object-pascal-format
+msgid "%s, found unexpected %s at %s"
+msgstr ""
+
+#: codetoolsstrconsts.crsrecordendnotfound
+msgid "record end not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsaddsdirtoincludepath
+#, object-pascal-format
+msgid "adds %s to IncPath"
+msgstr ""
+
+#: codetoolsstrconsts.ctsaddsdirtosourcepath
+#, object-pascal-format
+msgid "adds %s to SrcPath"
+msgstr "afegeix %s a SrcPath"
+
+#: codetoolsstrconsts.ctsancestorisnotproperty
+msgid "ancestor of untyped property is not a property"
+msgstr "el progenitor de propietat sense tipus no és una propietat"
+
+#: codetoolsstrconsts.ctsanlclproject
+msgid "an LCL project"
+msgstr "un projecte LCL"
+
+#: codetoolsstrconsts.ctsanonymdefinitionsarenotallowed
+#, object-pascal-format
+msgid "Anonymous %s definitions are not allowed"
+msgstr "Les definicions anònimes %s no estan permeses"
+
+#: codetoolsstrconsts.ctsawithoutb
+#, object-pascal-format
+msgid "%s without %s"
+msgstr "%s sense %s"
+
+#: codetoolsstrconsts.ctsbasetypeofnotfound
+#, object-pascal-format
+msgid "base type of \"%s\" not found"
+msgstr "no s'ha trobat tipus base de \"%s\""
+
+#: codetoolsstrconsts.ctsbeginatwithoutend
+#, object-pascal-format
+msgid "begin at %s without end"
+msgstr ""
+
+#: codetoolsstrconsts.ctsbinaryoperator
+msgid "binary operator"
+msgstr "operador binari"
+
+#: codetoolsstrconsts.ctsbracketcloseexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket close expected, but %s found"
+msgstr "S'esperava claudàtor de tancar, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsbracketnotfound
+#, object-pascal-format
+msgid "bracket %s not found"
+msgstr "no s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsbracketopenexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket open expected, but %s found"
+msgstr "S'esperava claudàtor d'obrir, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctscannotaddaunittotheimplementationbecauseonlyaunith
+msgid "cannot add a unit to the implementation, because only a unit has one"
+msgstr ""
+
+#: codetoolsstrconsts.ctscharacterconstantoutofrange
+msgid "character constant out of range"
+msgstr ""
+
+#: codetoolsstrconsts.ctscircleindefinitions
+msgid "circle in definitions"
+msgstr "hi ha un cercle en les definicions"
+
+#: codetoolsstrconsts.ctsclassidentifierexpected
+msgid "class identifier expected"
+msgstr "s'esperava identificador de classe"
+
+#: codetoolsstrconsts.ctsclassnodewithoutparentnode
+msgid "class node without parent node"
+msgstr "node classe sense node pare"
+
+#: codetoolsstrconsts.ctsclassnotfound
+#, object-pascal-format, fuzzy, badformat
+#| msgid "class %s%s%s not found"
+msgid "class \"%s\" not found"
+msgstr "no s'ha trobat la classe %s%s%s"
+
+#: codetoolsstrconsts.ctsclassnotfound2
+#, object-pascal-format
+msgid "class not found \"%s\""
+msgstr ""
+
+#: codetoolsstrconsts.ctsclassofdefinitionnotresolved
+#, object-pascal-format
+msgid "\"class of\" definition not resolved: %s"
+msgstr "No s'ha resolt la definició de \"class of \": %s"
+
+#: codetoolsstrconsts.ctsclasssnotfound
+#, object-pascal-format
+msgid "Class %s not found"
+msgstr "No s'ha trobat la classe %s"
+
+#: codetoolsstrconsts.ctsclasswithoutname
+msgid "class without name"
+msgstr "classe sense nom"
+
+#: codetoolsstrconsts.ctscommandlineparameters
+msgid "Command line parameters"
+msgstr "Paràmetres de la línia d'ordres"
+
+#: codetoolsstrconsts.ctscommentendnotfound
+msgid "Comment end not found"
+msgstr "No s'ha trobat el final del comentari"
+
+#: codetoolsstrconsts.ctscompiledsrcpath
+msgid "Compiled SrcPath"
+msgstr "SrcPath dels compilats"
+
+#: codetoolsstrconsts.ctscompiler
+msgid "Compiler"
+msgstr "Compilador"
+
+#: codetoolsstrconsts.ctscomponentsdirectory
+msgid "Components Directory"
+msgstr "Directori dels components"
+
+#: codetoolsstrconsts.ctsconstant
+msgid "constant"
+msgstr "constant"
+
+#: codetoolsstrconsts.ctscursorposoutsideofcode
+msgid "cursor pos outside of code"
+msgstr "posició del cursor fora del codi"
+
+#: codetoolsstrconsts.ctscustomcomponentsdirectory
+msgid "Custom Components Directory"
+msgstr "Directori dels components personalitzats"
+
+#: codetoolsstrconsts.ctsdebuggerdirectory
+msgid "Debugger Directory"
+msgstr "Directori del depurador"
+
+#: codetoolsstrconsts.ctsdefaultancestornotfound
+#, object-pascal-format
+msgid "default ancestor %s not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultclassancestortobjectnotfound
+msgid "default class ancestor TObject not found"
+msgstr "no s'ha trobat la classe predeterminada progenitora TObject"
+
+#: codetoolsstrconsts.ctsdefaultdispinterfaceancestoridispatchnotfound
+msgid "default dispinterface ancestor IDispatch not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultfpcsource2operatingsystem
+msgid "Default fpc source Operating System 2"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultfpcsourceoperatingsystem
+msgid "Default fpc source Operating System"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultfpcsymbol
+msgid "Default fpc symbol"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultfpctargetoperatingsystem
+msgid "Default fpc target Operating System"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultfpctargetprocessor
+msgid "Default fpc target processor"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultinterfaceancestoriinterfacenotfound
+msgid "default interface ancestor IInterface not found"
+msgstr "no s'ha trobat l'interfície predeterminada progenitora IInterface"
+
+#: codetoolsstrconsts.ctsdefaultjavaclassancestorjlobjectnotfound
+msgid "default java class ancestor JLObject not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "default parameter expected, but %s found"
+msgstr "s'esperava un paràmetre predeterminat, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsdefaultpropertynotfound
+msgid "default property not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefaultspecifierredefined
+msgid "default specifier redefined"
+msgstr "s'ha redefinit l'especificador predeterminat"
+
+#: codetoolsstrconsts.ctsdefine
+msgid "Define "
+msgstr "Defineix"
+
+#: codetoolsstrconsts.ctsdefinelcl
+msgid "Define LCL"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefinelclwidgetset
+msgid "Define LCLwidgetset, e.g. LCLgtk"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdefinemacroname
+#, object-pascal-format
+msgid "Define Macro %s"
+msgstr "Defineix macroinstrucció %s"
+
+#: codetoolsstrconsts.ctsdefineprocessortype
+msgid "Define processor type"
+msgstr "Defineix el tipus de processador"
+
+#: codetoolsstrconsts.ctsdefsforlazarussources
+msgid "Definitions for the Lazarus Sources"
+msgstr "Definicions de les fonts del Lazarus"
+
+#: codetoolsstrconsts.ctsdesignerdirectory
+msgid "Designer Directory"
+msgstr "Directori del dissenyador"
+
+#: codetoolsstrconsts.ctsdispidparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "dispid parameter expected, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsdispidspecifierredefined
+msgid "dispid specifier redefined"
+msgstr ""
+
+#: codetoolsstrconsts.ctsduplicateidentifier
+#, object-pascal-format
+msgid "duplicate identifier: %s"
+msgstr "identificador duplicat: %s"
+
+#: codetoolsstrconsts.ctselse
+msgid "else"
+msgstr "else"
+
+#: codetoolsstrconsts.ctsendforclassnotfound
+msgid "\"end\" for class/object not found"
+msgstr "No s'ha trobat \"end\" per class/object"
+
+#: codetoolsstrconsts.ctsendforrecordnotfound
+msgid "end for record not found"
+msgstr "no s'ha trobat el final del registre"
+
+#: codetoolsstrconsts.ctsendoffile
+msgid "end of file"
+msgstr ""
+
+#: codetoolsstrconsts.ctsendofsourceexpectedbutatomfound
+#, object-pascal-format
+msgid "expected end., but %s found"
+msgstr "esperava end., però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsendofsourcenotfound
+#, fuzzy
+#| msgid "End of source not found"
+msgid "End of source not found."
+msgstr "No s'ha trobat el final del codi font"
+
+#: codetoolsstrconsts.ctsenumerationtype
+msgid "enumeration type"
+msgstr ""
+
+#: codetoolsstrconsts.ctserrorduringcreationofnewprocbodies
+msgid "error during creation of new proc bodies"
+msgstr "s'ha produït un error mentre es creaven els cossos del nou procediment"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewclassparts
+msgid "error during inserting new class parts"
+msgstr "s'ha produït un error mentre s'inserien parts de la nova classe"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewusessection
+msgid "error during inserting new units to the main uses section"
+msgstr "S'ha produit un errur mentre s'inseria noves unitats a la secció uses principal"
+
+#: codetoolsstrconsts.ctserrorindirectiveexpression
+msgid "error in directive expression"
+msgstr "s'ha produït un error en l'expressió de la directiva"
+
+#: codetoolsstrconsts.ctserrorinparamlist
+msgid "error in paramlist"
+msgstr "s'ha produït un error en llista dels paràmetres"
+
+#: codetoolsstrconsts.ctsexpected
+#, object-pascal-format
+msgid "\"%s\" expected"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedamethodtypebutfound
+#, object-pascal-format
+msgid "expected a method type, but found %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedbutfound
+#, object-pascal-format
+msgid "expected (, but found %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedbutfound2
+#, object-pascal-format
+msgid "expected ), but found %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedbutfound3
+#, object-pascal-format
+msgid "expected :=, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedidentifierbutfound
+#, object-pascal-format
+msgid "expected identifier, but found %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexpectedsemicolonofstatementbutfound
+#, object-pascal-format
+msgid "expected ; of statement, but found %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsexportsclauseonlyallowedinlibraries
+msgid "exports clause only allowed in libraries"
+msgstr "la clausula exportada només es permet en biblioteques"
+
+#: codetoolsstrconsts.ctsexprtypemustbeclassorrecord
+msgid "expression type must be class or record type"
+msgstr "el tipus de l'expressió ha de ser CLASS o RECORD"
+
+#: codetoolsstrconsts.ctsfileisreadonly
+msgid "file is read only"
+msgstr "el fitxer és només de lectura"
+
+#: codetoolsstrconsts.ctsforward
+msgid "Forward"
+msgstr "Avança"
+
+#: codetoolsstrconsts.ctsforwardclassdefinitionnotresolved
+#, object-pascal-format
+msgid "Forward class definition not resolved: %s"
+msgstr "No s'ha resolt la definició de la classe: %s"
+
+#: codetoolsstrconsts.ctsfpdocsystemon
+msgid "enable FPDocSystem"
+msgstr "Habilita FPDocSystem"
+
+#: codetoolsstrconsts.ctsfreepascalcompilerinitialmacros
+msgid "Free Pascal Compiler initial macros"
+msgstr "Macroinstruccions inicials del Free Pascal Compiler"
+
+#: codetoolsstrconsts.ctsfreepascalcomponentlibrary
+msgid "Free Pascal Component Library"
+msgstr "Biblioteca dels components del Free Pascal"
+
+#: codetoolsstrconsts.ctsfreepascalsourcedir
+msgid "Free Pascal Source Directory"
+msgstr "Directori font del Free Pascal"
+
+#: codetoolsstrconsts.ctsfreepascalsourcesplusdesc
+#, object-pascal-format
+msgid "Free Pascal Sources, %s"
+msgstr "Fonts del Free Pascal, %s"
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass"
+msgid "function GetEnumerator not found in this class"
+msgstr ""
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2"
+msgid "function GetEnumerator not found in this class"
+msgstr ""
+
+#: codetoolsstrconsts.ctsgenericidentifier
+msgid "generic identifier"
+msgstr ""
+
+#: codetoolsstrconsts.ctshaserror
+msgid "HasError"
+msgstr ""
+
+#: codetoolsstrconsts.ctshelperisnotallowed
+#, object-pascal-format
+msgid "Helper after %s is not allowed"
+msgstr ""
+
+#: codetoolsstrconsts.ctsidedirectory
+msgid "IDE Directory"
+msgstr "Directori de l'IDE"
+
+#: codetoolsstrconsts.ctsidentexpectedbutatomfound
+#, object-pascal-format
+msgid "identifier expected, but %s found"
+msgstr "esperava un identificador, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsidentexpectedbuteoffound
+msgid "unexpected end of file (identifier expected)"
+msgstr "final de fitxer inesperat (s'esperava identificador)"
+
+#: codetoolsstrconsts.ctsidentexpectedbutkeywordfound
+#, object-pascal-format
+msgid "identifier expected, but keyword %s found"
+msgstr "esperava un identificador, però s'ha trobat paraula clau %s"
+
+#: codetoolsstrconsts.ctsidentifier
+msgid "identifier"
+msgstr "identificador"
+
+#: codetoolsstrconsts.ctsidentifieralreadydefined
+#, object-pascal-format
+msgid "Identifier %s already defined"
+msgstr "L'identificador %s ja està definit"
+
+#: codetoolsstrconsts.ctsidentifiernotfound
+#, object-pascal-format
+msgid "identifier not found: %s"
+msgstr "no s'ha trobat l'identificador: %s"
+
+#: codetoolsstrconsts.ctsifdefdarwin
+msgid "IfDef Darwin"
+msgstr ""
+
+#: codetoolsstrconsts.ctsifdeflinux
+msgid "IfDef Linux"
+msgstr ""
+
+#: codetoolsstrconsts.ctsifdefwindows
+msgid "IfDef Windows"
+msgstr ""
+
+#: codetoolsstrconsts.ctsiflclwidgettypeequalsgtk2
+msgid "If LCLWidgetType=gtk2 then"
+msgstr "If LCLWidgetType=gtk2 then"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos
+msgid "If TargetOS<>SrcOS"
+msgstr "If TargetOS<>SrcOS"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos2
+msgid "If TargetOS<>SrcOS2"
+msgstr "If TargetOS<>SrcOS2"
+
+#: codetoolsstrconsts.ctsiftargetosisnotwin32
+msgid "If TargetOS<>win32 then"
+msgstr "If targetOS<>win32 then"
+
+#: codetoolsstrconsts.ctsillegalcircleinusedunits
+#, object-pascal-format
+msgid "illegal circle using unit: %s"
+msgstr "hi ha un cercle il·legal utilitzant la unitat: %s"
+
+#: codetoolsstrconsts.ctsillegalqualifier
+#, object-pascal-format
+msgid "illegal qualifier %s found"
+msgstr "s'ha trobat el qualificador il·legal %s"
+
+#: codetoolsstrconsts.ctsimplementationnodenotfound
+msgid "implementation node not found"
+msgstr "no s'ha trobat el node d'implementació"
+
+#: codetoolsstrconsts.ctsincludecircledetected
+msgid "Include circle detected"
+msgstr "S'ha detectat un cercle Include"
+
+#: codetoolsstrconsts.ctsincludedirectoriesplusdirs
+#, object-pascal-format
+msgid "include directories: %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsincludefilenotfound
+#, object-pascal-format
+msgid "include file not found \"%s\""
+msgstr "no s'ha trobat el fitxer inclòs \"%s\""
+
+#: codetoolsstrconsts.ctsincompatibletypesgotexpected
+#, object-pascal-format
+msgid "incompatibles types: expected \"%s\" but got \"%s\""
+msgstr "tipus incompatibles: esperava \"%s\" però s'ha trobat \"%s\""
+
+#: codetoolsstrconsts.ctsindexparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "index parameter expected, but %s found"
+msgstr "s'esperava paràmetre d'índex, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsindexspecifierredefined
+msgid "index specifier redefined"
+msgstr "s'ha tornat a definir l'especificador de l'índex"
+
+#: codetoolsstrconsts.ctsinheritedkeywordonlyallowedinmethods
+msgid "inherited keyword only allowed in methods"
+msgstr "la paraula clau Inherited només es permet dins dels mètodes"
+
+#: codetoolsstrconsts.ctsinstalldirectory
+msgid "Install Directory"
+msgstr "Directori d'instal·lació"
+
+#: codetoolsstrconsts.ctsinstallerdirectories
+msgid "Installer directories"
+msgstr "Directoris de l'instal·lador"
+
+#: codetoolsstrconsts.ctsinterfacesectionnotfound
+msgid "interface section not found"
+msgstr "no s'ha trobat la secció Interface"
+
+#: codetoolsstrconsts.ctsinvalidclassname
+#, object-pascal-format, fuzzy, badformat
+#| msgid "invalid class name=%s%s%s"
+msgid "invalid class name=\"%s\""
+msgstr "el nom de la classe no és vàlid=%s%s%s"
+
+#: codetoolsstrconsts.ctsinvalidclassname2
+#, object-pascal-format, fuzzy, badformat
+#| msgid "invalid class name %s%s%s"
+msgid "invalid class name \"%s\""
+msgstr "el nom de la classe no és vàlid: %s%s%s"
+
+#: codetoolsstrconsts.ctsinvalidflagvaluefordirective
+#, object-pascal-format
+msgid "invalid flag value \"%s\" for directive %s"
+msgstr "el valor del marcador \"%s\" no és vàlid per la directiva %s"
+
+#: codetoolsstrconsts.ctsinvalidmode
+#, object-pascal-format
+msgid "invalid mode \"%s\""
+msgstr "el mode \"%s\" no és vàlid"
+
+#: codetoolsstrconsts.ctsinvalidoperator
+#, object-pascal-format
+msgid "invalid operator %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsinvalidpositionforinsertionofstatements
+msgid "invalid position for insertion of statements"
+msgstr ""
+
+#: codetoolsstrconsts.ctsinvalidsubrange
+msgid "invalid subrange"
+msgstr "sotabast no és vàlid"
+
+#: codetoolsstrconsts.ctsinvalidtype
+msgid "invalid type"
+msgstr "el tipus no és vàlid"
+
+#: codetoolsstrconsts.ctsinvalidvariablename
+#, object-pascal-format, fuzzy, badformat
+#| msgid "invalid variable name %s%s%s"
+msgid "invalid variable name \"%s\""
+msgstr "el nom de la variable %s%s%s no és vàlid"
+
+#: codetoolsstrconsts.ctsinvalidvariabletype
+#, object-pascal-format, fuzzy, badformat
+#| msgid "invalid variable type %s%s%s"
+msgid "invalid variable type \"%s\""
+msgstr "el tipus de la variable %s%s%s no és vàlid"
+
+#: codetoolsstrconsts.ctskeyword
+msgid "keyword"
+msgstr "Paraula clau"
+
+#: codetoolsstrconsts.ctskeywordexampleexpectedbutatomfound
+#, object-pascal-format
+msgid "keyword (e.g. %s) expected, but %s found"
+msgstr "s'esperava paraula clau (p.ex.%s), però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctskeywordin
+msgid "keyword \"in\""
+msgstr "paraula clau \"in\""
+
+#: codetoolsstrconsts.ctslazarusmaindirectory
+msgid "lazarus main directory"
+msgstr "Directori principal del Lazarus"
+
+#: codetoolsstrconsts.ctslazarussources
+msgid "Lazarus Sources"
+msgstr "Fonts del Lazarus"
+
+#: codetoolsstrconsts.ctsmethodhasnodeclaration
+#, object-pascal-format
+msgid "method \"%s\" has no declaration"
+msgstr ""
+
+#: codetoolsstrconsts.ctsmethodname
+msgid "method name"
+msgstr "nom del mètode"
+
+#: codetoolsstrconsts.ctsmethodsignaturesnotfoundinclass
+#, object-pascal-format
+msgid "Method signature %s not found in class"
+msgstr ""
+
+#: codetoolsstrconsts.ctsmethodtypedefinitionnotfound
+msgid "method type definition not found"
+msgstr "no s'ha trobat la definició del tipus del mètode"
+
+#: codetoolsstrconsts.ctsmissing
+msgid "missing :="
+msgstr ""
+
+#: codetoolsstrconsts.ctsmissingenumlist
+msgid "missing enum list"
+msgstr "falta la llista dels enumerats"
+
+#: codetoolsstrconsts.ctsmissingpointafterend
+msgid "missing . after end"
+msgstr "falta el punt (.) després de end"
+
+#: codetoolsstrconsts.ctsmissingtypeidentifier
+msgid "missing type identifier"
+msgstr "falta l'identificador del tipus"
+
+#: codetoolsstrconsts.ctsnameddirectory
+#, object-pascal-format
+msgid "%s Directory"
+msgstr "Directori %s"
+
+#: codetoolsstrconsts.ctsnamedproject
+#, object-pascal-format
+msgid "%s Project"
+msgstr "Projecte %s"
+
+#: codetoolsstrconsts.ctsneededbymode
+#, object-pascal-format
+msgid " (needed by mode \"%s\")"
+msgstr ""
+
+#: codetoolsstrconsts.ctsnesteddefinitionsarenotallowed
+#, object-pascal-format
+msgid "Nested %s definitions are not allowed"
+msgstr ""
+
+#: codetoolsstrconsts.ctsnewprocbodynotfound
+msgid "new proc body not found"
+msgstr "no s'ha trobat el cos del nou procediment"
+
+#: codetoolsstrconsts.ctsnocontextnodefoundatcursor
+msgid "no context node found at cursor"
+msgstr "s'ha trobat un node sense context al cursor"
+
+#: codetoolsstrconsts.ctsnodefaultspecifierdefinedtwice
+msgid "nodefault specifier defined twice"
+msgstr "l'especificador no predeterminat s'ha definit dues vegades"
+
+#: codetoolsstrconsts.ctsnopascalcodefound
+#, object-pascal-format
+msgid "no pascal code found (first token is %s)"
+msgstr "no s'ha trobat el codi Pascal (el primer testimoni és %s)"
+
+#: codetoolsstrconsts.ctsnoscanneravailable
+msgid "No scanner available"
+msgstr "L'analitzador no està disponible"
+
+#: codetoolsstrconsts.ctsnoscannerfound
+#, object-pascal-format
+msgid "No scanner found for \"%s\". If this is an include file, please open the main source first."
+msgstr "No s'ha trobat l'analitzador per \"%s\". Si aquest és un fitxer inclòs, si us plau, obriu primer el codi font principal"
+
+#: codetoolsstrconsts.ctsnotenoughgenparams
+msgid "Not enough actual generic parameters"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoldmethodnotfound
+#, object-pascal-format
+msgid "old method not found: %s"
+msgstr "no s'ha trobat el mètode antic: %s"
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound
+#, object-pascal-format
+msgid "operand expected but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound2
+#, object-pascal-format
+msgid "operand expected, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutatomfound
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutatomfound"
+msgid "operator expected, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoperatorexpectedbuteoffound
+msgid "unexpected end of file (operator expected)"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound
+#, object-pascal-format
+msgid "operator expected but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound2
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutfound2"
+msgid "operator expected, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsothercompilerdefines
+#, object-pascal-format
+msgid "%s Compiler Defines"
+msgstr "Definicions del compilador %s"
+
+#: codetoolsstrconsts.ctspackagedirectories
+msgid "Package directories"
+msgstr "Directoris dels paquets"
+
+#: codetoolsstrconsts.ctspackagerdirectory
+msgid "Packager Directory"
+msgstr "Directori de l'empaquetador"
+
+#: codetoolsstrconsts.ctspackagerregistrationdirectory
+msgid "Packager Registration Directory"
+msgstr "Directori del registrador de l'empaquetador"
+
+#: codetoolsstrconsts.ctspackagerunitsdirectory
+msgid "Packager Units Directory"
+msgstr "Directori de les unitats de l'empaquetador"
+
+#: codetoolsstrconsts.ctspointhintprocstartat
+msgid ".  Hint: proc start at "
+msgstr ".   Indicació: proc comença a "
+
+#: codetoolsstrconsts.ctspointstartat
+msgid ". start at "
+msgstr ". comença a"
+
+#: codetoolsstrconsts.ctspositionnotinsource
+msgid "Position not in source"
+msgstr "La posició no és al codi"
+
+#: codetoolsstrconsts.ctsprocedureorfunctionorconstructorordestructor
+msgid "procedure or function or constructor or destructor"
+msgstr ""
+
+#: codetoolsstrconsts.ctsprocessorspecific
+msgid "processor specific"
+msgstr "específic del processador"
+
+#: codetoolsstrconsts.ctsproperttypeexpectedbutatomfound
+#, object-pascal-format
+msgid "property type expected, but %s found"
+msgstr "s'esperava un tipus de propietat, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctspropertycurrentnotfound
+msgid "property Current not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctspropertyspecifieralreadydefined
+#, object-pascal-format
+msgid "property specifier already defined: %s"
+msgstr "l'especificador de la propietat ja està definit: %s"
+
+#: codetoolsstrconsts.ctsqualifierexpectedbutatomfound
+#, object-pascal-format
+msgid "qualifier expected but %s found"
+msgstr "s'esperava un qualificador, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsresetalldefines
+msgid "Reset all defines"
+msgstr "Reinicia totes les definicions"
+
+#: codetoolsstrconsts.ctsresulttypeoffunctiongetenumeratornotfound
+msgid "result type of function GetEnumerator not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsruntimelibrary
+msgid "Runtime library"
+msgstr "Biblioteca de temps d'execució"
+
+#: codetoolsstrconsts.ctsscannedfiles
+#, object-pascal-format
+msgid "Scanned files: %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctssemicolonafterpropspecmissing
+#, object-pascal-format
+msgid "; expected after \"%s\" property specifier, but %s found"
+msgstr "s'esperava ; després de l'especificador de propietat \"%s\", però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctssemicolonnotfound
+msgid "semicolon not found"
+msgstr "no s'ha trobat el punt i coma"
+
+#: codetoolsstrconsts.ctssetsincpathto
+#, object-pascal-format
+msgid "sets IncPath to %s"
+msgstr "defineix IncPath a %s"
+
+#: codetoolsstrconsts.ctssetssrcpathto
+#, object-pascal-format
+msgid "sets SrcPath to %s"
+msgstr "defineix SrcPath a %s"
+
+#: codetoolsstrconsts.ctssourcefilenamesforstandardfpcunits
+msgid "Source filenames for the standard fpc units"
+msgstr "Noms dels fitxers font de les unitats normalitzades del fpc"
+
+#: codetoolsstrconsts.ctssourceisnotunit
+msgid "source is not unit"
+msgstr "la font no és una unitat"
+
+#: codetoolsstrconsts.ctssourcenotfoundunit
+#, object-pascal-format, fuzzy
+#| msgid "source not found: unit %s"
+msgid "source not found: unit %s. Check your FPC source directory."
+msgstr "no s'ha trobat la font: unitat %s"
+
+#: codetoolsstrconsts.ctssrcpathinitialization
+msgid "SrcPath Initialization"
+msgstr "Inicialització de SrcPath"
+
+#: codetoolsstrconsts.ctsstrexpectedbutatomfound
+#, object-pascal-format, fuzzy
+#| msgid "%s expected, but %s found"
+msgid "expected %s, but %s found"
+msgstr "s'esperava %s, però s'ha trobat %s"
+
+#: codetoolsstrconsts.ctsstringconstant
+msgid "string constant"
+msgstr "constant de la cadena"
+
+#: codetoolsstrconsts.ctssyntaxerrorinexpr
+#, object-pascal-format
+msgid "Syntax Error in expression \"%s\""
+msgstr "S'ha produït un error de sintaxi en l'expressió \"%s\""
+
+#: codetoolsstrconsts.ctstermnotsimple
+msgid "Term has no simple type"
+msgstr "Term no te un tipus simple"
+
+#: codetoolsstrconsts.ctsthenexpectedbutfound
+#, object-pascal-format
+msgid "then expected, but %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctstoolsdirectory
+msgid "Tools Directory"
+msgstr "Directori de les eines"
+
+#: codetoolsstrconsts.ctstype
+msgid "type"
+msgstr ""
+
+#: codetoolsstrconsts.ctstypeidentifier
+msgid "type identifier"
+msgstr "identificador del tipus"
+
+#: codetoolsstrconsts.ctstypeisonlyallowedingenericsendofclassnotfound
+msgid "type is only allowed in generics, end of class not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctstypesectionofclassnotfound
+msgid "type section of class not found"
+msgstr "no s'ha trobat la secció del tipus de la classe"
+
+#: codetoolsstrconsts.ctsunabletoapplychanges
+msgid "unable to apply changes"
+msgstr "no es poden aplicar els canvis"
+
+#: codetoolsstrconsts.ctsunabletocompleteproperty
+msgid "unable to complete property"
+msgstr "no es pot completar la propietat"
+
+#: codetoolsstrconsts.ctsundefine
+msgid "Undefine "
+msgstr ""
+
+#: codetoolsstrconsts.ctsunexpectedendofsource
+msgid "unexpected end of source"
+msgstr "final de codi font inesperat"
+
+#: codetoolsstrconsts.ctsunexpectedkeyword
+#, object-pascal-format
+msgid "unexpected keyword \"%s\""
+msgstr "no s'esperava la paraula clau \"%s\""
+
+#: codetoolsstrconsts.ctsunexpectedkeyword2
+#, object-pascal-format
+msgid "unexpected keyword %s"
+msgstr ""
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinasmblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in asm block found"
+msgstr "paraula clau \"%s\" no esperada en el bloc asm"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinbeginendblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in begin..end found"
+msgstr "paraula clau \"%S\" no esperada a begin..end"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordwhilereadingbackwards
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" found while reading blocks backwards"
+msgstr "s'ha trobat la paraula clau \"%S\" mentre es llegia blocs enrera"
+
+#: codetoolsstrconsts.ctsunexpectedsectionkeyword
+#, object-pascal-format
+msgid "unexpected section keyword %s found"
+msgstr ""
+
+#: codetoolsstrconsts.ctsunexpectedsubrangeoperatorfound
+msgid "unexpected subrange operator '..' found"
+msgstr "s'ha trobat operador de sotabast '..' no esperat"
+
+#: codetoolsstrconsts.ctsunitnotfound
+#, object-pascal-format
+msgid "unit not found: %s"
+msgstr "no s'ha trobat la unitat: %s"
+
+#: codetoolsstrconsts.ctsunitpathinitialization
+msgid "UnitPath Initialization"
+msgstr "Inicialització d'UnitPath"
+
+#: codetoolsstrconsts.ctsunknownfunction
+#, object-pascal-format
+msgid "Unknown function %s"
+msgstr "Funció desconeguda %s"
+
+#: codetoolsstrconsts.ctsunknownmainfilename
+msgid "(unknown mainfilename)"
+msgstr "(Nom del fitxer principal desconegut)"
+
+#: codetoolsstrconsts.ctsunknownsubdescriptor
+#, object-pascal-format
+msgid "(unknown subdescriptor %s)"
+msgstr "(subdescriptor desconegut %s)"
+
+#: codetoolsstrconsts.ctsunparsed
+msgid "Unparsed"
+msgstr "No analitzat"
+
+#: codetoolsstrconsts.ctsusedunitisnotapascalunit
+msgid "used unit is not a pascal unit"
+msgstr "la unitat utilitzada no és una unitat Pascal"
+
+#: codetoolsstrconsts.ctsutilsdirectories
+msgid "Utils directories"
+msgstr "Directoris de les utilitats"
+
+#: codetoolsstrconsts.ctsvarisonlyallowedingenericsendofclassnotfound
+msgid "var is only allowed in generics, end of class not found"
+msgstr ""
+
+#: codetoolsstrconsts.ctswordnotfound
+#, object-pascal-format
+msgid "\"%s\" not found"
+msgstr "No s'ha trobat \"%S\""
+

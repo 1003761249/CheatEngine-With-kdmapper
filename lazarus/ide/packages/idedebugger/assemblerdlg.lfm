@@ -1,0 +1,216 @@
+object AssemblerDlg: TAssemblerDlg
+  Left = 268
+  Height = 232
+  Top = 122
+  Width = 689
+  BorderStyle = bsSizeToolWin
+  Caption = 'Assembler'
+  ClientHeight = 232
+  ClientWidth = 689
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  LCLVersion = '2.3.0.0'
+  object pbAsm: TPaintBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ToolBar1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = sbVertical
+    AnchorSideBottom.Control = sbHorizontal
+    Left = 0
+    Height = 191
+    Top = 26
+    Width = 674
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    PopupMenu = PopupMenu1
+    OnClick = pbAsmClick
+    OnMouseDown = pbAsmMouseDown
+    OnMouseMove = pbAsmMouseMove
+    OnMouseUp = pbAsmMouseUp
+    OnMouseWheel = pbAsmMouseWheel
+    OnPaint = pbAsmPaint
+  end
+  object sbHorizontal: TScrollBar
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = sbVertical
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 15
+    Top = 217
+    Width = 674
+    Anchors = [akLeft, akRight, akBottom]
+    Max = 1000
+    PageSize = 200
+    TabOrder = 0
+    OnChange = sbHorizontalChange
+  end
+  object sbVertical: TScrollBar
+    AnchorSideTop.Control = ToolBar1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = sbHorizontal
+    Left = 674
+    Height = 191
+    Top = 26
+    Width = 15
+    Anchors = [akTop, akRight, akBottom]
+    Kind = sbVertical
+    LargeChange = 10
+    Max = 1000
+    PageSize = 50
+    Position = 475
+    TabOrder = 1
+    OnChange = sbVerticalChange
+    OnScroll = sbVerticalScroll
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 689
+    Caption = 'ToolBar1'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    object ToolButtonPower: TToolButton
+      Left = 1
+      Top = 2
+      AllowAllUp = True
+      Caption = 'ToolButtonPower'
+      Down = True
+      OnClick = ToolButtonPowerClick
+      Style = tbsCheck
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton2'
+      Style = tbsSeparator
+    end
+    object ToolButtonStepOverInstr: TToolButton
+      Left = 55
+      Top = 2
+      Action = actStepOverInstr
+    end
+    object ToolButtonStepIntoInstr: TToolButton
+      Left = 32
+      Top = 2
+      Action = actStepIntoInstr
+    end
+    object ToolButton4: TToolButton
+      Left = 78
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton4'
+      Style = tbsSeparator
+    end
+    object ToolButtonGotoCurrent: TToolButton
+      Left = 86
+      Top = 2
+      Action = actCurrentInstr
+    end
+    object pnlToolAddr: TPanel
+      Left = 109
+      Height = 23
+      Top = 2
+      Width = 80
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+      ChildSizing.ShrinkHorizontal = crsHomogenousChildResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 23
+      ClientWidth = 80
+      TabOrder = 0
+      object EditGotoAddr: TEdit
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 80
+        OnChange = EditGotoAddrChange
+        OnKeyPress = EditGotoAddrKeyPress
+        TabOrder = 0
+      end
+    end
+    object ToolButtonGoto: TToolButton
+      Left = 189
+      Top = 2
+      Action = actGotoAddr
+    end
+    object ToolButton1: TToolButton
+      Left = 258
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton1'
+      Style = tbsDivider
+    end
+    object ToolButtonCopy: TToolButton
+      Left = 263
+      Top = 2
+      Action = actCopy
+    end
+    object tbJumpBack: TToolButton
+      Left = 212
+      Top = 2
+      Caption = 'tbJumpBack'
+      OnClick = tbJumpBackClick
+    end
+    object tbJumpForward: TToolButton
+      Left = 235
+      Top = 2
+      Caption = 'tbJumpForward'
+      OnClick = tbJumpForwardClick
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 493
+    Top = 43
+    object CopyToClipboard: TMenuItem
+      Action = actCopy
+      OnClick = CopyToClipboardClick
+    end
+    object popCopyAddr: TMenuItem
+      Caption = 'popCopyAddr'
+      OnClick = popCopyAddrClick
+    end
+  end
+  object ActionList1: TActionList
+    Left = 104
+    Top = 32
+    object actStepOverInstr: TAction
+      Caption = 'actStepOverInstr'
+      OnExecute = actStepOverInstrExecute
+    end
+    object actStepIntoInstr: TAction
+      Caption = 'actStepIntoInstr'
+      OnExecute = actStepIntoInstrExecute
+    end
+    object actCurrentInstr: TAction
+      Caption = 'actCurrentInstr'
+      OnExecute = actCurrentInstrExecute
+    end
+    object actGotoAddr: TAction
+      Caption = 'actGotoAddr'
+      OnExecute = actGotoAddrExecute
+    end
+    object actCopy: TAction
+      Caption = 'actCopy'
+      OnExecute = CopyToClipboardClick
+    end
+  end
+  object ImageList1: TImageList
+    Left = 24
+    Top = 32
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 96
+    Top = 113
+  end
+end

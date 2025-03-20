@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="6">
+      <Item1>
+        <PackageName Value="GdbmiTestUtils"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LazDebuggerGdbmi"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCLBase"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="FPCUnitTestRunner"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+      </Item6>
+    </RequiredPackages>
+    <Units Count="9">
+      <Unit0>
+        <Filename Value="TestGdbmi.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="testexception.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestException"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="testwatches.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestWatches"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="testgdbtype.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestGdbType"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="testbreakpoint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestBreakPoint"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="testdisass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestDisAss"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="testenvironment.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestEnvironment"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="testargv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestArgV"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="testinstructionqueue.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestInstructionQueue"/>
+      </Unit8>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+        <UseHeaptrc Value="True"/>
+      </Debugging>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-gt"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="7">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EReadError"/>
+      </Item4>
+      <Item5>
+        <Name Value="EAssertionFailedError"/>
+      </Item5>
+      <Item6>
+        <Name Value="EJSONParser"/>
+      </Item6>
+      <Item7>
+        <Name Value="EScannerError"/>
+      </Item7>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

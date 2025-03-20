@@ -1,0 +1,202 @@
+object Form1: TForm1
+  Left = 319
+  Height = 397
+  Top = 165
+  Width = 451
+  Caption = 'Form1'
+  ClientHeight = 397
+  ClientWidth = 451
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object Chart1: TChart
+    Left = 0
+    Height = 311
+    Top = 0
+    Width = 451
+    AxisList = <    
+      item
+        Grid.Visible = False
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Extent.XMax = 1.7
+    Extent.XMin = -1.7
+    Extent.YMax = 1.7
+    Extent.YMin = -1.7
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    OnExtentChanged = Chart1ExtentChanged
+    Align = alClient
+    object Chart1LineSeries: TLineSeries
+      LinePen.Color = clRed
+      Pointer.Brush.Color = clRed
+      Pointer.Pen.Color = clRed
+      Pointer.Visible = True
+      ShowPoints = True
+      Source = RandomChartSource1
+    end
+    object clRight: TConstantLine
+      LineStyle = lsVertical
+      Pen.Color = clGreen
+      Pen.Style = psDot
+      Position = 1.7
+      UseBounds = False
+    end
+    object clLeft: TConstantLine
+      LineStyle = lsVertical
+      Pen.Color = clGreen
+      Pen.Style = psDot
+      Position = -1.7
+      UseBounds = False
+    end
+    object clTop: TConstantLine
+      Pen.Color = clGreen
+      Pen.Style = psDot
+      Position = 1.7
+      UseBounds = False
+    end
+    object clBottom: TConstantLine
+      Pen.Color = clGreen
+      Pen.Style = psDot
+      Position = -1.7
+      UseBounds = False
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 86
+    Top = 311
+    Width = 451
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 86
+    ClientWidth = 451
+    TabOrder = 1
+    object lblBoundValue: TLabel
+      AnchorSideLeft.Control = cgUseBounds
+      AnchorSideLeft.Side = asrBottom
+      Left = 184
+      Height = 15
+      Top = 20
+      Width = 28
+      BorderSpacing.Left = 16
+      Caption = 'Value'
+    end
+    object cgUseBounds: TCheckGroup
+      Left = 8
+      Height = 70
+      Top = 8
+      Width = 160
+      Align = alLeft
+      AutoFill = True
+      AutoSize = True
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Bottom = 8
+      Caption = ' Use bounds '
+      ChildSizing.LeftRightSpacing = 16
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.HorizontalSpacing = 16
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 50
+      ClientWidth = 156
+      Columns = 2
+      Items.Strings = (
+        'Left'
+        'Right'
+        'Bottom'
+        'Top'
+      )
+      OnItemClick = cgUseBoundsItemClick
+      TabOrder = 0
+      Data = {
+        0400000002020202
+      }
+    end
+    object fseBounds: TFloatSpinEdit
+      AnchorSideLeft.Control = lblBoundValue
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 220
+      Height = 23
+      Top = 16
+      Width = 50
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 16
+      Increment = 0.1
+      MaxValue = 10
+      MinValue = 1
+      OnChange = fseBoundsChange
+      TabOrder = 1
+      Value = 1.7
+    end
+    object btnPrevExtent: TButton
+      AnchorSideLeft.Control = lblBoundValue
+      Left = 184
+      Height = 25
+      Top = 48
+      Width = 107
+      AutoSize = True
+      Caption = 'Previous extent'
+      OnClick = btnPrevExtentClick
+      TabOrder = 2
+    end
+    object lblHistory: TLabel
+      AnchorSideLeft.Control = btnPrevExtent
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnPrevExtent
+      AnchorSideTop.Side = asrCenter
+      Left = 307
+      Height = 15
+      Top = 53
+      Width = 51
+      BorderSpacing.Left = 16
+      Caption = 'lblHistory'
+    end
+  end
+  object RandomChartSource1: TRandomChartSource
+    PointsNumber = 20
+    RandSeed = 628509515
+    XMax = 5
+    XMin = -5
+    YMax = 5
+    YMin = -5
+    Left = 176
+    Top = 118
+  end
+  object ChartToolset1: TChartToolset
+    Left = 320
+    Top = 312
+    object ChartToolset1PanDragTool1: TPanDragTool
+      Shift = [ssRight]
+      LimitToExtent = [pdLeft, pdUp, pdRight, pdDown]
+    end
+    object ChartToolset1ZoomDragTool1: TZoomDragTool
+      Shift = [ssLeft]
+      AnimationInterval = 100
+      AnimationSteps = 5
+      Brush.Style = bsClear
+    end
+  end
+end

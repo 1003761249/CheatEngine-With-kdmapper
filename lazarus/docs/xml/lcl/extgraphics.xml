@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+ExtGraphics
+====================================================================
+-->
+<module name="ExtGraphics">
+<short>
+Types and routines used to implement extended graphic drawing.
+</short>
+<descr>
+<p>
+<file>extgraphics.pas</file> contains types and routines which implement 
+extended drawing routines for various shapes. <file>extgraphics.pas</file> is 
+part of the Lazarus Component Library (<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved external references -->
+<element name="Types"/>
+<element name="Classes"/>
+<element name="Math"/>
+<element name="LazUtilities"/>
+<element name="GraphMath"/>
+<element name="Graphics"/>
+
+<!-- enumeration type Visibility: default -->
+<element name="TShapeDirection">
+<short/>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+<!-- enumeration value Visibility: default -->
+<element name="TShapeDirection.atUp">
+<short/>
+</element>
+<!-- enumeration value Visibility: default -->
+<element name="TShapeDirection.atDown">
+<short/>
+</element>
+<!-- enumeration value Visibility: default -->
+<element name="TShapeDirection.atLeft">
+<short/>
+</element>
+<!-- enumeration value Visibility: default -->
+<element name="TShapeDirection.atRight">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintDiamond">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintDiamond.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintDiamond.PaintRect">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintCross">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.XLeft">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.YUp">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.XRight">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.YLow">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.CrossX1">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.CrossX2">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.CrossY1">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintCross.CrossY2">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintPlus">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintPlus.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintPlus.PaintRect">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintTriangle">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintTriangle.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintTriangle.PaintRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintTriangle.AArrowDirection">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintBoldArrow">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintBoldArrow.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintBoldArrow.PaintRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintBoldArrow.AArrowDirection">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintChevronArrow">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintChevronArrow.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintChevronArrow.PaintRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintChevronArrow.AArrowDirection">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintVArrow">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintVArrow.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintVArrow.PaintRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintVArrow.AArrowDirection">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintHalfEllipse">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintHalfEllipse.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintHalfEllipse.PaintRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintHalfEllipse.AHalfEllipseDirection">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintFivePointStar">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintFivePointStar.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintFivePointStar.PaintRect">
+<short/>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="PaintFivePointLineStar">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintFivePointLineStar.Canvas">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="PaintFivePointLineStar.PaintRect">
+<short/>
+</element>
+
+<element name="PaintStarN">
+<short>
+Draws a star-shaped polygon on a canvas using the specified number of points and rotation.
+</short>
+<descr>
+<p>
+<var>PaintStarN</var> is a routine used to draw a star-shaped polygon with a 
+given number of points or arms. Each point is spaced equally along the 
+circumference of a circle with the specified radius.
+</p>
+<p>
+<var>Canvas</var> is the <var>TCanvas</var> instance where the drawing 
+operation is performed. The Polygon method in Canvas is used to draw the 
+shape using an array of TPoint instances calculated in the method.
+</p>
+<p>
+<var>cx</var> and <var>cy</var> contain the canvas coordinates where the 
+center point for the star-shaped polygon is located.
+</p>
+<p>
+<var>r</var> contains the radius for the circle where the point vertices for 
+the shape are drawn. It is the distance from the center point to the vertex 
+of any given point.
+</p>
+<p>
+<var>n</var> contains the number of points or arms drawn on the star-shaped 
+polygon. The angular span (or turn angle) between the point vertices is 360/n.
+</p>
+<p>
+<var>a</var> contains the angle of rotation for the polygon expressed in 
+radians. Negative values rotate the shape in a clockwise direction. Positive 
+values rotate the shape in a counter-clockwise direction. Use DegToRad (in 
+the RTL <file>math.pp</file> unit) or <b>&lt;angle&gt;*pi/180</b> to convert 
+an angle in degrees to radians.
+</p>
+<p>
+Set the Brush color in Canvas used to fill the polygon prior to calling the 
+routine.
+</p>
+</descr>
+<seealso>
+<link id="TCanvas.Polygon"/>
+<link id="TCanvas.Brush"/>
+<link id="#rtl.classes.TPoint">TPoint</link>
+<link id="#rtl.math.DegToRad">DegToRad</link>
+</seealso>
+</element>
+<element name="PaintStarN.Canvas">
+<short>
+TCanvas instance where the shape is drawn.
+</short>
+</element>
+<element name="PaintStarN.cx">
+<short>
+Horizontal canvas coordinate for the center point in the shape.
+</short>
+</element>
+<element name="PaintStarN.cy">
+<short>
+Vertical canvas coordinate for the center point in the shape.
+</short>
+</element>
+<element name="PaintStarN.r">
+<short>
+Radius for the points on the star shape.
+</short>
+</element>
+<element name="PaintStarN.n">
+<short>
+Number of points for the star-shaped polygon.
+</short>
+</element>
+<element name="PaintStarN.a">
+<short>
+Angle of rotation for the shape in radians.
+</short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="CalculatePentagonPoints">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.PentagonRect">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.P1">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.P2">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.P3">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.P4">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CalculatePentagonPoints.P5">
+<short/>
+</element>
+
+<!-- function Visibility: default -->
+<element name="LinesPointOfIntersection">
+<short/>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="LinesPointOfIntersection.Result">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="LinesPointOfIntersection.Line1a">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="LinesPointOfIntersection.Line1b">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="LinesPointOfIntersection.Line2a">
+<short/>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="LinesPointOfIntersection.line2b">
+<short/>
+</element>
+
+</module>
+<!-- ExtGraphics -->
+</package>
+</fpdoc-descriptions>

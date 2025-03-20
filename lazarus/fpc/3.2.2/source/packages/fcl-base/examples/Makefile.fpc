@@ -1,0 +1,47 @@
+#
+#   Makefile.fpc for Free Component Library Examples/Tests
+#
+
+[target]
+programs=stringl dparser fstream mstream list threads testrtf \
+         cfgtest xmldump htdump testez tidea \
+         b64test b64test2 b64enc b64dec restest testz testz2 \
+         istream doecho testol testcont txmlreg testreg tstelcmd \
+         testapp testcgi testbs testbf cachetest poolmm1 poolmm2 tarmakercons \
+         tarmakerconsgzip avltreetest testmime decodeascii85 encodeascii85
+programs_win32=showver testproc testhres testnres testsres testrhre \
+               testrnre testrsre testur ipcserver ipcclient debugtest \
+               dbugsrv testtimer
+programs_linux=sockcli isockcli dsockcli socksvr isocksvr dsocksvr \
+               testhres testnres testsres testrhre testrnre testrsre testur \
+               ipcserver ipcclient debugtest dbugsrv asiotest testtimer
+programs_darwin=sockcli isockcli dsockcli socksvr isocksvr dsocksvr \
+               testhres testnres testsres testrhre testrnre testrsre testur \
+               ipcserver ipcclient debugtest dbugsrv asiotest testtimer
+programs_iphonesim=sockcli isockcli dsockcli socksvr isocksvr dsocksvr \
+               testhres testnres testsres testrhre testrnre testrsre testur \
+               ipcserver ipcclient debugtest dbugsrv asiotest testtimer
+programs_freebsd=sockcli isockcli dsockcli socksvr isocksvr dsocksvr \
+               testhres testnres testsres testrhre testrnre testrsre testur \
+               ipcserver ipcclient debugtest dbugsrv asiotest testtimer
+programs_solaris=sockcli isockcli dsockcli socksvr isocksvr dsocksvr \
+               testhres testnres testsres testrhre testrnre testrsre testur \
+               ipcserver ipcclient debugtest dbugsrv asiotest testtimer
+programs_os2=isockcli isocksvr testhres testnres testsres testrhre \
+             testrnre testrsre testur
+programs_emx=isockcli isocksvr testhres testnres testsres testrhre \
+             testrnre testrsre testur
+
+rst=restest
+
+[require]
+packages=fcl-base fcl-db fcl-fpcunit fcl-image fcl-net fcl-passrc fcl-registry fcl-web fcl-xml
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../..
+
+[rules]
+.NOTPARALLEL:

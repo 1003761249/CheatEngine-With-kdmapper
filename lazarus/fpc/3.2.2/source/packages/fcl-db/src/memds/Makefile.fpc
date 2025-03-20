@@ -1,0 +1,23 @@
+#
+# Makefile.fpc for memds unit
+#
+
+[package]
+main=fcl-db
+
+[target]
+units=memds
+examples=testpop testopen testld testcp
+rsts=memds
+
+[require]
+packages=fcl-base
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../../..
+
+[rules]
+.NOTPARALLEL:

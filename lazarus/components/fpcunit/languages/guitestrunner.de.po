@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Swen Heinig <swen.heinig@freenet.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: guitestrunner.rsalltests
+msgid "All Tests"
+msgstr "Alle Tests"
+
+#: guitestrunner.rserrors
+#, object-pascal-format
+msgid "%s    Errors: %s"
+msgstr "%s    Fehler: %s"
+
+#: guitestrunner.rsexception
+#, object-pascal-format
+msgid "Exception: %s"
+msgstr ""
+
+#: guitestrunner.rsexceptioncla
+#, object-pascal-format
+msgid "Exception class: %s"
+msgstr ""
+
+#: guitestrunner.rsexceptionmes
+#, object-pascal-format
+msgid "Exception message: %s"
+msgstr ""
+
+#: guitestrunner.rsfailures
+#, object-pascal-format
+msgid "%s     Failures: %s"
+msgstr "%s     Fehlschläge: %s"
+
+#: guitestrunner.rslinenumber
+#, object-pascal-format
+msgid "Line number: %s"
+msgstr "Zeilennummer: %s"
+
+#: guitestrunner.rsmessage
+#, object-pascal-format
+msgid "Message: %s"
+msgstr "Meldung: %s"
+
+#: guitestrunner.rsmethodname
+#, object-pascal-format
+msgid "Method name: %s"
+msgstr "Methodenname: %s"
+
+#: guitestrunner.rsnumberofexec
+#, object-pascal-format
+msgid "Number of executed tests: %s  Time elapsed: %s"
+msgstr ""
+
+#: guitestrunner.rsrun
+msgid "Run "
+msgstr ""
+
+#: guitestrunner.rsrunning
+#, object-pascal-format
+msgid "Running %s"
+msgstr ""
+
+#: guitestrunner.rsruns
+#, object-pascal-format
+msgid "Runs: %s/%s"
+msgstr ""
+
+#: guitestrunner.rsunitname
+#, object-pascal-format
+msgid "Unit name: %s"
+msgstr "Unit-Name: %s"
+
+#: guitestrunner.sactcheckall
+#, fuzzy
+#| msgid "Check all Tests"
+msgid "Select all tests"
+msgstr "Alle Tests markieren"
+
+#: guitestrunner.sactcheckcurrentsuite
+msgid "Select current suite"
+msgstr ""
+
+#: guitestrunner.sactcloseform
+msgid "Quit"
+msgstr "Beenden"
+
+#: guitestrunner.sactcloseformh
+msgid "Quit testing"
+msgstr ""
+
+#: guitestrunner.sactcopyalltoclipboard
+msgid "Copy text to clipboard"
+msgstr ""
+
+#: guitestrunner.sactcopyalltoclipboardh
+msgid "Copy the entire text to clipboard"
+msgstr ""
+
+#: guitestrunner.sactrunaction
+msgid "&Run all"
+msgstr ""
+
+#: guitestrunner.sactrunactionh
+#, fuzzy
+#| msgid "Run all checked test(s)"
+msgid "Run all checked tests"
+msgstr "Alle markierten Tests starten"
+
+#: guitestrunner.sactrunhighlightedtest
+#, fuzzy
+#| msgid "Run highlighted test"
+msgctxt "guitestrunner.sactrunhighlightedtest"
+msgid "Run selected"
+msgstr "hervorgehobenen Test starten"
+
+#: guitestrunner.sactrunhighlightedtesth
+msgid "Run selected test"
+msgstr ""
+
+#: guitestrunner.sactsaveresults
+msgid "Save results"
+msgstr ""
+
+#: guitestrunner.sactsaveresultsh
+msgid "Save XML results to file"
+msgstr ""
+
+#: guitestrunner.sactuncheckall
+msgid "Deselect all tests"
+msgstr ""
+
+#: guitestrunner.sactuncheckcurrentsuite
+msgid "Deselect current suite"
+msgstr ""
+
+#: guitestrunner.sbtnclose
+msgid "Close"
+msgstr "Schließen"
+
+#: guitestrunner.sbtnrun
+msgid "Run"
+msgstr ""
+
+#: guitestrunner.sbtnrunh
+msgctxt "guitestrunner.sbtnrunh"
+msgid "Run highlighted test"
+msgstr "hervorgehobenen Test starten"
+
+#: guitestrunner.sfrmguitest
+msgid "FPCUnit - run unit test"
+msgstr "FPCUnit - starte Unit-Test"
+
+#: guitestrunner.smiactions
+msgid "Actions"
+msgstr ""
+
+#: guitestrunner.smiedit
+msgid "Edit"
+msgstr ""
+
+#: guitestrunner.smitesttree
+msgid "Test tree"
+msgstr ""
+
+#: guitestrunner.stshresults
+msgid "Results XML"
+msgstr ""
+
+#: guitestrunner.stshtree
+msgid "Testcase tree"
+msgstr ""
+

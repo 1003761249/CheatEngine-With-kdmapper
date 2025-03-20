@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: fperrormessages.fpgdbmidisplaygdbinsteadoffpdebugwatches
+msgid "Display GDB instead of FpDebug Watches"
+msgstr "Показывать наблюдения GDB вместо FpDebug"
+
+#: fperrormessages.msgfperraddressisnil
+msgid "Cannot access data, Address is NIL"
+msgstr "Невозможно получить доступ к данным, так как адрес равен NIL"
+
+#: fperrormessages.msgfperranyerror
+#, object-pascal-format
+msgid "%1:s"
+msgstr "%1:s"
+
+#: fperrormessages.msgfperrattachprocess
+#, object-pascal-format
+msgid "Failed to attach to process \"%1:s\".%0:sError message: %2:d \"%3:s\".%0:s%4:s"
+msgstr "Не удалось присоединиться к процессу \"%1:s\".%0:sСообщение об ошибке: %2:d \"%3:s\".%0:s%4:s"
+
+#: fperrormessages.msgfperrcannotcasttopointer_p
+#, object-pascal-format
+msgid "Can't cast value to pointer '%1:s'%2:s"
+msgstr "Невозможно привести значение к указателю '%1:s'%2:s"
+
+#: fperrormessages.msgfperrcannotderef_p
+#, object-pascal-format
+msgid "Can't dereference expression '%1:s'%2:s"
+msgstr "Невозможно разыменовать выражение '%1:s'%2:s"
+
+#: fperrormessages.msgfperrcannotreadmemataddr
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrcannotreadmemataddr"
+msgid "Failed to read Mem at Address $%1:x"
+msgstr "Не удалось прочитать память по адресу $%1:x"
+
+#: fperrormessages.msgfperrcannotwritememataddr
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrcannotwritememataddr"
+msgid "Failed to write Mem at Address $%1:x"
+msgstr "Не удалось записать память по адресу $%1:x"
+
+#: fperrormessages.msgfperrchangevariablenotsupported
+msgid "Changing the value of this variable is not supported"
+msgstr "Изменение значения этой переменной не поддерживается"
+
+#: fperrormessages.msgfperrcreateprocess
+#, object-pascal-format
+msgid "Failed to start process \"%1:s\".%0:sError message: %2:d \"%3:s\".%0:s%4:s"
+msgstr "Не удалось запустить процесс \"%1:s\".%0:sСообщение об ошибке: %2:d \"%3:s\".%0:s%4:s"
+
+#: fperrormessages.msgfperrexpectedordinalval_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrexpectedordinalval_p"
+msgid "Expected an ordinal value, but found '%1:s'%2:s"
+msgstr "Ожидалось простое значение, но найдено '%1:s'%2:s"
+
+#: fperrormessages.msgfperrfailedreadregiseter
+msgid "Failed to read data from register"
+msgstr "Не удалось прочитать данные из регистра"
+
+#: fperrormessages.msgfperrfailedwritemem
+msgctxt "fperrormessages.msgfperrfailedwritemem"
+msgid "Failed to write data"
+msgstr "Не удалось записать данные"
+
+#: fperrormessages.msgfperrindexoutofrange
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrindexoutofrange"
+msgid "Index out of range: %1:d"
+msgstr "Индекс вне границ диапазона: %1:d"
+
+#: fperrormessages.msgfperrlocationparser
+msgid "Internal Error: Cannot calculate location."
+msgstr "Внутренняя ошибка: невозможно вычислить расположение."
+
+#: fperrormessages.msgfperrlocationparserinit
+msgid "Internal Error: Cannot calculate location (Init)."
+msgstr "Внутренняя ошибка: невозможно вычислить расположение (инициализация)."
+
+#: fperrormessages.msgfperrlocationparsermemread
+#, object-pascal-format
+msgid "%1:s (while calculating location)"
+msgstr "%1:s (при вычислении расположения)"
+
+#: fperrormessages.msgfperrlocationparserminstack
+msgid "Not enough elements on stack."
+msgstr "Недостаточно элементов стека."
+
+#: fperrormessages.msgfperrlocationparsernoaddressonstack
+msgid "Not an address on stack"
+msgstr "Значение не является адресом в стеке"
+
+#: fperrormessages.msgfperrnomemberwithname
+#, object-pascal-format
+msgid "Member not found: %1:s"
+msgstr "Элемент не найден: %1:s"
+
+#: fperrormessages.msgfperrorbadfloatsize
+msgid "Unsupported float value: Unknown precision"
+msgstr "Вещественное значение не поддерживается: неизвестная точность"
+
+#: fperrormessages.msgfperrornotastructure
+#, object-pascal-format
+msgid "Cannot get member \"%1:s\" from non-structured type: %2:s"
+msgstr "Невозможно получить элемент \"%1:s\" из неструктурного типа: %2:s"
+
+#: fperrormessages.msgfperrpasparseremptyexpression
+msgid "Empty expression"
+msgstr "Пустое выражение"
+
+#: fperrormessages.msgfperrpasparserexpectednumber_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparserexpectednumber_p"
+msgid "Expected Number, but found '%1:s'%2:s"
+msgstr "Ожидалось число, но найдено '%1:s'%2:s"
+
+#: fperrormessages.msgfperrpasparserindexerror_wrapper
+#, object-pascal-format
+msgid "Index error at pos %2:d for '%1:s'[]: %3:s"
+msgstr "Ошибка индекса в позиции %2:d для '%1:s'[]: %3:s"
+
+#: fperrormessages.msgfperrpasparserinvalidexpression
+msgid "Invalid Expression"
+msgstr "Неверное выражение"
+
+#: fperrormessages.msgfperrpasparsermissingexpraftercomma
+#, object-pascal-format
+msgid "Expected Expression after Comma, but found closing bracket %1:s at pos %2:d"
+msgstr "После запятой ожидалось выражение, но найдена закрывающая скобка %1:s, позиция %2:d"
+
+#: fperrormessages.msgfperrpasparsermissingindexexpression
+#, object-pascal-format
+msgid "Expected Expression but found closing bracket: '%1:s' at pos %2:d"
+msgstr "Ожидалось выражение, но найдена закрывающая скобка: %1:s, позиция %2:d"
+
+#: fperrormessages.msgfperrpasparsermissingopenbracket_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparsermissingopenbracket_p"
+msgid "No opening bracket for '%1:s' found%2:s"
+msgstr "Открывающая скобка для '%1:s' не найдена%2:s"
+
+#: fperrormessages.msgfperrpasparserunexpectedendofexpression
+#, object-pascal-format
+msgid "Unexpected end of expression after '%1:s'"
+msgstr "Неожиданный конец выражения после '%1:s'"
+
+#: fperrormessages.msgfperrpasparserunexpectedtoken_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparserunexpectedtoken_p"
+msgid "Unexpected token '%1:s'%2:s"
+msgstr "Неизвестный элемент '%1:s'%2:s"
+
+#: fperrormessages.msgfperrpasparserunknownintrinsic_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparserunknownintrinsic_p"
+msgid "Intrinsic function '%1:s' not found%2:s"
+msgstr "Внутренняя функция '%1:s' не найдена%2:s"
+
+#: fperrormessages.msgfperrpasparserunterminatedstring_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparserunterminatedstring_p"
+msgid "String not terminated%1:s"
+msgstr "Строка не имеет признака конца%1:s"
+
+#: fperrormessages.msgfperrpasparserwrongopenbracket_p
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparserwrongopenbracket_p"
+msgid "Mismatched opening bracket ('%3:s' at pos %2:d) for '%1:s' found%4:s"
+msgstr "Найдена несбалансированная открывающая скобка ('%3:s' в позиции %2:d) для '%1:s'%4:s"
+
+#: fperrormessages.msgfperrpasparser_atstart
+msgid " at start of expression"
+msgstr " в начале выражения"
+
+#: fperrormessages.msgfperrpasparser_position
+#, object-pascal-format
+msgid " at pos %1:d"
+msgstr " в позиции %1:d"
+
+#: fperrormessages.msgfperrpasparser_positionafter
+#, object-pascal-format
+msgctxt "fperrormessages.msgfperrpasparser_positionafter"
+msgid " at pos %1:d after '%2:s'"
+msgstr " в позиции %1:d после '%2:s'"
+
+#: fperrormessages.msgfperrreadmemsizelimit
+msgid "Memory read size exceeds limit"
+msgstr "Размер читаемой памяти превышает разрешённый"
+
+#: fperrormessages.msgfperrsymbolnotfound_p
+#, object-pascal-format
+msgid "Identifier not found: \"%1:s\"%2:s"
+msgstr "Идентификатор не найден: \"%1:s\"%2:s"
+
+#: fperrormessages.msgfperrtypehasnoindex
+#, object-pascal-format
+msgid "Cannot access indexed element in expression %1:s"
+msgstr "Невозможно получить доступ к элементу по индексу в выражении %1:s"
+
+#: fperrormessages.msgfperrtypenotindexable
+msgctxt "fperrormessages.msgfperrtypenotindexable"
+msgid "The value has no index"
+msgstr "Значение не имеет индекса"
+
+#: fperrormessages.msgfpinternalerr
+#, object-pascal-format
+msgid "Internal error: %1:s"
+msgstr "Внутренняя ошибка: %1:s"
+
+#: fperrormessages.msgfpinternalerrcannotreadinvalidmem
+msgid "Internal error: Missing data location"
+msgstr "Внутренняя ошибка: неизвестно расположение данных"
+
+#: fperrormessages.msgfpinternalerrcannotwriteinvalidmem
+msgid "Internal error writing data: Missing data location"
+msgstr "Внутренняя ошибка при записи: неизвестно расположение данных"
+
+#: fperrormessages.msgfpinternalerrfperrfailedreadmem
+msgid "Internal error: Failed to read data from memory"
+msgstr "Внутренняя ошибка: не удалось прочитать данные из памяти"
+

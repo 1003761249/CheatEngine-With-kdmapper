@@ -1,0 +1,15 @@
+#
+#  Makefile.fpc for hash units example
+#
+
+[target]
+programs=mdtest crctest sha1test md5performancetest  sha1performancetest
+
+[require]
+packages=hash rtl-extra rtl-objpas
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../..

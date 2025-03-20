@@ -1,0 +1,266 @@
+object MainForm: TMainForm
+  Left = 676
+  Height = 506
+  Top = 268
+  Width = 1035
+  Caption = 'BarSeries & ChartTools Demo'
+  ClientHeight = 506
+  ClientWidth = 1035
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object LogSplitter: TSplitter
+    Left = 717
+    Height = 506
+    Top = 0
+    Width = 5
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object LeftPanel: TPanel
+    Left = 0
+    Height = 506
+    Top = 0
+    Width = 717
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 506
+    ClientWidth = 717
+    TabOrder = 1
+    object ToolInfoPanel: TPanel
+      Left = 0
+      Height = 164
+      Top = 335
+      Width = 717
+      Align = alBottom
+      AutoSize = True
+      BorderSpacing.Bottom = 7
+      BevelOuter = bvNone
+      ClientHeight = 164
+      ClientWidth = 717
+      TabOrder = 0
+      object CbHorizontal: TCheckBox
+        AnchorSideLeft.Control = ToolInfoPanel
+        AnchorSideTop.Control = ToolInfoPanel
+        Left = 8
+        Height = 19
+        Top = 0
+        Width = 71
+        BorderSpacing.Left = 8
+        Caption = 'Horizonal'
+        OnChange = CbHorizontalChange
+        TabOrder = 0
+      end
+      object Cb100Percent: TCheckBox
+        AnchorSideLeft.Control = CbHorizontal
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = CbHorizontal
+        Left = 95
+        Height = 19
+        Top = 0
+        Width = 48
+        BorderSpacing.Left = 16
+        Caption = '100%'
+        OnChange = Cb100PercentChange
+        TabOrder = 1
+      end
+      object TargetPanel: TPanel
+        AnchorSideLeft.Control = Cb100Percent
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = CbHorizontal
+        Left = 183
+        Height = 24
+        Top = 0
+        Width = 202
+        Anchors = [akTop, akLeft, akBottom]
+        AutoSize = True
+        BorderSpacing.Left = 40
+        BevelOuter = bvNone
+        ClientHeight = 24
+        ClientWidth = 202
+        TabOrder = 2
+        object RbToolTargetDataPoint: TRadioButton
+          AnchorSideLeft.Control = LblToolTargets
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = TargetPanel
+          Left = 74
+          Height = 19
+          Top = 0
+          Width = 75
+          BorderSpacing.Left = 10
+          Caption = 'Data point'
+          OnChange = ToolTargetChanged
+          TabOrder = 0
+        end
+        object RbToolTargetBar: TRadioButton
+          AnchorSideLeft.Control = RbToolTargetDataPoint
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = TargetPanel
+          Left = 165
+          Height = 19
+          Top = 0
+          Width = 37
+          BorderSpacing.Left = 16
+          Caption = 'Bar'
+          Checked = True
+          OnChange = ToolTargetChanged
+          TabOrder = 1
+          TabStop = True
+        end
+        object LblToolTargets: TLabel
+          AnchorSideLeft.Control = TargetPanel
+          AnchorSideTop.Control = RbToolTargetDataPoint
+          AnchorSideTop.Side = asrCenter
+          Left = 0
+          Height = 15
+          Top = 2
+          Width = 64
+          Caption = 'Tool targets:'
+        end
+      end
+      object LblInfo: TLabel
+        AnchorSideLeft.Control = CbHorizontal
+        AnchorSideTop.Control = CbHorizontal
+        AnchorSideTop.Side = asrBottom
+        Left = 8
+        Height = 135
+        Top = 29
+        Width = 358
+        BorderSpacing.Top = 10
+        Caption = 'if ToolTarget = Bar:'#13#10'  Left-Click inside bar  --> DataPointClickTool --> Log message'#13#10'  CTRL inside bar --> DataPointHintTool --> Hint window'#13#10#13#10'if ToolTarget = DataPoint:'#13#10'  Left-Click at bar end  --> DataPointClickTool --> Log message'#13#10'  CTRL inside at bar end --> DataPointHintTool --> Hint window'#13#10#13#10'Right-Drag of bar end --> DataPointDragTool --> change bar height'
+      end
+    end
+    object Chart: TChart
+      Left = 0
+      Height = 335
+      Top = 0
+      Width = 717
+      AutoFocus = True
+      AxisList = <      
+        item
+          Grid.Color = clSilver
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+          Title.LabelBrush.Style = bsClear
+        end      
+        item
+          Grid.Visible = False
+          Alignment = calBottom
+          AxisPen.Visible = True
+          Marks.Format = '%2:s'
+          Marks.LabelBrush.Style = bsClear
+          Marks.Source = ListChartSourceLABELS
+          Marks.Style = smsLabel
+          Minors = <>
+          Title.LabelBrush.Style = bsClear
+          ZPosition = 1
+        end>
+      BackColor = clWhite
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Legend.Alignment = laTopCenter
+      Legend.ColumnCount = 3
+      Legend.Visible = True
+      Margins.Bottom = 0
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      Toolset = ChartToolset
+      Align = alClient
+      object BarSeriesREDYELLOW: TBarSeries
+        Legend.Multiplicity = lmStyle
+        Title = 'Red'
+        BarBrush.Color = clRed
+        BarOffsetPercent = -20
+        BarWidthPercent = 40
+        Marks.Distance = 4
+        Marks.Format = '%.1f'
+        Marks.Frame.Visible = False
+        Marks.LabelBrush.Color = clWhite
+        Marks.LabelBrush.Style = bsClear
+        Marks.LinkPen.Visible = False
+        Marks.Style = smsCustom
+        Marks.YIndex = -1
+        Source = ListChartSourceREDYELLOW
+        Styles = ChartStyles
+      end
+      object BarSeriesBLUE: TBarSeries
+        Title = 'Blue'
+        BarBrush.Color = clBlue
+        BarOffsetPercent = 20
+        BarWidthPercent = 40
+        Marks.Attachment = maEdge
+        Marks.Distance = 4
+        Marks.Format = '%.1f'
+        Marks.Frame.Visible = False
+        Marks.LabelBrush.Color = clWhite
+        Marks.LabelBrush.Style = bsClear
+        Marks.LinkPen.Visible = False
+        Marks.Style = smsCustom
+        Source = ListChartSourceBLUE
+      end
+    end
+  end
+  object Log: TMemo
+    Left = 730
+    Height = 490
+    Top = 8
+    Width = 297
+    Align = alRight
+    BorderSpacing.Around = 8
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+  end
+  object ChartToolset: TChartToolset
+    Left = 512
+    Top = 80
+    object DataPointClickTool: TDataPointClickTool
+      Shift = [ssLeft]
+      OnPointClick = DataPointClickToolPointClick
+    end
+    object DataPointHintTool: TDataPointHintTool
+      Shift = [ssCtrl]
+      OnHint = DataPointHintToolHint
+    end
+    object DataPointDragTool: TDataPointDragTool
+      Shift = [ssRight]
+      OnBeforeMouseDown = DataPointDragToolBeforeMouseDown
+      Targets = [nptPoint, nptXList, nptYList]
+      OnDrag = DataPointDragToolDrag
+    end
+  end
+  object ChartStyles: TChartStyles
+    Styles = <    
+      item
+        Brush.Color = clRed
+        Text = 'Red'
+      end    
+      item
+        Brush.Color = clYellow
+        Text = 'Yellow'
+      end>
+    Left = 416
+    Top = 80
+  end
+  object CalculatedChartSource: TCalculatedChartSource
+    Origin = ListChartSourceREDYELLOW
+    Percentage = True
+    Left = 280
+    Top = 80
+  end
+  object ListChartSourceREDYELLOW: TListChartSource
+    YCount = 2
+    Left = 120
+    Top = 80
+  end
+  object ListChartSourceBLUE: TListChartSource
+    Left = 120
+    Top = 144
+  end
+  object ListChartSourceLABELS: TListChartSource
+    Left = 120
+    Top = 216
+  end
+end

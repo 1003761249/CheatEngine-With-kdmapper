@@ -1,0 +1,47 @@
+object AddToProjectDialog: TAddToProjectDialog
+  Left = 279
+  Height = 358
+  Top = 224
+  Width = 579
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'AddToProjectDialog'
+  ClientHeight = 358
+  ClientWidth = 579
+  OnClose = AddToProjectDialogClose
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 29
+    Top = 323
+    Width = 567
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+  object AddFileListView: TListView
+    Left = 6
+    Height = 311
+    Top = 6
+    Width = 567
+    Align = alClient
+    AutoWidthLastColumn = True
+    BorderSpacing.Around = 6
+    Columns = <>
+    MultiSelect = True
+    ReadOnly = True
+    RowSelect = True
+    SortType = stText
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnSelectItem = AddFileListViewSelectItem
+  end
+end

@@ -1,0 +1,54 @@
+object ConnectionFrame: TConnectionFrame
+  Left = 0
+  Height = 398
+  Top = 0
+  Width = 655
+  ClientHeight = 398
+  ClientWidth = 655
+  TabOrder = 0
+  DesignLeft = 1122
+  DesignTop = 352
+  object FTV: TTreeView
+    Left = 0
+    Height = 398
+    Top = 0
+    Width = 300
+    Align = alLeft
+    Images = ImgDatamodule.AppImages
+    TabOrder = 0
+    OnSelectionChanged = DoSelectNode
+  end
+  object FSplit: TSplitter
+    Left = 300
+    Height = 398
+    Top = 0
+    Width = 5
+  end
+  object FPC: TPageControl
+    Left = 305
+    Height = 398
+    Top = 0
+    Width = 350
+    ActivePage = FTSDisplay
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    OnChange = DoTabChange
+    object FTSDisplay: TTabSheet
+      Caption = 'Selected Object'
+      ClientHeight = 370
+      ClientWidth = 342
+      object FDisplay: TPanel
+        Left = 0
+        Height = 370
+        Top = 0
+        Width = 342
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object FTSQuery: TTabSheet
+      Caption = 'Run Query'
+    end
+  end
+end

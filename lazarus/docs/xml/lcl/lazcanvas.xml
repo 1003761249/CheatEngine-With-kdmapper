@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+LazCanvas
+====================================================================
+-->
+<module name="LazCanvas">
+<short>
+Classes and functions for extending TFPImageCanvas.
+</short>
+<descr>
+<p>
+<file>lazcanvas.pas</file> contains classes and functions for extending 
+TFPImageCanvas to support more stretching filters, and to support all 
+features from the LCL TCanvas. TLazCanvas also fixes various small problems 
+and incompatibilities between TFPImageCanvas versions, making the interface 
+smoother and more consistent.
+</p>
+<p>
+Do not use anything from the <b>LCL</b> here, as this unit should be kept 
+strictly independent. <file>LCLProc.pas</file> is allowed for DebugLn, but 
+only during debugging or profiling.
+</p>
+<p>
+Author: Felipe Monteiro de Carvalho
+</p>
+</descr>
+
+<!-- unresolved external references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Contnrs"/>
+<element name="Math"/>
+<element name="fpimgcanv"/>
+<element name="fpcanvas"/>
+<element name="fpimage"/>
+<element name="clipping"/>
+<element name="pixtools"/>
+<element name="fppixlcanv"/>
+<element name="IntfGraphics"/>
+<element name="LazRegions"/>
+<!-- used for debugging or profiling -->
+<element name="LazSysUtils"/>
+<element name="LCLProc"/>
+
+<element name="TLazCanvasImageFormat">
+<short>Identifies image formats supported in TLazCanvas.</short>
+<descr>
+<p>
+Used in the implementation of the <var>CanvasCopyRect</var> method in 
+<var>TLazCanvas</var>, and in custom-drawn LCL controls to speed up image 
+drawing in the LCL interface.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.CanvasCopyRect"/>
+</seealso>
+</element>
+<element name="TLazCanvasImageFormat.clfOther">
+<short>Images use a format other than those in this enumeration.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfRGB16_R5G6B5">
+<short>Images use 16-bit RGB colors.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfRGB24">
+<short>Images use 24-bit RGB colors.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfRGB24UpsideDown">
+<short>Images use 24-bit RGB colors with inverse values.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfBGR24">
+<short>Images use 24-bit BGR colors.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfBGRA32">
+<short>Images use 32-bit BGR colors with an Alpha channel.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfRGBA32">
+<short>Images use 32-bit RGB colors with an Alpha channel.</short>
+</element>
+<element name="TLazCanvasImageFormat.clfARGB32">
+<short>
+Images use 32-bit RGB colors with an Alpha channel in the low-order octet.
+</short>
+</element>
+
+<element name="TFPSharpInterpolation">
+<short>Implements a very sharp and square interpolation.</short>
+<descr>
+<p>
+TFPSharpInterpolation implements a very sharp and square interpolation for 
+stretching, similar to StretchBlt from the Windows API.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TFPSharpInterpolation.Execute">
+<short>
+Paints an image on the Canvas using the specified coordinates and dimensions.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TFPSharpInterpolation.Execute.x">
+<short>Horizontal coordinate.</short>
+</element>
+<element name="TFPSharpInterpolation.Execute.y">
+<short>Vertical coordinate.</short>
+</element>
+<element name="TFPSharpInterpolation.Execute.w">
+<short>Width for the output.</short>
+</element>
+<element name="TFPSharpInterpolation.Execute.h">
+<short>Height for the output.</short>
+</element>
+
+<element name="TLazCanvasState">
+<short>Contains properties reflecting the state for a Lazarus canvas.</short>
+<descr>
+<p>
+<var>TLazCanvasState</var> is a class with public members that reflect the 
+state for a <var>TLazCanvas</var> instance. A destructor is provided to 
+ensure that resources allocated to members variables are freed before the 
+class instance is destroyed.
+</p>
+<p>
+Instances of <var>TLazCanvasState</var> are created, stored, and retrieved 
+using an internal list in <var>TLazCanvas</var> in its <var>SaveState</var> 
+and <var>RestoreState</var> methods.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.SaveState"/>
+<link id="TLazCanvas.RestoreState"/>
+<link id="TLazCanvas.AssignedBrush"/>
+<link id="TLazCanvas.AssignedFont"/>
+<link id="TLazCanvas.AssignedPen"/>
+<link id="TLazCanvas.BaseWindowOrg"/>
+<link id="TLazCanvas.WindowOrg"/>
+</seealso>
+</element>
+
+<element name="TLazCanvasState.Brush">
+<short>Brush for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.Pen">
+<short>Pen for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.Font">
+<short>Font for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.BaseWindowOrg">
+<short>Base window origin for the canvas.</short>
+<descr>
+<p>
+The values in <var>WindowOrg</var> are relative to the coordinates in 
+<var>BaseWindowOrg</var>. BaseWindowOrg coordinates are relative to the 
+canvas for the containing Form. It is useful when implementing the non-native 
+windowed controls.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.WindowOrg">
+<short>Window origin for the canvas.</short>
+<descr>
+<p>
+Contains the absolute coordinates for the canvas with 
+<var>BaseWindowOrg</var> summed up.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.Clipping">
+<short>Indicates if Clipping is enabled for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.ClipRegion">
+<short>Defines the clipping region for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvasState.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+<var>Destroy</var> is the overridden destructor for the class instance. 
+Destroy ensures that resources allocated for the <var>Brush</var> and 
+<var>Pen</var> properties are freed before the class instance is destroyed. 
+Destroy calls the inherited destructor prior to exiting from the method.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvasState.Brush"/>
+<link id="TLazCanvasState.Pen"/>
+</seealso>
+</element>
+
+<element name="TLazCanvas">
+<short>
+Implements a canvas which masks differences between FCL and LCL canvas 
+classes.
+</short>
+<descr>
+<p>
+<var>TLazCanvas</var> is an FCL <var>TFPImageCanvas</var> descendant. 
+TLazCanvas extends the ancestor class to support stretching filters and 
+features found in the <var>TCanvas</var> class from the LCL. TLazCanvas also 
+fixes various small problems and incompatibilities between 
+<var>TFPImageCanvas</var> versions, making the interface smoother and more 
+consistent.
+</p>
+<p>
+TLazCanvas is used in the implementation of custom-drawn widgetset classes, 
+and provides a device context used to perform drawing operations for a 
+control.
+</p>
+<p>
+There are several useful examples using TLazCanvas on the Lazarus Wiki at:
+</p>
+<p>
+<url href="https://wiki.freepascal.org/Developing_with_Graphics">
+Developing with Graphics
+</url>
+</p>
+</descr>
+<seealso>
+<link id="#lcl.graphics.TCanvas">TCanvas</link>
+</seealso>
+</element>
+
+<element name="TLazCanvas.FAssignedBrush"/>
+<element name="TLazCanvas.FAssignedFont"/>
+<element name="TLazCanvas.FAssignedPen"/>
+<element name="TLazCanvas.FBaseWindowOrg"/>
+<element name="TLazCanvas.PolygonNonZeroWindingRule"/>
+<element name="TLazCanvas.FLazClipRegion"/>
+<element name="TLazCanvas.FWindowOrg"/>
+
+<element name="TLazCanvas.GraphicStateList">
+<short>Stores saved canvas state information.</short>
+<descr>
+<p>
+Used to store and restore canvas states in the <var>SaveState</var> and 
+<var>RestoreState</var> methods. Contains <var>TLazCanvasState</var> class 
+instances.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvasState"/>
+<link id="TLazCanvas.SaveState"/>
+<link id="TLazCanvas.RestoreState"/>
+</seealso>
+</element>
+
+<element name="TLazCanvas.GetAssignedBrush">
+<short>Gets the value for the AssignedBrush property.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.AssignedBrush"/>
+</seealso>
+</element>
+<element name="TLazCanvas.GetAssignedBrush.Result">
+<short>Value for the AssignedBrush property.</short>
+</element>
+
+<element name="TLazCanvas.GetAssignedPen">
+<short>Gets the value for the AssignedPen property.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.AssignedPen"/>
+</seealso>
+</element>
+<element name="TLazCanvas.GetAssignedPen.Result">
+<short>Value for the AssignedPen property.</short>
+</element>
+
+<element name="TLazCanvas.GetAssignedFont">
+<short>Gets the value for the AssignedFont property.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.AssignedFont"/>
+</seealso>
+</element>
+<element name="TLazCanvas.GetAssignedFont.Result">
+<short>Value for the AssignedFont property.</short>
+</element>
+
+<element name="TLazCanvas.GetWindowOrg">
+<short>Gets the value for the WindowOrg property.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.WindowOrg"/>
+</seealso>
+</element>
+<element name="TLazCanvas.GetWindowOrg.Result">
+<short>Value for the WindowOrg property.</short>
+</element>
+
+<element name="TLazCanvas.SetWindowOrg">
+<short>Sets the value for the WindowOrg property.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.WindowOrg"/>
+</seealso>
+</element>
+<element name="TLazCanvas.SetWindowOrg.AValue">
+<short>New value for the WindowOrg property.</short>
+</element>
+
+<element name="TLazCanvas.SetColor">
+<short>Sets the color for the pixel at the specified coordinates.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazCanvas.SetColor.x">
+<short>Horizontal pixel coordinate.</short>
+</element>
+<element name="TLazCanvas.SetColor.y">
+<short>Vertical pixel coordinate.</short>
+</element>
+<element name="TLazCanvas.SetColor.AValue">
+<short>Color for the pixel.</short>
+</element>
+
+<element name="TLazCanvas.DoCreateDefaultFont">
+<short>Creates the custom font used as the default for the canvas.</short>
+<descr>
+<p>
+<var>DoCreateDefaultFont</var> is an overridden <var>TFPCustomFont</var> 
+function used to provide the default font for the canvas class instance. 
+DoCreateDefaultFont implements the abstract virtual method defined in an 
+ancestor class, and emulates the method defined in TCanvas.
+</p>
+<p>
+DoCreateDefaultFont sets the <var>Size</var> property in the font to zero 
+(<b>0</b>); this causes the default font size for the platform or widget set 
+to be used. The <var>FPColor</var> property in the font is set to 
+<var>colBlack</var>.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLazCanvas.DoCreateDefaultFont.Result">
+<short>TFPCustomFont instance created and initialized in the method.</short>
+</element>
+
+<element name="TLazCanvas.DoRectangle">
+<short>
+Adjusts the fcl-image coordinate system to be compatible with coordinates 
+used in TCanvas.
+</short>
+<descr>
+<p>
+Adjusts the values in <var>Bounds</var> to use the coordinate system in 
+<var>TCanvas</var>, and draws borders using the style and/or pattern in the 
+Pen for the canvas.
+</p>
+<p>
+<var>DoRectangleFill</var> is used to optimize and fill a rectangle area.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.DoRectangleFill"/>
+</seealso>
+</element>
+<element name="TLazCanvas.DoRectangle.Bounds">
+<short>TRect with the bounds for the rectangular area.</short>
+</element>
+
+<element name="TLazCanvas.DoRectangleFill">
+<short>
+Adjusts the FCL image rectangle to be LCL compatible and draws a filled 
+rectangle on the canvas.
+</short>
+<descr>
+<p>
+<var>DoRectangleFill</var> adjusts the fcl-image coordinate system to be 
+compatible with coordinates used in <var>TCanvas</var>.
+</p>
+<p>
+It calls the FCL SortRec routine (in <file>clipping.pp</file>) to normalize 
+the values in Bounds prior to the drawing operation. It also shrinks the 
+rectangle by a single pixel on the bottom and right edges for the border drawn 
+in the Rectangle method. The original values in Bounds are not changed though 
+- a temporary copy of Bounds is used in the method.
+</p>
+<p>
+Values in Brush, like the Color and Style properties, are used to draw the 
+filled rectangle. Style determines the routine(s) called to fill the drawing 
+area as follows:
+</p>
+<dl>
+<dt>bsSolid</dt>
+<dd>
+Fills the specified area with the Brush color. If the rectangle covers the 
+entire width and height for the canvas and Clipping is not enabled, the 
+FillColor method is used. Otherwise, the FillRectangleColor method is called 
+using the adjusted bounds for the canvas.
+</dd>
+<dt>bsPattern</dt>
+<dd>
+Calls FillRectanglePattern to fill the rectangle with the pattern specified 
+for the Brush.
+</dd>
+<dt>bsImage</dt>
+<dd>
+Fills the rectangle with the image assigned to the Brush. Uses 
+RelativeBrushImage to determine whether FillRectangleImageRel or 
+FillRectangleImage is called for the operation. A PixelCanvasException 
+exception is raised for the style if an image has not been assigned in Brush.
+</dd>
+<dt>bsBDiagonal</dt>
+<dd>
+Calls FillRectangleHashDiagonal to fill the rectangle using the size for the 
+hash pattern.
+</dd>
+<dt>bsFDiagonal</dt>
+<dd>
+Calls FillRectangleHashBackDiagonal to fill the rectangle using the size for 
+the hash pattern.
+</dd>
+<dt>bsCross</dt>
+<dd>
+Calls both FillRectangleHashHorizontal and FillRectangleHashVertical to fill 
+the rectangle using the size for the hash pattern.
+</dd>
+<dt>bsDiagCross</dt>
+<dd>
+Calls booth FillRectangleHashDiagonal and FillRectangleHashBackDiagonal to 
+fill the rectangle using the size for the hash pattern.
+</dd>
+<dt>bsHorizontal</dt>
+<dd>
+Calls FillRectangleHashHorizontal to fill the rectangle using the size for the 
+hash pattern.
+</dd>
+<dt>bsVertical</dt>
+<dd>
+Calls FillRectangleHashVertical to fill the rectangle using the size for the 
+hash pattern.
+</dd>
+</dl>
+<p>
+DoRectangleFill is an overridden method in TLazCanvas. It reimplements the 
+method introduced in the TFPPixelCanvas ancestor (in FCL), and does <b>not</b> 
+call the inherited method.
+</p>
+</descr>
+<vesion>
+Modified in LCL version 3.0 to decrease the bottom and right edges of the 
+rectangle by a single pixel. This fixes a difference between the rectangle 
+fill and a border drawn in the Rectangle method.
+</vesion>
+<seealso/>
+</element>
+<element name="TLazCanvas.DoRectangleFill.Bounds">
+<short>Rectangle with the bounds adjusted and used in the method.</short>
+</element>
+
+<element name="TLazCanvas.DoPolygonFill">
+<short>
+Implements a polygon fill algorithm not present in fcl-image prior to FPC 
+version 3.2.3.
+</short>
+<descr>
+<p>
+Implements a polygon fill algorithm not present in fcl-image. Part of the 
+algorithm is explained 
+<url href="http://alienryderflex.com/polygon_fill/">here</url>.
+</p>
+<p>
+DoPolygonFill is defined when using FPC versions prior to 3.2.3. In FPC 3.2.3, 
+the method already exists in the TFPPixelCanvas ancestor and is not needed in 
+TLazCanvas.
+</p>
+</descr>
+<version>
+Modified in LCL versions after 2.2.4 to call DrawPixel instead of SetColor 
+when drawing pixels between points on the polygon. This allows the DrawingMode 
+(opacity, alphablending, custom) to be applied to the pixels. Adds support for 
+the non-zero winding rule in the fill operation.
+</version>
+<seealso>
+<link id="TLazCanvas.AlphaBlend"/>
+<link id="TLazCanvas.SetColor"/>
+</seealso>
+</element>
+<element name="TLazCanvas.DoPolygonFill.points">
+<short>Array with the TPoint records representing the polygon vertices.</short>
+</element>
+
+<element name="TLazCanvas.DoLine">
+<short>
+Draws a line using the specified coordinates and Pen for the canvas.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazCanvas.DoLine.x1">
+<short>Initial horizontal coordinate for the line.</short>
+</element>
+<element name="TLazCanvas.DoLine.y1">
+<short>Initial vertical coordinate for the line.</short>
+</element>
+<element name="TLazCanvas.DoLine.x2">
+<short>Terminal horizontal coordinate for the line.</short>
+</element>
+<element name="TLazCanvas.DoLine.y2">
+<short>Terminal vertical coordinate for the line.</short>
+</element>
+
+<element name="TLazCanvas.DoCopyRect">
+<short>
+Performs actions needed to copy a source rectangle from the specified canvas.
+</short>
+<descr>
+<p>
+<var>DoCopyRect</var> is an overridden method in <var>TLazCanvas</var>. It is 
+used to copy values from the specified source rectangle in the Canvas argument 
+to the location specified in X and Y. DoCopyRect reimplements the method from 
+an ancestor class (TFPPixelCanvas).
+</p>
+<p>
+<var>X</var> and <var>Y</var> contain the left, top coordinates on the Lazarus 
+canvas where the copied values are stored.
+</p>
+<p>
+<var>Canvas</var> is the TFPCustomCanvas instance with the values for the 
+SourceRect argument.
+</p>
+<p>
+<var>SourceRect</var> is the TRect instance width the Left, Top, Right and 
+Bottom coordinates for the rectangular region copied from Canvas.
+</p>
+<p>
+DoCopyRect calls the CanvasCopyRect method to perform the actions needed to 
+perform the copy operation using the specified arguments.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.CanvasCopyRect"/>
+</seealso>
+</element>
+<element name="TLazCanvas.DoCopyRect.x">
+<short>
+Left coordinate where the copied values are stored on the Lazarus canvas.
+</short>
+</element>
+<element name="TLazCanvas.DoCopyRect.y">
+<short>
+Top coordinate where the copied values are stored on the Lazarus canvas.
+</short>
+</element>
+<element name="TLazCanvas.DoCopyRect.canvas">
+<short>
+Canvas instance that is the source for the values copied in the method.
+</short>
+</element>
+<element name="TLazCanvas.DoCopyRect.SourceRect">
+<short>
+TRect instance with the Canvas coordinates copied in the method.
+</short>
+</element>
+
+<element name="TLazCanvas.DoDraw">
+<short>
+Performs actions needed to draws the specified image at the given coordinates 
+using AlphaBlending.
+</short>
+<descr>
+<p>
+<var>DoDraw</var> is an overridden method in <var>TLazCanvas</var>. It 
+reimplements the method from an ancestor class (TFPixelCanvas), and calls the 
+AlphaBlend_Image method to draw the specified image at the given position.
+</p>
+<p>
+<var>X</var> and <var>Y</var> contain the left and top coordinates on the 
+Lazarus canvas where the image is drawn.
+</p>
+<p>
+<var>AImage</var> is the TFPCustomImage instance drawn at the specified 
+position.
+</p>
+<p>
+DoDraw is used to implement the DoDrawImage method.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.AlphaBlend_Image"/>
+</seealso>
+</element>
+<element name="TLazCanvas.DoDraw.x">
+<short>
+Left coordinate on the Lazarus canvas where the specified image is drawn.
+</short>
+</element>
+<element name="TLazCanvas.DoDraw.y">
+<short>
+Top coordinate on the Lazarus canvas where the specified image is drawn.
+</short>
+</element>
+<element name="TLazCanvas.DoDraw.AImage">
+<short>
+Image drawn on the Lazarus canvas at the specified position.
+</short>
+</element>
+
+<element name="TLazCanvas.HasNoImage">
+<short>Indicates if a valid image was provided in the constructor.</short>
+<descr>
+<p>
+<var>HasNoImage</var> is a <var>Boolean</var> member used to indicate if a 
+valid <var>TFPCustomImage</var> was provided as an argument to the 
+<var>Create</var> constructor. Used in the implementation of the 
+<var>UpdateControlLazImageAndCanvas</var> routine for non-native custom drawn 
+window controls.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.Create"/>
+</seealso>
+</element>
+
+<element name="TLazCanvas.NativeDC">
+<short>Native device context for the canvas.</short>
+<descr>
+<p>
+<var>NativeDC</var> is a <var>PtrInt</var> member which contains the device 
+context used to render a custom-drawn LCL control.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.ExtraFontData">
+<short>
+Member with extra FreeType font data from the canvas or device context.
+</short>
+<descr>Used in custom-drawn LCL controls.</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.ImageFormat">
+<short>
+Member with the TLazCanvasImageFormat instance used to speed up drawing.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.SelectedBitmap">
+<short>Member with the GDI Handle for an image.</short>
+<descr>Used in custom-drawn LCL controls.</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.Create">
+<short>Constructor for the class instance.</short>
+<descr>
+<p>
+<var>Create</var> is the constructor for the class instance. Create calls the 
+inherited constructor using <var>AnImage</var> as an argument.
+</p>
+<p>
+Create allocates resources for the <var>GraphicStateList</var> property. 
+Create sets the value for the <var>HasNoImage</var> member to <b>True</b> 
+when <var>AnImage</var> has not been assigned (contains <b>Nil</b>).
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.HasNoImage"/>
+</seealso>
+</element>
+<element name="TLazCanvas.Create.AnImage">
+<short>Screen image for the control rendered on the canvas.</short>
+</element>
+
+<element name="TLazCanvas.Destroy">
+<short>Destructor for the class instance.</short>
+<descr>
+<p>
+<var>Destroy</var> is the overridden destructor for the class instance. 
+Destroy ensures that resources allocated for <var>GraphicStateList</var>, 
+<var>AssignedBrush</var>, and <var>AssignedPen</var> are freed. Destroy calls 
+the inherited destructor prior to exiting from the method.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.AssignedBrush"/>
+<link id="TLazCanvas.AssignedPen"/>
+</seealso>
+</element>
+
+<element name="TLazCanvas.SetLazClipRegion">
+<short>Sets the value in the ClipRegion property.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazCanvas.SetLazClipRegion.ARegion">
+<short>Region stored in the property.</short>
+</element>
+
+<element name="TLazCanvas.SaveState">
+<short>Saves the current canvas state in the GraphicStateList member.</short>
+<descr>
+<p>
+<var>SaveState</var> is an <var>Integer</var> function used to save the 
+current canvas state in the <var>GraphicStateList</var> member. SaveState 
+creates an instance of <var>TLazCanvasState</var> with copies of the current 
+values for <var>Brush</var>, <var>Pen</var>, and <var>Font</var>. Values from 
+<var>BaseWindowOrg</var>, <var>WindowOrg</var>, and <var>Clipping</var> are 
+also assigned to the class instance.
+</p>
+<p>
+The return value contains the ordinal position in <var>GraphicStateList</var> 
+where the canvas state was added in the method.
+</p>
+<p>
+Use <var>RestoreState</var> to restore the canvas to the state stored at a 
+specified position in the list.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.AssignedBrush"/>
+<link id="TLazCanvas.AssignedPen"/>
+<link id="TLazCanvas.AssignedFont"/>
+<link id="TLazCanvas.BaseWindowOrg"/>
+<link id="TLazCanvas.WindowOrg"/>
+<link id="TLazCanvas.RestoreState"/>
+</seealso>
+</element>
+<element name="TLazCanvas.SaveState.Result">
+<short>
+Ordinal position in GraphicStateList where the saved canvas state was stored.
+</short>
+</element>
+
+<element name="TLazCanvas.RestoreState">
+<short>
+Restores the canvas to the state stored at the specified position.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TLazCanvas.RestoreState.AIndex">
+<short>Ordinal position in GraphicStateList restored in the method.</short>
+</element>
+
+<element name="TLazCanvas.ResetCanvasState">
+<short>
+Sets the canvas to the default values/state used in the LCL TCanvas class.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.AlphaBlend">
+<short>
+Alpha blends the specified content from the source canvas onto the canvas 
+instance.
+</short>
+<descr>
+<p>
+<var>AlphaBlend</var> combines the content in <var>ASource</var> with the 
+current class instance to create the appearance of an image with partial or 
+full transparency. The current class instance provides the background for the 
+combined content.
+</p>
+<p>
+<var>ADestX</var> and <var>ADestY</var> provides the left and top coordinates 
+where the content from ASource is overlayed.
+</p>
+<p>
+<var>ASourceX</var>, <var>ASourceY</var>, <var>ASourceWidth</var> and <var>
+ASourceHeight</var> contain the coordinates and dimensions for the image area 
+retrieved from the ASource canvas.
+</p>
+<p>
+AlphaBlend ensures that the specified source content is not too large for the 
+destination area. The dimensions in ASourceWidth and ASourceHeight are 
+adjusted if any part of the image is outside the destination area.
+</p>
+<p>
+AlphaBlend creates an inverse mask for the alpha channel used on the pixels in 
+ASource. The mask is applied to the RGB components for the Colors in the 
+current class instance. The alpha channel in Colors is set to alphaOpaque for 
+the combined content.
+</p>
+<p>
+AlphaBlend is used in the implementation of the AlphaBlend_Image method.
+</p>
+<p>
+<b>Topics of Interest (but not documented in FCL)</b>
+</p>
+<ul>
+<li>TFPCustomCanvas.Colors (in <file>fpcanvas.pp</file>)</li>
+<li>TFPImageCanvas (in <file>fpimgcanv.pp</file>)</li>
+<li>TFPColor (in <file>fpimage.pp</file>)</li>
+</ul>
+</descr>
+<seealso>
+<link id="TLazCanvas.AlphaBlend_Image"/>
+<link id="TLazCanvas.AlphaBlendIgnoringDestPixels"/>
+</seealso>
+</element>
+<element name="TLazCanvas.AlphaBlend.ASource">
+<short>
+Lazarus canvas with the content alpha blended onto the current class instance.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ADestX">
+<short>
+Left coordinate where the content in ASource is applied.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ADestY">
+<short>
+Top coordinate where the content in ASource is applied.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ASourceX">
+<short>
+Left coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ASourceY">
+<short>
+Top coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ASourceWidth">
+<short>
+Width (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend.ASourceHeight">
+<short>
+Height (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels">
+<short>Performs an AlphaBlend operation assuming a white background.</short>
+<descr>
+<p>
+This is a safer version for use where the destination pixels may not be 
+consistent or valid. It will draw as if the target area contained opaque 
+white pixels.
+</p>
+</descr>
+<seealso>
+<link id="TLazCanvas.AlphaBlend"/>
+</seealso>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ASource">
+<short>
+Lazarus canvas with the content alpha blended onto the current class instance.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ADestX">
+<short>
+Left coordinate where the content in ASource is applied.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ADestY">
+<short>
+Top coordinate where the content in ASource is applied.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ASourceX">
+<short>
+Left coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ASourceY">
+<short>
+Top coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ASourceWidth">
+<short>
+Width (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlendIgnoringDestPixels.ASourceHeight">
+<short>
+Height (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+
+<element name="TLazCanvas.AlphaBlend_Image">
+<short>AlphaBlends the specified image onto the canvas.</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.AlphaBlend"/>
+<link id="TLazCanvas.AlphaBlendIgnoringDestPixels"/>
+</seealso>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ASource">
+<short>
+TFPCustomImage instance with the content applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ADestX">
+<short>
+Left coordinate where the content in ASource is applied to the canvas.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ADestY">
+<short>
+Top coordinate where the content in ASource is applied to the canvas.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ASourceX">
+<short>
+Left coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ASourceY">
+<short>
+Top coordinate for the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ASourceWidth">
+<short>
+Width (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+<element name="TLazCanvas.AlphaBlend_Image.ASourceHeight">
+<short>
+Height (in pixels) of the content in ASource applied in the method.
+</short>
+</element>
+
+<element name="TLazCanvas.DoDrawImage">
+<short>
+Calls DoDraw for the specified image and coordinates.
+</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.DoDraw"/>
+</seealso>
+</element>
+<element name="TLazCanvas.DoDrawImage.x">
+<short>
+Left coordinate where the specified image is drawn on the Lazarus canvas.
+</short>
+</element>
+<element name="TLazCanvas.DoDrawImage.y">
+<short>
+Top coordinate where the specified image is drawn on the Lazarus canvas.
+</short>
+</element>
+<element name="TLazCanvas.DoDrawImage.AImage">
+<short>
+TFPCustomImage instance with the content rendered to the canvas.
+</short>
+</element>
+
+<element name="TLazCanvas.CanvasCopyRect">
+<short>
+Copies the contents of a supported image format in ASource to the canvas.
+</short>
+<descr/>
+<seealso>
+<link id="TLazCanvas.DoCopyRect"/>
+</seealso>
+</element>
+
+procedure CanvasCopyRect(ASource: TFPCustomCanvas; 
+  const ADestX, ADestY, ASourceX, ASourceY, 
+  ASourceWidth, ASourceHeight: Integer);
+
+<element name="TLazCanvas.CanvasCopyRect.ASource">
+<short>
+TFPCustomCanvas instance with the content copied in the method.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ADestX">
+<short>
+Left coordinate on the canvas where the content in ASource is copied.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ADestY">
+<short>
+Top coordinate on the canvas where the content in ASource is copied.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ASourceX">
+<short>
+Left coordinate for the content in ASource copied in the method.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ASourceY">
+<short>
+Top coordinate for the content in ASource copied in the method.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ASourceWidth">
+<short>
+Width (in pixels) for the content in ASource copied in the method.
+</short>
+</element>
+<element name="TLazCanvas.CanvasCopyRect.ASourceHeight">
+<short>
+Height (in pixels) for the content in ASource copied in the method.
+</short>
+</element>
+
+<element name="TLazCanvas.FillColor">
+<short>Fills the entire drawing area with the specified color.</short>
+<descr>
+<p>
+Fills the entire drawing area with the specified color. 
+<var>AIgnoreClippingAndWindowOrg</var> speeds up canvas drawing operations, 
+but it is dangerous; don't use it unless you know what you are doing.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLazCanvas.FillColor.AColor">
+<short>Color applied to the canvas area.</short>
+</element>
+<element name="TLazCanvas.FillColor.AIgnoreClippingAndWindowOrg">
+<short>
+<b>True</b> ignores the canvas clipping region and window origin, and fills 
+all pixels for an underlying Image with the specified color. <b>False</b> (the 
+default) limits the scope to the Width and Height for the canvas - not the 
+range of pixels in the Image.
+</short>
+</element>
+
+<element name="TLazCanvas.Polygon">
+<short>
+Overloaded method which adds support for the non-zero winding rule.
+</short>
+<descr>
+<p>
+<var>Polygon()</var> overloads an equally-named method inherited from <var>TFPCustomCanvas</var> 
+which
+fills a polygon via <var>DoPolygonFill()</var>. 
+By default, the even-odd rule is applied for filling. 
+The current overload, however, adds support for filling the polygon 
+by the <url href="https://en.wikipedia.org/wiki/Nonzero-rule/">non-zero winding rule</url>.
+</p>
+<p>
+In each case, the polygon is filled by drawing horizontal lines across the polygon 
+starting at the left 
+The intersection points of this line with the polygon segments are calculated 
+and sorted from left to right. 
+</p>
+<p>
+In the even-odd rule, lines are drawn between adjacent intersection points in 
+an alternating way. 
+</p>
+<p>
+In the non-zero winding rule the "winding number"
+(starting at zero for each line) is incremented/decremented depending on whether
+the hit polygon segment is oriented upward or downward.
+The following line segment is drawn only when the accumulated winding number 
+is not zero.
+</p>
+<p>
+The non-zero winding rule is selected when the <var>Winding</var> argument of the 
+method is <b>true</b>. 
+Otherwise the even-odd rule is applied.
+</p>
+<p>
+The <var>DrawPixel()</var> method is called along the filling lines in order to apply the 
+brush color to the canvas pixels in an either opaque or semi-transparent way.
+</p>
+</descr>
+<version>
+Added in LCL version 3.0.
+</version>
+<seealso/>
+</element>
+<element name="TLazCanvas.Polygon.Points">
+<short>
+Array with the TPoint instances for the vertices on the polygon.
+</short>
+</element>
+<element name="TLazCanvas.Polygon.Winding">
+<short>
+<b>True</b> if the non-zero winding rule is enabled for the canvas instance.
+Otherwise the polygon is filled by means of the "even-odd" rule in which 
+alternating horizontal lines are drawn between pairs of polygon intersection 
+points.
+</short>
+</element>
+
+<element name="TLazCanvas.AssignPenData">
+<short>Sets the Pen data for the canvas.</short>
+<descr>
+<p>
+Utilized by <var>LCLIntf.SelectObject</var> and by the 
+<var>RestoreState</var> method. This is needed because calling 
+<var>Assign</var> for the <var>Pen</var>, <var>Brush</var>, or 
+<var>Font</var> properties raises exceptions.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLazCanvas.AssignPenData.APen">
+<short>Pen data stored in the method.</short>
+</element>
+
+<element name="TLazCanvas.AssignBrushData">
+<short>Sets the Brush data for the canvas.</short>
+<descr>
+<p>
+Utilized by <var>LCLIntf.SelectObject</var> and by the 
+<var>RestoreState</var> method. This is needed because calling 
+<var>Assign</var> for the <var>Pen</var>, <var>Brush</var>, or 
+<var>Font</var> properties raises exceptions.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLazCanvas.AssignBrushData.ABrush">
+<short>Brush data stored in the method.</short>
+</element>
+
+<element name="TLazCanvas.AssignFontData">
+<short>Sets the Font data for the canvas.</short>
+<descr>
+<p>
+AssignFontData copies property values in AFont to the Font for class instance, 
+including:
+</p>
+<ul>
+<li>FPColor</li>
+<li>Name</li>
+<li>Size</li>
+<li>Bold</li>
+<li>Italic</li>
+<li>Underline</li>
+<li>Strikethrough</li>
+</ul>
+<p>
+No actions are performed in the method if AFont has not been assigned 
+(contains <b>Nil</b>.
+</p>
+<p>
+Utilized by <var>LCLIntf.SelectObject</var> and by the 
+<var>RestoreState</var> method. This is needed because calling 
+<var>Assign</var> for the <var>Pen</var>, <var>Brush</var>, or 
+<var>Font</var> properties raises exceptions.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TLazCanvas.AssignFontData.AFont">
+<short>
+TFPCustomFont instance with the attributes assigned to the Font for the canvas.
+</short>
+</element>
+
+<element name="TLazCanvas.AssignedPen">
+<short>Pen assigned to the canvas.</short>
+<descr>
+<p>
+These properties are utilized to implement <var>LCLIntf.SelectObject</var> to 
+keep track of which pen/brush/font handle was assigned to this canvas. They 
+are not utilized by <var>TLazCanvas</var> itself.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.AssignedBrush">
+<short>Brush assigned to the canvas.</short>
+<descr>
+<p>
+These properties are used to implement <var>LCLIntf.SelectObject</var> to 
+keep track of which pen/brush/font handle was assigned to this canvas. They 
+are not utilized by <var>TLazCanvas</var> itself.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.AssignedFont">
+<short>Font assigned to the canvas.</short>
+<descr>
+<p>
+These properties are used to implement <var>LCLIntf.SelectObject</var> to 
+keep track of which pen/brush/font handle was assigned to this canvas. They 
+are not utilized by <var>TLazCanvas</var> itself.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.BaseWindowOrg">
+<short>Base window origin for the canvas.</short>
+<descr>
+<p>
+The values in <var>WindowOrg</var> are relative to the coordinates in 
+<var>BaseWindowOrg</var>. BaseWindowOrg coordinates are relative to the 
+canvas for the containing Form. It is useful when implementing the non-native 
+windowed controls.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.ClipRegion">
+<short>Clipping region for the canvas.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TLazCanvas.WindowOrg">
+<short>Window origin for the canvas.</short>
+<descr>
+<p>
+Contains the absolute coordinates for the canvas with 
+<var>BaseWindowOrg</var> summed up.
+</p>
+</descr>
+<seealso/>
+</element>
+
+</module>
+<!-- LazCanvas -->
+</package>
+</fpdoc-descriptions>

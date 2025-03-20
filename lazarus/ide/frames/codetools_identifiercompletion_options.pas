@@ -1,0 +1,222 @@
+{
+ ***************************************************************************
+ *                                                                         *
+ *   This source is free software; you can redistribute it and/or modify   *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This code is distributed in the hope that it will be useful, but      *
+ *   WITHOUT ANY WARRANTY; without even the implied warranty of            *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU     *
+ *   General Public License for more details.                              *
+ *                                                                         *
+ *   A copy of the GNU General Public License is available on the World    *
+ *   Wide Web at <http://www.gnu.org/copyleft/gpl.html>. You can also      *
+ *   obtain it by writing to the Free Software Foundation,                 *
+ *   Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1335, USA.   *
+ *                                                                         *
+ ***************************************************************************
+}
+unit codetools_identifiercompletion_options;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  SysUtils,
+  // LCL
+  Forms, StdCtrls, Spin, ExtCtrls,
+  // LazControls
+  DividerBevel,
+  // IdeIntf
+  IDEOptionsIntf, IDEOptEditorIntf, IdentCompletionTool,
+  // IDE
+  CodeToolsOptions, LazarusIDEStrConsts;
+
+type
+
+  { TCodetoolsIndentifierCompletionOptionsFrame }
+
+  TCodetoolsIndentifierCompletionOptionsFrame = class(TAbstractIDEOptionsEditor)
+    ICAddWordsComboBox: TComboBox;
+    ICAutoOnTypeUseTimer: TCheckBox;
+    ICAutoOnTypeOnlyWordEnd: TCheckBox;
+    ICContainsFilterCheckBox: TCheckBox;
+    ICAddDoCheckBox: TCheckBox;
+    ICAutoAddParameterBracketsCheckBox: TCheckBox;
+    ICIncludeKeywordsCheckBox: TCheckBox;
+    ICIncludeCodeTemplatesCheckBox: TCheckBox;
+    ICMiscDividerBevel: TDividerBevel;
+    ICOpenDividerBevel: TDividerBevel;
+    ICAutoInvokeOnTypeCheckBox: TCheckBox;
+    ICAutoStartAfterPointCheckBox: TCheckBox;
+    ICAddAssignOperatorCheckBox: TCheckBox;
+    ICAddSemicolonCheckBox: TCheckBox;
+    ICAddDividerBevel: TDividerBevel;
+    ICReplaceCheckBox: TCheckBox;
+    ICJumpToErrorCheckBox: TCheckBox;
+    ICShowHelpCheckBox: TCheckBox;
+    ICAutoUseSingleIdent: TCheckBox;
+    ICSortDividerBevel: TDividerBevel;
+    ICAppearanceDividerBevel: TDividerBevel;
+    ICContentDividerBevel: TDividerBevel;
+    ICSortForHistoryCheckBox: TCheckBox;
+    ICUseIconsInCompletionBoxCheckBox: TCheckBox;
+    ICIncludeWordsLabel: TLabel;
+    ICAutoOnTypeMinLengthLbl: TLabel;
+    ICAutoOnTypeMinLength: TSpinEdit;
+    ICSortOrderRadioGroup: TRadioGroup;
+  private
+  public
+    function GetTitle: String; override;
+    procedure Setup({%H-}ADialog: TAbstractOptionsEditorDialog); override;
+    procedure ReadSettings(AOptions: TAbstractIDEOptions); override;
+    procedure WriteSettings(AOptions: TAbstractIDEOptions); override;
+    class function SupportedOptionsClass: TAbstractIDEOptionsClass; override;
+  end;
+
+implementation
+
+{$R *.lfm}
+
+{ TCodetoolsIndentifierCompletionOptionsFrame }
+
+function TCodetoolsIndentifierCompletionOptionsFrame.GetTitle: String;
+begin
+  Result := dlgIdentifierCompletion;
+end;
+
+procedure TCodetoolsIndentifierCompletionOptionsFrame.Setup(
+  ADialog: TAbstractOptionsEditorDialog);
+begin
+  ICOpenDividerBevel.Caption:=lisIdCOpening;
+  ICAutoInvokeOnTypeCheckBox.Caption:=lisAutomaticallyInvokeOnType;
+  ICAutoOnTypeUseTimer.Caption:=lisAutomaticallyInvokeOnTypeUseTimer;
+  ICAutoOnTypeOnlyWordEnd.Caption:=lisAutomaticallyInvokeOnTypeOnlyWordEnd;
+  ICAutoOnTypeMinLengthLbl.Caption:=lisAutomaticallyInvokeOnTypeMinLength;
+  ICAutoStartAfterPointCheckBox.Caption:=lisAutomaticallyInvokeAfterPoint;
+  ICAutoUseSingleIdent.Caption:=lisAutomaticallyUseSinglePossibleIdent;
+  ICAutoUseSingleIdent.Hint:=
+    lisWhenThereIsOnlyOnePossibleCompletionItemUseItImmed;
+  ICShowHelpCheckBox.Caption:=lisShowHelp;
+  ICShowHelpCheckBox.Hint:=lisBestViewedByInstallingAHTMLControlLikeTurbopowerip;
+
+  ICAddDividerBevel.Caption:=lisIdCAddition;
+  ICAddSemicolonCheckBox.Caption:=dlgAddSemicolon;
+  ICAddAssignOperatorCheckBox.Caption:=dlgAddAssignmentOperator;
+  ICAddDoCheckBox.Caption:=lisAddKeywordDo;
+  ICAutoAddParameterBracketsCheckBox.Caption:=lisAddParameterBrackets;
+
+  ICSortDividerBevel.Caption:=lisSorting;
+  ICSortForHistoryCheckBox.Caption:=lisShowRecentlyUsedIdentifiersAtTop;
+  ICSortOrderRadioGroup.Hint:=lisForExampleShowAtTopTheLocalVariablesThenTheMembers;
+  ICSortOrderRadioGroup.Caption:=lisSortOrderTitle;
+  ICSortOrderRadioGroup.Items[0]:= lisSortOrderScopedAlphabetic;
+  ICSortOrderRadioGroup.Items[1]:= lisSortOrderAlphabetic;
+  ICSortOrderRadioGroup.Items[2]:= lisSortOrderDefinition;
+  ICContentDividerBevel.Caption:=lisContents;
+  ICContainsFilterCheckBox.Caption := dlgIncludeIdentifiersContainingPrefix;
+  ICIncludeWordsLabel.Caption := dlgIncludeWordsToIdentCompl;
+  ICAddWordsComboBox.Items.Text:=
+    dlgIncludeWordsToIdentCompl_IncludeFromAllUnits+LineEnding+
+    dlgIncludeWordsToIdentCompl_IncludeFromCurrentUnit+LineEnding+
+    dlgIncludeWordsToIdentCompl_DontInclude;
+  ICIncludeKeywordsCheckBox.Caption := dlgIncludeKeywordsToIdentCompl;
+  ICIncludeCodeTemplatesCheckBox.Caption := dlgIncludeCodeTemplatesToIdentCompl;
+
+  ICAppearanceDividerBevel.Caption:=lisAppearance;
+  ICUseIconsInCompletionBoxCheckBox.Caption := dlgUseIconsInCompletionBox;
+
+  ICMiscDividerBevel.Caption:=dlgEnvMisc;
+  ICReplaceCheckBox.Caption:=lisReplaceWholeIdentifier;
+  ICReplaceCheckBox.Hint:=lisEnableReplaceWholeIdentifierDisableReplacePrefix;
+  ICJumpToErrorCheckBox.Caption:=lisJumpToError;
+  ICJumpToErrorCheckBox.Hint:=lisJumpToErrorAtIdentifierCompletion;
+end;
+
+procedure TCodetoolsIndentifierCompletionOptionsFrame.ReadSettings(
+  AOptions: TAbstractIDEOptions);
+begin
+  with AOptions as TCodeToolsOptions do
+  begin
+    ICAddSemicolonCheckBox.Checked := IdentComplAddSemicolon;
+    ICAddAssignOperatorCheckBox.Checked := IdentComplAddAssignOperator;
+    ICAddDoCheckBox.Checked := IdentComplAddDo;
+    ICAutoInvokeOnTypeCheckBox.Checked := IdentComplAutoInvokeOnType;
+    ICAutoOnTypeUseTimer.Checked := IdentComplOnTypeUseTimer;
+    ICAutoOnTypeOnlyWordEnd.Checked := IdentComplOnTypeOnlyWordEnd;
+    ICAutoOnTypeMinLength.Value := IdentComplOnTypeMinLength;
+    ICAutoStartAfterPointCheckBox.Checked := IdentComplAutoStartAfterPoint;
+    ICAutoUseSingleIdent.Checked := IdentComplAutoUseSingleIdent;
+    ICAutoAddParameterBracketsCheckBox.Checked:=IdentComplAddParameterBrackets;
+    ICReplaceCheckBox.Checked:=IdentComplReplaceIdentifier;
+    ICJumpToErrorCheckBox.Checked:=IdentComplJumpToError;
+    ICShowHelpCheckBox.Checked:=IdentComplShowHelp;
+    ICSortForHistoryCheckBox.Checked:=IdentComplSortForHistory;
+    case IdentComplSortMethod of
+      icsScopedAlphabetic:  ICSortOrderRadioGroup.ItemIndex:= 0;
+      icsAlphabetic:        ICSortOrderRadioGroup.ItemIndex:= 1;
+      icsScopedDeclaration: ICSortOrderRadioGroup.ItemIndex:= 2;
+    end;
+    ICContainsFilterCheckBox.Checked:=IdentComplUseContainsFilter;
+    ICIncludeKeywordsCheckBox.Checked := IdentComplIncludeKeywords;
+    ICIncludeCodeTemplatesCheckBox.Checked:=IdentComplIncludeCodeTemplates;
+    ICUseIconsInCompletionBoxCheckBox.Checked:=IdentComplShowIcons;
+
+    case IdentComplIncludeWords of
+      icwIncludeFromAllUnits: ICAddWordsComboBox.ItemIndex:=0;
+      icwIncludeFromCurrentUnit: ICAddWordsComboBox.ItemIndex:=1;
+    else
+      ICAddWordsComboBox.ItemIndex:=2;
+    end;
+  end;
+end;
+
+procedure TCodetoolsIndentifierCompletionOptionsFrame.WriteSettings(
+  AOptions: TAbstractIDEOptions);
+begin
+  with AOptions as TCodeToolsOptions do
+  begin
+    IdentComplAddSemicolon := ICAddSemicolonCheckBox.Checked;
+    IdentComplAddAssignOperator := ICAddAssignOperatorCheckBox.Checked;
+    IdentComplAddDo := ICAddDoCheckBox.Checked;
+    IdentComplAutoInvokeOnType := ICAutoInvokeOnTypeCheckBox.Checked;
+    IdentComplOnTypeUseTimer := ICAutoOnTypeUseTimer.Checked;
+    IdentComplOnTypeOnlyWordEnd := ICAutoOnTypeOnlyWordEnd.Checked;
+    IdentComplOnTypeMinLength := ICAutoOnTypeMinLength.Value;
+    IdentComplAutoStartAfterPoint := ICAutoStartAfterPointCheckBox.Checked;
+    IdentComplAutoUseSingleIdent := ICAutoUseSingleIdent.Checked;
+    IdentComplAddParameterBrackets:=ICAutoAddParameterBracketsCheckBox.Checked;
+    IdentComplReplaceIdentifier:=ICReplaceCheckBox.Checked;
+    IdentComplJumpToError:=ICJumpToErrorCheckBox.Checked;
+    IdentComplShowHelp:=ICShowHelpCheckBox.Checked;
+    IdentComplSortForHistory:=ICSortForHistoryCheckBox.Checked;
+    case ICSortOrderRadioGroup.ItemIndex of
+      0: IdentComplSortMethod:=icsScopedAlphabetic;
+      1: IdentComplSortMethod:=icsAlphabetic;
+      2: IdentComplSortMethod:=icsScopedDeclaration;
+    end;
+
+    IdentComplUseContainsFilter:=ICContainsFilterCheckBox.Checked;
+    IdentComplIncludeKeywords := ICIncludeKeywordsCheckBox.Checked;
+    IdentComplIncludeCodeTemplates:=ICIncludeCodeTemplatesCheckBox.Checked;
+    IdentComplShowIcons:=ICUseIconsInCompletionBoxCheckBox.Checked;
+    case ICAddWordsComboBox.ItemIndex of
+      0: IdentComplIncludeWords := icwIncludeFromAllUnits;
+      1: IdentComplIncludeWords := icwIncludeFromCurrentUnit;
+      2: IdentComplIncludeWords := icwDontInclude;
+    end;
+  end;
+end;
+
+class function TCodetoolsIndentifierCompletionOptionsFrame.SupportedOptionsClass: TAbstractIDEOptionsClass;
+begin
+  Result := TCodeToolsOptions;
+end;
+
+initialization
+  RegisterIDEOptionsEditor(GroupCodetools, TCodetoolsIndentifierCompletionOptionsFrame, CdtOptionsIdentCompletion);
+end.
+

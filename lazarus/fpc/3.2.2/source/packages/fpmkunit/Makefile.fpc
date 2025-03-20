@@ -1,0 +1,130 @@
+#
+#   Makefile.fpc for running fpmake
+#
+
+[package]
+name=fpmkunit
+version=3.2.2
+
+[require]
+packages=rtl paszlib fcl-process hash libtar
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../..
+
+[prerules]
+#Defines for bootstrapping
+TARGET_UNITDIRBS=units_bs/$(SOURCESUFFIX)
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/fpmkunit.ppu units_bs/$(SOURCESUFFIX)/fpmkunit.rst units_bs/$(SOURCESUFFIX)/fpmkunit.o
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/adler.ppu units_bs/$(SOURCESUFFIX)/adler.o units_bs/$(SOURCESUFFIX)/crc.o units_bs/$(SOURCESUFFIX)/crc.ppu
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/gzio.ppu units_bs/$(SOURCESUFFIX)/gzio.o units_bs/$(SOURCESUFFIX)/infblock.o units_bs/$(SOURCESUFFIX)/infblock.ppu
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/infcodes.ppu units_bs/$(SOURCESUFFIX)/infcodes.o units_bs/$(SOURCESUFFIX)/inffast.o units_bs/$(SOURCESUFFIX)/inffast.ppu
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/inftrees.ppu units_bs/$(SOURCESUFFIX)/inftrees.o units_bs/$(SOURCESUFFIX)/infutil.o units_bs/$(SOURCESUFFIX)/infutil.ppu
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/pipes.ppu units_bs/$(SOURCESUFFIX)/pipes.o units_bs/$(SOURCESUFFIX)/process.o units_bs/$(SOURCESUFFIX)/process.ppu units_bs/$(SOURCESUFFIX)/process.rst
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/trees.ppu units_bs/$(SOURCESUFFIX)/trees.o units_bs/$(SOURCESUFFIX)/zbase.o units_bs/$(SOURCESUFFIX)/zbase.ppu units_bs/$(SOURCESUFFIX)/zbase.rst
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/zdeflate.ppu units_bs/$(SOURCESUFFIX)/zdeflate.o units_bs/$(SOURCESUFFIX)/zinflate.o units_bs/$(SOURCESUFFIX)/zinflate.ppu
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/libtar.ppu units_bs/$(SOURCESUFFIX)/libtar.o
+CLEAN_FILES+=units_bs/$(SOURCESUFFIX)/zipper.ppu units_bs/$(SOURCESUFFIX)/zipper.o units_bs/$(SOURCESUFFIX)/zipper.rst units_bs/$(SOURCESUFFIX)/zstream.o units_bs/$(SOURCESUFFIX)/zstream.ppu units_bs/$(SOURCESUFFIX)/zstream.rst
+# Set NO_UNIT_PROCESS on hosts that do not support the process unit
+ifneq ($(findstring $(OS_SOURCE),os2 go32v2),)
+NO_UNIT_PROCESS=1
+endif
+ifdef NO_UNIT_PROCESS
+UNIT_PROCESS=-dNO_UNIT_PROCESS
+else
+UNIT_PROCESS=
+ifneq ($(findstring $(OS_SOURCE),win32 win64),)
+UNIT_PROCESS+=-Fi../fcl-process/src/win
+endif
+ifneq ($(findstring $(OS_SOURCE),linux freebsd darwin iphonesim netbsd openbsd solaris haiku aix android dragonfly),)
+UNIT_PROCESS+=-Fi../fcl-process/src/unix
+endif
+ifneq ($(findstring $(OS_SOURCE),os2 emx),)
+UNIT_PROCESS+=-Fi../fcl-process/src/os2
+endif
+UNIT_PROCESS+=-Fu../fcl-process/src -Fi../fcl-process/src/$(OS_SOURCE) -Fi../fcl-process/src/dummy
+endif
+ifdef NO_UNIT_ZIPPER
+UNIT_ZIPPER=-dNO_UNIT_ZIPPER
+else
+UNIT_ZIPPER=-Fu../paszlib/src -Fu../hash/src -Fi../paszlib/src
+endif
+UNIT_LIBTAR=-Fu../libtar/src
+# End of bootstrap-code
+FPMAKE_BIN_CLEAN=$(wildcard ./fpmake$(SRCEXEEXT))
+ifdef OS_TARGET
+FPC_TARGETOPT+=--os=$(OS_TARGET)
+endif
+ifdef CPU_TARGET
+FPC_TARGETOPT+=--cpu=$(CPU_TARGET)
+endif
+LOCALFPMAKE=./fpmake$(SRCEXEEXT)
+# Force -Cg for bootstrap depending on XX_SOURCE for the same targets as 
+# as those XX_SOURCE (avoid linker warnings about mixing abi and non-abi files of mips-linux)
+ifneq ($(findstring $(OS_SOURCE),dragonfly freebsd openbsd netbsd linux solaris),)
+ifneq ($(findstring $(CPU_SOURCE),x86_64 mips mipsel),)
+override FPCMAKEOPT+=-Cg
+endif
+endif
+
+[rules]
+.NOTPARALLEL:
+
+$(TARGET_UNITDIRBS):
+	$(MKDIRTREE) $(TARGET_UNITDIRBS)
+# We want to have all units inside the single packages/fpmkunit/units/$target directory
+bootstrap:	$(TARGET_UNITDIRBS)
+        $(FPCFPMAKE) src/fpmkunit.pp $(FPMAKE_SKIP_CONFIG) $(addprefix -Fu,$(UNITDIR_FPMAKE_RTL)) -FU$(TARGET_UNITDIRBS) $(UNIT_ZIPPER) $(FPCMAKEOPT) $(UNIT_PROCESS) $(UNIT_LIBTAR) $(OPT)
+# Old	$(FPCFPMAKE) src/fpmkunit.pp $(FPMAKE_SKIP_CONFIG) $(addprefix -Fu,$(COMPILER_FPMAKE_UNITDIR)) -FU$(TARGET_UNITDIRBS) $(UNIT_ZIPPER) $(UNIT_PROCESS) $(UNIT_LIBTAR) $(OPT)
+clean_bootstrap:
+	-$(DELTREE) units_bs
+fpmake: fpmake.pp
+	$(FPCFPMAKE) fpmake.pp $(FPMAKE_SKIP_CONFIG) $(addprefix -Fu,$(UNITDIR_FPMAKE_RTL)) $(FPCMAKEOPT) -Fu$(TARGET_UNITDIRBS) $(OPT)
+all:	fpmake
+	$(LOCALFPMAKE) compile --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) -bu
+smart:	fpmake
+	$(LOCALFPMAKE) compile --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) -bu -o -XX -o -CX
+release:	fpmake
+	$(LOCALFPMAKE) compile --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) -bu -o -dRELEASE
+debug:	fpmake
+	$(LOCALFPMAKE) compile --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) -bu -o -dDEBUG
+# If no fpmake exists and (dist)clean is called, do not try to build fpmake, it will
+# most often fail because the dependencies are cleared.
+# In case of a clean, simply do nothing
+ifeq ($(FPMAKE_BIN_CLEAN),)
+clean:	clean_bootstrap
+else
+clean:	clean_bootstrap
+	$(FPMAKE_BIN_CLEAN) clean --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC)
+endif
+# In case of a distclean, perform an 'old'-style distclean. This to avoid problems
+# when the package is compiled using fpcmake prior to running this clean using fpmake
+ifeq ($(FPMAKE_BIN_CLEAN),)
+distclean:	$(addsuffix _distclean,$(TARGET_DIRS)) fpc_cleanall clean_bootstrap
+else
+distclean:	clean_bootstrap
+ifdef inUnix
+        { $(FPMAKE_BIN_CLEAN) distclean --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC); if [ $$? != "0" ]; then { echo Something wrong with fpmake exectable. Remove the executable and call make recursively to recover.; $(DEL) $(FPMAKE_BIN_CLEAN); $(MAKE) fpc_cleanall; }; fi;  }
+else
+        $(FPMAKE_BIN_CLEAN) distclean --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC)
+endif
+	-$(DEL) $(LOCALFPMAKE)
+endif
+install:	fpmake
+ifdef UNIXHier
+	$(LOCALFPMAKE) install --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) --prefix=$(INSTALL_PREFIX) --baseinstalldir=$(INSTALL_LIBDIR)/fpc/$(FPC_VERSION) --unitinstalldir=$(INSTALL_UNITDIR)
+else
+	$(LOCALFPMAKE) install --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) --prefix=$(INSTALL_BASEDIR) --unitinstalldir=$(INSTALL_UNITDIR)
+endif
+# distinstall also installs the example-sources
+distinstall:	fpmake
+ifdef UNIXHier
+	$(LOCALFPMAKE) install --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) --prefix=$(INSTALL_PREFIX) --baseinstalldir=$(INSTALL_LIBDIR)/fpc/$(FPC_VERSION) --unitinstalldir=$(INSTALL_UNITDIR) -ie
+else
+	$(LOCALFPMAKE) install --localunitdir=../.. --globalunitdir=.. $(FPC_TARGETOPT) $(addprefix -o ,$(FPCOPT)) --compiler=$(FPC) --prefix=$(INSTALL_BASEDIR)  --unitinstalldir=$(INSTALL_UNITDIR) -ie
+endif
+zipinstall:	fpmake
+	$(LOCALFPMAKE) zipinstall $(FPMAKE_OPT)

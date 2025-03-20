@@ -1,0 +1,232 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: X-1.9\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: 郑建平@夏宗萍 aka  robsean <robsean@126.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml"
+msgid "a directory component in %s does not exist or is a dangling symlink"
+msgstr "一个目录组件在%s不存在 或 是一个悬空符号链接"
+
+#: lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml2
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml2"
+msgid "a directory component in %s does not exist or is a dangling symlink"
+msgstr "一个目录组件在%s不存在 或 是一个悬空符号链接"
+
+#: lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory"
+msgid "a directory component in %s is not a directory"
+msgstr "一个目录组件在%s不是一个目录"
+
+#: lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory2
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory2"
+msgid "a directory component in %s is not a directory"
+msgstr "一个目录组件在%s不是一个目录"
+
+#: lazutilsstrconsts.lrsboolean
+msgid "boolean"
+msgstr "布尔"
+
+#: lazutilsstrconsts.lrscannotexecute
+#, object-pascal-format
+msgid "can not execute %s"
+msgstr "不能执行%s"
+
+#: lazutilsstrconsts.lrscreatinggdbcatchableerror
+msgid "Creating gdb catchable error:"
+msgstr ""
+
+#: lazutilsstrconsts.lrserrorincode
+msgid "ERROR in code: "
+msgstr ""
+
+#: lazutilsstrconsts.lrsevalinvalidargcount
+msgid "Invalid number of function arguments"
+msgstr "函数参数的无效的数量"
+
+#: lazutilsstrconsts.lrsevalunknownfunction
+#, object-pascal-format
+msgid "Unknown function: \"%s\""
+msgstr "未知的函数: \"%s\""
+
+#: lazutilsstrconsts.lrsevalunknownvariable
+#, object-pascal-format
+msgid "Unknown variable: \"%s\""
+msgstr "未知的变量:\"%s\""
+
+#: lazutilsstrconsts.lrsfiledoesnotexist
+#, object-pascal-format
+msgid "file \"%s\" does not exist"
+msgstr "文件\"%s\"不存在"
+
+#: lazutilsstrconsts.lrsfileisadirectoryandnotanexecutable
+#, object-pascal-format
+msgid "file \"%s\" is a directory and not an executable"
+msgstr "文件\"%s\"是一个目录并不是一个可执行文件"
+
+#: lazutilsstrconsts.lrshasacircularsymboliclink
+#, object-pascal-format
+msgid "%s has a circular symbolic link"
+msgstr "%s有一个循环符号链接(circular)"
+
+#: lazutilsstrconsts.lrsinsufficientmemory
+msgid "insufficient memory"
+msgstr "内存不足"
+
+#: lazutilsstrconsts.lrsisnotasymboliclink
+#, object-pascal-format
+msgid "%s is not a symbolic link"
+msgstr "%s不是一个符号链接"
+
+#: lazutilsstrconsts.lrsisnotexecutable
+#, object-pascal-format
+msgid "%s is not executable"
+msgstr "%s是不可执行的"
+
+#: lazutilsstrconsts.lrslistindexexceedsbounds
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrslistindexexceedsbounds"
+msgid "List index exceeds bounds (%d)"
+msgstr "list索引超过限制 (%d)"
+
+#: lazutilsstrconsts.lrslistmustbeempty
+msgctxt "lazutilsstrconsts.lrslistmustbeempty"
+msgid "List must be empty"
+msgstr "列表必须为空"
+
+#: lazutilsstrconsts.lrsmodified
+msgctxt "lazutilsstrconsts.lrsmodified"
+msgid "  modified "
+msgstr "  已修改"
+
+#: lazutilsstrconsts.lrsnodeset
+msgid "node set"
+msgstr "节点设置"
+
+#: lazutilsstrconsts.lrsnumber
+msgid "number"
+msgstr "数字"
+
+#: lazutilsstrconsts.lrsparserbadaxisname
+msgid "Invalid axis name"
+msgstr "无效的轴名称(axis)"
+
+#: lazutilsstrconsts.lrsparserbadnodetype
+msgid "Invalid node type"
+msgstr "无效节点类型"
+
+#: lazutilsstrconsts.lrsparserexpectedleftbracket
+msgid "Expected \"(\""
+msgstr "要求\"(\""
+
+#: lazutilsstrconsts.lrsparserexpectedrightbracket
+msgid "Expected \")\""
+msgstr "要求\")\""
+
+#: lazutilsstrconsts.lrsparserexpectedrightsquarebracket
+msgid "Expected \"]\" after predicate"
+msgstr "要求\"]\"在谓语后"
+
+#: lazutilsstrconsts.lrsparsergarbageafterexpression
+msgid "Unrecognized input after expression"
+msgstr "不被认可的输入在表达式后"
+
+#: lazutilsstrconsts.lrsparserinvalidnodetest
+msgid "Invalid node test (syntax error)"
+msgstr "无效的节点测试(语法错误)"
+
+#: lazutilsstrconsts.lrsparserinvalidprimexpr
+msgid "Invalid primary expression"
+msgstr "无效的基本表达式"
+
+#: lazutilsstrconsts.lrsprogramfilenotfound
+#, object-pascal-format
+msgid "program file not found %s"
+msgstr "程序文件未找到%s"
+
+#: lazutilsstrconsts.lrsreadaccessdeniedfor
+#, object-pascal-format
+msgid "read access denied for %s"
+msgstr "读访问被拒绝对于%s"
+
+#: lazutilsstrconsts.lrsscannerexpectedvarname
+msgid "Expected variable name after \"$\""
+msgstr "在\"$\"后要求变量名"
+
+#: lazutilsstrconsts.lrsscannerinvalidchar
+msgid "Invalid character"
+msgstr "无效字符"
+
+#: lazutilsstrconsts.lrsscannermalformedqname
+msgid "Expected \"*\" or local part after colon"
+msgstr "要求\"*\" 或 冒号后本地部分"
+
+#: lazutilsstrconsts.lrsscannerunclosedstring
+msgid "String literal was not closed"
+msgstr "字符串文字没有关闭"
+
+#: lazutilsstrconsts.lrssize
+msgctxt "lazutilsstrconsts.lrssize"
+msgid "  size "
+msgstr "大小"
+
+#: lazutilsstrconsts.lrsstring
+msgid "string"
+msgstr "字符串"
+
+#: lazutilsstrconsts.lrsunabletocreateconfigdirectorys
+#, object-pascal-format
+msgid "Unable to create config directory \"%s\""
+msgstr "不能创建配置目录\"%s\""
+
+#: lazutilsstrconsts.lrsvarnoconversion
+#, object-pascal-format
+msgid "Conversion from %s to %s not possible"
+msgstr "不能从%s到%s转换"
+
+#: lazutilsstrconsts.rsincompletemask
+msgid "Reached end of mask, but missing close/escape sequence."
+msgstr ""
+
+#: lazutilsstrconsts.rsinternalerror
+#, object-pascal-format
+msgid "Internal error in %s."
+msgstr ""
+
+#: lazutilsstrconsts.rsinvalidcharmask
+#, object-pascal-format
+msgid "Invalid character \"%s\" in mask."
+msgstr ""
+
+#: lazutilsstrconsts.rsinvalidcharmaskat
+#, object-pascal-format
+msgid "Invalid character \"%s\" in mask (offset %d)."
+msgstr ""
+
+#: lazutilsstrconsts.rsinvalidescapechar
+msgid "Escape character must be ASCII <= 127."
+msgstr ""
+
+#: lazutilsstrconsts.rsmissingclosecharmask
+#, object-pascal-format
+msgid "Missing closing character \"%s\" in mask."
+msgstr ""
+
+#: lazutilsstrconsts.rsmissingclosecharmaskat
+#, object-pascal-format
+msgid "Missing closing character \"%s\" in mask (offset %d)."
+msgstr ""
+

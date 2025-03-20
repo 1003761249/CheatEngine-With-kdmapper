@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="fpdebug"/>
+    <Author Value="Lazarus Team"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="."/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <Verbosity>
+          <ShowWarn Value="False"/>
+          <ShowHints Value="False"/>
+        </Verbosity>
+        <CompilerMessages>
+          <IgnoredMessages idx6058="True" idx3057="True"/>
+        </CompilerMessages>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="A set of helperclasses for implementing a debugger.
+
+Based on:
+1) FPDebug by Marc Weustink 
+2) Duby by Dmitry Boyarintsev
+
+Extended by Martin Friebe"/>
+    <License Value="All Files except those listed below: GPL
+
+File(s) with other licenses (see also header in file(s): 
+
+* macho.pas 
+  This file contains Original Code and/or Modifications of Original Code  as defined in and that are subject to the Apple Public Source License Version 2.0 (the &apos;License&apos;). You may not use this file except in compliance with the License. Please obtain a copy of the License at   http://www.opensource.apple.com/apsl/ and read it before using this  file.
+
+  (Any modifications/translations of this file are from duby)
+"/>
+    <Version Major="1"/>
+    <Files>
+      <Item>
+        <Filename Value="fpdbgclasses.pp"/>
+        <UnitName Value="FpDbgClasses"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdisasx86.pp"/>
+        <UnitName Value="FpDbgDisasX86"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarf.pas"/>
+        <UnitName Value="FpDbgDwarf"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarfconst.pas"/>
+        <UnitName Value="FpDbgDwarfConst"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgloader.pp"/>
+        <UnitName Value="FpDbgLoader"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgpetypes.pp"/>
+        <UnitName Value="FpDbgPETypes"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgsymbols.pas"/>
+        <UnitName Value="FpDbgSymbols"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgutil.pp"/>
+        <UnitName Value="FpDbgUtil"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgwinextra.pp"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="FpDbgWinExtra"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreaderwinpe.pas"/>
+        <UnitName Value="FpImgReaderWinPE"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreaderelf.pas"/>
+        <UnitName Value="FpImgReaderElf"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreaderelftypes.pas"/>
+        <UnitName Value="FpImgReaderElfTypes"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreaderbase.pas"/>
+        <UnitName Value="FpImgReaderBase"/>
+      </Item>
+      <Item>
+        <Filename Value="fppascalparser.pas"/>
+        <UnitName Value="FpPascalParser"/>
+      </Item>
+      <Item>
+        <Filename Value="macho.pas"/>
+        <UnitName Value="macho"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreadermachofile.pas"/>
+        <UnitName Value="FpImgReaderMachoFile"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreadermacho.pas"/>
+        <UnitName Value="FpImgReaderMacho"/>
+      </Item>
+      <Item>
+        <Filename Value="fppascalbuilder.pas"/>
+        <UnitName Value="FpPascalBuilder"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbginfo.pas"/>
+        <UnitName Value="FpDbgInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgwinclasses.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="FpDbgWinClasses"/>
+        <CustomOptions Items="FPMake" Version="2">
+          <_FPMake Items="AllOSes/TargetOSes">
+            <_AllOSes Value="False"/>
+            <_TargetOSes Value="win32,win64"/>
+          </_FPMake>
+        </CustomOptions>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdarwinclasses.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="FpDbgDarwinClasses"/>
+        <CustomOptions Items="FPMake" Version="2">
+          <_FPMake Items="AllOSes/TargetOSes">
+            <_AllOSes Value="False"/>
+            <_TargetOSes Value="darwin"/>
+          </_FPMake>
+        </CustomOptions>
+      </Item>
+      <Item>
+        <Filename Value="fpdmemorytools.pas"/>
+        <UnitName Value="FpdMemoryTools"/>
+      </Item>
+      <Item>
+        <Filename Value="fperrormessages.pas"/>
+        <UnitName Value="FpErrorMessages"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgcontroller.pas"/>
+        <UnitName Value="FPDbgController"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarfverboseprinter.pas"/>
+        <UnitName Value="FpDbgDwarfVerbosePrinter"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarfdataclasses.pas"/>
+        <UnitName Value="FpDbgDwarfDataClasses"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarffreepascal.pas"/>
+        <UnitName Value="FpDbgDwarfFreePascal"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgsymtablecontext.pas"/>
+        <UnitName Value="fpDbgSymTableContext"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgsymtable.pas"/>
+        <UnitName Value="fpDbgSymTable"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbglinuxclasses.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="FpDbgLinuxClasses"/>
+        <CustomOptions Items="FPMake" Version="2">
+          <_FPMake Items="AllOSes/TargetOSes">
+            <_AllOSes Value="False"/>
+            <_TargetOSes Value="linux"/>
+          </_FPMake>
+        </CustomOptions>
+      </Item>
+      <Item>
+        <Filename Value="fpdbglinuxextra.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="FpDbgLinuxExtra"/>
+        <CustomOptions Items="FPMake" Version="2">
+          <_FPMake Items="AllOSes/TargetOSes">
+            <_AllOSes Value="False"/>
+            <_TargetOSes Value="linux"/>
+          </_FPMake>
+        </CustomOptions>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgavrclasses.pas"/>
+        <UnitName Value="FpDbgAvrClasses"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdisasavr.pp"/>
+        <UnitName Value="FpDbgDisasAvr"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgrsp.pas"/>
+        <UnitName Value="FpDbgRsp"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgcommon.pas"/>
+        <UnitName Value="FpDbgCommon"/>
+      </Item>
+      <Item>
+        <Filename Value="fpimgreaderwinpetypes.pas"/>
+        <UnitName Value="FpImgReaderWinPETypes"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbghardcodedfreepascalinfo.pas"/>
+        <UnitName Value="FpDbgHardcodedFreepascalInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgcallcontextinfo.pas"/>
+        <UnitName Value="FpDbgCallContextInfo"/>
+      </Item>
+      <Item>
+        <Filename Value="fpwatchresultdata.pas"/>
+        <UnitName Value="FpWatchResultData"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdbgdwarfcfi.pas"/>
+        <UnitName Value="FpDbgDwarfCFI"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="fcl-net"/>
+        <DependencyType Value="FPMake"/>
+      </Item>
+      <Item>
+        <PackageName Value="DebuggerIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCLBase"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

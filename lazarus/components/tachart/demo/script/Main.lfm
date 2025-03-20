@@ -1,0 +1,89 @@
+object Form1: TForm1
+  Left = 354
+  Height = 388
+  Top = 145
+  Width = 550
+  Caption = 'Form1'
+  ClientHeight = 388
+  ClientWidth = 550
+  LCLVersion = '2.3.0.0'
+  object Chart1: TChart
+    Left = 0
+    Height = 342
+    Top = 0
+    Width = 550
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    object Chart1FuncSeries1: TFuncSeries
+      Active = False
+      Extent.UseXMax = True
+      Extent.UseXMin = True
+      Extent.XMax = 1
+      Extent.XMin = -1
+      ExtentAutoY = True
+      Pen.Color = clGreen
+      Pen.Width = 2
+      OnCalculate = Chart1FuncSeries1Calculate
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 46
+    Top = 342
+    Width = 550
+    Align = alBottom
+    AutoSize = True
+    ClientHeight = 46
+    ClientWidth = 550
+    TabOrder = 1
+    object edFormula: TEdit
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = btnRefresh
+      Left = 9
+      Height = 23
+      Top = 12
+      Width = 449
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Around = 8
+      TabOrder = 0
+      Text = 'sin(x*5) + x'
+    end
+    object btnRefresh: TButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 466
+      Height = 27
+      Top = 10
+      Width = 75
+      Anchors = [akTop, akRight]
+      BorderSpacing.Around = 8
+      Caption = 'Refresh'
+      Default = True
+      OnClick = btnRefreshClick
+      TabOrder = 1
+    end
+  end
+end

@@ -1,0 +1,206 @@
+#
+#   Makefile.fpc for Free Pascal MacOS RTL
+#
+
+[package]
+main=rtl
+
+[target]
+loaders=
+units=system uuchar strings objpas iso7185 heaptrc getopts macostp macutils \
+      unixutil dos extpas cmem charset cpall ctypes sysconst \
+      softfpu macpas classes fgl types sysutils 
+#     macpas \
+#      exec  \
+#      printer \
+#      lineinfo lnfodwrf  graph \
+#      math typinfo
+# rsts=math
+# implicitunits=exeinfo \
+implicitunits=cp1250 cp1251 cp1252 cp1253 cp1254 cp1255 cp1256 cp1257 cp1258 \
+      cp437 cp646 cp737 cp775 cp850 cp852 cp855 cp856 cp857 cp860 cp861 cp862 \
+      cp863 cp864 cp865 cp866 cp869 cp874 cp3021 cp8859_1 cp8859_2 cp8859_3 cp8859_4 \
+      cp8859_5 cp8859_6 cp8859_7 cp8859_8 cp8859_9 cp8859_10 cp8859_11 \
+      cp8859_13 cp8859_14 cp8859_15 cp8859_16 cpkoi8_r cpkoi8_u
+
+rsts=sysconst
+# math typinfo sysconst rtlconsts
+  
+[require]
+nortl=y
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../..
+target=macosclassic
+
+[compiler]
+includedir=$(INC) $(PROCINC)
+sourcedir=$(INC) $(PROCINC) $(COMMON)
+
+
+[prerules]
+RTL=..
+INC=../inc
+PROCINC=../$(CPU_TARGET)
+PPUEXT=pput
+ASMEXT=.s
+
+UNITPREFIX=rtl
+SYSTEMUNIT=system
+
+# Use new feature from 1.0.5 version
+# that generates release PPU files
+# which will not be recompiled
+ifdef RELEASE
+ifeq ($(findstring 1.0.2,$(FPC_VERSION)),)
+ifeq ($(findstring 1.0.4,$(FPC_VERSION)),)
+override FPCOPT+=-Ur
+endif
+endif
+endif
+
+# Paths
+OBJPASDIR=$(RTL)/objpas
+GRAPHDIR=$(INC)/graph
+
+[rules]
+.NOTPARALLEL:
+# Get the system independent include file names.
+# This will set the following variables :
+# SYSINCNAMES
+include $(INC)/makefile.inc
+SYSINCDEPS=$(addprefix $(INC)/,$(SYSINCNAMES))
+
+# Get the processor dependent include file names.
+# This will set the following variables :
+# CPUINCNAMES
+include $(PROCINC)/makefile.cpu
+SYSCPUDEPS=$(addprefix $(PROCINC)/,$(CPUINCNAMES))
+
+# Put system unit dependencies together.
+SYSDEPS=$(SYSINCDEPS) $(SYSCPUDEPS)
+
+
+#
+# Loaders
+#
+
+#prt0$(OEXT) : prt0$(LOADEREXT)
+#  -$(AS) prt0$(LOADEREXT) -o prt0$(OEXT)
+
+#gprt0$(OEXT) : $(GLOADERAS)
+#  -$(AS) $(GLOADERAS) -o gprt0$(OEXT)
+
+#
+# Base Units (System, strings, os-dependent-base-unit)
+#
+
+system$(PPUEXT) : system.pp $(SYSDEPS)
+	$(COMPILER) $(FPC_SYSTEM_OPT) -Us -Sg system.pp $(REDIR)
+
+strings$(PPUEXT) : $(INC)/strings.pp system$(PPUEXT)
+	$(COMPILER) $(INC)/strings.pp $(REDIR)
+
+#exec$(PPUEXT) : exec.pp exec.inc system$(PPUEXT)
+#	$(COMPILER) exec $(REDIR)
+
+#
+# Delphi Object Model
+#
+
+uuchar$(PPUEXT): $(SYSTEMUNIT)$(PPUEXT) $(INC)/uuchar.pp
+	$(COMPILER) $(INC)/uuchar.pp
+
+objpas$(PPUEXT) : $(OBJPASDIR)/objpas.pp system$(PPUEXT)
+	$(COPY) $(OBJPASDIR)/objpas.pp .
+	$(COMPILER) objpas $(REDIR)
+	$(DEL) objpas.pp
+
+sysutils$(PPUEXT) : sysutils.pp objpas$(PPUEXT) system$(PPUEXT) sysconst$(PPUEXT) macostp$(PPUEXT) macutils$(PPUEXT)
+	$(COMPILER) -Fi$(OBJPASDIR)/sysutils sysutils.pp
+	
+sysconst$(PPUEXT) : $(OBJPASDIR)/sysconst.pp objpas$(PPUEXT) softfpu$(PPUEXT) $(SYSTEMUNIT)$(PPUEXT) 
+        $(COMPILER) $(OBJPASDIR)/sysconst.pp
+		
+softfpu$(PPUEXT) : $(INC)/softfpu.pp $(SYSTEMUNIT)$(PPUEXT) objpas$(PPUEXT)
+	$(COMPILER) $(INC)/softfpu.pp
+
+rtlconsts$(PPUEXT) : $(OBJPASDIR)/rtlconsts.pp objpas$(PPUEXT) $(SYSTEMUNIT)$(PPUEXT)
+        $(COMPILER) $(OBJPASDIR)/rtlconsts.pp
+
+classes$(PPUEXT) : classes.pp $(wildcard $(OBJPASDIR)/classes/*.inc) \
+                   sysutils$(PPUEXT) typinfo$(PPUEXT) rtlconsts$(PPUEXT) \
+		   sysconst$(PPUEXT) fgl$(PPUEXT)
+        $(COMPILER) -Fi$(OBJPASDIR)/classes classes.pp
+
+fgl$(PPUEXT) : $(OBJPASDIR)/fgl.pp objpas$(PPUEXT) types$(PPUEXT) system$(PPUEXT) sysutils$(PPUEXT)
+        $(COMPILER) $(OBJPASDIR)/fgl.pp
+
+typinfo$(PPUEXT): $(OBJPASDIR)/typinfo.pp objpas$(PPUEXT)
+        $(COMPILER) -Sg $(OBJPASDIR)/typinfo.pp
+
+math$(PPUEXT): $(OBJPASDIR)/math.pp objpas$(PPUEXT) sysutils$(PPUEXT)
+        $(COMPILER) $(OBJPASDIR)/math.pp
+
+types$(PPUEXT) : $(OBJPASDIR)/types.pp objpas$(PPUEXT) $(SYSTEMUNIT)$(PPUEXT)
+        $(COMPILER) $(OBJPASDIR)/types.pp
+
+#
+# Mac Pascal Model
+#
+
+macpas$(PPUEXT) : $(INC)/macpas.pp objpas$(PPUEXT) math$(PPUEXT)
+        $(COMPILER) $(INC)/macpas.pp $(REDIR)
+
+#
+# System Dependent Units
+#
+
+#
+# TP7 Compatible RTL Units
+#
+
+dos$(PPUEXT) : $(DOSDEPS) unixutil$(PPUEXT) system$(PPUEXT)
+        $(COMPILER) dos $(REDIR)
+
+#crt$(PPUEXT) : crt.pp $(INC)/textrec.inc system$(PPUEXT)
+#        $(COMPILER) crt $(REDIR)
+
+#printer$(PPUEXT) : printer.pp system$(PPUEXT)
+#        $(COMPILER) printer $(REDIR)
+
+#
+# Other system-independent RTL Units
+#
+
+iso7185$(PPUEXT) : $(INC)/iso7185.pp heaptrc$(PPUEXT)
+        $(COMPILER) $(INC)/iso7185.pp
+
+extpas$(PPUEXT) : $(INC)/extpas.pp dos$(PPUEXT) $(SYSTEMUNIT)$(PPUEXT)
+        $(COMPILER) $(INC)/extpas.pp
+
+getopts$(PPUEXT) : $(INC)/getopts.pp strings$(PPUEXT) system$(PPUEXT)
+        $(COMPILER) $(INC)/getopts.pp $(REDIR)
+
+heaptrc$(PPUEXT) : $(INC)/heaptrc.pp system$(PPUEXT)
+        $(COMPILER) $(INC)/heaptrc.pp $(REDIR)
+
+unixutil$(PPUEXT) : ../unix/unixutil.pp
+        $(COMPILER) ../unix/unixutil.pp $(REDIR)
+
+charset$(PPUEXT) : $(INC)/charset.pp $(SYSTEMUNIT)$(PPUEXT) objpas$(PPUEXT)
+	$(COMPILER) $(INC)/charset.pp
+
+cpall$(PPUEXT): $(RTL)/charmaps/cpall.pas system$(PPUEXT) charset$(PPUEXT)
+        $(COMPILER) -Fu$(INC) -Fi$(RTL)/charmaps $(RTL)/charmaps/cpall.pas
+
+cmem$(PPUEXT) : $(INC)/cmem.pp $(SYSTEMUNIT)$(PPUEXT)
+	$(COMPILER) $(INC)/cmem.pp
+
+ctypes$(PPUEXT) :  $(INC)/ctypes.pp system$(PPUEXT)
+	$(COMPILER) $(INC)/ctypes.pp
+
+

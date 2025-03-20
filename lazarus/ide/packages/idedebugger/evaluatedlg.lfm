@@ -1,0 +1,158 @@
+object EvaluateDlg: TEvaluateDlg
+  Left = 454
+  Height = 290
+  Top = 318
+  Width = 420
+  BorderStyle = bsSizeToolWin
+  Caption = 'Evaluate/Modify'
+  ClientHeight = 290
+  ClientWidth = 420
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 300
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnMouseDown = FormMouseDown
+  LCLVersion = '2.3.0.0'
+  object txtResult: TMemo
+    Left = 0
+    Height = 150
+    Top = 112
+    Width = 420
+    Align = alClient
+    OnMouseDown = FormMouseDown
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  inline WatchInspectNav1: TWatchInspectNav
+    Width = 420
+    Align = alTop
+    ClientWidth = 420
+    inherited ToolBar1: TToolBar
+      Height = 68
+      Width = 420
+      inherited tbDivPower: TToolButton
+        Height = 22
+      end
+      inherited tbDivForwBackw: TToolButton
+        Height = 22
+      end
+      inherited tbDivFlags: TToolButton
+        Height = 22
+      end
+      inherited tbDivCol: TToolButton
+        Height = 22
+      end
+      inherited ArrayNavigationBar1: TArrayNavigationBar
+        Left = 1
+        Height = 23
+        Top = 24
+        Width = 253
+        ClientHeight = 23
+        ClientWidth = 253
+        inherited btnArrayFastDown: TSpeedButton
+          Height = 23
+        end
+        inherited btnArrayFastUp: TSpeedButton
+          Height = 23
+        end
+        inherited edArrayStart: TSpinEditEx
+          Height = 23
+        end
+        inherited btnArrayStart: TSpeedButton
+          Height = 23
+        end
+        inherited btnArrayEnd: TSpeedButton
+          Height = 23
+        end
+        inherited Label1: TLabel
+          Height = 23
+        end
+        inherited btnArrayPageDec: TSpeedButton
+          Height = 23
+        end
+        inherited edArrayPageSize: TSpinEditEx
+          Height = 23
+        end
+        inherited btnArrayPageInc: TSpeedButton
+          Height = 23
+        end
+        inherited lblBounds: TLabel
+          Height = 23
+        end
+      end
+      inherited tbDivArray: TToolButton
+        Left = 254
+        Height = 22
+        Top = 24
+      end
+      inherited BtnAddWatch: TToolButton
+        Left = 259
+        Top = 24
+      end
+      inherited BtnInspect: TToolButton
+        Left = 1
+        Top = 46
+      end
+      inherited BtnEvaluate: TToolButton
+        Left = 326
+        Top = 24
+      end
+      inherited tbDivAdd: TToolButton
+        Left = 47
+        Height = 22
+        Top = 46
+      end
+      inherited btnEvalHistory: TToolButton
+        Left = 52
+        Top = 46
+      end
+    end
+    inherited Panel1: TPanel
+      Width = 420
+      ClientWidth = 420
+      inherited EdInspect: TComboBox
+        Width = 398
+      end
+      inherited BtnExecute: TSpeedButton
+        Left = 399
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 25
+    Top = 265
+    Width = 420
+    Align = alBottom
+    AutoSize = True
+    BorderSpacing.Top = 3
+    Caption = 'Panel1'
+    ClientHeight = 25
+    ClientWidth = 420
+    TabOrder = 2
+    object EdModify: TComboBox
+      Left = 1
+      Height = 23
+      Top = 1
+      Width = 398
+      Align = alClient
+      ItemHeight = 15
+      OnKeyDown = EdModifyKeyDown
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TextHint = 'New Value'
+    end
+    object BtnExecModify: TSpeedButton
+      Left = 399
+      Height = 23
+      Top = 1
+      Width = 20
+      Align = alRight
+      Caption = ':='
+      OnClick = BtnExecModifyClick
+    end
+  end
+end

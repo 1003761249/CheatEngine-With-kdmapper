@@ -1,0 +1,59 @@
+object ShowDeletingFilesDialog: TShowDeletingFilesDialog
+  Left = 209
+  Height = 438
+  Top = 326
+  Width = 500
+  HorzScrollBar.Page = 168
+  VertScrollBar.Page = 164
+  ActiveControl = FileList
+  AutoScroll = True
+  Caption = 'ShowDeletingFilesDialog'
+  ClientHeight = 438
+  ClientWidth = 500
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  LCLVersion = '3.99.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 48
+    Top = 302
+    Width = 388
+    BorderSpacing.Around = 8
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object FileList: TCheckListBox
+    Left = 6
+    Height = 262
+    Top = 6
+    Width = 388
+    Align = alClient
+    BorderSpacing.Around = 8
+    ItemHeight = 21
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object UnCheckAll: TCheckBox
+    Left = 6
+    Height = 22
+    Top = 274
+    Width = 388
+    Align = alBottom
+    BorderSpacing.Around = 8
+    Caption = 'UnCheckAll'
+    Checked = True
+    State = cbChecked
+    TabOrder = 2
+    OnChange = UnCheckAllChange
+  end
+end

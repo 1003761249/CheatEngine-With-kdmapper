@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="LazDebuggerFp"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Joost van der Sluis / Martin Friebe"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx6058="True" idx3123="True"/>
+        </CompilerMessages>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="This package is a debugger backend for the Lazarus-IDE.
+- It is based on FpDebug and requires no external debugger executable.
+- It currently supports Windows and Linux. 
+"/>
+    <License Value="GPLv2"/>
+    <Version Major="1"/>
+    <Files>
+      <Item>
+        <Filename Value="fpdebugdebugger.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="FpDebugDebugger"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugdebuggerutils.pas"/>
+        <UnitName Value="FpDebugDebuggerUtils"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugdebuggerworkthreads.pas"/>
+        <UnitName Value="FpDebugDebuggerWorkThreads"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugvalueconvertors.pas"/>
+        <UnitName Value="FpDebugValueConvertors"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugdebuggerbase.pas"/>
+        <UnitName Value="FpDebugDebuggerBase"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebuggerresultdata.pas"/>
+        <UnitName Value="FpDebuggerResultData"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugconvdebugforjson.pas"/>
+        <UnitName Value="FpDebugConvDebugForJson"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugstringconstants.pas"/>
+        <UnitName Value="FpDebugStringConstants"/>
+      </Item>
+      <Item>
+        <Filename Value="fpdebugfpcconvvariantnormalizer.pas"/>
+        <UnitName Value="FpDebugFpcConvVariantNormalizer"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="CmdLineDebuggerBase"/>
+      </Item>
+      <Item>
+        <PackageName Value="fpdebug"/>
+      </Item>
+      <Item>
+        <PackageName Value="DebuggerIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

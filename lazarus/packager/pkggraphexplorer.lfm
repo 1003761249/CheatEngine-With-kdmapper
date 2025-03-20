@@ -1,0 +1,129 @@
+object PkgGraphExplorerDlg: TPkgGraphExplorerDlg
+  Left = 369
+  Height = 514
+  Top = 239
+  Width = 675
+  Caption = 'PkgGraphExplorerDlg'
+  ClientHeight = 514
+  ClientWidth = 675
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnShow = PkgGraphExplorerShow
+  LCLVersion = '2.1.0.0'
+  object InfoMemo: TMemo
+    Left = 6
+    Height = 144
+    Top = 332
+    Width = 663
+    Align = alBottom
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    Lines.Strings = (
+      'InfoMemo'
+    )
+    OnKeyDown = InfoMemoKeyDown
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object VerticalSplitter: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 6
+    Top = 326
+    Width = 675
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 326
+    Top = 0
+    Width = 675
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    ClientHeight = 326
+    ClientWidth = 675
+    TabOrder = 0
+    object LvlGraphControl1: TLvlGraphControl
+      Left = 206
+      Height = 320
+      Top = 6
+      Width = 463
+      Align = alClient
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      NodeStyle.Shape = lgnsNone
+      NodeStyle.GapTop = 2
+      NodeStyle.GapBottom = 6
+      NodeStyle.DefaultImageIndex = -1
+      NodeStyle.Coloring = lgncRGB
+      OnDblClick = LvlGraphControl1DblClick
+      OnSelectionChanged = LvlGraphControl1SelectionChanged
+      Options = [lgoAutoLayout, lgoMinimizeEdgeLens, lgoHighlightNodeUnderMouse, lgoHighlightEdgeNearMouse, lgoMouseSelects]
+      ParentColor = True
+      ParentShowHint = False
+      PopupMenu = PkgPopupMenu
+      TabOrder = 2
+      TabStop = False
+    end
+    object PkgTreeView: TTreeView
+      Left = 6
+      Height = 320
+      Top = 6
+      Width = 194
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      PopupMenu = PkgPopupMenu
+      ReadOnly = True
+      TabOrder = 0
+      OnDblClick = PkgTreeViewDblClick
+      OnExpanding = PkgTreeViewExpanding
+      OnSelectionChanged = PkgTreeViewSelectionChanged
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+    object Splitter1: TSplitter
+      Left = 200
+      Height = 326
+      Top = 0
+      Width = 6
+    end
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 482
+    Width = 663
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.OnClick = OKButtonClick
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.OnClick = HelpButtonClick
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbOK, pbHelp]
+    ShowBevel = False
+  end
+  object PkgPopupMenu: TPopupMenu
+    OnPopup = PkgPopupMenuPopup
+    left = 32
+    top = 40
+    object UninstallMenuItem: TMenuItem
+      Caption = 'Uninstall'
+      OnClick = UninstallMenuItemClick
+    end
+    object CleanPkgDepsMenuItem: TMenuItem
+      Caption = 'Unneeded dependencies'
+      OnClick = CleanPkgDepsMenuItemClick
+    end
+    object GraphOptionsMenuItem: TMenuItem
+      Caption = 'GraphOptionsMenuItem'
+      OnClick = GraphOptionsMenuItemClick
+    end
+  end
+end

@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "Перервати"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Додати"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Завжди"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "&Додати"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "&Продовжити"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Видалити"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "&Додати ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "&Доступний"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "&Гаразд"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Продовжити"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Копіювати"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Вирізати"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Вилучити"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Додати..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Доступний"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Довідка"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "Знехтувати"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Ніколи"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "Ні"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "Гаразд"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Вставити"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Так"
+

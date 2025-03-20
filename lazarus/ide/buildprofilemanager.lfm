@@ -1,0 +1,113 @@
+object BuildProfileManagerForm: TBuildProfileManagerForm
+  Left = 221
+  Height = 435
+  Top = 176
+  Width = 360
+  BorderIcons = [biSystemMenu]
+  Caption = 'Build Profiles'
+  ClientHeight = 435
+  ClientWidth = 360
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.5'
+  object ProfilesPanel: TPanel
+    Left = 0
+    Height = 435
+    Top = 0
+    Width = 360
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 435
+    ClientWidth = 360
+    TabOrder = 0
+    object ProfilesToolBar: TToolBar
+      Left = 0
+      Height = 92
+      Top = 0
+      Width = 360
+      AutoSize = True
+      ButtonHeight = 46
+      ButtonWidth = 47
+      Caption = 'ProfilesToolBar'
+      EdgeBorders = []
+      ParentShowHint = False
+      ShowCaptions = True
+      ShowHint = True
+      TabOrder = 1
+      object MoveDownButton: TToolButton
+        Left = 1
+        Top = 46
+        Caption = 'MoveDownButton'
+        ImageIndex = 4
+        OnClick = MoveDownButtonClick
+      end
+      object MoveUpButton: TToolButton
+        Left = 223
+        Top = 0
+        Caption = 'MoveUpButton'
+        ImageIndex = 3
+        OnClick = MoveUpButtonClick
+      end
+      object EditButton: TToolButton
+        Left = 154
+        Top = 0
+        Caption = 'EditButton'
+        ImageIndex = 2
+        OnClick = EditButtonClick
+      end
+      object RemoveButton: TToolButton
+        Left = 67
+        Top = 0
+        Caption = 'RemoveButton'
+        ImageIndex = 1
+        OnClick = RemoveButtonClick
+      end
+      object AddButton: TToolButton
+        Left = 1
+        Top = 0
+        Caption = 'AddButton'
+        ImageIndex = 0
+        OnClick = AddButtonClick
+      end
+      object tbSeparator: TToolButton
+        Left = 218
+        Height = 46
+        Top = 0
+        Width = 5
+        Caption = 'tbSeparator'
+        Style = tbsDivider
+      end
+    end
+    object ProfilesListBox: TListBox
+      Left = 0
+      Height = 305
+      Top = 92
+      Width = 360
+      Align = alClient
+      ItemHeight = 0
+      OnClick = ProfilesListboxClick
+      ScrollWidth = 354
+      TabOrder = 0
+    end
+    object ButtonPanel: TButtonPanel
+      Left = 6
+      Height = 26
+      Top = 403
+      Width = 348
+      OKButton.Name = 'OKButton'
+      OKButton.DefaultCaption = True
+      HelpButton.Name = 'HelpButton'
+      HelpButton.DefaultCaption = True
+      HelpButton.OnClick = HelpButtonClick
+      CloseButton.Name = 'CloseButton'
+      CloseButton.DefaultCaption = True
+      CloseButton.Enabled = False
+      CancelButton.Name = 'CancelButton'
+      CancelButton.DefaultCaption = True
+      TabOrder = 2
+      ShowButtons = [pbOK, pbCancel, pbHelp]
+      ShowBevel = False
+    end
+  end
+end

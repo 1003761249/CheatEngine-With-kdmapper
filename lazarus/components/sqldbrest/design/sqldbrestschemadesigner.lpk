@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="sqldbrestschemadesigner"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="../src"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files Count="26">
+      <Item1>
+        <Filename Value="dlgrestfieldoptions.lfm"/>
+        <Type Value="LFM"/>
+      </Item1>
+      <Item2>
+        <Filename Value="dlgrestfieldoptions.pp"/>
+        <UnitName Value="dlgrestfieldoptions"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item2>
+      <Item3>
+        <Filename Value="dlgsqldbrestconnection.lfm"/>
+        <Type Value="LFM"/>
+      </Item3>
+      <Item4>
+        <Filename Value="dlgsqldbrestconnection.pp"/>
+        <UnitName Value="dlgsqldbrestconnection"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item4>
+      <Item5>
+        <Filename Value="fraconnections.lfm"/>
+        <Type Value="LFM"/>
+      </Item5>
+      <Item6>
+        <Filename Value="fraconnections.pp"/>
+        <UnitName Value="fraconnections"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item6>
+      <Item7>
+        <Filename Value="fraschematableseditor.lfm"/>
+        <Type Value="LFM"/>
+      </Item7>
+      <Item8>
+        <Filename Value="fraschematableseditor.pp"/>
+        <UnitName Value="fraschematableseditor"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item8>
+      <Item9>
+        <Filename Value="frasqldbfullrestschemaaditor.lfm"/>
+        <Type Value="LFM"/>
+      </Item9>
+      <Item10>
+        <Filename Value="frasqldbfullrestschemaaditor.pp"/>
+        <UnitName Value="frasqldbfullrestschemaaditor"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item10>
+      <Item11>
+        <Filename Value="frasqldbrestfieldedit.lfm"/>
+        <Type Value="LFM"/>
+      </Item11>
+      <Item12>
+        <Filename Value="frasqldbrestfieldedit.pp"/>
+        <UnitName Value="frasqldbrestfieldedit"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item12>
+      <Item13>
+        <Filename Value="frasqldbrestresourceedit.lfm"/>
+        <Type Value="LFM"/>
+      </Item13>
+      <Item14>
+        <Filename Value="frasqldbrestresourceedit.pp"/>
+        <UnitName Value="frasqldbrestresourceedit"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item14>
+      <Item15>
+        <Filename Value="frasqldbrestschemaeditor.lfm"/>
+        <Type Value="LFM"/>
+      </Item15>
+      <Item16>
+        <Filename Value="frasqldbrestschemaeditor.pp"/>
+        <UnitName Value="fraSQLDBRestSchemaEditor"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item16>
+      <Item17>
+        <Filename Value="frmeditframedialog.lfm"/>
+        <Type Value="LFM"/>
+      </Item17>
+      <Item18>
+        <Filename Value="frmeditframedialog.pp"/>
+        <UnitName Value="frmeditframedialog"/>
+        <ResourceBaseClass Value="Form"/>
+      </Item18>
+      <Item19>
+        <Filename Value="sqldbschemaedittools.pp"/>
+        <UnitName Value="sqldbschemaedittools"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item19>
+      <Item20>
+        <Filename Value="frasqldbresourcefields.pp"/>
+        <UnitName Value="frasqldbresourcefields"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item20>
+      <Item21>
+        <Filename Value="sqldbschemaedittools.lfm"/>
+        <Type Value="LFM"/>
+      </Item21>
+      <Item22>
+        <Filename Value="build304.pp"/>
+        <UnitName Value="build304"/>
+      </Item22>
+      <Item23>
+        <Filename Value="frasqldbresourceparams.lfm"/>
+        <Type Value="LFM"/>
+      </Item23>
+      <Item24>
+        <Filename Value="frasqldbresourceparams.pp"/>
+        <UnitName Value="frasqldbresourceparams"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Item24>
+      <Item25>
+        <Filename Value="frasqldbrestparamedit.lfm"/>
+        <Type Value="LFM"/>
+      </Item25>
+      <Item26>
+        <Filename Value="frasqldbrestparamedit.pp"/>
+        <UnitName Value="frasqldbrestparamedit"/>
+      </Item26>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="SynEdit"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

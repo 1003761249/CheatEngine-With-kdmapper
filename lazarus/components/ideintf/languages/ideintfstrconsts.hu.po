@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Mindig"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "Hozzáadás"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "Folytatás"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "Törlés"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "Hozzá&adás ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "Engedélyezve"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "&OK"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Folytatás"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Másolás"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Kivágás"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Törlés"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Letiltva"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Hozzáadás ..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Engedélyezve"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Súgó"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "Kihagyás"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Soha"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "Nem"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "OK"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Beillesztés"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Igen"
+

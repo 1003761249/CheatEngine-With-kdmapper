@@ -1,0 +1,375 @@
+# Olexandr Pylypchuk <lxlalexlxl@ukr.net>, 2018, 2019, 2020, 2021, 2023.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-06-11 11:59+0300\n"
+"Last-Translator: lxlalexlxl <lxlalexlxl@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: strpas2jsdesign.pjscreateajavascriptmoduleinsteadofascript
+msgid "Create a javascript module instead of a script"
+msgstr "Створити модуль javascript, а не сценарій"
+
+#: strpas2jsdesign.pjsdatompackagetemplatedirectory
+msgid "Atom package template directory"
+msgstr "Тека шаблонів пакунка Atom"
+
+#: strpas2jsdesign.pjsdawebapplicationusingelectrontorunasdesktopapplicat
+msgid "A pas2js Web Application using Electron to run as desktop application."
+msgstr "Вебзастосунок на pas2js з використанням Electron для запуску, як стільничного застосунку."
+
+#: strpas2jsdesign.pjsdbrowse
+msgid "Browse"
+msgstr "Огляд"
+
+#: strpas2jsdesign.pjsdbtnselectfile
+msgid "Select the file"
+msgstr "Виберіть файл"
+
+#: strpas2jsdesign.pjsdbuttoncancel
+msgid "Cancel refresh"
+msgstr "Скасувати оновлення"
+
+#: strpas2jsdesign.pjsdcreateinitialhtmlpage
+msgid "Create initial HTML page"
+msgstr "Створити початкову HTML-сторінку"
+
+#: strpas2jsdesign.pjsddirectorynotfound
+#, object-pascal-format
+msgid "directory \"%s\" not found"
+msgstr "теку \"%s\" не знайдено"
+
+#: strpas2jsdesign.pjsdelectronwebapplication
+msgid "Electron Web Application"
+msgstr "Вебзастосунок Electron"
+
+#: strpas2jsdesign.pjsderror
+msgid "Error"
+msgstr "Помилка"
+
+#: strpas2jsdesign.pjsdfilenamedoesnotstartwithpas2js
+msgid "filename does not start with \"pas2js\""
+msgstr "назва файлу не починається з \"pas2js\""
+
+#: strpas2jsdesign.pjsdfilenotexecutable
+#, object-pascal-format
+msgid "file \"%s\" not executable"
+msgstr "файл \"%s\" не є виконуваним"
+
+#: strpas2jsdesign.pjsdfilenotfound
+#, object-pascal-format
+msgid "file \"%s\" not found"
+msgstr "файл \"%s\" не знайдено"
+
+#: strpas2jsdesign.pjsdhtmlfilenotfound
+#, object-pascal-format
+msgid ""
+"Cannot find the HTML Source file for the class in unit %s:\n"
+"%s\n"
+"Would you like to select the file from disk?"
+msgstr ""
+"Відсутній сирцевий файл HTML для класу в модулі %s:\n"
+"%s\n"
+"Бажаєте вибрати файл на диску?"
+
+#: strpas2jsdesign.pjsdhtmlfilter
+msgid "HTML Files|*.html|All files|*.*"
+msgstr "Файли HTML Files|*.html|Усі файли|*.*"
+
+#: strpas2jsdesign.pjsdhtmlsourcefilenotfound
+msgid "HTML Source not found"
+msgstr "Сирець HTML не знайдено"
+
+#: strpas2jsdesign.pjsdletrtlshowuncaughtexceptions
+msgid "Let RTL show uncaught exceptions"
+msgstr "Дозволити RTL показувати неперехоплені винятки"
+
+#: strpas2jsdesign.pjsdlocationonsimplewebserver
+msgid "Location on Simple Web Server"
+msgstr "Розташування простого вебсервера"
+
+#: strpas2jsdesign.pjsdmaintainhtmlpage
+msgid "Maintain HTML page"
+msgstr "Підтримувати HTML-сторінку"
+
+#: strpas2jsdesign.pjsdmissingpathtopas2js
+msgid "missing path to pas2js"
+msgstr "відсутній шлях до pas2js"
+
+#: strpas2jsdesign.pjsdmoduleappdescription
+msgid "A pas2js library that is transpiled to a JavaScript module."
+msgstr "Бібліотека pas2js, транспільована в модуль JavaScript."
+
+#: strpas2jsdesign.pjsdmoduleapplication
+msgid "Pas2JS Library / JavaScript module"
+msgstr "Бібліотека Pas2JS / модуль JavaScript"
+
+#: strpas2jsdesign.pjsdnewatompackage
+msgid "Atom package"
+msgstr "Пакунок Atom"
+
+#: strpas2jsdesign.pjsdnewatompackagedescr
+msgid "A pas2js program running as Atom package."
+msgstr "Програма pas2js запущена, як пакунок Atom"
+
+#: strpas2jsdesign.pjsdnewprojectfile
+msgid "New project file"
+msgstr "Новий файл проєкту"
+
+#: strpas2jsdesign.pjsdnewvscodeextension
+msgid "Visual Studio Code extension"
+msgstr "Розширення Visual Studio Code"
+
+#: strpas2jsdesign.pjsdnewvscodeextensiondescr
+msgid "A pas2js program running as Visual Studio Code extension."
+msgstr "Програма pas2js запускається як розширення Visual Studio Code."
+
+#: strpas2jsdesign.pjsdnodejsappdescription
+msgid "A pas2js program running in node.js."
+msgstr "Програма pas2js, що запускається в node.js."
+
+#: strpas2jsdesign.pjsdnodejsapplication
+msgid "Node.js Application"
+msgstr "Застосунок Node.js"
+
+#: strpas2jsdesign.pjsdnodejsprojectoptions
+msgid "NodeJS project options"
+msgstr "Параметри проєкту NodeJS"
+
+#: strpas2jsdesign.pjsdoverwrite
+msgid "Overwrite?"
+msgstr "Перезаписати?"
+
+#: strpas2jsdesign.pjsdoverwritefiles
+msgid "Overwrite files:"
+msgstr "Перезаписати файли:"
+
+#: strpas2jsdesign.pjsdpas2jsbrowserprojectoptions
+msgid "Pas2JS Browser project options"
+msgstr "Параметри проєкту Оглядач Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jscurrentprojecturl
+msgid "Pas2JS current project URL"
+msgstr "URL поточного проєкту Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsexecutable
+msgid "Pas2JS executable"
+msgstr "Виконуваний файл Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsselectedbrowserexecutable
+msgid "Pas2JS selected browser executable"
+msgstr "Виконуваний файл вибраного оглядача Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsselectedelectronexcutable
+msgid "Pas2JS selected Electron excutable"
+msgstr "Вибраний виконуваний файл Electron для Pas2JS"
+
+#: strpas2jsdesign.pjsdpas2jsselectednodejsexcutable
+msgid "Pas2JS selected NodeJS excutable"
+msgstr "Виконуваний файл вибраного NodeJS Pas2JS"
+
+#: strpas2jsdesign.pjsdpathofelectronexecutablemacropas2jselectron
+msgid "Path of Electron executable, macro $(Pas2JSElectron)"
+msgstr "Шлях до виконуваного файлу Electron, макрос $(Pas2JSElectron)"
+
+#: strpas2jsdesign.pjsdpathofnodejsexecutable
+msgid "Path of Node.js executable, macro $(Pas2JSNodeJS)"
+msgstr "Шлях до виконуваного файлу Node.js, макрос $(Pas2JSNodeJS)"
+
+#: strpas2jsdesign.pjsdpathofxmacropas2js
+#, object-pascal-format
+msgctxt "strpas2jsdesign.pjsdpathofxmacropas2js"
+msgid "Path of %s, macro $(pas2js)"
+msgstr "Шлях %s, макрос $(pas2js)"
+
+#: strpas2jsdesign.pjsdpleasechooseafilewithfullpath
+msgid "Please choose a file with full path."
+msgstr "Виберіть файл із повним шляхом."
+
+#: strpas2jsdesign.pjsdportnumbertostartallocatingfrom
+msgid "Port number to start allocating from, macro $(Pas2JSWebServerPort)"
+msgstr "Номери порту для початку розміщення, макрос $(Pas2JSWebServerPort)"
+
+#: strpas2jsdesign.pjsdprogressivewebappdescription
+msgid "A pas2js Web Application using a service worker, a manifest, and more to be installable."
+msgstr "Встановлюваний вебзастосунок pas2js, що використовує службу-воркер, маніфест тощо."
+
+#: strpas2jsdesign.pjsdprogressivewebapplication
+msgid "Progressive Web Application"
+msgstr "Поступовий вебзастосунок"
+
+#: strpas2jsdesign.pjsdprojecthtmlpage
+msgid "Project HTML page:"
+msgstr "HTML-сторінка проєкту:"
+
+#: strpas2jsdesign.pjsdprojectisawebbrowserpas2jsproject
+msgid "Project is a Web Browser (pas2js) project"
+msgstr "Це проєкт веб-оглядача (pas2js)"
+
+#: strpas2jsdesign.pjsdprojectpascalfile
+msgid "Project Pascal file"
+msgstr "Файл проєкту на Паскалі"
+
+#: strpas2jsdesign.pjsdresetcompilecommand
+msgid "Reset Compile command"
+msgstr "Скинути команду компіляції"
+
+#: strpas2jsdesign.pjsdresetruncommand
+msgid "Reset Run command"
+msgstr "Скинути команду запуску"
+
+#: strpas2jsdesign.pjsdrun
+msgid "Run"
+msgstr "Виконати"
+
+#: strpas2jsdesign.pjsdrunrtlwhenallpageresourcesarefullyloaded
+msgid "Run RTL when all page resources are fully loaded"
+msgstr "Після повного завантаження всіх ресурсів сторінки запустити RTL"
+
+#: strpas2jsdesign.pjsdselectatomtemplatedir
+msgid "Select Atom package template directory"
+msgstr "Виберіть теку шаблонів пакунка Atom"
+
+#: strpas2jsdesign.pjsdselectbrowserexecutable
+msgid "Select browser executable"
+msgstr "Вибрати виконуваний файл оглядача"
+
+#: strpas2jsdesign.pjsdselectnodejsexecutable
+msgid "Select Node.js executable"
+msgstr "Вибрати виконуваний файл Node.js"
+
+#: strpas2jsdesign.pjsdselectpas2jsexecutable
+msgid "Select pas2js executable"
+msgstr "Вибрати виконуваний файл pas2js"
+
+#: strpas2jsdesign.pjsdselectvscodetemplatedir
+msgid "Select Visual Studio Code extension template directory"
+msgstr "Виберіть теку шаблонів розширень Visual Studio Code"
+
+#: strpas2jsdesign.pjsdselectxexecutable
+#, object-pascal-format
+msgctxt "strpas2jsdesign.pjsdselectxexecutable"
+msgid "Select %s executable"
+msgstr "Виберіть виконуваний файл %s"
+
+#: strpas2jsdesign.pjsdserverinstanceswillbestartedwithaportstartingfromt
+msgid "Server instances will be started with a port starting from this number, increasing per new project"
+msgstr "Примірники сервера будуть запускатись, починаючи з зазначеного порту, зі збільшенням для кожного проєкту"
+
+#: strpas2jsdesign.pjsdserviceworker
+msgid "Pas2JS Service Worker"
+msgstr "Служба-воркер Pas2JS"
+
+#: strpas2jsdesign.pjsdserviceworkerdescription
+msgid "A pas2js program running as cache for a web app. It does not run standalone."
+msgstr "Програма на pas2js, що працює як кеш для вебзастосунку. Він не працює автономно."
+
+#: strpas2jsdesign.pjsdstarthttpserveronport
+msgid "Start HTTP Server on port"
+msgstr "Запустити HTTP-сервер на порті"
+
+#: strpas2jsdesign.pjsdthesimplewebserverisautomaticallystartedonrunthelo
+msgid "The Simple Web Server is automatically started on Run. The location is like a subfolder in the URL serving the disk folder of the HTML file."
+msgstr "Простий вебсервер автоматично стартує під час запуску. Розташування схоже на вкладену теку в URL-адресі, яка обслуговує дискову теку файлу HTML."
+
+#: strpas2jsdesign.pjsdusebrowserapplicationobject
+msgid "Use Browser Application object"
+msgstr "Використати об'єкт програми-оглядача"
+
+#: strpas2jsdesign.pjsdusebrowserconsoleunittodisplaywritelnoutput
+msgid "Use BrowserConsole unit to display writeln() output"
+msgstr "Для виводу команди writeln() використати модуль BrowserConsole"
+
+#: strpas2jsdesign.pjsdusenodejsapplicationobject
+msgid "Use NodeJS Application object"
+msgstr "Використати об'єкт застосунку NodeJS"
+
+#: strpas2jsdesign.pjsdusethisurltostartapplication
+msgid "Use this URL to start application"
+msgstr "Для запуску застосунку використати цей URL"
+
+#: strpas2jsdesign.pjsdusethiswhenyoustartyourownhttpserver
+msgid "Use this when you start your own HTTP server"
+msgstr "Використовуйте, коли запускаєте власний HTTP-сервер"
+
+#: strpas2jsdesign.pjsdusewasiapplicationobject
+msgid "Run WebAssembly program:"
+msgstr "Запустити програму WebAssembly:"
+
+#: strpas2jsdesign.pjsdvisualstudiocodeextensiontemplatedirectory
+msgid "Visual Studio Code extension template directory"
+msgstr "Теку шаблонів розширень Visual Studio Code"
+
+#: strpas2jsdesign.pjsdwebappdescription
+msgid "A pas2js program running in the browser."
+msgstr "Програма pas2js, що запускається в оглядачі."
+
+#: strpas2jsdesign.pjsdwebapplication
+msgid "Web Browser Application"
+msgstr "Додаток для веб-оглядача"
+
+#: strpas2jsdesign.pjsdwebprojectpas2js
+msgid "Web Project (pas2js)"
+msgstr "Веб-проєкт (pas2js)"
+
+#: strpas2jsdesign.pjsdwebserverandbrowseroptions
+msgid "Web server and browser options"
+msgstr "Параметри вебсервера та оглядача"
+
+#: strpas2jsdesign.pjsdyoucanuseidemacroslikemakeexewithoutafullpathissea
+#, object-pascal-format
+msgid "You can use IDE macros like $MakeExe(). Without a full path, %s is searched in PATH."
+msgstr "Можна використовувати макроси ІСР на зразок $MakeExe(). Без повного шляху %s буде шукатись у PATH."
+
+#: strpas2jsdesign.pjsexecuterunparameters
+msgid "Execute Run Parameters"
+msgstr "Виконувати з параметрами запуску"
+
+#: strpas2jsdesign.pjsmakepas2jsproject
+msgid "Make pas2js project"
+msgstr "Зібрати проєкт Pas2JS"
+
+#: strpas2jsdesign.pjsrefreshallclassesfromhtml
+msgid "Refresh all classes from HTML source"
+msgstr "Оновити всі класи зі сирців HTML"
+
+#: strpas2jsdesign.pjsrefreshclassfromhtml
+msgid "Refresh class from HTML source"
+msgstr "Оновити клас із сирців HTML"
+
+#: strpas2jsdesign.pjswasiprogramfiletexthint
+msgid "Name of your WebAssembly file"
+msgstr "Назва вашого файлу WebAssembly"
+
+#: strpas2jsdesign.rscreateclassfromhtmldescription
+msgid "Create a Pas2JS \"form\" class definition from HTML file using ID attributes in the HTML file."
+msgstr "Створити оголошення класу \"форми\" Pas2JS із файлу HTML з використанням його атрибутів-ідентифікаторів."
+
+#: strpas2jsdesign.rscreateclassfromhtmlname
+msgid "Pas2JS class definition from HTML file"
+msgstr "Оголошення класу Pas2JS із файлу HTML"
+
+#: strpas2jsdesign.rscreateunitfromtypescript
+msgid "Pas2JS import unit from TypeScript declaration module"
+msgstr "Модуль імпорту Pas2JS із модуля оголошень TypeScript"
+
+#: strpas2jsdesign.rscreateunitfromtypescriptdescription
+msgid "Create a Pas2JS import unit from a TypeScript declaration module."
+msgstr "Створити модуль імпорту Pas2JS із модуля оголошень TypeScript."
+
+#: strpas2jsdesign.rsdtsdidnotproduceoutput
+msgid "The DTS2pas tool did not produce an output file."
+msgstr "Засіб DTS2pas не створив файл виводу."
+
+#: strpas2jsdesign.rshttprequestfailed
+#, object-pascal-format
+msgid "HTML request to service URL %s failed: %s"
+msgstr "Запит HTML на адресу служби %s завершився помилкою: %s"
+

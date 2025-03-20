@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="ProjTemplates"/>
+    <Type Value="DesignTime"/>
+    <Author Value="Michael Van Canneyt"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="IDE extension to create projects based on project templates
+"/>
+    <License Value="Modified LGPL as per the FCL license
+"/>
+    <Version Major="1"/>
+    <Files>
+      <Item>
+        <Filename Value="projecttemplates.pp"/>
+        <UnitName Value="ProjectTemplates"/>
+      </Item>
+      <Item>
+        <Filename Value="idetemplateproject.pp"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="IDETemplateProject"/>
+      </Item>
+      <Item>
+        <Filename Value="frmtemplatevariables.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="frmtemplatevariables.pas"/>
+        <UnitName Value="frmTemplateVariables"/>
+      </Item>
+      <Item>
+        <Filename Value="frmtemplatesettings.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="frmtemplatesettings.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="frmtemplatesettings"/>
+      </Item>
+      <Item>
+        <Filename Value="README.txt"/>
+        <Type Value="Text"/>
+      </Item>
+      <Item>
+        <Filename Value="ptstrconst.pas"/>
+        <UnitName Value="ptstrconst"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

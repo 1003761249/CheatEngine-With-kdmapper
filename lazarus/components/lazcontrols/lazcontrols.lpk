@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="LazControls"/>
+    <Type Value="RunAndDesignTime"/>
+    <AddToProjectUsesSection Value="True"/>
+    <Author Value="Lazarus Team"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Some extra LCL controls needed by the IDE."/>
+    <License Value="modified LGPL-2"/>
+    <Version Major="1" Release="1"/>
+    <Files Count="12">
+      <Item1>
+        <Filename Value="checkboxthemed.pas"/>
+        <UnitName Value="CheckBoxThemed"/>
+      </Item1>
+      <Item2>
+        <Filename Value="dividerbevel.pas"/>
+        <UnitName Value="DividerBevel"/>
+      </Item2>
+      <Item3>
+        <Filename Value="extendednotebook.pas"/>
+        <UnitName Value="ExtendedNotebook"/>
+      </Item3>
+      <Item4>
+        <Filename Value="listfilteredit.pas"/>
+        <UnitName Value="ListFilterEdit"/>
+      </Item4>
+      <Item5>
+        <Filename Value="listviewfilteredit.pas"/>
+        <UnitName Value="ListViewFilterEdit"/>
+      </Item5>
+      <Item6>
+        <Filename Value="treefilteredit.pas"/>
+        <UnitName Value="TreeFilterEdit"/>
+      </Item6>
+      <Item7>
+        <Filename Value="shortpathedit.pas"/>
+        <UnitName Value="ShortPathEdit"/>
+      </Item7>
+      <Item8>
+        <Filename Value="lvlgraphctrl.pas"/>
+        <UnitName Value="LvlGraphCtrl"/>
+      </Item8>
+      <Item9>
+        <Filename Value="extendedtabcontrols.pas"/>
+        <UnitName Value="ExtendedTabControls"/>
+      </Item9>
+      <Item10>
+        <Filename Value="spinex.pp"/>
+        <UnitName Value="SpinEx"/>
+      </Item10>
+      <Item11>
+        <Filename Value="spinex.inc"/>
+        <Type Value="Include"/>
+      </Item11>
+      <Item12>
+        <Filename Value="smallorderedseteditor.pas"/>
+        <UnitName Value="SmallOrderedSetEditor"/>
+      </Item12>
+    </Files>
+    <LazDoc Paths="docs"/>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

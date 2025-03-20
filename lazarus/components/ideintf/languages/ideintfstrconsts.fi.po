@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "Keskeytä"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Lisää"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "Aina"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "&Lisää"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "&Jatka"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Poista"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "&Lisää ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "&Sallittu"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr ""
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Peru"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Jatka"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Kopioi"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Leikkaa"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Poista"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "Estetty"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "Lisää ..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Sallittu"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Ohje"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "Ohita"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr ""
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "Ei"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr ""
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Liitä"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "Kyllä"
+

@@ -1,0 +1,84 @@
+object DebuggerGeneralOptionsFrame: TDebuggerGeneralOptionsFrame
+  Left = 0
+  Height = 427
+  Top = 0
+  Width = 519
+  ClientHeight = 427
+  ClientWidth = 519
+  TabOrder = 0
+  Visible = False
+  DesignLeft = 812
+  DesignTop = 313
+  object gbAdditionalSearchPath: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 55
+    Top = 6
+    Width = 519
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 6
+    Caption = 'Additional search path'
+    ClientHeight = 35
+    ClientWidth = 515
+    TabOrder = 0
+    object txtAdditionalPath: TEdit
+      AnchorSideLeft.Control = gbAdditionalSearchPath
+      AnchorSideTop.Control = gbAdditionalSearchPath
+      AnchorSideRight.Control = cmdOpenAdditionalPath
+      Left = 6
+      Height = 23
+      Top = 6
+      Width = 480
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      TabOrder = 0
+    end
+    object cmdOpenAdditionalPath: TButton
+      AnchorSideTop.Control = txtAdditionalPath
+      AnchorSideRight.Control = gbAdditionalSearchPath
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = txtAdditionalPath
+      AnchorSideBottom.Side = asrBottom
+      Left = 486
+      Height = 23
+      Top = 6
+      Width = 23
+      Anchors = [akTop, akRight, akBottom]
+      BorderSpacing.Right = 6
+      Caption = '…'
+      OnClick = cmdOpenAdditionalPathClick
+      TabOrder = 1
+    end
+  end
+  object gcbDebuggerGeneralOptions: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = gbAdditionalSearchPath
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 19
+    Top = 67
+    Width = 519
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Top = 6
+    Caption = 'Debugger general options'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 1
+  end
+end

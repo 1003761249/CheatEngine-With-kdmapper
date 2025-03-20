@@ -1,0 +1,233 @@
+# Olexandr Pylypchuk <pilipchukap@rambler.ru>, 2017, 2018.
+# lxlalexlxl <lxlalexlxl@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-08 18:59+0300\n"
+"Last-Translator: lxlalexlxl <lxlalexlxl@ukr.net>\n"
+"Language: uk\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Project-Id-Version: \n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+
+#: lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml"
+msgid "a directory component in %s does not exist or is a dangling symlink"
+msgstr "складова %s не існує або є посиланням на відсутній об'єкт"
+
+#: lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml2
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentindoesnotexistorisadanglingsyml2"
+msgid "a directory component in %s does not exist or is a dangling symlink"
+msgstr "складова %s не існує або є посиланням на відсутній об'єкт"
+
+#: lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory"
+msgid "a directory component in %s is not a directory"
+msgstr "складова %s не є каталогом"
+
+#: lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory2
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrsadirectorycomponentinisnotadirectory2"
+msgid "a directory component in %s is not a directory"
+msgstr "складова %s не є каталогом"
+
+#: lazutilsstrconsts.lrsboolean
+msgid "boolean"
+msgstr "логічний тип"
+
+#: lazutilsstrconsts.lrscannotexecute
+#, object-pascal-format
+msgid "can not execute %s"
+msgstr "неможливо виконати %s"
+
+#: lazutilsstrconsts.lrscreatinggdbcatchableerror
+msgid "Creating gdb catchable error:"
+msgstr "Створення помилки, яку може виловити gdb:"
+
+#: lazutilsstrconsts.lrserrorincode
+msgid "ERROR in code: "
+msgstr "ПОМИЛКА в коді: "
+
+#: lazutilsstrconsts.lrsevalinvalidargcount
+msgid "Invalid number of function arguments"
+msgstr "Неправильне число аргументів функції"
+
+#: lazutilsstrconsts.lrsevalunknownfunction
+#, object-pascal-format
+msgid "Unknown function: \"%s\""
+msgstr "Невідома функція: \"%s\""
+
+#: lazutilsstrconsts.lrsevalunknownvariable
+#, object-pascal-format
+msgid "Unknown variable: \"%s\""
+msgstr "Невідома змінна: \"%s\""
+
+#: lazutilsstrconsts.lrsfiledoesnotexist
+#, object-pascal-format
+msgid "file \"%s\" does not exist"
+msgstr "файл \"%s\" не знайдено"
+
+#: lazutilsstrconsts.lrsfileisadirectoryandnotanexecutable
+#, object-pascal-format
+msgid "file \"%s\" is a directory and not an executable"
+msgstr "файл \"%s\" є текою, а не виконуваним файлом"
+
+#: lazutilsstrconsts.lrshasacircularsymboliclink
+#, object-pascal-format
+msgid "%s has a circular symbolic link"
+msgstr "%s має циклічне символьне посилання"
+
+#: lazutilsstrconsts.lrsinsufficientmemory
+msgid "insufficient memory"
+msgstr "нестача пам'яті"
+
+#: lazutilsstrconsts.lrsisnotasymboliclink
+#, object-pascal-format
+msgid "%s is not a symbolic link"
+msgstr "%s не є символьним посиланням"
+
+#: lazutilsstrconsts.lrsisnotexecutable
+#, object-pascal-format
+msgid "%s is not executable"
+msgstr "%s не є виконуваним"
+
+#: lazutilsstrconsts.lrslistindexexceedsbounds
+#, object-pascal-format
+msgctxt "lazutilsstrconsts.lrslistindexexceedsbounds"
+msgid "List index exceeds bounds (%d)"
+msgstr "Індекс списку виходить за межі (%d)"
+
+#: lazutilsstrconsts.lrslistmustbeempty
+msgctxt "lazutilsstrconsts.lrslistmustbeempty"
+msgid "List must be empty"
+msgstr "Список має бути порожнім"
+
+#: lazutilsstrconsts.lrsmodified
+msgctxt "lazutilsstrconsts.lrsmodified"
+msgid "  modified "
+msgstr "  змінено "
+
+#: lazutilsstrconsts.lrsnodeset
+msgid "node set"
+msgstr "набір елементів"
+
+#: lazutilsstrconsts.lrsnumber
+msgid "number"
+msgstr "число"
+
+#: lazutilsstrconsts.lrsparserbadaxisname
+msgid "Invalid axis name"
+msgstr "Неправильна назва осі"
+
+#: lazutilsstrconsts.lrsparserbadnodetype
+msgid "Invalid node type"
+msgstr "Неправильний тип елемента"
+
+#: lazutilsstrconsts.lrsparserexpectedleftbracket
+msgid "Expected \"(\""
+msgstr "Очікується \"(\""
+
+#: lazutilsstrconsts.lrsparserexpectedrightbracket
+msgid "Expected \")\""
+msgstr "Очікується \")\""
+
+#: lazutilsstrconsts.lrsparserexpectedrightsquarebracket
+msgid "Expected \"]\" after predicate"
+msgstr "Очікується \"]\" після предиката"
+
+#: lazutilsstrconsts.lrsparsergarbageafterexpression
+msgid "Unrecognized input after expression"
+msgstr "Нерозпізнаний вміст після виразу"
+
+#: lazutilsstrconsts.lrsparserinvalidnodetest
+msgid "Invalid node test (syntax error)"
+msgstr "Не вдалось перевірити елемент (синтаксична помилка)"
+
+#: lazutilsstrconsts.lrsparserinvalidprimexpr
+msgid "Invalid primary expression"
+msgstr "Неправильний первинний вираз"
+
+#: lazutilsstrconsts.lrsprogramfilenotfound
+#, object-pascal-format
+msgid "program file not found %s"
+msgstr "файл програми %s не знайдено"
+
+#: lazutilsstrconsts.lrsreadaccessdeniedfor
+#, object-pascal-format
+msgid "read access denied for %s"
+msgstr "необхідний доступ для читання до %s"
+
+#: lazutilsstrconsts.lrsscannerexpectedvarname
+msgid "Expected variable name after \"$\""
+msgstr "Після \"$\" очікується назва змінної"
+
+#: lazutilsstrconsts.lrsscannerinvalidchar
+msgid "Invalid character"
+msgstr "Неправильний символ"
+
+#: lazutilsstrconsts.lrsscannermalformedqname
+msgid "Expected \"*\" or local part after colon"
+msgstr "Після двокрапки очікується \"*\" або локальна частина назви"
+
+#: lazutilsstrconsts.lrsscannerunclosedstring
+msgid "String literal was not closed"
+msgstr "Не закритий рядковий літерал"
+
+#: lazutilsstrconsts.lrssize
+msgctxt "lazutilsstrconsts.lrssize"
+msgid "  size "
+msgstr "  розмір "
+
+#: lazutilsstrconsts.lrsstring
+msgid "string"
+msgstr "рядковий тип"
+
+#: lazutilsstrconsts.lrsunabletocreateconfigdirectorys
+#, object-pascal-format
+msgid "Unable to create config directory \"%s\""
+msgstr "Не вдалось створити теку конфігурації \"%s\""
+
+#: lazutilsstrconsts.lrsvarnoconversion
+#, object-pascal-format
+msgid "Conversion from %s to %s not possible"
+msgstr "Перетворення з %s до %s неможливе"
+
+#: lazutilsstrconsts.rsincompletemask
+msgid "Reached end of mask, but missing close/escape sequence."
+msgstr "Досягнуто кінця маски, але відсутня послідовність завершення/виходу."
+
+#: lazutilsstrconsts.rsinternalerror
+#, object-pascal-format
+msgid "Internal error in %s."
+msgstr "Внутрішня помилка в %s."
+
+#: lazutilsstrconsts.rsinvalidcharmask
+#, object-pascal-format
+msgid "Invalid character \"%s\" in mask."
+msgstr "Хибний символ \"%s\" у масці."
+
+#: lazutilsstrconsts.rsinvalidcharmaskat
+#, object-pascal-format
+msgid "Invalid character \"%s\" in mask (offset %d)."
+msgstr "Хибний символ \"%s\" у масці (зміщення %d)."
+
+#: lazutilsstrconsts.rsinvalidescapechar
+msgid "Escape character must be ASCII <= 127."
+msgstr "Символ виходу повинен мати ASCII <= 127."
+
+#: lazutilsstrconsts.rsmissingclosecharmask
+#, object-pascal-format
+msgid "Missing closing character \"%s\" in mask."
+msgstr "У масці відсутній завершальний символ \"%s\"."
+
+#: lazutilsstrconsts.rsmissingclosecharmaskat
+#, object-pascal-format
+msgid "Missing closing character \"%s\" in mask (offset %d)."
+msgstr "У масці відсутній завершальний символ \"%s\" (зміщення %d)."
+

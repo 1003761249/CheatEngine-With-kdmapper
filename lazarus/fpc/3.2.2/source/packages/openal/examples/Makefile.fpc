@@ -1,0 +1,23 @@
+#
+#   Makefile.fpc for OpenAL Examples
+#
+
+[target]
+programs=captureplaybackopenal wavopenal
+programs_linux=madopenal
+programs_win32=madopenal
+
+[require]
+packages=openal oggvorbis a52 dts modplug matroska
+packages_linux=mad
+packages_win32=mad
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../..
+
+
+[rules]
+.NOTPARALLEL:

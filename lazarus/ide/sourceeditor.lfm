@@ -1,0 +1,55 @@
+object SourceNotebook: TSourceNotebook
+  Left = 533
+  Height = 300
+  Top = 374
+  Width = 400
+  AllowDropFiles = True
+  Caption = 'SourceNotebook'
+  ClientHeight = 300
+  ClientWidth = 400
+  OnMouseUp = FormMouseUp
+  OnResize = FormResize
+  LCLVersion = '2.3.0.0'
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 277
+    Width = 400
+    Panels = <    
+      item
+        Width = 100
+      end    
+      item
+        Style = psOwnerDraw
+        Width = 0
+      end    
+      item
+        Width = 150
+      end    
+      item
+        Width = 50
+      end    
+      item
+        Text = 'INS'
+        Width = 50
+      end>
+    SimpleText = 'This is a test'
+    SimplePanel = False
+    OnClick = StatusBarClick
+    OnContextPopup = StatusBarContextPopup
+    OnDblClick = StatusBarDblClick
+    OnDrawPanel = StatusBarDrawPanel
+  end
+  object StatusPopUpMenu: TPopupMenu
+    Left = 48
+    Top = 36
+    object GoToLineMenuItem: TMenuItem
+      Caption = 'Goto line ...'
+      OnClick = GoToLineMenuItemClick
+    end
+    object OpenFolderMenuItem: TMenuItem
+      Caption = 'Open folder ...'
+      OnClick = OpenFolderMenuItemClick
+    end
+  end
+end

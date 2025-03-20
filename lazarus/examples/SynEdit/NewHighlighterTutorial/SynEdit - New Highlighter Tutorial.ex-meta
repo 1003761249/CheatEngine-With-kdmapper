@@ -1,0 +1,12 @@
+{
+  "SynEdit - New Highlighter Tutorial" : {
+    "Category" : "General",
+    "Keywords" : [
+      "TSynEdit",
+      "wiki",
+      "highlighter",
+      "TSynHighlighterAttributes"
+    ],
+    "Description" : "Example for the \"Create your own SynEdit Highlighter\" tutorial on the wiki http://wiki.lazarus.freepascal.org/SynEdit_Highlighter"
+  }
+}

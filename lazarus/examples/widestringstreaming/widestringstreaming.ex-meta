@@ -1,0 +1,10 @@
+{
+  "widestringstreaming" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Stream",
+      "Components"
+    ],
+    "Description" : "This example demonstrates, how to stream a component to a stream in binary format and then recreate that component elsewhere from the stream."
+  }
+}

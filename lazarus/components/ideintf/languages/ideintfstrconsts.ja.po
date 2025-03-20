@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+msgid "Abort"
+msgstr "中止"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "追加"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "常に"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "追加(&A)"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr "続ける(&C)"
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "削除(&D)"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr "追加(&A) ..."
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "有効にする(&E)"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "OK(&O)"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "継続"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "コピー"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "切り取り"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "削除"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "無効化"
+
+#: ideintfstrconsts.lisdlgadd
+msgid "Add ..."
+msgstr "追加 ..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "有効"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "ヘルプ"
+
+#: ideintfstrconsts.lisignore
+msgid "Ignore"
+msgstr "無視"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "しない(ない)"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "いいえ"
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "OK"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "貼り付け"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr "はい"
+

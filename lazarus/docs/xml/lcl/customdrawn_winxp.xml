@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+====================================================================
+customdrawn_winxp
+====================================================================
+-->
+
+<module name="customdrawn_winxp">
+<short>
+Contains classes used to implement custom-drawn controls using the Windows XP 
+drawing style.
+</short>
+<descr>
+<p>
+<file>customdrawn_winxp.pas</file> is part of the Lazarus Component Library 
+<b>(LCL)</b>.
+</p>
+</descr>
+
+<!-- external references -->
+<element name="classes"/>
+<element name="sysutils"/>
+<element name="types"/>
+<element name="fpcanvas"/>
+<element name="fpimage"/>
+<element name="graphics"/>
+<element name="controls"/>
+<element name="lcltype"/>
+<element name="customdrawndrawers"/>
+<element name="customdrawn_common"/>
+
+<!-- class Visibility: default -->
+<element name="TCDDrawerWinXP">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCDDrawerWinXP.GetMeasures">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCDDrawerWinXP.GetMeasures.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.GetMeasures.AMeasureID">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCDDrawerWinXP.GetDrawStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCDDrawerWinXP.GetDrawStyle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerWinXP.LoadFallbackPaletteColors">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerWinXP.DrawTickmark">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawTickmark.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawTickmark.ADestPos">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawTickmark.AState">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerWinXP.DrawButton">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawButton.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawButton.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawButton.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawButton.AStateEx">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerWinXP.DrawEditFrame">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawEditFrame.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawEditFrame.ADestPos">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawEditFrame.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawEditFrame.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawEditFrame.AStateEx">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare.ADest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare.ADestPos">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare.ASize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare.AState">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCDDrawerWinXP.DrawCheckBoxSquare.AStateEx">
+<short></short>
+</element>
+
+</module> <!-- customdrawn_winxp -->
+
+</package>
+</fpdoc-descriptions>

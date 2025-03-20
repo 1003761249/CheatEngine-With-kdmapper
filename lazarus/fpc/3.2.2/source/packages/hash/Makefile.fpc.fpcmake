@@ -1,0 +1,27 @@
+#
+#   Makefile.fpc for MD5 checksum.
+#
+
+[package]
+name=hash
+version=3.2.2
+
+[require]
+packages=rtl-objpas
+
+[target]
+units=md5 crc ntlm sha1 uuid
+units_linux=unixcrypt
+exampledirs=examples
+
+[install]
+fpcpackage=y
+
+[compiler]
+sourcedir=src
+
+[default]
+fpcdir=../..
+
+[rules]
+.NOTPARALLEL:

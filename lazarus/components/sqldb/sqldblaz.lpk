@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="SQLDBLaz"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Joost van der Sluis"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Lazarus package for the FCL SQLdb components.
+"/>
+    <License Value="Modified LGPL-2
+
+With the exception of the unit registersqldb, which is GPL-2. This unit contains code for the IDE and is usually not used by programs."/>
+    <Version Major="1" Release="2"/>
+    <Files>
+      <Item>
+        <Filename Value="registersqldb.pas"/>
+        <HasRegisterProc Value="True"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="registersqldb"/>
+      </Item>
+      <Item>
+        <Filename Value="sqlstringspropertyeditordlg.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="sqlstringspropertyeditordlg.pas"/>
+        <UnitName Value="SQLStringsPropertyEditorDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="generatesqldlg.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="generatesqldlg.pp"/>
+        <UnitName Value="generatesqldlg"/>
+      </Item>
+      <Item>
+        <Filename Value="sqldbstrconst.pas"/>
+        <UnitName Value="SqlDbStrConst"/>
+      </Item>
+      <Item>
+        <Filename Value="pqteventmonitor.pas"/>
+        <UnitName Value="PQTEventMonitor"/>
+      </Item>
+      <Item>
+        <Filename Value="sqldb.pas"/>
+        <Type Value="Virtual Unit"/>
+        <UnitName Value="sqldb"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="CodeTools"/>
+      </Item>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="SynEdit"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

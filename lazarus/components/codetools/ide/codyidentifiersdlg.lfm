@@ -1,0 +1,189 @@
+object CodyIdentifiersDlg: TCodyIdentifiersDlg
+  Left = 622
+  Height = 404
+  Top = 204
+  Width = 555
+  ActiveControl = FilterEdit
+  Caption = 'CodyIdentifiersDlg'
+  ClientHeight = 404
+  ClientWidth = 555
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 30
+    Top = 368
+    Width = 543
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 4
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object InfoLabel: TLabel
+    Left = 8
+    Height = 16
+    Top = 8
+    Width = 58
+    Caption = 'InfoLabel'
+    ParentColor = False
+    WordWrap = True
+  end
+  object FilterEdit: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = HideOtherProjectsCheckBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = StartsRadioButton
+    Left = 6
+    Height = 22
+    Top = 58
+    Width = 371
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 10
+    OnChange = FilterEditChange
+    OnKeyDown = FilterEditKeyDown
+    TabOrder = 1
+  end
+  object ItemsListBox: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = FilterEdit
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = UnitLabel
+    Left = 6
+    Height = 227
+    Top = 80
+    Width = 543
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 1
+    ItemHeight = 0
+    OnClick = ItemsListBoxClick
+    OnSelectionChange = ItemsListBoxSelectionChange
+    PopupMenu = PopupMenu1
+    TabOrder = 2
+  end
+  object UnitLabel: TLabel
+    AnchorSideLeft.Control = InfoLabel
+    AnchorSideBottom.Control = PackageLabel
+    Left = 8
+    Height = 16
+    Top = 308
+    Width = 59
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 1
+    Caption = 'UnitLabel'
+    ParentColor = False
+  end
+  object PackageLabel: TLabel
+    AnchorSideLeft.Control = InfoLabel
+    AnchorSideBottom.Control = AddToImplementationUsesCheckBox
+    Left = 8
+    Height = 16
+    Top = 325
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 1
+    Caption = 'PackageLabel'
+    ParentColor = False
+  end
+  object HideOtherProjectsCheckBox: TCheckBox
+    AnchorSideLeft.Control = InfoLabel
+    AnchorSideTop.Control = InfoLabel
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 18
+    Top = 30
+    Width = 193
+    BorderSpacing.Top = 6
+    Caption = 'HideOtherProjectsCheckBox'
+    OnChange = HideOtherProjectsCheckBoxChange
+    TabOrder = 0
+  end
+  object AddToImplementationUsesCheckBox: TCheckBox
+    AnchorSideLeft.Control = PackageLabel
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 8
+    Height = 18
+    Top = 344
+    Width = 244
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Top = 3
+    BorderSpacing.Bottom = 3
+    Caption = 'AddToImplementationUsesCheckBox'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object StartsRadioButton: TRadioButton
+    AnchorSideTop.Control = FilterEdit
+    AnchorSideRight.Control = ContainsRadioButton
+    AnchorSideBottom.Control = FilterEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 383
+    Height = 22
+    Top = 58
+    Width = 86
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Left = 6
+    Caption = 'Starts with'
+    OnClick = StartsRadioButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object ContainsRadioButton: TRadioButton
+    AnchorSideTop.Control = FilterEdit
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = FilterEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 475
+    Height = 22
+    Top = 58
+    Width = 74
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    Caption = 'Contains'
+    OnClick = ContainsRadioButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    left = 177
+    top = 133
+    object JumpMenuItem: TMenuItem
+      Caption = 'JumpMenuItem'
+      OnClick = JumpButtonClick
+    end
+    object UseMenuItem: TMenuItem
+      Caption = 'UseMenuItem'
+      OnClick = UseIdentifierClick
+    end
+    object DeleteSeparatorMenuItem: TMenuItem
+      Caption = '-'
+    end
+    object DeleteUnitMenuItem: TMenuItem
+      Caption = 'DeleteUnitMenuItem'
+      OnClick = DeleteUnitClick
+    end
+    object DeletePackageMenuItem: TMenuItem
+      Caption = 'DeletePackageMenuItem'
+      OnClick = DeletePackageClick
+    end
+  end
+end

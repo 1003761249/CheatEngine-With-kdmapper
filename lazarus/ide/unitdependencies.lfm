@@ -1,0 +1,470 @@
+object UnitDependenciesWindow: TUnitDependenciesWindow
+  Left = 504
+  Height = 440
+  Top = 399
+  Width = 620
+  Caption = 'UnitDependenciesWindow'
+  ClientHeight = 440
+  ClientWidth = 620
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  LCLVersion = '2.1.0.0'
+  object MainPageControl: TPageControl
+    Left = 0
+    Height = 410
+    Top = 0
+    Width = 620
+    ActivePage = UnitsTabSheet
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object UnitsTabSheet: TTabSheet
+      Caption = 'UnitsTabSheet'
+      ClientHeight = 385
+      ClientWidth = 616
+      object ScopePanel: TPanel
+        Left = 0
+        Height = 47
+        Top = 0
+        Width = 616
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 47
+        ClientWidth = 616
+        TabOrder = 0
+        object SearchCustomFilesCheckBox: TCheckBox
+          AnchorSideLeft.Control = ScopePanel
+          AnchorSideTop.Control = SearchCustomFilesComboBox
+          AnchorSideTop.Side = asrCenter
+          Left = 2
+          Height = 18
+          Top = 4
+          Width = 180
+          BorderSpacing.Around = 2
+          Caption = 'SearchCustomFilesCheckBox'
+          OnChange = SearchCustomFilesCheckBoxChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+        object SearchCustomFilesBrowseButton: TButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = SearchCustomFilesComboBox
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = ScopePanel
+          AnchorSideRight.Side = asrBottom
+          Left = 566
+          Height = 24
+          Top = 1
+          Width = 50
+          Anchors = [akTop, akRight]
+          AutoSize = True
+          Caption = 'Browse'
+          OnClick = SearchCustomFilesBrowseButtonClick
+          TabOrder = 2
+        end
+        object SearchCustomFilesComboBox: TComboBox
+          AnchorSideLeft.Control = SearchCustomFilesCheckBox
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = ScopePanel
+          AnchorSideRight.Control = SearchCustomFilesBrowseButton
+          Left = 184
+          Height = 23
+          Top = 2
+          Width = 380
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Around = 2
+          ItemHeight = 14
+          OnChange = SearchCustomFilesComboBoxChange
+          TabOrder = 1
+          Text = 'SearchCustomFilesComboBox'
+        end
+        object SearchPkgsCheckBox: TCheckBox
+          AnchorSideLeft.Control = ScopePanel
+          AnchorSideTop.Control = SearchCustomFilesComboBox
+          AnchorSideTop.Side = asrBottom
+          Left = 2
+          Height = 18
+          Top = 27
+          Width = 140
+          BorderSpacing.Around = 2
+          Caption = 'SearchPkgsCheckBox'
+          OnChange = SearchPkgsCheckBoxChange
+          TabOrder = 3
+        end
+        object SearchSrcEditCheckBox: TCheckBox
+          AnchorSideLeft.Control = SearchPkgsCheckBox
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = SearchPkgsCheckBox
+          AnchorSideTop.Side = asrCenter
+          Left = 159
+          Height = 18
+          Top = 27
+          Width = 152
+          BorderSpacing.Left = 15
+          BorderSpacing.Around = 2
+          Caption = 'SearchSrcEditCheckBox'
+          Checked = True
+          OnChange = SearchSrcEditCheckBoxChange
+          State = cbChecked
+          TabOrder = 4
+        end
+      end
+      object AllUnitsGroupBox: TGroupBox
+        Left = 0
+        Height = 338
+        Top = 47
+        Width = 248
+        Align = alLeft
+        Caption = 'AllUnitsGroupBox'
+        ClientHeight = 320
+        ClientWidth = 244
+        TabOrder = 1
+        object AllUnitsShowGroupNodesSpeedButton: TSpeedButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = AllUnitsFilterEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = AllUnitsShowDirsSpeedButton
+          Left = 198
+          Height = 22
+          Top = -1
+          Width = 23
+          AllowAllUp = True
+          Anchors = [akTop, akRight]
+          GroupIndex = 12
+          OnClick = AllUnitsShowGroupNodesSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object AllUnitsShowDirsSpeedButton: TSpeedButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = AllUnitsFilterEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = AllUnitsGroupBox
+          AnchorSideRight.Side = asrBottom
+          Left = 221
+          Height = 22
+          Top = -1
+          Width = 23
+          AllowAllUp = True
+          Anchors = [akTop, akRight]
+          GroupIndex = 13
+          OnClick = AllUnitsShowDirsSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object AllUnitsFilterEdit: TEdit
+          AnchorSideLeft.Control = AllUnitsGroupBox
+          AnchorSideTop.Control = AllUnitsGroupBox
+          AnchorSideRight.Control = AllUnitsShowGroupNodesSpeedButton
+          Left = 0
+          Height = 20
+          Top = 0
+          Width = 198
+          Anchors = [akTop, akLeft, akRight]
+          OnChange = AllUnitsFilterEditChange
+          TabOrder = 0
+        end
+        object AllUnitsSearchNextSpeedButton: TSpeedButton
+          AnchorSideTop.Control = AllUnitsSearchEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = AllUnitsSearchPrevSpeedButton
+          Left = 198
+          Height = 22
+          Top = 299
+          Width = 23
+          Anchors = [akTop, akRight]
+          OnClick = AllUnitsSearchNextSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object AllUnitsSearchPrevSpeedButton: TSpeedButton
+          AnchorSideTop.Control = AllUnitsSearchEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = AllUnitsGroupBox
+          AnchorSideRight.Side = asrBottom
+          Left = 221
+          Height = 22
+          Top = 299
+          Width = 23
+          Anchors = [akTop, akRight]
+          OnClick = AllUnitsSearchPrevSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object AllUnitsTreeView: TTreeView
+          AnchorSideLeft.Control = AllUnitsGroupBox
+          AnchorSideTop.Control = AllUnitsFilterEdit
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = AllUnitsGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = AllUnitsSearchEdit
+          Left = 0
+          Height = 280
+          Top = 20
+          Width = 244
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HotTrack = True
+          MultiSelect = True
+          ParentShowHint = False
+          PopupMenu = UnitsTVPopupMenu
+          ReadOnly = True
+          RightClickSelect = True
+          ShowHint = True
+          ShowRoot = False
+          TabOrder = 1
+          OnMouseDown = UnitsTreeViewMouseDown
+          OnSelectionChanged = AllUnitsTreeViewSelectionChanged
+          OnShowHint = UnitsTreeViewShowHint
+          Options = [tvoAllowMultiselect, tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips, tvoThemedDraw]
+        end
+        object AllUnitsSearchEdit: TEdit
+          AnchorSideLeft.Control = AllUnitsGroupBox
+          AnchorSideRight.Control = AllUnitsSearchNextSpeedButton
+          AnchorSideBottom.Control = AllUnitsGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 0
+          Height = 20
+          Top = 300
+          Width = 198
+          Anchors = [akLeft, akRight, akBottom]
+          OnChange = AllUnitsSearchEditChange
+          TabOrder = 2
+        end
+      end
+      object UnitsSplitter: TSplitter
+        Left = 248
+        Height = 338
+        Top = 47
+        Width = 5
+      end
+      object SelectedUnitsGroupBox: TGroupBox
+        Left = 253
+        Height = 338
+        Top = 47
+        Width = 363
+        Align = alClient
+        Caption = 'SelectedUnitsGroupBox'
+        ClientHeight = 320
+        ClientWidth = 359
+        TabOrder = 3
+        object SelUnitsSearchNextSpeedButton: TSpeedButton
+          AnchorSideTop.Control = SelUnitsSearchEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = SelUnitsSearchPrevSpeedButton
+          Left = 313
+          Height = 22
+          Top = 299
+          Width = 23
+          Anchors = [akTop, akRight]
+          OnClick = SelUnitsSearchNextSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object SelUnitsSearchPrevSpeedButton: TSpeedButton
+          AnchorSideTop.Control = SelUnitsSearchEdit
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = SelectedUnitsGroupBox
+          AnchorSideRight.Side = asrBottom
+          Left = 336
+          Height = 22
+          Top = 299
+          Width = 23
+          Anchors = [akTop, akRight]
+          OnClick = SelUnitsSearchPrevSpeedButtonClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object SelUnitsSearchEdit: TEdit
+          AnchorSideLeft.Control = SelectedUnitsGroupBox
+          AnchorSideRight.Control = SelUnitsSearchNextSpeedButton
+          AnchorSideBottom.Control = SelectedUnitsGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 0
+          Height = 20
+          Top = 300
+          Width = 313
+          Anchors = [akLeft, akRight, akBottom]
+          OnChange = SelUnitsSearchEditChange
+          TabOrder = 1
+        end
+        object SelUnitsTreeView: TTreeView
+          AnchorSideLeft.Control = SelectedUnitsGroupBox
+          AnchorSideTop.Control = SelectedUnitsGroupBox
+          AnchorSideRight.Control = SelectedUnitsGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = SelUnitsSearchEdit
+          Left = 0
+          Height = 300
+          Top = 0
+          Width = 359
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HotTrack = True
+          ParentShowHint = False
+          PopupMenu = UnitsTVPopupMenu
+          ReadOnly = True
+          RightClickSelect = True
+          ShowHint = True
+          ShowRoot = False
+          TabOrder = 0
+          OnExpanding = SelUnitsTreeViewExpanding
+          OnMouseDown = UnitsTreeViewMouseDown
+          OnShowHint = UnitsTreeViewShowHint
+          Options = [tvoAutoItemHeight, tvoHideSelection, tvoHotTrack, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoToolTips, tvoThemedDraw]
+        end
+      end
+    end
+    object GroupsTabSheet: TTabSheet
+      Caption = 'GroupsTabSheet'
+      ClientHeight = 385
+      ClientWidth = 616
+      object GroupsSplitter: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 5
+        Top = 0
+        Width = 616
+        Align = alTop
+        ResizeAnchor = akTop
+      end
+      object UnitGraphPanel: TPanel
+        Left = 0
+        Height = 380
+        Top = 5
+        Width = 616
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 380
+        ClientWidth = 616
+        TabOrder = 1
+        object UnitGraphOptionPanel: TPanel
+          Left = 0
+          Height = 380
+          Top = 0
+          Width = 140
+          Align = alLeft
+          BevelOuter = bvNone
+          ClientHeight = 380
+          ClientWidth = 140
+          TabOrder = 0
+          object UnitGraphFilter: TCheckListBox
+            AnchorSideLeft.Control = UnitGraphOptionPanel
+            AnchorSideTop.Control = UnitGraphOptionPanel
+            AnchorSideRight.Control = UnitGraphOptionPanel
+            AnchorSideRight.Side = asrBottom
+            AnchorSideBottom.Control = UnitGraphOptionPanel
+            AnchorSideBottom.Side = asrBottom
+            Left = 0
+            Height = 377
+            Top = 3
+            Width = 140
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            BorderSpacing.Top = 3
+            ItemHeight = 0
+            OnItemClick = UnitGraphFilterItemClick
+            OnSelectionChange = UnitGraphFilterSelectionChange
+            Sorted = True
+            TabOrder = 0
+          end
+        end
+        object UnitGraphOptionSplitter: TSplitter
+          Left = 140
+          Height = 380
+          Top = 0
+          Width = 5
+        end
+      end
+    end
+  end
+  object StatusPanel: TPanel
+    Left = 0
+    Height = 30
+    Top = 410
+    Width = 620
+    Align = alBottom
+    AutoSize = True
+    ClientHeight = 30
+    ClientWidth = 620
+    TabOrder = 1
+    object ProgressBar1: TProgressBar
+      AnchorSideLeft.Control = StatsLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = RefreshButton
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = RefreshButton
+      AnchorSideBottom.Side = asrBottom
+      Left = 70
+      Height = 20
+      Top = 5
+      Width = 458
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 0
+    end
+    object RefreshButton: TButton
+      Left = 530
+      Height = 24
+      Top = 3
+      Width = 87
+      Align = alRight
+      AutoSize = True
+      BorderSpacing.Around = 2
+      Caption = 'RefreshButton'
+      OnClick = RefreshButtonClick
+      TabOrder = 1
+    end
+    object StatsLabel: TLabel
+      AnchorSideLeft.Control = StatusPanel
+      AnchorSideTop.Control = RefreshButton
+      AnchorSideTop.Side = asrCenter
+      Left = 7
+      Height = 14
+      Top = 8
+      Width = 57
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      Caption = 'StatsLabel'
+      ParentColor = False
+    end
+  end
+  object UnitsTVPopupMenu: TPopupMenu
+    OnPopup = UnitsTVPopupMenuPopup
+    Left = 120
+    Top = 193
+    object UnitsTVCopyFilenameMenuItem: TMenuItem
+      Caption = 'UnitsTVCopyFilenameMenuItem'
+      OnClick = UnitsTVCopyFilenameMenuItemClick
+    end
+    object UnitsTVOpenFileMenuItem: TMenuItem
+      Caption = 'UnitsTVOpenFileMenuItem'
+      OnClick = UnitsTVOpenFileMenuItemClick
+    end
+    object UnitsTVUnusedUnitsMenuItem: TMenuItem
+      Caption = 'UnitsTVUnusedUnitsMenuItem'
+      OnClick = UnitsTVUnusedUnitsMenuItemClick
+    end
+    object UnitsTVExpandAllMenuItem: TMenuItem
+      Caption = 'UnitsTVExpandAllMenuItem'
+      OnClick = UnitsTVExpandAllMenuItemClick
+    end
+    object UnitsTVCollapseAllMenuItem: TMenuItem
+      Caption = 'UnitsTVCollapseAllMenuItem'
+      OnClick = UnitsTVCollapseAllMenuItemClick
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 465
+    Top = 175
+  end
+  object GraphPopupMenu: TPopupMenu
+    Left = 207
+    Top = 70
+    object GraphOptsMenuItem: TMenuItem
+      Caption = 'GraphOptsMenuItem'
+      OnClick = GraphOptsMenuItemClick
+    end
+  end
+end

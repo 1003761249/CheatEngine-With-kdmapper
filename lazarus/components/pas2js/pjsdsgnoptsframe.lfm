@@ -1,0 +1,285 @@
+object Pas2jsOptionsFrame: TPas2jsOptionsFrame
+  Left = 0
+  Height = 479
+  Top = 0
+  Width = 507
+  BorderSpacing.Left = 6
+  ClientHeight = 479
+  ClientWidth = 507
+  ParentShowHint = False
+  ShowHint = True
+  TabOrder = 0
+  DesignLeft = 1042
+  DesignTop = 410
+  object Pas2jsPathLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 15
+    Top = 6
+    Width = 156
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Pas2JS command executable'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object Pas2jsPathComboBox: TComboBox
+    AnchorSideLeft.Control = Pas2jsPathLabel
+    AnchorSideTop.Control = Pas2jsPathLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Pas2jsPathBrowseButton
+    Left = 6
+    Height = 30
+    Top = 23
+    Width = 470
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object Pas2jsPathBrowseButton: TButton
+    AnchorSideTop.Control = Pas2jsPathComboBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Pas2jsPathComboBox
+    AnchorSideBottom.Side = asrBottom
+    Left = 476
+    Height = 30
+    Top = 23
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = Pas2jsPathBrowseButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object ServerPortSpinEdit: TSpinEdit
+    AnchorSideLeft.Control = ServerPortLabel
+    AnchorSideTop.Control = ServerPortLabel
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 30
+    Top = 97
+    Width = 74
+    BorderSpacing.Top = 2
+    MaxValue = 65353
+    MinValue = 1024
+    TabOrder = 2
+    Value = 3000
+  end
+  object ServerPortLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SimpleWebServerLinkLabel
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 80
+    Width = 114
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Standard server port'
+    ParentColor = False
+  end
+  object NodeJSLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ServerPortSpinEdit
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 133
+    Width = 105
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Node.js executable'
+    ParentColor = False
+  end
+  object NodeJSComboBox: TComboBox
+    AnchorSideLeft.Control = NodeJSLabel
+    AnchorSideTop.Control = NodeJSLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NodeJSBrowseButton
+    Left = 6
+    Height = 30
+    Top = 150
+    Width = 470
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    TabOrder = 3
+    Text = 'NodeJSComboBox'
+  end
+  object NodeJSBrowseButton: TButton
+    AnchorSideTop.Control = NodeJSComboBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = NodeJSComboBox
+    AnchorSideBottom.Side = asrBottom
+    Left = 476
+    Height = 30
+    Top = 150
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = NodeJSBrowseButtonClick
+    TabOrder = 4
+  end
+  object lblAtomTemplateDir: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ElectronExeComboBox
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 239
+    Width = 185
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Atom package template directory'
+    ParentColor = False
+  end
+  object AtomTemplateDirComboBox: TComboBox
+    AnchorSideLeft.Control = lblAtomTemplateDir
+    AnchorSideTop.Control = lblAtomTemplateDir
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NodeJSBrowseButton
+    Left = 6
+    Height = 30
+    Top = 256
+    Width = 470
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    TabOrder = 5
+    Text = 'AtomTemplateDirComboBox'
+  end
+  object AtomTemplateDirBrowseButton: TButton
+    AnchorSideTop.Control = AtomTemplateDirComboBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = AtomTemplateDirComboBox
+    AnchorSideBottom.Side = asrBottom
+    Left = 476
+    Height = 30
+    Top = 256
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = AtomTemplateDirBrowseButtonClick
+    TabOrder = 6
+  end
+  object lblVSCodeTemplateDir: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = AtomTemplateDirComboBox
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 292
+    Width = 209
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'VS Code Extension template directory'
+    ParentColor = False
+  end
+  object VSCodeTemplateDirComboBox: TComboBox
+    AnchorSideLeft.Control = lblVSCodeTemplateDir
+    AnchorSideTop.Control = lblVSCodeTemplateDir
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NodeJSBrowseButton
+    Left = 6
+    Height = 30
+    Top = 309
+    Width = 470
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    TabOrder = 7
+    Text = 'VSCodeTemplateDirComboBox'
+  end
+  object VSCodeTemplateDirBrowseButton: TButton
+    AnchorSideTop.Control = VSCodeTemplateDirComboBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = VSCodeTemplateDirComboBox
+    AnchorSideBottom.Side = asrBottom
+    Left = 476
+    Height = 30
+    Top = 309
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = VSCodeTemplateDirBrowseButtonClick
+    TabOrder = 8
+  end
+  object SimpleWebServerLinkLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Pas2jsPathComboBox
+    AnchorSideTop.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 6
+    Height = 15
+    Top = 59
+    Width = 178
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Web server and browser options'
+    Font.Color = clBlue
+    ParentColor = False
+    ParentFont = False
+    OnClick = SimpleWebServerLinkLabelClick
+  end
+  object lblElectronExe: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = NodeJSComboBox
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 15
+    Top = 186
+    Width = 111
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'Electron executable'
+    ParentColor = False
+  end
+  object ElectronExeComboBox: TComboBox
+    AnchorSideLeft.Control = lblElectronExe
+    AnchorSideTop.Control = lblElectronExe
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = NodeJSBrowseButton
+    Left = 6
+    Height = 30
+    Top = 203
+    Width = 470
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    TabOrder = 9
+    Text = 'ElectronExeComboBox'
+  end
+  object ElectronExeBrowseButton: TButton
+    AnchorSideTop.Control = ElectronExeComboBox
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ElectronExeComboBox
+    AnchorSideBottom.Side = asrBottom
+    Left = 476
+    Height = 30
+    Top = 203
+    Width = 25
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = '...'
+    OnClick = ElectronExeBrowseButtonClick
+    TabOrder = 10
+  end
+end

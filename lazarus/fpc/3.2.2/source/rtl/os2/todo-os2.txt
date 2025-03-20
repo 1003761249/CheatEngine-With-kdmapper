@@ -1,0 +1,177 @@
+Todo list for OS/2 version of FPC (Free Pascal Compiler).
+Please indent tasks which are done with 8 spaces.
+
+Persons:
+
+DM - Daniel Mantione (as daniel)
+TH - Tomas Hajny (as hajny)
+RB - Ramon Bosque
+KB - Karoly Balogh (as karoly)
+YP - Yuri Prokushev (as yuri)
+AS - Andry Svirgunov
+
+Item                                          Priority        Implemented by
+-----------------------------------------------------------------------------
+          - Free Vision.............................................TH/YP
+          - Presentation Manager....................................RB/TH/YP
+
+    - PMDdi
+
+RTL                                           high
+    - sockets
+          - winsock.................................................YP
+    - graph
+          - pass dos compatibility tests............................TH
+          - exception handler.......................................TH
+    - WriteLn support for PM apps (message boxes)
+
+libgdb                                        medium
+
+OS/2 native rtl                               high
+          - system.pas..............................................YP/TH
+          - crt.pas.................................................YP
+          - dos.pas.................................................YP
+          - sysutils.pp.............................................YP/TH
+  - ports.pas
+          - thread.inc..............................................YP
+  - linker (LINK386, Internal, ...)
+  - loader (prt*) for EXEs
+  - loader (prt*) for DLLs
+  - autothunking for 16-bit calls
+    - compiler support
+    - kbdcalls
+    - moncalls
+    - moucalls
+    - viocalls
+  - smartlinking
+  - {$linklib dllname} (autolinking like for win32/linux)
+  - interfaces support (SOM/DSOM)
+          - move emx.pas to emx rtl.................................YP
+          - move emx.imp to emx rtl.................................YP
+          - move wrap.imp to emx rtl as emxwrap.imp.................YP
+  - external variables import
+  - new place for exe.pas/newexe.pas
+
+FCL                                           medium
+          - disk.inc................................................TH
+          - filutil.inc.............................................TH
+          - thread.inc..............................................TH
+          - pipes.inc...............................................TH
+          - eventlog.inc............................................TH
+          - process.inc.............................................TH
+  - ? unit SyncObjs
+  - ? unit HTTPApp
+
+native packages                               medium
+  - NetAPI (NetBIOS)
+  - Unicode
+  - LAN Manager
+  - Web Explorer (obsolete since OS/2 4.5)
+  - EPM
+          - LVM (new since OS/2 4.5)................................YP
+          - MMOS/2..................................................AS/YP/KB
+    - remove mmos2\buildall.pas
+          - WarpOverlay!(os2.kiev.ua)...............................YP
+  - TCP/IP
+    - Sockets (so32dll)
+    - tcp32dll
+          - FTP API.................................................YP
+  - LibC (Which lib to use? Native libc or EMX or Innotek or all of them?
+          Anyway, interface must be compatible with libc package)
+  - SOM (SOM2, not SOM3, because all current OS/2 implementations based on SOM2)
+    - Base API
+      - SOM
+      - DSOM
+      - SOMIR
+    - Base classes
+    - WPS
+      - Base classes
+        - CW BubblePad class
+      - IBM MM classes (obsolete since eCS 1.2)
+      - CW MM classes (new since eCS 1.2)
+      - eWorkplace/XWorkplace classes (new since eCS 1.1)
+    - OpenDoc classes (obsolete since OS/2 4.5)
+  - Security/2 (os2.kiev.ua)
+  - UniAud/2 (os2.kiev.ua)
+  - WPS Toolkit (wpstk.netlabs.org)
+
+cross-platform packages                       low
+  - SVGAlib (?)
+  - Xlib (Everblue, XFreeOS/2)
+          - Base....................................................YP
+    - GTK
+          - glib....................................................YP
+          - gdk.....................................................YP
+          - gtk.....................................................YP
+      - gtkgl
+          - fpgtk...................................................YP
+      - fix display detection bug
+    - Gnome
+      - art_lgpl
+      - gnome
+      - gnomeui
+      - zvt
+      - gconf
+      - gconfclient
+  - libgd
+          - tcl.....................................................YP
+          - libpng..................................................YP
+          - imlib...................................................YP
+  - OpenGL/MesaGL/Mesa3D/WarpMesaGL
+  - REXX
+    - rxstrings.pp (overloaded functions like len, pos, etc.)
+          - rexxsaa.pp..............................................YP
+  - SciTech SNAP SDK
+  - SciTech MGL
+  - Twain (STi/CFM/Win32)
+
+Odin32 target (as fast as native fpc/2 will be ready)  low
+  - New compiler target (t_odin32.pas)
+  - Add Win32 units compiltation to Makefiles
+
+documentation (fpdoc)                         low
+  - TeX to INF converter
+          - Inf support for fpdoc.........(added by Graeme Geldenhuys)
+  - RTL
+    - CPI
+      - os2defs
+      - doscalls
+      - kbdcalls
+      - moucalls
+      - moncalls
+    - PM
+      - PMWin
+      - PMGPI
+      - PMBitmap
+      - PMStdDlg
+      - PMHelp
+      - PMDev
+      - PMSpl
+      - PMShl
+      - PMWP
+      - PMWSock
+  - native packages
+    - TCP/IP
+      - ftpapi
+      - so32dll
+      - tcp32dll
+    - MMOS/2
+      - mmbase.pas
+      - mci.pas
+      - mciapi.pas
+      - mcidrv.pas
+      - mmio.pas
+      - dive.pas
+      - sw.pas
+    - WarpOverlay!
+      - hwvideo.pas
+  - cross-platform packages
+    - REXX
+      - rexxsaa.pp
+      - rxstrings.pp
+
+sample programs                               low
+
+installation (PM installer with WarpIN DB)    low
+  - Warpin database unit
+  - PM interface to standard FPC installer

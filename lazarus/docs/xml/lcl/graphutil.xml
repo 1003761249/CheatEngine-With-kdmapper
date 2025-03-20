@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+GraphUtil
+====================================================================
+-->
+<module name="GraphUtil">
+<short>Contains routines and types used when drawing graphics.</short>
+<descr>
+<p>
+<file>graphutil.pp</file> contains routines and types used when drawing 
+graphics. They focus primarily on converting colors and drawing gradients, 
+scroll bars, and arrows.
+</p>
+<p>
+It includes routines used to convert between both the HSL (hue, saturation, 
+lightness) and HSV (hue, saturation, brightness value) alternative 
+representations of the RGB color model.
+</p>
+<p>
+HSV models the way different colors mix together, with the saturation 
+dimension resembling various tints of brightly colored paint, and the value 
+dimension resembling the mixture of those paints with varying amounts of 
+black or white paint.
+</p>
+<p>
+HSL places saturated colors around a circle with a lightness value of 0.5, 
+where a lightness value of 0 or 1 is fully black or white (respectively).
+</p>
+<p>
+GraphUtil is used in the Lazarus IDE, in LCL WidgetSet components, and 
+optional Lazarus components like FPReport, SynEdit, and TAChart.
+</p>
+<p>
+<file>graphutil.pp</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved type references Visibility: default -->
+<element name="Types"/>
+<element name="Math"/>
+<element name="SysUtils"/>
+<element name="Graphics"/>
+<element name="LCLType"/>
+<element name="LCLIntf"/>
+<element name="GraphType"/>
+
+<element name="ColorToGray">
+<short>Converts a Lazarus TColor value to its grayscale equivalent.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="ColorToGray.Result">
+<short>Byte contain the grayscale value for the specified color.</short>
+</element>
+<element name="ColorToGray.AColor">
+<short>TColor value converted in the method.</short>
+</element>
+
+<element name="ColorToHLS">
+<short>
+Converts a TColor value to its Hue, Lightness, and Saturation values.
+</short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="ColorToHLS.AColor">
+<short>TColor value converted in the method.</short>
+</element>
+<element name="ColorToHLS.H">
+<short>Hue value for the specified color.</short>
+</element>
+<element name="ColorToHLS.L">
+<short>Lightness value for the specified color.</short>
+</element>
+<element name="ColorToHLS.S">
+<short>Saturation value for the specified color.</short>
+</element>
+
+<element name="RGBtoHLS">
+<short>
+Converts RGB color values to Hue, Lightness, and Saturation values.
+</short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="RGBtoHLS.R">
+<short></short>
+</element>
+<element name="RGBtoHLS.G">
+<short></short>
+</element>
+<element name="RGBtoHLS.B">
+<short></short>
+</element>
+<element name="RGBtoHLS.H">
+<short></short>
+</element>
+<element name="RGBtoHLS.L">
+<short></short>
+</element>
+<element name="RGBtoHLS.S">
+<short></short>
+</element>
+
+<element name="HLStoColor">
+<short>
+Converts Hue, Lightness, and Saturation values to a TColor value.
+</short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="HLStoColor.Result">
+<short></short>
+</element>
+<element name="HLStoColor.H">
+<short></short>
+</element>
+<element name="HLStoColor.L">
+<short></short>
+</element>
+<element name="HLStoColor.S">
+<short></short>
+</element>
+
+<element name="HLStoRGB">
+<short>
+Converts Hue, Lightness, and Saturation values to a RGB color values.
+</short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="HLStoRGB.H">
+<short></short>
+</element>
+<element name="HLStoRGB.L">
+<short></short>
+</element>
+<element name="HLStoRGB.S">
+<short></short>
+</element>
+<element name="HLStoRGB.R">
+<short></short>
+</element>
+<element name="HLStoRGB.G">
+<short></short>
+</element>
+<element name="HLStoRGB.B">
+<short></short>
+</element>
+
+<!-- HSV functions are copied from mbColorLib without changes -->
+<element name="ColorToHSV">
+<short>
+Converts a TColor value to Hue, Saturation, and brightness Values.
+</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="ColorToHSV.c">
+<short></short>
+</element>
+<element name="ColorToHSV.H">
+<short></short>
+</element>
+<element name="ColorToHSV.S">
+<short></short>
+</element>
+<element name="ColorToHSV.V">
+<short></short>
+</element>
+
+<element name="HSVToColor">
+<short>
+Converts Hue, Saturation, and brightness values to a TColor value.
+</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVToColor.Result">
+<short></short>
+</element>
+<element name="HSVToColor.H">
+<short></short>
+</element>
+<element name="HSVToColor.S">
+<short></short>
+</element>
+<element name="HSVToColor.V">
+<short></short>
+</element>
+
+<element name="RGBToHSV">
+<short>Converts RGB values to Hue, Saturation, and brightness values.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="RGBToHSV.Result">
+<short></short>
+</element>
+<element name="RGBToHSV.R">
+<short></short>
+</element>
+<element name="RGBToHSV.G">
+<short></short>
+</element>
+<element name="RGBToHSV.B">
+<short></short>
+</element>
+<element name="RGBToHSV.H">
+<short></short>
+</element>
+<element name="RGBToHSV.S">
+<short></short>
+</element>
+<element name="RGBToHSV.V">
+<short></short>
+</element>
+
+<element name="HSVtoRGB">
+<short>Converts Hue, Saturation, and brightness values to RGB values.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVtoRGB.H">
+<short></short>
+</element>
+<element name="HSVtoRGB.S">
+<short></short>
+</element>
+<element name="HSVtoRGB.V">
+<short></short>
+</element>
+<element name="HSVtoRGB.R">
+<short></short>
+</element>
+<element name="HSVtoRGB.G">
+<short></short>
+</element>
+<element name="HSVtoRGB.B">
+<short></short>
+</element>
+
+<element name="RGBtoHSVRange">
+<short></short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="RGBtoHSVRange.R">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.G">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.B">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.H">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.S">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.V">
+<short></short>
+</element>
+<element name="RGBtoHSVRange.">
+<short></short>
+</element>
+
+<element name="HSVtoRGBRange">
+<short></short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVtoRGBRange.H">
+<short></short>
+</element>
+<element name="HSVtoRGBRange.S">
+<short></short>
+</element>
+<element name="HSVtoRGBRange.V">
+<short></short>
+</element>
+<element name="HSVtoRGBRange.R">
+<short></short>
+</element>
+<element name="HSVtoRGBRange.G">
+<short></short>
+</element>
+<element name="HSVtoRGBRange.B">
+<short></short>
+</element>
+
+<element name="HSVRangeToColor">
+<short></short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVRangeToColor.Result">
+<short></short>
+</element>
+<element name="HSVRangeToColor.H">
+<short></short>
+</element>
+<element name="HSVRangeToColor.S">
+<short></short>
+</element>
+<element name="HSVRangeToColor.V">
+<short></short>
+</element>
+
+<element name="HSVtoRGBTriple">
+<short>
+Converts Hue, Saturation, and brightness values to a TRGBTriple value
+.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVtoRGBTriple.Result">
+<short></short>
+</element>
+<element name="HSVtoRGBTriple.H">
+<short></short>
+</element>
+<element name="HSVtoRGBTriple.S">
+<short></short>
+</element>
+<element name="HSVtoRGBTriple.V">
+<short></short>
+</element>
+
+<element name="HSVtoRGBQuad">
+<short>
+Converts Hue, Saturation, and brightness values to a TRGBQuad value
+.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="HSVtoRGBQuad.Result">
+<short></short>
+</element>
+<element name="HSVtoRGBQuad.H">
+<short></short>
+</element>
+<element name="HSVtoRGBQuad.S">
+<short></short>
+</element>
+<element name="HSVtoRGBQuad.V">
+<short></short>
+</element>
+
+<element name="GetHValue">
+<short>Gets the Hue value from the specified TColor value.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="GetHValue.Result">
+<short></short>
+</element>
+<element name="GetHValue.Color">
+<short></short>
+</element>
+
+<element name="GetSValue">
+<short>Gets the Saturation value from the specified TColor value.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="GetSValue.Result">
+<short>Saturation value for the specified color.</short>
+</element>
+<element name="GetSValue.Color">
+<short>Color examined in the routine.</short>
+</element>
+
+<element name="GetVValue">
+<short>Gets the brightness value from the specified TColor value.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="GetVValue.Result">
+<short>Brightness value for the specified color.</short>
+</element>
+<element name="GetVValue.Color">
+<short>Color examined in the routine.</short>
+</element>
+
+<element name="DrawVerticalGradient">
+<short>
+Draws a gradient from top to bottom with parabolic color variation.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="DrawVerticalGradient.Canvas">
+<short>Canvas where the gradient is drawn.</short>
+</element>
+<element name="DrawVerticalGradient.ARect">
+<short>Rectangle that defines the drawing boundaries for the gradient.</short>
+</element>
+<element name="DrawVerticalGradient.TopColor">
+<short>Color used at the top of the gradient.</short>
+</element>
+<element name="DrawVerticalGradient.BottomColor">
+<short>Color used at the end or bottom of the gradient.</short>
+</element>
+
+<element name="DrawGradientWindow">
+<short>Draws a window with a Title using gradient coloring.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="DrawGradientWindow.Canvas">
+<short>Canvas where the gradient is drawn.</short>
+</element>
+<element name="DrawGradientWindow.WindowRect">
+<short>Rectangle for the window drawn using a gradient .</short>
+</element>
+<element name="DrawGradientWindow.TitleHeight">
+<short>Height of the the title bar in the window.</short>
+</element>
+<element name="DrawGradientWindow.BaseColor">
+<short>Base color for the window.</short>
+</element>
+
+<element name="AntiAliasedStretchDrawBitmap">
+<short>Stretch-draws a bitmap using anti-aliased drawing.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="AntiAliasedStretchDrawBitmap.SourceBitmap">
+<short>Bitmap drawn in the routine.</short>
+</element>
+<element name="AntiAliasedStretchDrawBitmap.DestBitmap">
+<short>Bitmap where the new image is drawn.</short>
+</element>
+<element name="AntiAliasedStretchDrawBitmap.DestWidth">
+<short>Width for the resized image.</short>
+</element>
+<element name="AntiAliasedStretchDrawBitmap.DestHeight">
+<short>Height for the resized image.</short>
+</element>
+
+<element name="BitmapGrayscale">
+<short>
+Converts a bitmap to grayscale taking filtering parameters into account.
+</short>
+<descr>
+<p>
+<var>BitmapGrayscale</var> is a procedure used to convert the specified 
+bitmap image to a grayscale image. It calculates the weighted average of the 
+RGB (Red, Green, Blue) color components of each pixel in the bitmap and 
+assigns it to each color component. Weighting is done by multiplication of 
+the RGB values with the corresponding filter factors in the RedFilter, 
+GreenFilter and BlueFilter arguments. The end result is an image where the 
+original colors are converted to various shades of gray.
+</p>
+<p>
+<var>ABitmap</var> is the <var>TCustomBitmap</var> instance with the original 
+image data.
+</p>
+<p>
+<var>RedFilter</var>, <var>GreenFilter</var> and <var>BlueFilter</var> are 
+multipliers (data type: single) for the red, green, blue color components of 
+each pixel when the average value of the three color components is 
+calculated. Usually these factors are between 0.0 and 1.0 and are selected to 
+suppress or enhance the contribution of the corresponding color channel to 
+the overall grayscale value. The combination 0.30, 0.59, 0.11 for the red, 
+green and blue components, respectively, is often chosen because it matches 
+the sensitivity of the human eye and thus results in a visual brightness 
+impression like in the original color image.
+</p>
+<p>
+<b>Example Usage:</b>
+</p>
+<code>
+BitmapGrayscale(Image1.Picture.Bitmap, 0.30, 0.59, 0.11); // Neutral filter
+BitmapGrayscale(Image1.Picture.Bitmap, 1.00, 0.00, 0.00); // Red filter
+BitmapGrayscale(Image1.Picture.Bitmap, 0.00, 1.00, 0.00); // Green filter
+BitmapGrayscale(Image1.Picture.Bitmap, 0.00, 0.00, 1.00); // Blue filter
+BitmapGrayscale(Image1.Picture.Bitmap, 0.00, 0.50, 0.50); // Cyan filter
+BitmapGrayscale(Image1.Picture.Bitmap, 0.50, 0.00, 0.50); // Magenta filter
+BitmapGrayscale(Image1.Picture.Bitmap, 0.50, 0.50, 0.00); // Yellow filter
+</code>
+</descr>
+<seealso>
+<link id="#lcl.graphics.TCustomBitmap">TCustomBitmap</link>
+</seealso>
+</element>
+<element name="BitmapGrayscale.ABitmap">
+<short>
+Bitmap with the image data converted to grayscale in the routine.
+</short>
+</element>
+<element name="BitmapGrayscale.RedFilter">
+<short>
+Weighting factor for the contribution of the Red color component to the final 
+grayscale image. It multiplies to the value of the Red component of each 
+pixel and thus controls the contribution of the Red color channel to the 
+resulting image. Having RedFilter = 0, for example, results in grayscale 
+shades in which all parts with Red color components are rendered darker.
+</short>
+</element>
+<element name="BitmapGrayscale.GreenFilter">
+<short>
+Weighting factor for the contribution of the Green color component to the 
+final grayscale image. It multiplies to the value of the Green component of 
+each pixel and thus controls the contribution of the Green color channel to 
+the resulting image. Having GreenFilter = 0, for example, results in 
+grayscale shades in which all parts with Green color components are rendered 
+darker.
+</short>
+</element>
+<element name="BitmapGrayscale.BlueFilter">
+<short>
+Weighting factor for the contribution of the Blue color component to the 
+final grayscale image. It multiplies to the value of the Blue component of 
+each pixel and thus controls the contribution of the Blue color channel to 
+the resulting image. Having BlueFilter = 0, for example, results in grayscale 
+shades in which all parts with Blue color components are rendered darker.
+</short>
+</element>
+
+<element name="TScrollDirection">
+<short>
+Enumerated type that indicates the direction for scrollbar arrows.
+</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="TScrollDirection.sdLeft">
+<short></short>
+</element>
+<element name="TScrollDirection.sdRight">
+<short></short>
+</element>
+<element name="TScrollDirection.sdUp">
+<short></short>
+</element>
+<element name="TScrollDirection.sdDown">
+<short></short>
+</element>
+
+<element name="TArrowType">
+<short>Indicates the drawing style for an arrow.</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="TArrowType.atSolid">
+<short>Arrow is drawn using a solid, filled color.</short>
+</element>
+<element name="TArrowType.atArrows">
+<short>Arrow is drawn using chevrons.</short>
+</element>
+
+<element name="NiceArrowAngle">
+<short></short>
+<descr>
+45*pi/180
+</descr>
+<seealso></seealso>
+</element>
+
+<element name="DrawArrow">
+<short>
+Draws a line with an arrow at the specified location on a canvas.
+</short>
+<descr>
+<p>
+<var>DrawArrow</var> is an overloaded procedure used to draw a line between 
+the specified points with an arrow at the ending point. 
+</p>
+<p>
+Overloaded variants of the routine allow the arguments to be specified using 
+various types. The variant with Direction, Location, Size, and ArrowType 
+arguments can draw a line with an arrow head in horizontal or vertical 
+directions only. The variant with the ArrowAngleRad argument allows the slope 
+for sides on the arrow head to be specified as a number of radians.
+</p>
+<p>
+<var>Direction</var> is a <var>TScrollDirection</var> enumeration value, and 
+indicates the direction for the line and the arrow head. Allowed values 
+include: sdLeft, sdRight, sdUp, or sdDown.
+</p>
+<p>
+<var>Location</var> is a <var>TPoint</var> instance which contains the 
+coordinates for the line starting point. This is the same as the 
+<var>p1</var> argument in an overloaded variant. <var>p2</var> is the ending 
+point for the line and the position where the tip of the arrow head is drawn.
+</p>
+<p>
+<var>Size</var> contains the length of the line in pixels. It is used to 
+calculate both the ending point for the line starting at Location, and the 
+position where the tip of the arrow head is drawn.
+</p>
+<p>
+<var>ArrowType</var> is a <var>TArrowType</var> enumeration value, and 
+indicates the drawing style used for the arrow head. atSolid causes the arrow 
+head to be drawn as a filled triangular polygon. atArrows causes two inclined 
+lines to be draw at the tip of the arrow head using the slope angle specified 
+in ArrowAngleRad.
+</p>
+<p>
+<var>ArrowAngleRad</var> is a floating point value with the number of radians 
+for the slope on the sides of the arrow head. The default value for the 
+argument is defined in the NiceArrowAngle constant, and causes a 45 degree 
+angle to be used to draw the inclined sides on arrow head. Use 
+<b>&lt;angle&gt;*pi/180</b> to convert an angle in degrees to radians.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="DrawArrow.Canvas">
+<short>Canvas where the line and arrow are drawn.</short>
+</element>
+<element name="DrawArrow.Direction">
+<short>Direction for arrow head. Left, Right, Up, or Down.</short>
+</element>
+<element name="DrawArrow.Location">
+<short>
+TPoint instance with the canvas coordinates for the line starting point.
+</short>
+</element>
+<element name="DrawArrow.Size">
+<short>
+Length of the line in pixels. Determines the ending point for the line and 
+the position where the tip of the arrow head is drawn.
+</short>
+</element>
+<element name="DrawArrow.ArrowType">
+<short>Drawing style for the arrow.</short>
+</element>
+<element name="DrawArrow.p1">
+<short>
+TPoint instance with the starting point for the line drawn in the routine.
+</short>
+</element>
+<element name="DrawArrow.p2">
+<short>
+TPoint instance with the ending point for the line drawn in the routine. It is also the position where the tip of the arrow head is drawn.
+</short>
+</element>
+<element name="DrawArrow.ArrowLen">
+<short>
+Length in pixels for the arrow head. It is used as an offset from the ending point in the opposite direction used for the line.
+</short>
+</element>
+<element name="DrawArrow.ArrowAngleRad">
+<short>
+Angle specified in radians used to draw the sloped sides on the arrow head.
+</short>
+</element>
+
+<element name="FloodFill">
+<short>
+A simple first-in-first-out circular buffer (queue) for flood-filling 
+contiguous voxels.
+</short>
+<descr>
+<p>
+<var>FloodFill</var> is a procedure which implements a simple 
+first-in-first-out circular buffer (queue) for flood-filling contiguous 
+voxels. This algorithm avoids stack problems associated simple recursive 
+algorithms described in the discussion at <url 
+href="http://steve.hollasch.net/cgindex/polygons/floodfill.html"/>. Please 
+note that the routine is slow because of its use of <var>Canvas.Pixels</var>.
+</p>
+<p>
+Original author: Chris Rorden
+</p>
+</descr>
+<seealso></seealso>
+</element>
+<element name="FloodFill.Canvas">
+<short></short>
+</element>
+<element name="FloodFill.X">
+<short></short>
+</element>
+<element name="FloodFill.Y">
+<short></short>
+</element>
+<element name="FloodFill.lColor">
+<short></short>
+</element>
+<element name="FloodFill.FillStyle">
+<short></short>
+</element>
+
+<element name="ScaleImg">
+<short>Scales the specified image to the required dimensions.</short>
+<descr>
+<p>
+<var>ScaleImg</var> is a procedure used to scale the image in 
+<var>AImage</var> to the dimensions in <var>AWidth</var> and 
+<var>AWidth</var>.
+</p>
+<p>
+ScaleImg calls the <var>CreateIntfImage</var> method in <var>AImage</var> to 
+get a <var>TLazIntfImage</var> instance with the original content. A 
+temporary <var>TLazCanvas</var> instance is created for the source image, and 
+its <var>StretchDraw</var> method is called to resize and draw the interface 
+image on the Canvas. AImage is updated with the resized content, and its 
+<var>Height</var> and <var>Width</var> properties are set to the parameter 
+values.
+</p>
+</descr>
+<seealso></seealso>
+</element>
+<element name="ScaleImg.AImage">
+<short>Bitmap image resize in the routine.</short>
+</element>
+<element name="ScaleImg.AWidth">
+<short>New Width requested for the image.</short>
+</element>
+<element name="ScaleImg.AHeight">
+<short>New height requested for the image.</short>
+</element>
+
+<element name="ColorRGBToHLS">
+<short>
+Converts an RGB color value to Hue, Lightness, and Saturation values
+.</short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="ColorRGBToHLS.clrRGB">
+<short></short>
+</element>
+<element name="ColorRGBToHLS.Hue">
+<short></short>
+</element>
+<element name="ColorRGBToHLS.Luminance">
+<short></short>
+</element>
+<element name="ColorRGBToHLS.Saturation">
+<short></short>
+</element>
+
+<element name="ColorHLSToRGB">
+<short></short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="ColorHLSToRGB.Result">
+<short></short>
+</element>
+<element name="ColorHLSToRGB.Hue">
+<short></short>
+</element>
+<element name="ColorHLSToRGB.Luminance">
+<short></short>
+</element>
+<element name="ColorHLSToRGB.Saturation">
+<short></short>
+</element>
+
+<element name="ColorAdjustLuma">
+<short></short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="ColorAdjustLuma.Result">
+<short></short>
+</element>
+<element name="ColorAdjustLuma.clrRGB">
+<short></short>
+</element>
+<element name="ColorAdjustLuma.n">
+<short></short>
+</element>
+<element name="ColorAdjustLuma.fScale">
+<short></short>
+</element>
+
+<element name="GetHighLightColor">
+<short></short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="GetHighLightColor.Result">
+<short></short>
+</element>
+<element name="GetHighLightColor.Color">
+<short></short>
+</element>
+<element name="GetHighLightColor.Luminance">
+<short></short>
+</element>
+
+<element name="GetShadowColor">
+<short></short>
+<descr></descr>
+<errors/>
+<seealso></seealso>
+</element>
+<element name="GetShadowColor.Result">
+<short></short>
+</element>
+<element name="GetShadowColor.Color">
+<short></short>
+</element>
+<element name="GetShadowColor.Luminance">
+<short></short>
+</element>
+
+<element name="NormalizeRect">
+<short>
+Ensures that coordinates in the rectangle are in the correct order.
+</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="NormalizeRect.Result">
+<short>Rectangle with the corrected values for its coordinates.</short>
+</element>
+<element name="NormalizeRect.R">
+<short>Rectangle examined in the routine.</short>
+</element>
+
+<element name="WaveTo">
+<short>
+Draws a horizontal or vertical wave at the specified position to the given 
+device context.
+</short>
+<descr></descr>
+<seealso></seealso>
+</element>
+<element name="WaveTo.ADC">
+<short>Device context that is the target for the drawing operation.</short>
+</element>
+<element name="WaveTo.X">
+<short>Horizontal position where the wave is drawn.</short>
+</element>
+<element name="WaveTo.Y">
+<short>Vertical position where the wave is drawn.</short>
+</element>
+<element name="WaveTo.R">
+<short>
+Amplitude for changes in horizontal or vertical positions in the wave.
+</short>
+</element>
+</module>
+<!-- GraphUtil -->
+</package>
+</fpdoc-descriptions>

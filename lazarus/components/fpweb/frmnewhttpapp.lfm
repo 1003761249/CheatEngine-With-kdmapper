@@ -1,0 +1,196 @@
+object NewHTTPApplicationForm: TNewHTTPApplicationForm
+  Left = 521
+  Height = 525
+  Top = 280
+  Width = 600
+  AutoSize = True
+  Caption = 'New HTTP server application'
+  ClientHeight = 525
+  ClientWidth = 600
+  Constraints.MinHeight = 525
+  Constraints.MinWidth = 600
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  object SEPort: TSpinEdit
+    AnchorSideLeft.Control = LSEPort
+    AnchorSideTop.Control = LSEPort
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 28
+    Top = 271
+    Width = 122
+    MaxValue = 65535
+    TabOrder = 0
+    Value = 8080
+  end
+  object ButtonPanel1: TButtonPanel
+    AnchorSideTop.Control = CBthreads
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 38
+    Top = 481
+    Width = 588
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object LSEPort: TLabel
+    AnchorSideLeft.Control = GBFileServing
+    AnchorSideTop.Control = GBFileServing
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 20
+    Top = 251
+    Width = 168
+    BorderSpacing.Top = 12
+    Caption = 'Port to listen for requests:'
+    FocusControl = SEPort
+  end
+  object CBthreads: TCheckBox
+    AnchorSideLeft.Control = GBFileServing
+    AnchorSideTop.Control = SEPort
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 24
+    Top = 311
+    Width = 229
+    BorderSpacing.Top = 12
+    Caption = 'Use threads to serve requests in'
+    TabOrder = 2
+  end
+  object GBFileServing: TGroupBox
+    Left = 6
+    Height = 233
+    Top = 6
+    Width = 588
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'File serving'
+    ClientHeight = 208
+    ClientWidth = 584
+    TabOrder = 3
+    object RBNoFiles: TRadioButton
+      AnchorSideLeft.Control = GBFileServing
+      AnchorSideTop.Control = GBFileServing
+      Left = 6
+      Height = 24
+      Top = 6
+      Width = 136
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      Caption = 'Do not serve files'
+      OnChange = RBNoFilesChange
+      TabOrder = 0
+    end
+    object RBSingleRoute: TRadioButton
+      AnchorSideLeft.Control = RBNoFiles
+      AnchorSideTop.Control = RBNoFiles
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 24
+      Top = 42
+      Width = 251
+      BorderSpacing.Top = 12
+      Caption = 'Use single URL route to serve files: '
+      OnChange = RBNoFilesChange
+      TabOrder = 1
+    end
+    object RBDefaultRoute: TRadioButton
+      AnchorSideLeft.Control = RBNoFiles
+      AnchorSideTop.Control = ELocation
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 24
+      Top = 112
+      Width = 184
+      BorderSpacing.Top = 12
+      Caption = 'Default route serves files'
+      Checked = True
+      OnChange = RBNoFilesChange
+      TabOrder = 2
+      TabStop = True
+    end
+    object ELocation: TEdit
+      AnchorSideLeft.Control = RBNoFiles
+      AnchorSideTop.Control = RBSingleRoute
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GBFileServing
+      AnchorSideRight.Side = asrBottom
+      Left = 30
+      Height = 28
+      Top = 72
+      Width = 548
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 24
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      Enabled = False
+      TabOrder = 3
+    end
+    object LDEDocumentRoot: TLabel
+      AnchorSideLeft.Control = RBNoFiles
+      AnchorSideTop.Control = RBDefaultRoute
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 20
+      Top = 154
+      Width = 187
+      BorderSpacing.Top = 18
+      Caption = '&Directory to serve files from:'
+      FocusControl = DEDocumentroot
+    end
+    object DEDocumentroot: TDirectoryEdit
+      AnchorSideLeft.Control = LDEDocumentRoot
+      AnchorSideTop.Control = LDEDocumentRoot
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GBFileServing
+      AnchorSideRight.Side = asrBottom
+      Left = 6
+      Height = 28
+      Top = 174
+      Width = 572
+      DialogTitle = 'Select directory'
+      ShowHidden = False
+      ButtonWidth = 29
+      NumGlyphs = 1
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 4
+    end
+  end
+  object cbStandardModule: TComboBox
+    AnchorSideLeft.Control = LSEPort
+    AnchorSideTop.Control = lblStandardModule
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 28
+    Top = 375
+    Width = 574
+    BorderSpacing.Top = 10
+    ItemHeight = 20
+    Style = csDropDownList
+    TabOrder = 4
+  end
+  object lblStandardModule: TLabel
+    AnchorSideLeft.Control = CBthreads
+    AnchorSideTop.Control = CBthreads
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 20
+    Top = 345
+    Width = 151
+    BorderSpacing.Top = 10
+    Caption = 'Web module to create:'
+  end
+end

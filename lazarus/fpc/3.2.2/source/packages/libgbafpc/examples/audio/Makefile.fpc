@@ -1,0 +1,21 @@
+#
+#   Makefile.fpc for Free Pascal libgbafpc 2.x.y Examples
+#
+[package]
+name=libgbafpc-audio-examples
+version=3.2.2
+
+[target]
+dirs=PlayBoyScout 
+
+[require]
+packages=libgbafpc
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../../..
+
+[rules]
+.NOTPARALLEL:

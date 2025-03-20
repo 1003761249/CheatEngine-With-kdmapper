@@ -1,0 +1,973 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Péter Gábor <ptrg@freemail.hu>\n"
+"Language-Team: Magyar (Hungarian)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: codetoolsstrconsts.crsbracketnotfound
+msgid "bracket ) not found"
+msgstr "a ) zárójel nem található"
+
+#: codetoolsstrconsts.crsbracketnotfound2
+msgid "bracket ] not found"
+msgstr "a ] zárójel nem található"
+
+#: codetoolsstrconsts.crsclosingbracketnotfound
+msgid "closing bracket not found"
+msgstr "a záró zárójel nem található"
+
+#: codetoolsstrconsts.crsfoundunexpectedat
+#, object-pascal-format
+msgid "%s, found unexpected %s at %s"
+msgstr "%s, váratlan %s található itt: %s"
+
+#: codetoolsstrconsts.crsrecordendnotfound
+msgid "record end not found"
+msgstr "a rekord vége nem található"
+
+#: codetoolsstrconsts.ctsaddsdirtoincludepath
+#, object-pascal-format
+msgid "adds %s to IncPath"
+msgstr "%s hozzáadása az IncPath-hoz"
+
+#: codetoolsstrconsts.ctsaddsdirtosourcepath
+#, object-pascal-format
+msgid "adds %s to SrcPath"
+msgstr "%s hozzáadása az SrcPath-hoz"
+
+#: codetoolsstrconsts.ctsancestorisnotproperty
+msgid "ancestor of untyped property is not a property"
+msgstr "a típus nélküli tulajdonság őse nem egy tulajdonság"
+
+#: codetoolsstrconsts.ctsanlclproject
+msgid "an LCL project"
+msgstr "egy LCL projekt"
+
+#: codetoolsstrconsts.ctsanonymdefinitionsarenotallowed
+#, object-pascal-format
+msgid "Anonymous %s definitions are not allowed"
+msgstr "A névtelen %s definíciók nincsenek megengedve"
+
+#: codetoolsstrconsts.ctsawithoutb
+#, object-pascal-format
+msgid "%s without %s"
+msgstr "%s %s nélkül"
+
+#: codetoolsstrconsts.ctsbasetypeofnotfound
+#, object-pascal-format
+msgid "base type of \"%s\" not found"
+msgstr "a(z) \"%s\" alaptípusa nem található"
+
+#: codetoolsstrconsts.ctsbeginatwithoutend
+#, object-pascal-format
+msgid "begin at %s without end"
+msgstr "end nélküli begin itt: %s"
+
+#: codetoolsstrconsts.ctsbinaryoperator
+msgid "binary operator"
+msgstr "bináris műveleti jel"
+
+#: codetoolsstrconsts.ctsbracketcloseexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket close expected, but %s found"
+msgstr "záró zárójel az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsbracketnotfound
+#, object-pascal-format
+msgid "bracket %s not found"
+msgstr "a %s zárójel nem található"
+
+#: codetoolsstrconsts.ctsbracketopenexpectedbutatomfound
+#, object-pascal-format
+msgid "bracket open expected, but %s found"
+msgstr "nyitó zárójel az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctscannotaddaunittotheimplementationbecauseonlyaunith
+msgid "cannot add a unit to the implementation, because only a unit has one"
+msgstr "nem lehet unit-ot hozzáadni az \"implementation\" szakaszhoz, mert az csak a unit-oknak van"
+
+#: codetoolsstrconsts.ctscharacterconstantoutofrange
+msgid "character constant out of range"
+msgstr "a karakterkonstans a tartományon kívülre esik"
+
+#: codetoolsstrconsts.ctscircleindefinitions
+msgid "circle in definitions"
+msgstr "körkörös definíció"
+
+#: codetoolsstrconsts.ctsclassidentifierexpected
+msgid "class identifier expected"
+msgstr "osztályazonosító az elvárt"
+
+#: codetoolsstrconsts.ctsclassnodewithoutparentnode
+msgid "class node without parent node"
+msgstr "osztálycsomópont szülő csomópont nélkül"
+
+#: codetoolsstrconsts.ctsclassnotfound
+#, object-pascal-format
+msgid "class \"%s\" not found"
+msgstr "Az osztály nem található: \"%s\""
+
+#: codetoolsstrconsts.ctsclassnotfound2
+#, object-pascal-format
+msgid "class not found \"%s\""
+msgstr "az osztály nem található: \"%s\""
+
+#: codetoolsstrconsts.ctsclassofdefinitionnotresolved
+#, object-pascal-format
+msgid "\"class of\" definition not resolved: %s"
+msgstr "A \"class of\" definíció nincs feloldva: %s"
+
+#: codetoolsstrconsts.ctsclasssnotfound
+#, object-pascal-format
+msgid "Class %s not found"
+msgstr "Az osztály nem található: %s"
+
+#: codetoolsstrconsts.ctsclasswithoutname
+msgid "class without name"
+msgstr "név nélküli osztály"
+
+#: codetoolsstrconsts.ctscommandlineparameters
+msgid "Command line parameters"
+msgstr "Parancssori paraméterek"
+
+#: codetoolsstrconsts.ctscommentendnotfound
+msgid "Comment end not found"
+msgstr "A megjegyzés vége nem található"
+
+#: codetoolsstrconsts.ctscompiledsrcpath
+msgid "Compiled SrcPath"
+msgstr "Lefordított SrcPath"
+
+#: codetoolsstrconsts.ctscompiler
+msgid "Compiler"
+msgstr "Fordító"
+
+#: codetoolsstrconsts.ctscomponentsdirectory
+msgid "Components Directory"
+msgstr "Komponensek könyvtára"
+
+#: codetoolsstrconsts.ctsconstant
+msgid "constant"
+msgstr "Állandó"
+
+#: codetoolsstrconsts.ctscursorposoutsideofcode
+msgid "cursor pos outside of code"
+msgstr "a beszúrási jel pozíciója a kódon kívülre esik"
+
+#: codetoolsstrconsts.ctscustomcomponentsdirectory
+msgid "Custom Components Directory"
+msgstr "Egyéni komponensek könyvtára"
+
+#: codetoolsstrconsts.ctsdebuggerdirectory
+msgid "Debugger Directory"
+msgstr "Hibakereső könyvtára"
+
+#: codetoolsstrconsts.ctsdefaultancestornotfound
+#, object-pascal-format
+msgid "default ancestor %s not found"
+msgstr "az alapértelmezett ős nem található: %s"
+
+#: codetoolsstrconsts.ctsdefaultclassancestortobjectnotfound
+msgid "default class ancestor TObject not found"
+msgstr "az alapértelmezett TObject ős-osztály nem található"
+
+#: codetoolsstrconsts.ctsdefaultdispinterfaceancestoridispatchnotfound
+msgid "default dispinterface ancestor IDispatch not found"
+msgstr "az alapértelmezett IDispatch ős nem található"
+
+#: codetoolsstrconsts.ctsdefaultfpcsource2operatingsystem
+msgid "Default fpc source Operating System 2"
+msgstr "Alapértelmezett FPC forrás Operációs Rendszer 2"
+
+#: codetoolsstrconsts.ctsdefaultfpcsourceoperatingsystem
+msgid "Default fpc source Operating System"
+msgstr "Alapértelmezett FPC forrás Operációs Rendszer"
+
+#: codetoolsstrconsts.ctsdefaultfpcsymbol
+msgid "Default fpc symbol"
+msgstr "Alapértelmezett FPC szimbólum"
+
+#: codetoolsstrconsts.ctsdefaultfpctargetoperatingsystem
+msgid "Default fpc target Operating System"
+msgstr "Alapértelmezett FPC cél Operációs Rendszer"
+
+#: codetoolsstrconsts.ctsdefaultfpctargetprocessor
+msgid "Default fpc target processor"
+msgstr "Alapértelmezett FPC célprocesszor"
+
+#: codetoolsstrconsts.ctsdefaultinterfaceancestoriinterfacenotfound
+msgid "default interface ancestor IInterface not found"
+msgstr "az alapértelmezett IInterface ős nem található"
+
+#: codetoolsstrconsts.ctsdefaultjavaclassancestorjlobjectnotfound
+msgid "default java class ancestor JLObject not found"
+msgstr "az alapértelmezett JLObject java ős-osztály nem található"
+
+#: codetoolsstrconsts.ctsdefaultparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "default parameter expected, but %s found"
+msgstr "default paraméter az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsdefaultpropertynotfound
+msgid "default property not found"
+msgstr "alapértelmezett tulajdonság nem található"
+
+#: codetoolsstrconsts.ctsdefaultspecifierredefined
+msgid "default specifier redefined"
+msgstr "a default leíró újra lett definiálva"
+
+#: codetoolsstrconsts.ctsdefine
+msgid "Define "
+msgstr "Definiálás"
+
+#: codetoolsstrconsts.ctsdefinelcl
+msgid "Define LCL"
+msgstr "LCL definiálása"
+
+#: codetoolsstrconsts.ctsdefinelclwidgetset
+msgid "Define LCLwidgetset, e.g. LCLgtk"
+msgstr "LCLwidgetset definiálása, pl. LCLgtk"
+
+#: codetoolsstrconsts.ctsdefinemacroname
+#, object-pascal-format
+msgid "Define Macro %s"
+msgstr "%s makró definiálása"
+
+#: codetoolsstrconsts.ctsdefineprocessortype
+msgid "Define processor type"
+msgstr "Processzortípus definiálása"
+
+#: codetoolsstrconsts.ctsdefsforlazarussources
+msgid "Definitions for the Lazarus Sources"
+msgstr "Definíciók a Lazarus források számára"
+
+#: codetoolsstrconsts.ctsdesignerdirectory
+msgid "Designer Directory"
+msgstr "Tervező könyvtára"
+
+#: codetoolsstrconsts.ctsdispidparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "dispid parameter expected, but %s found"
+msgstr "dispid paraméter az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsdispidspecifierredefined
+msgid "dispid specifier redefined"
+msgstr "dispid leíró újra lett definiálva"
+
+#: codetoolsstrconsts.ctsduplicateidentifier
+#, object-pascal-format
+msgid "duplicate identifier: %s"
+msgstr "ismétlődő azonosító: %s"
+
+#: codetoolsstrconsts.ctselse
+msgid "else"
+msgstr "különben"
+
+#: codetoolsstrconsts.ctsendforclassnotfound
+msgid "\"end\" for class/object not found"
+msgstr "Az osztály/objektum vége (\"end\") nem található"
+
+#: codetoolsstrconsts.ctsendforrecordnotfound
+msgid "end for record not found"
+msgstr "A rekord vége (end) nem található"
+
+#: codetoolsstrconsts.ctsendoffile
+msgid "end of file"
+msgstr "fájlvég"
+
+#: codetoolsstrconsts.ctsendofsourceexpectedbutatomfound
+#, object-pascal-format
+msgid "expected end., but %s found"
+msgstr "end. az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsendofsourcenotfound
+msgid "End of source not found."
+msgstr "A forrás vége (end) nem található."
+
+#: codetoolsstrconsts.ctsenumerationtype
+msgid "enumeration type"
+msgstr "felsorolás típus"
+
+#: codetoolsstrconsts.ctserrorduringcreationofnewprocbodies
+msgid "error during creation of new proc bodies"
+msgstr "hiba az új eljárástestek létrehozása közben"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewclassparts
+msgid "error during inserting new class parts"
+msgstr "hiba az új osztály-részek beszúrása közben"
+
+#: codetoolsstrconsts.ctserrorduringinsertingnewusessection
+msgid "error during inserting new units to the main uses section"
+msgstr "hiba az új unit-ok fő uses szakaszba történő beszúrása közben"
+
+#: codetoolsstrconsts.ctserrorindirectiveexpression
+msgid "error in directive expression"
+msgstr "hiba a direktíva kifejezésben"
+
+#: codetoolsstrconsts.ctserrorinparamlist
+msgid "error in paramlist"
+msgstr "hiba a paraméterlistában"
+
+#: codetoolsstrconsts.ctsexpected
+#, object-pascal-format
+msgid "\"%s\" expected"
+msgstr "\"%s\" az elvárt"
+
+#: codetoolsstrconsts.ctsexpectedamethodtypebutfound
+#, object-pascal-format
+msgid "expected a method type, but found %s"
+msgstr "metódustípus az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexpectedbutfound
+#, object-pascal-format
+msgid "expected (, but found %s"
+msgstr "( az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexpectedbutfound2
+#, object-pascal-format
+msgid "expected ), but found %s"
+msgstr ") az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexpectedbutfound3
+#, object-pascal-format
+msgid "expected :=, but %s found"
+msgstr ":= az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexpectedidentifierbutfound
+#, object-pascal-format
+msgid "expected identifier, but found %s"
+msgstr "azonosító az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexpectedsemicolonofstatementbutfound
+#, object-pascal-format
+msgid "expected ; of statement, but found %s"
+msgstr "állományzáró ; az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsexportsclauseonlyallowedinlibraries
+msgid "exports clause only allowed in libraries"
+msgstr "az exports rész csak függvénytárakban van engedélyezve"
+
+#: codetoolsstrconsts.ctsexprtypemustbeclassorrecord
+msgid "expression type must be class or record type"
+msgstr "a kifejezésnek osztály vagy rekord típusúnak kell lenni"
+
+#: codetoolsstrconsts.ctsfileisreadonly
+msgid "file is read only"
+msgstr "a fájl csak olvasható"
+
+#: codetoolsstrconsts.ctsforward
+msgid "Forward"
+msgstr "Előzetes"
+
+#: codetoolsstrconsts.ctsforwardclassdefinitionnotresolved
+#, object-pascal-format
+msgid "Forward class definition not resolved: %s"
+msgstr "Az előzetes osztálydefiníció nincs felodva: %s"
+
+#: codetoolsstrconsts.ctsfpdocsystemon
+msgid "enable FPDocSystem"
+msgstr "FPDocSystem engedélyezése"
+
+#: codetoolsstrconsts.ctsfreepascalcompilerinitialmacros
+msgid "Free Pascal Compiler initial macros"
+msgstr "Free Pascal Compiler kezdeti makrók"
+
+#: codetoolsstrconsts.ctsfreepascalcomponentlibrary
+msgid "Free Pascal Component Library"
+msgstr "Free Pascal komponensek tára"
+
+#: codetoolsstrconsts.ctsfreepascalsourcedir
+msgid "Free Pascal Source Directory"
+msgstr "Free Pascal források könyvtára"
+
+#: codetoolsstrconsts.ctsfreepascalsourcesplusdesc
+#, object-pascal-format
+msgid "Free Pascal Sources, %s"
+msgstr "Free Pascal források, %s"
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass"
+msgid "function GetEnumerator not found in this class"
+msgstr "nem található GetEnumerator függvény ezen osztályban"
+
+#: codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2
+msgctxt "codetoolsstrconsts.ctsfunctiongetenumeratornotfoundinthisclass2"
+msgid "function GetEnumerator not found in this class"
+msgstr "nem található GetEnumerator függvény ezen osztályban"
+
+#: codetoolsstrconsts.ctsgenericidentifier
+msgid "generic identifier"
+msgstr "általánosítható típus (generic) azonosító"
+
+#: codetoolsstrconsts.ctshaserror
+msgid "HasError"
+msgstr "Hibás"
+
+#: codetoolsstrconsts.ctshelperisnotallowed
+#, object-pascal-format
+msgid "Helper after %s is not allowed"
+msgstr "A \"helper\" nem következhet %s után"
+
+#: codetoolsstrconsts.ctsidedirectory
+msgid "IDE Directory"
+msgstr "IDE könyvtára"
+
+#: codetoolsstrconsts.ctsidentexpectedbutatomfound
+#, object-pascal-format
+msgid "identifier expected, but %s found"
+msgstr "azonosító az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsidentexpectedbuteoffound
+msgid "unexpected end of file (identifier expected)"
+msgstr "váratlan fájlvég (azonosító az elvárt)"
+
+#: codetoolsstrconsts.ctsidentexpectedbutkeywordfound
+#, object-pascal-format
+msgid "identifier expected, but keyword %s found"
+msgstr "azonosító az elvárt, de a(z) %s kulcsszó található"
+
+#: codetoolsstrconsts.ctsidentifier
+msgid "identifier"
+msgstr "azonosító"
+
+#: codetoolsstrconsts.ctsidentifieralreadydefined
+#, object-pascal-format
+msgid "Identifier %s already defined"
+msgstr "A(z) %s azonosító már definiálva van"
+
+#: codetoolsstrconsts.ctsidentifiernotfound
+#, object-pascal-format
+msgid "identifier not found: %s"
+msgstr "az azonosító nem található: %s"
+
+#: codetoolsstrconsts.ctsifdefdarwin
+msgid "IfDef Darwin"
+msgstr "IfDef Darwin"
+
+#: codetoolsstrconsts.ctsifdeflinux
+msgid "IfDef Linux"
+msgstr "IfDef Linux"
+
+#: codetoolsstrconsts.ctsifdefwindows
+msgid "IfDef Windows"
+msgstr "IfDef Windows"
+
+#: codetoolsstrconsts.ctsiflclwidgettypeequalsgtk2
+msgid "If LCLWidgetType=gtk2 then"
+msgstr "Ha LCLWidgetType=gtk2 akkor"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos
+msgid "If TargetOS<>SrcOS"
+msgstr "Ha TargetOS<>SrcOS"
+
+#: codetoolsstrconsts.ctsiftargetosisnotsrcos2
+msgid "If TargetOS<>SrcOS2"
+msgstr "Ha TargetOS<>SrcOS2"
+
+#: codetoolsstrconsts.ctsiftargetosisnotwin32
+msgid "If TargetOS<>win32 then"
+msgstr "Ha TargetOS<>win32 akkor"
+
+#: codetoolsstrconsts.ctsillegalcircleinusedunits
+#, object-pascal-format
+msgid "illegal circle using unit: %s"
+msgstr "tiltott körkörös unit-használat: %s"
+
+#: codetoolsstrconsts.ctsillegalqualifier
+#, object-pascal-format
+msgid "illegal qualifier %s found"
+msgstr "tiltott módosító: %s"
+
+#: codetoolsstrconsts.ctsimplementationnodenotfound
+msgid "implementation node not found"
+msgstr "kidolgozási csomópont nem található"
+
+#: codetoolsstrconsts.ctsincludecircledetected
+msgid "Include circle detected"
+msgstr "Körkörös beemelés észlelve"
+
+#: codetoolsstrconsts.ctsincludedirectoriesplusdirs
+#, object-pascal-format
+msgid "include directories: %s"
+msgstr "beemelések könyvtárai: %s"
+
+#: codetoolsstrconsts.ctsincludefilenotfound
+#, object-pascal-format
+msgid "include file not found \"%s\""
+msgstr "az beemelt fájl nem található: \"%s\""
+
+#: codetoolsstrconsts.ctsincompatibletypesgotexpected
+#, object-pascal-format
+msgid "incompatibles types: expected \"%s\" but got \"%s\""
+msgstr "össze nem illő típusok: \"%s\" az elvárt, de \"%s\" van helyette"
+
+#: codetoolsstrconsts.ctsindexparameterexpectedbutatomfound
+#, object-pascal-format
+msgid "index parameter expected, but %s found"
+msgstr "index paraméter az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsindexspecifierredefined
+msgid "index specifier redefined"
+msgstr "az index leíró újra lett definiálva"
+
+#: codetoolsstrconsts.ctsinheritedkeywordonlyallowedinmethods
+msgid "inherited keyword only allowed in methods"
+msgstr "Az inherited kulcsszó csak metódusokban használató"
+
+#: codetoolsstrconsts.ctsinstalldirectory
+msgid "Install Directory"
+msgstr "Telepítési könyvtár"
+
+#: codetoolsstrconsts.ctsinstallerdirectories
+msgid "Installer directories"
+msgstr "Telepítő könyvtárai"
+
+#: codetoolsstrconsts.ctsinterfacesectionnotfound
+msgid "interface section not found"
+msgstr "felület szakasz nem található"
+
+#: codetoolsstrconsts.ctsinvalidclassname
+#, object-pascal-format
+msgid "invalid class name=\"%s\""
+msgstr "érvénytelen osztálynév=\"%s\""
+
+#: codetoolsstrconsts.ctsinvalidclassname2
+#, object-pascal-format
+msgid "invalid class name \"%s\""
+msgstr "érvénytelen osztálynév: \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidflagvaluefordirective
+#, object-pascal-format
+msgid "invalid flag value \"%s\" for directive %s"
+msgstr "érvénytelen jelzőérték: \"%s\" a(z) %s direktíva számára"
+
+#: codetoolsstrconsts.ctsinvalidmode
+#, object-pascal-format
+msgid "invalid mode \"%s\""
+msgstr "érvénytelen mód: \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidoperator
+#, object-pascal-format
+msgid "invalid operator %s"
+msgstr "érvénytelen művelet: %s"
+
+#: codetoolsstrconsts.ctsinvalidpositionforinsertionofstatements
+msgid "invalid position for insertion of statements"
+msgstr "az adott pozícióba nem lehet állományokat beszúrni"
+
+#: codetoolsstrconsts.ctsinvalidsubrange
+msgid "invalid subrange"
+msgstr "érvénytelen tartomány"
+
+#: codetoolsstrconsts.ctsinvalidtype
+msgid "invalid type"
+msgstr "érvénytelen típus"
+
+#: codetoolsstrconsts.ctsinvalidvariablename
+#, object-pascal-format
+msgid "invalid variable name \"%s\""
+msgstr "érvénytelen változónév: \"%s\""
+
+#: codetoolsstrconsts.ctsinvalidvariabletype
+#, object-pascal-format
+msgid "invalid variable type \"%s\""
+msgstr "érvénytelen változótípus: \"%s\""
+
+#: codetoolsstrconsts.ctskeyword
+msgid "keyword"
+msgstr "kulcsszó"
+
+#: codetoolsstrconsts.ctskeywordexampleexpectedbutatomfound
+#, object-pascal-format
+msgid "keyword (e.g. %s) expected, but %s found"
+msgstr "kulcsszó (pl. %s) az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctskeywordin
+msgid "keyword \"in\""
+msgstr "\"in\" kulcsszó"
+
+#: codetoolsstrconsts.ctslazarusmaindirectory
+msgid "lazarus main directory"
+msgstr "a Lazarus fő könyvtára"
+
+#: codetoolsstrconsts.ctslazarussources
+msgid "Lazarus Sources"
+msgstr "Lazarus források"
+
+#: codetoolsstrconsts.ctsmethodhasnodeclaration
+#, object-pascal-format
+msgid "method \"%s\" has no declaration"
+msgstr "a metódus nincs deklarálva: \"%s\""
+
+#: codetoolsstrconsts.ctsmethodname
+msgid "method name"
+msgstr "metódusnév"
+
+#: codetoolsstrconsts.ctsmethodsignaturesnotfoundinclass
+#, object-pascal-format
+msgid "Method signature %s not found in class"
+msgstr "A(z) %s metódus bejegyzése nem található az osztályban"
+
+#: codetoolsstrconsts.ctsmethodtypedefinitionnotfound
+msgid "method type definition not found"
+msgstr "a metódustípus definíciója nem található"
+
+#: codetoolsstrconsts.ctsmissing
+msgid "missing :="
+msgstr "hiányzó :="
+
+#: codetoolsstrconsts.ctsmissingenumlist
+msgid "missing enum list"
+msgstr "hiányzó felsorolás"
+
+#: codetoolsstrconsts.ctsmissingpointafterend
+msgid "missing . after end"
+msgstr "hiányzik a . az end után"
+
+#: codetoolsstrconsts.ctsmissingtypeidentifier
+msgid "missing type identifier"
+msgstr "hiányzó típusazonosító"
+
+#: codetoolsstrconsts.ctsnameddirectory
+#, object-pascal-format
+msgid "%s Directory"
+msgstr "%s könyvtár"
+
+#: codetoolsstrconsts.ctsnamedproject
+#, object-pascal-format
+msgid "%s Project"
+msgstr "%s projekt"
+
+#: codetoolsstrconsts.ctsneededbymode
+#, object-pascal-format
+msgid " (needed by mode \"%s\")"
+msgstr " (a(z) \"%s\" mód igényli)"
+
+#: codetoolsstrconsts.ctsnesteddefinitionsarenotallowed
+#, object-pascal-format
+msgid "Nested %s definitions are not allowed"
+msgstr "A beágyazott %s definíciók nincsenek megengedve"
+
+#: codetoolsstrconsts.ctsnewprocbodynotfound
+msgid "new proc body not found"
+msgstr "új eljárástest nem található"
+
+#: codetoolsstrconsts.ctsnocontextnodefoundatcursor
+msgid "no context node found at cursor"
+msgstr "nincs csomópont a beszúrási jelnél"
+
+#: codetoolsstrconsts.ctsnodefaultspecifierdefinedtwice
+msgid "nodefault specifier defined twice"
+msgstr "a \"nodefault\" leíró kétszer van megadva"
+
+#: codetoolsstrconsts.ctsnopascalcodefound
+#, object-pascal-format
+msgid "no pascal code found (first token is %s)"
+msgstr "pascal kód nem található (az első vezérjel: %s)"
+
+#: codetoolsstrconsts.ctsnoscanneravailable
+msgid "No scanner available"
+msgstr "Nincs elérhető elemző"
+
+#: codetoolsstrconsts.ctsnoscannerfound
+#, object-pascal-format
+msgid "No scanner found for \"%s\". If this is an include file, please open the main source first."
+msgstr "Nincs elérhető elemző ehhez: \"%s\". Ha ez egy beemelt fájl akkor előbb nyissa meg a fő forrásfájlt!"
+
+#: codetoolsstrconsts.ctsnotenoughgenparams
+msgid "Not enough actual generic parameters"
+msgstr "Nincs elég paraméter az általánosítható típus (generic) számára"
+
+#: codetoolsstrconsts.ctsoldmethodnotfound
+#, object-pascal-format
+msgid "old method not found: %s"
+msgstr "a régi metódus nem található: %s"
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound
+#, object-pascal-format
+msgid "operand expected but %s found"
+msgstr "adat az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsoperandexpectedbutfound2
+#, object-pascal-format
+msgid "operand expected, but %s found"
+msgstr "adat az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutatomfound
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutatomfound"
+msgid "operator expected, but %s found"
+msgstr "operátor az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbuteoffound
+msgid "unexpected end of file (operator expected)"
+msgstr "váratlan fájlvég (operátor az elvárt)"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound
+#, object-pascal-format
+msgid "operator expected but %s found"
+msgstr "operátor az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsoperatorexpectedbutfound2
+#, object-pascal-format
+msgctxt "codetoolsstrconsts.ctsoperatorexpectedbutfound2"
+msgid "operator expected, but %s found"
+msgstr "operátor az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsothercompilerdefines
+#, object-pascal-format
+msgid "%s Compiler Defines"
+msgstr "%s fordító definíció"
+
+#: codetoolsstrconsts.ctspackagedirectories
+msgid "Package directories"
+msgstr "Csomag könyvtárak"
+
+#: codetoolsstrconsts.ctspackagerdirectory
+msgid "Packager Directory"
+msgstr "Csomagkezelő könyvtára"
+
+#: codetoolsstrconsts.ctspackagerregistrationdirectory
+msgid "Packager Registration Directory"
+msgstr "Csomagkezelő regisztrációs könyvtára"
+
+#: codetoolsstrconsts.ctspackagerunitsdirectory
+msgid "Packager Units Directory"
+msgstr "Csomagkezelő unit-jainak könyvtára"
+
+#: codetoolsstrconsts.ctspointhintprocstartat
+msgid ".  Hint: proc start at "
+msgstr ".  Tipp: eljárás kezdete: "
+
+#: codetoolsstrconsts.ctspointstartat
+msgid ". start at "
+msgstr ". Kezdés: "
+
+#: codetoolsstrconsts.ctspositionnotinsource
+msgid "Position not in source"
+msgstr "A pozíció nincs a forrásban"
+
+#: codetoolsstrconsts.ctsprocedureorfunctionorconstructorordestructor
+msgid "procedure or function or constructor or destructor"
+msgstr "procedure vagy function vagy constructor vagy destructor"
+
+#: codetoolsstrconsts.ctsprocessorspecific
+msgid "processor specific"
+msgstr "processzor-függő"
+
+#: codetoolsstrconsts.ctsproperttypeexpectedbutatomfound
+#, object-pascal-format
+msgid "property type expected, but %s found"
+msgstr "tulajdonságtípus az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctspropertycurrentnotfound
+msgid "property Current not found"
+msgstr "a Current tulajdonság nem található"
+
+#: codetoolsstrconsts.ctspropertyspecifieralreadydefined
+#, object-pascal-format
+msgid "property specifier already defined: %s"
+msgstr "a tulajdonságleíró már meg van adva: %s"
+
+#: codetoolsstrconsts.ctsqualifierexpectedbutatomfound
+#, object-pascal-format
+msgid "qualifier expected but %s found"
+msgstr "módosító az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsresetalldefines
+msgid "Reset all defines"
+msgstr "Minden definíció alapra állítása"
+
+#: codetoolsstrconsts.ctsresulttypeoffunctiongetenumeratornotfound
+msgid "result type of function GetEnumerator not found"
+msgstr "a GetEnumerator függvény visszatérési típusa nem található"
+
+#: codetoolsstrconsts.ctsruntimelibrary
+msgid "Runtime library"
+msgstr "Futási idejű függvénytár"
+
+#: codetoolsstrconsts.ctsscannedfiles
+#, object-pascal-format
+msgid "Scanned files: %s"
+msgstr "Átvizsgált fájlok: %s"
+
+#: codetoolsstrconsts.ctssemicolonafterpropspecmissing
+#, object-pascal-format
+msgid "; expected after \"%s\" property specifier, but %s found"
+msgstr "; az elvárt a(z) \"%s\" tulajdonságleíró után, de %s található"
+
+#: codetoolsstrconsts.ctssemicolonnotfound
+msgid "semicolon not found"
+msgstr "pontosvessző nem található"
+
+#: codetoolsstrconsts.ctssetsincpathto
+#, object-pascal-format
+msgid "sets IncPath to %s"
+msgstr "az IncPath beállítása erre: %s"
+
+#: codetoolsstrconsts.ctssetssrcpathto
+#, object-pascal-format
+msgid "sets SrcPath to %s"
+msgstr "az SrcPath beállítása erre: %s"
+
+#: codetoolsstrconsts.ctssourcefilenamesforstandardfpcunits
+msgid "Source filenames for the standard fpc units"
+msgstr "Az alapvető FPC unit-ok forrásfájlnevei"
+
+#: codetoolsstrconsts.ctssourceisnotunit
+msgid "source is not unit"
+msgstr "a forráskód nem unit"
+
+#: codetoolsstrconsts.ctssourcenotfoundunit
+#, object-pascal-format
+msgid "source not found: unit %s. Check your FPC source directory."
+msgstr "A forrás nem található: %s unit. Ellenőrizze az FPC források könyvtárát."
+
+#: codetoolsstrconsts.ctssrcpathinitialization
+msgid "SrcPath Initialization"
+msgstr "SrcPath kezdőértékének beállítása"
+
+#: codetoolsstrconsts.ctsstrexpectedbutatomfound
+#, object-pascal-format
+msgid "expected %s, but %s found"
+msgstr "%s az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctsstringconstant
+msgid "string constant"
+msgstr "szöveg konstans"
+
+#: codetoolsstrconsts.ctssyntaxerrorinexpr
+#, object-pascal-format
+msgid "Syntax Error in expression \"%s\""
+msgstr "Szintaktikai hiba a kifejezésben: \"%s\""
+
+#: codetoolsstrconsts.ctstermnotsimple
+msgid "Term has no simple type"
+msgstr "A kifejezés nem egyszerű típusú"
+
+#: codetoolsstrconsts.ctsthenexpectedbutfound
+#, object-pascal-format
+msgid "then expected, but %s found"
+msgstr "then az elvárt, de %s található"
+
+#: codetoolsstrconsts.ctstoolsdirectory
+msgid "Tools Directory"
+msgstr "Eszközök könyvtára"
+
+#: codetoolsstrconsts.ctstype
+msgid "type"
+msgstr "típus"
+
+#: codetoolsstrconsts.ctstypeidentifier
+msgid "type identifier"
+msgstr "típusazoniosító"
+
+#: codetoolsstrconsts.ctstypeisonlyallowedingenericsendofclassnotfound
+msgid "type is only allowed in generics, end of class not found"
+msgstr "a type kulcsszó csak általánosítható típusokban (generic) megengedett, az osztály vége (end) nem található"
+
+#: codetoolsstrconsts.ctstypesectionofclassnotfound
+msgid "type section of class not found"
+msgstr "az osztály típus szakasza nem található"
+
+#: codetoolsstrconsts.ctsunabletoapplychanges
+msgid "unable to apply changes"
+msgstr "a változtatásokat nem lehet alkalmazni"
+
+#: codetoolsstrconsts.ctsunabletocompleteproperty
+msgid "unable to complete property"
+msgstr "a tulajdonságot nem lehet kiegészíteni"
+
+#: codetoolsstrconsts.ctsundefine
+msgid "Undefine "
+msgstr "Definíció törlése"
+
+#: codetoolsstrconsts.ctsunexpectedendofsource
+msgid "unexpected end of source"
+msgstr "váratlanul véget ért a forráskód"
+
+#: codetoolsstrconsts.ctsunexpectedkeyword
+#, object-pascal-format
+msgid "unexpected keyword \"%s\""
+msgstr "váratlan kulcsszó \"%s\""
+
+#: codetoolsstrconsts.ctsunexpectedkeyword2
+#, object-pascal-format
+msgid "unexpected keyword %s"
+msgstr "váratlan kulcsszó: %s"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinasmblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in asm block found"
+msgstr "váratlan kulcsszó található az asm részben: \"%s\""
+
+#: codetoolsstrconsts.ctsunexpectedkeywordinbeginendblock
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" in begin..end found"
+msgstr "váratlan kulcsszó található a begin..end részben: %s"
+
+#: codetoolsstrconsts.ctsunexpectedkeywordwhilereadingbackwards
+#, object-pascal-format
+msgid "unexpected keyword \"%s\" found while reading blocks backwards"
+msgstr "váratlan kulcsszó: \"%s\" a blokkok visszafelé olvasása közben"
+
+#: codetoolsstrconsts.ctsunexpectedsectionkeyword
+#, object-pascal-format
+msgid "unexpected section keyword %s found"
+msgstr "váratlan szakasz kulcsszó: %s"
+
+#: codetoolsstrconsts.ctsunexpectedsubrangeoperatorfound
+msgid "unexpected subrange operator '..' found"
+msgstr "váratlan résztartomány '..' jel"
+
+#: codetoolsstrconsts.ctsunitnotfound
+#, object-pascal-format
+msgid "unit not found: %s"
+msgstr "a unit nem található: %s"
+
+#: codetoolsstrconsts.ctsunitpathinitialization
+msgid "UnitPath Initialization"
+msgstr "UnitPath kezdőértékének beállítása"
+
+#: codetoolsstrconsts.ctsunknownfunction
+#, object-pascal-format
+msgid "Unknown function %s"
+msgstr "Ismeretlen eljárás: %s"
+
+#: codetoolsstrconsts.ctsunknownmainfilename
+msgid "(unknown mainfilename)"
+msgstr "(ismeretlen főfájlnév)"
+
+#: codetoolsstrconsts.ctsunknownsubdescriptor
+#, object-pascal-format
+msgid "(unknown subdescriptor %s)"
+msgstr "(ismeretlen al-leíró: %s)"
+
+#: codetoolsstrconsts.ctsunparsed
+msgid "Unparsed"
+msgstr "Nincs elemezve"
+
+#: codetoolsstrconsts.ctsusedunitisnotapascalunit
+msgid "used unit is not a pascal unit"
+msgstr "a használt unit nem pascal unit"
+
+#: codetoolsstrconsts.ctsutilsdirectories
+msgid "Utils directories"
+msgstr "Eszközök könyvtárai"
+
+#: codetoolsstrconsts.ctsvarisonlyallowedingenericsendofclassnotfound
+msgid "var is only allowed in generics, end of class not found"
+msgstr "a var kulcsszó csak általánosítható típusokban (generic) megengedett, az osztály vége (end) nem található"
+
+#: codetoolsstrconsts.ctswordnotfound
+#, object-pascal-format
+msgid "\"%s\" not found"
+msgstr "\"%s\" nem található"
+

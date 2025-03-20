@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="LCL">
+<!--
+====================================================================
+ReplaceDlgUnit
+====================================================================
+-->
+<module name="ReplaceDlgUnit">
+<short>Contains the form which implements a Replace Dialog.</short>
+<descr>
+<p>
+Only the .lfm file is used by the LCL (dialogs.pp). This unit is itself is 
+not compiled into the LCL. This form is used to design the .lfm file.
+</p>
+<p>
+The source code is a copy of <file>../lcl/include/finddialog.inc</file>.
+</p>
+</descr>
+
+<!-- used units -->
+<element name="System"/>
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Forms"/>
+<element name="Controls"/>
+<element name="Graphics"/>
+<element name="Dialogs"/>
+<element name="StdCtrls"/>
+<element name="Buttons"/>
+<element name="FindDlgUnit"/>
+<element name="ExtCtrls"/>
+
+<element name="TReplaceDialog">
+<short>Forward declaration for the class.</short>
+<seealso/>
+</element>
+
+<element name="TReplaceDialogForm">
+<short>
+Form displayed when a TReplaceDialog instance is executed.
+</short>
+<descr>
+<p>
+<var>TReplaceDialogForm</var> is the design-time tool used to layout the form 
+displayed when a TReplaceDialog instance is executed. The code produced by the 
+form designer is reproduced in and included by the 
+<file>../lcl/include/finddialog.inc</file> file.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.PromptOnReplaceCheckBox">
+<short>
+Check box used to enable or disable "Prompt on Replace" in the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.EntireScopeCheckBox">
+<short>
+Check box used to enable or disable the "Search entire file" option on the 
+dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.FindMoreButton">
+<short>
+Button used to execute the "Find more" action for the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.ReplaceButton">
+<short>
+Button used to execute the "Replace" action for the the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.ReplaceAllButton">
+<short>
+Button used to execute the "Replace all" action for the the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.CancelButton">
+<short>
+Button used to execute the "Cancel" action for the the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.HelpButton">
+<short>
+Button used to execute the "Help" action for the the dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.WholeWordsOnlyCheckBox">
+<short>
+Check box used to enable or disable the "Whole words only" option for the 
+dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.CaseSensitiveCheckBox">
+<short>
+Check box used to enable or disable the "Case sensitive" option for the 
+dialog form.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.EditFind">
+<short>
+Edit control with the value to locate using the dialog.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.EditReplace">
+<short>
+Edit control with the replacement value for the dialog.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.TextLabel">
+<short>
+Displays the caption for the EditFind control.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.ReplaceLabel">
+<short>
+Displays the caption for the EditReplace control.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+<element name="TReplaceDialogForm.DirectionRadioGroup">
+<short>
+Radio button group used to select the search direction (Forward or Backward) 
+for the dialog.
+</short>
+<seealso>
+<link id="#lcl.dialogs.TReplaceDialog">TReplaceDialog</link>
+</seealso>
+</element>
+
+</module>
+<!-- ReplaceDlgUnit -->
+</package>
+</fpdoc-descriptions>

@@ -1,0 +1,55 @@
+object EchoModule: TEchoModule
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Actions = <  
+    item
+      Name = 'Manual'
+      Default = True
+      OnRequest = TFPWebActions0Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'Dispatch'
+      Default = False
+      OnRequest = TFPWebActions1Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'Registered'
+      Default = False
+      OnRequest = TFPWebActions2Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'ExtDirect'
+      Default = False
+      OnRequest = TFPWebActions3Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'Content'
+      Default = False
+      OnRequest = TFPWebActions4Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'ExtDirectAPI'
+      Default = False
+      OnRequest = TFPWebActions5Request
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'Module'
+      Default = False
+      OnRequest = TFPWebActions6Request
+      Template.AllowTagParams = False
+    end>
+  ActionVar = 'Action'
+  CreateSession = False
+  Kind = wkOneShot
+  Height = 260
+  HorizontalOffset = 578
+  VerticalOffset = 373
+  Width = 442
+  PPI = 96
+end

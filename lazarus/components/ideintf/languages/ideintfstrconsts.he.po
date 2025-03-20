@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+#, fuzzy
+msgid "Abort"
+msgstr "בטל"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "הוסף"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr "תמיד"
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "הו&סף"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr ""
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "מ&חק"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr ""
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "מאופשר"
+
+#: ideintfstrconsts.lisbtnok
+msgid "&OK"
+msgstr "א&שר"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "בטל"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "המשך"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "העתק"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "חתוך"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "מחק"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr "מבוטל"
+
+#: ideintfstrconsts.lisdlgadd
+#, fuzzy
+#| msgid "Add..."
+msgid "Add ..."
+msgstr "הוסף ..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "מאופשר"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "עזרה"
+
+#: ideintfstrconsts.lisignore
+#, fuzzy
+msgid "Ignore"
+msgstr "התעלם"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "לזארוס"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr "אף פעם"
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr "לא"
+
+#: ideintfstrconsts.lisok
+#, fuzzy
+#| msgid "ok"
+msgid "OK"
+msgstr "אשר"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "הדבק"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr ""
+

@@ -1,0 +1,83 @@
+object BuildModeDiffDialog: TBuildModeDiffDialog
+  Left = 407
+  Height = 409
+  Top = 266
+  Width = 476
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'BuildModeDiffDialog'
+  ClientHeight = 409
+  ClientWidth = 476
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 377
+    Width = 464
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.Enabled = False
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.Enabled = False
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    CancelButton.Enabled = False
+    TabOrder = 2
+    ShowButtons = [pbClose]
+    ShowBevel = False
+  end
+  object ModeLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ModeComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 6
+    Height = 14
+    Top = 10
+    Width = 60
+    BorderSpacing.Left = 6
+    Caption = 'ModeLabel'
+    ParentColor = False
+  end
+  object ModeComboBox: TComboBox
+    AnchorSideLeft.Control = ModeLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 72
+    Height = 23
+    Top = 6
+    Width = 398
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    ItemHeight = 14
+    OnChange = ModeComboBoxChange
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object DiffLabel: TLabel
+    Left = 6
+    Height = 14
+    Top = 33
+    Width = 48
+    Caption = 'DiffLabel'
+    ParentColor = False
+  end
+  object DiffTreeView: TTreeView
+    AnchorSideTop.Control = DiffLabel
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 318
+    Top = 53
+    Width = 464
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    TabOrder = 1
+  end
+end

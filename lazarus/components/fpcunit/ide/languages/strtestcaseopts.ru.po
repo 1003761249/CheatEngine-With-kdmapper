@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: strtestcaseopts.sbtncreate
+msgid "Create unit"
+msgstr "Создать модуль"
+
+#: strtestcaseopts.schksetup
+msgid "Create Setup Method"
+msgstr "Создать настраивающий метод"
+
+#: strtestcaseopts.schktear
+msgid "Create TearDown method"
+msgstr "Создать завершающий метод"
+
+#: strtestcaseopts.sfpcunconsoletestapp
+msgid "FPCUnit Console Test Application"
+msgstr "Консольное тестовое приложение FPCUnit"
+
+#: strtestcaseopts.sfpcunconsoletestdesc
+msgid "An application to run FPCUnit test cases in console mode."
+msgstr "Приложение для запуска тестов FPCUnit в режиме консоли."
+
+#: strtestcaseopts.sfpcuntestapp
+msgid "FPCUnit Test Application"
+msgstr "Тестовое приложение FPCUnit"
+
+#: strtestcaseopts.sfpcuntestappdesc
+msgid "An application to run FPCUnit test cases."
+msgstr "Приложение для запуска тестов FPCUnit."
+
+#: strtestcaseopts.sfpcuntestcase
+msgid "FPCUnit Test Case"
+msgstr "Тест FPCUnit"
+
+#: strtestcaseopts.sfpcuntestcasedesc
+msgid "A unit containing a FPCUnit Test Case."
+msgstr "Модуль, содержащий тест FPCUnit."
+
+#: strtestcaseopts.sfrmtest
+msgid "TestCase Options"
+msgstr "Параметры теста"
+
+#: strtestcaseopts.sgrpfixture
+msgid "Fixture"
+msgstr "Общие методы"
+
+#: strtestcaseopts.sgrpnames
+msgid "Names"
+msgstr "Имена"
+
+#: strtestcaseopts.slbldefault
+msgid "Default Test Name"
+msgstr "Имя теста по умолчанию"
+
+#: strtestcaseopts.swriteyourowntest
+msgid "Write your own test"
+msgstr "Напишите ваш тест"
+

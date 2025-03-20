@@ -1,0 +1,10 @@
+{
+  "DropFiles" : {
+    "Category" : "General",
+    "Keywords" : [
+      "drag files",
+      "drag and drop"
+    ],
+    "Description" : "Demonstrates dropping a file dragged from a file manager and displaying the result. "
+  }
+}

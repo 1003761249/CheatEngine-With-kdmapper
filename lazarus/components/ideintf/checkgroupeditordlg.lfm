@@ -1,0 +1,202 @@
+object CheckGroupEditorDlg: TCheckGroupEditorDlg
+  Left = 394
+  Height = 300
+  Top = 195
+  Width = 608
+  ActiveControl = DuplicateCheckBox
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'CheckGroupEditorDlg'
+  ClientHeight = 300
+  ClientWidth = 608
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.9.0.0'
+  object ColumnsLabel: TLabel
+    AnchorSideLeft.Control = FCheck
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = DuplicateCheckBox
+    AnchorSideTop.Side = asrBottom
+    Left = 372
+    Height = 15
+    Top = 74
+    Width = 85
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    Caption = 'ColumnsLabel'
+    ParentColor = False
+  end
+  object FCheck: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ToolBar
+    AnchorSideBottom.Control = BtnPanel
+    Left = 6
+    Height = 229
+    Top = 32
+    Width = 360
+    Align = alLeft
+    AutoFill = True
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    Caption = 'FCheck'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    OnItemClick = ItemClick
+    PopupMenu = FPopupMenu
+    TabOrder = 0
+  end
+  object DuplicateCheckBox: TCheckBox
+    AnchorSideLeft.Control = FCheck
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = FCheck
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 372
+    Height = 20
+    Top = 48
+    Width = 230
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 16
+    BorderSpacing.Right = 6
+    Caption = 'DuplicateCheckBox'
+    Checked = True
+    State = cbChecked
+    TabOrder = 1
+  end
+  object ColumnsEdit: TEdit
+    AnchorSideLeft.Control = ColumnsLabel
+    AnchorSideTop.Control = ColumnsLabel
+    AnchorSideTop.Side = asrBottom
+    Left = 375
+    Height = 29
+    Top = 92
+    Width = 34
+    BorderSpacing.Left = 3
+    BorderSpacing.Top = 3
+    Color = clBtnFace
+    OnChange = ColumnsEditChange
+    ReadOnly = True
+    TabOrder = 2
+    Text = '1'
+  end
+  object ColumnsUpDown: TUpDown
+    AnchorSideLeft.Control = ColumnsEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ColumnsEdit
+    AnchorSideBottom.Control = ColumnsEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 409
+    Height = 29
+    Top = 92
+    Width = 17
+    Anchors = [akTop, akLeft, akBottom]
+    Associate = ColumnsEdit
+    Min = 1
+    Position = 1
+    TabOrder = 3
+    Wrap = False
+  end
+  object ToolBar: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 608
+    Caption = 'ToolBar'
+    TabOrder = 4
+    object tbAdd: TToolButton
+      Left = 1
+      Top = 2
+      Caption = 'tbAdd'
+      OnClick = AddItem
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object tbDelete: TToolButton
+      Left = 24
+      Top = 2
+      Caption = 'tbDelete'
+      OnClick = DeleteItem
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object ToolButton3: TToolButton
+      Left = 47
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton3'
+      Style = tbsDivider
+    end
+    object tbUp: TToolButton
+      Left = 52
+      Top = 2
+      Caption = 'tbUp'
+      OnClick = MoveUpItem
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object tbDown: TToolButton
+      Left = 75
+      Top = 2
+      Caption = 'tbDown'
+      OnClick = MoveDownItem
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object ToolButton6: TToolButton
+      Left = 98
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton6'
+      Style = tbsDivider
+    end
+    object tbEdit: TToolButton
+      Left = 103
+      Top = 2
+      Caption = 'tbEdit'
+      OnClick = ModifyItem
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object LabelDisable: TLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Side = asrBottom
+      Left = 126
+      Height = 15
+      Top = 2
+      Width = 77
+      Caption = 'LabelDisable'
+      Font.Color = clHighlight
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object BtnPanel: TButtonPanel
+    Left = 6
+    Height = 27
+    Top = 267
+    Width = 596
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 5
+    ShowBevel = False
+  end
+  object FPopupMenu: TPopupMenu
+    OnPopup = CreateItems
+    left = 480
+    top = 145
+  end
+end

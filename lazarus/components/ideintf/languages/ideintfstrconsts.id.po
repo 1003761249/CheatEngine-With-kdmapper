@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ideintfstrconsts.lisabort
+#, fuzzy
+msgid "Abort"
+msgstr "Batalkan"
+
+#: ideintfstrconsts.lisadd
+msgid "Add"
+msgstr "Tambah"
+
+#: ideintfstrconsts.lisalways
+msgid "Always"
+msgstr ""
+
+#: ideintfstrconsts.lisbtnadd
+msgid "&Add"
+msgstr "T&ambah"
+
+#: ideintfstrconsts.lisbtncontinue
+msgid "&Continue"
+msgstr ""
+
+#: ideintfstrconsts.lisbtndelete
+msgid "&Delete"
+msgstr "&Hapus"
+
+#: ideintfstrconsts.lisbtndlgadd
+msgid "&Add ..."
+msgstr ""
+
+#: ideintfstrconsts.lisbtnenabled
+msgid "&Enabled"
+msgstr "&Dihidupkan"
+
+#: ideintfstrconsts.lisbtnok
+#, fuzzy
+#| msgid "&Ok"
+msgid "&OK"
+msgstr "&Ok"
+
+#: ideintfstrconsts.liscancel
+msgid "Cancel"
+msgstr "Batal"
+
+#: ideintfstrconsts.liscontinue
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: ideintfstrconsts.liscopy
+msgid "Copy"
+msgstr "Copy"
+
+#: ideintfstrconsts.liscut
+msgid "Cut"
+msgstr "Cut"
+
+#: ideintfstrconsts.lisdelete
+msgid "Delete"
+msgstr "Hapus"
+
+#: ideintfstrconsts.lisdisabled
+msgid "Disabled"
+msgstr ""
+
+#: ideintfstrconsts.lisdlgadd
+#, fuzzy
+#| msgid "Add..."
+msgid "Add ..."
+msgstr "Tambah..."
+
+#: ideintfstrconsts.lisenabled
+msgid "Enabled"
+msgstr "Hidupkan"
+
+#: ideintfstrconsts.lishelp
+msgid "Help"
+msgstr "Panduan"
+
+#: ideintfstrconsts.lisignore
+#, fuzzy
+msgid "Ignore"
+msgstr "Abaikan"
+
+#: ideintfstrconsts.lislazarus
+msgid "Lazarus"
+msgstr "Lazarus"
+
+#: ideintfstrconsts.lisnever
+msgid "Never"
+msgstr ""
+
+#: ideintfstrconsts.lisno
+msgid "No"
+msgstr ""
+
+#: ideintfstrconsts.lisok
+msgid "OK"
+msgstr "OK"
+
+#: ideintfstrconsts.lispaste
+msgid "Paste"
+msgstr "Paste"
+
+#: ideintfstrconsts.lisyes
+msgid "Yes"
+msgstr ""
+

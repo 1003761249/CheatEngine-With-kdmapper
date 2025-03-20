@@ -1,0 +1,159 @@
+object CreateRepositoryFrm: TCreateRepositoryFrm
+  Left = 373
+  Height = 600
+  Top = 180
+  Width = 900
+  BorderIcons = [biSystemMenu]
+  Caption = 'CreateRepositoryFrm'
+  ClientHeight = 600
+  ClientWidth = 900
+  Constraints.MinHeight = 450
+  Constraints.MinWidth = 650
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PopupMode = pmExplicit
+  Position = poOwnerFormCenter
+  LCLVersion = '2.1.0.0'
+  object pnButtons: TPanel
+    Left = 0
+    Height = 41
+    Top = 559
+    Width = 900
+    Align = alBottom
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 37
+    ClientWidth = 896
+    TabOrder = 2
+    OnResize = pnButtonsResize
+    object bOpen: TButton
+      Left = 102
+      Height = 27
+      Top = 4
+      Width = 85
+      Caption = 'Open'
+      OnClick = bOpenClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object bCreate: TButton
+      Left = 16
+      Height = 27
+      Top = 4
+      Width = 85
+      Caption = 'Create'
+      OnClick = bCreateClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object bCancel: TButton
+      Left = 800
+      Height = 27
+      Top = 4
+      Width = 85
+      Anchors = [akTop, akRight]
+      BorderSpacing.Around = 1
+      Caption = 'Cancel'
+      Constraints.MinWidth = 80
+      ModalResult = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object bAdd: TBitBtn
+      Left = 311
+      Height = 27
+      Top = 4
+      Width = 85
+      Caption = 'Add'
+      GlyphShowMode = gsmAlways
+      OnClick = bAddClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object bDelete: TBitBtn
+      Left = 396
+      Height = 27
+      Top = 4
+      Width = 85
+      Caption = 'Delete'
+      GlyphShowMode = gsmAlways
+      OnClick = bDeleteClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+  end
+  object pnPackages: TPanel
+    Left = 0
+    Height = 559
+    Top = 0
+    Width = 285
+    Align = alLeft
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
+  object pnDetails: TPanel
+    Left = 287
+    Height = 559
+    Top = 0
+    Width = 613
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
+  object spMain: TSplitter
+    Left = 285
+    Height = 559
+    Top = 0
+    Width = 2
+    AutoSnap = False
+    Color = 14671839
+    MinSize = 150
+    ParentColor = False
+  end
+  object pnMessage: TPanel
+    Left = 287
+    Height = 559
+    Top = 0
+    Width = 613
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'No items to show'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+  end
+  object tmWait: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tmWaitTimer
+    Left = 85
+    Top = 32
+  end
+  object pm: TPopupMenu
+    Left = 139
+    Top = 37
+    object miRepDetails: TMenuItem
+      Caption = 'Repository details'
+      OnClick = miRepDetailsClick
+    end
+  end
+  object ODRep: TOpenDialog
+    DefaultExt = '.opmrep'
+    Filter = '*.opmrep|*.opmrep'
+    Left = 85
+    Top = 104
+  end
+end

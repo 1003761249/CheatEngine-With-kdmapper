@@ -1,0 +1,38 @@
+object ExceptionDialog: TExceptionDialog
+  Left = 294
+  Height = 180
+  Top = 195
+  Width = 420
+  BorderIcons = [biSystemMenu]
+  Caption = 'JCF Exception'
+  ClientHeight = 180
+  ClientWidth = 420
+  LCLVersion = '2.3.0.0'
+  object mExceptionMessage: TMemo
+    Left = 6
+    Height = 133
+    Top = 6
+    Width = 408
+    Align = alClient
+    BorderSpacing.Around = 6
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object BtnPanel: TButtonPanel
+    Left = 6
+    Height = 29
+    Top = 145
+    Width = 408
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK]
+    ShowBevel = False
+  end
+end

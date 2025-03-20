@@ -1,0 +1,1002 @@
+# Olexandr Pylypchuk <pilipchukap@rambler.ru>, 2017, 2019.
+# lxlalexlxl <lxlalexlxl@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-06-08 18:31+0300\n"
+"Last-Translator: lxlalexlxl <lxlalexlxl@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: lazdatadeskstr.eoaddterminator
+msgid "Add terminator"
+msgstr "Додати розділювач"
+
+#: lazdatadeskstr.eoandtermsinbrackets
+msgid "Put brackets around AND Terms"
+msgstr "Ставити дужки навколо висловів AND"
+
+#: lazdatadeskstr.eolinefeedafterandterm
+msgid "Linefeed after AND terms"
+msgstr "На новий рядок після виразів AND"
+
+#: lazdatadeskstr.eolinefeedafterfield
+msgid "Linefeed after each field"
+msgstr "На новий рядок після кожного поля"
+
+#: lazdatadeskstr.eoquotefieldnames
+msgid "Quote field names"
+msgstr "Імена полів в лапках"
+
+#: lazdatadeskstr.eoskipforeignkeys
+msgid "Skip foreign keys"
+msgstr "Пропуск зовнішніх ключів"
+
+#: lazdatadeskstr.eouseoldinwhereparams
+msgid "Use OLD prefix in where parameters"
+msgstr "Префікс OLD в параметрах where"
+
+#: lazdatadeskstr.sabortscript
+msgid "Abort the script"
+msgstr "Перервати сценарій"
+
+#: lazdatadeskstr.sclose
+msgid "Close result"
+msgstr "Закрити результат"
+
+#: lazdatadeskstr.scolfields
+msgctxt "lazdatadeskstr.scolfields"
+msgid "Fields"
+msgstr "Поля"
+
+#: lazdatadeskstr.scolname
+msgctxt "lazdatadeskstr.scolname"
+msgid "Name"
+msgstr "Назва"
+
+#: lazdatadeskstr.scoloptions
+msgctxt "lazdatadeskstr.scoloptions"
+msgid "Options"
+msgstr "Параметри"
+
+#: lazdatadeskstr.scolreadonly
+msgid "Read-Only"
+msgstr "Лише читання"
+
+#: lazdatadeskstr.scolrequired
+msgid "Required"
+msgstr "Необхідно"
+
+#: lazdatadeskstr.scolsize
+msgid "Size"
+msgstr "Розмір"
+
+#: lazdatadeskstr.scoltype
+msgid "Type"
+msgstr "Тип"
+
+#: lazdatadeskstr.scommit
+msgid "Commit"
+msgstr "Надіслати"
+
+#: lazdatadeskstr.scommittransaction
+msgid "Commit active transaction"
+msgstr "Надіслати активну транзакцію"
+
+#: lazdatadeskstr.sconfirmclose
+msgid "Confirm close"
+msgstr "Підтвердження закриття"
+
+#: lazdatadeskstr.sconnectiondescription
+msgid "Enter a descriptive name for the connection"
+msgstr "Введіть описове ім'я з'єднання"
+
+#: lazdatadeskstr.sconnectionnameexists
+#, object-pascal-format
+msgid ""
+"There is already a connection named \"%s\"\n"
+"Would you like to override the connection data ?"
+msgstr ""
+"З'єднання з назвою \"%s\" вже існує.\n"
+"Хочете перезаписати його дані?"
+
+#: lazdatadeskstr.screatecode
+msgid "Create code"
+msgstr "Створити код"
+
+#: lazdatadeskstr.screateconnection
+msgid "Would you like to create a new connection for this database ?"
+msgstr "Хочете створити нове з'єднання для цієї бази даних ?"
+
+#: lazdatadeskstr.sddmodified
+#, object-pascal-format
+msgid ""
+"Data dictionary \"%s\" has changed.\n"
+"What do you want to do with the changes?"
+msgstr ""
+"Словник даних \"%s\" був змінений.\n"
+"Що ви хочете зробити зі змінами?"
+
+#: lazdatadeskstr.sdeleteobject
+#, object-pascal-format
+msgid "Delete this %s"
+msgstr "Видалити цей %s"
+
+#: lazdatadeskstr.sdescription
+msgctxt "lazdatadeskstr.sdescription"
+msgid "Description"
+msgstr "Опис"
+
+#: lazdatadeskstr.sdomain
+msgid "Domain"
+msgstr "Домен"
+
+#: lazdatadeskstr.sdontclose
+msgid "Do not close editor"
+msgstr "Не закривати редактор"
+
+#: lazdatadeskstr.sdontsave
+msgid "Discard changes"
+msgstr "Відхилити зміни"
+
+#: lazdatadeskstr.senginetype
+msgid "Engine"
+msgstr "Двигун"
+
+#: lazdatadeskstr.serrcommitnotsupported
+msgid "COMMIT Not supported yet"
+msgstr "COMMIT ще не підтримується"
+
+#: lazdatadeskstr.serrinscript
+msgid "Error in SQL script"
+msgstr "Помилка у сценарії SQL"
+
+#: lazdatadeskstr.serrinscriptchoice
+msgid ""
+"An error occurred in the SQL script.\n"
+"How would you like to continue ?"
+msgstr ""
+"У сценарії SQL трапилась помилка.\n"
+"Як бажаєте продовжити ?"
+
+#: lazdatadeskstr.serrnoengine
+msgid "No database engine !"
+msgstr "Відсутній двигун бази даних!"
+
+#: lazdatadeskstr.serrorexecutingsql
+msgid "Error executing SQL statement:"
+msgstr "Помилка при виконанні інструкції SQL:"
+
+#: lazdatadeskstr.serrselectfields
+msgid "No fields selected. Please select some fields"
+msgstr "Не вибрано жодного поля. Виберіть певні поля"
+
+#: lazdatadeskstr.serrselecttable
+msgid "No table selected. Please select a table"
+msgstr "Не вибрано жодної таблиці. Виберіть певні таблиці"
+
+#: lazdatadeskstr.serrunknowndirective
+#, object-pascal-format
+msgid "Unknown directive: %s (args: %s)"
+msgstr "Невідома директива: %s (args: %s)"
+
+#: lazdatadeskstr.serrunknowntype
+#, object-pascal-format
+msgid "Unknown object type: %d"
+msgstr "Невідомий тип об'єкту: %d"
+
+#: lazdatadeskstr.sexecute
+msgid "Execute SQL"
+msgstr "Виконати SQL"
+
+#: lazdatadeskstr.sexecutingsqlstatement
+#, object-pascal-format
+msgid "%s : Executing SQL statement:"
+msgstr "%s : Виконання інструкції SQL:"
+
+#: lazdatadeskstr.sexecutingsqlstatementcount
+#, object-pascal-format
+msgid "%s : Executing script SQL statement nr. %d:"
+msgstr "%s : Виконання інструкції сценарію SQL номер %d:"
+
+#: lazdatadeskstr.sexecutiontime
+#, object-pascal-format
+msgid "Execution time: %s"
+msgstr "Час виконання: %s"
+
+#: lazdatadeskstr.sexport
+msgid "Export data"
+msgstr "Експорт даних"
+
+#: lazdatadeskstr.sfield
+msgid "Field"
+msgstr "Поле"
+
+#: lazdatadeskstr.sforeignkey
+msgid "Foreign key"
+msgstr "Зовнішній ключ"
+
+#: lazdatadeskstr.shintclose
+msgid "Close query result data panel"
+msgstr "Закрити панель даних результату запиту"
+
+#: lazdatadeskstr.shintcreatecode
+msgid "Create pascal code for this data"
+msgstr "Створити код Паскаля для цих даних"
+
+#: lazdatadeskstr.shintexecute
+msgid "Execute SQL statement"
+msgstr "Виконати інструкцію SQL"
+
+#: lazdatadeskstr.shintexport
+msgid "Export this data"
+msgstr "Експортувати ці дані"
+
+#: lazdatadeskstr.shintload
+msgid "Load SQL statement from file"
+msgstr "Завантажити інструкцію SQL з файлу"
+
+#: lazdatadeskstr.shintnext
+msgid "Next SQL statement"
+msgstr "Наступна інструкція SQL"
+
+#: lazdatadeskstr.shintprevious
+msgid "Previous SQL statement"
+msgstr "Попередня інструкція SQL"
+
+#: lazdatadeskstr.shintsave
+msgid "Save SQL statement to file"
+msgstr "Зберегти інструкцію SQL в файл"
+
+#: lazdatadeskstr.simportdictinto
+msgid "Import data dictionary"
+msgstr "Імпортувати словник даних"
+
+#: lazdatadeskstr.sindex
+msgid "Index"
+msgstr "Індекс"
+
+#: lazdatadeskstr.sld_actionadddomain
+msgctxt "lazdatadeskstr.sld_actionadddomain"
+msgid "New domain"
+msgstr "Новий домен"
+
+#: lazdatadeskstr.sld_actionadddomainh
+msgid "Add a domain to the data dictionary"
+msgstr "Додати домен до словника даних"
+
+#: lazdatadeskstr.sld_actionaddforeignkey
+msgid "New Foreign Key"
+msgstr "Новий зовнішній ключ"
+
+#: lazdatadeskstr.sld_actionaddforeignkeyh
+msgid "Add a foreign key to the table"
+msgstr "Додати зовнішній ключ до таблиці"
+
+#: lazdatadeskstr.sld_actionaddsequence
+msgctxt "lazdatadeskstr.sld_actionaddsequence"
+msgid "New sequence"
+msgstr "Нова послідовність"
+
+#: lazdatadeskstr.sld_actionaddsequenceh
+msgid "Add a sequence"
+msgstr "Додати послідовність"
+
+#: lazdatadeskstr.sld_actionclose
+msgid "&Close"
+msgstr "&Закрити"
+
+#: lazdatadeskstr.sld_actioncloseall
+msgid "Close &All"
+msgstr "Закрити В&се"
+
+#: lazdatadeskstr.sld_actioncloseallh
+msgid "Close all Data Dictionaries"
+msgstr "Закрити всі Словники Даних"
+
+#: lazdatadeskstr.sld_actioncloseh
+msgid "Close current Data Dictionary"
+msgstr "Закрити поточний Словник Даних"
+
+#: lazdatadeskstr.sld_actioncopy
+msgid "&Copy"
+msgstr "&Копіювати"
+
+#: lazdatadeskstr.sld_actioncopyconnection
+msgid "&Copy connection"
+msgstr "&Копіювати з'єднання"
+
+#: lazdatadeskstr.sld_actioncopyh
+msgid "Copy"
+msgstr "Копіювати"
+
+#: lazdatadeskstr.sld_actioncreatecode
+msgid "Create &code"
+msgstr "Створити &код"
+
+#: lazdatadeskstr.sld_actioncreatecodeh
+msgid "Create code from definition or data"
+msgstr "Створити код з визначення або даних"
+
+#: lazdatadeskstr.sld_actioncut
+msgid "Cu&t"
+msgstr "Ви&різати"
+
+#: lazdatadeskstr.sld_actioncuth
+msgid "Cut"
+msgstr "Вирізати"
+
+#: lazdatadeskstr.sld_actiondeleteconnection
+msgid "&Delete connection"
+msgstr "&Видалити з'єднання"
+
+#: lazdatadeskstr.sld_actiondeleteobject
+msgid "Delete &Object"
+msgstr "Видалити &Об'єкт"
+
+#: lazdatadeskstr.sld_actiondeleteobjecth
+msgid "Delete the currently selected object"
+msgstr "Видалити вибраний об'єкт"
+
+#: lazdatadeskstr.sld_actiondeleterecentdatadict
+msgctxt "lazdatadeskstr.sld_actiondeleterecentdatadict"
+msgid "&Delete"
+msgstr "Ви&далити"
+
+#: lazdatadeskstr.sld_actionexit
+msgid "E&xit"
+msgstr "Ви&хід"
+
+#: lazdatadeskstr.sld_actionexith
+msgid "Quit this program"
+msgstr "Вийти з програми"
+
+#: lazdatadeskstr.sld_actiongeneratesql
+msgid "&Generate SQL"
+msgstr "&Генерувати SQL"
+
+#: lazdatadeskstr.sld_actiongeneratesqlh
+msgid "Generate SQL statements for the current table"
+msgstr "Генерувати інструкції SQL для поточної таблиці"
+
+#: lazdatadeskstr.sld_actionnew
+msgid "&New"
+msgstr "&Новий"
+
+#: lazdatadeskstr.sld_actionnewconnection
+msgid "&New connection"
+msgstr "&Нове з'єднання"
+
+#: lazdatadeskstr.sld_actionnewfield
+msgid "New &field"
+msgstr "Нове &поле"
+
+#: lazdatadeskstr.sld_actionnewfieldh
+msgid "Create a new field in the current table"
+msgstr "Створити нове поле в поточній таблиці"
+
+#: lazdatadeskstr.sld_actionnewh
+msgid "Create a new Data Dictionary"
+msgstr "Створити новий Словник Даних"
+
+#: lazdatadeskstr.sld_actionnewindex
+msgctxt "lazdatadeskstr.sld_actionnewindex"
+msgid "New index"
+msgstr "Новий індекс"
+
+#: lazdatadeskstr.sld_actionnewindexh
+msgid "Add new index to current table"
+msgstr "Додати новий індекс в поточну таблицю"
+
+#: lazdatadeskstr.sld_actionnewtable
+msgid "New &table"
+msgstr "Нова &таблиця"
+
+#: lazdatadeskstr.sld_actionnewtableh
+msgid "Create a new table"
+msgstr "Створити нову таблицю"
+
+#: lazdatadeskstr.sld_actionopen
+msgid "&Open ..."
+msgstr "&Відкрити ..."
+
+#: lazdatadeskstr.sld_actionopenconnection
+msgid "&Open connection"
+msgstr "Від&крити з'єднання"
+
+#: lazdatadeskstr.sld_actionopenconnectionh
+msgid "Open selected recent connection"
+msgstr "Відкрити вибране недавнє з'єднання"
+
+#: lazdatadeskstr.sld_actionopenh
+msgid "Open a new Data Dictionary"
+msgstr "Відкрити новий Словник Даних"
+
+#: lazdatadeskstr.sld_actionopenrecentdatadict
+msgid "Open"
+msgstr "Відкрити"
+
+#: lazdatadeskstr.sld_actionopenrecentdatadicth
+msgid "Open selected recent data dictionary"
+msgstr "Відкрити вибраний недавній словник даних"
+
+#: lazdatadeskstr.sld_actionpaste
+msgid "&Paste"
+msgstr "&Вставити"
+
+#: lazdatadeskstr.sld_actionpasteh
+msgid "Paste"
+msgstr "Вставити"
+
+#: lazdatadeskstr.sld_actionsave
+msgid "&Save"
+msgstr "&Зберегти"
+
+#: lazdatadeskstr.sld_actionsaveas
+msgid "Save &as"
+msgstr "Зберегти &як"
+
+#: lazdatadeskstr.sld_actionsaveash
+msgid "Save data dictionary as"
+msgstr "Зберегти словник даних як"
+
+#: lazdatadeskstr.sld_actionsaveh
+msgid "Save Data Dictionary"
+msgstr "Зберегти Словник Даних"
+
+#: lazdatadeskstr.sld_cancel
+msgid "&Cancel"
+msgstr "&Скасувати"
+
+#: lazdatadeskstr.sld_charset
+msgid "Charset"
+msgstr "Кодування"
+
+#: lazdatadeskstr.sld_connectionlv1
+msgctxt "lazdatadeskstr.sld_connectionlv1"
+msgid "Name"
+msgstr "Назва"
+
+#: lazdatadeskstr.sld_connectionlv2
+msgid "Driver"
+msgstr "Драйвер"
+
+#: lazdatadeskstr.sld_connectionlv3
+msgid "Last used"
+msgstr "Останнє використання"
+
+#: lazdatadeskstr.sld_connectionlv4
+msgctxt "lazdatadeskstr.sld_connectionlv4"
+msgid "Description"
+msgstr "Опис"
+
+#: lazdatadeskstr.sld_connections
+msgctxt "lazdatadeskstr.sld_connections"
+msgid "Connections"
+msgstr "З'єднання"
+
+#: lazdatadeskstr.sld_connectionsdictionaries
+msgid "Connections/Dictionaries"
+msgstr "З’єднання/Словники"
+
+#: lazdatadeskstr.sld_connecttoadatabase
+#, object-pascal-format
+msgid "Connect to a database of type %s"
+msgstr "З'єднатися з базою даних типу %s"
+
+#: lazdatadeskstr.sld_createfulltablecreationsql
+msgid "Create full table creation SQL"
+msgstr "Повний код створення таблиці на SQL"
+
+#: lazdatadeskstr.sld_createtable
+msgid "Create table"
+msgstr "Створити таблицю"
+
+#: lazdatadeskstr.sld_database
+msgctxt "lazdatadeskstr.sld_database"
+msgid "Database"
+msgstr "База даних"
+
+#: lazdatadeskstr.sld_delete
+msgctxt "lazdatadeskstr.sld_delete"
+msgid "&Delete"
+msgstr "Ви&далити"
+
+#: lazdatadeskstr.sld_dictionaries
+msgid "Dictionaries"
+msgstr "Словники"
+
+#: lazdatadeskstr.sld_firststart
+msgid "First start of database desktop"
+msgstr "Перший запуск стільниці бази даних"
+
+#: lazdatadeskstr.sld_fromconnection
+msgid "From connection"
+msgstr "З з'єднання"
+
+#: lazdatadeskstr.sld_generatesql
+msgid "Generate SQL"
+msgstr "Генерувати SQL"
+
+#: lazdatadeskstr.sld_generatesqlstatements
+msgid "Generate SQL statements"
+msgstr "Генерувати інструкції SQL"
+
+#: lazdatadeskstr.sld_host
+msgid "Host"
+msgstr "Хост"
+
+#: lazdatadeskstr.sld_importupdatedatadictionary
+msgid "Import/Update data dictionary"
+msgstr "Імпорт/Оновлення словника даних"
+
+#: lazdatadeskstr.sld_indent
+msgid "I&ndent"
+msgstr "В&ідступ"
+
+#: lazdatadeskstr.sld_insert
+msgid "&Insert"
+msgstr "&Вставка"
+
+#: lazdatadeskstr.sld_keyfields
+msgid "&Key fields"
+msgstr "&Ключові поля"
+
+#: lazdatadeskstr.sld_lazarusdatabasedesktop
+msgid "Lazarus Database Desktop"
+msgstr "Робочий стіл Бази даних Lazarus"
+
+#: lazdatadeskstr.sld_legacyview
+msgid "Legacy List View"
+msgstr "Традиційний вигляд списку"
+
+#: lazdatadeskstr.sld_linelength
+msgid "Line Length"
+msgstr "Довжина рядка"
+
+#: lazdatadeskstr.sld_menuconnections
+msgctxt "lazdatadeskstr.sld_menuconnections"
+msgid "Connections"
+msgstr "З'єднання"
+
+#: lazdatadeskstr.sld_menudictionary
+msgid "&Dictionary"
+msgstr "&Словник"
+
+#: lazdatadeskstr.sld_menudictionaryimport
+msgid "&Import"
+msgstr "&Імпорт"
+
+#: lazdatadeskstr.sld_menuedit
+msgid "&Edit"
+msgstr "&Редагувати"
+
+#: lazdatadeskstr.sld_menufile
+msgid "&File"
+msgstr "&Файл"
+
+#: lazdatadeskstr.sld_ok
+msgid "&OK"
+msgstr "&OK"
+
+#: lazdatadeskstr.sld_opendatadictionaryfilter
+msgctxt "lazdatadeskstr.sld_opendatadictionaryfilter"
+msgid "Data dictionary files (fdd)|*.fdd|Ini files|*.ini|All files|*.*"
+msgstr "Файли словників даних(fdd)|*.fdd|Файли Ini|*.ini|Всі файли|*.*"
+
+#: lazdatadeskstr.sld_opendatadictionarytitle
+msgid "Open data dictionary"
+msgstr "Відкрити словник даних"
+
+#: lazdatadeskstr.sld_options
+msgctxt "lazdatadeskstr.sld_options"
+msgid "Options"
+msgstr "Параметри"
+
+#: lazdatadeskstr.sld_password
+msgid "Password"
+msgstr "Пароль"
+
+#: lazdatadeskstr.sld_recentlv1
+msgctxt "lazdatadeskstr.sld_recentlv1"
+msgid "Name"
+msgstr "Назва"
+
+#: lazdatadeskstr.sld_recentlv2
+msgid "Filename"
+msgstr "Ім'я файлу"
+
+#: lazdatadeskstr.sld_recentlv3
+msgid "Last used on"
+msgstr "Останнє використання"
+
+#: lazdatadeskstr.sld_savefileasfilter
+msgctxt "lazdatadeskstr.sld_savefileasfilter"
+msgid "Data dictionary files (fdd)|*.fdd|Ini files|*.ini|All files|*.*"
+msgstr "Файли словників даних(fdd)|*.fdd|Файли Ini|*.ini|Всі файли|*.*"
+
+#: lazdatadeskstr.sld_savefileastitle
+msgid "Save file as"
+msgstr "Зберегти файл як"
+
+#: lazdatadeskstr.sld_select
+msgid "&Select"
+msgstr "&Вибрати"
+
+#: lazdatadeskstr.sld_selectaconnectiontype
+msgid "Select a conection type"
+msgstr "Виберіть тип з'єднання"
+
+#: lazdatadeskstr.sld_selectall
+msgid "Select &all"
+msgstr "Вибрати в&се"
+
+#: lazdatadeskstr.sld_selectnone
+msgid "Select &none"
+msgstr "Не вибирати ні&чого"
+
+#: lazdatadeskstr.sld_selectupdateinsertfields
+msgid "Select/Update/Insert fields"
+msgstr "Вибрати/Оновити/Вставити поля"
+
+#: lazdatadeskstr.sld_separator
+msgid "-"
+msgstr "-"
+
+#: lazdatadeskstr.sld_startempty
+msgid "Thanks, I know what to do"
+msgstr "Дякую, я знаю, що робити"
+
+#: lazdatadeskstr.sld_startnewconnection
+msgid "Create new connection"
+msgstr "Створити нове з'єднання"
+
+#: lazdatadeskstr.sld_startnewdict
+msgid "Start new dictionary"
+msgstr "Почати новий словник"
+
+#: lazdatadeskstr.sld_succesconnecting
+msgid "Connection established successfully!"
+msgstr "З'єднання встановлено успішно!"
+
+#: lazdatadeskstr.sld_table
+msgid "Ta&ble"
+msgstr "Та&блиця"
+
+#: lazdatadeskstr.sld_tableandfields
+msgid "Tables and &Fields"
+msgstr "Таблиці і &Поля"
+
+#: lazdatadeskstr.sld_testconnection
+msgid "Test connection"
+msgstr "Перевірити з'єднання"
+
+#: lazdatadeskstr.sld_unknowntype
+msgid "Unknown type"
+msgstr "Невідомий тип"
+
+#: lazdatadeskstr.sld_update
+msgid "&Update"
+msgstr "&Оновлення"
+
+#: lazdatadeskstr.sld_updateexistingtables
+msgid "Update existing tables"
+msgstr "Оновити наявні таблиці"
+
+#: lazdatadeskstr.sld_username
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#: lazdatadeskstr.sld_view
+msgid "View"
+msgstr "Перегляд"
+
+#: lazdatadeskstr.sload
+msgid "Load SQL"
+msgstr "Завантажити SQL"
+
+#: lazdatadeskstr.snamefor
+#, object-pascal-format
+msgid "Enter a name for the new %s"
+msgstr "Введіть назву для нового %s"
+
+#: lazdatadeskstr.snewconnection
+msgid "New connection"
+msgstr "Нове з'єднання"
+
+#: lazdatadeskstr.snewdictionary
+msgid "New data dictionary"
+msgstr "Новий словник даних"
+
+#: lazdatadeskstr.snewdomain
+msgid "Create new domain"
+msgstr "Створити новий домен"
+
+#: lazdatadeskstr.snewdomainde
+#, fuzzy
+msgctxt "lazdatadeskstr.snewdomainde"
+msgid "New domain"
+msgstr "Новий домен"
+
+#: lazdatadeskstr.snewdomainname
+msgid "Enter a name for the new domain:"
+msgstr "Введіть назву нового домену:"
+
+#: lazdatadeskstr.snewfield
+#, object-pascal-format
+msgid "Create new field in table %s"
+msgstr "Створити нове поле в таблиці %s"
+
+#: lazdatadeskstr.snewfieldde
+msgid "New field"
+msgstr ""
+
+#: lazdatadeskstr.snewfieldname
+msgid "Enter a name for the new field:"
+msgstr "Введіть назву нового поля:"
+
+#: lazdatadeskstr.snewforeignkey
+#, object-pascal-format
+msgid "Create new foreign key in table %s"
+msgstr "Створити новий зовнішній ключ в таблиці %s"
+
+#: lazdatadeskstr.snewforeignkeyde
+msgid "New foreign key"
+msgstr ""
+
+#: lazdatadeskstr.snewforeignkeyname
+msgid "Enter a name for the new foreign key:"
+msgstr "Введіть назву нового зовнішнього ключа:"
+
+#: lazdatadeskstr.snewindex
+#, object-pascal-format
+msgid "Create new index on table %s"
+msgstr "Створити новий індекс в таблиці %s"
+
+#: lazdatadeskstr.snewindexde
+#, fuzzy
+msgctxt "lazdatadeskstr.snewindexde"
+msgid "New index"
+msgstr "Новий індекс"
+
+#: lazdatadeskstr.snewindexname
+msgid "Enter a name for the new index:"
+msgstr "Введіть назву нового індекса:"
+
+#: lazdatadeskstr.snewobject
+#, object-pascal-format
+msgid "Create new %s"
+msgstr "Створити новий %s"
+
+#: lazdatadeskstr.snewsequence
+msgid "Create new sequence"
+msgstr "Створити нову послідовність"
+
+#: lazdatadeskstr.snewsequencede
+#, fuzzy
+msgctxt "lazdatadeskstr.snewsequencede"
+msgid "New sequence"
+msgstr "Нова послідовність"
+
+#: lazdatadeskstr.snewsequencename
+msgid "Enter a name for the new sequence:"
+msgstr "Введіть назву нової послідовності:"
+
+#: lazdatadeskstr.snewtable
+msgid "Create new table"
+msgstr "Створити нову таблицю"
+
+#: lazdatadeskstr.snewtablede
+msgid "New table"
+msgstr ""
+
+#: lazdatadeskstr.snewtablename
+msgid "Enter a name for the new table:"
+msgstr "Введіть ім'я для нової таблиці:"
+
+#: lazdatadeskstr.snext
+msgid "Next"
+msgstr "Наступний"
+
+#: lazdatadeskstr.sno
+msgid "No"
+msgstr "Ні"
+
+#: lazdatadeskstr.snodedatabase
+msgctxt "lazdatadeskstr.snodedatabase"
+msgid "Database"
+msgstr "База даних"
+
+#: lazdatadeskstr.snodedatadictionary
+msgid "Data dictionary"
+msgstr "Словник даних"
+
+#: lazdatadeskstr.snodedomains
+msgid "Domains"
+msgstr "Домени"
+
+#: lazdatadeskstr.snodefields
+msgctxt "lazdatadeskstr.snodefields"
+msgid "Fields"
+msgstr "Поля"
+
+#: lazdatadeskstr.snodeforeignkeys
+msgid "Foreign keys"
+msgstr "Зовнішні ключі"
+
+#: lazdatadeskstr.snodeindexes
+msgid "Indexes"
+msgstr "Індекси"
+
+#: lazdatadeskstr.snodeindexfields
+msgid "Index fields: "
+msgstr "Індексні поля: "
+
+#: lazdatadeskstr.snodeindexoptions
+msgid "Index options: "
+msgstr "Індексні параметри: "
+
+#: lazdatadeskstr.snodesequences
+msgid "Sequences"
+msgstr "Послідовності"
+
+#: lazdatadeskstr.snodetabledata
+msgid "Table Data"
+msgstr "Дані Таблиці"
+
+#: lazdatadeskstr.snodetables
+msgid "Tables"
+msgstr "Таблиці"
+
+#: lazdatadeskstr.sobject
+msgid "Object"
+msgstr "Об'єкт"
+
+#: lazdatadeskstr.sparameter
+msgid "Parameter"
+msgstr "Параметр"
+
+#: lazdatadeskstr.sprevious
+msgid "Previous"
+msgstr "Попередній"
+
+#: lazdatadeskstr.sql_noconnectionsfound
+msgid ""
+"No connections or data dictionaries were found.\n"
+" Start by creating a new connection or data dictionary."
+msgstr ""
+"З'єднань або словників даних не знайдено.\n"
+" Почніть зі створення з'єднання або словника даних."
+
+#: lazdatadeskstr.squery
+msgid "Run query"
+msgstr "Виконати запит"
+
+#: lazdatadeskstr.sreadyforsql
+msgid "Ready to execute SQL statements"
+msgstr "Готовий виконувати інструкції SQL"
+
+#: lazdatadeskstr.srecordsfetched
+#, object-pascal-format
+msgid "Records fetched: %d"
+msgstr "Вибрано записів: %d"
+
+#: lazdatadeskstr.sretrystatement
+msgid "Retry the statement"
+msgstr "Повторити інструкцію"
+
+#: lazdatadeskstr.srollback
+msgid "Rollback"
+msgstr "Відкотити"
+
+#: lazdatadeskstr.srollbackransaction
+msgid "Rollback active transaction"
+msgstr "Відкотити активну транзакцію"
+
+#: lazdatadeskstr.srowsaffected
+#, object-pascal-format
+msgid "Query executed successfully: %d rows affected."
+msgstr "Запит виконано успішно: %d рядків змінено."
+
+#: lazdatadeskstr.ssave
+msgid "Save SQL"
+msgstr "Зберегти SQL"
+
+#: lazdatadeskstr.ssavedata
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: lazdatadeskstr.sscriptaborted
+#, object-pascal-format
+msgid "Script was aborted after %d statements"
+msgstr "Сценарій перервано після %d інструкцій"
+
+#: lazdatadeskstr.sscriptcompleted
+#, object-pascal-format
+msgid "Executed %d statements from script"
+msgstr "Виконано %d інструкцій сценарію"
+
+#: lazdatadeskstr.sscripterrorcount
+#, object-pascal-format
+msgid "%d script statements resulted in errors"
+msgstr "%d інструкцій сценарію завершено з помилками"
+
+#: lazdatadeskstr.sselectdbfdir
+msgid "Select a directory with DBF files"
+msgstr "Виберіть теку з DBF файлами"
+
+#: lazdatadeskstr.sselectedobject
+msgid "Selected object"
+msgstr "Вибрати об'єкт"
+
+#: lazdatadeskstr.ssequence
+msgid "Sequence"
+msgstr "Послідовність"
+
+#: lazdatadeskstr.ssqlerrorcode
+#, object-pascal-format
+msgid "SQL Error code: %d"
+msgstr "Код помилки SQL: %d"
+
+#: lazdatadeskstr.ssqlexecutedok
+#, object-pascal-format
+msgid "%s : Statement executed succesfully."
+msgstr "%s : Інструкцію виконано успішно."
+
+#: lazdatadeskstr.ssqlfilters
+msgid "SQL files|*.sql|All files|*.*"
+msgstr "Файли SQL|*.sql|Всі файли|*.*"
+
+#: lazdatadeskstr.ssqlstatus
+#, object-pascal-format
+msgid "SQL State: %s"
+msgstr "Стан SQL: %s"
+
+#: lazdatadeskstr.sstopnoerror
+msgid "Continue, ignore all errors"
+msgstr "Продовжити, знехтувавши всі помилки"
+
+#: lazdatadeskstr.sstoponnexterror
+msgid "Continue, stop on the next error"
+msgstr "Продовжити, зупинитись на наступній помилці"
+
+#: lazdatadeskstr.stable
+msgid "Table"
+msgstr "Таблиця"
+
+#: lazdatadeskstr.sunknownconnection
+#, object-pascal-format
+msgid "Unknown connection: %s"
+msgstr "Невідоме з'єднання: %s"
+
+#: lazdatadeskstr.sunknowndictionary
+#, object-pascal-format
+msgid "Unknown data dictionary: %s"
+msgstr "Невідомий словник даних: %s"
+
+#: lazdatadeskstr.susecurrentdict
+msgid "Yes, use the active dictionary"
+msgstr "Так, використати активний словник"
+
+#: lazdatadeskstr.susenewdict
+msgid "No, import in a new dictionary"
+msgstr "Ні, імпортувати в новий словник"
+
+#: lazdatadeskstr.svalue
+msgid "Value"
+msgstr "Значення"
+
+#: lazdatadeskstr.swhichcurrentdicttouse
+msgid "A data dictionary is active.Would you like to import into this data dictionary ?"
+msgstr "Словник даних активний.Ви хочете імпортувати в цей словник даних ?"
+
+#: lazdatadeskstr.syes
+msgid "Yes"
+msgstr "Так"
+

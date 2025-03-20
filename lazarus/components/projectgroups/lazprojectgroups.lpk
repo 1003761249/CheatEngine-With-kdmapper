@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="LazProjectGroups"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Mattias Gaertner, Michael Van Canneyt"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="IDE Add-on for grouping projects, packages and project groups."/>
+    <License Value="Same as IDEIntf.
+GPL-2."/>
+    <Version Minor="7"/>
+    <Files Count="7">
+      <Item1>
+        <Filename Value="projectgroup.pp"/>
+        <UnitName Value="ProjectGroup"/>
+      </Item1>
+      <Item2>
+        <Filename Value="projectgroupeditor.pas"/>
+        <UnitName Value="ProjectGroupEditor"/>
+      </Item2>
+      <Item3>
+        <Filename Value="regprojectgroup.pp"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="RegProjectGroup"/>
+      </Item3>
+      <Item4>
+        <Filename Value="README.txt"/>
+        <Type Value="Binary"/>
+      </Item4>
+      <Item5>
+        <Filename Value="projectgroupstrconst.pas"/>
+        <UnitName Value="ProjectGroupStrConst"/>
+      </Item5>
+      <Item6>
+        <Filename Value="prjgrpoptionsfrm.pas"/>
+        <UnitName Value="PrjGrpOptionsFrm"/>
+      </Item6>
+      <Item7>
+        <Filename Value="prjgrpinfofrm.pas"/>
+        <UnitName Value="PrjGrpInfoFrm"/>
+      </Item7>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="CodeTools"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

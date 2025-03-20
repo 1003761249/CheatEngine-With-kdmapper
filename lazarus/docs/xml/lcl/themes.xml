@@ -1,0 +1,2767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+Themes
+====================================================================
+-->
+<module name="Themes">
+<short>
+Implements Theme Services for supported platforms / widgetsets.
+</short>
+<descr>
+<p>
+<file>themes.pas</file> contains an implementation of TThemeServices which is 
+a designed to manage all necessary aspects of the Windows XP (and up) theme 
+APIs. The component is responsible for loading and unloading of the theme DLL 
+and offers properties and methods to test for various aspects of the theme 
+APIs and to ease painting of themed window content.
+</p>
+<p>
+The TThemeServices class is designed to work for controls which need XP-like 
+painting. It does not manipulate any VCL class (for this task TThemeManager 
+is responsible) and can be used standalone (also as general support tool in 
+an application). Using the global ThemeServices function you can implicitly 
+create and use a single instance of the class. Theme Manager uses the same 
+approach.
+</p>
+<p>
+The original file name ThemeSrv.pas was changed to themes.pas to be 
+compatible with Delphi. Adapted for Lazarus by the Lazarus Team.
+</p>
+<p>
+The initial developer of the original code is:
+Mike Lischke (public@soft-gems.net, www.soft-gems.net).
+</p>
+</descr>
+
+<!-- unresolved type references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="Types"/>
+<element name="Math"/>
+<element name="LCLType"/>
+<element name="Graphics"/>
+<element name="TmSchema"/>
+<element name="GraphType"/>
+
+<element name="TThemedElement">
+<short>Represents elements which can be themed.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedElement.teButton">
+<short/>
+</element>
+<element name="TThemedElement.teClock">
+<short/>
+</element>
+<element name="TThemedElement.teComboBox">
+<short/>
+</element>
+<element name="TThemedElement.teEdit">
+<short/>
+</element>
+<element name="TThemedElement.teExplorerBar">
+<short/>
+</element>
+<element name="TThemedElement.teHeader">
+<short/>
+</element>
+<element name="TThemedElement.teListView">
+<short/>
+</element>
+<element name="TThemedElement.teMenu">
+<short/>
+</element>
+<element name="TThemedElement.tePage">
+<short/>
+</element>
+<element name="TThemedElement.teProgress">
+<short/>
+</element>
+<element name="TThemedElement.teRebar">
+<short/>
+</element>
+<element name="TThemedElement.teScrollBar">
+<short/>
+</element>
+<element name="TThemedElement.teSpin">
+<short/>
+</element>
+<element name="TThemedElement.teStartPanel">
+<short/>
+</element>
+<element name="TThemedElement.teStatus">
+<short/>
+</element>
+<element name="TThemedElement.teTab">
+<short/>
+</element>
+<element name="TThemedElement.teTaskBand">
+<short/>
+</element>
+<element name="TThemedElement.teTaskBar">
+<short/>
+</element>
+<element name="TThemedElement.teToolBar">
+<short/>
+</element>
+<element name="TThemedElement.teToolTip">
+<short/>
+</element>
+<element name="TThemedElement.teTrackBar">
+<short/>
+</element>
+<element name="TThemedElement.teTrayNotify">
+<short/>
+</element>
+<element name="TThemedElement.teTreeview">
+<short/>
+</element>
+<element name="TThemedElement.teWindow">
+<short/>
+</element>
+
+<element name="TThemedButton">
+<short>Represents theme elements for buttons.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedButton.tbButtonDontCare">
+<short/>
+</element>
+<element name="TThemedButton.tbButtonRoot">
+<short/>
+</element>
+<element name="TThemedButton.tbPushButtonNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbPushButtonHot">
+<short/>
+</element>
+<element name="TThemedButton.tbPushButtonPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbPushButtonDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbPushButtonDefaulted">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonUncheckedNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonUncheckedHot">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonUncheckedPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonUncheckedDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonCheckedNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonCheckedHot">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonCheckedPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbRadioButtonCheckedDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxUncheckedNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxUncheckedHot">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxUncheckedPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxUncheckedDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxCheckedNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxCheckedHot">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxCheckedPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxCheckedDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxMixedNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxMixedHot">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxMixedPressed">
+<short/>
+</element>
+<element name="TThemedButton.tbCheckBoxMixedDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbGroupBoxNormal">
+<short/>
+</element>
+<element name="TThemedButton.tbGroupBoxDisabled">
+<short/>
+</element>
+<element name="TThemedButton.tbUserButton">
+<short/>
+</element>
+
+<element name="TThemedClock">
+<short>Represents theme elements for a Clock.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedClock.tcClockDontCare">
+<short/>
+</element>
+<element name="TThemedClock.tcClockRoot">
+<short/>
+</element>
+<element name="TThemedClock.tcTimeNormal">
+<short/>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TThemedComboBox">
+<short>Represents theme elements used to theme combo-box controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedComboBox.tcComboBoxDontCare">
+<short/>
+</element>
+<element name="TThemedComboBox.tcComboBoxRoot">
+<short/>
+</element>
+<element name="TThemedComboBox.tcDropDownButtonNormal">
+<short/>
+</element>
+<element name="TThemedComboBox.tcDropDownButtonHot">
+<short/>
+</element>
+<element name="TThemedComboBox.tcDropDownButtonPressed">
+<short/>
+</element>
+<element name="TThemedComboBox.tcDropDownButtonDisabled">
+<short/>
+</element>
+
+<element name="TThemedEdit">
+<short>Represents theme elements used to theme Edit controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedEdit.teEditDontCare">
+<short/>
+</element>
+<element name="TThemedEdit.teEditRoot">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextNormal">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextHot">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextSelected">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextDisabled">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextFocused">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextReadOnly">
+<short/>
+</element>
+<element name="TThemedEdit.teEditTextAssist">
+<short/>
+</element>
+<element name="TThemedEdit.teEditCaret">
+<short/>
+</element>
+
+<element name="TThemedExplorerBar">
+<short>Represents theme elements used to theme an Explorer Bar.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedExplorerBar.tebExplorerBarDontCare">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebExplorerBarRoot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderBackgroundNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderBackgroundHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderBackgroundPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderCloseNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderCloseHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderClosePressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinSelectedNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinSelectedHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebHeaderPinSelectedPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebIEBarMenuNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebIEBarMenuHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebIEBarMenuPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupBackground">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupCollapseNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupCollapseHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupCollapsePressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupExpandNormal">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupExpandHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupExpandPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebNormalGroupHead">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupBackground">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupCollapseSpecial">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupCollapseHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupCollapsePressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupExpandSpecial">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupExpandHot">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupExpandPressed">
+<short/>
+</element>
+<element name="TThemedExplorerBar.tebSpecialGroupHead">
+<short/>
+</element>
+
+<element name="TThemedHeader">
+<short>Represents theme elements used to theme a Header control.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedHeader.thHeaderDontCare">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderRoot">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemNormal">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemHot">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemPressed">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemLeftNormal">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemLeftHot">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemLeftPressed">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemRightNormal">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemRightHot">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderItemRightPressed">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderSortArrowSortedUp">
+<short/>
+</element>
+<element name="TThemedHeader.thHeaderSortArrowSortedDown">
+<short/>
+</element>
+
+<element name="TThemedListview">
+<short>Represents theme elements used to theme List View controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedListview.tlListviewDontCare">
+<short/>
+</element>
+<element name="TThemedListview.tlListviewRoot">
+<short/>
+</element>
+<element name="TThemedListview.tlListItemNormal">
+<short/>
+</element>
+<element name="TThemedListview.tlListItemHot">
+<short/>
+</element>
+<element name="TThemedListview.tlListItemSelected">
+<short/>
+</element>
+<element name="TThemedListview.tlListItemDisabled">
+<short/>
+</element>
+<element name="TThemedListview.tlListItemSelectedNotFocus">
+<short/>
+</element>
+<element name="TThemedListview.tlListGroup">
+<short/>
+</element>
+<element name="TThemedListview.tlListDetail">
+<short/>
+</element>
+<element name="TThemedListview.tlListSortDetail">
+<short/>
+</element>
+<element name="TThemedListview.tlEmptyText">
+<short/>
+</element>
+
+<element name="TThemedMenu">
+<short>Represents theme elements used to theme Menus.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedMenu.tmMenuDontCare">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuRoot">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuItemNormal">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuItemSelected">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuItemDemoted">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuDropDown">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuBarItem">
+<short/>
+</element>
+<element name="TThemedMenu.tmMenuBarDropDown">
+<short/>
+</element>
+<element name="TThemedMenu.tmChevron">
+<short/>
+</element>
+<element name="TThemedMenu.tmSeparator">
+<short/>
+</element>
+
+<element name="TThemedPage">
+<short>Represents theme elements used for themed Page controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedPage.tpPageDontCare">
+<short/>
+</element>
+<element name="TThemedPage.tpPageRoot">
+<short/>
+</element>
+<element name="TThemedPage.tpUpNormal">
+<short/>
+</element>
+<element name="TThemedPage.tpUpHot">
+<short/>
+</element>
+<element name="TThemedPage.tpUpPressed">
+<short/>
+</element>
+<element name="TThemedPage.tpUpDisabled">
+<short/>
+</element>
+<element name="TThemedPage.tpDownNormal">
+<short/>
+</element>
+<element name="TThemedPage.tpDownHot">
+<short/>
+</element>
+<element name="TThemedPage.tpDownPressed">
+<short/>
+</element>
+<element name="TThemedPage.tpDownDisabled">
+<short/>
+</element>
+<element name="TThemedPage.tpUpHorzNormal">
+<short/>
+</element>
+<element name="TThemedPage.tpUpHorzHot">
+<short/>
+</element>
+<element name="TThemedPage.tpUpHorzPressed">
+<short/>
+</element>
+<element name="TThemedPage.tpUpHorzDisabled">
+<short/>
+</element>
+<element name="TThemedPage.tpDownHorzNormal">
+<short/>
+</element>
+<element name="TThemedPage.tpDownHorzHot">
+<short/>
+</element>
+<element name="TThemedPage.tpDownHorzPressed">
+<short/>
+</element>
+<element name="TThemedPage.tpDownHorzDisabled">
+<short/>
+</element>
+
+<element name="TThemedProgress">
+<short>Represents theme elements used to theme progress bar controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedProgress.tpProgressDontCare">
+<short/>
+</element>
+<element name="TThemedProgress.tpProgressRoot">
+<short/>
+</element>
+<element name="TThemedProgress.tpBar">
+<short/>
+</element>
+<element name="TThemedProgress.tpBarVert">
+<short/>
+</element>
+<element name="TThemedProgress.tpChunk">
+<short/>
+</element>
+<element name="TThemedProgress.tpChunkVert">
+<short/>
+</element>
+
+<element name="TThemedRebar">
+<short>Represents theme elements used to theme Rebar controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedRebar.trRebarDontCare">
+<short/>
+</element>
+<element name="TThemedRebar.trRebarRoot">
+<short/>
+</element>
+<element name="TThemedRebar.trGripper">
+<short/>
+</element>
+<element name="TThemedRebar.trGripperVert">
+<short/>
+</element>
+<element name="TThemedRebar.trBandNormal">
+<short/>
+</element>
+<element name="TThemedRebar.trBandHot">
+<short/>
+</element>
+<element name="TThemedRebar.trBandPressed">
+<short/>
+</element>
+<element name="TThemedRebar.trBandDisabled">
+<short/>
+</element>
+<element name="TThemedRebar.trBandChecked">
+<short/>
+</element>
+<element name="TThemedRebar.trBandHotChecked">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronNormal">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronHot">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronPressed">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronDisabled">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronVertNormal">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronVertHot">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronVertPressed">
+<short/>
+</element>
+<element name="TThemedRebar.trChevronVertDisabled">
+<short/>
+</element>
+
+<element name="TThemedScrollBar">
+<short>Represents theme elements used to theme scroll bars.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedScrollBar.tsScrollBarDontCare">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsScrollBarRoot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnUpNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnUpHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnUpPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnUpDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnDownNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnDownHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnDownPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnDownDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnLeftNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnLeftHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnLeftPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnLeftDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnRightNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnRightHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnRightPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsArrowBtnRightDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnHorzNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnHorzHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnHorzPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnHorzDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnVertNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnVertHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnVertPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsThumbBtnVertDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackHorzNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackHorzHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackHorzPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackHorzDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackHorzNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackHorzHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackHorzPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackHorzDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackVertNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackVertHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackVertPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsLowerTrackVertDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackVertNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackVertHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackVertPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsUpperTrackVertDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperHorzNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperHorzHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperHorzPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperHorzDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperVertNormal">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperVertHot">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperVertPressed">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsGripperVertDisabled">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsSizeBoxRightAlign">
+<short/>
+</element>
+<element name="TThemedScrollBar.tsSizeBoxLeftAlign">
+<short/>
+</element>
+
+<element name="TThemedSpin">
+<short>Represents theme elements used to theme spin button controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedSpin.tsSpinDontCare">
+<short/>
+</element>
+<element name="TThemedSpin.tsSpinRoot">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpNormal">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpHot">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpPressed">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpDisabled">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownNormal">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownHot">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownPressed">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownDisabled">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpHorzNormal">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpHorzHot">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpHorzPressed">
+<short/>
+</element>
+<element name="TThemedSpin.tsUpHorzDisabled">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownHorzNormal">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownHorzHot">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownHorzPressed">
+<short/>
+</element>
+<element name="TThemedSpin.tsDownHorzDisabled">
+<short/>
+</element>
+
+<element name="TThemedStartPanel">
+<short>Represents theme elements used to theme the Start Panel.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedStartPanel.tspStartPanelDontCare">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspStartPanelRoot">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspUserPane">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspMorePrograms">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspMoreProgramsArrowNormal">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspMoreProgramsArrowHot">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspMoreProgramsArrowPressed">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspProgList">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspProgListSeparator">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspPlacesList">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspPlacesListSeparator">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspLogOff">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspLogOffButtonsNormal">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspLogOffButtonsHot">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspLogOffButtonsPressed">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspUserPicture">
+<short/>
+</element>
+<element name="TThemedStartPanel.tspPreview">
+<short/>
+</element>
+
+<element name="TThemedStatus">
+<short>Represents theme elements used to theme status bars.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedStatus.tsStatusDontCare">
+<short/>
+</element>
+<element name="TThemedStatus.tsStatusRoot">
+<short/>
+</element>
+<element name="TThemedStatus.tsPane">
+<short/>
+</element>
+<element name="TThemedStatus.tsGripperPane">
+<short/>
+</element>
+<element name="TThemedStatus.tsGripper">
+<short/>
+</element>
+
+<element name="TThemedTab">
+<short>Represents theme elements used to theme Tab controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTab.ttTabDontCare">
+<short/>
+</element>
+<element name="TThemedTab.ttTabRoot">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemLeftEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemLeftEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemLeftEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemLeftEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemLeftEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemRightEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemRightEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemRightEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemRightEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemRightEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemBothEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemBothEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemBothEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemBothEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTabItemBothEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemLeftEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemLeftEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemLeftEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemLeftEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemLeftEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemRightEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemRightEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemRightEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemRightEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemRightEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemBothEdgeNormal">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemBothEdgeHot">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemBothEdgeSelected">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemBothEdgeDisabled">
+<short/>
+</element>
+<element name="TThemedTab.ttTopTabItemBothEdgeFocused">
+<short/>
+</element>
+<element name="TThemedTab.ttPane">
+<short/>
+</element>
+<element name="TThemedTab.ttBody">
+<short/>
+</element>
+
+<element name="TThemedTaskBand">
+<short>Represents theme elements used to theme task bar bands.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTaskBand.ttbTaskBandDontCare">
+<short/>
+</element>
+<element name="TThemedTaskBand.ttbTaskBandRoot">
+<short/>
+</element>
+<element name="TThemedTaskBand.ttbGroupCount">
+<short/>
+</element>
+<element name="TThemedTaskBand.ttbFlashButton">
+<short/>
+</element>
+<element name="TThemedTaskBand.ttpFlashButtonGroupMenu">
+<short/>
+</element>
+
+<element name="TThemedTaskBar">
+<short>Represents theme elements used to theme Task bars.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTaskBar.ttTaskBarDontCare">
+<short/>
+</element>
+<element name="TThemedTaskBar.ttTaskBarRoot">
+<short/>
+</element>
+<element name="TThemedTaskBar.ttbTimeNormal">
+<short/>
+</element>
+
+<element name="TThemedToolBar">
+<short>Represents theme elements used to theme tool bars.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedToolBar.ttbToolBarDontCare">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbToolBarRoot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbButtonCheckedHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbDropDownButtonCheckedHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonCheckedHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSplitButtonDropDownCheckedHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorCheckedHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertNormal">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertHot">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertPressed">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertDisabled">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertChecked">
+<short/>
+</element>
+<element name="TThemedToolBar.ttbSeparatorVertCheckedHot">
+<short/>
+</element>
+
+<element name="TThemedToolTip">
+<short>Represents theme elements used to theme tool tips.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedToolTip.tttToolTipDontCare">
+<short/>
+</element>
+<element name="TThemedToolTip.tttToolTipRoot">
+<short/>
+</element>
+<element name="TThemedToolTip.tttStandardNormal">
+<short/>
+</element>
+<element name="TThemedToolTip.tttStandardLink">
+<short/>
+</element>
+<element name="TThemedToolTip.tttStandardTitleNormal">
+<short/>
+</element>
+<element name="TThemedToolTip.tttStandardTitleLink">
+<short/>
+</element>
+<element name="TThemedToolTip.tttBaloonNormal">
+<short/>
+</element>
+<element name="TThemedToolTip.tttBaloonLink">
+<short/>
+</element>
+<element name="TThemedToolTip.tttBaloonTitleNormal">
+<short/>
+</element>
+<element name="TThemedToolTip.tttBaloonTitleLink">
+<short/>
+</element>
+<element name="TThemedToolTip.tttCloseNormal">
+<short/>
+</element>
+<element name="TThemedToolTip.tttCloseHot">
+<short/>
+</element>
+<element name="TThemedToolTip.tttClosePressed">
+<short/>
+</element>
+
+<element name="TThemedTrackBar">
+<short>Represents theme elements used to theme track bars.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTrackBar.ttbTrackBarDontCare">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbTrackBarRoot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbTrack">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbTrackVert">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbBottomNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbBottomHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbBottomPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbBottomFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbBottomDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTopNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTopHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTopPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTopFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTopDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbVertNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbVertHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbVertPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbVertFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbVertDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbLeftNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbLeftHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbLeftPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbLeftFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbLeftDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbRightNormal">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbRightHot">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbRightPressed">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbRightFocused">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbRightDisabled">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTics">
+<short/>
+</element>
+<element name="TThemedTrackBar.ttbThumbTicsVert">
+<short/>
+</element>
+
+<element name="TThemedTrayNotify">
+<short>Represents theme elements used to theme tray notifications.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTrayNotify.ttnTrayNotifyDontCare">
+<short/>
+</element>
+<element name="TThemedTrayNotify.ttnTrayNotifyRoot">
+<short/>
+</element>
+<element name="TThemedTrayNotify.ttnBackground">
+<short/>
+</element>
+<element name="TThemedTrayNotify.ttnAnimBackground">
+<short/>
+</element>
+
+<element name="TThemedTreeview">
+<short>Represents theme elements used to theme tree view controls.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedTreeview.ttTreeviewDontCare">
+<short/>
+</element>
+<element name="TThemedTreeview.ttTreeviewRoot">
+<short/>
+</element>
+<element name="TThemedTreeview.ttItemNormal">
+<short/>
+</element>
+<element name="TThemedTreeview.ttItemHot">
+<short/>
+</element>
+<element name="TThemedTreeview.ttItemSelected">
+<short/>
+</element>
+<element name="TThemedTreeview.ttItemDisabled">
+<short/>
+</element>
+<element name="TThemedTreeview.ttItemSelectedNotFocus">
+<short/>
+</element>
+<element name="TThemedTreeview.ttGlyphClosed">
+<short/>
+</element>
+<element name="TThemedTreeview.ttGlyphOpened">
+<short/>
+</element>
+<element name="TThemedTreeview.ttBranch">
+<short/>
+</element>
+
+<element name="TThemedWindow">
+<short>Represents theme elements used to theme Windows.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemedWindow.twWindowDontCare">
+<short/>
+</element>
+<element name="TThemedWindow.twWindowRoot">
+<short/>
+</element>
+<element name="TThemedWindow.twCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMinCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twMinCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMinCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMinCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMinCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMinCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMaxCaptionActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMaxCaptionInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallMaxCaptionDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameLeftActive">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameLeftInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameRightActive">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameRightInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameBottomActive">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameBottomInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameLeftActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameLeftInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameRightActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameRightInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameBottomActive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameBottomInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSysButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twSysButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twSysButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twSysButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twSysButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMDISysButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMDISysButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMDISysButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMDISysButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMDISysButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMinButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMinButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMinButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMinButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMinButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIMinButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIMinButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIMinButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIMinButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIMinButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMaxButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twCloseButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twCloseButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twCloseButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twCloseButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twCloseButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCloseButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCloseButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCloseButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCloseButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCloseButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMDICloseButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMDICloseButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMDICloseButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMDICloseButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMDICloseButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twRestoreButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twRestoreButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twRestoreButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twRestoreButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twRestoreButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIRestoreButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIRestoreButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIRestoreButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIRestoreButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIRestoreButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twHelpButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twHelpButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twHelpButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twHelpButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twHelpButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIHelpButtonNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIHelpButtonHot">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIHelpButtonPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIHelpButtonDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twMDIHelpButtonInactive">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzScrollNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzScrollHot">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzScrollPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzScrollDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzThumbNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzThumbHot">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzThumbPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twHorzThumbDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twVertScrollNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twVertScrollHot">
+<short/>
+</element>
+<element name="TThemedWindow.twVertScrollPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twVertScrollDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twVertThumbNormal">
+<short/>
+</element>
+<element name="TThemedWindow.twVertThumbHot">
+<short/>
+</element>
+<element name="TThemedWindow.twVertThumbPushed">
+<short/>
+</element>
+<element name="TThemedWindow.twVertThumbDisabled">
+<short/>
+</element>
+<element name="TThemedWindow.twDialog">
+<short/>
+</element>
+<element name="TThemedWindow.twCaptionSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallCaptionSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameLeftSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameLeftSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameRightSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameRightSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twFrameBottomSizingTemplate">
+<short/>
+</element>
+<element name="TThemedWindow.twSmallFrameBottomSizingTemplate">
+<short/>
+</element>
+
+<element name="PThemedElementDetails">
+<short>Pointer to a TThemedElementDetails instance.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemedElementDetails">
+<short>Record type with a theme element, part, and state values.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemedElementDetails.Element">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemedElementDetails.Part">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemedElementDetails.State">
+<short/>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeOption">
+<short>
+Represents glyph / image options that can be enabled or disabled for a theme.
+</short>
+<descr/>
+<seealso>
+<link id="TThemeServices.GetOption"/>
+</seealso>
+</element>
+<element name="TThemeOption.toShowButtonImages">
+<short>Show images on buttons.</short>
+</element>
+<element name="TThemeOption.toShowMenuImages">
+<short>Show images on menus.</short>
+</element>
+<element name="TThemeOption.toUseGlyphEffects">
+<short>Use hot / down effects on (button) glyphs.</short>
+<descr>
+<p>
+The option is platform- or OS-dependent. Not supported for Windows or Mac. 
+Requires WindowManager or Desktop Environment support on Linux platforms.
+</p>
+</descr>
+</element>
+
+<element name="TThemeServices">
+<short>Implements theme services for supported platforms.</short>
+<descr>
+<p>
+<var>TThemeServices</var> is a small foot print class to provide the user 
+with pure Windows XP theme related abilities like painting elements and text, 
+or retrieving theme element details.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TThemeServices.FThemesAvailable"/>
+<element name="TThemeServices.FUseThemes"/>
+<element name="TThemeServices.FThemedControlsEnabled"/>
+<element name="TThemeServices.FOnThemeChange"/>
+<element name="TThemeServices.FDottedBrush"/>
+
+<element name="TThemeServices.GetThemesEnabled">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetThemesEnabled.Result">
+<short/>
+</element>
+
+<element name="TThemeServices.GetDottedBrush">
+<short/>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetDottedBrush.Result">
+<short/>
+</element>
+
+<element name="TThemeServices.InitThemes">
+<short>Always returns <b>False</b>.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.InitThemes.Result">
+<short>Always returns <b>False</b>.</short>
+</element>
+
+<element name="TThemeServices.UnloadThemeData">
+<short>An empty implementation in TThemeServices.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeServices.UseThemes">
+<short>Always returns <b>False</b>.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.UseThemes.Result">
+<short>Always returns <b>False</b>.</short>
+</element>
+
+<element name="TThemeServices.ThemedControlsEnabled">
+<short>Always returns <b>False</b>.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.ThemedControlsEnabled.Result">
+<short>Always returns <b>False</b>.</short>
+</element>
+
+<element name="TThemeServices.InternalColorToRGB">
+<short>Converts the numeric color value to color reference.</short>
+<descr/>
+<seealso>
+<link id="#lcl.graphics.ColorToRGB">ColorToRGB</link>
+<link id="#lcl.lcltype.TColorRef">TColorRef</link>
+<link id="#lcl.lcltype.COLORREF">COLORREF</link>
+</seealso>
+</element>
+<element name="TThemeServices.InternalColorToRGB.Result">
+<short>Cardinal color reference as defined in the LCLType unit.</short>
+</element>
+<element name="TThemeServices.InternalColorToRGB.Details">
+<short>Not used in the method.</short>
+</element>
+<element name="TThemeServices.InternalColorToRGB.Color">
+<short>Numeric color value converted in the method.</short>
+</element>
+
+<element name="TThemeServices.InternalDrawParentBackground">
+<short>An empty implementation in TThemeServices.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.InternalDrawParentBackground.Window">
+<short/>
+</element>
+<element name="TThemeServices.InternalDrawParentBackground.Target">
+<short/>
+</element>
+<element name="TThemeServices.InternalDrawParentBackground.Bounds">
+<short/>
+</element>
+
+<element name="TThemeServices.Create">
+<short>
+Constructor for the class instance.
+</short>
+<descr>
+<p>
+Calls <var>InitThemes</var> to determine if theme data is available. Sets the 
+value in the <var>ThemesAvailable</var> property. Calls 
+<var>UpdateThemes</var> to load theme data.
+</p>
+</descr>
+<seealso>
+<link id="TThemeServices.InitThemes"/>
+<link id="TThemeServices.ThemesAvailable"/>
+<link id="TThemeServices.UpdateThemes"/>
+</seealso>
+</element>
+
+<element name="TThemeServices.Destroy">
+<short>
+Destructor for the class instance.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeServices.IntfDoOnThemeChange">
+<short>Signals the OnThemeChange event handler (when assigned).</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeServices.IsDisabled">
+<short>
+Indicates if the theme element value in Details is in a disabled state.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.IsDisabled.Result">
+<short/>
+</element>
+<element name="TThemeServices.IsDisabled.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.IsPushed">
+<short>
+Indicates if the theme element value in Details is in a pushed state.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.IsPushed.Result">
+<short/>
+</element>
+<element name="TThemeServices.IsPushed.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.IsHot">
+<short>
+Indicates if the theme element value in Details is in a hot or hovered state.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.IsHot.Result">
+<short/>
+</element>
+<element name="TThemeServices.IsHot.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.IsChecked">
+<short>
+Indicates if the theme element value in Details is in a checked state.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.IsChecked.Result">
+<short/>
+</element>
+<element name="TThemeServices.IsChecked.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.IsMixed">
+<short>
+Indicates if the theme element value in Details has more than one theming 
+state.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.IsMixed.Result">
+<short/>
+</element>
+<element name="TThemeServices.IsMixed.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.GetElementDetails">
+<short>Fills members in the theme element details.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetElementDetails.Result">
+<short/>
+</element>
+<element name="TThemeServices.GetElementDetails.Detail">
+<short/>
+</element>
+
+<element name="TThemeServices.GetDetailSize">
+<short>
+Deprecated. Use GetDetailSizeForPPI instead.
+</short>
+<descr>
+<p>
+Gets the default dimensions for the specified theme element detail.
+</p>
+<p>
+Calls GetDetailSizeForPPI to get the return value for the method. -1 in the 
+Width and Height for the <var>TSize</var> instance means the size for the theme
+element detail is not known.
+</p>
+</descr>
+<version>
+Deprecated in Lazarus version 2.3.0 or higher.
+</version>
+<seealso>
+<link id="TThemeServices.GetDetailSizeForPPI"/>
+<link id="TThemedElementDetails"/>
+<link id="TThemedElement"/>
+<link id="#rtl.types.TSize">TSize</link>
+</seealso>
+</element>
+<element name="TThemeServices.GetDetailSize.Result">
+<short>
+Dimensions for the theme element detail specified in the Details argument.
+</short>
+</element>
+<element name="TThemeServices.GetDetailSize.Details">
+<short>
+Identifies the element, part, and state for the requested theme element.
+</short>
+</element>
+
+<element name="TThemeServices.GetDetailSizeForWindow">
+<short>
+Gets the dimensions for a theme element on the control with the specified 
+window handle.
+</short>
+<descr>
+<p>
+Gets the default dimensions for the specified theme element detail. Calls 
+GetDetailSizeForPPI to get the return value for the method. -1 in the Width 
+and Height for the <var>TSize</var> instance means the size for the theme 
+element detail is not known.
+</p>
+<remark>
+The handle specified in AWindow is not used is the LCL implementation of the 
+method. It is provided for compatibility with widgetset implementations which 
+use the handle for DPI-aware contexts (Windows).
+</remark>
+</descr>
+<version>
+Added in LCL version 3.0.
+</version>
+<seealso>
+<link id="TThemeServices.GetDetailSizeForPPI"/>
+<link id="TThemedElementDetails"/>
+<link id="TThemedElement"/>
+<link id="#rtl.types.TSize">TSize</link>
+</seealso>
+</element>
+<element name="TThemeServices.GetDetailSizeForWindow.Result">
+<short>
+TSize instance with the Width and Height for the specified theme element 
+detail.
+</short>
+</element>
+<element name="TThemeServices.GetDetailSizeForWindow.Details">
+<short>
+Identifies the element, part, and state for the requested themed element.
+</short>
+</element>
+<element name="TThemeServices.GetDetailSizeForWindow.AWindow">
+<short>
+The window handle for the control where the theme element size is used.
+</short>
+</element>
+
+<element name="TThemeServices.GetDetailSizeForPPI">
+<short>
+Gets the dimensions for a theme element scaled to the specified Pixels per 
+Inch (PPI).
+</short>
+<descr>
+<p>
+<var>GetDetailSizeForPPI</var> is a <var>TSize</var> function used to get the 
+dimensions for a theme element detail scaled to the display density specified 
+in <var>PPI</var>.
+</p>
+<p>
+<var>Details</var> contains the theme element, part, and state values which 
+identify a themed element or one of its constituent parts.
+</p>
+<p>
+<var>PPI</var> contains the Pixels per Inch values used to scale the size 
+for the theme element. It is used to generate a scaling factor that converts 
+values from 96 PPI (used at design-time) to the given PPI setting. PPI 
+normally contains the PixelsPerInch setting for the monitor where the themed 
+element is displayed.
+</p>
+<p>
+The return value is a TSize instance which contains the Width (in cx) and the 
+Height (in cy) for the themed element detail scaled to the given PPI setting. 
+When cx and cy are set to -1, this indicates that the size for the themed 
+element is not known. This can occur if Details has an unknown value in its 
+Element or Part members.
+</p>
+<p>
+<b>Themed Elements and Parts</b>
+</p>
+<dl>
+<dt>teButton</dt>
+<dd>
+Part allows: BP_RADIOBUTTON, BP_CHECKBOX, or BP_PUSHBUTTON.
+</dd>
+<dt>teRebar</dt>
+<dd>
+Part allows: RP_GRIPPER or RP_GRIPPERVERT.
+</dd>
+<dt>teToolBar</dt>
+<dd>
+Part allows: TP_SPLITBUTTONDROPDOWN or TP_DROPDOWNBUTTON
+</dd>
+<dt>teTreeView</dt>
+<dd>
+Part allows: TVP_GLYPH or TVP_HOTGLYPH.
+</dd>
+<dt>teWindow</dt>
+<dd>
+Part allows: WP_SMALLCLOSEBUTTON, WP_MDICLOSEBUTTON, WP_MDIHELPBUTTON, 
+WP_MDIMINBUTTON, WP_MDIRESTOREBUTTON, or WP_MDISYSBUTTON.
+</dd>
+<dt>teHeader</dt>
+<dd>
+Part allows: HP_HEADERSORTARROW
+</dd>
+</dl>
+</descr>
+<seealso>
+<link id="TThemeServices.GetDetailSize"/>
+<link id="TThemedElementDetails"/>
+<link id="TThemedElement"/>
+<link id="#lcl.graphics.ScreenInfo">ScreenInfo</link>
+<link id="#lcl.lcltype.TScreenInfo">TScreenInfo</link>
+<link id="#rtl.types.TSize">TSize</link>
+</seealso>
+<version>
+Added in LCL version 3.0. Replaces the deprecated GetDetailSize method.
+</version>
+</element>
+<element name="TThemeServices.GetDetailSizeForPPI.Result">
+<short>
+TSize instance with the Width and Height for the specified theme element 
+detail.
+</short>
+</element>
+<element name="TThemeServices.GetDetailSizeForPPI.Details">
+<short>
+Identifies the element, part, and state for the requested themed element.
+</short>
+</element>
+<element name="TThemeServices.GetDetailSizeForPPI.PPI">
+<short>
+Pixels per Inch used to scale size values in the theme element.
+</short>
+</element>
+
+<element name="TThemeServices.GetDetailRegion">
+<short>
+Gets the handle to the region for a theme element.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetDetailRegion.Result">
+<short/>
+</element>
+<element name="TThemeServices.GetDetailRegion.DC">
+<short/>
+</element>
+<element name="TThemeServices.GetDetailRegion.HDC">
+<short/>
+</element>
+<element name="TThemeServices.GetDetailRegion.Details">
+<short/>
+</element>
+<element name="TThemeServices.GetDetailRegion.R">
+<short/>
+</element>
+
+<element name="TThemeServices.GetStockImage">
+<short>Always returns <b>False</b>.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetStockImage.Result">
+<short>Always returns <b>False</b>.</short>
+</element>
+<element name="TThemeServices.GetStockImage.StockID">
+<short/>
+</element>
+<element name="TThemeServices.GetStockImage.Image">
+<short/>
+</element>
+<element name="TThemeServices.GetStockImage.Mask">
+<short/>
+</element>
+<element name="TThemeServices.GetStockImage.Width">
+<short/>
+</element>
+<element name="TThemeServices.GetStockImage.Height">
+<short/>
+</element>
+
+<element name="TThemeServices.GetOption">
+<short>
+Returns 1 if the theme option is used for the platform, or 0 when not used.
+</short>
+<descr>
+<p>
+Use of toUseGlyphEffects is OS-dependent. The option is used for Linux. It is 
+not used for Windows or macOS (OSX).
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TThemeServices.GetOption.Result">
+<short/>
+</element>
+<element name="TThemeServices.GetOption.AOption">
+<short/>
+</element>
+
+<element name="TThemeServices.GetTextExtent">
+<short>
+Calculates the bounding rectangle for the text or caption in a theme element.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.GetTextExtent.Result">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.DC">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.HDC">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.Details">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.S">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.Flags">
+<short/>
+</element>
+<element name="TThemeServices.GetTextExtent.BoundingRect">
+<short/>
+</element>
+
+<element name="TThemeServices.ColorToRGB">
+<short>
+Converts a TColor value to the Cardinal color constant needed for a theme 
+element detail.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.ColorToRGB.Result">
+<short/>
+</element>
+<element name="TThemeServices.ColorToRGB.Color">
+<short/>
+</element>
+<element name="TThemeServices.ColorToRGB.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.ContentRect">
+<short>
+Adjusts the bounding rectangle for a theme element to contain the content 
+area only.
+</short>
+<descr/>
+<version>
+Modified in version 2.2.6 for the Win32 widgetset to clear all cached 
+theme data when the theme has been changed. Returns the modified content 
+rectangle on success.
+</version>
+<seealso/>
+</element>
+<element name="TThemeServices.ContentRect.Result">
+<short/>
+</element>
+<element name="TThemeServices.ContentRect.DC">
+<short/>
+</element>
+<element name="TThemeServices.ContentRect.Details">
+<short/>
+</element>
+<element name="TThemeServices.ContentRect.BoundingRect">
+<short/>
+</element>
+
+<element name="TThemeServices.DrawEdge">
+<short>
+Default drawing for the edges on a themed element.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.DrawEdge.DC">
+<short/>
+</element>
+<element name="TThemeServices.DrawEdge.Details">
+<short/>
+</element>
+<element name="TThemeServices.DrawEdge.R">
+<short/>
+</element>
+<element name="TThemeServices.DrawEdge.Edge">
+<short/>
+</element>
+<element name="TThemeServices.DrawEdge.Flags">
+<short/>
+</element>
+<element name="TThemeServices.DrawEdge.AContentRect">
+<short/>
+</element>
+
+<element name="TThemeServices.DrawElement">
+<short>
+Draws a theme element using the specified theme element details.
+</short>
+<descr/>
+<version>
+Modified in version 2.3.0 to use clBtnFace as the fill color for Tab pane or 
+Tab body parts. clBackground was used in previous versions.
+</version>
+<seealso/>
+</element>
+<element name="TThemeServices.DrawElement.DC">
+<short>Device context where the theme element is drawn.</short>
+</element>
+<element name="TThemeServices.DrawElement.Details">
+<short>Theme element details used in the method.</short>
+</element>
+<element name="TThemeServices.DrawElement.R">
+<short>Rectangle used to draw the frame for the themed element.</short>
+</element>
+<element name="TThemeServices.DrawElement.ClipRect">
+<short>
+Not used in the current implementation. Default value is <b>Nil</b>.
+</short>
+</element>
+
+<element name="TThemeServices.DrawIcon">
+<short>
+Draws the icon for a theme element.
+</short>
+<descr>
+<p>
+Overloaded to provide Windows and non-Windows variants. Overridden in the 
+TWin32ThemeServices descendant for compatibility with Delphi.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TThemeServices.DrawIcon.DC">
+<short/>
+</element>
+<element name="TThemeServices.DrawIcon.Details">
+<short/>
+</element>
+<element name="TThemeServices.DrawIcon.R">
+<short/>
+</element>
+<element name="TThemeServices.DrawIcon.himl">
+<short/>
+</element>
+<element name="TThemeServices.DrawIcon.Index">
+<short/>
+</element>
+
+<element name="TThemeServices.DrawParentBackground">
+<short>
+Draws a parent background using the specified window handle and device 
+context.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.DrawParentBackground.Window">
+<short/>
+</element>
+<element name="TThemeServices.DrawParentBackground.Target">
+<short/>
+</element>
+<element name="TThemeServices.DrawParentBackground.Details">
+<short/>
+</element>
+<element name="TThemeServices.DrawParentBackground.OnlyIfTransparent">
+<short/>
+</element>
+<element name="TThemeServices.DrawParentBackground.Bounds">
+<short/>
+</element>
+
+<element name="TThemeServices.DrawText">
+<short>
+Draws the text for a themed control.
+</short>
+<descr>
+<p>
+<var>DrawText</var> is an overloaded method used to draw the text or caption 
+for a themed control.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TThemeServices.DrawText.DC">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.Details">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.S">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.R">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.Flags">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.Flags2">
+<short/>
+</element>
+<element name="TThemeServices.DrawText.ACanvas">
+<short/>
+</element>
+
+<element name="TThemeServices.HasTransparentParts">
+<short>Always returns <b>True</b>.</short>
+<descr/>
+<seealso/>
+</element>
+<element name="TThemeServices.HasTransparentParts.Result">
+<short/>
+</element>
+<element name="TThemeServices.HasTransparentParts.Details">
+<short/>
+</element>
+
+<element name="TThemeServices.PaintBorder">
+<short>
+Default painting method for the borders for a control.
+</short>
+<descr>
+<p>
+<var>PaintBorder</var> has an empty implementation in 
+<var>TThemeServices</var>. It must be overridden in a descendent class to use 
+the native border drawing style for the widgetset.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TThemeServices.PaintBorder.Control">
+<short/>
+</element>
+<element name="TThemeServices.PaintBorder.EraseLRCorner">
+<short/>
+</element>
+
+<element name="TThemeServices.UpdateThemes">
+<short>
+Reloads theme elements and details when UseThemes is <b>True</b>.
+</short>
+<descr>
+<p>
+Called from the <var>Create</var> constructor. Think of it as the theme 
+counterpart for the <var>Loaded</var> method used for components.
+</p>
+</descr>
+<seealso>
+<link id="TThemeServices.Create"/>
+</seealso>
+</element>
+
+<element name="TThemeServices.DottedBrush">
+<short>
+Bitmap Handle for the Dotted Pattern Brush used to draw theme elements.
+</short>
+<descr/>
+<link id="ThemeServices.DrawElement"/>
+</element>
+
+<element name="TThemeServices.ThemesAvailable">
+<short>Indicates if theme data is available.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeServices.ThemesEnabled">
+<short>Indicates if themes are enabled for the platform.</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TThemeServices.OnThemeChange">
+<short>
+Event handler signalled when the current window theme has been changed.
+</short>
+<descr>
+<p>
+<var>OnThemeChange</var> is a <var>TNotifyEvent</var> property with the event 
+handler signalled when the current window theme has been changed. 
+Applications must implement and assign an object procedure to the handler to 
+respond to the event notification.
+</p>
+</descr>
+<seealso>
+<link id="#rtl.classes.TNotifyEvent">TNotifyEvent</link>
+</seealso>
+</element>
+
+<element name="ThemeServices">
+<short>
+Provides access to the Theme Services singleton for the widgetset.
+</short>
+<descr>
+<p>
+<var>ThemeServices</var> is a <var>TThemeServices</var> function used to get 
+the theme services singleton for the current widgetset. The return value is a 
+TThemeServices descendant which implement the theming API for a specific 
+widgetset / platform.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="ThemeServices.Result">
+<short>TThemeServices instance for the widgetset.</short>
+</element>
+
+<element name="ThemedElementDetailsEqual">
+<short>
+Compares the content for the specified theme element detail arguments.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="ThemedElementDetailsEqual.Result">
+<short/>
+</element>
+<element name="ThemedElementDetailsEqual.D1">
+<short/>
+</element>
+<element name="ThemedElementDetailsEqual.D2">
+<short/>
+</element>
+
+<element name="ThemeManagerCopyright">
+<short>Copyright information for the theme manager code.</short>
+<descr>
+<p>
+Do not modify the copyright in any way! Usage of this unit is prohibited 
+without the copyright notice in the compiled binary file.
+</p>
+</descr>
+<seealso/>
+</element>
+
+<element name="TThemesImageDrawEvent">
+<short>
+Specifies an event handler signalled to draw an image in an image list to a 
+Canvas instance.
+</short>
+<descr>
+<p>
+<var>TThemesImageDrawEvent</var> is the type used for the 
+<var>ThemesImageDrawEvent</var> variable in the unit.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="TThemesImageDrawEvent.AImageList">
+<short>
+Image list with the image drawn in the event handler.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.ACanvas">
+<short>
+TCanvas instance where the image is drawn.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.AX">
+<short>
+Horizontal canvas coordinate where the image is drawn.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.AY">
+<short>
+Vertical canvas coordinate where the image is drawn.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.AIndex">
+<short>
+Ordinal position in the image list for the image drawn in the event handler.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.ADrawEffect">
+<short>
+Drawing effect applied to the image.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.AImageWidth">
+<short>
+Width for the rendered image.
+</short>
+</element>
+<element name="TThemesImageDrawEvent.ARefControl">
+<short>
+Reference to the control with the Canvas updated in the event handler.
+</short>
+</element>
+
+<element name="ThemesImageDrawEvent">
+<short>
+Variable with the event handler signalled to draw a themed image to a Canvas.
+</short>
+<descr>
+<p>
+<var>ThemesImageDrawEvent</var> is a unit global 
+<var>TThemesImageDrawEvent</var> variable with the event handler signalled to 
+draw an image in an imagelist to a Canvas. The value for the variable is 
+assigned in the <file>imglist</file> unit when used in an application.
+</p>
+</descr>
+<seealso>
+<link id="TThemesImageDrawEvent"/>
+</seealso>
+</element>
+
+</module>
+<!-- Themes -->
+</package>
+</fpdoc-descriptions>

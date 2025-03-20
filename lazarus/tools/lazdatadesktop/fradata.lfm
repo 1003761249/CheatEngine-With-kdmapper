@@ -1,0 +1,85 @@
+object DataFrame: TDataFrame
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  ClientHeight = 240
+  ClientWidth = 320
+  TabOrder = 0
+  DesignLeft = 901
+  DesignTop = 348
+  object FTopPanel: TPanel
+    Left = 4
+    Height = 20
+    Top = 4
+    Width = 312
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Around = 4
+    BevelOuter = bvNone
+    ClientHeight = 20
+    ClientWidth = 312
+    TabOrder = 0
+    object FNavigator: TDBNavigator
+      Left = 0
+      Height = 20
+      Top = 0
+      Width = 100
+      Align = alLeft
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 20
+      ClientWidth = 100
+      DataSource = FDataSource
+      Flat = True
+      Options = []
+      TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+      Images = ImgDatamodule.DBNavigatorImages
+    end
+    object FExportSB: TSpeedButton
+      Left = 100
+      Height = 20
+      Top = 0
+      Width = 24
+      Align = alLeft
+      Flat = True
+      Images = ImgDatamodule.AppImages
+      ImageIndex = 10
+      OnClick = DoExport
+    end
+    object FCodeSB: TSpeedButton
+      Left = 124
+      Height = 20
+      Top = 0
+      Width = 20
+      Align = alLeft
+      Flat = True
+      Images = ImgDatamodule.AppImages
+      ImageIndex = 11
+      OnClick = DoCode
+    end
+  end
+  object FDBGrid: TDBGrid
+    Left = 0
+    Height = 212
+    Top = 28
+    Width = 320
+    Align = alClient
+    Color = clWindow
+    Columns = <>
+    DataSource = FDataSource
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgThumbTracking]
+    TabOrder = 1
+  end
+  object FDataSource: TDataSource
+    Left = 80
+    Top = 72
+  end
+end

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="/tmp/publishedproject/"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="gir2pascal.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="girpascalwriter.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="girnamespaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girNameSpaces"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="girctypesmapping.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girCTypesMapping"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="girtokens.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girTokens"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="girerrors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girErrors"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="girfiles.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girFiles"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="girobjects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girObjects"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="girpascalclasswriter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="girPascalClassWriter"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="girpascalwritertypes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="commandlineoptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CommandLineOptions"/>
+      </Unit10>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="gir2pas"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EStringListError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

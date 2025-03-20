@@ -1,0 +1,552 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Péter Gábor <ptrg@freemail.hu>\n"
+"Language-Team: Magyar (Hungarian)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: fpwebstrconsts.rsapachemodule
+msgid "Apache Module"
+msgstr "Apache modul"
+
+#: fpwebstrconsts.rsapachemodule2
+#, fuzzy
+#| msgid "Apache module%sAn Apache loadable module in Free Pascal using webmodules. The main library file is automatically maintained by Lazarus."
+msgid "An Apache loadable module in Free Pascal using webmodules. The main library file is automatically maintained by Lazarus."
+msgstr "Apache modul%sEgy az Apache által betölthető modul Free Pascal-ban webmodulok használatával. A fő fügvénytár forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rscgiapplicati
+msgid "CGI Application"
+msgstr "CGI alkalmazás"
+
+#: fpwebstrconsts.rscgiapplicati2
+#, fuzzy
+#| msgid "CGI Application%sA CGI (Common Gateway Interface) program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "A CGI (Common Gateway Interface) program in Free Pascal using webmodules."
+msgstr "CGI alkalmazás%sEgy CGI (Common Gateway Interface) program Free Pascal-ban webmodulok használatával. A program forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rscustomcgiapp
+msgid "Custom CGI Application"
+msgstr "Egyéni CGI alkalmazás"
+
+#: fpwebstrconsts.rscustomcgiapp2
+#, fuzzy
+#| msgid "Custom CGI Application%sA CGI (Common Gateway Interface) program in Free Pascal. The program source is automatically maintained by Lazarus."
+msgid "A CGI (Common Gateway Interface) program in Free Pascal."
+msgstr "Egyéni CGI alkalmazás%sEgy CGI (Common Gateway Interface) program Free Pascal-ban. A program forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rscustomfastcg
+msgid "Custom FastCGI Application"
+msgstr "Egyéni FastCGI alkalmazás"
+
+#: fpwebstrconsts.rscustomfastcg2
+#, fuzzy
+#| msgid "Custom FastCGI Application%sA FastCGI (Common Gateway Interface) program in Free Pascal. The program source is automatically maintained by Lazarus."
+msgid "A FastCGI (Common Gateway Interface) program in Free Pascal."
+msgstr "Egyéni FastCGI alkalmazás%sEgy FastCGI (Common Gateway Interface) program Free Pascal-ban. A program forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rsfastcgiappli
+msgid "FastCGI Application"
+msgstr "FastCGI alkalmazás"
+
+#: fpwebstrconsts.rsfastcgiappli2
+#, fuzzy
+#| msgid "FastCGI Application%sA FastCGI (Common Gateway Interface) program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "A FastCGI (Common Gateway Interface) program in Free Pascal using webmodules."
+msgstr "FastCGI alkalmazás%sEgy FastCGI (Common Gateway Interface) program Free Pascal-ban webmodulok használatával. A program forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rsfilemodule
+msgid "File serving Module"
+msgstr ""
+
+#: fpwebstrconsts.rsfilemodule2
+msgid "A datamodule to help serving files from the filesystem in WEB (HTTP) applications."
+msgstr ""
+
+#: fpwebstrconsts.rshtmlwebmodul
+msgid "HTML Web Module"
+msgstr "HTTP web modul"
+
+#: fpwebstrconsts.rshtmlwebmodul2
+#, fuzzy
+#| msgid "HTML WEB Module%sA Web datamodule for producing strict HTML."
+msgid "A Web datamodule for producing strict HTML."
+msgstr "HTML WEB modul%sEgy web adatmodul szigorú HTML létrehozására."
+
+#: fpwebstrconsts.rshttpappli
+msgid "HTTP server Application"
+msgstr "HTTP kiszolgáló alkalmazás"
+
+#: fpwebstrconsts.rshttpappli2
+#, fuzzy
+#| msgid "HTTP server Application. Complete HTTP Server program in Free Pascal using webmodules. The program source is automatically maintained by Lazarus."
+msgid "Complete HTTP Server program in Free Pascal using webmodules."
+msgstr "HTTP kiszolgáló alkalmazás. Teljes HTTP kiszolgáló program Free Pascal-ban webmodulok használatával. Az program forráskódját a Lazarus automatikusan karbantartja."
+
+#: fpwebstrconsts.rsnomodule
+msgid "Do not create a web module"
+msgstr ""
+
+#: fpwebstrconsts.rswebdataprovi
+msgid "Web DataProvider Module"
+msgstr "Web adatszolgáltató modul"
+
+#: fpwebstrconsts.rswebdataprovi2
+#, fuzzy
+#| msgid "WEB DataProvider Module%sA datamodule to handle data requests for WEB (HTTP) applications using WebDataProvider components."
+msgid "A datamodule to handle data requests for WEB (HTTP) applications using WebDataProvider components."
+msgstr "WEB adatszolgáltató modul%sEgy adatmodul WEB (HTTP) alkalmazások számára az adatkérések kezelésére WebDataProvider komponensek haszálatával."
+
+#: fpwebstrconsts.rswebextdirect
+msgid "Web Ext.Direct Module"
+msgstr "Web Ext.Direct modul"
+
+#: fpwebstrconsts.rswebextdirect2
+#, fuzzy
+#| msgid "WEB Ext.Direct Module%sA datamodule to dispatch Ext.Direct requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgid "A datamodule to dispatch Ext.Direct requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgstr "Web Ext.Direct modul%sEgy adatmodul, mely WEB (HTTP) alkalmazásokban az Ext.Direct kéréseket kezeli TJSONRPCHandler komponensek használatával."
+
+#: fpwebstrconsts.rswebjsonrpcmo
+msgid "Web JSON-RPC Module"
+msgstr "Web JSON-RPC modul"
+
+#: fpwebstrconsts.rswebjsonrpcmo2
+#, fuzzy
+#| msgid "WEB JSON-RPC Module%sA datamodule to dispatch JSON-RPC requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgid "A datamodule to dispatch JSON-RPC requests in WEB (HTTP) applications using TJSONRPCHandler components."
+msgstr "Web JSON-RPC modul%sEgy adatmodul, mely WEB (HTTP) alkalmazásokban a JSON-RPC kéréseket kezeli TJSONRPCHandler komponensek használatával."
+
+#: fpwebstrconsts.rswebmodule
+msgid "Web Module"
+msgstr "Web modul"
+
+#: fpwebstrconsts.rswebmoduleada
+#, fuzzy
+#| msgid "WEB Module%sA datamodule for WEB (HTTP) applications."
+msgid "A datamodule for WEB (HTTP) applications."
+msgstr "Web modul%sEgy adatmodul WEB (HTTP) alkalmazások számára."
+
+#: fpwebstrconsts.scaption
+msgid "Create a new JSON-RPC module"
+msgstr "Új JSON-RPC modul létrehozása"
+
+#: fpwebstrconsts.scssfile
+msgid "CSS file"
+msgstr "CSS fájl"
+
+#: fpwebstrconsts.scssfiledesc
+msgid "Create new CSS file ..."
+msgstr "Új CSS fájl létrehozása ..."
+
+#: fpwebstrconsts.scsssource
+msgid "Enter your classes/style definitions here"
+msgstr "Írja ide az osztály/stílus meghatározásokat"
+
+#: fpwebstrconsts.sdefaultrouteservesfiles
+msgid "Serve files from default location"
+msgstr ""
+
+#: fpwebstrconsts.sdocumentroot
+msgid "&Directory"
+msgstr "&Könyvtár"
+
+#: fpwebstrconsts.senteryoutext
+msgid "Enter your text ..."
+msgstr "Írja be a szöveget ..."
+
+#: fpwebstrconsts.sfileserving
+msgid "File serving"
+msgstr ""
+
+#: fpwebstrconsts.shtmlautor
+msgid "Html &author - <meta name=\"author\">"
+msgstr "HTML &szerző - <meta name=\"author\">"
+
+#: fpwebstrconsts.shtmlcharset
+msgid "HTML chars&et"
+msgstr "HTML &karakterkészlet"
+
+#: fpwebstrconsts.shtmlcopyright
+msgid "Html cop&yright - meta name=\"copyright\">"
+msgstr "HTML sze&rzői jog - meta name=\"copyright\">"
+
+#: fpwebstrconsts.shtmlcssfile
+msgid "&CSS file"
+msgstr "&CSS fájl"
+
+#: fpwebstrconsts.shtmldesign
+msgid "HTML design"
+msgstr "HTML tervezés"
+
+#: fpwebstrconsts.shtmlfile
+msgid "HTML file"
+msgstr "HTML fájl"
+
+#: fpwebstrconsts.shtmlfiledesc
+msgid "Create new HTML file ..."
+msgstr "Új HTML fájl létrehozása ..."
+
+#: fpwebstrconsts.shtmlinputformaccesskey
+msgid "Access key"
+msgstr "Hozzáférési billentyű"
+
+#: fpwebstrconsts.shtmlinputformalign
+msgid "Align"
+msgstr "Igazítás"
+
+#: fpwebstrconsts.shtmlinputformalt
+msgid "Alt"
+msgstr "Alt"
+
+#: fpwebstrconsts.shtmlinputformcaption
+msgid "Tag property: INPUT"
+msgstr "Cimke tulajdonság: INPUT"
+
+#: fpwebstrconsts.shtmlinputformimagesrc
+msgid "Image src"
+msgstr "Kép forrás"
+
+#: fpwebstrconsts.shtmlinputformmaxlen
+msgid "Max length"
+msgstr "Maximális hossz"
+
+#: fpwebstrconsts.shtmlinputformname
+msgid "Name"
+msgstr "Név"
+
+#: fpwebstrconsts.shtmlinputformsize
+msgid "Size"
+msgstr "Méret"
+
+#: fpwebstrconsts.shtmlinputformtabindex
+msgid "Tab Index"
+msgstr "Tab sorszám"
+
+#: fpwebstrconsts.shtmlinputformtype
+msgid "Type"
+msgstr "Típus"
+
+#: fpwebstrconsts.shtmlinputformvalue
+msgid "Value"
+msgstr "Érték"
+
+#: fpwebstrconsts.shtmljsfile
+msgid "&Javascript file"
+msgstr "&Javascript fájl"
+
+#: fpwebstrconsts.shtmltableformborderwidth
+msgid "Border width"
+msgstr "Szegély szélessége"
+
+#: fpwebstrconsts.shtmltableformcaption
+msgid "New HTML table ..."
+msgstr "Új HTML táblázat ..."
+
+#: fpwebstrconsts.shtmltableformcellpadding
+msgid "Cell padding"
+msgstr "Cellamargó"
+
+#: fpwebstrconsts.shtmltableformcellspacing
+msgid "Cell spacing"
+msgstr "Cellatávolság"
+
+#: fpwebstrconsts.shtmltableformcolumncount
+msgid "Column count"
+msgstr "Oszlopszám"
+
+#: fpwebstrconsts.shtmltableformheaderbgcolor
+msgid "Header bg color"
+msgstr "Fejléc háttérszíne"
+
+#: fpwebstrconsts.shtmltableformrowcount
+msgid "Row count"
+msgstr "Sorszám"
+
+#: fpwebstrconsts.shtmltableformuseheader
+msgid "Use header row"
+msgstr "Fejlécsor használata"
+
+#: fpwebstrconsts.shtmltableformwidth
+msgid "Width"
+msgstr "Szélesség"
+
+#: fpwebstrconsts.shtmltagcaptionreset
+msgid "Reset"
+msgstr "Alaphelyzet"
+
+#: fpwebstrconsts.shtmltagcaptionsubmit
+msgid "Submit"
+msgstr "Küldés"
+
+#: fpwebstrconsts.shtmltagproperty
+#, object-pascal-format
+msgid "Tag property: %s"
+msgstr "Cimke tulajdonság: %s"
+
+#: fpwebstrconsts.shtmltitle
+msgid "Html &title - <title>"
+msgstr "Html &cím - <title>"
+
+#: fpwebstrconsts.shttppath
+msgid "HTTP Path"
+msgstr "HTTP útvonal"
+
+#: fpwebstrconsts.shttpport
+msgid "&Port to listen for requests:"
+msgstr "A kérések figyelésére használt &port:"
+
+#: fpwebstrconsts.sjsfile
+msgid "Javascript file"
+msgstr "Javascript fájl"
+
+#: fpwebstrconsts.sjsfiledesc
+msgid "Create new javascript file ..."
+msgstr "Új javascript fájl létrehozása ..."
+
+#: fpwebstrconsts.sjsonclass
+msgid "JSON-RPC class"
+msgstr "JSON-RPC osztály"
+
+#: fpwebstrconsts.sjssource
+msgid "Enter your javascript code here"
+msgstr "Írja ide a javascript kódot"
+
+#: fpwebstrconsts.smihtmleditor
+msgid "HTML Editor"
+msgstr "HTML szerkesztő"
+
+#: fpwebstrconsts.smihtmlformbuttton
+msgid "Insert Button control"
+msgstr "Gomb beszúrása"
+
+#: fpwebstrconsts.smihtmlformcheckbox
+msgid "Insert CheckBox control"
+msgstr "Jelölőnégyzet beszúrása"
+
+#: fpwebstrconsts.smihtmlformfieldset
+msgid "Insert HTML FIELDSET tag"
+msgstr "HTML FIELDSET címke beszúrása"
+
+#: fpwebstrconsts.smihtmlformlegend
+msgid "Insert HTML LEGEND tag"
+msgstr "HTML LEGEND címke beszúrása"
+
+#: fpwebstrconsts.smihtmlformradiobtn
+msgid "Insert RadioBtn control"
+msgstr "Rádiógomb beszúrása"
+
+#: fpwebstrconsts.smihtmlforms
+msgid "Forms"
+msgstr "Űrlapok"
+
+#: fpwebstrconsts.smihtmlformselect
+msgid "Insert Select control"
+msgstr "Választólista beszúrása"
+
+#: fpwebstrconsts.smihtmlformselectopt
+msgid "Insert Select options"
+msgstr "Választási lehetőség beszúrása"
+
+#: fpwebstrconsts.smihtmlformselectoptwd
+msgid "Insert Select options with dialog"
+msgstr "Választási lehetőség beszúrása párbeszéddel"
+
+#: fpwebstrconsts.smihtmlinsertbr
+msgid "Insert new line"
+msgstr "Új sor beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertcolor
+msgid "Insert HTML color value"
+msgstr "HTML színérték beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertcomment
+msgid "Insert HTML comment"
+msgstr "HTML megjegyzés beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertdivblock
+msgid "Insert HTML DIV tag"
+msgstr "HTML DIV címke beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertform
+msgid "Insert HTML Form"
+msgstr "HTML FORM beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertheader1level
+msgid "Insert HTML level 1 header"
+msgstr "HTML 1. szintű fejléc beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertheader2level
+msgid "Insert HTML level 2 header"
+msgstr "HTML 2. szintű fejléc beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertheader3level
+msgid "Insert HTML level 3 header"
+msgstr "HTML 3. szintű fejléc beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertheader4level
+msgid "Insert HTML level 4 header"
+msgstr "HTML 4. szintű fejléc beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertheader5level
+msgid "Insert HTML level 5 header"
+msgstr "HTML 5. szintű fejléc beszúrása"
+
+#: fpwebstrconsts.smihtmlinserthr
+msgid "Insert horizontal line"
+msgstr "Vízszintes vonal beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertimg
+msgid "Insert image"
+msgstr "Kép beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertinput
+msgid "Insert HTML INPUT tag"
+msgstr "HTML INPUT címke beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertinputreset
+msgid "Insert \"Reset\" button"
+msgstr "\"Alaphelyzet\" gomb beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertinputsubmit
+msgid "Insert \"Submit\" button "
+msgstr "\"Küldés\" gomb beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertlink
+msgid "Insert link (HREF)"
+msgstr "Hivatkozás beszúrása (HREF)"
+
+#: fpwebstrconsts.smihtmlinsertlist
+msgid "Insert HTML list"
+msgstr "HTML lista beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertnbsp
+msgid "Insert Non Breaking Space"
+msgstr "Nem tördelhető szóköz beillesztése"
+
+#: fpwebstrconsts.smihtmlinsertpre
+msgid "Insert HTML PRE tag"
+msgstr "HTML PRE címke beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertspantext
+msgid "Insert HTML SPAN tag"
+msgstr "HTML SPAN címke beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertsub
+msgid "Insert Subscript"
+msgstr "Alsó index beszúrása"
+
+#: fpwebstrconsts.smihtmlinsertsuper
+msgid "Insert Superscript"
+msgstr "Felső index beszúrása"
+
+#: fpwebstrconsts.smihtmlinserttable
+msgid "Insert HTML table"
+msgstr "HTML táblázat beszúrása"
+
+#: fpwebstrconsts.smihtmlinserttabledata
+msgid "Insert HTML table data"
+msgstr "HTML táblázatadat beszúrása"
+
+#: fpwebstrconsts.smihtmlinserttabledatawd
+msgid "Insert HTML table data with dialog"
+msgstr "HTML táblázatadat beszúrása párbeszéddel"
+
+#: fpwebstrconsts.smihtmlinserttablerow
+msgid "Insert HTML table row"
+msgstr "HTML táblázatsor beszúrása"
+
+#: fpwebstrconsts.smihtmlinserttablerowwd
+msgid "Insert HTML table row with dialog"
+msgstr "HTML táblázatsor beszúrása párbeszéddel"
+
+#: fpwebstrconsts.smihtmllists
+msgid "Lists"
+msgstr "Listák"
+
+#: fpwebstrconsts.smihtmlother
+msgid "Other"
+msgstr "Egyéb"
+
+#: fpwebstrconsts.smihtmlstandart
+msgid "Standard"
+msgstr "Alapvető"
+
+#: fpwebstrconsts.smihtmlstyle
+msgid "Styles"
+msgstr "Stílusok"
+
+#: fpwebstrconsts.smihtmltables
+msgid "Tables"
+msgstr "Táblázatok"
+
+#: fpwebstrconsts.smihtmltextaligncenter
+msgid "Text align center"
+msgstr "Szöveg igazítása középre"
+
+#: fpwebstrconsts.smihtmltextalignjustify
+msgid "Text align justify"
+msgstr "Szöveg igazítása egyenletesen (sorkizárt)"
+
+#: fpwebstrconsts.smihtmltextalignleft
+msgid "Text align left"
+msgstr "Szöveg igazítása balra"
+
+#: fpwebstrconsts.smihtmltextalignright
+msgid "Text align right"
+msgstr "Szöveg igazítása jobbra"
+
+#: fpwebstrconsts.smihtmltextbold
+msgid "Bold"
+msgstr "Félkövér"
+
+#: fpwebstrconsts.smihtmltextitalic
+msgid "Italic"
+msgstr "Dőlt"
+
+#: fpwebstrconsts.smihtmltextunderline
+msgid "Underline"
+msgstr "Aláhúzott"
+
+#: fpwebstrconsts.smiotherinsertfn
+msgid "Insert file name"
+msgstr "Fájlnév beszúrása"
+
+#: fpwebstrconsts.snewhtmlfileprops
+msgid "New Html file properties"
+msgstr "Új HTML fájl tulajdonságok"
+
+#: fpwebstrconsts.snewhttpapp
+msgid "New HTTP application"
+msgstr "Új HTTP alkalmazás"
+
+#: fpwebstrconsts.snofiles
+msgid "Do not serve files"
+msgstr ""
+
+#: fpwebstrconsts.sregisterfiles
+msgid "&Register location to serve files from"
+msgstr "Hely &bejegyzése a fájlok kiszolgálására"
+
+#: fpwebstrconsts.sregisterjson
+msgid "Register JSON-RPC handlers in factory"
+msgstr "JSON-RPC kezelők regisztrálása az előállítóban"
+
+#: fpwebstrconsts.sregisterwebm
+msgid "Register web module"
+msgstr "Web modul regisztrálása"
+
+#: fpwebstrconsts.sstandardmodule
+msgid "Web module to create:"
+msgstr ""
+
+#: fpwebstrconsts.susethreads
+msgid "Use &threads to serve requests in"
+msgstr "Szá&lak használata a kérések kiszolgálására"
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="IdeConfig"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Lazarus Team"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="include;include\$(TargetOS)"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="-- This package is part of the IDE --
+This package does not guarantee any particular interface/API. Files are maintained for the use by the IDE.
+
+Files in this package are for the main configuration of the IDE."/>
+    <License Value="GPLv2"/>
+    <Version Major="1"/>
+    <Files>
+      <Item>
+        <Filename Value="searchpathprocs.pas"/>
+        <UnitName Value="SearchPathProcs"/>
+      </Item>
+      <Item>
+        <Filename Value="recentlistprocs.pas"/>
+        <UnitName Value="RecentListProcs"/>
+      </Item>
+      <Item>
+        <Filename Value="idexmlconfigprocs.pas"/>
+        <UnitName Value="IdeXmlConfigProcs"/>
+      </Item>
+      <Item>
+        <Filename Value="lazconf.pp"/>
+        <UnitName Value="LazConf"/>
+      </Item>
+      <Item>
+        <Filename Value="version.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="ideoptiondefs.pas"/>
+        <UnitName Value="IDEOptionDefs"/>
+      </Item>
+      <Item>
+        <Filename Value="modematrixopts.pas"/>
+        <UnitName Value="ModeMatrixOpts"/>
+      </Item>
+      <Item>
+        <Filename Value="editortoolbaroptions.pas"/>
+        <UnitName Value="EditorToolBarOptions"/>
+      </Item>
+      <Item>
+        <Filename Value="toolbaroptionsbase.pas"/>
+        <UnitName Value="ToolBarOptionsBase"/>
+      </Item>
+      <Item>
+        <Filename Value="coolbaroptions.pas"/>
+        <UnitName Value="CoolBarOptions"/>
+      </Item>
+      <Item>
+        <Filename Value="environmentopts.pp"/>
+        <UnitName Value="EnvironmentOpts"/>
+      </Item>
+      <Item>
+        <Filename Value="diffpatch.pas"/>
+        <UnitName Value="DiffPatch"/>
+      </Item>
+      <Item>
+        <Filename Value="transfermacros.pp"/>
+        <UnitName Value="TransferMacros"/>
+      </Item>
+      <Item>
+        <Filename Value="ideconfstrconsts.pas"/>
+        <UnitName Value="IdeConfStrConsts"/>
+      </Item>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="CodeTools"/>
+      </Item>
+      <Item>
+        <PackageName Value="DebuggerIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="BuildIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="LazUtils"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

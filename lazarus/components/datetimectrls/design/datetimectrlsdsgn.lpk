@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="DateTimeCtrlsDsgn"/>
+    <Type Value="DesignTime"/>
+    <Author Value="Zoran Vučenović"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="."/>
+        <OtherUnitFiles Value="."/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Other>
+        <CustomOptions Value="$(IDEBuildOptions)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="TDateTimePicker - the cross-platform control behaving much like VCL&apos;s TDateTimePicker. TDBDateTimePicker - the data-aware version of TDateTimePicker"/>
+    <License Value="Modified LGPL"/>
+    <Version Major="1" Minor="5" Release="1"/>
+    <Files>
+      <Item>
+        <Filename Value="datetimecontrolsreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="DateTimeControlsReg"/>
+      </Item>
+      <Item>
+        <Filename Value="datetimepickerpropedit.pas"/>
+        <UnitName Value="DateTimePickerPropEdit"/>
+      </Item>
+      <Item>
+        <Filename Value="datetimectrls.res"/>
+        <Type Value="Binary"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

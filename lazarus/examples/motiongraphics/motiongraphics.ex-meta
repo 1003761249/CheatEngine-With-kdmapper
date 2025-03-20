@@ -1,0 +1,13 @@
+{
+  "motiongraphics" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Graphics",
+      "Polygon",
+      "Rotate",
+      "Speed",
+      "Drawing"
+    ],
+    "Description" : "Shows you how to rotate a polygon and vary the speed of rotation."
+  }
+}

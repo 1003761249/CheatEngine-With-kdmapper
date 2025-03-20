@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="freetypelaz">
+    <!--
+    ====================================================================
+      TTTypes
+    ====================================================================
+    -->
+    <module name="TTTypes">
+      <short>Global type definitions.</short>
+      <descr>
+        <p>
+          Global type definitions used in the FreeType library.
+        </p>
+        <p>
+          Copyright 1996, 1997 by David Turner, Robert Wilhelm, and Werner Lemberg.
+        </p>
+      </descr>
+
+      <element name="TError">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Int">
+        <short/>
+        <descr>
+          <p>
+            For the OS/2 platform, the type is defined as an alias for the <var>LongInt</var> type. For all other platforms, it is an alias to the <var>Integer</var> type.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Long">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_ULong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Short">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_UShort">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Fixed">
+        <short/>
+        <descr>
+          <p>
+            Signed Fixed Float value with 16 digits and 16 decimal places of precision.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_FWord">
+        <short>Distance in FUnits.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_UFWord">
+        <short>Unsigned Distance.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_F2Dot14">
+        <short>Alias for the Integer type.</short>
+        <descr>
+          <p>
+            Signed fixed float 2.14 used for unary vectors, with layout:
+          </p>
+          <table>
+            <th>
+              <td>Name</td>
+              <td>Bits</td>
+              <td>Description</td>
+            </th>
+            <tr>
+              <td>s</td>
+              <td>1</td>
+              <td>Sign bit</td>
+            </tr>
+            <tr>
+              <td>m</td>
+              <td>1</td>
+              <td>Mantissa bit</td>
+            </tr>
+            <tr>
+              <td>f</td>
+              <td>14</td>
+              <td>Unsigned fractional value</td>
+            </tr>
+          </table>
+          <p>
+            <var>s</var> and <var>m</var> represents the signed int value to which the <b>positive</b> fractional value <var>f</var> is added.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_F26Dot6">
+        <short>Alias for the LongInt type.</short>
+        <descr>
+          <p>
+            26.6 fixed float, used for pixel coordinates.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Pos">
+        <short>Alias for the LongInt type.</short>
+        <descr>
+          <p>
+            FUnits or 26.6 fixed float value, depending on context.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Flag_On_Curve">
+        <short/>
+        <descr>
+          <p>
+            Flag which indicates if a Point is On a curve.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_UnitVector">
+        <short/>
+        <descr>
+          <p>
+            A simple unit vector type.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_UnitVector.x">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_UnitVector.y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vector">
+        <short/>
+        <descr>
+          <p>
+            A simple vector type.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vector.x">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vector.y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Matrix">
+        <short/>
+        <descr>
+          <p>
+            A simple 2x2 matrix type.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Matrix.xx">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Matrix.xy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Matrix.yx">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Matrix.yy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_BBox">
+        <short/>
+        <descr>
+          <p>
+            A bounding box for a glyph.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_BBox.xMin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_BBox.yMin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_BBox.xMax">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_BBox.yMax">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo">
+        <short>Kerning information between two glyphs.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo.kerning_x">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo.kerning_y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo.minimum_x">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo.minimum_y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_KerningInfo.found">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Error">
+        <short/>
+        <descr>
+          <p>
+            The error condition type for the TrueType engine. 0 (zero) always means success.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Points_Table">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Points">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Coordinates">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_PCoordinates">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_TouchTable">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_PTouchTable">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_ConStarts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_PConStarts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline">
+        <short>Glyph outline description.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.n_points">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.n_contours">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.points">
+        <short>Array of point coordinates.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.flags">
+        <short>Array of point flags.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.conEnds">
+        <short>Array of contours ends.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.owner">
+        <short>Flag set when the outline owns the arrays it uses.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.high_precision">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.second_pass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Outline.dropout_mode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph_Metrics">
+        <short>Glyph metrics structure.</short>
+        <descr>
+          <p>
+            Glyph metrics structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph_Metrics.bbox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph_Metrics.bearingX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph_Metrics.bearingY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph_Metrics.advance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics">
+        <short>Big glyph metrics structure.</short>
+        <descr>
+          <p>
+            Big glyph metrics structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.bbox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.horiBearingX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.horiBearingY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.horiAdvance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.vertBearingX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.vertBearingY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Big_Glyph_Metrics.vertAdvance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TDirectRenderingFunction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TDirectRenderingFunction.x">
+        <short/>
+      </element>
+
+      <element name="TDirectRenderingFunction.y">
+        <short/>
+      </element>
+
+      <element name="TDirectRenderingFunction.tx">
+        <short/>
+      </element>
+
+      <element name="TDirectRenderingFunction.data">
+        <short/>
+      </element>
+
+      <element name="TT_Instance_Metrics">
+        <short>Instance metrics structure.</short>
+        <descr>
+          <p>
+            Instance metrics used to return information to a client with the state for the instance.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.pointsize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.x_ppem">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.y_ppem">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.x_scale">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.y_scale">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.x_resolution">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance_Metrics.y_resolution">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Flow_Down">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Flow_Up">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map">
+        <short>Describes a bitmap or pixmap to the rasterizer.</short>
+        <descr>
+          <p>
+            A record used to describe a bitmap or pixmap to the rasterizer.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Rows">
+        <short>Number of rows for the bitmap.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Cols">
+        <short>Numer of columns (bytes) per Row.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Width">
+        <short>Number of pixels per Row.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Flow">
+        <short>Flow direction for the bitmap / pixmap.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Buffer">
+        <short>Data for the bitmap / pixmap.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Raster_Map.Size">
+        <short>Size in bytes for the Data in the bitmap / pixmap.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header">
+        <short>TrueType font header table structure.</short>
+        <descr>
+          <p>
+            The TrueType font header table structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.table_version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.font_revision">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.checksum_adjust">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.magic_number">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.flags">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.units_per_EM">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.created">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.modified">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.xMin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.yMin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.xMax">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.yMax">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.mac_style">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.lowest_rec_PPEM">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.font_direction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.index_to_loc_format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Header.glyph_data_format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header">
+        <short>TrueType horizontal header table structure.</short>
+        <descr>
+          <p>
+            The TrueType horizontal header table structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.ascender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.descender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.line_gap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.advance_Width_Max">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.min_left_side_bearing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.min_right_side_bearing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.xMax_extent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.caret_slope_rise">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.caret_slope_run">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.reserved">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.metric_data_format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.number_of_HMetrics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.short_metrics">
+        <short>Not part of the header in the file.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Horizontal_Header.long_metrics">
+        <short>Not part of the header in the file.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header">
+        <short>TrueType vertical header table structure.</short>
+        <descr>
+          <p>
+            The TrueType vertical header table structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.ascender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.descender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.line_gap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.advance_Height_Max">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.min_top_side_bearing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.min_bottom_side_bearing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.yMax_extent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.caret_slope_rise">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.caret_slope_run">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.reserved">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.metric_data_format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.number_of_VMetrics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.short_metrics">
+        <short>Not part of the header in the file.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Vertical_Header.long_metrics">
+        <short>Not part of the header in the file.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2">
+        <short>TrueType OS/2 table structure.</short>
+        <descr>
+          <p>
+            The TrueType OS/2 table structure.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.xAvgCharWidth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usWeightClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usWidthClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.fsType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySubscriptXSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySubscriptYSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySubScriptXOffset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySubscriptYOffset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySuperscriptXSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySuperscriptYSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySuperscriptXOffset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ySuperscriptYOffset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.yStrikeoutSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.yStrikeoutPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sFamilyClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.panose">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulUnicodeRange1">
+        <short>Bits 0 - 31.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulUnicodeRange2">
+        <short>Bits 32 - 63.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulUnicodeRange3">
+        <short>Bits 64 - 95.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulUnicodeRange4">
+        <short>Bits 96 - 127.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.achVendID">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.fsSelection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usFirstCharIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usLastCharIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sTypoAscender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sTypoDescender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sTypoLineGap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usWinAscent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usWinDescent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulCodePageRange1">
+        <short>In Version 1 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.ulCodePageRange2">
+        <short>In Version 1 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sxHeight">
+        <short>In Version 2 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.sCapHeight">
+        <short>In Version 2 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usDefaultChar">
+        <short>In Version 2 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usBreakChar">
+        <short>In Version 2 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_OS2.usMaxContext">
+        <short>In Version 2 tables only.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript">
+        <short>TrueType Postscript table structure.</short>
+        <descr>
+          <p>
+            The TrueType Postscript table structure.
+          </p>
+          <p>
+            Type 1 is the single-byte font and can support hinting.
+            Type 42 is the PostScript wrapper for a TrueType font which relies on a rasterizer.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.FormatType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.italicAngle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.underlinePosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.underlineThickness">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.isFixedPitch">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.minMemType42">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.maxMemType42">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.minMemType1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Postscript.maxMemType1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties">
+        <short>TrueType font face properties.</short>
+        <descr>
+          <p>
+            Used to report important properties for a font face to clients.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.num_glyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.max_points">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.max_contours">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.max_faces">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.header">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.horizontal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.vertical">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.os2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face_Properties.postscript">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Stream">
+        <short>Object handle type for a Stream.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Stream.z">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face">
+        <short>Object handle type for a Face.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Face.z">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Instance.z">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph">
+        <short>Object handle type for a Glyph.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Glyph.z">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_CharMap">
+        <short>Object handle type for a Character Map.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_CharMap.z">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Gray_Palette">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PTT_Gray_Palette">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Ok">
+        <short>Success is always 0.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Face_Handle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Instance_Handle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Glyph_Handle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_CharMap_Handle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Result_Address">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Glyph_Index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Argument">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Could_Not_Open_File">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_File_Is_Not_Collection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Horiz_Metrics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Vert_Metrics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_CharMap_Format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_File_Format">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_File_Error">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Engine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_Extensions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Extensions_Unsupported">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Extension_Id">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_No_Vertical_Data">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Max_Profile_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Header_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Horiz_Header_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Locations_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Name_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_CMap_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Hmtx_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_OS2_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Post_Table_Missing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Out_Of_Memory">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_File_Offset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_File_Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Frame_Access">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_Points">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_Contours">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Composite">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_Ins">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Opcode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Few_Arguments">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Stack_Overflow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Code_Overflow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Bad_Argument">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Divide_By_Zero">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Storage_Overflow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Cvt_Overflow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Reference">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Distance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Interpolate_Twilight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Debug_Opcode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_ENDF_In_Exec_Stream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Out_Of_CodeRanges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Nested_DEFs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_CodeRange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Displacement">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Execution_Too_Long">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_FuncDefs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Too_Many_InsDefs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Nested_Frame_Access">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Cache_List">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Could_Not_Find_Context">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_UNlisted_Object">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Raster_Pool_Overflow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Raster_Negative_Height">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Invalid_Value">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TT_Err_Raster_Not_Initialised">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer">
+        <short/>
+        <descr>
+          <p>
+            Renders a Glyph to a bitmap.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Glyph">
+        <short/>
+        <descr>
+          Renders one glyph in the target bitmap (1-bit per pixel).
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Glyph.Result">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Glyph.glyph">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Glyph.target">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph">
+        <short/>
+        <descr>
+          <p>
+            Renders one gray-level glyph in the target pixmap. Palette points to an array of 5 colors used for the rendering. Use Nil to reuse the last palette. Default is VGA graylevels.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph.Result">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph.glyph">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph.target">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph.palette">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph_HQ">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph_HQ.Result">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph_HQ.glyph">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Gray_Glyph_HQ.target">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.Result">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.glyph">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.x">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.y">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.tx">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.ty">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.OnRender">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph.palette">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.Result">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.glyph">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.x">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.y">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.tx">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.ty">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Render_Directly_Gray_Glyph_HQ.OnRender">
+        <short/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Set_Raster_Palette">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TFreeTypeCustomRasterizer.Set_Raster_Palette.palette">
+        <short/>
+      </element>
+
+      <element name="UShort">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="Short">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="Long">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="ULong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="Int">
+        <short/>
+        <descr>
+          <p>
+            The <var>Int</var> type is used for loop counters and indexes. Its size must be the one handled for a given platform or operating system. For 32-bit platforms, it is an alias for the <var>LongInt</var> type. For all other platforms, it is an alias to the <var>Integer</var> type.
+          </p>
+        </descr>
+        <seealso/>
+      </element>
+
+      <element name="TByteArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PByte">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TShortArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PShort">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TUShortArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PUShort">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TStorage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PStorage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PLong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PULong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TCoordinates">
+        <short>Internal type for coordinates in the FreeType library.</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PCoordinates">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="PTouchTable">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="TVecRecord">
+        <short>Describes point zones in the interpreter </short>
+        <descr>
+        <p>
+            This type is used to describe each point zone in the TrueType interpreter.
+        </p>
+        </descr>
+        <seealso></seealso>
+      </element>
+      <element name="TVecRecord.n">
+        <short>Number of points.</short>
+      </element>
+      <element name="TVecRecord.org_x">
+        <short>Original coordinate arrays.</short>
+      </element>
+      <element name="TVecRecord.org_y">
+        <short>Original coordinate arrays.</short>
+      </element>
+      <element name="TVecRecord.cur_x">
+        <short>Current coordinate arrays.</short>
+      </element>
+      <element name="TVecRecord.cur_y">
+        <short>Current coordinate arrays.</short>
+      </element>
+      <element name="TVecRecord.touch">
+        <short>Touch flags array.</short>
+      </element>
+
+      <element name="Success">
+        <short>Success value is always False (no error).</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+      <element name="Failure">
+        <short>Failure value is always True (error has occurred).</short>
+        <descr/>
+        <seealso/>
+      </element>
+
+    </module>
+    <!-- TTTypes -->
+  </package>
+</fpdoc-descriptions>

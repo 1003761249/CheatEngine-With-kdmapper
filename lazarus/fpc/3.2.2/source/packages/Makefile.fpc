@@ -1,0 +1,178 @@
+
+#
+#   Makefile.fpc for Free Pascal Packages
+#
+[require]
+packages=rtl
+
+[install]
+fpcpackage=y
+fpcsubdir=packages
+
+[default]
+fpcdir=..
+
+[prerules]
+# Translate INSTALL_UNITDIR to fpmake's --unitinstalldir parameter
+ifdef INSTALL_UNITDIR
+FPMAKE_INSTALL_OPT+=--unitinstalldir=$(INSTALL_UNITDIR)
+endif
+ifdef INSTALL_BINDIR
+FPMAKE_INSTALL_OPT+=--bininstalldir=$(INSTALL_BINDIR)
+endif
+# Translate OS_TARGET and CPU_TARGET to fpmake's --os and --cpu parameters
+ifdef OS_TARGET
+FPC_TARGETOPT+=--os=$(OS_TARGET)
+endif
+ifdef CPU_TARGET
+FPC_TARGETOPT+=--cpu=$(CPU_TARGET)
+endif
+FPMAKE_BIN_CLEAN=$(wildcard ./fpmake$(SRCEXEEXT))
+LOCALFPMAKE=./fpmake$(SRCEXEEXT)
+# Get the location of the bootstrap-fpmkunit units
+PACKAGEDIR_FPMKUNIT:=$(firstword $(subst /Makefile.fpc,,$(strip $(wildcard $(addsuffix /fpmkunit/Makefile.fpc,$(PACKAGESDIR))))))
+ifneq ($(PACKAGEDIR_FPMKUNIT),)
+UNITDIR_FPMAKE_FPMKUNIT=$(PACKAGEDIR_FPMKUNIT)/units_bs/$(SOURCESUFFIX)
+else
+PACKAGEDIR_FPMKUNIT=
+UNITDIR_FPMKUNIT:=$(subst /Package.fpc,,$(strip $(wildcard $(addsuffix /fpmkunit/Package.fpc,$(UNITSDIR)))))
+ifneq ($(UNITDIR_FPMKUNIT),)
+UNITDIR_FPMKUNIT:=$(firstword $(UNITDIR_FPMKUNIT))
+else
+UNITDIR_FPMKUNIT=
+endif
+endif
+ifdef UNITDIR_FPMAKE_FPMKUNIT
+override COMPILER_FPMAKE_UNITDIR=$(UNITDIR_FPMAKE_FPMKUNIT)
+endif
+ifdef INSTALL_LIBDIR
+FPMAKE_INSTALL_OPT+=--libinstalldir=$(INSTALL_LIBDIR)
+endif
+
+SUB_FPMAKE_SRCS=$(wildcard */fpmake.pp)
+
+[rules]
+# Do not pass the Makefile's unit and binary target locations. Fpmake uses it's own.
+override FPCOPT:=$(filter-out -FU%,$(FPCOPT))
+override FPCOPT:=$(filter-out -FE%,$(FPCOPT))
+# Do not pass the package-unitdirectories. Fpmake adds those and this way they don't apear in the .fpm
+override FPCOPT:=$(filter-out $(addprefix -Fu,$(COMPILER_UNITDIR)),$(FPCOPT))# Compose general fpmake-parameters
+# Compose general fpmake-parameters
+ifdef FPMAKEOPT
+FPMAKE_OPT+=$(FPMAKEOPT)
+endif
+FPMAKE_OPT+=--localunitdir=..
+FPMAKE_OPT+=$(FPC_TARGETOPT)
+FPMAKE_OPT+=$(addprefix -o ,$(FPCOPT))
+FPMAKE_OPT+=--compiler=$(FPC)
+FPMAKE_OPT+=-bu
+ifndef BUILDFULLNATIVE
+FPMAKE_OPT+=-scp
+endif
+.NOTPARALLEL:
+
+fpmkunit_clean_bootstrap:
+	$(MAKE) -C fpmkunit clean_bootstrap
+fpmake$(SRCEXEEXT): fpmake.pp $(SUB_FPMAKE_SRCS) fpmake_add.inc fpmake_proc.inc
+	$(MAKE) -C fpmkunit bootstrap
+	$(FPCFPMAKE) fpmake.pp $(FPMAKE_SKIP_CONFIG) $(addprefix -Fu,$(COMPILER_FPMAKE_UNITDIR)) $(FPCMAKEOPT) $(OPT)
+all:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) compile $(FPMAKE_OPT)
+smart:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) compile $(FPMAKE_OPT) -o -XX -o -CX
+release:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) compile $(FPMAKE_OPT) -o -dRELEASE
+debug:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) compile $(FPMAKE_OPT) -o -dDEBUG
+# If no fpmake exists and (dist)clean is called, do not try to build fpmake, it will
+# most often fail because the dependencies are cleared.
+# In case of a clean, simply do nothing
+ifeq ($(FPMAKE_BIN_CLEAN),)
+clean:	fpmkunit_clean_bootstrap
+else
+clean:	fpmkunit_clean_bootstrap
+	$(FPMAKE_BIN_CLEAN) clean $(FPMAKE_OPT)
+endif
+
+CLEAN_TARGET_DIRS=$(subst /Makefile, ,$(wildcard */Makefile))
+%_distclean:
+	$(MAKE) -C $* distclean
+
+# In case of a distclean, perform an 'old'-style distclean. This to avoid problems
+# when the package is compiled using fpcmake prior to running this clean using fpmake
+ifeq ($(FPMAKE_BIN_CLEAN),)
+distclean:	fpc_cleanall $(addsuffix _distclean,$(CLEAN_TARGET_DIRS)) fpmkunit_clean_bootstrap
+else
+distclean:	fpmkunit_clean_bootstrap
+ifdef inUnix
+        { $(FPMAKE_BIN_CLEAN) distclean $(FPMAKE_OPT); if [ $$? != "0" ]; then { echo Something wrong with fpmake exectable. Remove the executable and call make recursively to recover.; $(DEL) $(FPMAKE_BIN_CLEAN); $(MAKE) fpc_cleanall; }; fi;  }
+else
+        $(FPMAKE_BIN_CLEAN) distclean $(FPMAKE_OPT)
+endif
+	-$(DEL) $(LOCALFPMAKE)
+	-$(DEL) fpmake.o
+	-$(DEL) fpmake.dbg
+endif
+install:	fpmake$(SRCEXEEXT)
+ifdef UNIXHier
+	$(LOCALFPMAKE) install $(FPMAKE_OPT) --prefix=$(INSTALL_PREFIX) --baseinstalldir=$(INSTALL_LIBDIR)/fpc/$(FPC_VERSION) $(FPMAKE_INSTALL_OPT)
+else
+	$(LOCALFPMAKE) install $(FPMAKE_OPT) --prefix=$(INSTALL_BASEDIR) --baseinstalldir=$(INSTALL_BASEDIR) $(FPMAKE_INSTALL_OPT)
+endif
+# distinstall also installs the example-sources and omits the location of the source-
+# files from the fpunits.cfg files.
+distinstall:	fpmake$(SRCEXEEXT)
+ifdef UNIXHier
+	$(LOCALFPMAKE) install $(FPMAKE_OPT) --prefix=$(INSTALL_PREFIX) --baseinstalldir=$(INSTALL_LIBDIR)/fpc/$(FPC_VERSION) $(FPMAKE_INSTALL_OPT) -ie -fsp 0
+else
+	$(LOCALFPMAKE) install $(FPMAKE_OPT) --prefix=$(INSTALL_BASEDIR) --baseinstalldir=$(INSTALL_BASEDIR) $(FPMAKE_INSTALL_OPT) -ie -fsp 0
+endif
+zipinstall:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) zipinstall $(FPMAKE_OPT) --zipprefix=$(DIST_DESTDIR)/$(ZIPPREFIX)
+zipdistinstall:	fpmake$(SRCEXEEXT)
+	$(LOCALFPMAKE) zipinstall $(FPMAKE_OPT) --zipprefix=$(DIST_DESTDIR)/$(ZIPPREFIX) -ie -fsp 0
+zipsourceinstall:	fpmake$(SRCEXEEXT)
+ifdef UNIXHier
+	$(LOCALFPMAKE) archive $(FPMAKE_OPT) --zipprefix=$(DIST_DESTDIR)/$(ZIPPREFIX) --prefix=share/src/fpc-\$$\(PACKAGEVERSION\)/$(INSTALL_FPCSUBDIR)/\$$\(PACKAGEDIRECTORY\)
+else
+	$(LOCALFPMAKE) archive $(FPMAKE_OPT) --zipprefix=$(DIST_DESTDIR)/$(ZIPPREFIX) --prefix=source\\$(INSTALL_FPCSUBDIR)\\\$$\(PACKAGEDIRECTORY\)
+endif
+
+#####################################################################
+# PPU testing targets
+#####################################################################
+
+PPULIST:=$(wildcard */units/*/*.ppu)
+PPULOGLIST:=$(subst .ppu,.log-ppu,$(PPULIST))
+# Only remove existing log-ppu files
+RMPPULOGLIST:=$(subst .log-ppu,.rm-log-ppu,$(wildcard $(PPULOGLIST)))
+
+.PHONY : ppulogs cleanppulogs testppudump $(RMPPULOGLIST)
+
+ppulogs : $(PPULOGLIST)
+
+vpath %.ppu $(ALLPPUDIRS)
+vpath %.log-ppu $(ALLPPUDIRS)
+vpath %.rm-log-ppu $(ALLPPUDIRS)
+
+# Do not try to recompile ppudump, as this does not work if trying to test cross-compiled units
+%.log-ppu : %.ppu
+	ppudump -VA -M $< > $@
+
+%.rm-log-ppu : %.ppu
+	-$(RMPROG) $<
+
+
+../compiler/utils/ppudump$(EXEEXT):
+	$(MAKE) -C $(COMPILERDIR)/utils ppudump$(EXEEXT)
+
+ppuinfo :
+	echo PPU list is "$(PPULIST)"
+	echo PPULOG list is "$(PPULOGLIST)"
+	echo RMPPULOG list is "$(RMPPULOGLIST)"
+
+cleanppulogs : $(RMPPULOGLIST)
+
+testppudump :
+        $(MAKE) cleanppulogs ppulogs
+

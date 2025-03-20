@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="TurboPowerIPro"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Turbopower, portiert fuer Lazarus von Mattias Gaertner"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="units/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Other>
+        <Verbosity>
+          <ShowHints Value="False"/>
+        </Verbosity>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Turbopower Internet Pro - Lazarus Package
+"/>
+    <License Value="MPL - Mozilla public license
+"/>
+    <Version Major="1"/>
+    <Files Count="23">
+      <Item1>
+        <Filename Value="ipanim.pas"/>
+        <UnitName Value="IpAnim"/>
+      </Item1>
+      <Item2>
+        <Filename Value="ipconst.pas"/>
+        <UnitName Value="IpConst"/>
+      </Item2>
+      <Item3>
+        <Filename Value="ipdefct.inc"/>
+        <Type Value="Include"/>
+      </Item3>
+      <Item4>
+        <Filename Value="ipdefine.inc"/>
+        <Type Value="Include"/>
+      </Item4>
+      <Item5>
+        <Filename Value="ipfilebroker.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="Ipfilebroker"/>
+      </Item5>
+      <Item6>
+        <Filename Value="iphttpbroker.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="Iphttpbroker"/>
+      </Item6>
+      <Item7>
+        <Filename Value="iphtml.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="IpHtml"/>
+      </Item7>
+      <Item8>
+        <Filename Value="iphtmlpv.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="IpHtmlPv"/>
+      </Item8>
+      <Item9>
+        <Filename Value="ipmsg.pas"/>
+        <UnitName Value="IpMsg"/>
+      </Item9>
+      <Item10>
+        <Filename Value="ipstrms.pas"/>
+        <UnitName Value="IpStrms"/>
+      </Item10>
+      <Item11>
+        <Filename Value="iputils.pas"/>
+        <UnitName Value="IpUtils"/>
+      </Item11>
+      <Item12>
+        <Filename Value="ipcss.inc"/>
+        <Type Value="Include"/>
+      </Item12>
+      <Item13>
+        <Filename Value="iphtmltablist.pas"/>
+        <UnitName Value="IpHtmlTabList"/>
+      </Item13>
+      <Item14>
+        <Filename Value="iphtmlprop.pas"/>
+        <UnitName Value="IpHtmlProp"/>
+      </Item14>
+      <Item15>
+        <Filename Value="iphtmlblocklayout.pas"/>
+        <UnitName Value="ipHtmlBlockLayout"/>
+      </Item15>
+      <Item16>
+        <Filename Value="iphtmltablelayout.pas"/>
+        <UnitName Value="ipHtmlTableLayout"/>
+      </Item16>
+      <Item17>
+        <Filename Value="iphtmlgenerated.inc"/>
+        <Type Value="Binary"/>
+      </Item17>
+      <Item18>
+        <Filename Value="iphtmlparser.pas"/>
+        <UnitName Value="IpHtmlParser"/>
+      </Item18>
+      <Item19>
+        <Filename Value="iphtmlutils.pas"/>
+        <UnitName Value="IpHtmlUtils"/>
+      </Item19>
+      <Item20>
+        <Filename Value="ipcss.pas"/>
+        <UnitName Value="IpCSS"/>
+      </Item20>
+      <Item21>
+        <Filename Value="iphtmlclasses.pas"/>
+        <UnitName Value="IpHtmlClasses"/>
+      </Item21>
+      <Item22>
+        <Filename Value="iphtmltypes.pas"/>
+        <UnitName Value="IpHtmlTypes"/>
+      </Item22>
+      <Item23>
+        <Filename Value="iphtmlnodes.pas"/>
+        <UnitName Value="IpHtmlNodes"/>
+      </Item23>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

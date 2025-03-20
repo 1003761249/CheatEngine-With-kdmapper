@@ -1,0 +1,31 @@
+The following people have been providing a financial support for Cocoa development through Patreon platform.
+
+Active (in alphabetical order):
+ Alexey Torgashin
+ Andrzej Kilijański
+ Christopher Rorden
+ Dan Star
+ Daniele Ponteggia
+ Esteban Vignolo
+ Igor
+ Frederick Vollmer
+ Giorgio Fuggetta 
+ Jer Haan
+ Johannes W. Dietrich
+ Jonas Maebe
+ Max Terentiev
+ Michalis Kamburelis
+ Tobias Giesen
+ Trevor Roydhouse
+ Vladimir Rybant
+ Евгений Крюков
+
+Former:
+ Andrea Mauri
+ Andrew Fox
+ Esteban Vignolo
+ Marc Hanisch
+ Marcus Fernstrom
+ Mike Margerum
+ Sergey
+ Siegfried Rohdewald

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="lcl">
+	<widgetset name="gtk2">
+		<issue name="TCheckBox.Alignment">
+			<short>CheckBox Alignment property is not supported</short>
+			<descr>Use BiDiMode = bdRightToLeft as a workaround</descr>
+		</issue>
+		<issue name="TRadioButton.Alignment">
+			<short>RadioButton Alignment property is not supported</short>
+			<descr>Use BiDiMode = bdRightToLeft as a workaround</descr>
+		</issue>
+        <issue name="TComboBox.DropDownCount">
+			<short>Combo box DropDownCount property is not supported</short>
+		</issue>
+		<issue name="TEdit.HideSelection">
+			<short>HideSelection property is not supported</short>
+		</issue>
+		<issue name="TEdit.NumbersOnly">
+			<short>NumbersOnly property is not supported</short>
+		</issue>
+		<issue name="TForm.BorderStyle">
+			<short>Not supported for nested Forms</short>
+			<descr>If you put a form onto another it will have no window borders or title</descr>
+		</issue>
+		<issue name="TMemo.HideSelection">
+			<short>HideSelection property is not supported</short>
+		</issue>
+		<issue name="TPageControl.MultiLine">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.MultiSelect">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.RaggedRight">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.ScrollOpposite">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.Style">
+			<short>not supported</short>
+		</issue>
+		<issue name="TPageControl.TabHeight">
+			<short>Changing of default tab height is not supported</short>
+		</issue>
+		<issue name="TPageControl.TabWidth">
+			<short>Changing of default tab width is not supported</short>
+		</issue>
+		<issue name="TPrinter.FileName">
+			<short>The format of generated file is system dependant</short>
+			<descr>The content of file created by using this property depends of the printer backend used, for example when using CUPS (mainly under Unix type systems) it will be postscript while under Windows it will be in a printer unspecified format</descr>
+		</issue>
+		<issue name="TTabControl.MultiLine">
+			<short>MultiLine property is not supported</short>
+		</issue>
+		<issue name="TTabControl.TabHeight">
+			<short>Changing of default tab height is not supported</short>
+		</issue>
+		<issue name="TTabControl.TabWidth">
+			<short>Changing of default tab width is not supported</short>
+		</issue>
+		<issue name="TDateEdit.CalendarDisplaySettings.dsStartMon">	
+			<short>TDateEdit.CalendarDisplaySettings.dsStartMon is ignored in GTK+ since 2.4</short>
+			<descr>Since GTK+ 2.4, this option is deprecated and ignored by GTK+. The information on which day the calendar week starts is derived from the locale.</descr>
+		</issue>
+		<issue name="TDateEdit.MinDate">
+			<short>TDateEdit.MinDate is not supported by the native Calendar.</short>
+		</issue>
+		<issue name="TDateEdit.MaxDate">
+			<short>TDateEdit.MaxDate is not supported by the native Calendar.</short>
+		</issue>
+		<issue name="TListBox.Columns">
+			<short>Multiple columns is not supported</short>
+		</issue>
+		<issue name="TCheckListBox.Columns">
+			<short>Multiple columns is not supported</short>
+		</issue>
+		<issue name="TListView.Columns">
+			<short>Multiple columns then ViewStyle=vsList is not supported</short>
+		</issue>
+		<issue name="TListView.StateImages">
+			<short>StateImages property is not supported</short>
+		</issue>
+		<issue name="TListView.OnChanging">
+			<short>The OnChanging event is not supported</short>
+		</issue>
+		<issue name="TStatusPanel.Alignment">
+			<short>not supported</short>
+		</issue>
+		<issue name="TStatusPanel.Bevel">
+			<short>not supported</short>
+		</issue>
+		<issue name="TMenu.OwnerDraw">
+			<short>not supported</short>
+		</issue>
+		<issue name="TMenu.OnDrawItem">
+			<short>not supported</short>
+		</issue>
+		<issue name="TMenu.OnMeasureItem">
+			<short>not supported</short>
+		</issue>
+		<issue name="TMenuItem.Default">
+			<short>Default property is not supported</short>
+		</issue>
+		<issue name="TCalendar.MinDate">
+			<short>MinDate property is not (fully) supported</short>
+      <descr>While programmatically setting a date is limited by MinDate/MaxDate, the calendar still allow to select dates that are out of that range</descr>
+		</issue>
+		<issue name="TCalendar.MinDate">
+			<short>MaxDate property is not (fully) supported</short>
+      <descr>While programmatically setting a date is limited by MinDate/MaxDate, the calendar still allow to select dates that are out of that range</descr>
+		</issue>
+	</widgetset>
+</package>

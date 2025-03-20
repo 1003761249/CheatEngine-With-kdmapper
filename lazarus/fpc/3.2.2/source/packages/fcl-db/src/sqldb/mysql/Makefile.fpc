@@ -1,0 +1,25 @@
+#
+# Makefile.fpc for SQL MySQLConnection
+#
+
+[package]
+main=fcl-db
+
+[target]
+units=mysql40conn mysql41conn mysql50conn mysql51conn mysql55conn mysql56conn mysql57conn mysql80conn
+rsts=mysql40conn mysql41conn mysql50conn mysql51conn mysql55conn mysql56conn mysql57conn mysql80conn
+
+[require]
+packages=fcl-xml mysql
+
+[compiler]
+options=-S2
+
+[install]
+fpcpackage=y
+
+[default]
+fpcdir=../../../../..
+
+[rules]
+.NOTPARALLEL:

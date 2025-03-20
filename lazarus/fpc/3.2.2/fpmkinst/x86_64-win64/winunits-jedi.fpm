@@ -1,0 +1,10 @@
+Name=winunits-jedi
+Version=3.2.2
+Checksum=1513316676
+CPU=x86_64
+OS=win64
+SourcePath=b:\tmp_lazbuild64\fpc-source\packages\winunits-jedi\
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Ur -o -CX -o -OoNOSTACKFRAME -o -dx86_64 -o -dRELEASE
+Depends=rtl,winunits-base|1513316674
+NeedLibC=Y
+FPMakeAddIn=N

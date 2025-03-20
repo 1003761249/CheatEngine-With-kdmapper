@@ -1,0 +1,1379 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maxim Ganetsky <maxkill@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: idedebuggerstringconstants.dbgbreakgroupdlgcaption
+msgctxt "lazarusidestrconsts.dbgbreakgroupdlgcaption"
+msgid "Select Groups"
+msgstr "Выбор групп"
+
+#: idedebuggerstringconstants.dbgbreakgroupdlgheaderdisable
+msgid "Select groups to disable when breakpoint is hit"
+msgstr "Выберите группы для отключения при достижении точки останова"
+
+#: idedebuggerstringconstants.dbgbreakgroupdlgheaderenable
+msgid "Select groups to enable when breakpoint is hit"
+msgstr "Выберите группы для включения при достижении точки останова"
+
+#: idedebuggerstringconstants.dbgbreakpropertygroupnotfound
+#, object-pascal-format
+msgid "Some groups in the Enable/Disable list do not exist.%0:sCreate them?%0:s%0:s%1:s"
+msgstr "Некоторые группы в списке включения/отключения не существуют.%0:sСоздать их?%0:s%0:s%1:s"
+
+#: idedebuggerstringconstants.dbgdispformatbinary
+msgctxt "idedebuggerstringconstants.dbgdispformatbinary"
+msgid "Binary"
+msgstr "Двоичное"
+
+#: idedebuggerstringconstants.dbgdispformatcharacter
+msgctxt "idedebuggerstringconstants.dbgdispformatcharacter"
+msgid "Character"
+msgstr "Символ"
+
+#: idedebuggerstringconstants.dbgdispformatdecimal
+msgctxt "idedebuggerstringconstants.dbgdispformatdecimal"
+msgid "Decimal"
+msgstr "Десятичное"
+
+#: idedebuggerstringconstants.dbgdispformatdefault
+msgctxt "idedebuggerstringconstants.dbgdispformatdefault"
+msgid "Default"
+msgstr "По умолчанию"
+
+#: idedebuggerstringconstants.dbgdispformatfloatingpoin
+msgctxt "idedebuggerstringconstants.dbgdispformatfloatingpoin"
+msgid "Floating Point"
+msgstr "С плавающей точкой"
+
+#: idedebuggerstringconstants.dbgdispformathexadecimal
+msgctxt "idedebuggerstringconstants.dbgdispformathexadecimal"
+msgid "Hexadecimal"
+msgstr "Шестнадцатеричное"
+
+#: idedebuggerstringconstants.dbgdispformatmemorydump
+msgctxt "idedebuggerstringconstants.dbgdispformatmemorydump"
+msgid "Memory Dump"
+msgstr "Дамп памяти"
+
+#: idedebuggerstringconstants.dbgdispformatpointer
+msgctxt "idedebuggerstringconstants.dbgdispformatpointer"
+msgid "Pointer"
+msgstr "Указатель"
+
+#: idedebuggerstringconstants.dbgdispformatrecordstruct
+msgctxt "idedebuggerstringconstants.dbgdispformatrecordstruct"
+msgid "Record/Structure"
+msgstr "Запись/Структура"
+
+#: idedebuggerstringconstants.dbgdispformatstring
+msgctxt "idedebuggerstringconstants.dbgdispformatstring"
+msgid "String"
+msgstr "Строка"
+
+#: idedebuggerstringconstants.dbgdispformatunsigned
+msgctxt "idedebuggerstringconstants.dbgdispformatunsigned"
+msgid "Unsigned"
+msgstr "Беззнаковое"
+
+#: idedebuggerstringconstants.dlgbackconvoptaction
+msgctxt "idedebuggerstringconstants.dlgbackconvoptaction"
+msgid "Action"
+msgstr "Действие"
+
+#: idedebuggerstringconstants.dlgbackconvoptaddnew
+msgctxt "idedebuggerstringconstants.dlgbackconvoptaddnew"
+msgid "Add"
+msgstr "Добавить"
+
+#: idedebuggerstringconstants.dlgbackconvoptdebugoptions
+msgctxt "idedebuggerstringconstants.dlgbackconvoptdebugoptions"
+msgid "Backend Converter"
+msgstr "Преобразование в механизме отладки"
+
+#: idedebuggerstringconstants.dlgbackconvoptmatchtypesbyname
+msgctxt "idedebuggerstringconstants.dlgbackconvoptmatchtypesbyname"
+msgid "Match types by name"
+msgstr "Сопоставлять типы по имени"
+
+#: idedebuggerstringconstants.dlgbackconvoptname
+msgctxt "idedebuggerstringconstants.dlgbackconvoptname"
+msgid "Name"
+msgstr "Имя"
+
+#: idedebuggerstringconstants.dlgbackconvoptremove
+msgctxt "idedebuggerstringconstants.dlgbackconvoptremove"
+msgid "Remove"
+msgstr "Удалить"
+
+#: idedebuggerstringconstants.dlgbackendconvoptdebugconverter
+msgid "Backend Converter:"
+msgstr "Преобразование в механизме отладки:"
+
+#: idedebuggerstringconstants.dlgbackendconvoptdefault
+msgctxt "debuggerstrconst.dlgbackendconvoptdefault"
+msgid "- Default -"
+msgstr "- По умолчанию -"
+
+#: idedebuggerstringconstants.dlgbackendconvoptdisabled
+msgctxt "debuggerstrconst.dlgbackendconvoptdisabled"
+msgid "- Disabled -"
+msgstr "- Отключено -"
+
+#: idedebuggerstringconstants.dlgenvtype
+msgctxt "lazarusidestrconsts.dlgenvtype"
+msgid "Type"
+msgstr "Тип"
+
+#: idedebuggerstringconstants.dlgfilterall
+msgctxt "lazarusidestrconsts.dlgfilterall"
+msgid "All files"
+msgstr "Все файлы"
+
+#: idedebuggerstringconstants.dlgfilterxml
+msgctxt "lazarusidestrconsts.dlgfilterxml"
+msgid "XML files"
+msgstr "Файлы XML"
+
+#: idedebuggerstringconstants.dlgidedbgdebugger
+msgid "Debugger"
+msgstr "Отладчик"
+
+#: idedebuggerstringconstants.dlgidedbgentername
+msgid "Enter name"
+msgstr "Введите имя"
+
+#: idedebuggerstringconstants.dlgidedbgnewitem
+msgid "New Item"
+msgstr "Новый элемент"
+
+#: idedebuggerstringconstants.dlginspectamountofitemstoshow
+msgid "Amount of items to show"
+msgstr "Количество показываемых элементов"
+
+#: idedebuggerstringconstants.dlginspectboundsdd
+#, object-pascal-format
+msgid "Bounds: %d .. %d"
+msgstr "Границы: %d .. %d"
+
+#: idedebuggerstringconstants.dlginspectindexoffirstitemtoshow
+msgid "Index of first item to show"
+msgstr "Индекс первого показываемого элемента"
+
+#: idedebuggerstringconstants.dlgunitdeprefresh
+msgctxt "lazarusidestrconsts.dlgunitdeprefresh"
+msgid "Refresh"
+msgstr "Обновить"
+
+#: idedebuggerstringconstants.dlgvaluecolor
+msgctxt "lazarusidestrconsts.dlgvaluecolor"
+msgid "Value"
+msgstr "Значение"
+
+#: idedebuggerstringconstants.dlgvaluedataaddr
+msgid "Data-Address"
+msgstr "Адрес данных"
+
+#: idedebuggerstringconstants.drsaddwatch
+msgctxt "idedebuggerstringconstants.drsaddwatch"
+msgid "Add watch"
+msgstr "Добавить наблюдение"
+
+#: idedebuggerstringconstants.drsappendresultatbottomofhis
+msgid "Append result at bottom of history"
+msgstr "Добавлять результат в историю снизу"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthaction
+msgid "Action column"
+msgstr "Столбец действия"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthcondition
+msgid "Condition column"
+msgstr "Столбец условия"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthfile
+msgid "File/address column"
+msgstr "Столбец имени файла/адреса"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthgroup
+msgid "Group column"
+msgstr "Столбец группы"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthline
+msgctxt "debuggerstrconst.drsbreakpointcolwidthline"
+msgid "Line column"
+msgstr "Столбец строки"
+
+#: idedebuggerstringconstants.drsbreakpointcolwidthpasscount
+msgid "Pass-count column"
+msgstr "Столбец числа проходов"
+
+#: idedebuggerstringconstants.drscolwidthaddr
+msgid "Address column"
+msgstr "Столбец адреса"
+
+#: idedebuggerstringconstants.drscolwidthbrkpointimg
+msgid "Break indication column"
+msgstr "Столбец индикации останова"
+
+#: idedebuggerstringconstants.drscolwidthexpression
+msgid "Expression column"
+msgstr "Столбец выражения"
+
+#: idedebuggerstringconstants.drscolwidthfunc
+msgid "Function name column"
+msgstr "Столбец имени функции"
+
+#: idedebuggerstringconstants.drscolwidthindex
+msgid "Index column"
+msgstr "Столбец индекса"
+
+#: idedebuggerstringconstants.drscolwidthline
+msgctxt "debuggerstrconst.drscolwidthline"
+msgid "Line column"
+msgstr "Столбец строки"
+
+#: idedebuggerstringconstants.drscolwidthname
+msgid "Name column"
+msgstr "Столбец имени"
+
+#: idedebuggerstringconstants.drscolwidthsource
+msgid "Source column"
+msgstr "Столбец исходного кода"
+
+#: idedebuggerstringconstants.drscolwidthstate
+msgid "State column"
+msgstr "Столбец состояния"
+
+#: idedebuggerstringconstants.drscolwidthvalue
+msgid "Value column"
+msgstr "Столбец значения"
+
+#: idedebuggerstringconstants.drsdebugconverter
+msgid "Converter"
+msgstr "Преобразование"
+
+#: idedebuggerstringconstants.drsdisableenableupdatesforth
+msgctxt "idedebuggerstringconstants.drsdisableenableupdatesforth"
+msgid "Disable/Enable updates for the entire window"
+msgstr "Отключить/включить обновления для всего окна"
+
+#: idedebuggerstringconstants.drsenterexpression
+msgid "Enter Expression"
+msgstr "Введите выражение"
+
+#: idedebuggerstringconstants.drsevaluate
+msgid "Evaluate"
+msgstr "Вычислить"
+
+#: idedebuggerstringconstants.drshistory
+msgctxt "idedebuggerstringconstants.drshistory"
+msgid "History"
+msgstr "История"
+
+#: idedebuggerstringconstants.drshistorycolwidthcurrent
+msgid "Current column"
+msgstr "Столбец текущего положения"
+
+#: idedebuggerstringconstants.drshistorycolwidthlocation
+msgid "Location column"
+msgstr "Столбец расположения"
+
+#: idedebuggerstringconstants.drshistorycolwidthtime
+msgid "Time column"
+msgstr "Столбец времени"
+
+#: idedebuggerstringconstants.drsinsertresultattopofhistor
+msgid "Insert result at top of history"
+msgstr "Добавлять результат в историю сверху"
+
+#: idedebuggerstringconstants.drsinspect
+msgid "Inspect"
+msgstr "Просмотреть"
+
+#: idedebuggerstringconstants.drsinspectcolwidthdataclass
+msgid "Data class column"
+msgstr "Столбец класса поля"
+
+#: idedebuggerstringconstants.drsinspectcolwidthdataname
+msgid "Data name column"
+msgstr "Столбец имени поля"
+
+#: idedebuggerstringconstants.drsinspectcolwidthdatatype
+msgid "Data type column"
+msgstr "Столбец типа поля"
+
+#: idedebuggerstringconstants.drsinspectcolwidthdatavalue
+msgid "Data value column"
+msgstr "Столбец значения поля"
+
+#: idedebuggerstringconstants.drsinspectcolwidthdatavisibility
+msgid "Data visibility column"
+msgstr "Столбец видимости поля"
+
+#: idedebuggerstringconstants.drsinspectcolwidthmethaddress
+msgid "Method address column"
+msgstr "Столбец адреса метода"
+
+#: idedebuggerstringconstants.drsinspectcolwidthmethname
+msgid "Method name column"
+msgstr "Столбец имени метода"
+
+#: idedebuggerstringconstants.drsinspectcolwidthmethreturns
+msgid "Method returns column"
+msgstr "Столбец типа результата метода"
+
+#: idedebuggerstringconstants.drsinspectcolwidthmethtype
+msgid "Method type column"
+msgstr "Столбец типа метода"
+
+#: idedebuggerstringconstants.drslen
+#, object-pascal-format
+msgid "Len=%d: "
+msgstr "Длина=%d: "
+
+#: idedebuggerstringconstants.drsnewvalue
+msgid "New Value"
+msgstr "Новое значение"
+
+#: idedebuggerstringconstants.drsnewvaluetoassigntothevari
+msgid "New value to assign to the variable in the debugged process (use Shift-Enter to confirm)"
+msgstr "Новое значение переменной отлаживаемого процесса для присвоения (нажмите Shift-Enter для подтверждения)"
+
+#: idedebuggerstringconstants.drsnodebugconverter
+msgid "No Converter"
+msgstr "Без преобразования"
+
+#: idedebuggerstringconstants.drsnohistorykept
+msgid "No history kept"
+msgstr "Не сохранять историю"
+
+#: idedebuggerstringconstants.drsrunallthreadswhileevaluat
+msgid "Run all threads while evaluating"
+msgstr "Запускать все потоки исполнения при вычислении"
+
+#: idedebuggerstringconstants.drssuspend
+msgid "Suspend"
+msgstr "Приостановить"
+
+#: idedebuggerstringconstants.drsusefunctioncalls
+msgctxt "idedebuggerstringconstants.drsusefunctioncalls"
+msgid "Function"
+msgstr "Функция"
+
+#: idedebuggerstringconstants.drsusefunctioncallshint
+msgid "Allow function calls"
+msgstr "Разрешить вызовы функций"
+
+#: idedebuggerstringconstants.drsuseinstanceclass
+msgctxt "idedebuggerstringconstants.drsuseinstanceclass"
+msgid "Instance"
+msgstr "Экземпляр"
+
+#: idedebuggerstringconstants.drsuseinstanceclasshint
+msgctxt "idedebuggerstringconstants.drsuseinstanceclasshint"
+msgid "Use Instance class type"
+msgstr "Использовать тип экземпляра класса"
+
+#: idedebuggerstringconstants.drsuseinstanceclasstype
+msgctxt "idedebuggerstringconstants.drsuseinstanceclasstype"
+msgid "Use Instance class type"
+msgstr "Использовать тип экземпляра класса"
+
+#: idedebuggerstringconstants.drswatchsplitterinspect
+msgctxt "idedebuggerstringconstants.drswatchsplitterinspect"
+msgid "Inspect pane"
+msgstr "Панель просмотра"
+
+#: idedebuggerstringconstants.dsrevalusedebugconverter
+msgid "Use Backend Converter"
+msgstr "Использовать преобразование в механизме отладки"
+
+#: idedebuggerstringconstants.histdlgbtnclearhint
+msgid "Clear all snapshots"
+msgstr "Очистить все снимки"
+
+#: idedebuggerstringconstants.histdlgbtnenablehint
+msgid "Toggle view snapshot or current"
+msgstr "Переключить отображение между снимком и текущим состоянием"
+
+#: idedebuggerstringconstants.histdlgbtnmakesnaphint
+msgid "Take Snapshot"
+msgstr "Сделать снимок"
+
+#: idedebuggerstringconstants.histdlgbtnpowerhint
+msgid "Switch on/off automatic snapshots"
+msgstr "Включить/выключить автоматические снимки"
+
+#: idedebuggerstringconstants.histdlgbtnremovehint
+msgid "Remove selected entry"
+msgstr "Удалить выбранный элемент"
+
+#: idedebuggerstringconstants.histdlgbtnshowhisthint
+msgid "View history"
+msgstr "Показать историю"
+
+#: idedebuggerstringconstants.histdlgbtnshowsnaphint
+msgid "View Snapshots"
+msgstr "Показать снимки"
+
+#: idedebuggerstringconstants.histdlgcolumnloc
+msgctxt "lazarusidestrconsts.histdlgcolumnloc"
+msgid "Location"
+msgstr "Расположение"
+
+#: idedebuggerstringconstants.histdlgcolumntime
+msgid "Time"
+msgstr "Время"
+
+#: idedebuggerstringconstants.histdlgformname
+msgctxt "lazarusidestrconsts.histdlgformname"
+msgid "History"
+msgstr "История"
+
+#: idedebuggerstringconstants.lisactions
+msgid "Actions:"
+msgstr "Действия:"
+
+#: idedebuggerstringconstants.lisaddress
+msgid "Address:"
+msgstr "Адрес:"
+
+#: idedebuggerstringconstants.lisaddressbreakpoint
+msgctxt "lazarusidestrconsts.lisaddressbreakpoint"
+msgid "&Address Breakpoint ..."
+msgstr "Точка останова по &адресу ..."
+
+#: idedebuggerstringconstants.lisallowfunctio
+msgid "Allow Function Calls"
+msgstr "Разрешить вызовы функций"
+
+#: idedebuggerstringconstants.lisautocontinueafter
+msgid "Auto continue after:"
+msgstr "Продолжить после:"
+
+#: idedebuggerstringconstants.lisbpsdisabled
+msgctxt "lazarusidestrconsts.lisbpsdisabled"
+msgid "Disabled"
+msgstr "Отключённая"
+
+#: idedebuggerstringconstants.lisbpsenabled
+msgctxt "lazarusidestrconsts.lisbpsenabled"
+msgid "Enabled"
+msgstr "Включённая"
+
+#: idedebuggerstringconstants.lisbreak
+msgctxt "lazarusidestrconsts.lisbreak"
+msgid "Break"
+msgstr "Останов"
+
+#: idedebuggerstringconstants.lisbreakpointproperties
+msgid "Breakpoint Properties"
+msgstr "Параметры точки останова"
+
+#: idedebuggerstringconstants.lisbrkpointaction
+msgctxt "idedebuggerstringconstants.lisbrkpointaction"
+msgid "Action"
+msgstr "Действие"
+
+#: idedebuggerstringconstants.lisbrkpointstate
+msgctxt "idedebuggerstringconstants.lisbrkpointstate"
+msgid "State"
+msgstr "Состояние"
+
+#: idedebuggerstringconstants.liscallstacknotevaluated
+msgid "Stack not evaluated"
+msgstr "Стек не определён"
+
+#: idedebuggerstringconstants.lisccoerrorcaption
+msgctxt "lazarusidestrconsts.lisccoerrorcaption"
+msgid "Error"
+msgstr "Ошибка"
+
+#: idedebuggerstringconstants.lisclear
+msgid "Clear"
+msgstr "Очистить"
+
+#: idedebuggerstringconstants.liscoladdress
+msgid "Function Address"
+msgstr "Адрес функции"
+
+#: idedebuggerstringconstants.liscolclass
+msgid "Class"
+msgstr "Класс"
+
+#: idedebuggerstringconstants.liscolinstance
+msgid "Object Instance"
+msgstr "Экземпляр объекта"
+
+#: idedebuggerstringconstants.liscolreturns
+msgid "Returns"
+msgstr "Тип результата"
+
+#: idedebuggerstringconstants.liscolvisibility
+msgid "Visibility"
+msgstr "Видимость"
+
+#: idedebuggerstringconstants.liscondition
+msgid "Condition"
+msgstr "Условие"
+
+#: idedebuggerstringconstants.liscopyall
+msgid "Copy All"
+msgstr "Копировать все"
+
+#: idedebuggerstringconstants.liscopyalloutputclipboard
+msgid "Copy all output to clipboard"
+msgstr "Копировать весь вывод в буфер обмена"
+
+#: idedebuggerstringconstants.liscsbottom
+msgctxt "lazarusidestrconsts.liscsbottom"
+msgid "Bottom"
+msgstr "Вниз"
+
+#: idedebuggerstringconstants.liscstop
+msgctxt "lazarusidestrconsts.liscstop"
+msgid "Top"
+msgstr "Вверх"
+
+#: idedebuggerstringconstants.liscurrent
+msgctxt "lazarusidestrconsts.liscurrent"
+msgid "Current"
+msgstr "Текущий"
+
+#: idedebuggerstringconstants.lisdadattach
+msgid "Attach"
+msgstr "Присоединиться"
+
+#: idedebuggerstringconstants.lisdadimagename
+msgid "Image Name"
+msgstr "Имя образа"
+
+#: idedebuggerstringconstants.lisdadpid
+msgid "PID"
+msgstr "Идентификатор процесса"
+
+#: idedebuggerstringconstants.lisdadrunningprocesses
+msgid "Running Processes"
+msgstr "Запущенные процессы"
+
+#: idedebuggerstringconstants.lisdbgallitemdelete
+msgctxt "lazarusidestrconsts.lisdbgallitemdelete"
+msgid "Delete all"
+msgstr "Удалить все"
+
+#: idedebuggerstringconstants.lisdbgallitemdeletehint
+msgctxt "lazarusidestrconsts.lisdbgallitemdeletehint"
+msgid "Delete all"
+msgstr "Удалить все"
+
+#: idedebuggerstringconstants.lisdbgallitemdisable
+msgctxt "lazarusidestrconsts.lisdbgallitemdisable"
+msgid "Disable all"
+msgstr "Отключить все"
+
+#: idedebuggerstringconstants.lisdbgallitemdisablehint
+msgctxt "lazarusidestrconsts.lisdbgallitemdisablehint"
+msgid "Disable all"
+msgstr "Отключить все"
+
+#: idedebuggerstringconstants.lisdbgallitemenable
+msgctxt "lazarusidestrconsts.lisdbgallitemenable"
+msgid "Enable all"
+msgstr "Включить все"
+
+#: idedebuggerstringconstants.lisdbgallitemenablehint
+msgctxt "lazarusidestrconsts.lisdbgallitemenablehint"
+msgid "Enable all"
+msgstr "Включить все"
+
+#: idedebuggerstringconstants.lisdbgasmcopyaddresstoclipboard
+msgid "Copy address to Clipboard"
+msgstr "Копировать адрес в буфер обмена"
+
+#: idedebuggerstringconstants.lisdbgasmcopytoclipboard
+msgid "Copy to Clipboard"
+msgstr "Копировать в буфер обмена"
+
+#: idedebuggerstringconstants.lisdbgbreakpointpropertieshint
+msgctxt "lazarusidestrconsts.lisdbgbreakpointpropertieshint"
+msgid "Breakpoint Properties ..."
+msgstr "Параметры точки останова ..."
+
+#: idedebuggerstringconstants.lisdbgitemdeletehint
+msgctxt "lazarusidestrconsts.lisdbgitemdeletehint"
+msgid "Delete"
+msgstr "Удалить"
+
+#: idedebuggerstringconstants.lisdbgitemdisable
+msgctxt "lazarusidestrconsts.lisdbgitemdisable"
+msgid "Disable"
+msgstr "Отключить"
+
+#: idedebuggerstringconstants.lisdbgitemdisablehint
+msgctxt "lazarusidestrconsts.lisdbgitemdisablehint"
+msgid "Disable"
+msgstr "Отключить"
+
+#: idedebuggerstringconstants.lisdbgitemenable
+msgctxt "lazarusidestrconsts.lisdbgitemenable"
+msgid "Enable"
+msgstr "Включить"
+
+#: idedebuggerstringconstants.lisdbgitemenablehint
+msgctxt "lazarusidestrconsts.lisdbgitemenablehint"
+msgid "Enable"
+msgstr "Включить"
+
+#: idedebuggerstringconstants.lisdbgterminal
+msgctxt "lazarusidestrconsts.lisdbgterminal"
+msgid "Console In/Output"
+msgstr "Ввод/вывод в консоли"
+
+#: idedebuggerstringconstants.lisdbgwinpower
+msgid "On/Off"
+msgstr "Вкл./выкл."
+
+#: idedebuggerstringconstants.lisdbgwinpowerhint
+msgctxt "idedebuggerstringconstants.lisdbgwinpowerhint"
+msgid "Disable/Enable updates for the entire window"
+msgstr "Отключить/включить обновления для всего окна"
+
+#: idedebuggerstringconstants.lisdebuggerfeedbackerror
+msgid "Debugger Error"
+msgstr "Ошибка отладчика"
+
+#: idedebuggerstringconstants.lisdebuggerfeedbackinformation
+msgid "Debugger Information"
+msgstr "Уведомление отладчика"
+
+#: idedebuggerstringconstants.lisdebuggerfeedbackwarning
+msgid "Debugger Warning"
+msgstr "Предупреждение отладчика"
+
+#: idedebuggerstringconstants.lisdebugoptionsfrmresume
+msgid "Resume"
+msgstr "Продолжить"
+
+#: idedebuggerstringconstants.lisdebugoptionsfrmresumehandled
+msgid "Resume Handled"
+msgstr "Продолжить при обработанных"
+
+#: idedebuggerstringconstants.lisdebugoptionsfrmresumeunhandled
+msgid "Resume Unhandled"
+msgstr "Продолжить при необработанных"
+
+#: idedebuggerstringconstants.lisdeleteall
+msgid "&Delete All"
+msgstr "&Удалить все"
+
+#: idedebuggerstringconstants.lisdeleteallbreakpoints
+msgid "Delete all breakpoints?"
+msgstr "Удалить все точки останова?"
+
+#: idedebuggerstringconstants.lisdeleteallbreakpoints2
+#, object-pascal-format
+msgid "Delete all breakpoints in file \"%s\"?"
+msgstr "Удалить все точки останова в файле \"%s\"?"
+
+#: idedebuggerstringconstants.lisdeleteallinsamesource
+msgid "Delete All in same source"
+msgstr "Удалить все в том же файле исходного кода"
+
+#: idedebuggerstringconstants.lisdeleteallselectedbreakpoints
+msgid "Delete all selected breakpoints?"
+msgstr "Удалить все выбранные точки останова?"
+
+#: idedebuggerstringconstants.lisdeletebreakpoint
+msgid "Delete Breakpoint"
+msgstr "Удалить точку останова"
+
+#: idedebuggerstringconstants.lisdeletebreakpointatline
+#, object-pascal-format
+msgid "Delete breakpoint at%s\"%s\" line %d?"
+msgstr "Удалить точку останова в%s\"%s\" на строке %d?"
+
+#: idedebuggerstringconstants.lisdeletebreakpointforaddress
+#, object-pascal-format
+msgid "Delete breakpoint for address %s?"
+msgstr "Удалить точку останова по адресу %s?"
+
+#: idedebuggerstringconstants.lisdeletebreakpointforwatch
+#, object-pascal-format
+msgid "Delete watchpoint for \"%s\"?"
+msgstr "Удалить наблюдение для \"%s\"?"
+
+#: idedebuggerstringconstants.lisdigits
+msgid "Digits:"
+msgstr "Разряды:"
+
+#: idedebuggerstringconstants.lisdisableallinsamesource
+msgid "Disable All in same source"
+msgstr "Отключить все в том же файле исходного кода"
+
+#: idedebuggerstringconstants.lisdisablebreakpoint
+msgid "Disable Breakpoint"
+msgstr "Отключить точку останова"
+
+#: idedebuggerstringconstants.lisdisablegroups
+msgid "Disable Groups"
+msgstr "Отключить группы"
+
+#: idedebuggerstringconstants.lisdisassassembler
+msgctxt "idedebuggerstringconstants.lisdisassassembler"
+msgid "Assembler"
+msgstr "Ассемблер"
+
+#: idedebuggerstringconstants.lisdisassgotoaddredittexthint
+msgid "($address)"
+msgstr "($адрес)"
+
+#: idedebuggerstringconstants.lisdisassgotoaddress
+msgctxt "idedebuggerstringconstants.lisdisassgotoaddress"
+msgid "Goto Address"
+msgstr "Перейти по адресу"
+
+#: idedebuggerstringconstants.lisdisassgotoaddresshint
+msgctxt "idedebuggerstringconstants.lisdisassgotoaddresshint"
+msgid "Goto Address"
+msgstr "Перейти по адресу"
+
+#: idedebuggerstringconstants.lisdisassgotocurrentaddress
+msgctxt "idedebuggerstringconstants.lisdisassgotocurrentaddress"
+msgid "Goto Current Address"
+msgstr "Перейти по текущему адресу"
+
+#: idedebuggerstringconstants.lisdisassgotocurrentaddresshint
+msgctxt "idedebuggerstringconstants.lisdisassgotocurrentaddresshint"
+msgid "Goto Current Address"
+msgstr "Перейти по текущему адресу"
+
+#: idedebuggerstringconstants.lisenableall
+msgid "&Enable All"
+msgstr "&Включить все"
+
+#: idedebuggerstringconstants.lisenableallinsamesource
+msgid "Enable All in same source"
+msgstr "Включить все в том же файле исходного кода"
+
+#: idedebuggerstringconstants.lisenablebreakpoint
+msgid "Enable Breakpoint"
+msgstr "Включить точку останова"
+
+#: idedebuggerstringconstants.lisenablegroups
+msgid "Enable Groups"
+msgstr "Включить группы"
+
+#: idedebuggerstringconstants.lisevalexpression
+msgctxt "lazarusidestrconsts.lisevalexpression"
+msgid "Eval expression"
+msgstr "Вычислить выражение"
+
+#: idedebuggerstringconstants.lisevaluateall
+msgid "Evaluate all"
+msgstr "Вычислить все"
+
+#: idedebuggerstringconstants.lisevaluatemodify
+msgid "&Evaluate/Modify"
+msgstr "&Вычислить/Изменить"
+
+#: idedebuggerstringconstants.liseventlogclear
+msgid "Clear Events"
+msgstr "Очистить события"
+
+#: idedebuggerstringconstants.liseventlogoptions
+msgid "Event Log Options ..."
+msgstr "Параметры журнала событий ..."
+
+#: idedebuggerstringconstants.liseventlogsavetofile
+msgid "Save Events to File"
+msgstr "Сохранить события в файл"
+
+#: idedebuggerstringconstants.liseventslogaddcomment
+msgid "Add Comment ..."
+msgstr "Добавить комментарий ..."
+
+#: idedebuggerstringconstants.liseventslogaddcomment2
+msgid "Add Comment"
+msgstr "Добавление комментария"
+
+#: idedebuggerstringconstants.lisexceptiondialog
+msgid "Debugger Exception Notification"
+msgstr "Уведомление об исключении отладчика"
+
+#: idedebuggerstringconstants.lisexport
+msgctxt "lazarusidestrconsts.lisexport"
+msgid "Export"
+msgstr "Экспортировать"
+
+#: idedebuggerstringconstants.lisexpression
+msgid "Expression:"
+msgstr "Выражение:"
+
+#: idedebuggerstringconstants.lisfilenameaddress
+msgid "Filename/Address"
+msgstr "Имя файла/Адрес"
+
+#: idedebuggerstringconstants.lisfunction
+msgctxt "lazarusidestrconsts.lisfunction"
+msgid "Function"
+msgstr "Функция"
+
+#: idedebuggerstringconstants.lisgotoselected
+msgid "Goto selected"
+msgstr "Перейти к выделенному"
+
+#: idedebuggerstringconstants.lisgroup
+msgid "Group"
+msgstr "Группа"
+
+#: idedebuggerstringconstants.lisgroupassignexisting
+#, object-pascal-format
+msgid "Assign to existing \"%s\" group?"
+msgstr "Добавить в уже существующую группу \"%s\"?"
+
+#: idedebuggerstringconstants.lisgroupemptydelete
+#, object-pascal-format
+msgid "No more breakpoints are assigned to group \"%s\", delete it?"
+msgstr "Группа \"%s\" больше не содержит точек останова, удалить её?"
+
+#: idedebuggerstringconstants.lisgroupemptydeletemore
+#, object-pascal-format
+msgid "%sThere are %d more empty groups, delete all?"
+msgstr "%sИмеется ещё ряд пустых групп (%d), удалить их все?"
+
+#: idedebuggerstringconstants.lisgroupnameemptyclearinstead
+msgid "The group name cannot be empty. Clear breakpoints' group(s)?"
+msgstr "Имя группы не может быть пустым. Очистить группу точки останова?"
+
+#: idedebuggerstringconstants.lisgroupnameinput
+msgid "Group name:"
+msgstr "Имя группы:"
+
+#: idedebuggerstringconstants.lisgroupnameinvalid
+msgid "BreakpointGroup name must be a valid Pascal identifier name."
+msgstr "Имя группы точек останова должно являться корректным идентификатором Паскаля."
+
+#: idedebuggerstringconstants.lisgroupsetnew
+msgid "Set new group ..."
+msgstr "Назначить группу ..."
+
+#: idedebuggerstringconstants.lisgroupsetnone
+msgid "Clear group(s)"
+msgstr "Убрать привязку к группе"
+
+#: idedebuggerstringconstants.lishitcount
+msgid "Hitcount"
+msgstr "Число срабатываний"
+
+#: idedebuggerstringconstants.lisid
+msgctxt "lazarusidestrconsts.lisid"
+msgid "ID"
+msgstr "Идентификатор"
+
+#: idedebuggerstringconstants.lisignoreexceptiontype
+msgid "Ignore this exception type"
+msgstr "Игнорировать этот тип исключений"
+
+#: idedebuggerstringconstants.lisimport
+msgctxt "lazarusidestrconsts.lisimport"
+msgid "Import"
+msgstr "Импортировать"
+
+#: idedebuggerstringconstants.lisindex
+msgid "Index"
+msgstr "Индекс"
+
+#: idedebuggerstringconstants.lisinspect
+msgid "&Inspect"
+msgstr "&Просмотреть"
+
+#: idedebuggerstringconstants.lisinspectaddwatch
+msgctxt "lazarusidestrconsts.lisinspectaddwatch"
+msgid "Add watch"
+msgstr "Добавить наблюдение"
+
+#: idedebuggerstringconstants.lisinspectclassinherit
+#, object-pascal-format
+msgid "%s: class %s inherits from %s"
+msgstr "%s: класс %s наследуется от %s"
+
+#: idedebuggerstringconstants.lisinspectdata
+msgid "Data"
+msgstr "Данные"
+
+#: idedebuggerstringconstants.lisinspectdialog
+msgid "Debug Inspector"
+msgstr "Инспектор отладки"
+
+#: idedebuggerstringconstants.lisinspectmethods
+msgid "Methods"
+msgstr "Методы"
+
+#: idedebuggerstringconstants.lisinspectpointerto
+#, object-pascal-format
+msgid "Pointer to %s"
+msgstr "Указатель на %s"
+
+#: idedebuggerstringconstants.lisinspectproperties
+msgctxt "lazarusidestrconsts.lisinspectproperties"
+msgid "Properties"
+msgstr "Свойства"
+
+#: idedebuggerstringconstants.lisinspectshowcolclass
+msgid "Show class column"
+msgstr "Показывать столбец класса"
+
+#: idedebuggerstringconstants.lisinspectshowcoltype
+msgid "Show type column"
+msgstr "Показывать столбец типа"
+
+#: idedebuggerstringconstants.lisinspectshowcolvisibility
+msgid "Show visibility column"
+msgstr "Показывать столбец видимости"
+
+#: idedebuggerstringconstants.lisinspectunavailableerror
+#, object-pascal-format
+msgid "%s: unavailable (error: %s)"
+msgstr "%s: недоступно (ошибка: %s)"
+
+#: idedebuggerstringconstants.lisinspectuseinstance
+msgctxt "idedebuggerstringconstants.lisinspectuseinstance"
+msgid "Instance"
+msgstr "Экземпляр"
+
+#: idedebuggerstringconstants.lisinspectuseinstancehint
+msgid "Use instance class"
+msgstr "Использовать класс экземпляра"
+
+#: idedebuggerstringconstants.lisinvalidoff
+msgid "Invalid (Off)"
+msgstr "Неверная (Выкл.)"
+
+#: idedebuggerstringconstants.lisinvalidon
+msgid "Invalid (On)"
+msgstr "Неверная (Вкл.)"
+
+#: idedebuggerstringconstants.liskmevaluatemodify
+msgid "Evaluate/Modify"
+msgstr "Вычислить/Изменить"
+
+#: idedebuggerstringconstants.lisless
+msgctxt "lazarusidestrconsts.lisless"
+msgid "Less"
+msgstr "Скрыть подробности"
+
+#: idedebuggerstringconstants.lisline
+msgid "Line:"
+msgstr "Строка:"
+
+#: idedebuggerstringconstants.lislinelength
+msgid "Line/Length"
+msgstr "Строка/Длина"
+
+#: idedebuggerstringconstants.lislocals
+msgctxt "lazarusidestrconsts.lislocals"
+msgid "Local Variables"
+msgstr "Локальные переменные"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyaddr
+msgid "Copy &Data-Address"
+msgstr "Копировать адрес &данных"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyall
+msgid "Copy &all entries"
+msgstr "Копировать &все элементы списка"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyentry
+msgid "Copy entire entry"
+msgstr "Копировать элемент списка целиком"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyname
+msgid "&Copy Name"
+msgstr "Копировать &имя"
+
+#: idedebuggerstringconstants.lislocalsdlgcopynamevalue
+msgid "Co&py Name and Value"
+msgstr "Копировать имя и зна&чение"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyrawvalue
+msgid "Copy &RAW Value"
+msgstr "Копировать &необработанное значение"
+
+#: idedebuggerstringconstants.lislocalsdlgcopyvalue
+msgid "C&opy Value (quoted)"
+msgstr "Копировать &значение (обработанное)"
+
+#: idedebuggerstringconstants.lislocalsnotevaluated
+msgid "Locals not evaluated"
+msgstr "Локальные переменные не определены"
+
+#: idedebuggerstringconstants.lislogcallstack
+msgid "Log Call Stack"
+msgstr "Записать стек вызовов"
+
+#: idedebuggerstringconstants.lislogcallstacklimit
+msgid "(frames limit. 0 - no limits)"
+msgstr "(число фреймов. 0 - без ограничений)"
+
+#: idedebuggerstringconstants.lislogevalexpression
+msgctxt "lazarusidestrconsts.lislogevalexpression"
+msgid "Eval expression"
+msgstr "Вычислить выражение"
+
+#: idedebuggerstringconstants.lislogmessage
+msgid "Log Message"
+msgstr "Сообщение в журнал"
+
+#: idedebuggerstringconstants.lismaxs
+#, object-pascal-format
+msgid "Max %d"
+msgstr "Максимум %d"
+
+#: idedebuggerstringconstants.lismenubreak
+msgid "&Break"
+msgstr "&Остановить"
+
+#: idedebuggerstringconstants.lismenuhelp
+msgid "&Help"
+msgstr "&Справка"
+
+#: idedebuggerstringconstants.lismenustepinto
+msgid "Step In&to"
+msgstr "Шаг со в&ходом"
+
+#: idedebuggerstringconstants.lismenustepintocontext
+msgid "Step Into (Context)"
+msgstr "Шаг со входом (контекстно-зависимый)"
+
+#: idedebuggerstringconstants.lismenustepintoinstr
+msgctxt "idedebuggerstringconstants.lismenustepintoinstr"
+msgid "Step Into Instruction"
+msgstr "Шаг со входом в инструкцию"
+
+#: idedebuggerstringconstants.lismenustepintoinstrhint
+msgctxt "idedebuggerstringconstants.lismenustepintoinstrhint"
+msgid "Step Into Instruction"
+msgstr "Шаг со входом в инструкцию"
+
+#: idedebuggerstringconstants.lismenustepout
+msgid "Step O&ut"
+msgstr "Шаг с в&ыходом"
+
+#: idedebuggerstringconstants.lismenustepover
+msgid "&Step Over"
+msgstr "Шаг в &обход"
+
+#: idedebuggerstringconstants.lismenustepovercontext
+msgid "Step Over (Context)"
+msgstr "Шаг в обход (контекстно-зависимый)"
+
+#: idedebuggerstringconstants.lismenustepoverinstr
+msgctxt "idedebuggerstringconstants.lismenustepoverinstr"
+msgid "Step Over Instruction"
+msgstr "Шаг в обход инструкции"
+
+#: idedebuggerstringconstants.lismenustepoverinstrhint
+msgctxt "idedebuggerstringconstants.lismenustepoverinstrhint"
+msgid "Step Over Instruction"
+msgstr "Шаг в обход инструкции"
+
+#: idedebuggerstringconstants.lismenusteptocursor
+msgid "Step over to &Cursor"
+msgstr "Шаг в обход до &курсора"
+
+#: idedebuggerstringconstants.lismenuviewassembler
+msgctxt "idedebuggerstringconstants.lismenuviewassembler"
+msgid "Assembler"
+msgstr "Ассемблер"
+
+#: idedebuggerstringconstants.lismenuviewbreakpoints
+msgid "BreakPoints"
+msgstr "Точки останова"
+
+#: idedebuggerstringconstants.lismenuviewcallstack
+msgid "Call Stack"
+msgstr "Стек вызовов"
+
+#: idedebuggerstringconstants.lismenuviewdebugevents
+msgctxt "lazarusidestrconsts.lismenuviewdebugevents"
+msgid "Event Log"
+msgstr "Журнал событий"
+
+#: idedebuggerstringconstants.lismenuviewdebugoutput
+msgid "Debug Output"
+msgstr "Вывод отладчика"
+
+#: idedebuggerstringconstants.lismore
+msgctxt "lazarusidestrconsts.lismore"
+msgid "More"
+msgstr "Подробнее"
+
+#: idedebuggerstringconstants.lisms
+msgid "(ms)"
+msgstr "(мс)"
+
+#: idedebuggerstringconstants.lismvsavemessagestofiletxt
+msgid "Save messages to file (*.txt)"
+msgstr "Сохранить сообщения в файл (*.txt)"
+
+#: idedebuggerstringconstants.lisname
+msgctxt "lazarusidestrconsts.lisname"
+msgid "Name"
+msgstr "Имя"
+
+#: idedebuggerstringconstants.lisoff
+msgid "? (Off)"
+msgstr "? (Выкл.)"
+
+#: idedebuggerstringconstants.lison
+msgid "? (On)"
+msgstr "? (Вкл.)"
+
+#: idedebuggerstringconstants.lispasscount
+msgid "Pass Count"
+msgstr "Число проходов"
+
+#: idedebuggerstringconstants.lispefilename
+msgid "Filename:"
+msgstr "Имя файла:"
+
+#: idedebuggerstringconstants.lispendingon
+msgid "Pending (On)"
+msgstr "Отложенная (Вкл.)"
+
+#: idedebuggerstringconstants.lisregisters
+msgctxt "lazarusidestrconsts.lisregisters"
+msgid "Registers"
+msgstr "Регистры"
+
+#: idedebuggerstringconstants.lisrepeatcount
+msgid "Repeat Count:"
+msgstr "Число повторов:"
+
+#: idedebuggerstringconstants.lissourcebreakpoint
+msgid "&Source Breakpoint ..."
+msgstr "Точка останова в &исходном коде ..."
+
+#: idedebuggerstringconstants.lissrcline
+msgctxt "idedebuggerstringconstants.lissrcline"
+msgid "Line"
+msgstr "Строка"
+
+#: idedebuggerstringconstants.lisstop
+msgctxt "lazarusidestrconsts.lisstop"
+msgid "Stop"
+msgstr "Остановить"
+
+#: idedebuggerstringconstants.lisstyle
+msgctxt "lazarusidestrconsts.lisstyle"
+msgid "Style"
+msgstr "Стиль"
+
+#: idedebuggerstringconstants.listakesnapshot
+msgid "Take a Snapshot"
+msgstr "Сделать снимок"
+
+#: idedebuggerstringconstants.listhreads
+msgctxt "lazarusidestrconsts.listhreads"
+msgid "Threads"
+msgstr "Потоки исполнения"
+
+#: idedebuggerstringconstants.listhreadscurrent
+msgctxt "lazarusidestrconsts.listhreadscurrent"
+msgid "Current"
+msgstr "Текущий"
+
+#: idedebuggerstringconstants.listhreadsfunc
+msgctxt "lazarusidestrconsts.listhreadsfunc"
+msgid "Function"
+msgstr "Функция"
+
+#: idedebuggerstringconstants.listhreadsgoto
+msgid "Goto"
+msgstr "Перейти"
+
+#: idedebuggerstringconstants.listhreadsline
+msgctxt "lazarusidestrconsts.listhreadsline"
+msgid "Line"
+msgstr "Строка"
+
+#: idedebuggerstringconstants.listhreadsnotevaluated
+msgid "Threads not evaluated"
+msgstr "Потоки исполнения не определены"
+
+#: idedebuggerstringconstants.listhreadssrc
+msgctxt "lazarusidestrconsts.listhreadssrc"
+msgid "Source"
+msgstr "Файл исходного кода"
+
+#: idedebuggerstringconstants.listhreadsstate
+msgctxt "lazarusidestrconsts.listhreadsstate"
+msgid "State"
+msgstr "Состояние"
+
+#: idedebuggerstringconstants.lisvalue
+msgctxt "idedebuggerstringconstants.lisvalue"
+msgid "Value"
+msgstr "Значение"
+
+#: idedebuggerstringconstants.lisviewbreakpointproperties
+msgctxt "lazarusidestrconsts.lisviewbreakpointproperties"
+msgid "Breakpoint Properties ..."
+msgstr "Параметры точки останова ..."
+
+#: idedebuggerstringconstants.lisviewsource
+msgid "View Source"
+msgstr "Просмотреть код"
+
+#: idedebuggerstringconstants.lisviewsourcedisass
+msgctxt "lazarusidestrconsts.lisviewsourcedisass"
+msgid "View Assembler"
+msgstr "Просмотреть код ассемблера"
+
+#: idedebuggerstringconstants.liswatch
+msgid "&Watch"
+msgstr "&Наблюдать"
+
+#: idedebuggerstringconstants.liswatchdata
+msgid "Watch:"
+msgstr "Наблюдать:"
+
+#: idedebuggerstringconstants.liswatchkind
+msgid "Watch action"
+msgstr "Действие наблюдения"
+
+#: idedebuggerstringconstants.liswatchkindread
+msgid "Read"
+msgstr "Чтение"
+
+#: idedebuggerstringconstants.liswatchkindreadwrite
+msgid "Read/Write"
+msgstr "Чтение/запись"
+
+#: idedebuggerstringconstants.liswatchkindwrite
+msgid "Write"
+msgstr "Запись"
+
+#: idedebuggerstringconstants.liswatchpoint
+msgid "&Data/Watch Breakpoint ..."
+msgstr "Точка останова с &наблюдением ..."
+
+#: idedebuggerstringconstants.liswatchpointbreakpoint
+msgid "&Data/watch Breakpoint ..."
+msgstr "Точка останова с &наблюдением ..."
+
+#: idedebuggerstringconstants.liswatchpropert
+msgid "Watch Properties"
+msgstr "Свойства наблюдения"
+
+#: idedebuggerstringconstants.liswatchscope
+msgid "Watch scope"
+msgstr "Область действия"
+
+#: idedebuggerstringconstants.liswatchscopeglobal
+msgctxt "lazarusidestrconsts.liswatchscopeglobal"
+msgid "Global"
+msgstr "Глобальная"
+
+#: idedebuggerstringconstants.liswatchscopelocal
+msgid "Declaration"
+msgstr "Место объявления"
+
+#: idedebuggerstringconstants.liswatchtowatchpoint
+msgid "Create &Data/Watch Breakpoint ..."
+msgstr "Создать точку останова с &наблюдением ..."
+
+#: idedebuggerstringconstants.liswldeleteall
+msgid "De&lete All"
+msgstr "У&далить все"
+
+#: idedebuggerstringconstants.liswldisableall
+msgid "D&isable All"
+msgstr "О&тключить все"
+
+#: idedebuggerstringconstants.liswlenableall
+msgid "E&nable All"
+msgstr "В&ключить все"
+
+#: idedebuggerstringconstants.liswlexpression
+msgid "Expression"
+msgstr "Выражение"
+
+#: idedebuggerstringconstants.liswlinspectpane
+msgctxt "idedebuggerstringconstants.liswlinspectpane"
+msgid "Inspect pane"
+msgstr "Панель просмотра"
+
+#: idedebuggerstringconstants.liswlproperties
+msgid "&Properties"
+msgstr "&Свойства"
+
+#: idedebuggerstringconstants.liswlwatchlist
+msgctxt "lazarusidestrconsts.liswlwatchlist"
+msgid "Watches"
+msgstr "Наблюдения"
+
+#: idedebuggerstringconstants.regdlgbinary
+msgctxt "lazarusidestrconsts.regdlgbinary"
+msgid "Binary"
+msgstr "Двоичное"
+
+#: idedebuggerstringconstants.regdlgdecimal
+msgctxt "lazarusidestrconsts.regdlgdecimal"
+msgid "Decimal"
+msgstr "Десятичное"
+
+#: idedebuggerstringconstants.regdlgdefault
+msgctxt "idedebuggerstringconstants.regdlgdefault"
+msgid "Default"
+msgstr "По умолчанию"
+
+#: idedebuggerstringconstants.regdlgdisplaytypeforselectedregisters
+msgid "Display type for selected Registers"
+msgstr "Метод отображения значений выбранных регистров"
+
+#: idedebuggerstringconstants.regdlgformat
+msgid "Format"
+msgstr "Формат"
+
+#: idedebuggerstringconstants.regdlghex
+msgid "Hex"
+msgstr "Шестнадцатеричное"
+
+#: idedebuggerstringconstants.regdlgoctal
+msgid "Octal"
+msgstr "Восьмеричное"
+
+#: idedebuggerstringconstants.regdlgraw
+msgid "Raw"
+msgstr "Исходное"
+
+#: idedebuggerstringconstants.rsattachto
+msgid "Attach to"
+msgstr "Присоединение"
+
+#: idedebuggerstringconstants.rsenterpid
+msgid "Enter PID"
+msgstr "Введите идентификатор процесса"
+
+#: idedebuggerstringconstants.synfnewvalueisempty
+msgid "\"New value\" is empty."
+msgstr "Поле \"Новое значение\" пусто."
+
+#: idedebuggerstringconstants.synfthedebuggerwasnotabletomodifythevalue
+msgid "The debugger was not able to modify the value."
+msgstr "Отладчику не удалось изменить значение."
+
+#: idedebuggerstringconstants.uemtogglebreakpoint
+msgid "Toggle &Breakpoint"
+msgstr "П&ереключить точку останова"
+

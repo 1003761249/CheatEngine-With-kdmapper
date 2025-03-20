@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lcl">
+<!--
+====================================================================
+IniPropStorage
+====================================================================
+-->
+<module name="IniPropStorage">
+<short>
+Contains a component that stores Form Session Properties in INI format.
+</short>
+<descr>
+<p>
+In this unit you can find an implementation of a name/value pair storage 
+container in INI format. This container will get the Form's Session Properties 
+that you setup in <link id="#LCL.Forms.TForm">TForm.SessionProperties</link> 
+and read/write them on the file you specify in 
+<link id="#lcl.inipropstorage.TIniPropStorage.IniFileName">
+TIniPropStorage.IniFileName</link>.
+</p>
+<p>
+<file>inipropstorage.pas</file> is part of the Lazarus Component Library 
+(<b>LCL</b>).
+</p>
+</descr>
+
+<!-- unresolved type references -->
+<element name="Classes"/>
+<element name="SysUtils"/>
+<element name="IniFiles"/>
+<element name="LazUTF8"/>
+<element name="Forms"/>
+
+<element name="TIniFileClass">
+<short>
+Class of <link id="#fcl.IniFiles.TCustomIniFile">TCustomIniFile</link>.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+<element name="TCustomIniPropStorage">
+<short>
+Implements the base class for storage of form session properties in an INI file.
+</short>
+<descr>
+<p>
+<var>TCustomIniPropStorage</var> is a TFormPropertyStorage descendant 
+which defines a class used to store form session properties to a file 
+using the INI format. It introduces properties and methods needed to access the 
+INI file used as the storage mechanism for the class.
+</p>
+<p>
+Use the SessionPropperties property in the TForm or a TFrame instance which 
+owns the class to define the components and property names stored using the 
+storage mechanism.
+</p>
+<p>
+Use IniFileName to specify the path and file name where session properties are 
+stored in IniFile.
+</p>
+<p>
+Use IniSection to specify the name for a section where session properties are 
+stored. When omitted, session properties stored at the root level in IniFile.
+</p>
+<p>
+Use Active to enable or disable read/write access to the INI file storage for 
+the class instance.
+</p>
+<p>
+Use the event handlers in the class to perform actions needed before or during 
+save and restore operations using the session properties.
+</p>
+</descr>
+<seealso>
+<link id="TIniPropStorage"/>
+<link id="#lcl.forms.TForm">TForm.SessionProperties</link>
+<link id="#lcl.forms.TFormPropertyStorage">TFormPropertyStorage</link>
+<link id="#lcl.jsonpropstorage.TJSONPropStorage">TJSONPropStorage</link>
+<link id="#lcl.xmlpropstorage.TXMLPropStorage">TXMLPropStorage</link>
+</seealso>
+</element>
+
+<!-- private -->
+<element name="TCustomIniPropStorage.FCount"/>
+<element name="TCustomIniPropStorage.FReadOnly"/>
+<element name="TCustomIniPropStorage.FIniFile"/>
+<element name="TCustomIniPropStorage.FIniFileName"/>
+<element name="TCustomIniPropStorage.FIniSection"/>
+
+<!-- protected -->
+<element name="TCustomIniPropStorage.IniFileClass">
+<short>
+Returns the <link id="#fcl.IniFiles.TIniFile">TIniFile</link> class type.
+</short>
+<descr/>
+<errors/>
+<seealso/>
+</element>
+<element name="TCustomIniPropStorage.IniFileClass.Result">
+<short>The class <link id="#fcl.IniFiles.TIniFile">TIniFile</link>.</short>
+</element>
+
+<element name="TCustomIniPropStorage.GetIniFileName">
+<short>
+Gets the value for the IniFileName property.
+</short>
+<descr/>
+<seealso>
+<link id="TCustomIniPropStorage.IniFileName"/>
+</seealso>
+</element>
+<element name="TCustomIniPropStorage.GetIniFileName.Result">
+<short>
+Value for the IniFileName property.
+</short>
+</element>
+
+<element name="TCustomIniPropStorage.RootSection">
+<short>
+Returns the name of the INI section where values are stored.
+</short>
+<descr>
+<p>
+<var>RootSection</var> is an overridden <var>String</var> function in 
+TCustomIniPropStorage. It ensures that the value in IniSection property is used 
+as the root section (when assigned). If IniSection has not been assigned, the 
+inherited method is called to build the section name using the Name or Class 
+name for the Root component in the class instance.
+</p>
+</descr>
+<seealso>
+<link id="TCustomIniPropStorage.IniSection"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.RootSection">TCustomPropertyStorage.RootSection</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Root">TCustomPropertyStorage.Root</link>
+</seealso>
+</element>
+<element name="TCustomIniPropStorage.RootSection.Result">
+<short>
+The value for the RootSection identifier.
+</short>
+</element>
+
+<element name="TCustomIniPropStorage.IniFile">
+<short>
+Provides access to the TCustomIniFile instance for the class.
+</short>
+<descr>
+<p>
+<var>IniFile</var> is a read-only <var>TCustomIniFile</var> property which 
+provides access to properties and methods in the underlying INI file used to 
+store values for session properties. The property is used in the implementation 
+of methods which read or write values using the section, identifier, and value 
+for the session properties.
+</p>
+<p>
+IniFile is (re)allocated (as needed) at run-time in the StorageNeeded method. 
+It is not (re)created at design-time. IniFile is freed (when needed) in the 
+FreeStorage method.
+</p>
+<p>
+Use IniFileName to specify the qualified path including file name for the INI 
+file.
+</p>
+</descr>
+<seealso>
+<link id="TCustomIniPropStorage.DoReadString"/>
+<link id="TCustomIniPropStorage.DoWriteString"/>
+<link id="TIniFileClass"/>
+<link id="#fcl.inifiles.TCustomIniFile">TCustomIniFile</link>
+</seealso>
+</element>
+
+<!-- public -->
+<element name="TCustomIniPropStorage.StorageNeeded">
+<short>
+Creates or recreates the underlying INI file storage for the class instance.
+</short>
+<descr>
+<p>
+<var>StorageNeeded</var> is an overridden <var>Boolean</var> function in 
+<var>TCustomIniPropStorage</var>. It ensures that the IniFile property is 
+created or recreated when the method is called. The value in the ReadOnly 
+argument is assigned to an internal member in the class instance; IniFile is 
+recreated if the value in the member has been changed since the class was 
+created.
+</p>
+<remark>
+IniFile is not created or stored in the class instance at design-time.
+</remark>
+<p>
+StorageNeeded is called from methods in ancestor classes when the Active 
+property is enabled, including: Save, Restore, SaveProperties, 
+RestoreProperties, ReadString, WriteString, ReadInteger, WriteInteger, and 
+EraseSection.
+</p>
+<p>
+See FreeStorage for the actions performed when the storage for the class 
+instance is no longer needed.
+</p>
+<p>
+Use Active to control whether access using the INI file storage is enabled.
+</p>
+<p>
+Use IniFileName to specify the qualified path including file name for the INI 
+file storage.
+</p>
+</descr>
+<seealso/>
+<link id="TCustomIniPropStorage.IniFileName"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Active">TCustomPropertyStorage.Active</link>
+</element>
+<element name="TCustomIniPropStorage.StorageNeeded.ReadOnly">
+<short>
+<b>True</b> if the INI file allows read-only access.
+</short>
+</element>
+
+<element name="TCustomIniPropStorage.FreeStorage">
+<short>
+Frees the underlying INI file storage object for the class instance.
+</short>
+<descr>
+<p>
+<var>FreeStorage</var> is an overridden method in 
+<var>TCustomIniPropStorage</var>. It reimplements the virtual method from the 
+TCustomPropertyStorage ancestor. FreeStorage ensures that resources allocated 
+to the IniFile property (in StorageNeeded) are freed when the storage object is 
+no longer needed.
+</p>
+<p>
+FreeStorage is called from methods that include: Save, Restore, SaveProperties, 
+RestoreProperties, ReadString, WriteString, ReadInteger, WriteInteger, and 
+EraseSection.
+</p>
+<p>
+Use IniFile to access properties and methods in the INI storage mechanism.
+</p>
+<p>
+Use IniFileName to specify the qualified path including file name for the INI 
+file storage.
+</p>
+<p>
+Use Active to control whether access using the IniFile storage object is 
+enabled.
+</p>
+</descr>
+<seealso>
+<link id="TCustomIniPropStorage.StorageNeeded"/>
+<link id="TCustomIniPropStorage.IniFile"/>
+<link id="TCustomIniPropStorage.IniFileName"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Active">TCustomPropertyStorage.Active</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.FreeStorage">TCustomPropertyStorage.FreeStorage</link>
+</seealso>
+</element>
+
+<element name="TCustomIniPropStorage.DoReadString">
+<short>
+Performs actions needed to reading the specified value from the INI storage as 
+a string type.
+</short>
+<descr>
+<p>
+<var>DoReadString</var> is an overridden <var>String</var> function in 
+<var>TCustomIniPropStorage</var>. It implements the abstract virtual method 
+defined in the TCustomPropertyStorage ancestor.
+</p>
+<p>
+<var>Section</var> contains the name for the section where the requested value 
+is stored in IniFile.
+</p>
+<p>
+<var>Ident</var> contains the name for the identifier read from the specified 
+Section.
+</p>
+<p>
+<var>Default</var> contains the default value returned in the method if the 
+section or identifier is not found in IniFile.
+</p>
+<p>
+DoReadString calls the ReadString method in IniFile to get the return value for 
+the method.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.DoReadString">TCustomPropertyStorage.DoReadString</link>
+<link id="#fcl.inifiles.TIniFile.ReadString">TIniFile.ReadString</link>
+</seealso>
+</element>
+<element name="TCustomIniPropStorage.DoReadString.Result">
+<short>The value for the requested section and identifier.</short>
+</element>
+<element name="TCustomIniPropStorage.DoReadString.Section">
+<short>The section name with the value read in the method.</short>
+</element>
+<element name="TCustomIniPropStorage.DoReadString.Ident">
+<short>The name for the identifier with the value read in the method.</short>
+</element>
+<element name="TCustomIniPropStorage.DoReadString.Default">
+<short>
+Default value returned if the section or identifier is not found in the INI 
+storage.
+</short>
+</element>
+
+<element name="TCustomIniPropStorage.DoWriteString">
+<short>
+Performs actions needed to write the specified value to the INI storage using a 
+string type.
+</short>
+<descr>
+<p>
+<var>DoWriteString</var> is an overridden method in 
+<var>TCustomIniPropStorage</var>. It implements the abstract virtual method 
+defined in the TCustomPropertyStorage ancestor.
+</p>
+<p>
+<var>Section</var> contains the name for the section where the specified value 
+is stored in IniFile.
+</p>
+<p>
+<var>Ident</var> contains the name for the identifier written to the specified 
+Section.
+</p>
+<p>
+<var>Value</var> contains the string value stored in IniFile in the method.
+</p>
+<p>
+DoWriteString calls the WriteString method in IniFile using the arguments 
+passed to the method.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.DoWriteString">TCustomPropertyStorage.DoWriteString</link>
+<link id="#fcl.inifiles.TIniFile.WriteString">TIniFile.WriteString</link>
+</seealso>
+</element>
+<element name="TCustomIniPropStorage.DoWriteString.Section">
+<short>
+The section name where the specified value is stored in the method.
+</short>
+</element>
+<element name="TCustomIniPropStorage.DoWriteString.Ident">
+<short>
+The name for the identifier where the specified value is stored in the method.
+</short>
+</element>
+<element name="TCustomIniPropStorage.DoWriteString.Value">
+<short>
+Contains the value for the identifier stored in the specified section.
+</short>
+</element>
+
+<element name="TCustomIniPropStorage.DoEraseSections">
+<short>
+Performs actions needed to remove the section section and its subsections from 
+the underlying INI storage.
+</short>
+<descr>
+<p>
+<var>DoEraseSections</var> is an overridden <var>String</var> function in 
+<var>TCustomIniPropStorage</var>. It implements the abstract virtual method 
+defined in the TCustomPropertyStorage ancestor.
+</p>
+<p>
+<var>ARootSection</var> contains the name of the section in IniFile removed in 
+the method.
+</p>
+<p>
+DoEraseSections gets a list of section names found in the INI file, and calls 
+IniFile.EraseSection to remove the section along with its identifiers and 
+values. Other child sections which have ARootSection as a prefix are removed as 
+well.
+</p>
+<p>
+DoEraseSections is used in the SaveProperties method, and is assigned as the 
+OnEraseSetion event handler for the RTTI TPropsStorage instance used in the 
+method.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.DoEraseSections">TCustomPropertyStorage.DoEraseSections</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.OnSaveProperties">TCustomPropertyStorage.OnSaveProperties</link>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.SaveProperties">TCustomPropertyStorage.SaveProperties</link>
+</seealso>
+</element>
+<element name="TCustomIniPropStorage.DoEraseSections.ARootSection">
+<short>The path to the section that will be erased.</short>
+</element>
+
+<element name="TCustomIniPropStorage.IniFileName">
+<short>
+Name of the INI file where the session properties are saved in INI format.
+</short>
+<descr>
+<p>
+<var>IniFileName</var> is a <var>String</var> property with the qualified path 
+and file name for the IniFile where session properties are stored in the class 
+instance. Its value is used in the StorageNeeded method to determine the file 
+name used when the TIniFile class instance is created and assigned to the 
+IniFile property.
+</p>
+<p>
+When omitted, a default value is assigned to the property which uses the path 
+and base name for the application executable. For the Windows platform, the 
+generated value in IniFileName has a '.INI' file extension. For UNIX-like 
+platforms, the file is created as a config file in the home directory for the 
+current user with a '.' prefix and no file extension.
+</p>
+</descr>
+<seealso>
+<link id="TCustomIniPropStorage.IniFile"/>
+<link id="TCustomIniPropStorage.StorageNeeded"/>
+</seealso>
+</element>
+
+<element name="TCustomIniPropStorage.IniSection">
+<short>
+Name of the section in the INI file where values for session properties are 
+stored.
+</short>
+<descr>
+<p>
+<var>IniSection</var> is a <var>String</var> property which contains the name 
+of the section in IniFile where the form session properties are stored. The 
+property value is used in the overridden RootSection function to set section 
+name used when an IniSection property value has not been assigned. When 
+omitted, the value from the inherited method is used; this is normally the full 
+path to the Root component name or class name and any preceding owner 
+components.
+</p>
+</descr>
+<seealso>
+<link id="TCustomIniPropStorage.RootSection"/>
+<link id="#lcl.propertystorage.TCustomPropertyStorage.Root">TCustomPropertyStorage.Root</link>
+</seealso>
+</element>
+
+<element name="TIniPropStorage">
+<short>
+Implements a class used to store session properties in an INI file.
+</short>
+<descr>
+<p>
+<var>TIniPropStorage</var> is a <var>TCustomIniPropStorage</var> descendant 
+which implements the class used to store form session properties to a file 
+using the INI format. It sets the visibility for properties and methods 
+introduced in ancestor classes.
+</p>
+<p>
+Use the SessionPropperties property in the TForm or a TFrame instance which 
+owns the class to define the components and property names stored using the 
+storage mechanism.
+</p>
+<p>
+Use IniFileName to specify the path and file name where session properties are 
+stored in IniFile.
+</p>
+<p>
+Use IniSection to specify the name for a section where session properties are 
+stored. When omitted, session properties are stored at the root section level 
+in IniFile.
+</p>
+<p>
+Use Active to enable or disable read/write access to the INI file storage for 
+the class instance.
+</p>
+<p>
+Use the event handlers in the class to perform actions needed before or during 
+save and restore operations using the session properties.
+</p>
+</descr>
+<seealso>
+<link id="#lcl.forms.TForm">TForm.SessionProperties</link>
+<link id="#lcl.jsonpropstorage.TJSONPropStorage">TJSONPropStorage</link>
+<link id="#lcl.xmlpropstorage.TXMLPropStorage">TXMLPropStorage</link>
+</seealso>
+</element>
+
+<element name="TIniPropStorage.StoredValues" link="#lcl.propertystorage.TCustomPropertyStorage.StoredValues"/>
+<element name="TIniPropStorage.IniFileName" link="#lcl.inipropstorage.TCustomIniPropStorage.IniFileName"/>
+<element name="TIniPropStorage.IniSection" link="#lcl.inipropstorage.TCustomIniPropStorage.IniSection"/>
+<element name="TIniPropStorage.Active" link="#lcl.propertystorage.TCustomPropertyStorage.Active"/>
+<element name="TIniPropStorage.OnSavingProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnSavingProperties"/>
+<element name="TIniPropStorage.OnSaveProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnSaveProperties"/>
+<element name="TIniPropStorage.OnRestoringProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnRestoringProperties"/>
+<element name="TIniPropStorage.OnRestoreProperties" link="#lcl.propertystorage.TCustomPropertyStorage.OnRestoreProperties"/>
+
+<element name="Register">
+<short>
+Registers the 
+<link id="#LCL.IniPropStorage.TIniPropStorage">TIniPropStorage</link> component 
+on the 'Misc' tab for the component palette.
+</short>
+<descr/>
+<seealso/>
+</element>
+
+</module>
+<!-- IniPropStorage -->
+</package>
+</fpdoc-descriptions>

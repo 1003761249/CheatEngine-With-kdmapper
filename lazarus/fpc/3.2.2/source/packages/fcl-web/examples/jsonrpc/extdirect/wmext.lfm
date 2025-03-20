@@ -1,0 +1,28 @@
+object DemoClass: TDemoClass
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  DispatchOptions = [jdoSearchRegistry, jdoSearchOwner, jdoJSONRPC1, jdoJSONRPC2, jdoNotifications]
+  APIPath = 'API'
+  RouterPath = 'Router'
+  CreateSession = False
+  Height = 313
+  HorizontalOffset = 548
+  VerticalOffset = 230
+  Width = 359
+  PPI = 96
+  object Add: TJSONRPCHandler
+    OnExecute = AddExecute
+    Options = []
+    ParamDefs = <    
+      item
+        Name = 'A'
+        DataType = jtNumber
+      end    
+      item
+        Name = 'B'
+        DataType = jtNumber
+      end>
+    left = 56
+    top = 32
+  end
+end

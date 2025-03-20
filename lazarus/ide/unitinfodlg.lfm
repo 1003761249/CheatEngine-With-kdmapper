@@ -1,0 +1,165 @@
+object UnitInfoDialog: TUnitInfoDialog
+  Left = 347
+  Height = 307
+  Top = 249
+  Width = 500
+  ActiveControl = Notebook
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'UnitInfoDialog'
+  ClientHeight = 307
+  ClientWidth = 500
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object OkButton: TBitBtn
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 419
+    Height = 28
+    Top = 273
+    Width = 75
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Bottom = 6
+    Cancel = True
+    Caption = '&OK'
+    Constraints.MinWidth = 75
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object Notebook: TPageControl
+    AnchorSideBottom.Control = OkButton
+    Left = 6
+    Height = 261
+    Top = 6
+    Width = 488
+    ActivePage = GeneralPage
+    Align = alTop
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    TabIndex = 0
+    TabOrder = 1
+    object GeneralPage: TTabSheet
+      Caption = 'GeneralPage'
+      ClientHeight = 234
+      ClientWidth = 484
+      object ClearIncludedBy: TButton
+        Left = 6
+        Height = 25
+        Top = 203
+        Width = 101
+        Anchors = [akLeft, akBottom]
+        AutoSize = True
+        BorderSpacing.Top = 6
+        Caption = 'ClearIncludedBy'
+        OnClick = clearIncludedByClick
+        TabOrder = 0
+      end
+      object ListValues: TListView
+        AnchorSideBottom.Control = ClearIncludedBy
+        Left = 6
+        Height = 191
+        Top = 6
+        Width = 472
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Columns = <        
+          item
+            AutoSize = True
+            Caption = '(name)'
+            Width = 0
+          end        
+          item
+            AutoSize = True
+            Caption = '(value)'
+            Width = 470
+          end>
+        ReadOnly = True
+        RowSelect = True
+        ScrollBars = ssAutoBoth
+        ShowColumnHeaders = False
+        TabOrder = 1
+        ViewStyle = vsReport
+      end
+    end
+    object UnitPathsPage: TTabSheet
+      Caption = 'UnitPathsPage'
+      ClientHeight = 234
+      ClientWidth = 484
+      object UnitPathMemo: TMemo
+        Left = 6
+        Height = 223
+        Top = 6
+        Width = 468
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object IncludePathsPage: TTabSheet
+      Caption = 'IncludePathsPage'
+      ClientHeight = 234
+      ClientWidth = 484
+      object IncludePathMemo: TMemo
+        Left = 6
+        Height = 223
+        Top = 6
+        Width = 468
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object CompleteUnitPathsPage: TTabSheet
+      Caption = 'CompleteUnitPathsPage'
+      ClientHeight = 234
+      ClientWidth = 484
+      object SrcPathMemo: TMemo
+        Left = 6
+        Height = 223
+        Top = 6
+        Width = 468
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+  end
+  object CodeToolsDefsButton: TButton
+    AnchorSideTop.Control = OkButton
+    AnchorSideBottom.Control = OkButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 28
+    Top = 273
+    Width = 133
+    Anchors = [akTop, akLeft, akBottom]
+    AutoSize = True
+    Caption = 'CodeToolsDefsButton'
+    OnClick = CodeToolsDefsButtonClick
+    TabOrder = 2
+  end
+  object GotoIncludeDirectiveButton: TButton
+    AnchorSideTop.Control = OkButton
+    AnchorSideRight.Control = OkButton
+    AnchorSideBottom.Control = OkButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 244
+    Height = 28
+    Top = 273
+    Width = 169
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 6
+    Caption = 'GotoIncludeDirectiveButton'
+    ModalResult = 6
+    TabOrder = 3
+  end
+end

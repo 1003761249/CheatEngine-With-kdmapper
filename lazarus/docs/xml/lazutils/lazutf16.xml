@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Documentation for LCL (Lazarus Component Library) and LazUtils (Lazarus 
+Utilities) are published under the Creative Commons Attribution-ShareAlike 4.0 
+International public license.
+
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+file://../../cc-by-sa-4-0.txt
+
+Copyright (c) 1997-2024, by the Lazarus Development Team.
+
+-->
+<fpdoc-descriptions>
+<package name="lazutils">
+<!--
+====================================================================
+lazutf16
+====================================================================
+-->
+<module name="lazutf16">
+<short>
+Contains routines used for UTF-16 character and string operations.
+</short>
+<descr>
+<p>
+<file>lazutf16.pas</file> includes string routines which are based on UTF-16
+implementations, although it might also include routines for other encodings.
+</p>
+<p>
+A UTF-16 based implementation for LowerCase, for example, is faster in
+WideString and UnicodeString then the default UTF-8 implementation.
+</p>
+<p>
+Currently this unit includes only UTF8LowerCaseViaTables which is based on
+a UTF-16 table, but it might be extended to include various UTF-16 routines.
+</p>
+<p>
+<file>lazutf16.pas</file> is part of the <file>LazUtils</file> package.
+</p>
+</descr>
+
+<element name="UTF16CharacterLength">
+<short>
+Gets the length of the UTF-16 character in the specified PWideChar value.
+</short>
+<descr>
+Uses the endian-ness for the platform. Returns 0, 1, or 2.
+</descr>
+</element>
+<element name="UTF16CharacterLength.Result">
+<short>Length of the UTF-16 character in the value, or 0 when Nil.</short>
+</element>
+<element name="UTF16CharacterLength.p">
+<short>PWideChar value examined in the routine.</short>
+</element>
+
+<element name="UTF16Length">
+<short>Gets the length for the specified value in UTF-16 characters.</short>
+<descr>
+<p>
+Examines 16-UTF values in the specified Unicode string until the number of word 
+values is exceeded. Using zero (0) in WordCount causes no actions to be 
+performed in the routine, and the return value is 0.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="UTF16Length.Result">
+<short>
+Number of UTF-16 codepoints in the examined value.
+</short>
+</element>
+<element name="UTF16Length.s">
+<short>
+Unicode string with the values examined in the routine.
+</short>
+</element>
+<element name="UTF16Length.p">
+<short>
+Pointer to the WideChar values examined in the routine.
+</short>
+</element>
+<element name="UTF16Length.WordCount">
+<short>
+Number of UTF-16 word values to examine in the Unicode string.
+</short>
+</element>
+
+<element name="UTF16Copy">
+<short>
+Copies a number of UTF-16 characters at the given character position in the 
+specified value.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="UTF16Copy.Result">
+<short>UnicodeString with the values copied in the routine.</short>
+</element>
+<element name="UTF16Copy.s">
+<short>UnicodeString with the values examined in the routine.</short>
+</element>
+<element name="UTF16Copy.StartCharIndex">
+<short>
+1-based staring character (code point) position in the Unicode string.
+</short>
+</element>
+<element name="UTF16Copy.CharCount">
+<short>Number of characters (code points) copied in the the routine.</short>
+</element>
+
+<element name="UTF16CharStart">
+<short>
+Gets a pointer to the character (UTF-16 codepoint) at the specified position 
+(zero-based) in a WideChar value.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="UTF16CharStart.Result">
+<short>
+Pointer to the UTF-16 character at the specified position in the value, or 
+<b>Nil</b> if P is empty or a UTF-16 character is not found at the specified 
+ordinal position.
+</short>
+</element>
+<element name="UTF16CharStart.P">
+<short>PWideChar value with the values examined in the routine.</short>
+</element>
+<element name="UTF16CharStart.Len">
+<short>Len is the length in words of P.</short>
+</element>
+<element name="UTF16CharStart.CharIndex">
+<short>
+CharIndex is the position of the desired UnicodeChar (starting at 0).
+</short>
+</element>
+
+<element name="UTF16Pos">
+<short>Pos implemented for UTF-16-encoded values.</short>
+<descr>
+<p>
+<var>UTF16Pos</var> is a <var>PtrInt</var> function used to get the character
+index in SearchInText where the value in SearchForText is located. StartPos
+allows the search to begin at a specific character (code point).
+</p>
+<p>
+The return value is the 1-based UTF-16 character index where the SearchForText
+starts in SearchInText, or 0 when not found.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="UTF16Pos.Result">
+<short>
+Character index where the SearchForText starts in SearchInText, or 0 when not 
+found.
+</short>
+</element>
+<element name="UTF16Pos.SearchForText">
+<short>UTF-16-encoded value to locate in SearchInText.</short>
+</element>
+<element name="UTF16Pos.SearchInText">
+<short>UTF-16-encoded value searched in the routine.</short>
+</element>
+<element name="UTF16Pos.StartPos">
+<short>
+Optional starting position (in UTF-16 code points, not in words).
+</short>
+</element>
+
+<element name="UTF16CharacterToUnicode">
+<short>
+Converts ordinal values for UTF-16 code points in p to its Unicode equivalent.
+</short>
+<descr>
+<p>
+UTF16CharacterToUnicode converts 16-bit values in p to the equivalent Unicode 
+value.
+</p>
+<p>
+Unpaired surrogates are invalid in any UTFs. These include any value in the 
+range $D800..$DBFF not followed by a value in the range $DC00..$DFFF, or any 
+value in the range $DC00..$DFFF not preceded by a value in the range 
+$D800..$DBFF.
+</p>
+<p>
+UTF16CharacterToUnicode ensures that ordinal value(s) in the reserved 
+range(s) are converted to the correct Unicode value. CharLen is updated to 
+reflect whether the values in p are a character represented by a single 
+UTF-16 code point (1), or requires 2 code points for the surrogate pair (2). 
+It is set to 0 when p contains an invalid UTF-16 code point.
+</p>
+<p>
+The return value contains the Cardinal value for the Unicode code point, or 0 
+when p contains an invalid UTF-16 code point.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="UTF16CharacterToUnicode.Result">
+<short>Unicode code point for the values in p.</short>
+</element>
+<element name="UTF16CharacterToUnicode.p">
+<short>UTF-16 code points examined and converted in the routine.</short>
+</element>
+<element name="UTF16CharacterToUnicode.CharLen">
+<short>Number of UTF-16 code points for the converted character.</short>
+</element>
+
+<element name="UnicodeToUTF16">
+<short>
+Converts a Unicode character value to its UTF-16 equivalent as a WideString 
+value.
+</short>
+<descr>
+<p>
+Cardinal values below $10000 result in a single WideChar code value for the
+code point. Other cardinal values result in 2 WideChar values in the result to
+represent the UTF-16 code point.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="UnicodeToUTF16.Result">
+<short>WideString value with UTF-16 code point the Unicode character.</short>
+</element>
+<element name="UnicodeToUTF16.u">
+<short>Unicode character value converted in the routine.</short>
+</element>
+
+<element name="IsUTF16CharValid">
+<short>
+Returns <b>True</b> if the specified values are a valid UTF-16 character 
+(codepoint).
+</short>
+<descr>
+<p>
+Based on the specification defined by the Unicode consortium, at:
+</p>
+<p>
+<url href="https://unicode.org/faq/utf_bom.html#utf16-7">
+https://unicode.org/faq/utf_bom.html#utf16-7
+</url>
+</p>
+<p>
+Q: Are there any 16-bit values that are invalid?
+</p>
+<p>
+A: Unpaired surrogates are invalid in UTFs. These include any value in the
+range D800 to DBFF not followed by a value in the range DC00 to DFFF, or
+any value in the range DC00 to DFFF not preceded by a value in the range
+D800 to DBFF. [AF]
+</p>
+<p>
+If ANextChar is set to #0 there is no next character.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="IsUTF16CharValid.Result">
+<short>
+Returns False if AChar is #0 or AChar and ANextChar are unpaired surrogates.
+</short>
+</element>
+<element name="IsUTF16CharValid.AChar">
+<short>
+First UTF-16 code examined in the method.
+</short>
+</element>
+<element name="IsUTF16CharValid.ANextChar">
+<short>
+Next UTF-16 code examined in the method.
+</short>
+</element>
+
+<element name="IsUTF16StringValid">
+<short>
+Determines if the specified WideString contains valid UTF-16 code points.
+</short>
+<descr>
+<p>
+Examines the content in AWideStr for valid UTF-16 characters. Calls
+IsUTF16CharValid for consecutive code point pairs.
+</p>
+</descr>
+<seealso/>
+</element>
+<element name="IsUTF16StringValid.Result">
+<short>
+True if the specified WideString contains valid UTF-16 code points.
+</short>
+</element>
+<element name="IsUTF16StringValid.AWideStr">
+<short>WideString examined in the routine.</short>
+</element>
+
+<element name="Utf16StringReplace">
+<short>
+Replaces a pattern in a Unicode string with another Unicode pattern.
+</short>
+<descr>
+<p>
+Same as <var>SysUtil.StringReplace</var> but for WideStrings and 
+UnicodeStrings, since it is not available in FPC yet.
+</p>
+</descr>
+<seealso>
+<link id="#rtl.sysutils.StringReplace">StringReplace</link>
+<link id="#rtl.sysutils.TReplaceFlags">TReplaceFlags</link>
+</seealso>
+</element>
+<element name="Utf16StringReplace.Result">
+<short>
+Updated value for Unicode string after pattern replacement(s).
+</short>
+</element>
+<element name="Utf16StringReplace.S">
+<short>
+Unicode string value examined in the routine.
+</short>
+</element>
+<element name="Utf16StringReplace.OldPattern">
+<short>
+Unicode string with the pattern to locate in S.
+</short>
+</element>
+<element name="Utf16StringReplace.NewPattern">
+<short>
+Unicode string with the pattern used to replace the old pattern in S.
+</short>
+</element>
+<element name="Utf16StringReplace.Flags">
+<short>
+Set of replacement flags applied in the routine.
+</short>
+</element>
+<element name="Utf16StringReplace.Count">
+<short>
+Number of replacements performed in the routine.
+</short>
+</element>
+
+<element name="UnicodeLowercase">
+<short>
+Converts the specified Unicode (UTF-16) codepoint to its lowercase equivalent.
+</short>
+<descr>
+<p>
+<var>UnicodeLowercase</var> ensures the character (16-bit codepoint) is 
+converted to lowercase using the case conversion logic for the UTF-16 encoding. 
+Characters in the following Unicode blocks are handled:
+</p>
+<dl>
+<dt>$0041..$005A</dt>
+<dd>Capital letters in the C0 Latin block</dd>
+<dt>$00C0..$00DE</dt>
+<dd>Capital letters in the C1 Latin-1 Supplement block</dd>
+<dt>$0100..$024E</dt>
+<dd>Capital letters in the Latin Extended-A block</dd>
+<dt>$0386..$03AB</dt>
+<dd>Capital letters in the Greek and Coptic block</dd>
+<dt>$03D8..$042F</dt>
+<dd>Archaic letters in the Greek and Coptic block</dd>
+<dt>$0460..$0512</dt>
+<dd>Historic letters in Cyrillic block</dd>
+<dt>$0531..$0556</dt>
+<dd>Capital letters in the Armenian block</dd>
+<dt>$10A0..$10C5</dt>
+<dd>Capital letters in the Georgian block</dd>
+<dt>$1E00..$1FFC</dt>
+<dd>Capital letters in the Latin Extended Additional block</dd>
+<dt>$2126..$2183</dt>
+<dd>Characters in the Letter-like Symbols block</dd>
+<dt>$24B6..$24CF</dt>
+<dd>Parenthesized Latin letters in the Enclosed Alphanumerics block</dd>
+<dt>$2C00..$2C2E</dt>
+<dd>Capital letters in the Glagolitic block (precursor of Cyrillic)</dd>
+<dt>$2C60..$2CE2</dt>
+<dd>Capital letters in the Latin Extended-C block</dd>
+<dt>$FF21..$FF3A</dt>
+<dd>ASCII variants in the Halfwidth and Fullwidth Forms block</dd>
+</dl>
+</descr>
+<seealso/>
+</element>
+<element name="UnicodeLowercase.Result">
+<short>
+Cardinal value with the lowercase equivalent for <var>u</var>, or the value in 
+<var>u</var> when conversion is not needed.
+</short>
+</element>
+<element name="UnicodeLowercase.u">
+<short>
+Cardinal value for the Unicode character converted to lowercase in the routine.
+</short>
+</element>
+
+<element name="UTF8LowerCaseViaTables">
+<short>
+Converts a UTF-8-encoded string to lowercase UTF-8 values using internal 
+case tables.
+</short>
+<descr/>
+<seealso/>
+</element>
+<element name="UTF8LowerCaseViaTables.Result">
+<short>String with the lowercase UTF-8 values for s.</short>
+</element>
+<element name="UTF8LowerCaseViaTables.s">
+<short>
+String with UTF-8 values converted to lowercase UTF-8 in the routine.
+</short>
+</element>
+
+</module>
+<!-- lazutf16 -->
+</package>
+</fpdoc-descriptions>

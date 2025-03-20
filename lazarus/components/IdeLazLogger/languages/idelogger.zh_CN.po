@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: X\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: ACTom <i@actom.me>\n"
+"Language-Team: Lazarus\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: idelogger.ideloggerapply
+msgid "&Apply"
+msgstr "应用(&A)"
+
+#: idelogger.ideloggercaption
+msgid "Logging"
+msgstr "记录"
+
+#: idelogger.ideloggermenucaption
+msgid "Logging ..."
+msgstr "记录 ..."
+

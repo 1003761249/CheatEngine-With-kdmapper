@@ -1,0 +1,46 @@
+#
+# Makefile.fpc for DBase FCL db units
+#
+
+[package]
+main=fcl-db
+
+[target]
+units=dbf
+examples=testdbf
+
+[require]
+packages=fcl-base
+
+[compiler]
+options=-S2 -Sh
+
+[default]
+fpcdir=../../../..
+
+[install]
+fpcpackage=y
+units=dbf_collate dbf_common dbf_cursor dbf_dbffile dbf_fields \
+      dbf_idxcur dbf_idxfile dbf_lang dbf_memo dbf_parser dbf_pgfile \
+      dbf_prscore dbf_prsdef dbf_prssupp dbf_str
+
+[clean]
+units=dbf_collate dbf_common dbf_cursor dbf_dbffile dbf_fields \
+      dbf_idxcur dbf_idxfile dbf_lang dbf_memo dbf_parser dbf_pgfile \
+      dbf_prscore dbf_prsdef dbf_prssupp dbf_str
+
+[prerules]
+# dbf_Wtil is needed on all targets except windows
+ifneq ($(OS_TARGET),win32)
+ifneq ($(OS_TARGET),win64)
+ifneq ($(OS_TARGET),wince)
+
+INSTALL_UNITS+=dbf_wtil
+CLEAN_UNITS+=dbf_wtil
+
+endif
+endif
+endif
+
+[rules]
+.NOTPARALLEL:

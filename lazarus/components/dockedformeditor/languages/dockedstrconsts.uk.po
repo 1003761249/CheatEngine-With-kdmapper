@@ -1,0 +1,190 @@
+# lxlalexlxl <lxlalexlxl@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-06-11 11:25+0300\n"
+"Last-Translator: lxlalexlxl <lxlalexlxl@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: dockedstrconsts.sallowsizingcaption
+msgid "Allow size changing"
+msgstr "Дозволити змінювання розмірів"
+
+#: dockedstrconsts.sallowsizinghint
+msgid "Grips can change size in Anchor Editor"
+msgstr "Змінювати розмір \"ручками\" в редакторі якорів"
+
+#: dockedstrconsts.sanchorbottomcolorcaption
+msgid "Bottom Anchor"
+msgstr "Нижній якір"
+
+#: dockedstrconsts.sanchorcontrolbordercaption
+msgid "Border Around Control"
+msgstr "Рамка навколо елемента керування"
+
+#: dockedstrconsts.sanchorcontrolcolorcaption
+msgid "Control Background"
+msgstr "Тло елемента керування"
+
+#: dockedstrconsts.sanchorleftcolorcaption
+msgid "Left Anchor"
+msgstr "Лівий якір"
+
+#: dockedstrconsts.sanchorrightcolorcaption
+msgid "Right Anchor"
+msgstr "Правий якір"
+
+#: dockedstrconsts.sanchors
+msgid "Anchors"
+msgstr "Якорі"
+
+#: dockedstrconsts.sanchortabvisiblecaption
+msgid "Show Anchors Tab"
+msgstr "Показати вкладку Якорі"
+
+#: dockedstrconsts.sanchortabvisiblehint
+msgid "Show Anchor Editor"
+msgstr "Показати редактор якорів"
+
+#: dockedstrconsts.sanchortargetcolorcaption
+msgid "Anchor Target"
+msgstr "Ціль якоря"
+
+#: dockedstrconsts.sanchortopcolorcaption
+msgid "Top Anchor"
+msgstr "Верхній якір"
+
+#: dockedstrconsts.sargumentoutofrange
+msgctxt "dockedstrconsts.sargumentoutofrange"
+msgid "Argument out of range."
+msgstr "Аргумент поза діапазоном."
+
+#: dockedstrconsts.sattachcontrol
+msgid "Attach Control"
+msgstr "Приєднати елемент керування"
+
+#: dockedstrconsts.sattachpoint
+msgid "Attach Control Sides"
+msgstr "Приєднати боки елемента керування"
+
+#: dockedstrconsts.sattachside
+msgid "Attach Control Side"
+msgstr "Приєднати бік елемента керування"
+
+#: dockedstrconsts.scaptiondockedformeditor
+msgid "Docked Form Editor"
+msgstr "Редактор стиковуваних форм"
+
+#: dockedstrconsts.scapturedistancecaption
+msgid "Capture Distance"
+msgstr "Відстань захоплення"
+
+#: dockedstrconsts.scapturedistancehint
+msgid "Minimal distance to capture a control with mouse"
+msgstr "Найменша відстань для захоплення елемента керування мишею"
+
+#: dockedstrconsts.scirculardependency
+msgid "This will create a circular dependency."
+msgstr "Це створить циклічну залежність."
+
+#: dockedstrconsts.scode
+msgctxt "dockedstrconsts.scode"
+msgid "Code"
+msgstr "Код"
+
+#: dockedstrconsts.scolorscaption
+msgid "Colors"
+msgstr "Кольори"
+
+#: dockedstrconsts.sdesigner
+msgctxt "dockedstrconsts.sdesigner"
+msgid "Form"
+msgstr "Форма"
+
+#: dockedstrconsts.sdetachcontrol
+msgid "Detach Control"
+msgstr "Від'єднати елемент керування"
+
+#: dockedstrconsts.sdetachpoint
+msgid "Detach Control Sides"
+msgstr "Від'єднати боки елемента керування"
+
+#: dockedstrconsts.sdetachside
+msgid "Detach Control Side"
+msgstr "Від'єднати бік елемента керування"
+
+#: dockedstrconsts.sforcerefreshingcaption
+msgid "Force Refreshing At Sizing"
+msgstr "Примусове оновлення при зміні розміру"
+
+#: dockedstrconsts.sforcerefreshinghint
+msgid "Force refreshing form when user is sizing it"
+msgstr "Примусове оновлення форми, коли користувач змінює її розміри"
+
+#: dockedstrconsts.smouseborderfactorcaption
+msgid "Mouse cursor factor for BorderSpacing property"
+msgstr "Коефіцієнт вказівника миші для властивості BorderSpacing"
+
+#: dockedstrconsts.smouseborderfactorhint
+msgid "Mouse cursor factor is used to set small values of BorderSpacing property more precisely"
+msgstr "Коефіцієнт дії вказівника миші для точнішого  встановлення малих значень властивості BorderSpacing"
+
+#: dockedstrconsts.sresizercolorcaption
+msgid "Resizer Color"
+msgstr "Колір смуг змінення розміру"
+
+#: dockedstrconsts.sresizercolorhint
+msgid "Color of resizer bars"
+msgstr "Колір смуг змінення розміру"
+
+#: dockedstrconsts.stabpositionbottom
+msgid "Bottom"
+msgstr "Внизу"
+
+#: dockedstrconsts.stabpositioncaption
+msgid "Tab Position"
+msgstr "Положення вкладок"
+
+#: dockedstrconsts.stabpositionhint
+msgid "Position of Code, Form, Anchors tabs"
+msgstr "Розташування вкладок Код, Форма, Якорі"
+
+#: dockedstrconsts.stabpositionleft
+msgid "Left"
+msgstr "Ліворуч"
+
+#: dockedstrconsts.stabpositionright
+msgid "Right"
+msgstr "Праворуч"
+
+#: dockedstrconsts.stabpositiontop
+msgid "Top"
+msgstr "Вгорі"
+
+#: dockedstrconsts.streataligncaption
+msgid "Automatically treat Align properties"
+msgstr "Автоматично замінити властивості Align"
+
+#: dockedstrconsts.streatalignhint
+msgid "Automatically replace Align properties with appropriate Anchors"
+msgstr "Автоматично замінювати властивість Align відповідними якорями"
+
+#: dockedstrconsts.streatbordercaption
+msgid "Automatically treat BorderSpacing properties"
+msgstr "Автоматично замінити властивості BorderSpacing"
+
+#: dockedstrconsts.streatborderhint
+msgid "Automatically replace BorderSpacing.Around properties of controls and adapt BorderSpacing.Left/Right/Top/Bottom if needed"
+msgstr "Автоматично замінювати властивість елементів керування BorderSpacing.Around і, за потреби, налаштовувати BorderSpacing.Left/Right/Top/Bottom"
+
+#: dockedstrconsts.swarningcaption
+msgid "Warning"
+msgstr "Попередження"
+

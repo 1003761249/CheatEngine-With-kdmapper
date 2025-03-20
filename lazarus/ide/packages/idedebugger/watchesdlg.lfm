@@ -1,0 +1,362 @@
+object WatchesDlg: TWatchesDlg
+  Left = 299
+  Height = 240
+  Top = 355
+  Width = 539
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 199
+  ActiveControl = tvWatches
+  BorderStyle = bsSizeToolWin
+  Caption = 'Watch list'
+  ClientHeight = 240
+  ClientWidth = 539
+  KeyPreview = True
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  LCLVersion = '2.3.0.0'
+  object tvWatches: TDbgTreeView
+    Left = 0
+    Height = 214
+    Top = 26
+    Width = 334
+    Align = alClient
+    DefaultText = 'Node'
+    DragMode = dmAutomatic
+    DragType = dtVCL
+    Header.AutoSizeIndex = 0
+    Header.Columns = <    
+      item
+        Position = 0
+      end    
+      item
+        Position = 2
+      end    
+      item
+        MaxWidth = 300
+        Options = [coAllowClick, coDraggable, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coAllowFocus, coEditable]
+        Position = 1
+      end>
+    Header.Options = [hoColumnResize, hoDrag, hoShowSortGlyphs, hoVisible]
+    PopupMenu = mnuPopup
+    TabOrder = 0
+    TreeOptions.AutoOptions = [toAutoScrollOnExpand, toAutoSort, toAutoTristateTracking, toAutoDeleteMovedNodes, toAutoChangeScale]
+    TreeOptions.MiscOptions = [toFullRepaintOnResize, toInitOnSave, toWheelPanning]
+    TreeOptions.PaintOptions = [toShowButtons, toShowDropmark, toShowRoot, toShowTreeLines, toThemeAware, toUseBlendedImages, toUseExplorerTheme]
+    TreeOptions.SelectionOptions = [toFullRowSelect, toMultiSelect, toRightClickSelect]
+    OnChange = tvWatchesChange
+    OnDragOver = tvWatchesDragOver
+    OnDragDrop = tvWatchesDragDrop
+    OnFocusChanged = tvWatchesFocusChanged
+    OnNodeDblClick = tvWatchesNodeDblClick
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 539
+    Caption = 'ToolBar1'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    object ToolButtonPower: TToolButton
+      Left = 1
+      Top = 2
+      Action = actPower
+      AllowAllUp = True
+      Style = tbsCheck
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton2'
+      Style = tbsDivider
+    end
+    object ToolButtonEnable: TToolButton
+      Left = 52
+      Top = 2
+      Action = actEnableSelected
+    end
+    object ToolButtonDisable: TToolButton
+      Left = 75
+      Top = 2
+      Action = actDisableSelected
+    end
+    object ToolButtonTrash: TToolButton
+      Left = 98
+      Top = 2
+      Action = actDeleteSelected
+    end
+    object ToolButton6: TToolButton
+      Left = 121
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton6'
+      Style = tbsDivider
+    end
+    object ToolButtonEnableAll: TToolButton
+      Left = 126
+      Top = 2
+      Action = actEnableAll
+    end
+    object ToolButtonDisableAll: TToolButton
+      Left = 149
+      Top = 2
+      Action = actDisableAll
+    end
+    object ToolButtonTrashAll: TToolButton
+      Left = 172
+      Top = 2
+      Action = actDeleteAll
+    end
+    object ToolButton10: TToolButton
+      Left = 195
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton10'
+      Style = tbsDivider
+    end
+    object ToolButtonAdd: TToolButton
+      Left = 29
+      Top = 2
+      Action = actAddWatch
+    end
+    object ToolButtonProperties: TToolButton
+      Left = 223
+      Top = 2
+      Action = actProperties
+    end
+    object ToolButtonInspectView: TToolButton
+      Left = 200
+      Top = 2
+      Action = actToggleInspectSite
+      Style = tbsCheck
+    end
+    object ToolButton1: TToolButton
+      Left = 246
+      Height = 22
+      Top = 2
+      ShowCaption = False
+      Style = tbsDivider
+    end
+    object btnShowDataAddr: TToolButton
+      Left = 251
+      Top = 2
+      Caption = '$^'
+      OnClick = btnShowDataAddrClick
+      Style = tbsCheck
+    end
+  end
+  object InspectSplitter: TSplitter
+    Left = 334
+    Height = 214
+    Top = 26
+    Width = 5
+    Align = alRight
+    ResizeAnchor = akRight
+    Visible = False
+  end
+  object nbInspect: TNotebook
+    Left = 339
+    Height = 214
+    Top = 26
+    Width = 200
+    PageIndex = 0
+    Align = alRight
+    TabOrder = 3
+    TabStop = True
+    object Page1: TPage
+      object InspectMemo: TMemo
+        Left = 0
+        Height = 199
+        Top = 15
+        Width = 200
+        Align = alClient
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WantReturns = False
+      end
+      object InspectLabel: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 200
+        Align = alTop
+        Caption = '...'
+        ParentColor = False
+      end
+    end
+  end
+  object mnuPopup: TPopupMenu
+    Left = 100
+    Top = 96
+    object popAdd: TMenuItem
+      Action = actAddWatch
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object popProperties: TMenuItem
+      Action = actProperties
+    end
+    object popEnabled: TMenuItem
+      Action = actToggleCurrentEnable
+    end
+    object popDelete: TMenuItem
+      Action = actDeleteSelected
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object popDisableAll: TMenuItem
+      Action = actDisableAll
+    end
+    object popEnableAll: TMenuItem
+      Action = actEnableAll
+    end
+    object popDeleteAll: TMenuItem
+      Action = actDeleteAll
+    end
+    object N3: TMenuItem
+      Caption = '-'
+    end
+    object popInspect: TMenuItem
+      Action = actInspect
+    end
+    object popEvaluate: TMenuItem
+      Action = actEvaluate
+    end
+    object popAddWatchPoint: TMenuItem
+      Action = actAddWatchPoint
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object popCopyName: TMenuItem
+      Action = actCopyName
+    end
+    object popCopyValue: TMenuItem
+      Action = actCopyValue
+    end
+    object menuCopyRawValue: TMenuItem
+      Action = actCopyRAWValue
+    end
+    object menuCopyAddr: TMenuItem
+      Action = actCopyAddr
+    end
+    object menuCopyEntry: TMenuItem
+      Action = actCopyEntry
+    end
+    object menuCopyAll: TMenuItem
+      Action = actCopyAll
+    end
+  end
+  object ActionList1: TActionList
+    Left = 184
+    Top = 88
+    object actPower: TAction
+      Caption = 'actPower'
+      Checked = True
+      OnExecute = actPowerExecute
+    end
+    object actToggleCurrentEnable: TAction
+      Caption = 'actToggleCurrentEnable'
+      OnExecute = popEnabledClick
+    end
+    object actAddWatch: TAction
+      Caption = 'actAddWatch'
+      OnExecute = popAddClick
+      SecondaryShortCuts.Strings = (
+        'ins'
+      )
+      ShortCut = 16449
+    end
+    object actEnableSelected: TAction
+      Caption = 'actEnableSelected'
+      OnExecute = actEnableSelectedExecute
+    end
+    object actDisableSelected: TAction
+      Caption = 'actDisableSelected'
+      OnExecute = actDisableSelectedExecute
+    end
+    object actDeleteSelected: TAction
+      Caption = 'actDeleteSelected'
+      OnExecute = popDeleteClick
+      SecondaryShortCuts.Strings = (
+        'del'
+      )
+      ShortCut = 16452
+    end
+    object actEnableAll: TAction
+      Caption = 'actEnableAll'
+      OnExecute = popEnableAllClick
+    end
+    object actDisableAll: TAction
+      Caption = 'actDisableAll'
+      OnExecute = popDisableAllClick
+    end
+    object actDeleteAll: TAction
+      Caption = 'actDeleteAll'
+      OnExecute = popDeleteAllClick
+    end
+    object actProperties: TAction
+      Caption = 'actProperties'
+      OnExecute = popPropertiesClick
+      SecondaryShortCuts.Strings = (
+        'enter'
+      )
+      ShortCut = 16453
+    end
+    object actAddWatchPoint: TAction
+      Caption = 'actAddWatchPoint'
+      OnExecute = actAddWatchPointExecute
+    end
+    object actInspect: TAction
+      Caption = 'actInspect'
+      OnExecute = actInspectExecute
+    end
+    object actEvaluate: TAction
+      Caption = 'actEvaluate'
+      OnExecute = actEvaluateExecute
+    end
+    object actToggleInspectSite: TAction
+      Caption = 'actToggleInspectSite'
+      OnExecute = actToggleInspectSiteExecute
+    end
+    object actCopyName: TAction
+      Category = 'copy'
+      Caption = 'actCopyName'
+      OnExecute = actCopyNameExecute
+    end
+    object actCopyValue: TAction
+      Category = 'copy'
+      Caption = 'actCopyValue'
+      OnExecute = actCopyValueExecute
+      ShortCut = 24643
+    end
+    object actCopyRAWValue: TAction
+      Category = 'copy'
+      Caption = 'actCopyRAWValue'
+      OnExecute = actCopyRAWValueExecute
+      ShortCut = 16451
+    end
+    object actCopyAddr: TAction
+      Category = 'copy'
+      Caption = 'actCopyAddr'
+      OnExecute = actCopyAddrExecute
+      ShortCut = 49219
+    end
+    object actCopyEntry: TAction
+      Category = 'copy'
+      Caption = 'actCopyEntry'
+      OnExecute = actCopyEntryExecute
+    end
+    object actCopyAll: TAction
+      Category = 'copy'
+      Caption = 'actCopyAll'
+      OnExecute = actCopyAllExecute
+    end
+  end
+end

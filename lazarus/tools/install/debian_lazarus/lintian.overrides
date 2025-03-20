@@ -1,0 +1,3 @@
+# ignore .o files in /usr/share
+lazarus-project: arch-dependent-file-in-usr-share
+lazarus-project: missing-dependency-on-libc

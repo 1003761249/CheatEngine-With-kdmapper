@@ -1,0 +1,423 @@
+object ImageListEditorDlg: TImageListEditorDlg
+  Left = 453
+  Height = 455
+  Top = 144
+  Width = 579
+  BorderIcons = [biSystemMenu, biHelp]
+  Caption = 'ImagesList Editor'
+  ClientHeight = 455
+  ClientWidth = 579
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.3.0.0'
+  object GroupBoxR: TGroupBox
+    AnchorSideLeft.Control = GroupBoxL
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtnPanel
+    Left = 372
+    Height = 411
+    Top = 6
+    Width = 201
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    Caption = 'Selected Image'
+    ClientHeight = 391
+    ClientWidth = 197
+    TabOrder = 1
+    object LabelTransparent: TLabel
+      AnchorSideLeft.Control = RadioGroup
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = RadioGroup
+      Left = 93
+      Height = 15
+      Top = 275
+      Width = 96
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      Caption = 'Transparent Color:'
+    end
+    object Preview: TScrollBox
+      AnchorSideLeft.Control = GroupBoxR
+      AnchorSideTop.Control = GroupBoxR
+      AnchorSideRight.Control = GroupBoxR
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = RadioGroup
+      Left = 6
+      Height = 263
+      Top = 6
+      Width = 185
+      HorzScrollBar.Increment = 1
+      HorzScrollBar.Page = 1
+      HorzScrollBar.Smooth = True
+      HorzScrollBar.Tracking = True
+      VertScrollBar.Increment = 1
+      VertScrollBar.Page = 1
+      VertScrollBar.Smooth = True
+      VertScrollBar.Tracking = True
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Around = 6
+      Color = clDefault
+      ParentColor = False
+      TabOrder = 0
+    end
+    object RadioGroup: TRadioGroup
+      AnchorSideLeft.Control = GroupBoxR
+      AnchorSideBottom.Control = GroupBoxR
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 110
+      Top = 275
+      Width = 81
+      Anchors = [akLeft, akBottom]
+      AutoFill = True
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'Adjustment'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 4
+      ChildSizing.VerticalSpacing = 2
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 90
+      ClientWidth = 77
+      Enabled = False
+      ItemIndex = 0
+      Items.Strings = (
+        'None'
+        'Stretch'
+        'Crop'
+        'Center'
+      )
+      OnClick = ColorBoxTransparentClick
+      TabOrder = 1
+    end
+    object ColorBoxTransparent: TColorBox
+      AnchorSideLeft.Control = LabelTransparent
+      AnchorSideTop.Control = LabelTransparent
+      AnchorSideTop.Side = asrBottom
+      Left = 93
+      Height = 22
+      Top = 294
+      Width = 96
+      Selected = clFuchsia
+      Style = [cbStandardColors, cbExtendedColors, cbIncludeDefault, cbCustomColor, cbPrettyNames]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Enabled = False
+      ItemHeight = 16
+      OnChange = ColorBoxTransparentClick
+      TabOrder = 2
+    end
+  end
+  object GroupBoxL: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = BtnPanel
+    Left = 6
+    Height = 411
+    Top = 6
+    Width = 360
+    Anchors = [akTop, akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Images'
+    ClientHeight = 391
+    ClientWidth = 356
+    TabOrder = 0
+    object BtnAdd: TButton
+      Tag = 1
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = ImageListBox
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 6
+      Width = 57
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      Caption = 'Add...'
+      OnClick = BtnAddClick
+      TabOrder = 0
+    end
+    object BtnClear: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnDelete
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 180
+      Width = 53
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Clear'
+      OnClick = BtnClearClick
+      TabOrder = 6
+    end
+    object BtnDelete: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnReplaceAll
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 151
+      Width = 59
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = '&Delete'
+      OnClick = BtnDeleteClick
+      TabOrder = 5
+    end
+    object BtnMoveUp: TButton
+      Tag = -1
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnClear
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 209
+      Width = 74
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Move Up'
+      OnClick = BtnMoveUpDownClick
+      TabOrder = 7
+    end
+    object BtnMoveDown: TButton
+      Tag = 1
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnMoveUp
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 238
+      Width = 90
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Move Down'
+      OnClick = BtnMoveUpDownClick
+      TabOrder = 8
+    end
+    object BtnSave: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnMoveDown
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 267
+      Width = 59
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Save...'
+      OnClick = BtnSaveClick
+      TabOrder = 9
+    end
+    object btnSaveAll: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnSave
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 296
+      Width = 76
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Save All...'
+      OnClick = btnSaveAllClick
+      TabOrder = 10
+    end
+    object BtnReplace: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnAddSliced
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 93
+      Width = 76
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = '&Replace...'
+      OnClick = BtnReplaceClick
+      TabOrder = 3
+    end
+    object ImageListBox: TListBox
+      AnchorSideLeft.Control = GroupBoxL
+      AnchorSideTop.Control = GroupBoxL
+      AnchorSideBottom.Control = GroupBoxL
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 379
+      Top = 6
+      Width = 186
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Around = 6
+      ItemHeight = 0
+      OnDrawItem = ImageListBoxDrawItem
+      OnSelectionChange = ImageListBoxSelectionChange
+      Options = []
+      Style = lbOwnerDrawFixed
+      TabOrder = 11
+    end
+    object btnAddNewResolution: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnSaveAll
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 325
+      Width = 138
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Add new resolution...'
+      OnClick = btnAddNewResolutionClick
+      TabOrder = 12
+    end
+    object BtnReplaceAll: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnReplace
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 122
+      Width = 152
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = '&Replace all resolutions...'
+      OnClick = BtnReplaceClick
+      TabOrder = 4
+    end
+    object BtnAddMoreResolutions: TButton
+      Tag = 1
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnAdd
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 35
+      Width = 149
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Add more resolutions...'
+      OnClick = BtnAddClick
+      TabOrder = 1
+    end
+    object btnDeleteResolution: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnAddNewResolution
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 354
+      Width = 127
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Delete resolution ...'
+      OnClick = btnDeleteResolutionClick
+      TabOrder = 13
+    end
+    object BtnAddSliced: TButton
+      AnchorSideLeft.Control = ImageListBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnAddMoreResolutions
+      AnchorSideTop.Side = asrBottom
+      Left = 198
+      Height = 25
+      Top = 64
+      Width = 90
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 6
+      Caption = 'Add sliced...'
+      OnClick = BtnAddSlicedClick
+      TabOrder = 2
+    end
+  end
+  object BtnPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 423
+    Width = 567
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 2
+    ShowBevel = False
+  end
+  object ImageList: TImageList
+    Left = 84
+    Top = 211
+  end
+  object OpenDialog: TOpenPictureDialog
+    FilterIndex = 0
+    Options = [ofAllowMultiSelect, ofFileMustExist, ofEnableSizing, ofViewDetail, ofAutoPreview]
+    Left = 84
+    Top = 103
+  end
+  object SaveDialog: TSavePictureDialog
+    FilterIndex = 0
+    Options = [ofEnableSizing, ofViewDetail, ofAutoPreview]
+    Left = 84
+    Top = 159
+  end
+end

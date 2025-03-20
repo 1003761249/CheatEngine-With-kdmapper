@@ -1,0 +1,143 @@
+object frShowHint: TfrShowHint
+  Left = 0
+  Height = 198
+  Top = 0
+  Width = 559
+  AutoSize = True
+  ClientHeight = 198
+  ClientWidth = 559
+  TabOrder = 0
+  DesignLeft = 388
+  DesignTop = 227
+  object pnBase: TPanel
+    Left = 0
+    Height = 178
+    Top = 10
+    Width = 559
+    Align = alClient
+    BorderSpacing.Top = 10
+    BevelInner = bvLowered
+    ClientHeight = 178
+    ClientWidth = 559
+    TabOrder = 0
+    object pnDescription: TPanel
+      Left = 2
+      Height = 73
+      Top = 24
+      Width = 555
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 73
+      ClientWidth = 555
+      ParentFont = False
+      TabOrder = 0
+      object mDescription: TMemo
+        AnchorSideLeft.Control = pnDescription
+        AnchorSideTop.Control = lbDescription
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = pnDescription
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Side = asrBottom
+        Left = 20
+        Height = 51
+        Top = 19
+        Width = 528
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 20
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 7
+        BorderSpacing.Bottom = 7
+        BorderStyle = bsNone
+        Lines.Strings = (
+          'aaaaaaaaaa'
+          'bbbbbbbb'
+        )
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+      object lbDescription: TLabel
+        AnchorSideLeft.Control = pnDescription
+        AnchorSideTop.Control = pnDescription
+        Left = 2
+        Height = 15
+        Top = 2
+        Width = 67
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 2
+        Caption = 'Description:'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnLicense: TPanel
+      Left = 2
+      Height = 79
+      Top = 97
+      Width = 555
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 79
+      ClientWidth = 555
+      ParentFont = False
+      TabOrder = 1
+      object mLicense: TMemo
+        AnchorSideLeft.Control = pnLicense
+        AnchorSideTop.Control = lbLicense
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = pnLicense
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Side = asrBottom
+        Left = 20
+        Height = 51
+        Top = 19
+        Width = 528
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 20
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 7
+        BorderStyle = bsNone
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+      object lbLicense: TLabel
+        AnchorSideLeft.Control = pnLicense
+        AnchorSideTop.Control = pnLicense
+        Left = 2
+        Height = 15
+        Top = 2
+        Width = 44
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 2
+        Caption = 'License:'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnPackageName: TPanel
+      Left = 2
+      Height = 22
+      Top = 2
+      Width = 555
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Package Name'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object pnBuffer: TPanel
+    Left = 0
+    Height = 10
+    Top = 188
+    Width = 559
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    Visible = False
+  end
+end

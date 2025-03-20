@@ -1,0 +1,13 @@
+{
+  "Cursors" : {
+    "Category" : "General",
+    "Keywords" : [
+      "Cursor",
+      "crHourGlass",
+      "ctSQLWait",
+      "crNoDrop",
+      "crDrag"
+    ],
+    "Description" : "Demonstrates changing and using Cursor to display various states. Includes Dragging cursors, Drop and NoDrop, HourGlass and custom cursors."
+  }
+}

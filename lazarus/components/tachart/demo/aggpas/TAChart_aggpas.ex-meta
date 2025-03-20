@@ -1,0 +1,5 @@
+{ "TAChart_aggpas" : {
+   "Category" : "TAChart",
+   "Keywords" : ["TAChart","aggpas","Needs Work"],
+   "Description" : "Requires the package tachartaggpas to be installed before loading.\n\nNote: Text rendering issues in cocoa. In Linux, make sure that FONT_DIR indicates the directory with your ttf fonts."}
+}

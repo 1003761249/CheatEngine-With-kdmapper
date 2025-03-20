@@ -1,0 +1,1812 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: X-1.9\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: ACTom <i@actom.me>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: objinspstrconsts.cactionlisteditorallcategory
+msgid "(All)"
+msgstr "(所有)"
+
+#: objinspstrconsts.cactionlisteditordatabasecategory
+msgid "Database"
+msgstr "数据库"
+
+#: objinspstrconsts.cactionlisteditordeleteaction
+msgctxt "objinspstrconsts.cactionlisteditordeleteaction"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.cactionlisteditordeleteactionhint
+msgid "Delete Action"
+msgstr "删除动作"
+
+#: objinspstrconsts.cactionlisteditordialogcategory
+msgctxt "objinspstrconsts.cactionlisteditordialogcategory"
+msgid "Dialog"
+msgstr "对话框"
+
+#: objinspstrconsts.cactionlisteditoreditcategory
+msgctxt "objinspstrconsts.cactionlisteditoreditcategory"
+msgid "Edit"
+msgstr "编辑"
+
+#: objinspstrconsts.cactionlisteditorfilecategory
+msgid "File"
+msgstr "文件"
+
+#: objinspstrconsts.cactionlisteditorhelpcategory
+msgctxt "objinspstrconsts.cactionlisteditorhelpcategory"
+msgid "Help"
+msgstr "帮助"
+
+#: objinspstrconsts.cactionlisteditormovedownaction
+msgctxt "objinspstrconsts.cactionlisteditormovedownaction"
+msgid "Move Down"
+msgstr "向下移动"
+
+#: objinspstrconsts.cactionlisteditormoveupaction
+msgctxt "objinspstrconsts.cactionlisteditormoveupaction"
+msgid "Move Up"
+msgstr "向上移动"
+
+#: objinspstrconsts.cactionlisteditornewaction
+msgid "New Action"
+msgstr "新动作"
+
+#: objinspstrconsts.cactionlisteditornewstdaction
+msgid "New Standard Action"
+msgstr "新标准动作"
+
+#: objinspstrconsts.cactionlisteditorpaneldescrriptions
+msgid "Panel Descriptions"
+msgstr "面板描述"
+
+#: objinspstrconsts.cactionlisteditorpaneltoolbar
+msgid "Toolbar"
+msgstr "工具栏"
+
+#: objinspstrconsts.cactionlisteditorsearchcategory
+msgid "Search"
+msgstr "查找"
+
+#: objinspstrconsts.cactionlisteditorunknowncategory
+msgid "(Unknown)"
+msgstr "(未知)"
+
+#: objinspstrconsts.cgcheckduplicate
+msgid "On Add, Check for Duplicate in Items"
+msgstr ""
+
+#: objinspstrconsts.cgcheckduplicatemsg
+#, object-pascal-format
+msgid "The \"%s\" Item is already listed. Add it anyway?"
+msgstr "\"%s\"项目已经列出.还要添加它?"
+
+#: objinspstrconsts.cgcheckgroupeditor
+msgid "CheckGroup Editor"
+msgstr "CheckGroup 编辑器(&C)"
+
+#: objinspstrconsts.cgcolumns
+msgid "Columns:"
+msgstr "列:"
+
+#: objinspstrconsts.cgdisable
+msgid "Popup to disable/enable items"
+msgstr "弹出到禁用/启用项目"
+
+#: objinspstrconsts.clbadd
+msgid "Add new Item"
+msgstr "添加新项目"
+
+#: objinspstrconsts.clbchecklistboxeditor
+msgid "CheckListBox Editor"
+msgstr "CheckListBox编辑器"
+
+#: objinspstrconsts.clbdeletehint
+msgid "Delete the Item"
+msgstr "删除项目"
+
+#: objinspstrconsts.clbdeletequest
+#, object-pascal-format
+msgid "Delete the Item %d \"%s\"?"
+msgstr "删除项目%d \"%s\"?"
+
+#: objinspstrconsts.clbdown
+msgctxt "objinspstrconsts.clbdown"
+msgid "Down"
+msgstr "下"
+
+#: objinspstrconsts.clbmodify
+msgid "Modify the Item"
+msgstr "修改项目"
+
+#: objinspstrconsts.clbup
+msgctxt "objinspstrconsts.clbup"
+msgid "Up"
+msgstr "上"
+
+#: objinspstrconsts.dceaddfields
+msgid "Add Fields"
+msgstr "添加字段"
+
+#: objinspstrconsts.dcecolumneditor
+msgid "DBGrid Columns Editor"
+msgstr "DBGrid列编辑器"
+
+#: objinspstrconsts.dcedeleteall
+msgid "Delete All"
+msgstr "删除所有"
+
+#: objinspstrconsts.dcefetchlabels
+msgid "Fetch Labels"
+msgstr "获取标签(Labels)"
+
+#: objinspstrconsts.dceoktodelete
+msgid "This will delete all columns. Continue?"
+msgstr "这将删除所有的列.继续?"
+
+#: objinspstrconsts.dcewillreplacecontinue
+msgid "This will replace all captions from dataset. Continue?"
+msgstr "这将从数据集(dataset)替换所有的标题(captions).继续?"
+
+#: objinspstrconsts.dpeunabletoretrievefieldsdefinitions
+msgid "Unable to retrieve fields definition from dataset."
+msgstr ""
+
+#: objinspstrconsts.fescalculated
+msgid "&Calculated"
+msgstr "计算(Calculated)(&C)"
+
+#: objinspstrconsts.fescancelbtn
+msgctxt "objinspstrconsts.fescancelbtn"
+msgid "Cancel"
+msgstr "取消"
+
+#: objinspstrconsts.fescheckdset
+#, fuzzy
+#| msgid "Check dataset settings"
+msgid "Check dataset settings."
+msgstr "检查数据集设置"
+
+#: objinspstrconsts.fesdata
+msgid "&Data"
+msgstr "数据(&D)"
+
+#: objinspstrconsts.fesdataset
+msgid "&Dataset:"
+msgstr ""
+
+#: objinspstrconsts.feserrormessage
+#, object-pascal-format
+msgid ""
+"Error message:\n"
+"%s"
+msgstr ""
+
+#: objinspstrconsts.fesfetitle
+msgid "Edit Fields ..."
+msgstr "编辑字段..."
+
+#: objinspstrconsts.fesfieldcantbec
+#, object-pascal-format
+msgid "Field %s cannot be created!"
+msgstr "字段%s不能被创建"
+
+#: objinspstrconsts.fesfieldprops
+msgid "Field properties"
+msgstr "字段属性"
+
+#: objinspstrconsts.fesfieldtype
+msgid "Field Type"
+msgstr "字段类型"
+
+#: objinspstrconsts.fesfltitle
+msgid "FieldDefs"
+msgstr ""
+
+#: objinspstrconsts.fesformcaption
+msgctxt "objinspstrconsts.fesformcaption"
+msgid "New field"
+msgstr "新建字段"
+
+#: objinspstrconsts.feskeyfield
+msgid "&Key fields:"
+msgstr "Key字段:(&K)"
+
+#: objinspstrconsts.feslookup
+msgid "&Lookup"
+msgstr "查找(&L)"
+
+#: objinspstrconsts.feslookupdef
+msgid "Lookup definition"
+msgstr "查找定义"
+
+#: objinspstrconsts.feslookupkeys
+msgid "L&ookup keys:"
+msgstr ""
+
+#: objinspstrconsts.fesname
+msgid "&Name:"
+msgstr "名称:(&N)"
+
+#: objinspstrconsts.fesnofields
+msgid "It was not possible to get the dataset fields list."
+msgstr ""
+
+#: objinspstrconsts.fesnofieldsnote
+msgid "Fields list is not available, can't check for duplicates."
+msgstr ""
+
+#: objinspstrconsts.fesokbtn
+msgctxt "objinspstrconsts.fesokbtn"
+msgid "OK"
+msgstr "确定"
+
+#: objinspstrconsts.fespersistentcompname
+msgid "Co&mponent Name:"
+msgstr "组件名称(&m)"
+
+#: objinspstrconsts.fesresultfield
+msgid "&Result Fields:"
+msgstr "&结果字段:"
+
+#: objinspstrconsts.fessize
+msgid "&Size:"
+msgstr "大小:(&S)"
+
+#: objinspstrconsts.festype
+msgid "&Type:"
+msgstr "类型:(&T)"
+
+#: objinspstrconsts.fpflowpaneleditor
+msgid "FlowPanel Editor"
+msgstr "FlowPanel 编辑器(&F)"
+
+#: objinspstrconsts.ilesadd
+msgctxt "objinspstrconsts.ilesadd"
+msgid "Add"
+msgstr "添加"
+
+#: objinspstrconsts.itcssearchandreplace
+msgid "Search and replace"
+msgstr "搜索和替换"
+
+#: objinspstrconsts.liisaddvalue
+msgid "Add value"
+msgstr "添加值"
+
+#: objinspstrconsts.liiselse
+msgid "Else"
+msgstr "Else(否则)"
+
+#: objinspstrconsts.liiselseif
+msgid "ElseIf"
+msgstr "ElseIf(否则如果)"
+
+#: objinspstrconsts.liisif
+msgid "If"
+msgstr "If(如果)"
+
+#: objinspstrconsts.liisifdef
+msgid "IfDef"
+msgstr "IfDef"
+
+#: objinspstrconsts.liisifndef
+msgid "IfNDef"
+msgstr ""
+
+#: objinspstrconsts.liissetvalue
+msgid "Set value"
+msgstr "设置值"
+
+#: objinspstrconsts.lrsbufdsfilters
+msgid "XML data files|*.xml;Binary data files|*.dat"
+msgstr ""
+
+#: objinspstrconsts.lrscopyfromdataset
+msgid "Copy data from other dataset"
+msgstr ""
+
+#: objinspstrconsts.lrscreatedataset
+msgid "Create dataset"
+msgstr ""
+
+#: objinspstrconsts.lrsdatasetactive
+msgid "Dataset is already active, close it first."
+msgstr ""
+
+#: objinspstrconsts.lrsloadfromfile
+msgid "Load data from file"
+msgstr ""
+
+#: objinspstrconsts.lrsnodatasetsavailableforcopy
+msgid "No dataset available to copy data from."
+msgstr ""
+
+#: objinspstrconsts.lrsprovidedatafilename
+msgid "Select a data file to save data to"
+msgstr ""
+
+#: objinspstrconsts.lrssavetofile
+msgid "Save data to file"
+msgstr ""
+
+#: objinspstrconsts.lrsselectdatafilename
+msgid "Select a file with data to load into dataset"
+msgstr ""
+
+#: objinspstrconsts.nbcesaddpage
+msgctxt "objinspstrconsts.nbcesaddpage"
+msgid "Add Page"
+msgstr "添加页(&A)"
+
+#: objinspstrconsts.nbcesdeletepage
+msgid "Delete Page"
+msgstr "删除页(&D)"
+
+#: objinspstrconsts.nbcesinsertpage
+msgid "Insert Page"
+msgstr "插入页(&I)"
+
+#: objinspstrconsts.nbcesmovepageleft
+msgid "Move Page Left"
+msgstr "左移页(&L)"
+
+#: objinspstrconsts.nbcesmovepageright
+msgid "Move Page Right"
+msgstr "右移页(&R)"
+
+#: objinspstrconsts.nbcesshowpage
+msgid "Show Page"
+msgstr "显示页(&S)"
+
+#: objinspstrconsts.oicoleditadd
+msgctxt "objinspstrconsts.oicoleditadd"
+msgid "Add"
+msgstr "添加"
+
+#: objinspstrconsts.oicoleditdelete
+msgctxt "objinspstrconsts.oicoleditdelete"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.oicoleditdown
+msgctxt "objinspstrconsts.oicoleditdown"
+msgid "Down"
+msgstr "下"
+
+#: objinspstrconsts.oicoleditediting
+msgid "Editing"
+msgstr "编辑"
+
+#: objinspstrconsts.oicoleditup
+msgctxt "objinspstrconsts.oicoleditup"
+msgid "Up"
+msgstr "上"
+
+#: objinspstrconsts.ois0lines0chars
+msgid "0 lines, 0 chars"
+msgstr "0行,0字符"
+
+#: objinspstrconsts.ois1linedchars
+#, object-pascal-format
+msgid "1 line, %d chars"
+msgstr "1行,%d字符"
+
+#: objinspstrconsts.oisaction
+msgid "Action"
+msgstr "动作"
+
+#: objinspstrconsts.oisactionlistcomponenteditor
+msgid "Action&List Editor ..."
+msgstr "动作列表编辑器(&L) ..."
+
+#: objinspstrconsts.oisactionlisteditor
+msgid "ActionList Editor"
+msgstr "动作列表编辑器"
+
+#: objinspstrconsts.oisadd
+msgctxt "objinspstrconsts.oisadd"
+msgid "Add"
+msgstr "添加"
+
+#: objinspstrconsts.oisaddcollectionitem
+msgid "&Add Item"
+msgstr "添加项目(&A)"
+
+#: objinspstrconsts.oisaddfields
+msgid "&Add fields"
+msgstr "添加字段(&A)"
+
+#: objinspstrconsts.oisaddfieldsfromfielddefs
+msgid "Add fields from FieldDefs"
+msgstr "添加字段从字段定义"
+
+#: objinspstrconsts.oisaddpage
+msgctxt "objinspstrconsts.oisaddpage"
+msgid "Add Page"
+msgstr "添加页"
+
+#: objinspstrconsts.oisaddtofavorites
+msgid "Add to Favorites"
+msgstr "添加到收藏夹"
+
+#: objinspstrconsts.oisallfiles
+msgid "All files"
+msgstr "所有文件"
+
+#: objinspstrconsts.oisarray
+msgid "Array"
+msgstr "数组"
+
+#: objinspstrconsts.oisboolean
+msgid "Boolean"
+msgstr "布尔"
+
+#: objinspstrconsts.oisbtncomponents
+msgid "Co&mponents"
+msgstr "组件(&M)"
+
+#: objinspstrconsts.oisbtnproperties
+msgid "&Properties"
+msgstr "属性(&P)"
+
+#: objinspstrconsts.oiscancel
+msgctxt "objinspstrconsts.oiscancel"
+msgid "Cancel"
+msgstr "取消"
+
+#: objinspstrconsts.oiscategory
+msgid "Category"
+msgstr "分类"
+
+#: objinspstrconsts.oiscdelete
+msgid "Delete?"
+msgstr "删除?"
+
+#: objinspstrconsts.oischangeclass
+msgid "Change Class ..."
+msgstr "更改类..."
+
+#: objinspstrconsts.oischangeparent
+msgid "Change Parent"
+msgstr "更改 Parent"
+
+#: objinspstrconsts.oischar
+msgid "Char"
+msgstr "Char"
+
+#: objinspstrconsts.oischaractersforblanks
+msgid "Characters for Blanks"
+msgstr "空白字符类型"
+
+#: objinspstrconsts.oisclass
+msgid "Class"
+msgstr "类"
+
+#: objinspstrconsts.oisclear
+msgid "C&lear"
+msgstr "清除(&l)"
+
+#: objinspstrconsts.oisclearpicture
+msgid "Clear picture"
+msgstr "清除图片"
+
+#: objinspstrconsts.oiscomponentnameisnotavalididentifier
+#, object-pascal-format
+msgid "Component name \"%s\" is not a valid identifier"
+msgstr "组件名\"%s\"不是一个有效的标识符"
+
+#: objinspstrconsts.oiscomponentrestrictions
+msgid "Component restrictions: "
+msgstr "组件限制"
+
+#: objinspstrconsts.oisconfirmdelete
+msgid "Confirm delete"
+msgstr "确定删除"
+
+#: objinspstrconsts.oiscopycomponents
+msgctxt "objinspstrconsts.oiscopycomponents"
+msgid "&Copy"
+msgstr "复制(&C)"
+
+#: objinspstrconsts.oiscreatedefaultevent
+msgid "Create default event"
+msgstr "创建默认的事件(&E)"
+
+#: objinspstrconsts.oiscreatenewfieldandadditatcurrentposition
+msgid "Create new field and add it at current position"
+msgstr "创建新字段并添加在当前位置"
+
+#: objinspstrconsts.oiscurrentparent
+msgid "Current parent"
+msgstr "当前父类(parent)"
+
+#: objinspstrconsts.oiscurrentparents
+msgid "Current parents"
+msgstr "当前父类(parents)"
+
+#: objinspstrconsts.oiscutcomponents
+msgctxt "objinspstrconsts.oiscutcomponents"
+msgid "Cu&t"
+msgstr "剪切(&t)"
+
+#: objinspstrconsts.oisdelete
+msgctxt "objinspstrconsts.oisdelete"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.oisdeletecomponents
+msgctxt "objinspstrconsts.oisdeletecomponents"
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: objinspstrconsts.oisdeleteitem
+#, object-pascal-format
+msgid "Delete item \"%s\"?"
+msgstr "删除项目\"%s\"?"
+
+#: objinspstrconsts.oisdeletepagequestion
+msgid "Do you want to delete the page?"
+msgstr "你真的想删除该页?"
+
+#: objinspstrconsts.oisdeleteselectedfields
+msgid "Delete selected field(s)"
+msgstr "删除选择的字段"
+
+#: objinspstrconsts.oisdlinesdchars
+#, object-pascal-format
+msgid "%d lines, %d chars"
+msgstr "%d行, %d字符"
+
+#: objinspstrconsts.oisenumeration
+msgid "Enumeration"
+msgstr "枚举"
+
+#: objinspstrconsts.oiserror
+msgid "Error"
+msgstr "错误"
+
+#: objinspstrconsts.oiserrordeletingaction
+msgid "Error deleting action"
+msgstr "删除动作错误"
+
+#: objinspstrconsts.oiserrorloadingimage
+msgid "Error loading image"
+msgstr "加载图片错误"
+
+#: objinspstrconsts.oiserrorloadingimage2
+#, object-pascal-format
+msgid "Error loading image \"%s\":%s%s"
+msgstr "加载图片\"%s\":%s%s错误"
+
+#: objinspstrconsts.oiserrorwhiledeletingaction
+#, object-pascal-format
+msgid "Error while deleting action:%s%s"
+msgstr "当删除动作:%s%s时错误"
+
+#: objinspstrconsts.oisevents
+msgid "Events"
+msgstr "事件"
+
+#: objinspstrconsts.oisfavorites
+msgid "Favorites"
+msgstr "收藏夹"
+
+#: objinspstrconsts.oisfinddeclaration
+msgid "Jump to declaration"
+msgstr "跳转到声明(declaration)"
+
+#: objinspstrconsts.oisfloat
+msgid "Float"
+msgstr "浮点值(Float)"
+
+#: objinspstrconsts.oishelp
+msgid "&Help"
+msgstr "帮助(&H)"
+
+#: objinspstrconsts.oisimagelistcomponenteditor
+msgid "I&mageList Editor ..."
+msgstr "图片列表编辑器...(&m)"
+
+#: objinspstrconsts.oisincompatibleidentifier
+msgid "Incompatible Identifier"
+msgstr "标识符不兼容"
+
+#: objinspstrconsts.oisincompatiblemethod
+msgid "Incompatible Method"
+msgstr "方法不兼容"
+
+#: objinspstrconsts.oisinfinitynotsupported
+msgctxt "objinspstrconsts.oisinfinitynotsupported"
+msgid "Setting a floating point property to positive or negative Infinity at design time is not supported"
+msgstr ""
+
+#: objinspstrconsts.oisinputmask
+msgid "Input Mask:"
+msgstr "输入掩码:"
+
+#: objinspstrconsts.oisinsertpagename
+msgid "Insert Page Name"
+msgstr "插入页名称"
+
+#: objinspstrconsts.oisint64
+msgid "Int64"
+msgstr "Int64"
+
+#: objinspstrconsts.oisinteger
+msgid "Integer"
+msgstr "Integer(整形)"
+
+#: objinspstrconsts.oisinterface
+msgid "Interface"
+msgstr "接口"
+
+#: objinspstrconsts.oisinvalid
+msgid "(Invalid)"
+msgstr "(无效的)"
+
+#: objinspstrconsts.oisinvalidpropertyvalue
+msgid "Invalid property value"
+msgstr "无效属性值"
+
+#: objinspstrconsts.oisisnotavalidmethodname
+#, object-pascal-format
+msgid "\"%s\" is not a valid method name."
+msgstr "\"%s\"不是一个有效的方法名称."
+
+#: objinspstrconsts.oisitemsselected
+#, object-pascal-format
+msgid "%u items selected"
+msgstr "%u 项目被选择"
+
+#: objinspstrconsts.oisjumptodeclarationof
+#, object-pascal-format
+msgid "Jump to declaration of %s"
+msgstr "跳转到%s声明(declaration)"
+
+#: objinspstrconsts.oisload
+msgid "&Load"
+msgstr "加载(&L)"
+
+#: objinspstrconsts.oisloadimagedialog
+msgid "Load Image Dialog"
+msgstr "加载图片对话框"
+
+#: objinspstrconsts.oisloadpicture
+msgid "Load picture"
+msgstr "加载图片"
+
+#: objinspstrconsts.oismasks
+msgid "Masks ..."
+msgstr "掩码..."
+
+#: objinspstrconsts.oismethod
+msgid "Method"
+msgstr "方法"
+
+#: objinspstrconsts.oismixed
+msgid "(Mixed)"
+msgstr "(混合)"
+
+#: objinspstrconsts.oismovedown
+msgid "Move &Down"
+msgstr "下移"
+
+#: objinspstrconsts.oismovedownhint
+msgid "Move field down"
+msgstr "下移字段"
+
+#: objinspstrconsts.oismoveup
+msgctxt "objinspstrconsts.oismoveup"
+msgid "Move &Up"
+msgstr "向上移动(&U)"
+
+#: objinspstrconsts.oismoveuphint
+msgid "Move field up"
+msgstr "上移字段"
+
+#: objinspstrconsts.oisnannotsupported
+msgid "Setting a floating point property to NaN at design time is not supported"
+msgstr ""
+
+#: objinspstrconsts.oisnew
+msgid "&New"
+msgstr "新建(&N)"
+
+#: objinspstrconsts.oisnone
+msgid "(none)"
+msgstr "(none)"
+
+#: objinspstrconsts.oisobject
+msgid "Object"
+msgstr "对象"
+
+#: objinspstrconsts.oisobjectinspector
+msgid "Object Inspector"
+msgstr "对象查看器(&O)"
+
+#: objinspstrconsts.oisok
+msgid "&OK"
+msgstr "确定(&O)"
+
+#: objinspstrconsts.oisok2
+msgid "Ok"
+msgstr "确定"
+
+#: objinspstrconsts.oisopenmaskfile
+msgid "Open masks file (*.dem)"
+msgstr "打开掩码文件(*.dem)"
+
+#: objinspstrconsts.oisoptions
+msgid "Options"
+msgstr "选项"
+
+#: objinspstrconsts.oisorderbackone
+msgid "Back One"
+msgstr "向后一个"
+
+#: objinspstrconsts.oisorderforwardone
+msgid "Forward One"
+msgstr "向前一个"
+
+#: objinspstrconsts.oisordermovetoback
+msgid "Move to Back"
+msgstr "移动到后面"
+
+#: objinspstrconsts.oisordermovetofront
+msgid "Move to Front"
+msgstr "移动到前面"
+
+#: objinspstrconsts.oispages
+msgid "Pages"
+msgstr "页"
+
+#: objinspstrconsts.oispageseditordialog
+msgid "Pages Editor"
+msgstr "页编辑器"
+
+#: objinspstrconsts.oispastecomponents
+msgctxt "objinspstrconsts.oispastecomponents"
+msgid "&Paste"
+msgstr "粘贴(&P)"
+
+#: objinspstrconsts.oispeopenimagefile
+msgid "Open image file"
+msgstr "打开图片文件"
+
+#: objinspstrconsts.oispepicture
+msgid "Picture"
+msgstr "图片"
+
+#: objinspstrconsts.oispesaveimageas
+msgid "Save image as"
+msgstr "保存图片为"
+
+#: objinspstrconsts.oispressakey
+msgid "Press a key ..."
+msgstr "按一个键..."
+
+#: objinspstrconsts.oispressakeyegctrlp
+msgid "You can press e.g. Ctrl+P ..."
+msgstr ""
+
+#: objinspstrconsts.oisproperties
+msgid "Properties"
+msgstr "属性"
+
+#: objinspstrconsts.oispropertiesof
+#, object-pascal-format
+msgid "Properties of %s"
+msgstr "%s 的属性"
+
+#: objinspstrconsts.oisrecord
+msgid "Record"
+msgstr "记录"
+
+#: objinspstrconsts.oisremovefromfavorites
+msgid "Remove from Favorites"
+msgstr "从收藏夹中删除"
+
+#: objinspstrconsts.oisrename
+msgid "Rename"
+msgstr "重命名"
+
+#: objinspstrconsts.oisrenamepage
+msgid "Rename Page"
+msgstr "重命名页"
+
+#: objinspstrconsts.oisrestricted
+msgid "Restricted"
+msgstr "限制"
+
+#: objinspstrconsts.oisreverttoinherited
+msgid "Revert to inherited"
+msgstr ""
+
+#: objinspstrconsts.oissamplemasks
+msgid "Sample Masks:"
+msgstr "掩码样例:"
+
+#: objinspstrconsts.oissave
+msgid "&Save"
+msgstr "保存(&S)"
+
+#: objinspstrconsts.oissaveliteralcharacters
+msgid "Save Literal Characters"
+msgstr ""
+
+#: objinspstrconsts.oissavepicture
+msgid "Save picture"
+msgstr "保存图像"
+
+#: objinspstrconsts.oisselectafile
+msgid "Select a file"
+msgstr "选择一个文件"
+
+#: objinspstrconsts.oisselectall
+msgid "&Select all"
+msgstr "选择所有(&S)"
+
+#: objinspstrconsts.oisselectallhint
+msgid "Select All Fields"
+msgstr "选择所有字段"
+
+#: objinspstrconsts.oisselectedcontrol
+msgid "Selected control"
+msgstr "选择控件(control)"
+
+#: objinspstrconsts.oisselectedcontrols
+msgid "Selected controls"
+msgstr "选择控件(controls)"
+
+#: objinspstrconsts.oisselectedproperties
+msgid "&Selected Properties"
+msgstr "选择属性(&S)"
+
+#: objinspstrconsts.oisselectshortcut
+msgid "Select short cut"
+msgstr "选择快捷键"
+
+#: objinspstrconsts.oisset
+msgid "Set"
+msgstr "设置"
+
+#: objinspstrconsts.oissetmaxconstraints
+#, object-pascal-format
+msgid "Set MaxHeight=%d, MaxWidth=%d"
+msgstr "设置最大高度=%d,最大宽度=%d"
+
+#: objinspstrconsts.oissetmaxconstraintshint
+msgid "Use current size as Max Constraints"
+msgstr "使用当前尺寸为最大限制"
+
+#: objinspstrconsts.oissetminconstraints
+#, object-pascal-format
+msgid "Set MinHeight=%d, MinWidth=%d"
+msgstr "设置最小高度=%d,最小宽度=%d"
+
+#: objinspstrconsts.oissetminconstraintshint
+msgid "Use current size as Min Constraints"
+msgstr "使用当前尺寸为最小限制"
+
+#: objinspstrconsts.oissettodefault
+#, object-pascal-format
+msgid "Set to default: %s"
+msgstr "设为默认: %s"
+
+#: objinspstrconsts.oissettodefaulthint
+msgid "Set property value to Default"
+msgstr "设置属性值为默认"
+
+#: objinspstrconsts.oisshowclasses
+msgid "Show classes"
+msgstr "展开类"
+
+#: objinspstrconsts.oisshowcomponenttree
+msgid "Show Component Tree"
+msgstr "显示组件树"
+
+#: objinspstrconsts.oisshowhints
+msgid "Show Hints"
+msgstr "显示提示"
+
+#: objinspstrconsts.oisshowinfobox
+msgid "Show Information Box"
+msgstr "显示信息框"
+
+#: objinspstrconsts.oisshowpropertyfilter
+msgid "Show Property Filter"
+msgstr ""
+
+#: objinspstrconsts.oisshowstatusbar
+msgid "Show Status Bar"
+msgstr "显示状态栏"
+
+#: objinspstrconsts.oissort
+msgid "Sort"
+msgstr "排序"
+
+#: objinspstrconsts.oisstdactionlisteditor
+msgid "Standard Action Classes"
+msgstr "标准动作类"
+
+#: objinspstrconsts.oisstdactionlisteditorclass
+msgid "Available Action Classes:"
+msgstr "可用动作类:"
+
+#: objinspstrconsts.oisstring
+msgid "String"
+msgstr "字符串"
+
+#: objinspstrconsts.oisstringseditordialog
+msgid "Strings Editor Dialog"
+msgstr "Strings编辑对话框"
+
+#: objinspstrconsts.oistdactcolorselect1headline
+msgid "Select &Color ..."
+msgstr "选择颜色(&C)..."
+
+#: objinspstrconsts.oistdactcolorselecthint
+msgid "Color Select"
+msgstr "颜色选择"
+
+#: objinspstrconsts.oistdactdatasetcancel1hint
+msgctxt "objinspstrconsts.oistdactdatasetcancel1hint"
+msgid "Cancel"
+msgstr "取消"
+
+#: objinspstrconsts.oistdactdatasetcancelheadline
+msgctxt "objinspstrconsts.oistdactdatasetcancelheadline"
+msgid "&Cancel"
+msgstr "取消(&C)"
+
+#: objinspstrconsts.oistdactdatasetdeleteheadline
+msgctxt "objinspstrconsts.oistdactdatasetdeleteheadline"
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: objinspstrconsts.oistdactdatasetdeletehint
+msgctxt "objinspstrconsts.oistdactdatasetdeletehint"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.oistdactdataseteditheadline
+msgid "&Edit"
+msgstr "编辑(&E)"
+
+#: objinspstrconsts.oistdactdatasetedithint
+msgctxt "objinspstrconsts.oistdactdatasetedithint"
+msgid "Edit"
+msgstr "编辑"
+
+#: objinspstrconsts.oistdactdatasetfirstheadline
+msgid "&First"
+msgstr "首先(&F)"
+
+#: objinspstrconsts.oistdactdatasetfirsthint
+msgid "First"
+msgstr "首先"
+
+#: objinspstrconsts.oistdactdatasetinsertheadline
+msgid "&Insert"
+msgstr "插入(&I)"
+
+#: objinspstrconsts.oistdactdatasetinserthint
+msgctxt "objinspstrconsts.oistdactdatasetinserthint"
+msgid "Insert"
+msgstr "插入"
+
+#: objinspstrconsts.oistdactdatasetlastheadline
+msgid "&Last"
+msgstr "最后(&L)(Last)"
+
+#: objinspstrconsts.oistdactdatasetlasthint
+msgid "Last"
+msgstr "最后(Last)"
+
+#: objinspstrconsts.oistdactdatasetnextheadline
+msgid "&Next"
+msgstr "下一个(&N)"
+
+#: objinspstrconsts.oistdactdatasetnexthint
+msgctxt "objinspstrconsts.oistdactdatasetnexthint"
+msgid "Next"
+msgstr "下一个"
+
+#: objinspstrconsts.oistdactdatasetpostheadline
+msgid "P&ost"
+msgstr "提交(&o)"
+
+#: objinspstrconsts.oistdactdatasetposthint
+msgid "Post"
+msgstr "提交"
+
+#: objinspstrconsts.oistdactdatasetpriorheadline
+msgid "&Prior"
+msgstr "前一个(&P)"
+
+#: objinspstrconsts.oistdactdatasetpriorhint
+msgctxt "objinspstrconsts.oistdactdatasetpriorhint"
+msgid "Prior"
+msgstr "前一个"
+
+#: objinspstrconsts.oistdactdatasetrefreshheadline
+msgid "&Refresh"
+msgstr "刷新(&R)"
+
+#: objinspstrconsts.oistdactdatasetrefreshhint
+msgid "Refresh"
+msgstr "刷新"
+
+#: objinspstrconsts.oistdacteditcopyheadline
+msgctxt "objinspstrconsts.oistdacteditcopyheadline"
+msgid "&Copy"
+msgstr "复制(&C)"
+
+#: objinspstrconsts.oistdacteditcopyshortcut
+msgid "Ctrl+C"
+msgstr "Ctrl+C"
+
+#: objinspstrconsts.oistdacteditcopyshorthint
+msgid "Copy"
+msgstr "复制"
+
+#: objinspstrconsts.oistdacteditcutheadline
+msgctxt "objinspstrconsts.oistdacteditcutheadline"
+msgid "Cu&t"
+msgstr "剪切(&t)"
+
+#: objinspstrconsts.oistdacteditcutshortcut
+msgid "Ctrl+X"
+msgstr "Ctrl+X"
+
+#: objinspstrconsts.oistdacteditcutshorthint
+msgid "Cut"
+msgstr "剪切"
+
+#: objinspstrconsts.oistdacteditdeleteheadline
+msgctxt "objinspstrconsts.oistdacteditdeleteheadline"
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: objinspstrconsts.oistdacteditdeleteshortcut
+msgid "Del"
+msgstr "Del"
+
+#: objinspstrconsts.oistdacteditdeleteshorthint
+msgctxt "objinspstrconsts.oistdacteditdeleteshorthint"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.oistdacteditpasteheadline
+msgctxt "objinspstrconsts.oistdacteditpasteheadline"
+msgid "&Paste"
+msgstr "粘贴(&P)"
+
+#: objinspstrconsts.oistdacteditpasteshortcut
+msgid "Ctrl+V"
+msgstr "Ctrl+V"
+
+#: objinspstrconsts.oistdacteditpasteshorthint
+msgid "Paste"
+msgstr "粘贴"
+
+#: objinspstrconsts.oistdacteditselectallheadline
+msgid "Select &All"
+msgstr "选择所有(&A)"
+
+#: objinspstrconsts.oistdacteditselectallshortcut
+msgid "Ctrl+A"
+msgstr "Ctrl+A"
+
+#: objinspstrconsts.oistdacteditselectallshorthint
+msgid "Select All"
+msgstr "选择所有"
+
+#: objinspstrconsts.oistdacteditundoheadline
+msgid "&Undo"
+msgstr "撤销(&U)"
+
+#: objinspstrconsts.oistdacteditundoshortcut
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: objinspstrconsts.oistdacteditundoshorthint
+msgctxt "objinspstrconsts.oistdacteditundoshorthint"
+msgid "Undo"
+msgstr "撤销"
+
+#: objinspstrconsts.oistdactfileexitheadline
+msgid "E&xit"
+msgstr "退出(&x)"
+
+#: objinspstrconsts.oistdactfileexithint
+msgid "Exit"
+msgstr "退出"
+
+#: objinspstrconsts.oistdactfileopenheadline
+msgid "&Open ..."
+msgstr "打开(&O)..."
+
+#: objinspstrconsts.oistdactfileopenhint
+msgctxt "objinspstrconsts.oistdactfileopenhint"
+msgid "Open"
+msgstr "打开"
+
+#: objinspstrconsts.oistdactfileopenshortcut
+msgid "Ctrl+O"
+msgstr "Ctrl+O"
+
+#: objinspstrconsts.oistdactfileopenwithheadline
+msgid "Open with ..."
+msgstr "打开带有..."
+
+#: objinspstrconsts.oistdactfileopenwithhint
+msgid "Open with"
+msgstr "打开带有"
+
+#: objinspstrconsts.oistdactfilesaveasheadline
+msgid "Save &As ..."
+msgstr "另存为...(&A)"
+
+#: objinspstrconsts.oistdactfilesaveashint
+msgid "Save As"
+msgstr "另存为"
+
+#: objinspstrconsts.oistdactfonteditheadline
+msgid "Select &Font ..."
+msgstr "选择字体...(&F)"
+
+#: objinspstrconsts.oistdactfontedithint
+msgid "Font Select"
+msgstr "字体选择"
+
+#: objinspstrconsts.oistdacthelpcontentsheadline
+msgid "&Contents"
+msgstr "目录"
+
+#: objinspstrconsts.oistdacthelpcontentshint
+msgid "Help Contents"
+msgstr "帮助目录"
+
+#: objinspstrconsts.oistdacthelphelphelpheadline
+msgid "&Help on Help"
+msgstr "帮助关于帮助(&H)"
+
+#: objinspstrconsts.oistdacthelphelphelphint
+msgid "Help on help"
+msgstr "帮助关于帮助"
+
+#: objinspstrconsts.oistdacthelptopicsearchheadline
+msgid "&Topic Search"
+msgstr "搜索主题(&T)"
+
+#: objinspstrconsts.oistdacthelptopicsearchhint
+msgid "Topic Search"
+msgstr "主题搜索"
+
+#: objinspstrconsts.oistdactsearchfindfirstheadline
+msgid "F&ind First"
+msgstr "查找第一个(&I)"
+
+#: objinspstrconsts.oistdactsearchfindfirsthint
+msgid "Find first"
+msgstr "查找第一个"
+
+#: objinspstrconsts.oistdactsearchfindheadline
+msgid "&Find ..."
+msgstr "查找(&F) ..."
+
+#: objinspstrconsts.oistdactsearchfindhint
+msgid "Find"
+msgstr "查找"
+
+#: objinspstrconsts.oistdactsearchfindnextheadline
+msgid "Find &Next"
+msgstr "查找下一个(&N)"
+
+#: objinspstrconsts.oistdactsearchfindnexthint
+msgid "Find next"
+msgstr "查找下一个"
+
+#: objinspstrconsts.oistdactsearchfindnextshortcut
+msgid "F3"
+msgstr "F3"
+
+#: objinspstrconsts.oistdactsearchfindshortcut
+msgid "Ctrl+F"
+msgstr "Ctrl+F"
+
+#: objinspstrconsts.oistdactsearchreplaceheadline
+msgid "&Replace"
+msgstr "替换(&R)"
+
+#: objinspstrconsts.oistdactsearchreplacehint
+msgid "Replace"
+msgstr "替换"
+
+#: objinspstrconsts.oistestdialog
+msgid "Test dialog ..."
+msgstr "测试对话框..."
+
+#: objinspstrconsts.oistestinput
+msgid "Test Input"
+msgstr "测试输入"
+
+#: objinspstrconsts.oistheidentifierisnotamethodpresscanceltoundopressign
+#, object-pascal-format
+msgid "The identifier \"%s\" is not a method.%sPress Cancel to undo,%spress Ignore to force it."
+msgstr "该标识符\"%s\"不是一个方法.%s按取消撤销,%s按忽略强制执行."
+
+#: objinspstrconsts.oisthemethodisincompatibletothiseventpresscanceltound
+#, object-pascal-format
+msgid "The method \"%s\" is incompatible to this event (%s).%sPress Cancel to undo,%spress Ignore to force it."
+msgstr "该方法\"%s\"与此事件(%s)不兼容.%s按取消撤销,%s按忽略强制执行."
+
+#: objinspstrconsts.oisthemethodisnotpublishedpresscanceltoundopressignor
+#, object-pascal-format
+msgid "The method \"%s\" is not published.%sPress Cancel to undo,%spress Ignore to force it."
+msgstr "该方法\"%s\"没有published.%s按取消撤销,%s按忽略强制执行."
+
+#: objinspstrconsts.oisunabletochangeparentofcontroltonewparent
+#, object-pascal-format
+msgid "Unable to change parent of control \"%s\" to new parent \"%s\".%s%s"
+msgstr ""
+
+#: objinspstrconsts.oisundo
+msgctxt "objinspstrconsts.oisundo"
+msgid "Undo"
+msgstr "撤销"
+
+#: objinspstrconsts.oisunknown
+msgctxt "objinspstrconsts.oisunknown"
+msgid "Unknown"
+msgstr "未知"
+
+#: objinspstrconsts.oisunselectall
+msgid "&Unselect all"
+msgstr "不选择所有(&U)"
+
+#: objinspstrconsts.oisunselectallhint
+msgid "Unselect All"
+msgstr "不选择所有"
+
+#: objinspstrconsts.oisvalue
+msgid "Value:"
+msgstr "值:"
+
+#: objinspstrconsts.oisvalueoutofrange
+msgid "Property value out of range."
+msgstr ""
+
+#: objinspstrconsts.oisvariant
+msgid "Variant"
+msgstr "变量"
+
+#: objinspstrconsts.oisviewrestrictedproperties
+msgid "View restricted properties"
+msgstr "查看受限属性"
+
+#: objinspstrconsts.oiswidgetsetrestrictions
+msgid "General widget set restrictions: "
+msgstr ""
+
+#: objinspstrconsts.oisword
+msgid "Word"
+msgstr "(Word)字"
+
+#: objinspstrconsts.oiszorder
+msgid "Z-order"
+msgstr "Z顺序"
+
+#: objinspstrconsts.pefilter
+msgid "Filter"
+msgstr "过滤器"
+
+#: objinspstrconsts.pefiltereditor
+msgid "Filter editor"
+msgstr "过滤器编辑器"
+
+#: objinspstrconsts.pefiltername
+msgid "Filter name"
+msgstr "过滤器名称"
+
+#: objinspstrconsts.rscdalignment
+msgid "Alignment"
+msgstr "对齐"
+
+#: objinspstrconsts.rscdautosize
+msgid "Auto Size"
+msgstr "自调尺寸"
+
+#: objinspstrconsts.rscdcaption
+msgid "Caption"
+msgstr "标题"
+
+#: objinspstrconsts.rscdcolumneditor
+msgid "Column Editor"
+msgstr "列编辑器"
+
+#: objinspstrconsts.rscdinvalidnumericvalue
+msgid "Invalid numeric Value"
+msgstr "无效数字值"
+
+#: objinspstrconsts.rscdleft
+msgctxt "objinspstrconsts.rscdleft"
+msgid "Left"
+msgstr "左"
+
+#: objinspstrconsts.rscdmovedown
+msgid "Move down"
+msgstr "向下移动"
+
+#: objinspstrconsts.rscdmoveup
+msgid "Move up"
+msgstr "向上移动"
+
+#: objinspstrconsts.rscdok
+msgctxt "objinspstrconsts.rscdok"
+msgid "OK"
+msgstr "确定"
+
+#: objinspstrconsts.rscdright
+msgctxt "objinspstrconsts.rscdright"
+msgid "Right"
+msgstr "右"
+
+#: objinspstrconsts.rscdvisible
+msgid "Visible"
+msgstr "可视"
+
+#: objinspstrconsts.rscdwidth
+msgid "Width"
+msgstr "宽度"
+
+#: objinspstrconsts.sccshceditsections
+msgid "Sections Editor ..."
+msgstr "节(Sections)编辑器..."
+
+#: objinspstrconsts.sccsiledtadd
+msgid "&Add ..."
+msgstr "添加...(&A)"
+
+#: objinspstrconsts.sccsiledtaddmoreresolutions
+msgid "Add more resolutions ..."
+msgstr "添加更多分辨率(resolution)..."
+
+#: objinspstrconsts.sccsiledtaddnewresolution
+msgid "New resolution ..."
+msgstr "新分辨率(resolution)..."
+
+#: objinspstrconsts.sccsiledtaddsliced
+msgid "Add sliced ..."
+msgstr ""
+
+#: objinspstrconsts.sccsiledtaddslicediconerror
+msgid "Adding sliced icons is not supported."
+msgstr ""
+
+#: objinspstrconsts.sccsiledtadjustment
+msgid "Adjustment"
+msgstr "调整"
+
+#: objinspstrconsts.sccsiledtapply
+msgctxt "objinspstrconsts.sccsiledtapply"
+msgid "&Apply"
+msgstr "应用(&A)"
+
+#: objinspstrconsts.sccsiledtcannotdeleteresolution
+msgid "Cannot delete default resolution."
+msgstr "不能删除默认分辨率(resolution)."
+
+#: objinspstrconsts.sccsiledtcannotslice
+msgid "Source image size must be an integer multiple of the ImageList's Width and Height."
+msgstr ""
+
+#: objinspstrconsts.sccsiledtcaption
+msgid "ImageList Editor"
+msgstr "图片列表编辑器"
+
+#: objinspstrconsts.sccsiledtcenter
+msgid "Center"
+msgstr "中心"
+
+#: objinspstrconsts.sccsiledtclear
+msgctxt "objinspstrconsts.sccsiledtclear"
+msgid "&Clear"
+msgstr "清理(&C)"
+
+#: objinspstrconsts.sccsiledtcrop
+msgid "Crop"
+msgstr "Crop(产量)"
+
+#: objinspstrconsts.sccsiledtdelete
+msgctxt "objinspstrconsts.sccsiledtdelete"
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: objinspstrconsts.sccsiledtdeleteresolution
+msgid "Delete resolution ..."
+msgstr "删除分辨率(resolution)..."
+
+#: objinspstrconsts.sccsiledtdeleteresolutionconfirmation
+msgid "Select the resolution to delete."
+msgstr "选择认分辨率(resolution)予以删除."
+
+#: objinspstrconsts.sccsiledtgrplcaption
+msgid "Images"
+msgstr "图片"
+
+#: objinspstrconsts.sccsiledtgrprcaption
+msgid "Selected Image"
+msgstr "选择的图像"
+
+#: objinspstrconsts.sccsiledtimagewidthofnewresolution
+msgid "Image width of the new resolution:"
+msgstr ""
+
+#: objinspstrconsts.sccsiledtmovedown
+msgctxt "objinspstrconsts.sccsiledtmovedown"
+msgid "Move D&own"
+msgstr "向下移动(&o)"
+
+#: objinspstrconsts.sccsiledtmoveup
+msgctxt "objinspstrconsts.sccsiledtmoveup"
+msgid "Move &Up"
+msgstr "向上移动(&U)"
+
+#: objinspstrconsts.sccsiledtnone
+msgid "None"
+msgstr "None"
+
+#: objinspstrconsts.sccsiledtopendialog
+msgid "Add Images"
+msgstr "添加图像"
+
+#: objinspstrconsts.sccsiledtopendialogn
+msgid "New Image"
+msgstr "新图像"
+
+#: objinspstrconsts.sccsiledtransparentcolor
+msgid "Transparent Color:"
+msgstr "透明色:"
+
+#: objinspstrconsts.sccsiledtreplace
+msgid "&Replace ..."
+msgstr "替换(&R) ..."
+
+#: objinspstrconsts.sccsiledtreplaceallresolutions
+msgid "Replace all resolutions ..."
+msgstr "替换所有分辨率(resolution)..."
+
+#: objinspstrconsts.sccsiledtsave
+msgctxt "objinspstrconsts.sccsiledtsave"
+msgid "&Save ..."
+msgstr "保存...(&S)"
+
+#: objinspstrconsts.sccsiledtsaveall
+msgid "Save All ..."
+msgstr "保存所有..."
+
+#: objinspstrconsts.sccsiledtsavedialog
+msgid "Save Image"
+msgstr "保存图片"
+
+#: objinspstrconsts.sccsiledtstretch
+msgid "Stretch"
+msgstr "伸展"
+
+#: objinspstrconsts.sccslvcoledt
+msgid "Edit Columns ..."
+msgstr "编辑列..."
+
+#: objinspstrconsts.sccslvedt
+msgctxt "objinspstrconsts.sccslvedt"
+msgid "Edit Items ..."
+msgstr "编辑项目..."
+
+#: objinspstrconsts.sccslvedtapply
+msgctxt "objinspstrconsts.sccslvedtapply"
+msgid "Apply"
+msgstr "应用"
+
+#: objinspstrconsts.sccslvedtcaption
+msgid "ListView Items Editor"
+msgstr "ListView项目编辑器"
+
+#: objinspstrconsts.sccslvedtdelete
+msgctxt "objinspstrconsts.sccslvedtdelete"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.sccslvedtgrplcaption
+msgctxt "objinspstrconsts.sccslvedtgrplcaption"
+msgid "Items"
+msgstr "项目"
+
+#: objinspstrconsts.sccslvedtgrprcaption
+msgctxt "objinspstrconsts.sccslvedtgrprcaption"
+msgid "Item Properties"
+msgstr "项目属性"
+
+#: objinspstrconsts.sccslvedtitem
+msgctxt "objinspstrconsts.sccslvedtitem"
+msgid "Item"
+msgstr "项目"
+
+#: objinspstrconsts.sccslvedtlabelcaption
+msgid "Caption:"
+msgstr "标题:"
+
+#: objinspstrconsts.sccslvedtlabelimageindex
+msgctxt "objinspstrconsts.sccslvedtlabelimageindex"
+msgid "Image Index:"
+msgstr "图片索引:"
+
+#: objinspstrconsts.sccslvedtlabelstateindex
+msgctxt "objinspstrconsts.sccslvedtlabelstateindex"
+msgid "State Index:"
+msgstr "状态索引:"
+
+#: objinspstrconsts.sccslvedtmsgownerdata
+msgid "List items cannot be edited at design-time when OwnerData is enabled. Use Items.Count and OnData at run-time instead."
+msgstr ""
+
+#: objinspstrconsts.sccslvedtnewitem
+msgctxt "objinspstrconsts.sccslvedtnewitem"
+msgid "New Item"
+msgstr "新项目"
+
+#: objinspstrconsts.sccslvedtnewsubitem
+msgctxt "objinspstrconsts.sccslvedtnewsubitem"
+msgid "New SubItem"
+msgstr "新子项"
+
+#: objinspstrconsts.sccsmaskeditor
+msgid "Edit Mask Editor ..."
+msgstr "掩码编辑器(&M) ..."
+
+#: objinspstrconsts.sccssbeditpanels
+msgid "Panels Editor ..."
+msgstr "面板编辑器"
+
+#: objinspstrconsts.sccssgedt
+msgid "Edit StringGrid ..."
+msgstr "编辑 StringGrid(&S) ..."
+
+#: objinspstrconsts.sccssgedtapply
+msgctxt "objinspstrconsts.sccssgedtapply"
+msgid "Apply"
+msgstr "应用"
+
+#: objinspstrconsts.sccssgedtcaption
+msgid "StringGrid Editor"
+msgstr "StringGrid 编辑器"
+
+#: objinspstrconsts.sccssgedtclean
+msgid "Clean"
+msgstr "清理"
+
+#: objinspstrconsts.sccssgedtcolrowinfo
+#, object-pascal-format
+msgid "(%d columns, %d rows)"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtdelcol
+msgid "Delete column"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtdelcolno
+#, object-pascal-format
+msgid "Delete column #%d?"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtdelrow
+msgid "Delete row"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtdelrowno
+#, object-pascal-format
+msgid "Delete row #%d?"
+msgstr ""
+
+#: objinspstrconsts.sccssgedteditcoltitle
+msgid "Edit column title"
+msgstr ""
+
+#: objinspstrconsts.sccssgedteditfixedcoltitle
+msgid "Edit fixed column title"
+msgstr ""
+
+#: objinspstrconsts.sccssgedteditrowheader
+msgid "Edit row header"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtgrp
+msgid "String Grid"
+msgstr "String 网格"
+
+#: objinspstrconsts.sccssgedtinscol
+msgid "Insert column"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtinsrow
+msgid "Insert row"
+msgstr ""
+
+#: objinspstrconsts.sccssgedtload
+msgid "Load ..."
+msgstr "加载..."
+
+#: objinspstrconsts.sccssgedtmoverowscols
+#, fuzzy
+#| msgid "Move Rows/Cols"
+msgid "Move rows/columns"
+msgstr "移动 行/列"
+
+#: objinspstrconsts.sccssgedtopendialog
+msgctxt "objinspstrconsts.sccssgedtopendialog"
+msgid "Open"
+msgstr "打开"
+
+#: objinspstrconsts.sccssgedtsave
+msgctxt "objinspstrconsts.sccssgedtsave"
+msgid "Save ..."
+msgstr "保存..."
+
+#: objinspstrconsts.sccssgedtsavedialog
+msgctxt "objinspstrconsts.sccssgedtsavedialog"
+msgid "Save"
+msgstr "保存"
+
+#: objinspstrconsts.sccssgedttitle
+msgid "Title"
+msgstr ""
+
+#: objinspstrconsts.sccstredt
+msgctxt "objinspstrconsts.sccstredt"
+msgid "Edit Items ..."
+msgstr "编辑项目..."
+
+#: objinspstrconsts.sccstredtapply
+msgctxt "objinspstrconsts.sccstredtapply"
+msgid "Apply"
+msgstr "应用"
+
+#: objinspstrconsts.sccstredtcaption
+msgid "TreeView Items Editor"
+msgstr "TreeView项目编辑器"
+
+#: objinspstrconsts.sccstredtdelete
+msgctxt "objinspstrconsts.sccstredtdelete"
+msgid "Delete"
+msgstr "删除"
+
+#: objinspstrconsts.sccstredtgrplcaption
+msgctxt "objinspstrconsts.sccstredtgrplcaption"
+msgid "Items"
+msgstr "项目"
+
+#: objinspstrconsts.sccstredtgrprcaption
+msgctxt "objinspstrconsts.sccstredtgrprcaption"
+msgid "Item Properties"
+msgstr "项目属性"
+
+#: objinspstrconsts.sccstredtitem
+msgctxt "objinspstrconsts.sccstredtitem"
+msgid "Item"
+msgstr "项目"
+
+#: objinspstrconsts.sccstredtlabelimageindex
+msgctxt "objinspstrconsts.sccstredtlabelimageindex"
+msgid "Image Index:"
+msgstr "图片索引:"
+
+#: objinspstrconsts.sccstredtlabelselindex
+msgid "Selected Index:"
+msgstr "选择索引:"
+
+#: objinspstrconsts.sccstredtlabelstateindex
+msgctxt "objinspstrconsts.sccstredtlabelstateindex"
+msgid "State Index:"
+msgstr "状态索引:"
+
+#: objinspstrconsts.sccstredtlabeltext
+msgid "Text:"
+msgstr "文本:"
+
+#: objinspstrconsts.sccstredtload
+msgid "Load"
+msgstr "加载"
+
+#: objinspstrconsts.sccstredtnewitem
+msgctxt "objinspstrconsts.sccstredtnewitem"
+msgid "New Item"
+msgstr "新项目"
+
+#: objinspstrconsts.sccstredtnewsubitem
+msgctxt "objinspstrconsts.sccstredtnewsubitem"
+msgid "New SubItem"
+msgstr "新子项"
+
+#: objinspstrconsts.sccstredtopendialog
+msgctxt "objinspstrconsts.sccstredtopendialog"
+msgid "Open"
+msgstr "打开"
+
+#: objinspstrconsts.sccstredtsave
+msgctxt "objinspstrconsts.sccstredtsave"
+msgid "Save"
+msgstr "保存"
+
+#: objinspstrconsts.sccstredtsavedialog
+msgctxt "objinspstrconsts.sccstredtsavedialog"
+msgid "Save"
+msgstr "保存"
+
+#: objinspstrconsts.srgrabkey
+msgid "Grab key"
+msgstr "捕捉按键"
+
+#: objinspstrconsts.s_addassingle
+msgid "Add as single"
+msgstr "作为单精度浮点类型添加"
+
+#: objinspstrconsts.s_confirm_clear
+msgid "Are you sure to clear image list?"
+msgstr "你确定清理图像列表?"
+
+#: objinspstrconsts.s_splitimage
+msgid "Split image"
+msgstr "分割图片"
+
+#: objinspstrconsts.s_suggestsplitimage
+msgid "Do you want to split the image?"
+msgstr "您想要分割图片吗？"
+
+#: objinspstrconsts.tbcenewbutton
+msgid "New Button"
+msgstr "新建按钮(&B)"
+
+#: objinspstrconsts.tbcenewcheckbutton
+msgid "New CheckButton"
+msgstr "新建复选框(&C)"
+
+#: objinspstrconsts.tbcenewdivider
+msgid "New Divider"
+msgstr "新建带线分隔符(&D)"
+
+#: objinspstrconsts.tbcenewseparator
+msgid "New Separator"
+msgstr "新建分隔符(&S)"
+
+#: objinspstrconsts.tccesaddtab
+msgid "Add tab"
+msgstr "添加标签页(&A)"
+
+#: objinspstrconsts.tccesdeletetab
+msgid "Delete tab"
+msgstr "删除标签页(&D)"
+
+#: objinspstrconsts.tccesinserttab
+msgid "Insert tab"
+msgstr "插入标签页(&I)"
+
+#: objinspstrconsts.tccesmovetableft
+msgid "Move tab left"
+msgstr "左移标签页(&L)"
+
+#: objinspstrconsts.tccesmovetabright
+msgid "Move tab right"
+msgstr "右移标签页(&R)"
+
