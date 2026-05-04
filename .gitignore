@@ -3,6 +3,7 @@
 .*lik
 *.log
 *.o
+*.tmp
 
 /Debug/
 /Release/
@@ -15,3 +16,4 @@
 /lazarus/
 /Cheat Engine/
 /CE_WITH_QT/
+/CheatEngine_With_Qt/x64/
