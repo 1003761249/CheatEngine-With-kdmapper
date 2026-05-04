@@ -12,6 +12,14 @@ ProcessManager& ProcessManager::instance()
     return inst;
 }
 
+bool ProcessManager::isProcessAlive() const
+{
+    if (m_pid == 0 || !m_accessor)
+        return false;
+
+    return m_accessor->isProcessAlive();
+}
+
 void ProcessManager::initialize()
 {
     createBackends();

@@ -43,7 +43,7 @@ public:
     }
 
     template<class F>
-    auto enqueue(F&& f) -> std::future<typename std::result_of<F()>::type>
+    auto enqueue(F&& f) -> std::future<std::invoke_result_t<F>>
     {
         using return_type = typename std::invoke_result<F>::type;
 

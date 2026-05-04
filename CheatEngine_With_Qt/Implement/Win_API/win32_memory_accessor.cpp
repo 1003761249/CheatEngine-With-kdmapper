@@ -33,3 +33,12 @@ void* Win32MemoryAccessor::nativeHandle()
 }
 
 std::string Win32MemoryAccessor::name() const { return "Win32 API"; }
+
+bool Win32MemoryAccessor::isProcessAlive() const
+{
+    if (!hProcess)
+        return false;
+    // 等待 0 毫秒：若返回 WAIT_TIMEOUT 表示进程仍在运行
+    DWORD result = WaitForSingleObject(hProcess, 0);
+    return (result == WAIT_TIMEOUT);
+}

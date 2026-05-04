@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Form Files">
       <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
       <Extensions>ui</Extensions>
@@ -28,22 +20,29 @@
     <Filter Include="implement\Win_API">
       <UniqueIdentifier>{2c090cac-fbf5-4a8b-ba7f-cf4c2786d78d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="scan_helper">
-      <UniqueIdentifier>{495c66f6-8bcc-4f39-a861-716db5d5c31f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="implement\process">
+    <Filter Include="process">
       <UniqueIdentifier>{5a72f4dc-1832-4ac9-8bad-4b844069f3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="new_scan_framework">
+      <UniqueIdentifier>{be3babff-b893-4535-b69e-f6fd9467b6e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="new_scan_framework\scan_type_define">
+      <UniqueIdentifier>{1b117650-2926-4650-85ae-1846a04abef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="new_scan_framework\Scan_accelerate">
+      <UniqueIdentifier>{6f85bcf1-cb8c-4c04-9f0c-e871807d94d6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="scan_result_model.h">
-      <Filter>scan_helper</Filter>
-    </QtMoc>
     <QtMoc Include="process_dialog.h">
       <Filter>Form Files</Filter>
     </QtMoc>
-    <QtMoc Include="address_list_model.h">
-      <Filter>Source Files</Filter>
+    <QtMoc Include="address_list_model.h" />
+    <QtMoc Include="scan\scan_result_view_model.h">
+      <Filter>new_scan_framework</Filter>
+    </QtMoc>
+    <QtMoc Include="scan\scan_service.h">
+      <Filter>new_scan_framework</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -52,23 +51,8 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="address_list_model.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="process_manager.cpp">
-      <Filter>implement\process</Filter>
-    </ClCompile>
-    <ClCompile Include="disk_backed_result_set.cpp">
-      <Filter>scan_helper</Filter>
-    </ClCompile>
-    <ClCompile Include="scan_engine.cpp">
-      <Filter>scan_helper</Filter>
-    </ClCompile>
-    <ClCompile Include="scan_result_model.cpp">
-      <Filter>scan_helper</Filter>
+      <Filter>process</Filter>
     </ClCompile>
     <ClCompile Include="Factory\memory_accessor_factory.cpp">
       <Filter>Factory</Filter>
@@ -100,16 +84,27 @@
     <ClCompile Include="process_dialog.cpp">
       <Filter>Form Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="address_list_model.cpp" />
+    <ClCompile Include="scan\scan_engine.cpp">
+      <Filter>new_scan_framework</Filter>
+    </ClCompile>
+    <ClCompile Include="scan\scan_result_formatter.cpp">
+      <Filter>new_scan_framework</Filter>
+    </ClCompile>
+    <ClCompile Include="scan\scan_result_repository.cpp">
+      <Filter>new_scan_framework</Filter>
+    </ClCompile>
+    <ClCompile Include="scan\scan_result_view_model.cpp">
+      <Filter>new_scan_framework</Filter>
+    </ClCompile>
+    <ClCompile Include="scan\scan_service.cpp">
+      <Filter>new_scan_framework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process_manager.h">
-      <Filter>implement\process</Filter>
-    </ClInclude>
-    <ClInclude Include="disk_backed_result_set.h">
-      <Filter>scan_helper</Filter>
-    </ClInclude>
-    <ClInclude Include="scan_engine.h">
-      <Filter>scan_helper</Filter>
+      <Filter>process</Filter>
     </ClInclude>
     <ClInclude Include="type_define\address_item.h">
       <Filter>struct_data_type</Filter>
@@ -121,12 +116,6 @@
       <Filter>struct_data_type</Filter>
     </ClInclude>
     <ClInclude Include="type_define\process_info.h">
-      <Filter>struct_data_type</Filter>
-    </ClInclude>
-    <ClInclude Include="type_define\scan_result.h">
-      <Filter>struct_data_type</Filter>
-    </ClInclude>
-    <ClInclude Include="type_define\scan_types.h">
       <Filter>struct_data_type</Filter>
     </ClInclude>
     <ClInclude Include="interface\imemory_accessor.h">
@@ -165,11 +154,42 @@
     <ClInclude Include="Implement\Win_API\win32_process_enumerator.h">
       <Filter>implement\Win_API</Filter>
     </ClInclude>
-    <ClInclude Include="ui_CheatEngine_With_Qt.h">
+    <ClInclude Include="IAddressSpace.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IDriverLoader.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IKernelObjectManager.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="type_define\scan_result.h">
+      <Filter>new_scan_framework\scan_type_define</Filter>
+    </ClInclude>
+    <ClInclude Include="type_define\scan_types.h">
+      <Filter>new_scan_framework\scan_type_define</Filter>
+    </ClInclude>
+    <ClInclude Include="type_define\scan_request.h">
+      <Filter>new_scan_framework\scan_type_define</Filter>
+    </ClInclude>
+    <ClInclude Include="scan\scan_engine.h">
+      <Filter>new_scan_framework</Filter>
+    </ClInclude>
+    <ClInclude Include="scan\scan_result_formatter.h">
+      <Filter>new_scan_framework</Filter>
+    </ClInclude>
+    <ClInclude Include="scan\scan_result_repository.h">
+      <Filter>new_scan_framework</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptive_cache.h" />
+    <ClInclude Include="thread_pool.h" />
+    <ClInclude Include="SimdKernels.h">
+      <Filter>new_scan_framework\Scan_accelerate</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="CheatEngine_With_Qt.ui">
       <Filter>Form Files</Filter>
-    </ClInclude>
-    <ClInclude Include="thread_pool.h">
-      <Filter>scan_helper</Filter>
-    </ClInclude>
+    </QtUic>
   </ItemGroup>
 </Project>

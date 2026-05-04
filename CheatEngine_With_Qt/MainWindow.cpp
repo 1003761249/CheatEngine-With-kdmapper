@@ -1,26 +1,31 @@
-﻿#include "mainwindow.h"
+﻿// mainwindow.cpp
+#include "mainwindow.h"
 #include "ui_CheatEngine_With_Qt.h"
-
-#include "scan_result_model.h"
 #include "address_list_model.h"
 #include "thread_pool.h"
 #include "process_dialog.h"
 #include "process_manager.h"
+#include "scan_service.h"
+#include "scan_result_view_model.h"
+#include "scan_request.h"
 
 #include <QTimer>
 #include <QTableView>
 #include <QVBoxLayout>
+#include <QHeaderView>
 #include <QMessageBox>
 #include <QApplication>
 #include <QStatusBar>
+#include <QStringList>
+#include <cstring>
 
-// ==================== 构造函数（精简版） ====================
+// ==================== 构造与析构 ====================
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
     , ui(std::make_unique<Ui::CheatEngine_With_QtClass>())
 {
     setupUi();
-    initModels();
+    initServices();
     initViews();
     initTimers();
     connectSignals();
@@ -29,52 +34,45 @@ MainWindow::MainWindow(QWidget* parent)
 
 MainWindow::~MainWindow() = default;
 
-// ==================== UI 基础设置 ====================
-void MainWindow::setupUi()
-{
-    ui->setupUi(this);
-}
+// ==================== UI 基础 ====================
+void MainWindow::setupUi() { ui->setupUi(this); }
 
-// ==================== 模型初始化 ====================
-void MainWindow::initModels()
+void MainWindow::initServices()
 {
-    scanModel = new ScanResultModel(this);
+    m_scanService = new ScanService(this);
+    m_resultModel = m_scanService->resultModel();   // 获取 ViewModel 指针
     addressModel = new AddressListModel(this);
-    m_scanEngine = std::make_unique<ScanEngine>();
 }
 
-// ==================== 视图初始化（嵌入自定义控件） ====================
+// 辅助函数：解析数值（支持十六进制）
+uint64_t MainWindow::resolveValueInput(const QString& text, bool isHex) const {
+    bool ok;
+    return isHex ? text.toULongLong(&ok, 16) : text.toULongLong(&ok, 10);
+}
+
+
 void MainWindow::initViews()
 {
-    setupScanResultView();      // 扫描结果表格
-    replaceAddressTable();      // 地址列表表格（替换QTableWidget）
+    setupScanResultView();
+    replaceAddressTable();
 }
 
 void MainWindow::setupScanResultView()
 {
-    QWidget* firstTab = ui->tabWidget->widget(0);   // “查找1”
+    QWidget* firstTab = ui->tabWidget->widget(0);
     QVBoxLayout* tabLayout = new QVBoxLayout(firstTab);
     tabLayout->setContentsMargins(0, 0, 0, 0);
 
     scanResultView = new QTableView(firstTab);
-    scanResultView->setModel(scanModel);
-
-    // 固定行高，提升性能
+    scanResultView->setModel(m_resultModel);
     scanResultView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     scanResultView->verticalHeader()->setDefaultSectionSize(24);
-
-    // 标题栏设置
     scanResultView->horizontalHeader()->setStretchLastSection(false);
-
-    // 列宽策略：第0列可手动调整，初始宽度150；第1列自动填充
     scanResultView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Interactive);
     scanResultView->setColumnWidth(0, 150);
-    scanResultView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
-
-    // 选择行为
+    scanResultView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Interactive);
+    scanResultView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
     scanResultView->setSelectionBehavior(QAbstractItemView::SelectRows);
-    scanResultView->setSelectionMode(QAbstractItemView::SingleSelection);
-
     tabLayout->addWidget(scanResultView);
 }
 
@@ -83,8 +81,7 @@ void MainWindow::replaceAddressTable()
     QLayout* addrLayout = ui->tableWidget_addressList->parentWidget()->layout();
     if (auto* vbox = qobject_cast<QVBoxLayout*>(addrLayout)) {
         vbox->removeWidget(ui->tableWidget_addressList);
-        delete ui->tableWidget_addressList;   // 删除原QTableWidget
-
+        delete ui->tableWidget_addressList;
         addressView = new QTableView(this);
         addressView->setModel(addressModel);
         addressView->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -93,372 +90,556 @@ void MainWindow::replaceAddressTable()
     }
 }
 
-// ==================== 定时器初始化 ====================
+// ==================== 定时器 ====================
 void MainWindow::initTimers()
 {
-    // 扫描结果增量刷新定时器
-    readTimer = new QTimer(this);
-    connect(readTimer, &QTimer::timeout, this, &MainWindow::refreshScanResults);
-    readTimer->start(200);
-
-    // 扫描进度条更新定时器
-    progressTimer = new QTimer(this);
-    connect(progressTimer, &QTimer::timeout, this, &MainWindow::updateScanProgress);
-    progressTimer->start(100);
-
-    // 地址冻结定时器
     freezeTimer = new QTimer(this);
     connect(freezeTimer, &QTimer::timeout, this, [this]() {
         auto& items = addressModel->items();
         auto mem = ProcessManager::instance().memory();
         if (!mem) return;
         for (auto& item : items) {
-            if (item.frozen) {
+            if (item.frozen)
                 mem->write(item.address, &item.value, sizeof(item.value));
-            }
         }
         });
     freezeTimer->start(500);
+
+    healthTimer = new QTimer(this);
+    connect(healthTimer, &QTimer::timeout, this, [this]() {
+        if (m_attachedToProcess && !ProcessManager::instance().isProcessAlive()) {
+            m_attachedToProcess = false;
+            QMetaObject::invokeMethod(this, [this] { onProcessTerminated(); });
+        }
+        });
+    healthTimer->start(1000);
 }
 
-// ==================== 信号连接（UI交互 -> 业务槽） ====================
+// ==================== 信号连接 ====================
 void MainWindow::connectSignals()
 {
-    // 基本操作按钮
-    connect(ui->pushButton_openProcess, &QPushButton::clicked, this, &MainWindow::onOpenProcess);
-    connect(ui->pushButton_new_find, &QPushButton::clicked, this, &MainWindow::onFirstScan);
-    connect(ui->pushButton_next_find, &QPushButton::clicked, this, &MainWindow::onNextScan);
+    connect(ui->pushButton_openProcess, &QPushButton::clicked,
+        this, &MainWindow::onOpenProcess);
+    connect(ui->pushButton_new_find, &QPushButton::clicked,
+        this, &MainWindow::onFirstScan);
+    connect(ui->pushButton_next_find, &QPushButton::clicked,
+        this, &MainWindow::onNextScan);
 
-    // 扫描结果双击 -> 添加到地址列表
-    connect(scanResultView, &QTableView::doubleClicked, this, &MainWindow::onDoubleClickScanResult);
+    connect(m_scanService, &ScanService::scanCompleted,
+        this, &MainWindow::onScanCompleted);
+    connect(m_scanService, &ScanService::progressChanged,
+        this, &MainWindow::onProgressChanged);
 
-    // 地址列表删除全部
+    connect(scanResultView, &QTableView::doubleClicked,
+        this, &MainWindow::onDoubleClickScanResult);
+
     connect(ui->pushButton_delete_all_address, &QPushButton::clicked, this, [this]() {
         addressModel->clear();
         });
 
-    // 扫描类型改变时，动态控制UI控件的可见与使能
     connect(ui->comboBox_atribute_For_Find, QOverload<int>::of(&QComboBox::currentIndexChanged),
         this, &MainWindow::updateScanTypeUi);
-
-    // 立即以当前索引触发一次，保证初始状态正确
     updateScanTypeUi(ui->comboBox_atribute_For_Find->currentIndex());
 }
 
-// ==================== 扫描类型UI状态统一管理 ====================
+// ==================== UI 状态管理 ====================
 void MainWindow::updateScanTypeUi(int index)
 {
-    // 索引3：介于两者之间
-    bool isBetween = (index == 3);
-    ui->label_and->setVisible(isBetween);
-    ui->lineEdit_ValueInput2->setVisible(isBetween);
+    if (index < 0) return;
 
-    // 索引4：未知初始值
-    bool isUnknown = (index == 4);
-    // 非未知初始值时，显示并启用 Hex、Value输入、数据大小选择
-    ui->checkBox_Hex_Value->setVisible(!isUnknown);
-    ui->lineEdit_ValueInput->setVisible(!isUnknown);
-    ui->comboBox_Value_Data_Size->setVisible(!isUnknown);
+    // 定义需要显示的控件状态
+    bool showInput1 = true;
+    bool showInput2 = false;
+    bool showHex = true;
 
-    ui->checkBox_Hex_Value->setEnabled(!isUnknown);
-    ui->lineEdit_ValueInput->setEnabled(!isUnknown);
-    ui->comboBox_Value_Data_Size->setEnabled(!isUnknown);
+    if (m_isFirstScan) {
+        // 首次扫描阶段的索引逻辑: 0:精确, 1:大于, 2:小于, 3:介于两者, 4:未知
+        switch (index) {
+        case 3: // 介于两者之间 (Between)
+            showInput1 = true;
+            showInput2 = true;
+            break;
+        case 4: // 未知初始值 (Unknown)
+            showInput1 = false;
+            showHex = false;
+            break;
+        default: // 精确/大于/小于
+            showInput1 = true;
+            showInput2 = false;
+            break;
+        }
+    }
+    else {
+        // 再次扫描阶段的索引逻辑 (对应 onScanCompleted 中 addItems 的顺序)
+        // {"精确数值", "增加的值", "减少的值", "变动的值", "未变动的值", "介于两者之间"}
+        switch (index) {
+        case 0: // 精确数值
+            showInput1 = true;
+            showInput2 = false;
+            break;
+        case 5: // 介于两者之间 (根据你 addItems 的顺序，这是第6项)
+            showInput1 = true;
+            showInput2 = true;
+            break;
+        default: // 增加/减少/变动/未变动
+            showInput1 = false;
+            showInput2 = false;
+            showHex = false;
+            break;
+        }
+    }
+
+    // 应用可见性
+    ui->lineEdit_ValueInput->setVisible(showInput1);
+    ui->checkBox_Hex_Value->setVisible(showInput1 && showHex);
+
+    ui->label_and->setVisible(showInput2);
+    ui->lineEdit_ValueInput2->setVisible(showInput2);
 }
 
-// ==================== 默认状态设置 ====================
 void MainWindow::applyDefaultState()
 {
-    // 初始禁止扫描按钮
     ui->pushButton_new_find->setEnabled(false);
     ui->pushButton_next_find->setEnabled(false);
-
-    // 介于控件由 updateScanTypeUi 管理，但确保首次正确隐藏（已调用）
-    // 无需额外操作
 }
-
 
 // ==================== 打开进程 ====================
 void MainWindow::onOpenProcess()
 {
     ProcessDialog dlg(this);
-    if (dlg.exec() == QDialog::Accepted)
-    {
-        auto p = dlg.selectedProcess();
+    if (dlg.exec() != QDialog::Accepted) return;
 
-        // 暂停刷新并等待当前任务结束
-        readTimer->stop();
-        freezeTimer->stop();  
-        progressTimer->stop();
+    auto p = dlg.selectedProcess();
 
-        // 请求取消当前扫描
-        m_scanEngine->cancel();
+    m_scanService->cancel();
+    m_scanService->stopAutoRefresh();
+    m_scanService->clear();           // 使用 ScanService::clear()
 
-        // ★ 等待扫描完成
-        while (m_scanEngine->isScanning())
-            QApplication::processEvents();
+    ProcessManager::instance().detach();
 
-        while (m_refreshing.load())
-            QApplication::processEvents();
+    if (ProcessManager::instance().attach(p)) {
+        m_attachedToProcess = true;
+        m_isFirstScan = true;
 
-        ProcessManager::instance().detach();
+        ui->label_Process_name->setText(QString::fromStdString(p.name));
+        setWindowTitle(QString("Cheat Engine - %1").arg(QString::fromStdString(p.name)));
 
-        if (ProcessManager::instance().attach(p))
-        {
-            // 清空数据
-            scanModel->setResults({});
-            m_scanEngine = std::make_unique<ScanEngine>();
-            m_lastRefreshGen = -1;
+        QComboBox* moduleBox = ui->comboBox_process_module_List;
+        moduleBox->clear();
+        moduleBox->addItem("All");
+        const auto& modules = ProcessManager::instance().modules();
+        for (const auto& mod : modules)
+            moduleBox->addItem(QString::fromStdString(mod.name));
 
-            // 更新 UI 进程名
-            ui->label_Process_name->setText(QString::fromStdString(p.name));
-            setWindowTitle(QString("Cheat Engine - %1").arg(QString::fromStdString(p.name)));
-
-            // ----- 填充模块列表 -----
-            QComboBox* moduleBox = ui->comboBox_process_module_List;
-            moduleBox->clear();
-            moduleBox->addItem("All");   // 默认项
-            const auto& modules = ProcessManager::instance().modules();
-            for (const auto& mod : modules) {
-                moduleBox->addItem(QString::fromStdString(mod.name));
-            }
-
-
-            // 启用扫描按钮
-            ui->pushButton_new_find->setEnabled(true);
-            ui->pushButton_next_find->setEnabled(false); // 刚打开进程时禁止 Next
-
-            readTimer->start(200);
-            progressTimer->start(100);
-            freezeTimer->start(500);
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Failed to attach to process.");
-            readTimer->start(200);
-            progressTimer->start(100);
-            freezeTimer->start(500);
-        }
+        ui->pushButton_new_find->setEnabled(true);
+        ui->pushButton_next_find->setEnabled(false);
+    }
+    else {
+        QMessageBox::warning(this, "Error", "Failed to attach to process.");
     }
 }
 
-// ==================== 首次扫描 ====================
+// ==================== 构建扫描请求（保留原解析逻辑） ====================
+ScanDataType MainWindow::parseDataTypeFromUI() const
+{
+    int idx = ui->comboBox_Value_Data_Size->currentIndex();
+    switch (idx) {
+    case 0: return ScanDataType::Int8;
+    case 1: return ScanDataType::Int16;
+    case 2: return ScanDataType::Int32;
+    case 3: return ScanDataType::Int64;
+    case 4: return ScanDataType::Float32;
+    case 5: return ScanDataType::Float64;
+    case 6: return ui->checkBox_use_UTF16->isChecked() ? ScanDataType::Utf16String : ScanDataType::AsciiString;
+    case 7: return ScanDataType::ByteArray;
+    default: return ScanDataType::Int64;
+    }
+}
+
+ValueParams MainWindow::parseValueParams(ScanType type, ScanDataType dataType) const
+{
+    ValueParams vp;
+    if (type == ScanType::UnknownInitial) return vp;
+
+    QString text1 = ui->lineEdit_ValueInput->text();
+    bool isHex = ui->checkBox_Hex_Value->isChecked();
+
+    if (isFloatingPoint(dataType)) {
+        bool ok = false;
+        double d1 = text1.toDouble(&ok);
+        if (!ok && !text1.isEmpty()) return {};
+        if (dataType == ScanDataType::Float32) {
+            float f = static_cast<float>(d1);
+            std::memcpy(&vp.value1, &f, sizeof(f));
+        }
+        else {
+            std::memcpy(&vp.value1, &d1, sizeof(d1));
+        }
+
+        if (type == ScanType::Between) {
+            QString text2 = ui->lineEdit_ValueInput2->text();
+            double d2 = text2.toDouble(&ok);
+            if (!ok) return {};
+            if (dataType == ScanDataType::Float32) {
+                float f2 = static_cast<float>(d2);
+                std::memcpy(&vp.value2, &f2, sizeof(f2));
+            }
+            else {
+                std::memcpy(&vp.value2, &d2, sizeof(d2));
+            }
+        }
+    }
+    else {
+        bool ok = false;
+        vp.value1 = isHex ? text1.toULongLong(&ok, 16) : text1.toULongLong(&ok, 10);
+        if (!ok && !text1.isEmpty()) return {};
+        if (type == ScanType::Between) {
+            QString text2 = ui->lineEdit_ValueInput2->text();
+            bool ok2 = false;
+            vp.value2 = isHex ? text2.toULongLong(&ok2, 16) : text2.toULongLong(&ok2, 10);
+            if (!ok2) return {};
+        }
+    }
+    return vp;
+}
+
+StringParams MainWindow::parseStringParams() const
+{
+    StringParams sp;
+    sp.caseSensitive = ui->checkBox_Caps_Check->isChecked();
+    QString text = ui->lineEdit_ValueInput->text();
+    if (parseDataTypeFromUI() == ScanDataType::Utf16String) {
+        auto utf16 = text.utf16();
+        sp.text.assign(reinterpret_cast<const char*>(utf16), text.size() * 2);
+    }
+    else {
+        sp.text = text.toStdString();
+    }
+    return sp;
+}
+
+AobParams MainWindow::parseAobParams() const
+{
+    AobParams ap;
+    QString text = ui->lineEdit_ValueInput->text().trimmed();
+    QStringList tokens = text.split(' ', Qt::SkipEmptyParts);
+    for (const QString& tok : tokens) {
+        if (tok.compare("??", Qt::CaseInsensitive) == 0 || tok == "?") {
+            ap.pattern.push_back(0);
+            ap.mask.push_back(false);
+        }
+        else {
+            bool ok = false;
+            uint32_t val = tok.toUInt(&ok, 16);
+            if (!ok || val > 0xFF) return {};
+            ap.pattern.push_back(static_cast<uint8_t>(val));
+            ap.mask.push_back(true);
+        }
+    }
+    return ap;
+}
+
+ScanRequest MainWindow::buildFirstScanRequest() const
+{
+    ScanRequest req;
+    req.mode = ScanMode::First;
+    req.dataType = parseDataTypeFromUI();
+
+    // 1. 映射扫描类型 (First Scan 专属)
+    // 对应 UI comboBox_atribute_For_Find: 0:精确数值, 1:值大于, 2:值小于, 3:介于两者, 4:未知初始值
+    int scanTypeIdx = ui->comboBox_atribute_For_Find->currentIndex();
+    static const ScanType firstTypeMap[] = {
+        ScanType::ExactValue,   // 0
+        ScanType::GreaterThan,  // 1
+        ScanType::LessThan,     // 2
+        ScanType::Between,       // 3
+        ScanType::UnknownInitial // 4
+    };
+    req.firstType = (scanTypeIdx >= 0 && scanTypeIdx <= 4) ? firstTypeMap[scanTypeIdx] : ScanType::ExactValue;
+
+    // 2. 内存对齐 (Alignment) - 核心 CE 逻辑
+    // CE "Fast Scan" 勾选时按指定步长对齐（通常是4）；不勾选时 alignment=1，即逐字节扫描全内存
+    if (ui->checkBox_fast_scan->isChecked()) {
+        bool ok = false;
+        uint32_t align = ui->lineEdit_fast_scan_value->text().toUInt(&ok);
+        req.alignment = (ok && align > 0) ? align : 4;
+    }
+    else {
+        req.alignment = 1;
+    }
+
+    // 3. 模块范围过滤
+    // 如果下拉框不是 "All"，则将扫描范围锁定在特定模块的基址和大小内
+    QString modName = ui->comboBox_process_module_List->currentText();
+    if (modName != "All") {
+        const auto* mod = ProcessManager::instance().getModuleByName(modName.toStdString());
+        if (mod) {
+            req.moduleBase = mod->base;
+            req.moduleSize = mod->size;
+        }
+    }
+
+
+    // 5. 核心参数解析：确保 isHex 变量真正发挥作用
+    bool isHex = ui->checkBox_Hex_Value->isChecked();
+
+    if (isStringType(req.dataType)) {
+        // 字符串扫描：调用专项解析器（区分大小写/编码）
+        req.params = parseStringParams();
+    }
+    else if (req.dataType == ScanDataType::ByteArray) {
+        // AOB 扫描：调用专项解析器（处理通配符 ??）
+        req.params = parseAobParams();
+    }
+    else {
+        // 数值类型：集成解析逻辑，直接处理 isHex
+        ValueParams vp;
+        if (req.firstType != ScanType::UnknownInitial) {
+            QString text1 = ui->lineEdit_ValueInput->text();
+            bool ok1 = false;
+
+            if (isFloatingPoint(req.dataType)) {
+                // 浮点数解析（浮点数不涉及十六进制输入）
+                double d1 = text1.toDouble(&ok1);
+                if (ok1) {
+                    if (req.dataType == ScanDataType::Float32) {
+                        float f = static_cast<float>(d1);
+                        std::memcpy(&vp.value1, &f, 4);
+                    }
+                    else {
+                        std::memcpy(&vp.value1, &d1, 8);
+                    }
+                }
+            }
+            else {
+                // 整数解析：关键点！根据 isHex 切换进制
+                vp.value1 = isHex ? text1.toULongLong(&ok1, 16) : text1.toULongLong(&ok1, 10);
+            }
+
+            // 处理“介于两者之间” (Between) 的第二个值
+            if (req.firstType == ScanType::Between) {
+                QString text2 = ui->lineEdit_ValueInput2->text();
+                bool ok2 = false;
+                if (isFloatingPoint(req.dataType)) {
+                    double d2 = text2.toDouble(&ok2);
+                    if (ok2) {
+                        if (req.dataType == ScanDataType::Float32) {
+                            float f2 = static_cast<float>(d2);
+                            std::memcpy(&vp.value2, &f2, 4);
+                        }
+                        else {
+                            std::memcpy(&vp.value2, &d2, 8);
+                        }
+                    }
+                }
+                else {
+                    vp.value2 = isHex ? text2.toULongLong(&ok2, 16) : text2.toULongLong(&ok2, 10);
+                }
+            }
+        }
+        req.params = vp;
+    }
+
+    return req;
+}
+
+ScanRequest MainWindow::buildNextScanRequest() const
+{
+    ScanRequest req;
+    req.mode = ScanMode::Next;
+    req.dataType = m_currentDataType;
+    req.firstType = m_currentFirstScanType;
+
+    int nextIdx = ui->comboBox_atribute_For_Find->currentIndex();
+    switch (nextIdx) {
+        case 0: req.nextType = NextScanType::Equal; break;
+        case 1: req.nextType = NextScanType::Increased; break;
+        case 2: req.nextType = NextScanType::Decreased; break;
+        case 3: req.nextType = NextScanType::Changed; break;
+        case 4: req.nextType = NextScanType::Unchanged; break;
+        case 5: req.nextType = NextScanType::Between; break;
+        default: req.nextType = NextScanType::Equal; break;
+    }
+    ValueParams vp;
+    QString text1 = ui->lineEdit_ValueInput->text();
+    if (isFloatingPoint(req.dataType)) {
+        double d = text1.toDouble();
+        if (req.dataType == ScanDataType::Float32) {
+            float f = static_cast<float>(d);
+            std::memcpy(&vp.value1, &f, sizeof(f));
+        }
+        else {
+            std::memcpy(&vp.value1, &d, sizeof(d));
+        }
+    }
+    if (req.nextType == NextScanType::Equal || req.nextType == NextScanType::Between) {
+        vp = parseValueParams(static_cast<ScanType>(req.nextType), req.dataType);
+    }
+    else {
+        vp.value1 = text1.toULongLong(nullptr, 10);
+    }
+    req.params = vp;
+    return req;
+}
+
+// ==================== 扫描执行 ====================
 void MainWindow::onFirstScan()
 {
     if (!ProcessManager::instance().memory()) {
         QMessageBox::warning(this, "Error", "Please open a process first.");
         return;
     }
-    if (m_scanEngine->isScanning())
-        return;
+    if (m_scanService->isScanning()) return;
 
-    // 获取扫描类型
-    int attrIndex = ui->comboBox_atribute_For_Find->currentIndex();
-    ScanType scanType;
-    switch (attrIndex) {
-    case 0: scanType = ScanType::ExactValue; break;
-    case 1: scanType = ScanType::GreaterThan; break;
-    case 2: scanType = ScanType::LessThan; break;
-    case 3: scanType = ScanType::Between; break;
-    case 4: scanType = ScanType::UnknownInitial; break;
-    default: scanType = ScanType::ExactValue; break;
+    ScanRequest req = buildFirstScanRequest();
+    // 参数校验
+    if (std::holds_alternative<StringParams>(req.params)) {
+        if (std::get<StringParams>(req.params).text.empty()) {
+            QMessageBox::warning(this, "Error", "Please enter a string to search.");
+            return;
+        }
     }
-
-    bool isHex = ui->checkBox_Hex_Value->isChecked();
-    uint64_t val = 0, val2 = 0;
-    QString text = ui->lineEdit_ValueInput->text();
-    bool ok = false;
-
-    if (scanType != ScanType::UnknownInitial) {
-        if (isHex)
-            val = text.toULongLong(&ok, 16);
-        else
-            val = text.toULongLong(&ok, 10);
-        if (!ok && !text.isEmpty()) {
+    else if (std::holds_alternative<AobParams>(req.params)) {
+        if (std::get<AobParams>(req.params).pattern.empty()) {
+            QMessageBox::warning(this, "Error", "Please enter a byte pattern.");
+            return;
+        }
+    }
+    else if (std::holds_alternative<ValueParams>(req.params)) {
+        if (req.firstType != ScanType::UnknownInitial &&
+            std::get<ValueParams>(req.params).value1 == 0 &&
+            ui->lineEdit_ValueInput->text().isEmpty()) {
             QMessageBox::warning(this, "Error", "Invalid value.");
             return;
         }
     }
 
-    if (scanType == ScanType::Between) {
-        QString text2 = ui->lineEdit_ValueInput2->text();
-        bool ok2 = false;
-        if (isHex)
-            val2 = text2.toULongLong(&ok2, 16);
-        else
-            val2 = text2.toULongLong(&ok2, 10);
-        if (!ok2) {
-            QMessageBox::warning(this, "Error", "Invalid second value.");
-            return;
-        }
-    }
+    
+    m_currentDataType = req.dataType;
+    m_currentFirstScanType = req.firstType;
+    m_isFirstScan = false;
 
-    // 模块过滤（已有）
-    QString modName = ui->comboBox_process_module_List->currentText();
-    uint64_t modBase = 0, modSize = 0;
-    if (modName != "All") {
-        const ModuleInfo* mod = ProcessManager::instance().getModuleByName(modName.toStdString());
-        if (mod) {
-            modBase = mod->base;
-            modSize = mod->size;
-        }
-        else {
-            QMessageBox::warning(this, "Error", "Selected module not found.");
-            return;
-        }
-    }
-
-    // 禁用按钮，启动扫描
+    m_scanService->startScan(req);
     ui->pushButton_new_find->setEnabled(false);
     ui->pushButton_next_find->setEnabled(false);
-
-    GlobalThreadPool::instance().enqueue([this, scanType, val, val2, modBase, modSize]() {
-        m_scanEngine->firstScan(scanType, val, val2, modBase, modSize);
-        auto results = m_scanEngine->results();
-        QMetaObject::invokeMethod(this, [this, results]() {
-            scanModel->setResults(results);
-            ui->pushButton_new_find->setEnabled(true);
-            ui->pushButton_next_find->setEnabled(m_scanEngine->totalResults() > 0);
-            });
-        });
 }
 
-// ==================== 再次扫描 ====================
 void MainWindow::onNextScan()
 {
-    if (!ProcessManager::instance().memory())
-    {
+    if (!ProcessManager::instance().memory()) {
         QMessageBox::warning(this, "Error", "No process attached.");
         return;
     }
-    if (m_scanEngine->isScanning())
-        return;
-
-    // ★ 必须已经执行过首次扫描
-    if (m_scanEngine->totalResults() == 0)
-    {
+    if (m_scanService->isScanning()) return;
+    if (!m_scanService->hasResults()) {
         QMessageBox::warning(this, "Error", "Please perform a first scan first.");
         return;
     }
 
-    // 此处可扩展为根据 UI 选择不同 NextScanType，目前固定为 Increased 示例
-    NextScanType nextType = NextScanType::Increased;
+    ScanRequest req = buildNextScanRequest();
+    if (std::holds_alternative<ValueParams>(req.params)) {
+        if (std::get<ValueParams>(req.params).value1 == 0 &&
+            ui->lineEdit_ValueInput->text().isEmpty()) {
+            QMessageBox::warning(this, "Error", "Invalid value.");
+            return;
+        }
+    }
+
+    m_scanService->startScan(req);
+    ui->pushButton_new_find->setEnabled(false);
+    ui->pushButton_next_find->setEnabled(false);
+}
+
+// ==================== 扫描完成槽 ====================
+void MainWindow::onScanCompleted()
+{
+
+    bool canNextScan = m_scanService->hasResults() ||
+        (m_currentFirstScanType == ScanType::UnknownInitial && m_scanService->hasSnapshot());
+
+    ui->pushButton_new_find->setEnabled(true);
+    ui->pushButton_next_find->setEnabled(canNextScan);
+
+
+    ui->comboBox_atribute_For_Find->blockSignals(true);
+    ui->comboBox_atribute_For_Find->clear();
+
+    if (m_isFirstScan) {
+        ui->comboBox_atribute_For_Find->addItems({ "精确数值", "值大于", "值小于", "介于两者之间", "未知初始值" });
+    }
+    else {
+        ui->comboBox_atribute_For_Find->addItems({ "精确数值", "增加的值", "减少的值", "变动的值", "未变动的值", "介于两者之间" });
+    }
+
+    ui->comboBox_atribute_For_Find->setCurrentIndex(0);
+    ui->comboBox_atribute_For_Find->blockSignals(false);
+
+    // 【关键修复】手动调用一次更新函数，因为 signals 被 block 了
+    updateScanTypeUi(ui->comboBox_atribute_For_Find->currentIndex());
+
+    if (isStringType(m_currentDataType) || m_currentDataType == ScanDataType::ByteArray) {
+        m_scanService->stopAutoRefresh();
+    }
+    else {
+        m_scanService->startAutoRefresh(200);
+    }
+
+    ui->progressBar->setVisible(false);
+}
+
+// ==================== 进度变化槽 ====================
+void MainWindow::onProgressChanged(int completed, int total)
+{
+    ui->progressBar->setVisible(true);
+    ui->progressBar->setRange(0, total);
+    ui->progressBar->setValue(completed);
+    statusBar()->showMessage(
+        QString("Scanning... region %1 / %2").arg(completed).arg(total));
+}
+
+// ==================== 双击添加地址 ====================
+void MainWindow::onDoubleClickScanResult(const QModelIndex& index)
+{
+    if (!ProcessManager::instance().memory()) return;
+
+    // 获取地址：需要调用 ScanResultViewModel::getAddress(int row)
+    // 如果该接口尚未实现，请在 ScanResultViewModel 中添加：
+    //   uint64_t getAddress(int row) const { return m_repo ? m_repo->addressAtIndex(row) : 0; }
+    uint64_t addr = m_resultModel->getAddress(index.row());
+    if (addr == 0) return;
+
+    uint64_t val = 0;
+    ProcessManager::instance().memory()->read(addr, &val, sizeof(val));
+    QString desc = QString("Address 0x%1").arg(addr, 0, 16);
+    addressModel->addItem(addr, desc, val);
+}
+
+// ==================== 进程退出与重置 ====================
+void MainWindow::resetToNoProcess()
+{
+    m_attachedToProcess = false;
+    m_isFirstScan = true;
+
+    m_scanService->cancel();
+    m_scanService->stopAutoRefresh();
+    m_scanService->clear();                     // 使用 clear() 替代 clearResults()
+
+    ProcessManager::instance().detach();
+    addressModel->clear();
 
     ui->pushButton_new_find->setEnabled(false);
     ui->pushButton_next_find->setEnabled(false);
-
-    GlobalThreadPool::instance().enqueue([this, nextType]()
-        {
-            m_scanEngine->nextScan(nextType);
-            auto results = m_scanEngine->results();
-
-            QMetaObject::invokeMethod(this, [this, results]()
-                {
-                    scanModel->setResults(results);
-                    ui->pushButton_new_find->setEnabled(true);
-                    ui->pushButton_next_find->setEnabled(m_scanEngine->totalResults() > 0);
-                });
-        });
+    ui->label_Process_name->setText("请选择进程");
+    setWindowTitle("Cheat Engine");
+    ui->comboBox_process_module_List->clear();
+    ui->comboBox_process_module_List->addItem("All");
+    ui->progressBar->setVisible(false);
+    statusBar()->clearMessage();
 }
 
-//定时刷新扫描结果，优化为增量更新
-void MainWindow::refreshScanResults()
+void MainWindow::onProcessTerminated()
 {
-    if (m_refreshing.exchange(true))
-        return;
-
-    int currentGen = scanModel->generation();
-    if (currentGen != m_lastRefreshGen)
-        m_lastRefreshGen = currentGen;
-
-    auto snapshot = scanModel->snapshot();
-    if (!snapshot || snapshot->empty()) {
-        m_refreshing = false;
-        return;
-    }
-
-    int capturedGen = currentGen;
-    auto memShared = ProcessManager::instance().memory();
-
-    GlobalThreadPool::instance().enqueue([this, snapshot, capturedGen, memShared]() {
-        auto mem = memShared.get();
-        if (!mem) {
-            QMetaObject::invokeMethod(this, [this]() { m_refreshing = false; });
-            return;
-        }
-
-        // 用于安全传递数据的结构体
-        struct DeltaData {
-            int gen;
-            std::vector<int> rows;
-            std::vector<uint64_t> newValues;
-            std::vector<uint8_t> changedFlags;
-        };
-        auto delta = std::make_shared<DeltaData>();
-        delta->gen = capturedGen;
-
-        const size_t count = snapshot->size();
-        for (size_t i = 0; i < count; ++i) {
-            const auto& item = (*snapshot)[i];
-            uint64_t newVal = 0;
-            if (!mem->read(item.address, &newVal, sizeof(newVal)))
-                continue;
-
-            bool changed = (newVal != item.value);
-            if (changed) {
-                delta->rows.push_back(static_cast<int>(i));
-                delta->newValues.push_back(newVal);
-                delta->changedFlags.push_back(static_cast<uint8_t>(1));
-            }
-        }
-
-        // 投递 shared_ptr，内部向量不会被移动
-        QMetaObject::invokeMethod(this, [this, delta]() {
-            scanModel->applyDeltaUpdates(delta->gen, delta->rows, delta->newValues, delta->changedFlags);
-            m_refreshing = false;
-            });
-        });
-}
-
-// ==================== 更新进度条与状态栏计数 ====================
-void MainWindow::updateScanProgress()
-{
-    if (m_scanEngine && m_scanEngine->isScanning())
-    {
-        ui->progressBar->setVisible(true);
-        int total = m_scanEngine->totalRegions();
-        int done = m_scanEngine->regionsCompleted();
-        ui->progressBar->setRange(0, total);
-        ui->progressBar->setValue(done);
-    }
-    else
-    {
-        ui->progressBar->setVisible(false);
-    }
-
-    // 在状态栏显示结果数量
-
-    int realCount = static_cast<int>(m_scanEngine->totalResults());        // 真实总结果数
-    int displayedCount = scanModel->rowCount();
-    if (realCount > displayedCount)
-        statusBar()->showMessage(QString("Found: %1 addresses (displaying first %2)")
-            .arg(realCount).arg(displayedCount));
-    else
-        statusBar()->showMessage(QString("Found: %1 addresses").arg(realCount));
-
-}
-
-void MainWindow::onDoubleClickScanResult(const QModelIndex& index)
-{
-    if (!ProcessManager::instance().memory())
-        return;
-    uint64_t addr = scanModel->getAddress(index.row());
-    if (addr == 0) return;
-
-    // 读取当前值
-    uint64_t val = 0;
-    ProcessManager::instance().memory()->read(addr, &val, sizeof(val));
-
-    // 默认描述为 "Address"
-    QString desc = QString("Address 0x%1").arg(addr, 0, 16);
-    addressModel->addItem(addr, desc, val);
+    m_attachedToProcess = false;
+    QMessageBox::information(this, "Process terminated", "The target process has exited.");
+    resetToNoProcess();
 }

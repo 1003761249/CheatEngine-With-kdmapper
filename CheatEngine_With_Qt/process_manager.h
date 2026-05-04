@@ -5,7 +5,6 @@
 #include <mutex> 
 #include <shared_mutex>
 
-
 #include "process_info.h"
 #include "module_info.h"
 
@@ -38,7 +37,7 @@ public:
     void setMemoryBackend(MemoryBackend type);   // 切换后端类型
     MemoryBackend currentBackend() const { return m_backend; }
 
-    
+    bool isProcessAlive() const;
 
 private:
     IMemoryAccessor* memory_naked();    // 后台任务使用

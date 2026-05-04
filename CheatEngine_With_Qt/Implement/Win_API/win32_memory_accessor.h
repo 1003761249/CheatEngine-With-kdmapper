@@ -12,6 +12,8 @@ public:
     bool write(uint64_t addr, const void* buffer, size_t size) override;
     void* nativeHandle() override;
     std::string name() const override;
+
+    bool isProcessAlive() const override;
 private:
     HANDLE hProcess = nullptr;
 };

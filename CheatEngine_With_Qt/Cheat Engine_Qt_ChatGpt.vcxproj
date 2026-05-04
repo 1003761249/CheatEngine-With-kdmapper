@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>$(ProjectDir)\Factory;$(ProjectDir)\Implement\Win_API;$(ProjectDir)\interface;$(ProjectDir)\type_define;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\Factory;$(ProjectDir)\Implement\Win_API;$(ProjectDir)\interface;$(ProjectDir)\type_define;$(ProjectDir)\scan;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PostBuildEvent>
@@ -47,6 +47,7 @@
     </PostBuildEvent>
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -63,7 +64,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="address_list_model.cpp" />
-    <ClCompile Include="disk_backed_result_set.cpp" />
     <ClCompile Include="Factory\memory_accessor_factory.cpp" />
     <ClCompile Include="Factory\memory_region_enumerator_factory.cpp" />
     <ClCompile Include="Factory\module_enumerator_factory.cpp" />
@@ -75,17 +75,23 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="process_dialog.cpp" />
     <ClCompile Include="process_manager.cpp" />
-    <ClCompile Include="scan_engine.cpp" />
-    <ClCompile Include="scan_result_model.cpp" />
+    <ClCompile Include="scan\scan_engine.cpp" />
+    <ClCompile Include="scan\scan_result_formatter.cpp" />
+    <ClCompile Include="scan\scan_result_repository.cpp" />
+    <ClCompile Include="scan\scan_result_view_model.cpp" />
+    <ClCompile Include="scan\scan_service.cpp" />
     <QtMoc Include="MainWindow.h" />
     <ClCompile Include="MainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="disk_backed_result_set.h" />
+    <ClInclude Include="adaptive_cache.h" />
     <ClInclude Include="Factory\memory_accessor_factory.h" />
     <ClInclude Include="Factory\memory_region_enumerator_factory.h" />
     <ClInclude Include="Factory\module_enumerator_factory.h" />
     <ClInclude Include="Factory\process_enumerator_factory.h" />
+    <ClInclude Include="IAddressSpace.h" />
+    <ClInclude Include="IDriverLoader.h" />
+    <ClInclude Include="IKernelObjectManager.h" />
     <ClInclude Include="Implement\Win_API\win32_memory_accessor.h" />
     <ClInclude Include="Implement\Win_API\win32_memory_region_enumerator.h" />
     <ClInclude Include="Implement\Win_API\win32_module_enumerator.h" />
@@ -94,19 +100,26 @@
     <ClInclude Include="interface\imemory_region_enumerator.h" />
     <ClInclude Include="interface\imodule_enumerator.h" />
     <ClInclude Include="interface\iprocess_enumerator.h" />
+    <ClInclude Include="scan\scan_engine.h" />
+    <ClInclude Include="scan\scan_result_formatter.h" />
+    <ClInclude Include="scan\scan_result_repository.h" />
+    <QtMoc Include="scan\scan_result_view_model.h" />
+    <QtMoc Include="scan\scan_service.h" />
+    <ClInclude Include="SimdKernels.h" />
+    <ClInclude Include="thread_pool.h" />
     <ClInclude Include="type_define\address_item.h" />
     <ClInclude Include="type_define\memory_region.h" />
     <ClInclude Include="type_define\module_info.h" />
     <ClInclude Include="type_define\process_info.h" />
+    <ClInclude Include="type_define\scan_request.h" />
     <ClInclude Include="type_define\scan_result.h" />
     <ClInclude Include="type_define\scan_types.h" />
-    <ClInclude Include="ui_CheatEngine_With_Qt.h" />
     <QtMoc Include="process_dialog.h" />
     <ClInclude Include="process_manager.h" />
-    <ClInclude Include="scan_engine.h" />
-    <ClInclude Include="thread_pool.h" />
     <QtMoc Include="address_list_model.h" />
-    <QtMoc Include="scan_result_model.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="CheatEngine_With_Qt.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
